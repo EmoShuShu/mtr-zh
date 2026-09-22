@@ -1,0 +1,991 @@
+chapter:
+  id: mtr-1
+  chapter: '1.'
+  en: Tournament Fundamentals
+  zh: 比赛基本要素
+  sections:
+  - id: mtr-1.1
+    chapter: '1.1'
+    en: Tournament Types
+    zh: 比赛种类
+    groups:
+    - id: mtr-1.1-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.1-b001
+        en: 'There are two types of sanctioned Magic tournaments: rated and casual.'
+        zh: 万智牌认证赛事分为两种：积分赛和休闲赛。
+    - id: mtr-1.1-g002
+      type: paragraph
+      blocks:
+      - id: mtr-1.1-b002
+        en: |-
+          Rated tournaments are further divided into two types: Premier and non-Premier. Premier tournaments are run by Wizards of the Coast or select Tournament Organizers. They have unique names and features. Non-Premier tournaments are tournaments that are not explicitly Premier.
+        zh: |-
+          积分赛又分为两种类型：重要比赛及非重要比赛。「重要比赛」系指由威世智公司或指定的比赛主办人承办的比赛，具有独特的名称和制度。「非重要比赛」系指未明确标识为「重要比赛」的其他比赛。
+        extras:
+        - en: |-
+            Premier tournaments include or have included Magic: The Gathering World Championship, World Magic Cup, World Magic Cup Qualifiers, World Magic Cup Qualifier Trials, Pro Tour, Regional Pro Tour Qualifier, Preliminary Pro Tour Qualifier, Grand Prix, Grand Prix Trial, WPN Premium Tournament, and WPN Premium Qualifier. Non-Premier tournaments include any other sanctioned tournaments. The key point is that MTR is a policy document for both Premier and non-Premier sanctioned tournaments.
+          zh: |-
+            重要比赛包括或曾包括：万智牌世界冠军赛，万智牌世界杯，万智牌世界杯资格赛，万智牌世界杯资格赛预选赛，专业赛，区域专业资格赛，初选专业资格赛，大奖赛，大奖赛预选赛，WPN顶级比赛以及WPN顶级比赛资格赛。非重要比赛包括任何其他的认证比赛。重点：MTR是一份同时针对重要认证比赛以及非重要认证比赛的方针文件。
+    - id: mtr-1.1-g003
+      type: paragraph
+      blocks:
+      - id: mtr-1.1-b003
+        en: |-
+          There are two major tournament formats: Limited and Constructed. Each has rules specific to its format. In Limited tournaments, all product for play is provided during the tournament. In Constructed tournaments, players compete using decks prepared beforehand. Some Premier tournaments may consist of multiple formats within the same tournament.
+        zh: |-
+          主要的赛制有两种——限制赛和构组赛。每个赛制都有自身特有的规则。在限制比赛中，用于进行比赛的所有产品都是在比赛过程中提供。在构组比赛中，牌手使用赛前所准备好的套牌来参赛。一些重要比赛可能会在同一场比赛中包含多种赛制。
+        extras:
+        - en: |-
+            Limited formats include any format in which a player constructs a deck during the event — e.g., draft, sealed deck, and mini masters. Constructed formats include any format in which a player constructs their deck before the event. The most popular constructed formats are Standard, Pioneer, Modern, and Legacy.  Some ways people play are not sanctionable formats such as Old School or do not well fit into the MTR because of being multiplayer like Commander.
+          zh: |-
+            限制赛包括任何需要牌手在比赛过程中构筑套牌的赛制——例如轮抽赛，现开赛以及单包赛。构组赛包括任何需要牌手在比赛前构组套牌的赛制。最流行的构组赛制有标准赛，先驱赛，近代赛以及薪传赛。社群中的某些玩法并非认证赛制（例如复古赛），或是因其多人游戏属性（例如指挥官）而不能完全适用《万智牌比赛规则》。
+  - id: mtr-1.2
+    chapter: '1.2'
+    en: Publishing Tournament Information
+    zh: 比赛信息的发布
+    groups:
+    - id: mtr-1.2-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.2-b001
+        en: |-
+          Wizards of the Coast reserves the right to publish DCI-sanctioned tournament information at any time (including during the tournament). Tournament information includes, but is not limited to, the contents of one or more players' decks, descriptions of strategies or play, transcripts, and video reproductions. Tournament Organizers are also allowed to publish this information once their tournament is complete.
+        zh: |-
+          威世智公司保留随时发布DCI认证的比赛信息之权利（「随时」包含比赛进行当中的时段）。「比赛信息」包括，但不限于：一位或更多牌手的套牌之内容；战术或打法的描述；对局记录；以及视频记录。比赛主办人在其比赛结束后，亦能发布此类信息。
+        extras:
+        - en: |-
+            Decklists should not be made public until an event has completed except in certain Premier events where player decklists are often shared with opponents at the beginning of the round. This is to minimize advantage created by certain lists being made public by coverage. Wizards of the Coast’s right to publish this information does not necessarily mean judge or Tournament Organizers have to record it.
+
+            At Premier events like Grand Prix and Pro Tours, Wizards of the Coast often has online coverage of the event. This section is explicitly state they are allowed to publish lists. Tournament Organizers also have the right to publish this information after the event ends, but some TOs receive permission to handle the coverage similar to Wizards. For example, Star City Games Opens regularly publish decklists on the Star City Games website during the event or Top 8.
+          zh: |-
+            除了在一些会将牌手的套牌登记表在赛前向对手共享的重要比赛外，在比赛结束之前，套牌登记表都不应该对外公开。这是为了尽量减少因为报道团队透露套牌登记表而对一些牌手带来的获利。威世智有权发布该信息并不意味着裁判或比赛主办人必须记录这些信息。
+
+            在例如大奖赛和专业赛这样的重要比赛中，威世智通常会对比赛进行线上报道。本章节的内容明确规定了他们有权利公布相关内容。比赛主办人同样有权利在比赛结束时公布此类信息，一些比赛主办人同样有权利与威世智采用同样的方式公布信息。例如，[星城公开赛](http://www.starcitygames.com/)会在比赛中或八强决赛中在他们的网站上发布套牌登记表的内容。
+    - id: mtr-1.2-g002
+      type: paragraph
+      blocks:
+      - id: mtr-1.2-b002
+        en: |-
+          Wizards of the Coast reserves the right to publish penalty and suspension information.
+        zh: 威世智公司保留发布处罚及停权信息之权利。
+        extras:
+        - en: |-
+            Judges should take all investigation and penalty information very seriously, as it could end up in an article on Wizards of the Coast’s webpage.
+
+            Wizards of the Coast will often report on disqualifications or other high profile penalties during Pro Tours.
+
+            While this statement says that Wizards can publish a list of players who are suspended from the game, they do not. This decision was made in 2019. Since then, outside of specific public articles, there is no way to tell if a player is suspended. If a Judge or tournament official attempts to register a suspended player, the Wizards event software will notify them, assuming they didn’t just use a new email address or DCI number.
+          zh: |-
+            裁判必须作出充分的调查并严肃认真地做出判罚，因为处罚信息可能会记载在威世智的网页信息中。
+
+            威世智通常会在专业赛期间就取消资格或者其他影响较大的处罚做出报告。
+
+            尽管此条款声明威世智可以公布被停权牌手的名单，但他们并不会这样做。该决定于2019年做出。自此以后，除了特定的公开文章外，外界将无法得知一名牌手是否处于停权状态。如果裁判或赛事工作人员尝试为一名被停权的牌手进行注册，威世智官方赛事软件会向其发出提醒，前提是该牌手没有使用新的邮箱地址或DCI号码。
+  - id: mtr-1.3
+    chapter: '1.3'
+    en: Tournament Roles
+    zh: 比赛职责
+    groups:
+    - id: mtr-1.3-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.3-b001
+        en: 'The following roles are defined for tournament purposes:'
+        zh: 依比赛的角度，定义比赛相关职责如下：
+    - id: mtr-1.3-g002
+      type: list
+      blocks:
+      - id: mtr-1.3-b002
+        en: '* Tournament Organizer'
+        zh: '* 比赛主办人'
+    - id: mtr-1.3-g003
+      type: list
+      blocks:
+      - id: mtr-1.3-b003
+        en: '* Head Judge'
+        zh: '* 主审'
+    - id: mtr-1.3-g004
+      type: list
+      blocks:
+      - id: mtr-1.3-b004
+        en: '* Floor Judge'
+        zh: '* 巡场裁判'
+    - id: mtr-1.3-g005
+      type: list
+      blocks:
+      - id: mtr-1.3-b005
+        en: '* Scorekeeper'
+        zh: '* 记分员'
+    - id: mtr-1.3-g006
+      type: list
+      blocks:
+      - id: mtr-1.3-b006
+        en: '* Player'
+        zh: '* 牌手'
+    - id: mtr-1.3-g007
+      type: list
+      blocks:
+      - id: mtr-1.3-b007
+        en: '* Spectator'
+        zh: '* 旁观者'
+    - id: mtr-1.3-g008
+      type: paragraph
+      blocks:
+      - id: mtr-1.3-b008
+        en: |-
+          The first four roles above are considered tournament officials. The Head Judge and floor judges are collectively considered judges. A single individual may act in any combination of tournament official roles. Individuals who are not judges at a tournament are spectators in any match in which they are not playing. Members of the press are also considered spectators.
+        zh: |-
+          上述职责中，前四者视为比赛工作人员。主审和巡场裁判统称「裁判」。数种不同的职责可以由同一位人士来兼任。在比赛中，不担任裁判的个人于其不参与的对局中视作旁观者。媒体记者亦视作旁观者。
+        extras:
+        - en: |-
+            It is possible for one person have multiple roles during at a small tournament. However, at larger events tournament officials typically only have a single role. Any player is a spectator of the matches taking place in nearby seats. All individuals that are not tournament officials of an event, including those with or without a DCI number, are considered spectators.
+
+            Players and Spectators are expected to follow all instruction given by Tournament Officials, therefore it’s important to know who that title applies to. It’s also important to define each of these roles in detail, which luckily the MTR does for us in Sections 1.6-1.11, in the order listed above.
+          zh: |-
+            在小规模的比赛中，一个人可能会身兼数职。在规模较大的比赛中，比赛工作人员通常只担任单一角色。处于比赛桌附近的位置的牌手便属于旁观者。
+
+            所有非比赛工作人员的个人，无论他们是否有DCI号，都被当作旁观者。牌手及旁观者都应遵从比赛工作人员给出的指示，因此需要明确认识每个角色的职责。上述的角色也应当被明确定义，这在[MTR的1.6～1.11](#目录)中有详细的说明。
+  - id: mtr-1.4
+    chapter: '1.4'
+    en: Participation Eligibility
+    zh: 参赛资格
+    groups:
+    - id: mtr-1.4-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.4-b001
+        en: |-
+          Anyone is eligible to participate as a player in a DCI-sanctioned tournament except for:
+        zh: 任何人都有资格以牌手身份参加DCI认证的积分赛，但以下除外：
+    - id: mtr-1.4-g002
+      type: list
+      blocks:
+      - id: mtr-1.4-b002
+        en: |-
+          * Individuals currently suspended by the DCI. Individuals currently suspended from the DCI may not act as tournament officials;
+        zh: '* 目前被DCI所停权者。目前为DCI所停权者不得担当比赛工作人员；'
+        extras:
+        - en: This is kind of the definition of suspended or banned.
+          zh: 这些牌手指的是被停权或禁赛的牌手。
+    - id: mtr-1.4-g003
+      type: list
+      blocks:
+      - id: mtr-1.4-b003
+        en: |-
+          * Other individuals specifically prohibited from participation by DCI or Wizards of the Coast policy (such determination is at Wizards of the Coast’s sole discretion);
+        zh: '* 其他被DCI或威世智公司的方针明令禁止参赛者（此类决定为威世智公司的单方判断）；'
+        extras:
+        - en: |-
+            This could be another form of banning, or could apply to Wizard employees.  What it means is up to Wizards.
+          zh: 此条款可指代另一种形式的禁赛，或适用于威世智员工的情况。其最终解释权归威世智所有。
+    - id: mtr-1.4-g004
+      type: list
+      blocks:
+      - id: mtr-1.4-b004
+        en: |-
+          * Individuals thirteen (13) years of age and younger who do not have their parent/guardians’ permission;
+        zh: '* 年龄十三（13）岁以下（含13岁），且未获父母／监护人许可者；'
+        extras:
+        - en: |-
+            Thirteen is the recommended age for the game provided by Hasbro and Wizards of the Coast.
+          zh: 十三岁是孩之宝以及威世智推出的这款游戏的推荐年龄。
+    - id: mtr-1.4-g005
+      type: list
+      blocks:
+      - id: mtr-1.4-b005
+        en: |-
+          * Anyone prohibited by federal, state, or local laws, the rules of the Tournament Organizer, or by a venue’s management.
+        zh: '* 被联邦、州或当地法律、比赛主办人制订的规则或比赛场馆之管理规定禁止参赛者。'
+        extras:
+        - en: |-
+            Federal, state, and local laws supersede any rules set forth by Wizards of the Coast. For example, if a player isn’t allowed within 500 ft of a particular store, employee, or other players because of a restraining order or some other legal limitations, he or she can’t play. Being able to play is a privilege, not a right, and extenuating legal circumstance may prevent people from playing.The store owner has the right to bar anyone from their store or venue for any reason they see fit. Typically store owners only use this as a last resort for recurring problems players, or in the case of theft. Wizards cannot force a store or venue to allow a specific individual.
+          zh: |-
+            联邦、州或当地法律优先于一切威世智制定的规则。例如，如果由于禁制令或其他法令限制，某牌手不允许与店家、员工或其他牌手距离低于500英尺，那么该牌手不能参与游戏。能够参加比赛是一项特权而非基本权利，对于合法条件的漠视会将参赛者拒而远之。店家有权利以任何理由拒绝他们认为不合适的牌手进店。一般来说，店家将其作为驱离有问题的牌手或者防止偷盗的最后手段。威世智无法强制店家或比赛场地接纳特定个人。
+    - id: mtr-1.4-g006
+      type: list
+      blocks:
+      - id: mtr-1.4-b006
+        en: |-
+          * Tournament Organizers may choose to age restrict any Regular REL events that they organize. They must clearly indicate this in their marketing for the event on the Store and Event Locator description as well as any other place they display the event information. (i.e., Tournament Organizers may advertise an age 16 and under Friday Night Magic).
+        zh: |-
+          * 比赛主办人可针对其主办的一般级别执法严格度赛事设置年龄限制。它们必须在店内为此活动进行的营销宣传、「Event Locator」上的说明以及其他显示赛事信息的场合清楚标明此限制。（即，比赛主办人可以宣传仅限16岁以下人士参加的周五认证赛。）
+    - id: mtr-1.4-g007
+      type: paragraph
+      blocks:
+      - id: mtr-1.4-b007
+        en: |-
+          Anyone is eligible to participate as a tournament official (Tournament Organizer, Head Judge, floor judge or Scorekeeper) for a tournament except for:
+        zh: 任何人都有资格担任比赛工作人员之职务（比赛主办人、主审、巡场裁判或是记分员），但以下除外：
+    - id: mtr-1.4-g008
+      type: list
+      blocks:
+      - id: mtr-1.4-b008
+        en: '* Individuals currently suspended by the DCI;'
+        zh: '* 目前被DCI所停权者；'
+        extras:
+        - en: |-
+            If someone is suspended as a player, they aren’t allowed to judge either. Keep in mind, this does not directly correspond with judge certification. Just as non-certified individuals can act as judges for the event, being suspended does not directly revoke your certification, though it may be taken into consideration.
+          zh: |-
+            如果某牌手作为牌手被停权，那么他也同样不能参与执法。切记，这和裁判的认证资格并无直接联系。就像未认证的裁判仍然可以执法一场比赛，被停权不意味着撤销裁判认证，虽然仍可能会被考虑在内。
+    - id: mtr-1.4-g009
+      type: list
+      blocks:
+      - id: mtr-1.4-b009
+        en: |-
+          * Anyone who has played in the tournament, unless it is a tournament that explicitly allows tournament officials to play while acting as a tournament official.
+        zh: '* 当前比赛的参赛者；明确允许比赛工作人员在行使职责的同时参与比赛之比赛不在此限。'
+        extras:
+        - en: |-
+            This rule is to prevent conflicts of interest.  You cannot rule impartially in a tournament you are hoping to gain from. However, there are specific low-stakes tournaments where the conflict of interest is sufficiently mitigated.  These exceptions are outlined in the next section.
+          zh: |-
+            本条规则旨在防止利益冲突。你无法在一场你希望从中获益的比赛中公正地执法。然而，在某些特定的低级别赛事中，这种利益冲突得到了充分的缓和。这些例外情况将在下一节中进行概述。
+    - id: mtr-1.4-g010
+      type: paragraph
+      blocks:
+      - id: mtr-1.4-b010
+        en: |-
+          Tournament officials may play in a DCI-sanctioned, rated tournament for which they are a tournament official if (and only if) the tournament is of the following types:
+        zh: 在DCI认证比赛中担任职务的工作人员不得参加该场比赛，但当（且仅当）该场比赛属于下列类别的比赛时，不在此限：
+    - id: mtr-1.4-g011
+      type: list
+      blocks:
+      - id: mtr-1.4-b011
+        en: '* Friday Night Magic'
+        zh: '* 周五认证赛'
+    - id: mtr-1.4-g012
+      type: list
+      blocks:
+      - id: mtr-1.4-b012
+        en: '* Prerelease'
+        zh: '* 售前赛'
+    - id: mtr-1.4-g013
+      type: list
+      blocks:
+      - id: mtr-1.4-b013
+        en: '* Launch Parties'
+        zh: '* 发售赛'
+    - id: mtr-1.4-g014
+      type: list
+      blocks:
+      - id: mtr-1.4-b014
+        en: '* Game Day'
+        zh: '* 欢乐日'
+    - id: mtr-1.4-g015
+      type: list
+      blocks:
+      - id: mtr-1.4-b015
+        en: '* Store Championship'
+        zh: '* 店家冠军赛'
+    - id: mtr-1.4-g016
+      type: list
+      blocks:
+      - id: mtr-1.4-b016
+        en: '* Other non-Premier Magic Tournaments'
+        zh: '* 其他的万智牌非重要比赛'
+    - id: mtr-1.4-g017
+      type: list
+      blocks:
+      - id: mtr-1.4-b017
+        en: |-
+          * Tournaments in which the official Wizards of the Coast tournament fact sheet specifically permits officials of that tournament to play
+        zh: '* 在正式的威世智比赛说明文档上特别注明该场比赛之工作人员亦可参赛的比赛'
+    - id: mtr-1.4-g018
+      type: paragraph
+      blocks:
+      - id: mtr-1.4-b018
+        en: |-
+          If one or more tournament officials play in the tournament, it must be run at Regular Rules Enforcement Level. If tournament officials play in the tournament and the tournament is not one of the allowed types listed above, the tournament will be invalidated. Tournament officials are required to officiate tournaments fairly and without regard to their own self-interest.
+        zh: |-
+          若某场比赛有比赛工作人员参加，则该比赛必须以一般级别的执法严格度来举行。若比赛工作人员参加不在上述许可列表当中的比赛，则该场比赛无效。比赛工作人员及职员行使职责时，必须保证公平公正、不含私心。
+    - id: mtr-1.4-g019
+      type: paragraph
+      blocks:
+      - id: mtr-1.4-b019
+        en: |-
+          The owners of organizations that run Premier Events are not permitted to play in those tournaments, even if the owner is not listed as a tournament official (organizer, judge, and/or scorekeeper) for that tournament.
+        zh: 举办重要比赛之组织的负责人不得参加此类比赛，即使此负责人不属于当场比赛的工作人员（主办人、裁判，和／或记分员），也需遵循此限制。
+    - id: mtr-1.4-g020
+      type: paragraph
+      blocks:
+      - id: mtr-1.4-b020
+        en: |-
+          Premier Events include the following tournaments: Magic: The Gathering World Championship, Pro Tour, Magic: The Gathering Limited Championship, Pro Tour Qualifier, Spotlight Series, Regional Championship, Regional Championship Qualifier.
+        zh: 下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、专业赛预选赛、Spotlight系列赛、区域冠军赛、区域冠军赛预选赛。
+    - id: mtr-1.4-g021
+      type: paragraph
+      blocks:
+      - id: mtr-1.4-b021
+        en: |-
+          Some tournaments have additional criteria regarding player and tournament official eligibility (e.g., invitation-only tournaments, such as World Championship, Pro Tour, Limited Championship, and Regional Championships).
+        zh: 某些比赛在参赛者资格或是担任比赛工作人员方面具有额外的限制条件（如专业赛及区域冠军赛等只对受邀牌手开放的比赛）。
+    - id: mtr-1.4-g022
+      type: paragraph
+      blocks:
+      - id: mtr-1.4-b022
+        en: |-
+          The Premier Tournament Invitation Policy defines specific eligibility rules with regards to certain types of invitation-only Premier Tournaments.
+        zh: 针对某些只对受邀牌手开放的比赛（如专业赛及区域冠军赛等），《重要比赛邀请方针》中规定了如何获取资格的规则。
+    - id: mtr-1.4-g023
+      type: paragraph
+      blocks:
+      - id: mtr-1.4-b023
+        en: |-
+          Individuals with questions regarding their tournament eligibility should contact PremierPlay@wizards.com.
+        zh: 对自己的参赛资格有疑义者，请联系 PremierPlay@wizards.com。
+        extras:
+        - en: |-
+            All Competitive and Professional Rules Enforcement Level events require players and judges to be separate people, because of the potential problems it could cause. If someone were playing against the person judging the event at a large cash prize event, it might make them less confident in the judge’s ability to remain impartial, especially if they need to ask a question about a card in their hand.
+
+            The “tournaments in which the official Wizards of the Coast tournament fact sheet specifically permits officials of that tournament to play” does not have anything under that category, but is an option for the future. The general policy is that all Regular Rules Enforcement Level events someone can both play and act as a Tournament Official, for Competitive and Professional they cannot.
+          zh: |-
+            所有的竞争级别以及专业级别的比赛要求区分牌手和裁判，这是为了避免造成一些潜在问题。如果某牌手正在和执法该比赛的裁判对局，且比赛的奖池又很大，那么这位牌手很可能会质疑裁判的公正性，尤其是在他想询问关于手中的牌的相关信息时。
+
+            暂时没有“在正式的威世智比赛说明文档上特别注明该场比赛之工作人员亦可参赛的比赛”这样的分类，这里的标注仅为了给将来带来方便。目前的一般方针是，一般级别的比赛工作人员也可以参加，但是竞争级别和专业级别则不行。
+  - id: mtr-1.5
+    chapter: '1.5'
+    en: Registration
+    zh: 登记
+    groups:
+    - id: mtr-1.5-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.5-b001
+        en: |-
+          In order to participate in Magic: The Gathering tournaments, players must be able to provide the necessary and appropriate identifying information to participate in the tournament.
+        zh: 牌手须提供合适的身份信息来参加万智牌的赛事。
+        extras:
+        - en: |-
+            Depending on the tournament, it may use different registration software such as EventLink or Melee.gg
+          zh: 根据比赛的不同，可能会使用不同的注册软件，例如EventLink或Melee.gg。
+    - id: mtr-1.5-g002
+      type: paragraph
+      blocks:
+      - id: mtr-1.5-b002
+        en: |-
+          For tournaments run using the EventLink tournament management software, players must provide a Wizards Account and/or a first and last name. Players without a Wizards Account should obtain one from https://myaccounts.wizards.com.
+        zh: 对于使用EventLink软件运行的赛事，牌手必须提供威士智账号和/或姓名。没有威士智账号的牌手可以通过注册。
+        extras:
+        - en: |-
+            Eventlink is the current software for store level events.  It prefers Wizards Account information.  First/Last name can cause problems.
+          zh: Eventlink是当前用于店赛的软件。它优先使用威世智账户信息，直接使用姓名可能会导致问题。
+  - id: mtr-1.6
+    chapter: '1.6'
+    en: Tournament Organizer
+    zh: 比赛主办人
+    groups:
+    - id: mtr-1.6-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.6-b001
+        en: |-
+          The Tournament Organizer of a tournament is responsible for all tournament logistics including:
+        zh: 比赛主办人负责所有的比赛后勤工作，包括：
+    - id: mtr-1.6-g002
+      type: list
+      blocks:
+      - id: mtr-1.6-b002
+        en: '* Sanctioning the event.'
+        zh: '* 规划认证赛事。'
+        extras:
+        - en: |-
+            This is obtained by sanctioning the event in Eventlink, through the creation of the event. Each event has a unique sanctioning number.
+          zh: 这项认证通过在Eventlink中创建比赛即可获得。每场比赛都会有一个唯一的认证号。
+    - id: mtr-1.6-g003
+      type: list
+      blocks:
+      - id: mtr-1.6-b003
+        en: |-
+          * Providing a site for the tournament that meets the tournament’s expected needs.
+        zh: '* 为比赛提供满足需求的场所。'
+        extras:
+        - en: |-
+            To ensure a smooth running event, the tournament organizer must provide a play space that will allow the event to have space required for the expected number of players. This may range from the store they run having enough room for their FNM, or renting out a room in a hotel or convention center to make adequate space.
+          zh: 为了确保比赛顺利进行，比赛主办人必须提供一个能够容纳预期牌手数量的场地。这包括在足够大的店铺中举办FNM，或者租借酒店会议室或会展中心来确保足够大的空间。
+    - id: mtr-1.6-g004
+      type: list
+      blocks:
+      - id: mtr-1.6-b004
+        en: '* Advertising the tournament in advance of the tournament date.'
+        zh: '* 在比赛日前宣传本次比赛。'
+        extras:
+        - en: |-
+            In order to ensure that players are available to participate in the tournament, we need to ensure that it is advertised when and where the event is happening. This can range from making sure the event shows up inWizards Store & Event Locator, to promoting the event on Facebook and other social media, to having large ads on magic related websites.
+          zh: |-
+            为了确保牌手能够参加比赛，我们希望比赛的信息能够被公告，让大家知道比赛的举办时间和地点。确保比赛信息能够出现在[店家搜寻器](http://locator.wizards.com/)中，或者在Facebook或者其他社交媒体上推广比赛，以及在万智牌相关网站上投放大型广告。
+    - id: mtr-1.6-g005
+      type: list
+      blocks:
+      - id: mtr-1.6-b005
+        en: '* Staffing the tournament with appropriate tournament officials.'
+        zh: '* 为比赛找到合适的工作人员。'
+        extras:
+        - en: |-
+            Tournament Organizers need to ensure that they have properly qualified tournament officials to staff the event. As a rule of thumb, you want one judge per 32 players for smaller events,  with additional judges as you break 100 players.  Additionally the type of event (Regular REL or Competitive) may require additional rules that specific levels of judges have been trained in.
+          zh: |-
+            比赛主办人需确保拥有足够的具有资质的比赛工作人员来为比赛进行分工。根据经验法则，在小规模的比赛中，建议为每32名牌手配备一名裁判；当牌手人数超过100人时，则需要增派额外的裁判。此外，赛事的类型（例如一般级或竞争级）可能要求裁判掌握某些特定规则，而这些是特定等级的裁判才接受过的训练。
+    - id: mtr-1.6-g006
+      type: list
+      blocks:
+      - id: mtr-1.6-b006
+        en: |-
+          * Providing all materials necessary to operate the tournament (e.g., product for Limited format tournaments).
+        zh: '* 提供所有用来举办该比赛的道具（如：用于限制赛的产品）。'
+        extras:
+        - en: |-
+            Tournament Organizers need to ensure that sealed product and other required materials are available for limited format tournaments and that deck list sheets available for constructed tournaments. Those are pretty straightforward. The Tournament Organizer is also responsible for providing a lot of other things that players may take for granted — e.g., a computer and printer to take results and print pairings, tape, places to post pairings, round clock, and scissors/paper cutter to cut results slips. Some of these aren’t required but make the event go smoother, and typical Tournament Organizers will provide these. Some may find alternate ways to do some of the tasks these are used for, such as using a large TV to display pairings.
+          zh: |-
+            比赛主办人需确保限制赛的产品数量和其他相关物料并确保为构筑赛制提供套牌登记表。比赛主办人也需要提供一些其他的必需品——例如记录成绩和打印配对的电脑和打印机，计时器，用于切开成绩条的剪刀或裁纸机。上述的某些物品可能不是必备的，但是无疑会使比赛的运行更流畅，一般来说比赛主办人都会提供这样物资。当然可以用一些其他的方式来替代上述物料，例如用大电视来显示配对。
+  - id: mtr-1.7
+    chapter: '1.7'
+    en: Head Judge
+    zh: 主审
+    groups:
+    - id: mtr-1.7-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.7-b001
+        en: |-
+          Sanctioned tournaments require the physical presence of a Head Judge during play to adjudicate disputes, interpret rules, and make other official decisions. The Head Judge is the final judicial authority at any DCI-sanctioned tournament and all tournament participants are expected to follow their interpretations. Although it is beneficial, the Head Judge does not have to be certified.
+        zh: |-
+          认证的比赛在进行时需要一位主审在场裁决争议、解释规则，及做出其他正式的决定。在所有的DCI认证赛中，主审都拥有最终裁判权，所有的参赛者都应当遵从主审的指示。虽然由认证裁判担任主审为佳，但担任主审者不需具备认证资格。
+        extras:
+        - en: |-
+            The Head Judge of a tournament is not necessarily a certified Judge. Often the Head Judge of an event will simply be a store employee or the Tournament Organizer themselves. Most Competitive Rules Enforcement Level events will have a certified Head Judge but this is not necessarily required. Note it is recommended that you have at least a Level 2 judge for any Competitive REL events.
+          zh: |-
+            比赛的主审并非一定是认证裁判。一般来说，比赛的主审可能就是店里的员工或者比赛主办人自己。大多数的竞争级别比赛会有一位认证裁判作为主审，但这不一定是必要的。请注意，建议为所有竞争级别的赛事配备至少一名二级裁判。
+    - id: mtr-1.7-g002
+      type: paragraph
+      blocks:
+      - id: mtr-1.7-b002
+        en: 'The Head Judge’s responsibilities include:'
+        zh: 主审的责任包括：
+    - id: mtr-1.7-g003
+      type: list
+      blocks:
+      - id: mtr-1.7-b003
+        en: |-
+          * Ensuring that all necessary steps are taken to deal with game or policy rule violations that they notice or are brought to their attention.
+        zh: '* 确保在处理他所知或被告知的违规举动（无论是游戏规则还是方针方面的规定）时采用了所有必要的处理步骤。'
+        extras:
+        - en: |-
+            In larger events the Head Judge may not be the primary individual fielding judge calls. Sometimes the Head Judge will be handling other tournament aspects and be unable to take calls, or the Head Judge will be trying to let an available Floor Judge answer the call.
+
+            The Head Judge should be a ready resource for Floor Judges to assist in making sure players get the best possible call. In addition to appeals discussed in the next bullet, investigations that may lead to a disqualification are among the most important tasks a Head Judge performs.
+          zh: |-
+            在大型比赛中，主审的主要职责并不是第一时间去处理裁判呼叫。有时主审会因为处理比赛的其他事物而无法处理呼叫、或者试图让一个有空的巡场裁判来处理呼叫。
+
+            主审应当是巡场裁判的可靠后援，以协助他们确保牌手能得到最优的判决。除了下一条目中将讨论的上诉外，那些可能导致取消资格的调查，亦是主审所执行的最重要的任务之一。
+    - id: mtr-1.7-g004
+      type: list
+      blocks:
+      - id: mtr-1.7-b004
+        en: |-
+          * Issuing the final ruling in all appeals, potentially overturning the ruling of a floor judge.
+        zh: '* 做出申述的最终裁定，主审可推翻巡场裁判所做出的裁定。'
+        extras:
+        - en: |-
+            Players are allowed to appeal the decision of any Floor Judge to the Head Judge. The Head Judge is the final arbiter of all rulings and sometimes that will mean reversing the decision of a Floor Judge. If a decision is reversed, it is vital that the Head Judge explain the reasoning behind the reversal to both the players and the judge.
+          zh: |-
+            牌手可以不满巡场裁判的判罚并上诉至主审。主审是判罚的最终裁决者，有时甚至可以推翻巡场裁判的判罚。如果后者的判罚被推翻，主审需同时向该巡场裁判和牌手解释其中的原因。
+    - id: mtr-1.7-g005
+      type: list
+      blocks:
+      - id: mtr-1.7-b005
+        en: '* Coordinating and delegating tasks to floor judges as needed.'
+        zh: '* 协调巡场裁判之工作，并可以在需要时委之以相应的任务。'
+        extras:
+        - en: |-
+            In tournaments with multiple judges, the Head Judge is responsible for assigning and organizing Team Leads and teams. The Head Judge creates the teams (at big events sometimes with the assistance of the Tournament Organizer or Judge Manager), and makes sure everyone’s tasks are understood. The Head Judge is also responsible for overseeing other judges at the event. Not all tasks assigned are always strictly tournament operations and may be other things needed by the organizer.
+          zh: |-
+            在一场有多名裁判的比赛中，主审需要分派团队并指派队长。主审会创建团队（在大型比赛中可能会在比赛主办人或者裁判经理的帮助下），并确保每位裁判了解自己的职责。主审也需要在比赛中监督其他裁判，确保所有的任务能够按照比赛计划严格进行，并帮助主办人完成一些其他任务。
+    - id: mtr-1.7-g006
+      type: paragraph
+      blocks:
+      - id: mtr-1.7-b006
+        en: |-
+          If necessary, the Head Judge may temporarily transfer their duties to any judge if they are unable to fulfill them for a period of time. Also, in exceptional circumstances, if the tournament’s integrity would be damaged otherwise, the Tournament Organizer may replace the Head Judge.
+        zh: 若有需要，当主审无法履行自身职责时，可将此职务临时转交给其他裁判来履行。此外，在比赛的严肃性可能受到损害的特殊场合，比赛主办者可更换主审。
+        extras:
+        - en: |-
+            At store level events this is most common during lunch breaks but this can also happen if the Head Judge becomes ill or ends their shift and a new Head Judge takes over. This is incredibly rare for Premier events but for side events the person acting as Head Judge may be more fluid. The Tournament Organizer has final say about whether the Head Judge needs to be replaced due to exceptional circumstances.
+          zh: |-
+            在店赛中通常是因为午餐休息时间而出现这种情况，但是如果一旦主审生病或者下班，那么会由新的主审来接管比赛。这种情况对于重要比赛来说很少见，但在外围赛中作为主审的人员可能会经常变化。在特殊情况下，关于是否更换主审的最终决定权在于比赛主办人。
+    - id: mtr-1.7-g007
+      type: paragraph
+      blocks:
+      - id: mtr-1.7-b007
+        en: |-
+          Certain Premier tournaments have multiple Head Judges and/or different Head Judges for different portions of the tournament. All Head Judges share the same responsibilities and exercise the same authority while they are serving as a Head Judge.
+        zh: 某些重要比赛会出现拥有多个主审和／或在竞赛的不同阶段由不同的人来担任主审的情况。所有的主审共同承担同一份责任，且在分别行使主审职务时具有同样至高无上的权威。
+        extras:
+        - en: |-
+            Large events will often have several judges acting as Head Judges (usually noted by wearing burgundy judge shirts at Premier events or red at Star City Games events). It is also possible that a tournament may be organized into multiple flights, each with its own Head Judge. No Head Judge is more ‘ahead’ of another and each of their rulings is final. Each of the Head Judges can take appeals, run investigations, and satisfy all of the other duties that the Head Judge of record is afforded.
+          zh: |-
+            大型比赛中通常会有若干名裁判来充当主审的职责（他们通常在重要比赛中穿着酒红色裁判制服、或在星城公开赛中穿着红色制服）。也有可能一场比赛会分成若干个部分，每个部分都有各自的主审。这些主审没有相对的级别“高低”，他们作出的判罚均是最终判罚。每位这样的主审都能处理上诉，展开调查，以及开展主审所需要执行的工作。
+  - id: mtr-1.8
+    chapter: '1.8'
+    en: Floor Judges
+    zh: 巡场裁判
+    groups:
+    - id: mtr-1.8-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.8-b001
+        en: |-
+          Floor judges are available to players and spectators to answer questions, deal with illegal plays, or assist with reasonable requests. They do not have to be certified.
+        zh: 对牌手和旁观者而言，他们可向巡场裁判获取自身疑问的解答，召唤巡场裁判来处理非法动作，或请求巡场裁判协助自己完成合理的请求。此类裁判没有认证要求。
+        extras:
+        - en: |-
+            When it comes down to it, the biggest responsibility of Floor Judges is to be there to answer questions, fix play errors, and providing other assistance to help the event to run. They are the lifeblood of the event. Floor Judges at events, both at Competitive and Regular Rules Enforcement Level, do not need to be certified in order to judge at an event, however it is recommended that the judges at higher level events be certified or be working toward certification.
+          zh: |-
+            关于巡场裁判，他们最大的职责是回答问题，修正游戏错误，以及提供其他资源来帮助比赛进行。他们是比赛的血脉。巡场裁判，无论是在竞争级别还是一般级别的比赛中，都不一定要是认证裁判。然而，在高级别的比赛中，强烈建议裁判是认证的或正在往认证方向努力。
+    - id: mtr-1.8-g002
+      type: paragraph
+      blocks:
+      - id: mtr-1.8-b002
+        en: |-
+          Judges will not generally assist players in determining the current game state but can answer questions about the rules, interactions between cards, or provide the Oracle™ wordings of relevant cards.
+        zh: |-
+          总体而言，裁判不会协助牌手对当前游戏的场面做出判断，但会就下列这些问题做出回答：规则、牌张之间的互动，或是相关卡牌的Oracle（万智牌的牌张参考资料库）叙述。
+        extras:
+        - en: |-
+            Judges are able to answer questions about the rules and interactions between cards as long as they do not provide strategic advice regarding plays to make in a situation. Oracle text is the authoritative rules text for a card. Oracle text can be found on gatherer.wizards.com, but many other sources such as phone apps will have up to date Oracle text as well. More reading on what type of information judges can assist with is available in section 4.1.
+          zh: |-
+            裁判们可以回答关于规则以及牌张互动的问题，只要他们不对牌手做出策略建议。Oracle叙述是牌张的权威规则解释。Oracle叙述能在[gatherer.wizards.com](gatherer.wizards.com)上找到，但是许多其他资源（例如手机app）中也可以查询到最新的Oracle叙述。关于裁判可以协助取得何种类型的信息可以参考[章节4.1](#mtr-41-player-communication-牌手之间的沟通)。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-1.8-b003
+        en: |-
+          At Regular Rules Enforcement Level, the judge may assist the player in understanding the game state in the interest of education.
+        zh: 在执法严格度为一般级别的情况下，为了进行教学推广，裁判也可协助牌手对当前的游戏局面做出判断。
+        extras:
+        - en: |-
+            Regular Rules Enforcement Level events provides an entry into the game for players. As a result, players may ask judges what the game state is and why something is the way it is. The emphasis is on education and helping new players, and there are likely smaller prizes on the line. This doesn’t mean the judge can tell the player what they should do, but the judge may assist a player in understanding a more complex interaction or game state in a less formal way than at Competitive Rules Enforcement Level.
+          zh: |-
+            一般级别的比赛是让牌手入门万智牌的好机会。在巡场时，牌手可能会询问裁判有关当前游戏状态和为什么会导致这种情况的问题。这里的重点侧重于教导并帮助新牌手，这些比赛的奖池也相对较小。这不意味着裁判可以告诉牌手后者应当怎么做，但是裁判可以帮助牌手理解复杂的牌张互动和游戏状态，且不需要使用像在竞争级别中那么严肃的方式。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-1.8-b004
+        en: |-
+          If a player wishes to ask their question away from the table, the request will usually be honored.
+        zh: 牌手可请求在远离游戏的场所对裁判进行提问，此类请求通常会予以执行。
+        extras:
+        - en: |-
+            If the player wants to ask a question that they feels may give too much information to their opponent, the player may ask to have the question answered away from the table. A good habit for judges is to stand far enough away so opponents cannot hear them or the player asking for assistance.
+          zh: 如果某牌手想要咨询一个问题但是害怕向对手透露过多信息，该牌手可以申请在牌桌外得到解答。裁判最好能够足够远离，这样对手就不会听到裁判的回答以及牌手询问的内容了。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-1.8-b005
+        en: |-
+          Players may not request specific judges to answer their calls but may request a tournament official to help translate. This request may be honored at the discretion of the original judge.
+        zh: 牌手在呼叫裁判时，不得要求由某一名特定的裁判来响应此次呼叫，但可以请求比赛工作人员来协助翻译。经原裁判斟酌，此请求可予以执行。
+        extras:
+        - en: |-
+            Players may not request that a specific judge answer their call, as it would compromise tournament integrity and give the impression of partiality. But there are tournaments throughout the world, and players may not speak the local language. If there are tournament officials that speak the player’s language,they may help to translate in order to ensure clear and efficient communication. At international events like an European Grand Prix, there is often a list of judges who speak different languages as a resource provided to Scorekeepers and Judge Managers.
+          zh: |-
+            牌手不得要求某一名特定的裁判来回应他们的呼叫，这可能会对比赛的公正性造成影响并给人一种偏袒的印象。然而全世界都有万智牌比赛，牌手可能不会使用该地的语言。如果有工作人员能使用该牌手的语言，那么他们可以帮助进行翻译确保沟通的效率和准确性。在例如欧洲大奖赛的国际比赛中，往往会有一些使用多国语言的裁判来协助记分员和裁判经理。
+    - id: mtr-1.8-g003
+      type: paragraph
+      blocks:
+      - id: mtr-1.8-b006
+        en: |-
+          Judges do not intervene in a game to prevent illegal actions but do intervene as soon as a rule has been broken or to prevent a situation from escalating.
+        zh: 裁判不得在非法行动尚未发生时就中止比赛以防止其发生；但在已经发生违规行为，或是为了防止局势发生恶化的情形下，裁判应尽快介入比赛。
+        extras:
+        - en: |-
+            Like in other sports, judges aren’t there to prevent mistakes. However, as soon as a game infraction happens, judges step in and apply the necessary corrections and penalties. Judges may step in if they believe a tense situation would otherwise escalate to unsportsmanlike conduct.
+          zh: |-
+            与其他运动一样，裁判不是为了阻止错误发生而存在的。然而一旦游戏中产生了违规情况，裁判就应当介入并且适用必要的修正，做出相应的判罚。裁判也可以在他们确信当前紧张的事态会导致违背运动精神的举止的情况下介入。
+  - id: mtr-1.9
+    chapter: '1.9'
+    en: Scorekeeper
+    zh: 记分员
+    groups:
+    - id: mtr-1.9-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.9-b001
+        en: |-
+          The Scorekeeper ensures the correct generation of pairings and all other tournament records throughout the tournament.
+        zh: 记分员须确保在比赛整个过程当中生成的对局配对和其他比赛记录文档都正确无误。
+        extras:
+        - en: |-
+            This includes both match slips and every sanction issued by a judge during the tournament. Scorekeepers usually keep slips separated and organized in round pairs, so if a problem arises they have both electronic and paper copies of relevant documents.
+          zh: 这包括成绩条以及裁判在比赛中记录的判罚。记分员通常按轮次保管配对和成绩条，如果有问题，便可以从电子设备中和纸质记录的相关文件中找到依据。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-1.9-b002
+        en: 'The Scorekeeper’s responsibilities include:'
+        zh: 记分员的责任包括：
+    - id: mtr-1.9-g002
+      type: list
+      blocks:
+      - id: mtr-1.9-b003
+        en: |-
+          * Generating correct pairings each round and accurately entering the results of those rounds.
+        zh: '* 为每局对局生成正确的对局配对并准确地输入该局对局的比赛结果。'
+    - id: mtr-1.9-g003
+      type: list
+      blocks:
+      - id: mtr-1.9-b004
+        en: |-
+          * Generating standings for posting before and after the final Swiss round. Other rounds may also be posted at the Head Judge’s discretion.
+        zh: '* 在最后一局瑞士式对局开始之前及结束之后生成供张贴使用的排名。经主审斟酌，也可以在其他局次中张贴排名。'
+    - id: mtr-1.9-g004
+      type: list
+      blocks:
+      - id: mtr-1.9-b005
+        en: |-
+          * Solving all scorekeeping problems that arise in consultation with the Head Judge.
+        zh: '* 在与主审协商后，解决所出现的一切记分问题。'
+    - id: mtr-1.9-g005
+      type: list
+      blocks:
+      - id: mtr-1.9-b006
+        en: '* Making sure all necessary information is included in the tournament’s report.'
+        zh: '* 确保在比赛报告中包含有所有的必要信息。'
+        extras:
+        - en: |-
+            While scorekeeping might seem simple, ensuring that the results of each match are correctly kept is crucial to guarantee that the tournament runs as smooth as possible.
+
+            The Tournament Organizer or the Head Judge is typically the Scorekeeper of smaller events, but in larger events (120+) a dedicated scorekeeper is recommended. Larger Premier events often have professional Scorekeepers who are experienced with scorekeeping software. Their scorekeeping ability does not correlate to their judge level; some professional Scorekeepers are uncertified, and others are Level 2+ judges.
+          zh: |-
+            尽管记分的工作看似简单，确保每个对局的成绩能够完好保存对比赛的顺利运行来说是至关重要的。
+
+            在小型比赛中，比赛主办人或主审往往担任了记分员的角色，但是在大型比赛（120人以上）中建议有专门的记分员。大型的重要比赛中则会有精通记分软件的专业记分员来负责。他们的记分水平和裁判等级无关，一些专业记分员并非认证裁判，一些专业记分员则是二级以上裁判。
+    - id: mtr-1.9-g006
+      type: paragraph
+      blocks:
+      - id: mtr-1.9-b007
+        en: |-
+          The Head Judge has the final authority in determining corrective action for scorekeeping errors.
+        zh: 主审在确定如何对记分错误进行修正方面拥有最终决定权。
+        extras:
+        - en: |-
+            In the event of any issue with the pairings at any given round, the Head Judge may dictate a solution they see fit. In the end, the Head Judge is the final decision maker when it comes to the running of the event.
+          zh: 如果在比赛中出现任何与配对相关的情况，主审将确定一个他认为最合适的解决方案。说到底，与比赛运行相关问题的最终决定权在于主审。
+  - id: mtr-1.10
+    chapter: '1.10'
+    en: Players
+    zh: 牌手
+    groups:
+    - id: mtr-1.10-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.10-b001
+        en: 'Players are responsible for:'
+        zh: 牌手的责任包括：
+    - id: mtr-1.10-g002
+      type: list
+      blocks:
+      - id: mtr-1.10-b002
+        en: |-
+          * Behaving in a respectful manner toward tournament officials, other tournament participants, and spectators and refraining from unsporting conduct at all times.
+        zh: '* 尊重比赛官员、其他参赛者以及旁观者，保持克制，任何时候都不得出现违反体育道德的行为。'
+        extras:
+        - en: |-
+            Examples of behavior which are considered unsporting are found here. Players are otherwise expected to treat others with some level of respect.
+          zh: 在[这里](#mtr-4-沟通交流)可以找到关于违反运动精神行为的案例。牌手必须在一定程度上对他人表示尊重。
+    - id: mtr-1.10-g003
+      type: list
+      blocks:
+      - id: mtr-1.10-b003
+        en: '* Maintaining a clear and legal game state.'
+        zh: '* 保持对局状态清晰、合法。'
+        extras:
+        - en: |-
+            Playing Magic can sometimes be complex, sometimes stressful, and sometimes frustrating, but still that’s not an excuse for a judge not penalizing a player for playing unclearly. Comprehension, legality and clarity are the most important things in a Magic game, for they can be the difference between no penalization and a Disqualification. There is a specific section about Maintaining the Game State in the IPG.
+          zh: |-
+            万智牌的对局有时可能非常复杂，有时让人感到充满压力，有时甚至会让人沮丧。不过这都不是能让裁判宽恕未能清晰地进行游戏的牌手的原因。总的来说，理解、合法、清晰是进行万智牌对局最重要的三件事，这些事情可能会成为从无判罚到取消资格的巨大差异。在IPG中专门有一节是关于[维护游戏状态](http://blogs.magicjudges.org/rules/ipg2-6/)的。
+    - id: mtr-1.10-g004
+      type: list
+      blocks:
+      - id: mtr-1.10-b004
+        en: '* Complying with announced start times and time limits.'
+        zh: '* 遵守宣告的开始时间以及时间限制。'
+        extras:
+        - en: |-
+            Tournaments are always organized to run in a timely fashion, and Tournament Officials (judges and organizers) look to keep them running smoothly and quickly. If no extenuating situations appear, players are expected to follow every time limit to keep the tournament flowing. There is a specific section about Tardiness in the IPG.
+          zh: |-
+            一般来说，比赛需要尽可能快地运行，比赛工作人员（裁判和主办人）会尽可能确保比赛快速并流畅地进行。如果没有特殊情况发生，我们希望牌手能够注意时间节点，确保比赛能够正常进行。在IPG中专门有一节是关于[迟到](http://blogs.magicjudges.org/rules/ipg3-1/)的。
+    - id: mtr-1.10-g005
+      type: list
+      blocks:
+      - id: mtr-1.10-b005
+        en: |-
+          * Calling attention to any rules or policy infraction they notice in their matches.
+        zh: '* 将在其对局中发现的违规举动（不论是游戏规则还是方针方面的规定）时提请他人注意。'
+        extras:
+        - en: |-
+            Judges can’t be everywhere all the time, so players are encouraged to cooperate in maintaining a legal and clear game. Any rules and/or policy infraction should be pointed out to any judge as soon as noticed. This way we can all enjoy of a healthy and correct game! Failing to notice mistakes quickly may lead to Warnings (see IPG 2.6), and intentionally ignoring them can be much worse (see IPG 4.8).
+          zh: |-
+            裁判不可能照顾到方方面面，所以我们鼓励牌手能够共同维护比赛的清晰合法。一旦发现规则或者方针上的问题，需及时向裁判提出。这样我们才能共同享受健康以及正确的游戏环境！未能及时注意到错误会导致警告的判罚（IPG2.6），故意忽略这些错误可能会得到更糟糕的判罚（IPG4.8）。
+    - id: mtr-1.10-g006
+      type: list
+      blocks:
+      - id: mtr-1.10-b006
+        en: |-
+          * Bringing to a judge’s attention any discrepancies in their tournament match record.
+        zh: '* 发现自己比赛对局记录有出入时告知裁判。'
+        extras:
+        - en: |-
+            This is a very important responsibility. Players are required to inform a judge immediately if they are offered a bribe, or asked to record an improper game result. Failing to do so may result in a severe penalty for both the player offering and the player who did not call attention to the illegal action. Additionally, any errors that have been made in results entry should be brought to a Tournament Official’s attention as soon as they are noticed.
+          zh: |-
+            这是一项十分重要的职责。当牌手遭遇行贿，或被要求记录非法游戏结果时，他应当及时通知裁判。如果不这样做，可能会为双方都带来十分严厉的判罚。此外，任何关于上报成绩的错误应当立即引起比赛工作人员的注意。
+    - id: mtr-1.10-g007
+      type: list
+      blocks:
+      - id: mtr-1.10-b007
+        en: '* Accurately reporting the results of their matches in a timely manner.'
+        zh: '* 正确且及时地回报自己的比赛结果。'
+        extras:
+        - en: |-
+            In a world without match slips, it’s even more important for players to report their results one way or another ideally before leaving the table or immediately thereafter.
+          zh: 在不再使用纸质成绩条的今天，牌手及时汇报比赛结果变得尤为重要。理想情况下，这一汇报应在牌手离开牌桌前后立即完成。
+    - id: mtr-1.10-g008
+      type: list
+      blocks:
+      - id: mtr-1.10-b008
+        en: |-
+          * Refraining from enrolling in tournaments in which they are not allowed by policy to participate.
+        zh: '* 不报名参加受相应方针限制而无法参加的比赛。'
+        extras:
+        - en: |-
+            Some tournaments award invitations to other events or have participation restrictions based on level, players’ invitation history, or other factors. Players are required to be aware of their eligibility and should not intentionally enter events they are ineligible for.
+          zh: 一些比赛会提供参加另一些比赛的邀请，或者具有基于牌手级别、邀请历史或其他因素的参赛限制。牌手需要明晰自己是否符合参赛标准，不应去参加他们不能参加的比赛。
+    - id: mtr-1.10-g009
+      type: list
+      blocks:
+      - id: mtr-1.10-b009
+        en: '* Being familiar with the rules contained within this document.'
+        zh: '* 熟识本文档中包含的规则。'
+        extras:
+        - en: |-
+            While judges know how to handle rules and how to interpret them, players are responsible for knowing something about the rules contained in the game they play. Note, this is stated in the MTR, but not in the IPG. We expect players to know and adhere to Tournament Rules, but they don’t need to know what infraction or penalties are. Some violations of the MTR, such as Bribery and Improperly Determining a Winner involve penalties that will be applied whether or not the players know the relevant rules.
+          zh: |-
+            裁判知道如何处理并解释规则，同时牌手也需要了解一些自己玩的游戏中所包含的规则。请注意，这是在MTR中说明的，但没有在IPG中说明。我们希望牌手了解并遵守比赛规则，但是他们不必了解违规和判罚的具体内容。一些违反MTR的违规，例如贿赂和不当决定胜方，一旦牌手触犯，无论他们是否知道相关规则，都会受到判罚。
+    - id: mtr-1.10-g010
+      type: list
+      blocks:
+      - id: mtr-1.10-b010
+        en: '* Being physically present for the tournament.'
+        zh: '* 亲自到场参加比赛。'
+        extras:
+        - en: |-
+            This document hasn’t yet been updated for online tournaments, but thats not what this rule is for.  You have to actually be at a tournament you are playing in.  For example, if an event gives a promo to everyone that registers, you actually have to appear at the event to be allowed in the event.  You cannot just pre-register, no-show, then expect your promo.  You were dropped from the event.
+          zh: |-
+            本文件尚未针对线上赛进行更新，但本条规则的用意并非在于此。你必须亲身到场参加你所报名的比赛。例如，如果一场比赛为所有报名者提供一张纪念闪卡，你也必须实际到场才能被算作正式参赛。你不能只进行预先报名，然后缺席，还指望能拿到那张闪卡。在这种情况下，你已经被移出赛事了。
+    - id: mtr-1.10-g011
+      type: paragraph
+      blocks:
+      - id: mtr-1.10-b011
+        en: |-
+          A player must bring the following items to a tournament in order to participate:
+        zh: 牌手须齐备下列所述各物品以参加比赛：
+    - id: mtr-1.10-g012
+      type: list
+      blocks:
+      - id: mtr-1.10-b012
+        en: |-
+          * A physical, visible, and reliable method to maintain and record game information (tokens, score counters, pen and paper, and so on).
+        zh: '* 具体的、可辨识的、可靠的方式，以维持和记录游戏信息（衍生物，记分器，纸笔，等等）。'
+        extras:
+        - en: |-
+            Players are responsible for maintaining a clear and legal game state. Therefore players must bring items that help keep a clear game state — e.g., pen and paper for life totals, dice for counters and actual mana pool, tokens, etc.
+          zh: |-
+            牌手有义务维持清晰合法的游戏状态。因此牌手需要携带一些物件来帮助体现清晰的游戏状态——例如，用于记录生命的纸笔，用于表示指示物或者法术力池的骰子，衍生物，等等。
+    - id: mtr-1.10-g013
+      type: list
+      blocks:
+      - id: mtr-1.10-b013
+        en: |-
+          * Any materials specifically required for a particular tournament format, such as assembled decks and/or decklists for constructed tournaments.
+        zh: '* 某些特定赛制所明定的其他必需物品，如构组赛中需要的已构组好的套牌和／或套牌登记表。'
+        extras:
+        - en: |-
+            Some tournaments require players to have certain items in order to play, e.g., a decklists and constructed decks. Decklists help maintain an event’s integrity and provide information about the decks played at the tournament and their legality.
+          zh: 一些比赛需要牌手携带特定的物品参赛，例如套牌登记表和构组赛用的套牌。套牌登记表帮助维护比赛公正并提供了参赛套牌的信息并确保该套牌合法。
+    - id: mtr-1.10-g014
+      type: paragraph
+      blocks:
+      - id: mtr-1.10-b014
+        en: |-
+          Players retain their responsibilities even if a judge provides them with extra assistance.
+        zh: 在裁判提供了额外协助的情况下牌手也须履行好上述责任。
+        extras:
+        - en: |-
+            Players may request a judge’s assistance to comply with their responsibilities as a player. For example, during the pool registration portion of a limited event, a judge may step in to help a struggling player register their pool to get the event moving. Nevertheless, the player still needs to fulfill with his responsibilities as best they can.
+          zh: |-
+            为了履行自己作为牌手的职责，牌手可以向裁判寻求帮助。例如，在限制赛的牌池登记环节，裁判可以帮助觉得困难的牌手登记牌池来确保比赛正常进行。然而，牌手仍需在可行的范围内尽可能地自己履行职责。
+    - id: mtr-1.10-g015
+      type: paragraph
+      blocks:
+      - id: mtr-1.10-b015
+        en: |-
+          The individual members of a team are considered players, and are equally responsible for required tournament procedures, such as accurately reporting the results of their match. Players are only responsible for the games they play themselves and not separate games being played by their teammates but are expected to point out rules violations they observe in their teammates’ matches.
+        zh: |-
+          一个团队的每一位队员都算作一位牌手，因此也需要为必要的比赛过程承担同等的责任，例如准确回报他们的对局结果。每位牌手只需为他们自己所参与的对局负责，而不需为他们同队队员所参与的其他对局承担责任，但在发现队友对局中出现违反规则情事时，应予以指出。
+        extras:
+        - en: |-
+            Individual players on a team must comply with the same tournament procedures as players not playing on a team but should not be held responsible for their teammates’ errors, However that doesn’t mean they can ignore errors if they see them. If they see a problem with one of their teammate’s games they cannot deliberately ignore it.
+          zh: |-
+            团队中的每一位队员都需要像个人赛中的牌手一样履行相应的职责，然而他们不需要为队友的错误负责。但这并不意味着他们可以无视其看到的错误。如果他们发现了队友游戏中的问题，他们不能故意忽略之。
+    - id: mtr-1.10-g016
+      type: paragraph
+      blocks:
+      - id: mtr-1.10-b016
+        en: |-
+          Players who do not fulfill their responsibilities may be subject to penalties and review by the DCI. Wizards of the Coast and the DCI reserve the right to suspend or revoke a player's membership without prior notice for any reason they deem necessary.
+        zh: |-
+          未能确实达成以上责任的牌手可能会受到相应的处罚，并由DCI进行复核。只要威世智与DCI认定有此必要，则不论是否预先通知，均保留将玩家停权乃至取消会员资格的权利。
+        extras:
+        - en: |-
+            This is the big ultimatum. Not complying with a required responsibility consciously may end in a penalty and also a review or an investigation conducted by the judges at the event and/or the DCI itself. No player may interfere with the integrity of a tournament under any circumstances.
+          zh: 这是最后通牒。明知却不履行职责的牌手会得到处罚并受到裁判和DCI的后续调查和跟进。任何情况下，牌手都不能干扰比赛的公正。
+  - id: mtr-1.11
+    chapter: '1.11'
+    en: Spectators
+    zh: 旁观者
+    groups:
+    - id: mtr-1.11-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.11-b001
+        en: |-
+          Any person physically present at a tournament and not in any other category above is a spectator. Spectators are responsible for remaining silent and passive during matches and other official tournament sections in which players are also required to be silent.
+        zh: 亲临比赛，但并不属于上述任一职能分类之人员便属于旁观者。在对局过程中及参加比赛之牌手亦须保持安静的正式比赛部分当中，旁观者得保持噤声，不主动与他人进行沟通。
+        extras:
+        - en: |-
+            Spectators are allowed as long as they are not disruptive.  Excessive chatting can be disruptive at best, and at the worst can actually aid a player and alter the outcome of a game.  Also, so much information can be gained from watching spectators facial expressions. Pretend you are [Aang talking to Koh](https://avatar.fandom.com/wiki/Koh).
+          zh: |-
+            旁观是被允许的，前提是不能干扰比赛。过多的交谈，轻则会干扰赛场，重则实际上会帮助到某位牌手，甚至改变游戏结局。此外，通过观察旁观者的面部表情也可能获取大量信息。所以，请保持面无表情。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-1.11-b002
+        en: |-
+          If spectators believe they have observed a rules or policy violation, they are encouraged to alert a judge as soon as possible. At Regular or Competitive Rules Enforcement Level, spectators are permitted to ask the players to pause the match while they alert a judge. At Professional Rules Enforcement Level, spectators who are not members of the official coverage team must not interfere with the match directly.
+        zh: |-
+          若旁观者认为自己发现了违反游戏规则或比赛方针的举动，鼓励其尽快提请裁判注意。在「一般」或「竞争」级别的比赛中，允许旁观者请求牌手在其寻找裁判期间暂停对局的进行。在「专业」级别的比赛中，不属于正式报导团队之旁观者不得直接干预对局。
+        extras:
+        - en: |-
+            Judges aren’t everywhere and sometimes spectators may identify an action or board state as illegal.  When this happens, a spectator may bring the issue to a judges attention away from the match.  Spectators may ask the players to pause at a Competitive Rel event.  But otherwise, do not tell the players what the concern is.  This is because the spectator may be in error regarding the rules and give the players information.  This can alter the game.
+
+            Members of the coverage team are allowed to bring attention to the judge staff about possible problems with the game.
+          zh: |-
+            裁判并非无处不在，有时旁观者可能会发现违规行为或不合法的场面状态。在这种情况下，旁观者应当在远离对局的地方提醒裁判注意此问题。在竞争级别赛事中，旁观者可以要求牌手暂停，但除此以外，不应告知牌手他们所顾虑的问题是什么。这是因为旁观者对规则的理解可能有误，而他们的言语会向牌手提供本不应获得的信息，进而可能影响游戏进程。
+
+            允许报道团队的成员就游戏内可能的问题提请裁判。
+    - id: mtr-1.11-g002
+      type: paragraph
+      blocks:
+      - id: mtr-1.11-b003
+        en: |-
+          Players may request that a spectator not observe their matches. Such requests must be made through a judge. Tournament officials may also instruct a spectator not observe a match or matches.
+        zh: 牌手可以要求旁观者停止观看自己的对局。所有类似的要求必须通过裁判提出。比赛工作人员同样也可要求旁观者停止观看对局或比赛。
+        extras:
+        - en: |-
+            Some spectators might be scouting other players or talking too much, or just hovering in a disconcerting way. Players can request the judge to have the spectator removed. This request can be refused, but would only happen in situations with extreme mitigating factors.
+          zh: |-
+            一些旁观者可能会侦查其他牌手的情况，或者在一旁说太多的话，或仅是以令人不安的方式在旁徘徊。牌手可以请求裁判将这样的牌手驱离他的比赛。裁判一般会同意这样的请求，但是同样也会保留拒绝不合理请求的权利。
+  - id: mtr-1.12
+    chapter: '1.12'
+    en: Rules Enforcement Levels
+    zh: 执法严格度
+    groups:
+    - id: mtr-1.12-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.12-b001
+        en: |-
+          Rules Enforcement Levels (REL) are a means to communicate to the players and judges what expectations they can have of the tournament in terms of rigidity of rules enforcement, technically correct play, and procedures used.
+        zh: 执法严格度的用途，是让牌手和裁判对于此比赛的规则执法严厉与否、正确进行游戏的水准以及使用的程序，能够先有所预期。
+        extras:
+        - en: |-
+            The expected mindset and attitude of the average player as well as the standard of behavior judges  are different at each Rules Enforcement Level. From the most casual to most stringent the Rules Enforcement Levels are: Regular Rules Enforcement Level, Competitive Rules Enforcement Level, and Professional Rules Enforcement Level.
+          zh: 牌手的态度和预期心态，以及裁判的行为标准会随着执法严格度的不同而有所改变。执法严格度从休闲轻松，到严格严肃分为以下级别：一般级别，竞争级别，以及专业级别。
+    - id: mtr-1.12-g002
+      type: paragraph
+      blocks:
+      - id: mtr-1.12-b002
+        en: |-
+          The Rules Enforcement Level of a tournament generally reflects the prizes awarded and the distance a player may be expected to travel.
+        zh: 比赛的执法严格度通常应该配合所提供的奖品，以及牌手为参赛所可能花费的路程来增加。
+        extras:
+        - en: |-
+            Typically the higher the stakes for the tournament, the more rigidly the rules are enforced.  For example, FNM is run at Regular Rules Enforcement Level, draws from the store’s local player community, and often offers one or two booster packs per player as the prize pool.  This type of event is more laid back and casual, so a less strict Rules Enforcement Policy is appropriate.  However,  an SCG Tour event, is run at Competitive Rules Enforcement Level, can draw players from several hours away, and often have significant prizes.  For those events, where players are more incentivized to play competive, a stricter Rules Enforcement policy is appropriate.
+          zh: |-
+            通常而言，一场赛事的利害关系越重大，其规则的执行也越严格。例如，FNM的执法严格度是一般级别，大多数参赛牌手都来自牌店的本地牌手社群，一般会提供平均每位牌手1到2包补充包作为奖品池。这类赛事更为轻松休闲，因此采用较为宽松的规则执行策略是恰当的。然而，星城巡回赛 (SCG Tour) 则以竞争级别运作，一些牌手可能会花费几小时的时间赶来参加，并通常设有更丰厚的奖品。对于这类牌手竞争意愿更强的赛事，采用更为严格的执法严格度便是恰当的。
+    - id: mtr-1.12-g003
+      type: paragraph
+      blocks:
+      - id: mtr-1.12-b003
+        en: |-
+          The appropriate Rules Enforcement Level for specific programs is listed in Appendix F.
+        zh: 具体比赛计划对应的执法严格度于附录F中列出。
+    - id: mtr-1.12-g004
+      type: paragraph
+      blocks:
+      - id: mtr-1.12-b004
+        en: Regular
+        zh: 一般级别
+    - id: mtr-1.12-g005
+      type: paragraph
+      blocks:
+      - id: mtr-1.12-b005
+        en: |-
+          Regular tournaments are focused on fun and social aspects, not enforcement. Most tournaments are run at this level unless they offer sizeable prizes or invitations. Players are expected to know most of the game rules, may have heard of policy and what is “really bad,” but generally play in a fashion similar to the way they do casually. Players are still responsible for following the rules, but the focus is on education and sportsmanship over technically precise play. Infractions in these tournaments are covered by the Judging at Regular Rules Enforcement Level document, located at https://wpn.wizards.com/en/rules-documents.
+        zh: |-
+          一般的比赛主要是为了娱乐和社交，而非铁面无私。大部分的比赛都是采用这个等级，除非比赛提供了一定程度的奖品或是邀请资格。对牌手的期待是应该知道大部分的游戏规则，可能听过一些比赛政策或知道哪些事情「很不好」，但通常是以类似休闲娱乐的方式来比赛。牌手还是有责任去遵循规则，但所强调的主要在于教育性和运动道德，而不是技术上的精确无误。在此类比赛中处理牌手违规行为的细则，由《一般执法严格度下执法指南》此份文档详述，该文档可于此处获取：https://wpn.wizards.com/en/rules-documents.
+        extras:
+        - en: |-
+            Regular Rel events are often players introduction to Magic tournaments.  As they are often coming from playing at home, it is expected that they bring that style of play with them.  Playing at home is fun and low stakes, and Regular tournaments should strive to capture that same vibe.  Note that the IPG does not apply at Regular Rules Enforcement Level. Instead, we use the Judging at Regular Rules Enforcement Level (JAR) document, which lays the groundwork for a fun, casual atmosphere where only repeat offenders and serious problems —like cheating, aggressive behavior, bribery, and theft— are punished. Instead of punishing players for innocent tournament and play errors, it’s our job as judges at Regular Rules Enforcement Level to help them learn the right way to play so that they can succeed at higher Rules Enforcement Level tournaments.
+          zh: |-
+            一般级比赛是走向万智牌比赛的第一步。由于这些牌手通常习惯了在家打牌，他们自然也会将那套游戏风格带到赛场上。家庭对局的特点是充满乐趣且利害关系不大，而一般级比赛也应致力于营造出同样的氛围。请注意，IPG不适用于一般级别的比赛。取而代之的是，我们会使用JAR，这份文件基于创造快乐、休闲的游戏氛围而制定，只有重复犯错和触犯严重问题（例如作弊，进攻性举止，贿赂，偷窃）的牌手才会受到惩罚。比起惩罚犯错的牌手，在一般级别的比赛中我们裁判更应该帮助牌手懂得怎么做才是正确的，这样他们才能在未来更高级别的比赛中取得成功。
+    - id: mtr-1.12-g006
+      type: paragraph
+      blocks:
+      - id: mtr-1.12-b006
+        en: Competitive
+        zh: 竞争级别
+    - id: mtr-1.12-g007
+      type: paragraph
+      blocks:
+      - id: mtr-1.12-b007
+        en: |-
+          Competitive tournaments are usually those with significant cash prizes or invitations awarded to Professional tournaments. Players are expected to know the game’s rules and be familiar with the policies and procedures, but unintentional errors are not punished severely. These are tournaments that protect the interests of all players by providing tournament integrity while also recognizing that not all players are intimately familiar with Professional-level tournament structure, proper procedures, and rules. Infractions in these tournaments are covered by the Magic Infraction Procedure Guide, located athttps://wpn.wizards.com/en/rules-documents.
+        zh: |-
+          竞争等级的比赛通常指有着高额奖金，或有专业比赛邀请资格的比赛。对牌手的要求是了解游戏规则并熟悉竞赛政策和流程，但是无意的失误不会导致严厉的处罚。为了保护所有牌手的乐趣，这类比赛要尽力维持一致性，也要了解并非所有牌手都十分清楚专业级比赛的架构、适当的流程，以及规则。在此类比赛中处理牌手违规行为的细则，由《万智牌违规处理方针》此份文档详述，该文档可于此处获取：https://wpn.wizards.com/en/rules-documents.
+        extras:
+        - en: |-
+            One thing to clarify here is that there is a difference between “Competitive tournaments” and “competitive tournaments”.  Any game of Magic you play, where you are trying to win, is a competitive game. However Competitive Tournaments is a class of tournaments where players begin competing for significant prizes. This is the Rules Enforcement Level at which many large magic tournaments are run. Grand Prix Trials, Preliminary Pro Tour Qualifiers, Regional Pro Tour Qualifiers, and the first day of Grand Prix are all run at Competitive Rules Enforcement Level. Tighter technical play and clearer communication are both important at this level, and tournament and game play infractions are penalized according to the IPG.
+
+            Competitive tournaments have more expectations of players.  For example, decklists are required at Competitive events, which they are a discouraged option at Regular.
+          zh: |-
+            首先需要区分，“竞争级比赛” 和“竞争性的比赛” 这两个概念的区别。任何一场你以获胜为目标的万智牌对局，都带有竞争性质。然而，“竞争级比赛”则是一个正式的赛事类别，在这一类别中，牌手们开始为更重大的奖品而战。大多数竞争性较强的万智牌比赛都会使用这个执法严格度。大奖赛预选赛，初选专业资格赛，区域专业资格赛，大奖赛第一天都是以竞争级别的执法严格度进行的。这个级别的比赛要求更严谨的游戏技巧以及更清晰的交流，并且会根据IPG对违规进行相应的处理。
+
+            竞争级比赛对牌手有着更高的要求。例如，在竞争级赛事中，牌手必须提交套牌登记表，而在一般级赛事中，这通常是不鼓励的选择。
+    - id: mtr-1.12-g008
+      type: paragraph
+      blocks:
+      - id: mtr-1.12-b008
+        en: Professional
+        zh: 专业级别
+    - id: mtr-1.12-g009
+      type: paragraph
+      blocks:
+      - id: mtr-1.12-b009
+        en: |-
+          Professional level tournaments offer large cash awards, prestige, and other benefits that draw players from great distances. These tournaments hold players to a higher standard of behavior and technically-correct play than Competitive tournaments. Infractions in these tournaments are covered by the Magic Infraction Procedure Guide, located athttps://wpn.wizards.com/en/rules-documents.
+        zh: |-
+          专业级别的比赛会提供高额的奖金、声望和其他福利，吸引牌手不远千里而来。这些比赛和竞争等级的比赛比起来，更要求牌手具备高水准的行为和精确的游戏动作。在此类比赛中处理牌手违规行为的细则，由《万智牌违规处理方针》此份文档详述，该文档可于此处获取:https://wpn.wizards.com/en/rules-documents.
+        extras:
+        - en: |-
+            This is the strictest Rules Enforcement Level and is correspondingly rare. Day two of Grand Prix and the Pro Tour are both run at Professional Rules Enforcement Level.  Its also very similar to Competitive REL, with most of the difference in the rules managing spectators.
+          zh: 这是最严格的执法严格度，但相对也使用得最少。大奖赛第二天以及专业赛都是用这个执法严格度进行的。它与竞争级非常相似，主要区别在于有关旁观者管理方面的规则。

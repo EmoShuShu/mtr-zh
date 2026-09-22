@@ -1,0 +1,135 @@
+snapshotVersion: 1
+snapshotId: 2025-11-10/162253d5cd84
+createdAt: '2026-09-22T13:15:21.356447+00:00'
+document:
+  id: mtr
+  effectiveDate: '2025-11-10'
+official:
+  url: https://media.wizards.com/ContentResources/WPN/MTG_MTR_2025_Nov10_EN.pdf
+  path: official/MTR_EN.pdf
+  sha256: 162253d5cd84068bed69eefd09a0e96fcf13e095aa0ec2fce24a9209d1afc57b
+  size: 562681
+inputs:
+  legacy:
+    path: inputs/legacy.md
+    sha256: 87ff603d9743a3177422dabc5c672c787acc8b3703e71af0e307679c712b33ce
+  overrides:
+    path: inputs/migration-overrides.yaml
+    sha256: 8825a2c354cb89577c76e12c29715b38d578b77be3e3821bbe27e65d25b2afbd
+processing:
+  schemaVersion: 1
+  officialSectionCount: 94
+  officialUnitCount: 947
+  implementation:
+    mtr_pipeline/legacy_import.py: 3a31e295b57cfa5f3248e8ee1a7300fa7860788e74aff5ac7063baf5b527dbe7
+    mtr_pipeline/legacy_migrate.py: 3055231a16439e830bbe5080bfe9d181aaab2646d44a101aab229438104e2932
+    mtr_pipeline/snapshot.py: ba5e9edf44292449fec5a423c9d0ff59ae2ab3d0e24ef9eb6dc5858fe4fdb685
+status:
+  state: review-required
+  findings:
+    error: 24
+    warning: 88
+    info: 5
+artifacts:
+- path: assets/diagrams/draft-pod-seating.png
+  sha256: 272dcb22f127a0bdbec69ebcf304ec8b4a9127b0789be0e609ee71db9ad365e6
+  size: 16431
+- path: assets/diagrams/playoff-bracket-4.png
+  sha256: 23dc86968fe15d10afc6afd307dd33e03983d8731ca9366f3185b51c94737707
+  size: 11773
+- path: assets/diagrams/playoff-bracket-8-seating.png
+  sha256: 74b9fd68f2a138a7dfbfa4cb43d140cdf4db8652fc4ea0dd8291329dfcfde464
+  size: 25778
+- path: assets/diagrams/playoff-bracket-8-seeding.png
+  sha256: 6f7c8038480df9648fd3f056f3f491214f4b47f5139866a100930bc5a00766f4
+  size: 26614
+- path: assets/formulas/opponents-match-win-decimals-eight.png
+  sha256: 15b8ef8fb35e5adfd2600b393c539eb3c9c94dbc9701f248376345f6478853fc
+  size: 33558
+- path: assets/formulas/opponents-match-win-decimals-seven.png
+  sha256: 5d89cd22deb53cc2d18882af4c7b9c6e731e720921e309feb493261cca14d150
+  size: 36765
+- path: assets/formulas/opponents-match-win-fractions.png
+  sha256: 23f7e4420af56d61e248a205dcc50d70d6f819bd99a202dd5afe3365d5d9ba69
+  size: 43044
+- path: assets/formulas/opponents-match-win-result-eight.png
+  sha256: 410a512dc228f9ac061359a84d71826dbb983d1c970fe5378573448057a1802b
+  size: 4493
+- path: assets/formulas/opponents-match-win-result-seven.png
+  sha256: 1bdba53ee3ba824f770e00f5a6a2154330ab09a8edc5ce832dcb0ddc6e3b5685
+  size: 4609
+- path: candidate/appendix-a.yaml
+  sha256: a0731b9b56637f5d113de25254206e04db262a0d177743f1209b1d5492a7553c
+  size: 2677
+- path: candidate/appendix-b.yaml
+  sha256: 17a7c48f83089cf53aaa581a485d181e3f918c49d2a7d0eb62b8ea2ff45f7aa1
+  size: 9204
+- path: candidate/appendix-c.yaml
+  sha256: d2c3c830a2c46fa775c0b579edf9837d9d8989bc63ec7556276251a48107dfa8
+  size: 13915
+- path: candidate/appendix-d.yaml
+  sha256: 6a9fedcbad49c0def50f9d964ff4656a08867b9bc21d5a131fc70825d252084c
+  size: 7150
+- path: candidate/appendix-e.yaml
+  sha256: 04118d345441c26e1736382f1577b0b9a8cbe877e28e7a36cb767748994d5ed4
+  size: 2911
+- path: candidate/appendix-f.yaml
+  sha256: b13632eab850292e52ada134eb6d0981fa28214e2e549accd36d62890591b5de
+  size: 2362
+- path: candidate/chapter-01.yaml
+  sha256: 8c8a423e5fb97060cbb3290ba82e1ac73b803e3bf4476f432462b5e4150f41fd
+  size: 83791
+- path: candidate/chapter-02.yaml
+  sha256: 66abaa3d8f0eeb5dc265ceff39990c9f3d2b40e01533edd2ad04dc10b5cff9fa
+  size: 95874
+- path: candidate/chapter-03.yaml
+  sha256: baf2d39526cacdf33bb807817f35f65bd375e33ed298a655d5cc4fdcaeb7a525
+  size: 95647
+- path: candidate/chapter-04.yaml
+  sha256: 5522f299d577babf7e715e85cfa5e775236683defdcb722eb9e644df7a9e5698
+  size: 100587
+- path: candidate/chapter-05.yaml
+  sha256: 3434e5f02b1868e84578ddcbf93ea9bf53b9984479a2d03d79574604a78caafd
+  size: 34026
+- path: candidate/chapter-06.yaml
+  sha256: 2930211091e2d5bcb731b5aff718601456e936ea44eb49858cf07f6f33a4b110
+  size: 75788
+- path: candidate/chapter-07.yaml
+  sha256: 2046c09d0c1c57f31dfe476e41a032704814782d502054dab4bb478be7a879d3
+  size: 34461
+- path: candidate/chapter-08.yaml
+  sha256: 16e8330373b83b8e5a41e33704091ac5d96b8a30df4e86840efd428b285dc2fb
+  size: 18989
+- path: candidate/chapter-09.yaml
+  sha256: 9930fa33ae91b7bc4fd8bbbd92596bf790e538edf9960a595000945b14df5ffb
+  size: 18893
+- path: candidate/chapter-10.yaml
+  sha256: ce0ec31668914fb597376e1cfeafc284fa2beef78b1ca97332998d8599ed025e
+  size: 14781
+- path: candidate/introduction.yaml
+  sha256: 24f1fcbec22a65896e1fbba912eaa91a3d1452d1775928f54d493035e59b9ba0
+  size: 5413
+- path: candidate/manifest.yaml
+  sha256: 49f3f9ee179204a0da9d70c447f4185aa1a5f9e2bab9c8de2b0ab50fef5925dd
+  size: 491
+- path: comparison/migration.json
+  sha256: 516888ba5ed0022813b8f9ce31db6851a9836b620c92a0bd17014c71f17ddd3a
+  size: 49048
+- path: comparison/migration.md
+  sha256: aa96d78aca5df9b1afc6ec43a86d66264ee91c3afda0b0c24d5aaf1569dc43d3
+  size: 31225
+- path: extracted/official.json
+  sha256: 26b5d1650713211ca5364f304569c6a3fd6932c0834725dc4157d65294356876
+  size: 235958
+- path: extracted/official.md
+  sha256: 93f74a6b9e25d788714dabad6d42a0a606f8f096f9b083d373a421c376ef1b11
+  size: 155961
+- path: inputs/legacy.md
+  sha256: 87ff603d9743a3177422dabc5c672c787acc8b3703e71af0e307679c712b33ce
+  size: 469059
+- path: inputs/migration-overrides.yaml
+  sha256: 8825a2c354cb89577c76e12c29715b38d578b77be3e3821bbe27e65d25b2afbd
+  size: 6895
+- path: official/MTR_EN.pdf
+  sha256: 162253d5cd84068bed69eefd09a0e96fcf13e095aa0ec2fce24a9209d1afc57b
+  size: 562681

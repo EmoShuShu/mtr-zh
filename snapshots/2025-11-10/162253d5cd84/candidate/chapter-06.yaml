@@ -1,0 +1,2605 @@
+chapter:
+  id: mtr-6
+  chapter: '6.'
+  en: Constructed Tournament Rules
+  zh: 构组赛制规则
+  sections:
+  - id: mtr-6.1
+    chapter: '6.1'
+    en: Deck Construction Restrictions
+    zh: 套牌构组限制
+    groups:
+    - id: mtr-6.1-g001
+      type: paragraph
+      blocks:
+      - id: mtr-6.1-b001
+        en: |-
+          Constructed decks must contain a minimum of sixty cards. There is no maximum deck size. If a player chooses to use a sideboard, it may not contain more than fifteen cards.
+        zh: 构组的套牌必须包含最少六十张牌。没有套牌张数上限。如果牌手希望使用备牌，则备牌数量不得超过十五张。
+        extras:
+        - en: |-
+            This is one of the announcements that many Head Judges include before beginning a tournament. It holds true at any constructed tournament, and is fairly self-explanatory.
+          zh: 一些主审会将这句话加入赛前公告中。无需更多解释，这对所有的构组赛都适用。
+    - id: mtr-6.1-g002
+      type: paragraph
+      blocks:
+      - id: mtr-6.1-b002
+        en: |-
+          Except for cards with the basic supertype or cards with text that specifies otherwise, a player’s combined deck and sideboard may not contain more than four of any individual card, based on its English card title.
+        zh: 除了带有「基本」此超类别的牌及牌面文字叙述有其他规定的牌之外,牌手的套牌及备牌里合起来同一张牌不得超过四张,此规定以英文牌的名称为准。
+        extras:
+        - en: |-
+            For most cards, a player may only play a maximum of four copies of a given card across their entire seventy-five. There are currently fourteen exceptions to this rule: Plains, Island, Swamp, Mountain, Forest, the five Snow-Covered variants, Relentless Rats, Shadowborn Apostle, Rat Colony and Persistent Petitioners. Note that you cannot get around this rule by using foreign or misprinted cards; the count is based on the English name of the card.
+          zh: |-
+            对于整个75张的套牌来说，同一张牌不得超过四张。但有14个例外：平原，海岛，沼泽，山脉，树林，五种覆雪基本地，无情鼠群，影裔宗徒，老鼠群落，以及执着诉愿人。当然，你不能借助外文牌或者错版牌来滥用此规则；牌张的计数以英文版为标准。（译注：实际上这里仍没列举完整。总之有很多例外。）
+  - id: mtr-6.2
+    chapter: '6.2'
+    en: Card Legality
+    zh: 牌张可用情况
+    groups:
+    - id: mtr-6.2-g001
+      type: paragraph
+      blocks:
+      - id: mtr-6.2-b001
+        en: |-
+          A card may only be used in a particular format if the card is from a set that is legal in that format or has the same name as a card from a set that is legal in that format. Zendikar Expeditions and Masterpiece Series cards may only be played in formats where the card is already legal.
+        zh: |-
+          某张牌在特定赛制中是否可用，由以下情况确定：（1）出自可于该赛制中使用之系列的牌张，可以在该赛制中使用；或（2）名称与可在此赛制中使用之系列中某张牌相同之牌张，可以在该赛制中使用。逸品重现牌张只能在该牌张原本可用的赛制中使用。
+        extras:
+        - en: |-
+            The complete format list is below in this section. Note that it is perfectly legal to use old cards, as long as a version of that card is legal in the format in question. For example, a player may use a Beta Lightning Bolt in Modern, even though Beta isn’t a part of Modern, because Lightning Bolt was printed in a Modern-legal set. Masterpiece cards are a special addition to a set, and not actually part of the set itself. Since they are opened in packs they are legal for limited, however they are only legal in constructed formats where the normal edition of the card is also legal.
+          zh: |-
+            本章节的后半部分有关于各赛制的详细列举。此外，用老版本的牌当然是可以的，前提是这张牌在赛制中合法的系列中有过重印。例如，牌手可以在近代赛中使用BETA版本的闪电击，即使BETA版本并不在近代赛的范围内，这是因为闪电击在摩登可使用的系列中有过重印。逸品重现是某些系列中的特殊附加，并不是系列本身的一部分。即使这些牌在开出它们的系列之限制赛中可以合法使用，在构组赛中它们只能在其普通版本在赛制中合法的情况下才能合法使用。
+    - id: mtr-6.2-g002
+      type: paragraph
+      blocks:
+      - id: mtr-6.2-b002
+        en: |-
+          Cards banned in a specific format may not be used in decks for that format. Cards restricted in a specific format may only have one copy in a deck, including sideboard.
+        zh: 在特定赛制中禁用的牌不得用于参加该赛制比赛的套牌中。在特定赛制中限用的牌只能在套牌中使用一张,包括备牌。
+        extras:
+        - en: |-
+            If a card is banned, it cannot be used. If a card is restricted, it doesn’t follow the “four-of” rule above; rather than having up to four copies in a given seventy-five, a player may have at most one copy. As explained in section 6.5, Vintage is the only format with a restricted list.
+          zh: |-
+            如果某张牌被禁用，则该牌不能使用。如果某张牌被限用，则牌手最多只能使用一张，而不遵循上述的“四张上限”的原则。根据章节6.5的说明，特选赛是唯一具有限用牌的赛制。
+  - id: mtr-6.3
+    chapter: '6.3'
+    en: Standard Format Deck Construction
+    zh: 标准赛制套牌构组
+    groups:
+    - id: mtr-6.3-g001
+      type: paragraph
+      blocks:
+      - id: mtr-6.3-b001
+        en: 'The following card sets are permitted in Standard tournaments:'
+        zh: 下述各系列可在标准赛制比赛中使用：
+        extras:
+        - en: |-
+            These are the sets legal in Standard. Note that these include dates where sets will rotate in and out of Standard.
+          zh: 以下是标准赛的合法系列。所标注的日期反映了系列加入或退出标准赛的时间。
+    - id: mtr-6.3-g002
+      type: list
+      blocks:
+      - id: mtr-6.3-b002
+        en: '* Wilds of Eldraine™'
+        zh: '* 艾卓仙踪'
+    - id: mtr-6.3-g003
+      type: list
+      blocks:
+      - id: mtr-6.3-b003
+        en: '* The Lost Caverns of Ixalan™'
+        zh: '* 依夏兰迷窟'
+    - id: mtr-6.3-g004
+      type: list
+      blocks:
+      - id: mtr-6.3-b004
+        en: '* Murders at Karlov Manor™'
+        zh: '* 卡洛夫庄园谋杀案'
+    - id: mtr-6.3-g005
+      type: list
+      blocks:
+      - id: mtr-6.3-b005
+        en: '* Outlaws of Thunder Junction™'
+        zh: '* 光雷驿镖客'
+    - id: mtr-6.3-g006
+      type: list
+      blocks:
+      - id: mtr-6.3-b006
+        en: '* Bloomburrow™'
+        zh: '* 斑隆洛'
+    - id: mtr-6.3-g007
+      type: list
+      blocks:
+      - id: mtr-6.3-b007
+        en: '* Duskmourn: House of Horror™'
+        zh: '* 暮悲邸：鬼屋惊魂'
+    - id: mtr-6.3-g008
+      type: list
+      blocks:
+      - id: mtr-6.3-b008
+        en: '* Magic: The Gathering Foundations™'
+        zh: '* 万智牌：基石构筑'
+    - id: mtr-6.3-g009
+      type: list
+      blocks:
+      - id: mtr-6.3-b009
+        en: '* Aetherdrift™'
+        zh: '* 乙太飘移'
+    - id: mtr-6.3-g010
+      type: list
+      blocks:
+      - id: mtr-6.3-b010
+        en: '* Tarkir: Dragonstorm™'
+        zh: '* 鞑契：龙岚录'
+    - id: mtr-6.3-g011
+      type: list
+      blocks:
+      - id: mtr-6.3-b011
+        en: '* Magic: The Gathering®—FINAL FANTASY™'
+        zh: '* 万智牌 – 最终幻想'
+    - id: mtr-6.3-g012
+      type: list
+      blocks:
+      - id: mtr-6.3-b012
+        en: '* Edge of Eternities™'
+        zh: '* 虚空边域'
+    - id: mtr-6.3-g013
+      type: list
+      blocks:
+      - id: mtr-6.3-b013
+        en: '* Magic: The Gathering | Marvel’s Spider-Man™'
+        zh: '* 万智牌 | 漫威的蜘蛛侠 （2025年9月19日生效）'
+    - id: mtr-6.3-g014
+      type: list
+      blocks:
+      - id: mtr-6.3-b014
+        en: |-
+          * Magic: The Gathering | Avatar: The Last Airbender (effective November 14, 2025)
+        zh: '* 万智牌 | 降世神通：最后的气宗（2025年11月14日生效）'
+    - id: mtr-6.3-g015
+      type: list
+      blocks:
+      - id: mtr-6.3-b015
+        en: '* Lorwyn Eclipsed (effective January 16, 2026)'
+        zh: ''
+    - id: mtr-6.3-g016
+      type: paragraph
+      blocks:
+      - id: mtr-6.3-b016
+        en: |-
+          Any cards with expansion symbols from the above sets are legal to play in Standard, even if they are not available in that set’s play booster (or draft booster for sets released before February 2, 2024). Cards from older sets that share the same name as a card legal in Standard may also be played.
+        zh: 所有牌张上面有上述系列符号的牌，即使它们无法在普通补充包（或是在2024年2月2日前发行之系列的轮抽补充包）中被开出，也都可以在标准赛制上合法被使用。
+    - id: mtr-6.3-g017
+      type: paragraph
+      blocks:
+      - id: mtr-6.3-b017
+        en: |-
+          When Snow-Covered Lands are not legal in Standard, they are treated as the equivalent basic lands. Players must replace them when discovered, but no infraction is committed.
+        zh: 当标准赛制的可用牌张不包括覆雪地时，所有在该赛制中使用的覆雪地均视为对应的普通基本地。牌手若发现自己在此情形下使用了覆雪地，则须进行替换，但不算违规。
+    - id: mtr-6.3-g018
+      type: paragraph
+      blocks:
+      - id: mtr-6.3-b018
+        en: 'The following cards are banned in Standard tournaments:'
+        zh: 下列牌在标准赛制比赛中禁用：
+    - id: mtr-6.3-g019
+      type: list
+      blocks:
+      - id: mtr-6.3-b019
+        en: '* Abuelo’s Awakening'
+        zh: '* 先父觉醒/Abuelo’s Awakening (2025年6月30日生效)'
+    - id: mtr-6.3-g020
+      type: list
+      blocks:
+      - id: mtr-6.3-b020
+        en: '* Cori-Steel Cutter'
+        zh: '* 科黎钢介刀/Cori-Steel Cutter (2025年6月30日生效)'
+    - id: mtr-6.3-g021
+      type: list
+      blocks:
+      - id: mtr-6.3-b021
+        en: '* Heartfire Hero'
+        zh: '* 心火勇士/Heartfire Hero (2025年6月30日生效)'
+    - id: mtr-6.3-g022
+      type: list
+      blocks:
+      - id: mtr-6.3-b022
+        en: '* Hopeless Nightmare'
+        zh: '* 无望梦魇/Hopeless Nightmare (2025年6月30日生效)'
+    - id: mtr-6.3-g023
+      type: list
+      blocks:
+      - id: mtr-6.3-b023
+        en: '* Monstrous Rage'
+        zh: '* 怪物狂怒/Monstrous Rage (2025年6月30日生效)'
+    - id: mtr-6.3-g024
+      type: list
+      blocks:
+      - id: mtr-6.3-b024
+        en: '* Proft''s Eidetic Memory (effective November 10, 2025)'
+        zh: ''
+    - id: mtr-6.3-g025
+      type: list
+      blocks:
+      - id: mtr-6.3-b025
+        en: '* Screaming Nemesis (effective November 10, 2025)'
+        zh: ''
+    - id: mtr-6.3-g026
+      type: list
+      blocks:
+      - id: mtr-6.3-b026
+        en: '* This Town Ain’t Big Enough'
+        zh: '* 一镇难容二虎/This Town Ain’t Big Enough (2025年6月30日生效)'
+    - id: mtr-6.3-g027
+      type: list
+      blocks:
+      - id: mtr-6.3-b027
+        en: '* Up the Beanstalk'
+        zh: '* 爬上豆茎/Up the Beanstalk (2025年6月30日生效)'
+    - id: mtr-6.3-g028
+      type: list
+      blocks:
+      - id: mtr-6.3-b028
+        en: '* Vivi Ornitier (effective November 10, 2025)'
+        zh: ''
+  - id: mtr-6.4
+    chapter: '6.4'
+    en: Modern Format Deck Construction
+    zh: 近代赛制套牌构组
+    groups:
+    - id: mtr-6.4-g001
+      type: paragraph
+      blocks:
+      - id: mtr-6.4-b001
+        en: 'The following card sets are permitted in Modern tournaments:'
+        zh: 下述各系列可在近代赛制比赛中使用：
+        extras:
+        - en: |-
+            These are the sets legal in Modern. Note that these include dates where sets will rotate into Modern, but that no sets will ever rotate out. This section is updated with each release of the MTR to reflect the newest sets.
+          zh: |-
+            以下为近代赛中的合法系列。所标注的日期表明了该系列加入近代赛的时间，但不会有系列从近代赛制中退出。本章节会随着每次MTR的更新而不断修改，以反映当前最新的系列。
+    - id: mtr-6.4-g002
+      type: list
+      blocks:
+      - id: mtr-6.4-b002
+        en: '* Eighth Edition'
+        zh: '* 第八版'
+    - id: mtr-6.4-g003
+      type: list
+      blocks:
+      - id: mtr-6.4-b003
+        en: '* Mirrodin'
+        zh: '* 秘罗地'
+    - id: mtr-6.4-g004
+      type: list
+      blocks:
+      - id: mtr-6.4-b004
+        en: '* Darksteel'
+        zh: '* 玄铁'
+    - id: mtr-6.4-g005
+      type: list
+      blocks:
+      - id: mtr-6.4-b005
+        en: '* Fifth Dawn'
+        zh: '* 五色曙光'
+    - id: mtr-6.4-g006
+      type: list
+      blocks:
+      - id: mtr-6.4-b006
+        en: '* Champions of Kamigawa'
+        zh: '* 神河群英录'
+    - id: mtr-6.4-g007
+      type: list
+      blocks:
+      - id: mtr-6.4-b007
+        en: '* Betrayers of Kamigawa'
+        zh: '* 神河叛将谱'
+    - id: mtr-6.4-g008
+      type: list
+      blocks:
+      - id: mtr-6.4-b008
+        en: '* Saviors of Kamigawa'
+        zh: '* 神河任侠传'
+    - id: mtr-6.4-g009
+      type: list
+      blocks:
+      - id: mtr-6.4-b009
+        en: '* Ninth Edition'
+        zh: '* 第九版'
+    - id: mtr-6.4-g010
+      type: list
+      blocks:
+      - id: mtr-6.4-b010
+        en: '* Ravnica: City of Guilds'
+        zh: '* 公会城拉尼卡'
+    - id: mtr-6.4-g011
+      type: list
+      blocks:
+      - id: mtr-6.4-b011
+        en: '* Guildpact'
+        zh: '* 十会盟'
+    - id: mtr-6.4-g012
+      type: list
+      blocks:
+      - id: mtr-6.4-b012
+        en: '* Dissension'
+        zh: '* 纷争'
+    - id: mtr-6.4-g013
+      type: list
+      blocks:
+      - id: mtr-6.4-b013
+        en: '* Coldsnap'
+        zh: '* 骤霜'
+    - id: mtr-6.4-g014
+      type: list
+      blocks:
+      - id: mtr-6.4-b014
+        en: '* Time Spiral'
+        zh: '* 时间漩涡'
+    - id: mtr-6.4-g015
+      type: list
+      blocks:
+      - id: mtr-6.4-b015
+        en: '* Planar Chaos'
+        zh: '* 时空混沌'
+    - id: mtr-6.4-g016
+      type: list
+      blocks:
+      - id: mtr-6.4-b016
+        en: '* Future Sight'
+        zh: '* 预知将来'
+    - id: mtr-6.4-g017
+      type: list
+      blocks:
+      - id: mtr-6.4-b017
+        en: '* Tenth Edition'
+        zh: '* 第十版'
+    - id: mtr-6.4-g018
+      type: list
+      blocks:
+      - id: mtr-6.4-b018
+        en: '* Lorwyn'
+        zh: '* 洛温'
+    - id: mtr-6.4-g019
+      type: list
+      blocks:
+      - id: mtr-6.4-b019
+        en: '* Morningtide'
+        zh: '* 晨光'
+    - id: mtr-6.4-g020
+      type: list
+      blocks:
+      - id: mtr-6.4-b020
+        en: '* Shadowmoor'
+        zh: '* 暗影荒原'
+    - id: mtr-6.4-g021
+      type: list
+      blocks:
+      - id: mtr-6.4-b021
+        en: '* Eventide'
+        zh: '* 暮光'
+    - id: mtr-6.4-g022
+      type: list
+      blocks:
+      - id: mtr-6.4-b022
+        en: '* Shards of Alara'
+        zh: '* 阿拉若断片'
+    - id: mtr-6.4-g023
+      type: list
+      blocks:
+      - id: mtr-6.4-b023
+        en: '* Conflux'
+        zh: '* 聚流'
+    - id: mtr-6.4-g024
+      type: list
+      blocks:
+      - id: mtr-6.4-b024
+        en: '* Alara Reborn'
+        zh: '* 阿拉若新生'
+    - id: mtr-6.4-g025
+      type: list
+      blocks:
+      - id: mtr-6.4-b025
+        en: '* Magic 2010 core set'
+        zh: '* 万智牌2010核心系列'
+    - id: mtr-6.4-g026
+      type: list
+      blocks:
+      - id: mtr-6.4-b026
+        en: '* Zendikar'
+        zh: '* 赞迪卡'
+    - id: mtr-6.4-g027
+      type: list
+      blocks:
+      - id: mtr-6.4-b027
+        en: '* Worldwake'
+        zh: '* 天地醒转'
+    - id: mtr-6.4-g028
+      type: list
+      blocks:
+      - id: mtr-6.4-b028
+        en: '* Rise of the Eldrazi'
+        zh: '* 奥札奇再起'
+    - id: mtr-6.4-g029
+      type: list
+      blocks:
+      - id: mtr-6.4-b029
+        en: '* Magic 2011 core set'
+        zh: '* 万智牌2011核心系列'
+    - id: mtr-6.4-g030
+      type: list
+      blocks:
+      - id: mtr-6.4-b030
+        en: '* Scars of Mirrodin'
+        zh: '* 秘罗地创痕'
+    - id: mtr-6.4-g031
+      type: list
+      blocks:
+      - id: mtr-6.4-b031
+        en: '* Mirrodin Besieged'
+        zh: '* 围攻秘罗地'
+    - id: mtr-6.4-g032
+      type: list
+      blocks:
+      - id: mtr-6.4-b032
+        en: '* New Phyrexia'
+        zh: '* 新非瑞克西亚'
+    - id: mtr-6.4-g033
+      type: list
+      blocks:
+      - id: mtr-6.4-b033
+        en: '* Magic 2012 core set'
+        zh: '* 万智牌2012核心系列'
+    - id: mtr-6.4-g034
+      type: list
+      blocks:
+      - id: mtr-6.4-b034
+        en: '* Innistrad'
+        zh: '* 依尼翠'
+    - id: mtr-6.4-g035
+      type: list
+      blocks:
+      - id: mtr-6.4-b035
+        en: '* Dark Ascension'
+        zh: '* 黑影笼罩'
+    - id: mtr-6.4-g036
+      type: list
+      blocks:
+      - id: mtr-6.4-b036
+        en: '* Avacyn Restored'
+        zh: '* 艾维欣重临'
+    - id: mtr-6.4-g037
+      type: list
+      blocks:
+      - id: mtr-6.4-b037
+        en: '* Magic 2013 core set'
+        zh: '* 万智牌2013核心系列'
+    - id: mtr-6.4-g038
+      type: list
+      blocks:
+      - id: mtr-6.4-b038
+        en: '* Return to Ravnica'
+        zh: '* 再访拉尼卡'
+    - id: mtr-6.4-g039
+      type: list
+      blocks:
+      - id: mtr-6.4-b039
+        en: '* Gatecrash'
+        zh: '* 兵临古城'
+    - id: mtr-6.4-g040
+      type: list
+      blocks:
+      - id: mtr-6.4-b040
+        en: '* Dragon’s Maze'
+        zh: '* 巨龙迷城'
+    - id: mtr-6.4-g041
+      type: list
+      blocks:
+      - id: mtr-6.4-b041
+        en: '* Magic 2014 core set'
+        zh: '* 万智牌2014核心系列'
+    - id: mtr-6.4-g042
+      type: list
+      blocks:
+      - id: mtr-6.4-b042
+        en: '* Theros™'
+        zh: '* 塞洛斯'
+    - id: mtr-6.4-g043
+      type: list
+      blocks:
+      - id: mtr-6.4-b043
+        en: '* Born of the Gods™'
+        zh: '* 天神创生'
+    - id: mtr-6.4-g044
+      type: list
+      blocks:
+      - id: mtr-6.4-b044
+        en: '* Journey Into Nyx™'
+        zh: '* 尼兹之旅'
+    - id: mtr-6.4-g045
+      type: list
+      blocks:
+      - id: mtr-6.4-b045
+        en: '* Magic 2015 core set'
+        zh: '* 万智牌2015核心系列'
+    - id: mtr-6.4-g046
+      type: list
+      blocks:
+      - id: mtr-6.4-b046
+        en: '* Khans of Tarkir™'
+        zh: '* 鞑契可汗'
+    - id: mtr-6.4-g047
+      type: list
+      blocks:
+      - id: mtr-6.4-b047
+        en: '* Fate Reforged™'
+        zh: '* 龙命殊途'
+    - id: mtr-6.4-g048
+      type: list
+      blocks:
+      - id: mtr-6.4-b048
+        en: '* Dragons of Tarkir™'
+        zh: '* 鞑契龙王'
+    - id: mtr-6.4-g049
+      type: list
+      blocks:
+      - id: mtr-6.4-b049
+        en: '* Magic Origins™'
+        zh: '* 万智牌：起源'
+    - id: mtr-6.4-g050
+      type: list
+      blocks:
+      - id: mtr-6.4-b050
+        en: '* Battle for Zendikar™'
+        zh: '* 再战赞迪卡'
+    - id: mtr-6.4-g051
+      type: list
+      blocks:
+      - id: mtr-6.4-b051
+        en: '* Oath of the Gatewatch™'
+        zh: '* 守护者誓约'
+    - id: mtr-6.4-g052
+      type: list
+      blocks:
+      - id: mtr-6.4-b052
+        en: '* Shadows over Innistrad™'
+        zh: '* 依尼翠暗影'
+    - id: mtr-6.4-g053
+      type: list
+      blocks:
+      - id: mtr-6.4-b053
+        en: '* Eldritch Moon™'
+        zh: '* 异月传奇'
+    - id: mtr-6.4-g054
+      type: list
+      blocks:
+      - id: mtr-6.4-b054
+        en: '* Kaladesh™'
+        zh: '* 卡拉德许'
+    - id: mtr-6.4-g055
+      type: list
+      blocks:
+      - id: mtr-6.4-b055
+        en: '* Aether Revolt™'
+        zh: '* 乙太之乱'
+    - id: mtr-6.4-g056
+      type: list
+      blocks:
+      - id: mtr-6.4-b056
+        en: '* Amonkhet™'
+        zh: '* 阿芒凯'
+    - id: mtr-6.4-g057
+      type: list
+      blocks:
+      - id: mtr-6.4-b057
+        en: '* Hour of Devastation™'
+        zh: '* 幻灭时刻'
+    - id: mtr-6.4-g058
+      type: list
+      blocks:
+      - id: mtr-6.4-b058
+        en: '* Ixalan'
+        zh: '* 依夏兰'
+    - id: mtr-6.4-g059
+      type: list
+      blocks:
+      - id: mtr-6.4-b059
+        en: '* Rivals of Ixalan'
+        zh: '* 决胜依夏兰'
+    - id: mtr-6.4-g060
+      type: list
+      blocks:
+      - id: mtr-6.4-b060
+        en: '* Dominaria'
+        zh: '* 多明纳里亚'
+    - id: mtr-6.4-g061
+      type: list
+      blocks:
+      - id: mtr-6.4-b061
+        en: '* Core 2019'
+        zh: '* 核心系列'
+    - id: mtr-6.4-g062
+      type: list
+      blocks:
+      - id: mtr-6.4-b062
+        en: '* Guilds of Ravnica™'
+        zh: '* 烽会拉尼卡'
+    - id: mtr-6.4-g063
+      type: list
+      blocks:
+      - id: mtr-6.4-b063
+        en: '* Ravnica Allegiance™'
+        zh: '* 效忠拉尼卡'
+    - id: mtr-6.4-g064
+      type: list
+      blocks:
+      - id: mtr-6.4-b064
+        en: '* War of the Spark™'
+        zh: '* 火花之战'
+    - id: mtr-6.4-g065
+      type: list
+      blocks:
+      - id: mtr-6.4-b065
+        en: '* Modern Horizons™'
+        zh: '* 摩登新篇'
+    - id: mtr-6.4-g066
+      type: list
+      blocks:
+      - id: mtr-6.4-b066
+        en: '* Core Set 2020™'
+        zh: '* 核心系列'
+    - id: mtr-6.4-g067
+      type: list
+      blocks:
+      - id: mtr-6.4-b067
+        en: '* Throne of Eldraine™'
+        zh: '* 艾卓王权'
+    - id: mtr-6.4-g068
+      type: list
+      blocks:
+      - id: mtr-6.4-b068
+        en: '* Theros Beyond Death™'
+        zh: '* 塞洛斯：冥途求生'
+    - id: mtr-6.4-g069
+      type: list
+      blocks:
+      - id: mtr-6.4-b069
+        en: '* Ikoria: Lair of Behemoths™'
+        zh: '* 依克黎：巨兽时空'
+    - id: mtr-6.4-g070
+      type: list
+      blocks:
+      - id: mtr-6.4-b070
+        en: '* Core Set 2021™'
+        zh: '* 核心系列'
+    - id: mtr-6.4-g071
+      type: list
+      blocks:
+      - id: mtr-6.4-b071
+        en: '* Zendikar Rising™'
+        zh: '* 赞迪卡再起'
+    - id: mtr-6.4-g072
+      type: list
+      blocks:
+      - id: mtr-6.4-b072
+        en: '* Kaldheim™'
+        zh: '* 凯德海姆'
+    - id: mtr-6.4-g073
+      type: list
+      blocks:
+      - id: mtr-6.4-b073
+        en: '* Strixhaven: School of Mages™'
+        zh: '* 斯翠海文'
+    - id: mtr-6.4-g074
+      type: list
+      blocks:
+      - id: mtr-6.4-b074
+        en: '* Modern Horizons 2™'
+        zh: '* 摩登新篇2'
+    - id: mtr-6.4-g075
+      type: list
+      blocks:
+      - id: mtr-6.4-b075
+        en: '* Adventures in the Forgotten Realms™'
+        zh: '* 被遗忘国度战记'
+    - id: mtr-6.4-g076
+      type: list
+      blocks:
+      - id: mtr-6.4-b076
+        en: '* Innistrad: Midnight Hunt™'
+        zh: '* 依尼翠：黯夜猎踪'
+    - id: mtr-6.4-g077
+      type: list
+      blocks:
+      - id: mtr-6.4-b077
+        en: '* Innistrad: Crimson Vow™'
+        zh: '* 依尼翠：猩红婚誓'
+    - id: mtr-6.4-g078
+      type: list
+      blocks:
+      - id: mtr-6.4-b078
+        en: '* Kamigawa: Neon Dynasty™'
+        zh: '* 神河：霓朝纪'
+    - id: mtr-6.4-g079
+      type: list
+      blocks:
+      - id: mtr-6.4-b079
+        en: '* Streets of New Capenna™'
+        zh: '* 新卡佩纳：喧嚣黑街'
+    - id: mtr-6.4-g080
+      type: list
+      blocks:
+      - id: mtr-6.4-b080
+        en: '* Dominaria United™'
+        zh: '* 多明纳里亚：众志成城'
+    - id: mtr-6.4-g081
+      type: list
+      blocks:
+      - id: mtr-6.4-b081
+        en: '* The Brothers’ War™'
+        zh: '* 兄弟之战'
+    - id: mtr-6.4-g082
+      type: list
+      blocks:
+      - id: mtr-6.4-b082
+        en: '* Phyrexia: All Will Be One™'
+        zh: '* 非瑞克西亚：万界归一'
+    - id: mtr-6.4-g083
+      type: list
+      blocks:
+      - id: mtr-6.4-b083
+        en: '* March of the Machine™'
+        zh: '* 邪军压境'
+    - id: mtr-6.4-g084
+      type: list
+      blocks:
+      - id: mtr-6.4-b084
+        en: '* March of the Machine: The Aftermath™'
+        zh: '* 邪军压境：终战回响'
+    - id: mtr-6.4-g085
+      type: list
+      blocks:
+      - id: mtr-6.4-b085
+        en: '* The Lord of the Rings: Tales of Middle-earth®'
+        zh: '* 魔戒：中州传说'
+    - id: mtr-6.4-g086
+      type: list
+      blocks:
+      - id: mtr-6.4-b086
+        en: '* Wilds of Eldraine'
+        zh: '* 艾卓仙踪'
+    - id: mtr-6.4-g087
+      type: list
+      blocks:
+      - id: mtr-6.4-b087
+        en: '* The Lost Caverns of Ixalan'
+        zh: '* 依夏兰迷窟'
+    - id: mtr-6.4-g088
+      type: list
+      blocks:
+      - id: mtr-6.4-b088
+        en: '* Murders at Karlov Manor'
+        zh: '* 卡洛夫庄园谋杀案'
+    - id: mtr-6.4-g089
+      type: list
+      blocks:
+      - id: mtr-6.4-b089
+        en: '* Outlaws of Thunder Junction'
+        zh: '* 光雷驿镖客'
+    - id: mtr-6.4-g090
+      type: list
+      blocks:
+      - id: mtr-6.4-b090
+        en: '* Modern Horizons 3™'
+        zh: '* 摩登新篇3'
+    - id: mtr-6.4-g091
+      type: list
+      blocks:
+      - id: mtr-6.4-b091
+        en: '* Magic: The Gathering – Assassin’s Creed®'
+        zh: '* 万智牌 – 刺客信条'
+    - id: mtr-6.4-g092
+      type: list
+      blocks:
+      - id: mtr-6.4-b092
+        en: '* Bloomburrow'
+        zh: '* 斑隆洛'
+    - id: mtr-6.4-g093
+      type: list
+      blocks:
+      - id: mtr-6.4-b093
+        en: '* Duskmourn: House of Horror'
+        zh: '* 暮悲邸：鬼屋惊魂'
+    - id: mtr-6.4-g094
+      type: list
+      blocks:
+      - id: mtr-6.4-b094
+        en: '* Magic: The Gathering Foundations'
+        zh: '* 万智牌：基石构筑'
+    - id: mtr-6.4-g095
+      type: list
+      blocks:
+      - id: mtr-6.4-b095
+        en: '* Aetherdrift'
+        zh: '* 乙太飘移'
+    - id: mtr-6.4-g096
+      type: list
+      blocks:
+      - id: mtr-6.4-b096
+        en: '* Tarkir: Dragonstorm'
+        zh: '* 鞑契：龙岚录'
+    - id: mtr-6.4-g097
+      type: list
+      blocks:
+      - id: mtr-6.4-b097
+        en: '* Magic: The Gathering®—FINAL FANTASY™'
+        zh: '* 万智牌 – 最终幻想'
+    - id: mtr-6.4-g098
+      type: list
+      blocks:
+      - id: mtr-6.4-b098
+        en: '* Edge of Eternities'
+        zh: '* 虚空边域'
+    - id: mtr-6.4-g099
+      type: list
+      blocks:
+      - id: mtr-6.4-b099
+        en: '* Magic: The Gathering | Marvel’s Spider-Man'
+        zh: '* 万智牌 | 漫威的蜘蛛侠 （2025年9月19日生效）'
+    - id: mtr-6.4-g100
+      type: list
+      blocks:
+      - id: mtr-6.4-b100
+        en: |-
+          * Magic: The Gathering | Avatar: The Last Airbender (effective November 14, 2025)
+        zh: '* 万智牌 | 降世神通：最后的气宗（2025年11月14日生效）'
+    - id: mtr-6.4-g101
+      type: list
+      blocks:
+      - id: mtr-6.4-b101
+        en: '* Lorwyn Eclipsed (effective January 16, 2026)'
+        zh: ''
+    - id: mtr-6.4-g102
+      type: paragraph
+      blocks:
+      - id: mtr-6.4-b102
+        en: 'The following cards are banned in Modern tournaments:'
+        zh: 下列牌在近代赛制比赛中禁用：
+    - id: mtr-6.4-g103
+      type: list
+      blocks:
+      - id: mtr-6.4-b103
+        en: '* Amped Raptor'
+        zh: '* 激放迅猛龙/Amped Raptor'
+    - id: mtr-6.4-g104
+      type: list
+      blocks:
+      - id: mtr-6.4-b104
+        en: '* Ancient Den'
+        zh: '* 远古狮穴/Ancient Den'
+    - id: mtr-6.4-g105
+      type: list
+      blocks:
+      - id: mtr-6.4-b105
+        en: '* Arcum’s Astrolabe'
+        zh: '* 阿肯的星盘/Arcum’s Astrolabe'
+    - id: mtr-6.4-g106
+      type: list
+      blocks:
+      - id: mtr-6.4-b106
+        en: '* Birthing Pod'
+        zh: '* 诞生荚/Birthing Pod'
+    - id: mtr-6.4-g107
+      type: list
+      blocks:
+      - id: mtr-6.4-b107
+        en: '* Blazing Shoal'
+        zh: '* 煌炎群列/Blazing Shoal'
+    - id: mtr-6.4-g108
+      type: list
+      blocks:
+      - id: mtr-6.4-b108
+        en: '* Bridge from Below'
+        zh: '* 阴界渡桥/Bridge from Below'
+    - id: mtr-6.4-g109
+      type: list
+      blocks:
+      - id: mtr-6.4-b109
+        en: '* Chrome Mox'
+        zh: '* 五彩玛珂/Chrome Mox'
+    - id: mtr-6.4-g110
+      type: list
+      blocks:
+      - id: mtr-6.4-b110
+        en: '* Cloudpost'
+        zh: '* 云际哨站/Cloudpost'
+    - id: mtr-6.4-g111
+      type: list
+      blocks:
+      - id: mtr-6.4-b111
+        en: '* Dark Depths'
+        zh: '* 黑暗深渊/Dark Depths'
+    - id: mtr-6.4-g112
+      type: list
+      blocks:
+      - id: mtr-6.4-b112
+        en: '* Deathrite Shaman'
+        zh: '* 丧仪祭师/Deathrite Shaman'
+    - id: mtr-6.4-g113
+      type: list
+      blocks:
+      - id: mtr-6.4-b113
+        en: '* Dig Through Time'
+        zh: '* 历时挖掘/Dig Through Time'
+    - id: mtr-6.4-g114
+      type: list
+      blocks:
+      - id: mtr-6.4-b114
+        en: '* Dread Return'
+        zh: '* 颤栗再现/Dread Return'
+    - id: mtr-6.4-g115
+      type: list
+      blocks:
+      - id: mtr-6.4-b115
+        en: '* Eye of Ugin'
+        zh: '* 乌金之眼/Eye of Ugin'
+    - id: mtr-6.4-g116
+      type: list
+      blocks:
+      - id: mtr-6.4-b116
+        en: '* Field of the Dead'
+        zh: '* 亡者旷野/Field of the Dead'
+    - id: mtr-6.4-g117
+      type: list
+      blocks:
+      - id: mtr-6.4-b117
+        en: '* Fury'
+        zh: '* 怒火/Fury'
+    - id: mtr-6.4-g118
+      type: list
+      blocks:
+      - id: mtr-6.4-b118
+        en: '* Gitaxian Probe'
+        zh: '* 吉塔夏探刺/Gitaxian Probe'
+    - id: mtr-6.4-g119
+      type: list
+      blocks:
+      - id: mtr-6.4-b119
+        en: '* Glimpse of Nature'
+        zh: '* 瞥视自然/Glimpse of Nature'
+    - id: mtr-6.4-g120
+      type: list
+      blocks:
+      - id: mtr-6.4-b120
+        en: '* Golgari Grave-Troll'
+        zh: '* 葛加理墓地巨魔/Golgari Grave-Troll'
+    - id: mtr-6.4-g121
+      type: list
+      blocks:
+      - id: mtr-6.4-b121
+        en: '* Great Furnace'
+        zh: '* 大熔炉/Great Furnace'
+    - id: mtr-6.4-g122
+      type: list
+      blocks:
+      - id: mtr-6.4-b122
+        en: '* Grief'
+        zh: '* 悲恸/Grief'
+    - id: mtr-6.4-g123
+      type: list
+      blocks:
+      - id: mtr-6.4-b123
+        en: '* Hogaak, Arisen Necropolis'
+        zh: '* 醒转古陵寝霍佳葛/Hogaak, Arisen Necropolis'
+    - id: mtr-6.4-g124
+      type: list
+      blocks:
+      - id: mtr-6.4-b124
+        en: '* Hypergenesis'
+        zh: '* 多重创生/Hypergenesis'
+    - id: mtr-6.4-g125
+      type: list
+      blocks:
+      - id: mtr-6.4-b125
+        en: '* Jegantha, the Wellspring'
+        zh: '* 丰饶泉源杰甘沙/Jegantha, the Wellspring'
+    - id: mtr-6.4-g126
+      type: list
+      blocks:
+      - id: mtr-6.4-b126
+        en: '* Krark-Clan Ironworks'
+        zh: '* 喀勒克族制铁厂/Krark-Clan Ironworks'
+    - id: mtr-6.4-g127
+      type: list
+      blocks:
+      - id: mtr-6.4-b127
+        en: '* Lurrus of the Dream-Den'
+        zh: '* 梦巢猫魇路拉斯/Lurrus of the Dream-Den'
+    - id: mtr-6.4-g128
+      type: list
+      blocks:
+      - id: mtr-6.4-b128
+        en: '* Mental Misstep'
+        zh: '* 心灵失足/Mental Misstep'
+    - id: mtr-6.4-g129
+      type: list
+      blocks:
+      - id: mtr-6.4-b129
+        en: '* Mycosynth Lattice'
+        zh: '* 构生菌格栅/Mycosynth Lattice'
+    - id: mtr-6.4-g130
+      type: list
+      blocks:
+      - id: mtr-6.4-b130
+        en: '* Mystic Sanctuary'
+        zh: '* 神秘圣地/Mystic Sanctuary'
+    - id: mtr-6.4-g131
+      type: list
+      blocks:
+      - id: mtr-6.4-b131
+        en: '* Nadu, Winged Wisdom'
+        zh: '* 翼展智慧拿杜/Nadu, Winged Wisdom'
+    - id: mtr-6.4-g132
+      type: list
+      blocks:
+      - id: mtr-6.4-b132
+        en: '* Oko, Thief of Crowns'
+        zh: '* 窃冠瓯柯/Oko, Thief of Crowns'
+    - id: mtr-6.4-g133
+      type: list
+      blocks:
+      - id: mtr-6.4-b133
+        en: '* Once Upon a Time'
+        zh: '* 很久以前/Once Upon a Time'
+    - id: mtr-6.4-g134
+      type: list
+      blocks:
+      - id: mtr-6.4-b134
+        en: '* Ponder'
+        zh: '* 沉思/Ponder'
+    - id: mtr-6.4-g135
+      type: list
+      blocks:
+      - id: mtr-6.4-b135
+        en: '* Punishing Fire'
+        zh: '* 惩戒火焰/Punishing Fire'
+    - id: mtr-6.4-g136
+      type: list
+      blocks:
+      - id: mtr-6.4-b136
+        en: '* Rite of Flame'
+        zh: '* 烈焰仪式/Rite of Flame'
+    - id: mtr-6.4-g137
+      type: list
+      blocks:
+      - id: mtr-6.4-b137
+        en: '* Seat of the Synod'
+        zh: '* 悉诺议会宅邸/Seat of the Synod'
+    - id: mtr-6.4-g138
+      type: list
+      blocks:
+      - id: mtr-6.4-b138
+        en: '* Second Sunrise'
+        zh: '* 二度日升/Second Sunrise'
+    - id: mtr-6.4-g139
+      type: list
+      blocks:
+      - id: mtr-6.4-b139
+        en: '* Seething Song'
+        zh: '* 热血战歌/Seething Song'
+    - id: mtr-6.4-g140
+      type: list
+      blocks:
+      - id: mtr-6.4-b140
+        en: '* Sensei’s Divining Top'
+        zh: '* 师范占卜陀螺/Sensei’s Divining Top'
+    - id: mtr-6.4-g141
+      type: list
+      blocks:
+      - id: mtr-6.4-b141
+        en: '* Simian Spirit Guide'
+        zh: '* 猿猴精怪向导/Simian Spirit Guide'
+    - id: mtr-6.4-g142
+      type: list
+      blocks:
+      - id: mtr-6.4-b142
+        en: '* Skullclamp'
+        zh: '* 备忘夹/Skullclamp'
+    - id: mtr-6.4-g143
+      type: list
+      blocks:
+      - id: mtr-6.4-b143
+        en: '* Summer Bloom'
+        zh: '* 仲夏之花/Summer Bloom'
+    - id: mtr-6.4-g144
+      type: list
+      blocks:
+      - id: mtr-6.4-b144
+        en: '* The One Ring'
+        zh: '* 至尊戒/The One Ring'
+    - id: mtr-6.4-g145
+      type: list
+      blocks:
+      - id: mtr-6.4-b145
+        en: '* Tibalt’s Trickery'
+        zh: '* 提勃的诈术/Tibalt’s Trickery'
+    - id: mtr-6.4-g146
+      type: list
+      blocks:
+      - id: mtr-6.4-b146
+        en: '* Treasure Cruise'
+        zh: '* 宝船巡游/Treasure Cruise'
+    - id: mtr-6.4-g147
+      type: list
+      blocks:
+      - id: mtr-6.4-b147
+        en: '* Tree of Tales'
+        zh: '* 传说之树/Tree of Tales'
+    - id: mtr-6.4-g148
+      type: list
+      blocks:
+      - id: mtr-6.4-b148
+        en: '* Underworld Breach'
+        zh: '* 冥界裂隙/Underworld Breach'
+    - id: mtr-6.4-g149
+      type: list
+      blocks:
+      - id: mtr-6.4-b149
+        en: '* Umezawa’s Jitte'
+        zh: '* 梅泽的十手/Umezawa’s Jitte'
+    - id: mtr-6.4-g150
+      type: list
+      blocks:
+      - id: mtr-6.4-b150
+        en: '* Up the Beanstalk'
+        zh: '* 爬上豆茎/Up the Beanstalk'
+    - id: mtr-6.4-g151
+      type: list
+      blocks:
+      - id: mtr-6.4-b151
+        en: '* Uro, Titan of Nature’s Wrath'
+        zh: '* 天怒泰坦乌洛/Uro, Titan of Nature’s Wrath'
+    - id: mtr-6.4-g152
+      type: list
+      blocks:
+      - id: mtr-6.4-b152
+        en: '* Vault of Whispers'
+        zh: '* 细语暗窖/Vault of Whispers'
+    - id: mtr-6.4-g153
+      type: list
+      blocks:
+      - id: mtr-6.4-b153
+        en: '* Violent Outburst'
+        zh: '* 暴烈迸发/Violent Outburst'
+    - id: mtr-6.4-g154
+      type: list
+      blocks:
+      - id: mtr-6.4-b154
+        en: '* Yorion, Sky Nomad'
+        zh: '* 游空牧鸟约力昂/Yorion, Sky Nomad'
+  - id: mtr-6.5
+    chapter: '6.5'
+    en: Vintage Format Deck Construction
+    zh: 特选赛制套牌构组
+    groups:
+    - id: mtr-6.5-g001
+      type: paragraph
+      blocks:
+      - id: mtr-6.5-b001
+        en: |-
+          Vintage decks may consist of cards from all Magic card sets, plus the following cards: Sewers of Estark, Windseeker Centaur, and Nalathni Dragon.
+        zh: |-
+          特选赛制的套牌可以由威世智公司所发售的所有万智牌系列的牌组成。此外,下列牌张也可用于构组特选赛制套牌:Sewers of Estark、Windseeker Centaur 和 Nalathni Dragon。
+    - id: mtr-6.5-g002
+      type: paragraph
+      blocks:
+      - id: mtr-6.5-b002
+        en: |-
+          Cards from expansions and special sets (like From the Vault, Magic: The Gathering—Commander, Duel Decks, Conspiracy, etc.) are legal in the Vintage format on the date of release of the expansion or special set.
+        zh: |-
+          来自扩展系列及特殊系列的卡牌(如 From the Vault、万智牌 — 指挥官、Duel Deck、诡局等等)自该扩展系列和特殊系列发售当日起便可以在特选赛制中使用。
+        extras:
+        - en: |-
+            Cards don’t have to be released in normal sets in order to be legal in Vintage. Any time a card is printed in any set, it is legal on the release of that set. Note that this does not include cards obtained at a Prerelease; those are legal on the set’s release date.
+
+            These are the cards banned in Vintage. Any of these are illegal to be played in Vintage tournaments. Generally speaking, they fall into three categories: cards dealing with the Ante zone (e.g. Demonic Attorney), cards dealing with physical manipulation of cards (e.g. Chaos Orb), and Conspiracies (e.g. Backup Plan).
+          zh: |-
+            特选赛中的合法系列不一定必须是正常系列。每当一张牌在任何新发售的系列中出现时，那它就是特选赛的合法牌张。这不包括售前赛上获得的牌，这些牌将在该系列正式发售时在赛制中合法。
+
+            以下是特选赛禁止使用的牌。在特选赛中，这些牌都是不合法的。总的来说，它们可分为三类：与赌注区相关的牌（例如恶魔律师）；涉及物理操作牌张的牌（例如混沌法球）；诡局牌（例如后备计划）。
+    - id: mtr-6.5-g003
+      type: paragraph
+      blocks:
+      - id: mtr-6.5-b003
+        en: 'The following cards are banned in Vintage tournaments:'
+        zh: 下列牌在特选赛制比赛中禁用：
+    - id: mtr-6.5-g004
+      type: list
+      blocks:
+      - id: mtr-6.5-b004
+        en: '* All cards with the card type “Conspiracy” (25 cards)'
+        zh: '* 所有牌张类别为「诡局」的牌（共25张）'
+    - id: mtr-6.5-g005
+      type: list
+      blocks:
+      - id: mtr-6.5-b005
+        en: '* All cards that reference “playing for ante” (9 cards)'
+        zh: '* 所有提及「赌注」的牌（共9张）'
+    - id: mtr-6.5-g006
+      type: list
+      blocks:
+      - id: mtr-6.5-b006
+        en: |-
+          * All cards that bring a sticker or an Attraction into the game (56 Cards). Click here for the list.
+        zh: '* 将贴纸和景点带入游戏的所有牌张（共56张），点击可以查询列表。'
+    - id: mtr-6.5-g007
+      type: list
+      blocks:
+      - id: mtr-6.5-b007
+        en: |-
+          * Cards whose art, text, name, or combination thereof that are racially or culturally offensive are banned in all formats. This list is a work in progress. Click here for the list.
+        zh: '* 禁止图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张。该列表还在施工中，可以点击查询。'
+    - id: mtr-6.5-g008
+      type: list
+      blocks:
+      - id: mtr-6.5-b008
+        en: '* Chaos Orb'
+        zh: ''
+    - id: mtr-6.5-g009
+      type: list
+      blocks:
+      - id: mtr-6.5-b009
+        en: '* Falling Star'
+        zh: ''
+    - id: mtr-6.5-g010
+      type: list
+      blocks:
+      - id: mtr-6.5-b010
+        en: '* Shahrazad'
+        zh: ''
+    - id: mtr-6.5-g011
+      type: paragraph
+      blocks:
+      - id: mtr-6.5-b011
+        en: 'The following cards are restricted in Vintage tournaments:'
+        zh: 下列牌在特选赛制比赛中限用：
+    - id: mtr-6.5-g012
+      type: list
+      blocks:
+      - id: mtr-6.5-b012
+        en: '* Ancestral Recall'
+        zh: ''
+    - id: mtr-6.5-g013
+      type: list
+      blocks:
+      - id: mtr-6.5-b013
+        en: '* Balance'
+        zh: '* 均势/Balance'
+    - id: mtr-6.5-g014
+      type: list
+      blocks:
+      - id: mtr-6.5-b014
+        en: '* Black Lotus'
+        zh: ''
+    - id: mtr-6.5-g015
+      type: list
+      blocks:
+      - id: mtr-6.5-b015
+        en: '* Brainstorm'
+        zh: '* 脑力激荡/Brainstorm'
+    - id: mtr-6.5-g016
+      type: list
+      blocks:
+      - id: mtr-6.5-b016
+        en: '* Chalice of the Void'
+        zh: '* 虚空圣杯/Chalice of the Void'
+    - id: mtr-6.5-g017
+      type: list
+      blocks:
+      - id: mtr-6.5-b017
+        en: '* Channel'
+        zh: '* 魔力通道/Channel'
+    - id: mtr-6.5-g018
+      type: list
+      blocks:
+      - id: mtr-6.5-b018
+        en: '* Demonic Consultation'
+        zh: ''
+    - id: mtr-6.5-g019
+      type: list
+      blocks:
+      - id: mtr-6.5-b019
+        en: '* Demonic Tutor'
+        zh: ''
+    - id: mtr-6.5-g020
+      type: list
+      blocks:
+      - id: mtr-6.5-b020
+        en: '* Dig Through Time'
+        zh: '* 历时挖掘/Dig Through Time'
+    - id: mtr-6.5-g021
+      type: list
+      blocks:
+      - id: mtr-6.5-b021
+        en: '* Flash'
+        zh: '* 闪现/Flash'
+    - id: mtr-6.5-g022
+      type: list
+      blocks:
+      - id: mtr-6.5-b022
+        en: '* Gitaxian Probe'
+        zh: '* 吉塔夏探刺/Gitaxian Probe'
+    - id: mtr-6.5-g023
+      type: list
+      blocks:
+      - id: mtr-6.5-b023
+        en: '* Golgari Grave-Troll'
+        zh: '* 葛加理墓地巨魔/Golgari Grave-Troll'
+    - id: mtr-6.5-g024
+      type: list
+      blocks:
+      - id: mtr-6.5-b024
+        en: '* Gush'
+        zh: '* 宣泄/Gush'
+    - id: mtr-6.5-g025
+      type: list
+      blocks:
+      - id: mtr-6.5-b025
+        en: '* Imperial Seal'
+        zh: '* 玉玺/Imperial Seal'
+    - id: mtr-6.5-g026
+      type: list
+      blocks:
+      - id: mtr-6.5-b026
+        en: '* Karn, the Great Creator'
+        zh: '* 万创卡恩/Karnr, the Great Creator'
+    - id: mtr-6.5-g027
+      type: list
+      blocks:
+      - id: mtr-6.5-b027
+        en: '* Library of Alexandria'
+        zh: ''
+    - id: mtr-6.5-g028
+      type: list
+      blocks:
+      - id: mtr-6.5-b028
+        en: '* Lion’s Eye Diamond'
+        zh: ''
+    - id: mtr-6.5-g029
+      type: list
+      blocks:
+      - id: mtr-6.5-b029
+        en: '* Lodestone Golem'
+        zh: '* 磁石魔像/Lodestone Golem'
+    - id: mtr-6.5-g030
+      type: list
+      blocks:
+      - id: mtr-6.5-b030
+        en: '* Lotus Petal'
+        zh: '* 莲花瓣/Lotus Petal'
+    - id: mtr-6.5-g031
+      type: list
+      blocks:
+      - id: mtr-6.5-b031
+        en: '* Mana Crypt'
+        zh: '* 魔法力墓穴/Mana Crypt'
+    - id: mtr-6.5-g032
+      type: list
+      blocks:
+      - id: mtr-6.5-b032
+        en: '* Mana Vault'
+        zh: '* 魔法力库/Mana Vault'
+    - id: mtr-6.5-g033
+      type: list
+      blocks:
+      - id: mtr-6.5-b033
+        en: '* Memory Jar'
+        zh: '* 记忆瓶/Memory Jar'
+    - id: mtr-6.5-g034
+      type: list
+      blocks:
+      - id: mtr-6.5-b034
+        en: '* Mental Misstep'
+        zh: '* 心灵失足/Mental Misstep'
+    - id: mtr-6.5-g035
+      type: list
+      blocks:
+      - id: mtr-6.5-b035
+        en: '* Merchant Scroll'
+        zh: '* 行商卷轴/Merchant Scroll'
+    - id: mtr-6.5-g036
+      type: list
+      blocks:
+      - id: mtr-6.5-b036
+        en: '* Mind’s Desire'
+        zh: '* 心之所欲/Mind’s Desire'
+    - id: mtr-6.5-g037
+      type: list
+      blocks:
+      - id: mtr-6.5-b037
+        en: '* Monastery Mentor'
+        zh: '* 寺院明师/Monastery Mentor'
+    - id: mtr-6.5-g038
+      type: list
+      blocks:
+      - id: mtr-6.5-b038
+        en: '* Mox Emerald'
+        zh: ''
+    - id: mtr-6.5-g039
+      type: list
+      blocks:
+      - id: mtr-6.5-b039
+        en: '* Mox Jet'
+        zh: ''
+    - id: mtr-6.5-g040
+      type: list
+      blocks:
+      - id: mtr-6.5-b040
+        en: '* Mox Pearl'
+        zh: ''
+    - id: mtr-6.5-g041
+      type: list
+      blocks:
+      - id: mtr-6.5-b041
+        en: '* Mox Ruby'
+        zh: ''
+    - id: mtr-6.5-g042
+      type: list
+      blocks:
+      - id: mtr-6.5-b042
+        en: '* Mox Sapphire'
+        zh: ''
+    - id: mtr-6.5-g043
+      type: list
+      blocks:
+      - id: mtr-6.5-b043
+        en: '* Mystic Forge'
+        zh: '* 神秘熔炉/Mystic Forge'
+    - id: mtr-6.5-g044
+      type: list
+      blocks:
+      - id: mtr-6.5-b044
+        en: '* Mystical Tutor'
+        zh: '* 神秘导师/Mystical Tutor'
+    - id: mtr-6.5-g045
+      type: list
+      blocks:
+      - id: mtr-6.5-b045
+        en: '* Narset, Parter of Veils'
+        zh: '* 揭帷娜尔施/Narset, Parter of Veils'
+    - id: mtr-6.5-g046
+      type: list
+      blocks:
+      - id: mtr-6.5-b046
+        en: '* Necropotence'
+        zh: '* 死冥权能/Necropotence'
+    - id: mtr-6.5-g047
+      type: list
+      blocks:
+      - id: mtr-6.5-b047
+        en: '* Sol Ring'
+        zh: '* 阳光戒/Sol Ring'
+    - id: mtr-6.5-g048
+      type: list
+      blocks:
+      - id: mtr-6.5-b048
+        en: '* Strip Mine'
+        zh: '* 废矿/Strip Mine'
+    - id: mtr-6.5-g049
+      type: list
+      blocks:
+      - id: mtr-6.5-b049
+        en: '* Thorn of Amethyst'
+        zh: '* 紫水晶刺/Thorn of Amethyst'
+    - id: mtr-6.5-g050
+      type: list
+      blocks:
+      - id: mtr-6.5-b050
+        en: '* Time Vault'
+        zh: ''
+    - id: mtr-6.5-g051
+      type: list
+      blocks:
+      - id: mtr-6.5-b051
+        en: '* Time Walk'
+        zh: ''
+    - id: mtr-6.5-g052
+      type: list
+      blocks:
+      - id: mtr-6.5-b052
+        en: '* Timetwister'
+        zh: ''
+    - id: mtr-6.5-g053
+      type: list
+      blocks:
+      - id: mtr-6.5-b053
+        en: '* Tinker'
+        zh: '* 打造/Tinker'
+    - id: mtr-6.5-g054
+      type: list
+      blocks:
+      - id: mtr-6.5-b054
+        en: '* Tolarian Academy'
+        zh: '* 陶拉里亚大学院/Tolarian Academy'
+    - id: mtr-6.5-g055
+      type: list
+      blocks:
+      - id: mtr-6.5-b055
+        en: '* Treasure Cruise'
+        zh: '* 宝船巡游/Treasure Cruise'
+    - id: mtr-6.5-g056
+      type: list
+      blocks:
+      - id: mtr-6.5-b056
+        en: '* Trinisphere'
+        zh: '* 三定法球/Trinisphere'
+    - id: mtr-6.5-g057
+      type: list
+      blocks:
+      - id: mtr-6.5-b057
+        en: '* Urza’s Saga'
+        zh: '* 克撒传/Urza’s Saga'
+    - id: mtr-6.5-g058
+      type: list
+      blocks:
+      - id: mtr-6.5-b058
+        en: '* Vampiric Tutor'
+        zh: '* 吸血鬼导师/Vampiric Tutor'
+    - id: mtr-6.5-g059
+      type: list
+      blocks:
+      - id: mtr-6.5-b059
+        en: '* Vexing Bauble'
+        zh: '* 乱心饰品/Vexing Bauble'
+    - id: mtr-6.5-g060
+      type: list
+      blocks:
+      - id: mtr-6.5-b060
+        en: '* Wheel of Fortune'
+        zh: ''
+    - id: mtr-6.5-g061
+      type: list
+      blocks:
+      - id: mtr-6.5-b061
+        en: '* Windfall'
+        zh: '* 横财/Windfall'
+    - id: mtr-6.5-g062
+      type: list
+      blocks:
+      - id: mtr-6.5-b062
+        en: '* Yawgmoth’s Will'
+        zh: '* 约格莫夫的意志/Yawgmoth’s Will'
+        extras:
+        - en: |-
+            This is the only restricted list in Magic. These cards are generally the most powerful allowed in Vintage, and only one of each card can be played in a player’s library or sideboard (but not in both).
+          zh: 这是万智牌中唯一一份限牌表。这些牌在特选赛中过于强大，牌手只能在主牌或备牌中至多使用一张（不能在主牌和备牌中都使用）。
+  - id: mtr-6.6
+    chapter: '6.6'
+    en: Legacy Format Deck Construction
+    zh: 薪传赛制套牌构组
+    groups:
+    - id: mtr-6.6-g001
+      type: paragraph
+      blocks:
+      - id: mtr-6.6-b001
+        en: |-
+          Legacy decks may consist of cards from all Magic card sets, plus the following cards: Sewers of Estark, Windseeker Centaur, and Nalathni Dragon.
+        zh: |-
+          薪传赛制的套牌可以由威世智公司所发售的所有万智牌系列的牌组成。此外，下列牌张也可用于构组薪传赛制套牌：Sewers of Estark、Windseeker Centaur和Nalathni Dragon。
+    - id: mtr-6.6-g002
+      type: paragraph
+      blocks:
+      - id: mtr-6.6-b002
+        en: |-
+          Cards from expansions and special sets (like From the Vault, Magic: The Gathering—Commander, Duel Decks, Conspiracy, etc.) are legal in the Legacy format on the date of release of the expansion or special set.
+        zh: |-
+          来自扩展系列及特殊系列的卡牌（如From the Vault、万智牌 — 指挥官、Duel Deck、诡局等等）自该扩展系列和特殊系列发售当日起便可以在薪传赛制中使用。
+        extras:
+        - en: |-
+            Cards don’t have to be released in normal sets in order to be legal in Legacy. Any time a card is printed in any set, it is legal on the release of that set. Note that this does not include cards obtained at a Prereleases; those are legal on the set’s release date.
+          zh: |-
+            薪传赛中的合法系列不一定必须是正常系列。每当一张牌在任何新发售的系列中出现时，那它就是薪传赛的合法牌张。这不包括售前赛上获得的牌，这些牌将在该系列正式发售时在赛制中合法。
+    - id: mtr-6.6-g003
+      type: paragraph
+      blocks:
+      - id: mtr-6.6-b003
+        en: 'The following cards are banned in Legacy tournaments:'
+        zh: 下列牌在薪传赛制比赛中禁用：
+    - id: mtr-6.6-g004
+      type: list
+      blocks:
+      - id: mtr-6.6-b004
+        en: '* All cards with the card type “Conspiracy” (25 cards)'
+        zh: '* 所有牌张类别为「诡局」的牌（共25张）'
+    - id: mtr-6.6-g005
+      type: list
+      blocks:
+      - id: mtr-6.6-b005
+        en: '* All cards that reference “playing for ante” (9 cards)'
+        zh: '* 所有提及「赌注」的牌（共9张）'
+    - id: mtr-6.6-g006
+      type: list
+      blocks:
+      - id: mtr-6.6-b006
+        en: |-
+          * All cards that bring a sticker or an Attraction into the game (56 Cards). Click here for the list.
+        zh: '* 将贴纸和景点带入游戏的所有牌张（共56张），点击可以查询列表。'
+    - id: mtr-6.6-g007
+      type: list
+      blocks:
+      - id: mtr-6.6-b007
+        en: |-
+          * Cards whose art, text, name, or combination thereof that are racially or culturally offensive are banned in all formats. This list is a work in progress. Click here for the list.
+        zh: '* 禁止图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张。该列表还在施工中，可以点击查询。'
+    - id: mtr-6.6-g008
+      type: list
+      blocks:
+      - id: mtr-6.6-b008
+        en: '* Ancestral Recall'
+        zh: ''
+    - id: mtr-6.6-g009
+      type: list
+      blocks:
+      - id: mtr-6.6-b009
+        en: '* Arcum’s Astrolabe'
+        zh: '* 阿肯的星盘/Arcum’s Astrolabe'
+    - id: mtr-6.6-g010
+      type: list
+      blocks:
+      - id: mtr-6.6-b010
+        en: '* Balance'
+        zh: '* 均势/Balance'
+    - id: mtr-6.6-g011
+      type: list
+      blocks:
+      - id: mtr-6.6-b011
+        en: '* Bazaar of Baghdad'
+        zh: ''
+    - id: mtr-6.6-g012
+      type: list
+      blocks:
+      - id: mtr-6.6-b012
+        en: '* Black Lotus'
+        zh: ''
+    - id: mtr-6.6-g013
+      type: list
+      blocks:
+      - id: mtr-6.6-b013
+        en: '* Channel'
+        zh: '* 魔力通道/Channel'
+    - id: mtr-6.6-g014
+      type: list
+      blocks:
+      - id: mtr-6.6-b014
+        en: '* Chaos Orb'
+        zh: ''
+    - id: mtr-6.6-g015
+      type: list
+      blocks:
+      - id: mtr-6.6-b015
+        en: '* Deathrite Shaman'
+        zh: '* 丧仪祭师/Deathrite Shaman'
+    - id: mtr-6.6-g016
+      type: list
+      blocks:
+      - id: mtr-6.6-b016
+        en: '* Demonic Consultation'
+        zh: ''
+    - id: mtr-6.6-g017
+      type: list
+      blocks:
+      - id: mtr-6.6-b017
+        en: '* Demonic Tutor'
+        zh: ''
+    - id: mtr-6.6-g018
+      type: list
+      blocks:
+      - id: mtr-6.6-b018
+        en: '* Dig Through Time'
+        zh: '* 历时挖掘/Dig Through Time'
+    - id: mtr-6.6-g019
+      type: list
+      blocks:
+      - id: mtr-6.6-b019
+        en: '* Dreadhorde Arcanist'
+        zh: '* 震惧军奥术师Dreadhorde Arcanist'
+    - id: mtr-6.6-g020
+      type: list
+      blocks:
+      - id: mtr-6.6-b020
+        en: '* Earthcraft'
+        zh: '* 操地术/Earthcraft'
+    - id: mtr-6.6-g021
+      type: list
+      blocks:
+      - id: mtr-6.6-b021
+        en: '* Entomb (effective November 10, 2025)'
+        zh: ''
+    - id: mtr-6.6-g022
+      type: list
+      blocks:
+      - id: mtr-6.6-b022
+        en: '* Expressive Iteration'
+        zh: '* 展现迭代/Expressive Iteration'
+    - id: mtr-6.6-g023
+      type: list
+      blocks:
+      - id: mtr-6.6-b023
+        en: '* Falling Star'
+        zh: ''
+    - id: mtr-6.6-g024
+      type: list
+      blocks:
+      - id: mtr-6.6-b024
+        en: '* Fastbond'
+        zh: ''
+    - id: mtr-6.6-g025
+      type: list
+      blocks:
+      - id: mtr-6.6-b025
+        en: '* Flash'
+        zh: '* 闪现/Flash'
+    - id: mtr-6.6-g026
+      type: list
+      blocks:
+      - id: mtr-6.6-b026
+        en: '* Frantic Search'
+        zh: '* 狂搜乱寻/Frantic Search'
+    - id: mtr-6.6-g027
+      type: list
+      blocks:
+      - id: mtr-6.6-b027
+        en: '* Gitaxian Probe'
+        zh: '* 吉塔夏探刺/Gitaxian Probe'
+    - id: mtr-6.6-g028
+      type: list
+      blocks:
+      - id: mtr-6.6-b028
+        en: '* Goblin Recruiter'
+        zh: '* 鬼怪征兵员/Goblin Recruiter'
+    - id: mtr-6.6-g029
+      type: list
+      blocks:
+      - id: mtr-6.6-b029
+        en: '* Grief'
+        zh: '* 悲恸/Grief'
+    - id: mtr-6.6-g030
+      type: list
+      blocks:
+      - id: mtr-6.6-b030
+        en: '* Gush'
+        zh: '* 宣泄/Gush'
+    - id: mtr-6.6-g031
+      type: list
+      blocks:
+      - id: mtr-6.6-b031
+        en: '* Hermit Druid'
+        zh: '* 隐者德鲁依特/Hermit Druid'
+    - id: mtr-6.6-g032
+      type: list
+      blocks:
+      - id: mtr-6.6-b032
+        en: '* Imperial Seal'
+        zh: '* 玉玺/Imperial Seal'
+    - id: mtr-6.6-g033
+      type: list
+      blocks:
+      - id: mtr-6.6-b033
+        en: '* Library of Alexandria'
+        zh: ''
+    - id: mtr-6.6-g034
+      type: list
+      blocks:
+      - id: mtr-6.6-b034
+        en: '* Lurrus of the Dream-Den'
+        zh: '* 梦巢猫魇路拉斯/Lurrus of the Dream-Den'
+    - id: mtr-6.6-g035
+      type: list
+      blocks:
+      - id: mtr-6.6-b035
+        en: '* Mana Crypt'
+        zh: '* 魔法力墓穴/Mana Crypt'
+    - id: mtr-6.6-g036
+      type: list
+      blocks:
+      - id: mtr-6.6-b036
+        en: '* Mana Drain'
+        zh: ''
+    - id: mtr-6.6-g037
+      type: list
+      blocks:
+      - id: mtr-6.6-b037
+        en: '* Mana Vault'
+        zh: '* 魔法力库/Mana Vault'
+    - id: mtr-6.6-g038
+      type: list
+      blocks:
+      - id: mtr-6.6-b038
+        en: '* Memory Jar'
+        zh: '* 记忆瓶/Memory Jar'
+    - id: mtr-6.6-g039
+      type: list
+      blocks:
+      - id: mtr-6.6-b039
+        en: '* Mental Misstep'
+        zh: '* 心灵失足/Mental Misstep'
+    - id: mtr-6.6-g040
+      type: list
+      blocks:
+      - id: mtr-6.6-b040
+        en: '* Mind Twist'
+        zh: '* 心灵扭曲/Mind Twist'
+    - id: mtr-6.6-g041
+      type: list
+      blocks:
+      - id: mtr-6.6-b041
+        en: '* Mishra’s Workshop'
+        zh: ''
+    - id: mtr-6.6-g042
+      type: list
+      blocks:
+      - id: mtr-6.6-b042
+        en: '* Mox Emerald'
+        zh: ''
+    - id: mtr-6.6-g043
+      type: list
+      blocks:
+      - id: mtr-6.6-b043
+        en: '* Mox Jet'
+        zh: ''
+    - id: mtr-6.6-g044
+      type: list
+      blocks:
+      - id: mtr-6.6-b044
+        en: '* Mox Pearl'
+        zh: ''
+    - id: mtr-6.6-g045
+      type: list
+      blocks:
+      - id: mtr-6.6-b045
+        en: '* Mox Ruby'
+        zh: ''
+    - id: mtr-6.6-g046
+      type: list
+      blocks:
+      - id: mtr-6.6-b046
+        en: '* Mox Sapphire'
+        zh: ''
+    - id: mtr-6.6-g047
+      type: list
+      blocks:
+      - id: mtr-6.6-b047
+        en: '* Mystical Tutor'
+        zh: '* 神秘导师/Mystical Tutor'
+    - id: mtr-6.6-g048
+      type: list
+      blocks:
+      - id: mtr-6.6-b048
+        en: '* Nadu, Winged Wisdom (effective November 10, 2025)'
+        zh: ''
+    - id: mtr-6.6-g049
+      type: list
+      blocks:
+      - id: mtr-6.6-b049
+        en: '* Necropotence'
+        zh: '* 死冥权能/Necropotence'
+    - id: mtr-6.6-g050
+      type: list
+      blocks:
+      - id: mtr-6.6-b050
+        en: '* Oath of Druids'
+        zh: '* 德鲁依之誓约/Oath of Druids'
+    - id: mtr-6.6-g051
+      type: list
+      blocks:
+      - id: mtr-6.6-b051
+        en: '* Oko, Thief of Crowns'
+        zh: '* 窃冠瓯柯/Oko, Thief of Crowns'
+    - id: mtr-6.6-g052
+      type: list
+      blocks:
+      - id: mtr-6.6-b052
+        en: '* Psychic Frog'
+        zh: '* 灵能蛙/Psychic Frog'
+    - id: mtr-6.6-g053
+      type: list
+      blocks:
+      - id: mtr-6.6-b053
+        en: '* Ragavan, Nimble Pilferer'
+        zh: '* 巧手窃猴勒格文/Ragavan, Nimble Pilferer'
+    - id: mtr-6.6-g054
+      type: list
+      blocks:
+      - id: mtr-6.6-b054
+        en: '* Sensei’s Divining Top'
+        zh: '* 师范占卜陀螺/Sensei’s Divining Top'
+    - id: mtr-6.6-g055
+      type: list
+      blocks:
+      - id: mtr-6.6-b055
+        en: '* Shahrazad'
+        zh: ''
+    - id: mtr-6.6-g056
+      type: list
+      blocks:
+      - id: mtr-6.6-b056
+        en: '* Skullclamp'
+        zh: '* 备忘夹/Skullclamp'
+    - id: mtr-6.6-g057
+      type: list
+      blocks:
+      - id: mtr-6.6-b057
+        en: '* Sol Ring'
+        zh: '* 阳光戒/Sol Ring'
+    - id: mtr-6.6-g058
+      type: list
+      blocks:
+      - id: mtr-6.6-b058
+        en: '* Sowing Mycospawn'
+        zh: '* 茂生孽菌体/Sowing Mycospawn'
+    - id: mtr-6.6-g059
+      type: list
+      blocks:
+      - id: mtr-6.6-b059
+        en: '* Strip Mine'
+        zh: '* 废矿/Strip Mine'
+    - id: mtr-6.6-g060
+      type: list
+      blocks:
+      - id: mtr-6.6-b060
+        en: '* Survival of the Fittest'
+        zh: '* 适者生存/Survival of the Fittest'
+    - id: mtr-6.6-g061
+      type: list
+      blocks:
+      - id: mtr-6.6-b061
+        en: '* Time Vault'
+        zh: ''
+    - id: mtr-6.6-g062
+      type: list
+      blocks:
+      - id: mtr-6.6-b062
+        en: '* Time Walk'
+        zh: ''
+    - id: mtr-6.6-g063
+      type: list
+      blocks:
+      - id: mtr-6.6-b063
+        en: '* Timetwister'
+        zh: ''
+    - id: mtr-6.6-g064
+      type: list
+      blocks:
+      - id: mtr-6.6-b064
+        en: '* Tinker'
+        zh: '* 打造/Tinker'
+    - id: mtr-6.6-g065
+      type: list
+      blocks:
+      - id: mtr-6.6-b065
+        en: '* Tolarian Academy'
+        zh: '* 陶拉里亚大学院/Tolarian Academy'
+    - id: mtr-6.6-g066
+      type: list
+      blocks:
+      - id: mtr-6.6-b066
+        en: '* Treasure Cruise'
+        zh: '* 宝船巡游/Treasure Cruise'
+    - id: mtr-6.6-g067
+      type: list
+      blocks:
+      - id: mtr-6.6-b067
+        en: '* Troll of Khazad-dûm'
+        zh: '* 卡扎督姆食人妖/Troll of Khazad-dûm'
+    - id: mtr-6.6-g068
+      type: list
+      blocks:
+      - id: mtr-6.6-b068
+        en: '* Underworld Breach'
+        zh: '* 冥界裂隙/Underworld Breach'
+    - id: mtr-6.6-g069
+      type: list
+      blocks:
+      - id: mtr-6.6-b069
+        en: '* Vampiric Tutor'
+        zh: '* 吸血鬼导师/Vampiric Tutor'
+    - id: mtr-6.6-g070
+      type: list
+      blocks:
+      - id: mtr-6.6-b070
+        en: '* Vexing Bauble'
+        zh: '* 乱心饰品/Vexing Bauble'
+    - id: mtr-6.6-g071
+      type: list
+      blocks:
+      - id: mtr-6.6-b071
+        en: '* Wheel of Fortune'
+        zh: ''
+    - id: mtr-6.6-g072
+      type: list
+      blocks:
+      - id: mtr-6.6-b072
+        en: '* White Plume Adventurer'
+        zh: '* 白羽山冒险家/White Plume Adventurer'
+    - id: mtr-6.6-g073
+      type: list
+      blocks:
+      - id: mtr-6.6-b073
+        en: '* Windfall'
+        zh: '* 横财/Windfall'
+    - id: mtr-6.6-g074
+      type: list
+      blocks:
+      - id: mtr-6.6-b074
+        en: '* Wrenn and Six'
+        zh: '* 芮恩与六树妖/Wrenn and Six'
+    - id: mtr-6.6-g075
+      type: list
+      blocks:
+      - id: mtr-6.6-b075
+        en: '* Yawgmoth’s Bargain'
+        zh: '* 约格莫夫式交易/Yawgmoth’s Bargain'
+    - id: mtr-6.6-g076
+      type: list
+      blocks:
+      - id: mtr-6.6-b076
+        en: '* Yawgmoth’s Will'
+        zh: '* 约格莫夫的意志/Yawgmoth’s Will'
+    - id: mtr-6.6-g077
+      type: list
+      blocks:
+      - id: mtr-6.6-b077
+        en: '* Zirda, the Dawnwaker'
+        zh: '* 熠晓灵狐泽尔达/Zirda, the Dawnwaker'
+  - id: mtr-6.7
+    chapter: '6.7'
+    en: Pioneer Format Deck Construction
+    zh: 先驱赛制套牌构组
+    groups:
+    - id: mtr-6.7-g001
+      type: paragraph
+      blocks:
+      - id: mtr-6.7-b001
+        en: 'The following card sets are permitted in Pioneer tournaments:'
+        zh: 下述各系列可在先驱赛制比赛中使用：
+    - id: mtr-6.7-g002
+      type: list
+      blocks:
+      - id: mtr-6.7-b002
+        en: '* Return to Ravnica'
+        zh: '* 再访拉尼卡'
+    - id: mtr-6.7-g003
+      type: list
+      blocks:
+      - id: mtr-6.7-b003
+        en: '* Gatecrash'
+        zh: '* 兵临古城'
+    - id: mtr-6.7-g004
+      type: list
+      blocks:
+      - id: mtr-6.7-b004
+        en: '* Dragon’s Maze'
+        zh: '* 巨龙迷城'
+    - id: mtr-6.7-g005
+      type: list
+      blocks:
+      - id: mtr-6.7-b005
+        en: '* Magic 2014 core set'
+        zh: '* 万智牌2014核心系列'
+    - id: mtr-6.7-g006
+      type: list
+      blocks:
+      - id: mtr-6.7-b006
+        en: '* Theros'
+        zh: '* 塞洛斯'
+    - id: mtr-6.7-g007
+      type: list
+      blocks:
+      - id: mtr-6.7-b007
+        en: '* Born of the Gods'
+        zh: '* 天神创生'
+    - id: mtr-6.7-g008
+      type: list
+      blocks:
+      - id: mtr-6.7-b008
+        en: '* Journey Into Nyx'
+        zh: '* 尼兹之旅'
+    - id: mtr-6.7-g009
+      type: list
+      blocks:
+      - id: mtr-6.7-b009
+        en: '* Magic 2015 core set'
+        zh: '* 万智牌2015核心系列'
+    - id: mtr-6.7-g010
+      type: list
+      blocks:
+      - id: mtr-6.7-b010
+        en: '* Khans of Tarkir'
+        zh: '* 鞑契可汗'
+    - id: mtr-6.7-g011
+      type: list
+      blocks:
+      - id: mtr-6.7-b011
+        en: '* Fate Reforged'
+        zh: '* 龙命殊途'
+    - id: mtr-6.7-g012
+      type: list
+      blocks:
+      - id: mtr-6.7-b012
+        en: '* Dragons of Tarkir'
+        zh: '* 鞑契龙王'
+    - id: mtr-6.7-g013
+      type: list
+      blocks:
+      - id: mtr-6.7-b013
+        en: '* Magic Origins'
+        zh: '* 万智牌：起源'
+    - id: mtr-6.7-g014
+      type: list
+      blocks:
+      - id: mtr-6.7-b014
+        en: '* Battle for Zendikar'
+        zh: '* 再战赞迪卡'
+    - id: mtr-6.7-g015
+      type: list
+      blocks:
+      - id: mtr-6.7-b015
+        en: '* Oath of the Gatewatch'
+        zh: '* 守护者誓约'
+    - id: mtr-6.7-g016
+      type: list
+      blocks:
+      - id: mtr-6.7-b016
+        en: '* Shadows over Innistrad'
+        zh: '* 依尼翠暗影'
+    - id: mtr-6.7-g017
+      type: list
+      blocks:
+      - id: mtr-6.7-b017
+        en: '* Eldritch Moon'
+        zh: '* 异月传奇'
+    - id: mtr-6.7-g018
+      type: list
+      blocks:
+      - id: mtr-6.7-b018
+        en: '* Kaladesh'
+        zh: '* 卡拉德许'
+    - id: mtr-6.7-g019
+      type: list
+      blocks:
+      - id: mtr-6.7-b019
+        en: '* Aether Revolt'
+        zh: '* 乙太之乱'
+    - id: mtr-6.7-g020
+      type: list
+      blocks:
+      - id: mtr-6.7-b020
+        en: '* Amonkhet'
+        zh: '* 阿芒凯'
+    - id: mtr-6.7-g021
+      type: list
+      blocks:
+      - id: mtr-6.7-b021
+        en: '* Hour of Devastation'
+        zh: '* 幻灭时刻'
+    - id: mtr-6.7-g022
+      type: list
+      blocks:
+      - id: mtr-6.7-b022
+        en: '* Ixalan'
+        zh: '* 依夏兰'
+    - id: mtr-6.7-g023
+      type: list
+      blocks:
+      - id: mtr-6.7-b023
+        en: '* Rivals of Ixalan'
+        zh: '* 决胜依夏兰'
+    - id: mtr-6.7-g024
+      type: list
+      blocks:
+      - id: mtr-6.7-b024
+        en: '* Dominaria'
+        zh: '* 多明纳里亚'
+    - id: mtr-6.7-g025
+      type: list
+      blocks:
+      - id: mtr-6.7-b025
+        en: '* Core 2019'
+        zh: '* 核心系列'
+    - id: mtr-6.7-g026
+      type: list
+      blocks:
+      - id: mtr-6.7-b026
+        en: '* Guilds of Ravnica'
+        zh: '* 烽会拉尼卡'
+    - id: mtr-6.7-g027
+      type: list
+      blocks:
+      - id: mtr-6.7-b027
+        en: '* Ravnica Allegiance'
+        zh: '* 效忠拉尼卡'
+    - id: mtr-6.7-g028
+      type: list
+      blocks:
+      - id: mtr-6.7-b028
+        en: '* War of the Spark'
+        zh: '* 火花之战'
+    - id: mtr-6.7-g029
+      type: list
+      blocks:
+      - id: mtr-6.7-b029
+        en: '* Core Set 2020'
+        zh: '* 核心系列'
+    - id: mtr-6.7-g030
+      type: list
+      blocks:
+      - id: mtr-6.7-b030
+        en: '* Throne of Eldraine'
+        zh: '* 艾卓王权'
+    - id: mtr-6.7-g031
+      type: list
+      blocks:
+      - id: mtr-6.7-b031
+        en: '* Theros Beyond Death'
+        zh: '* 塞洛斯：冥途求生'
+    - id: mtr-6.7-g032
+      type: list
+      blocks:
+      - id: mtr-6.7-b032
+        en: '* Ikoria: Lair of Behemoths'
+        zh: '* 依克黎：巨兽时空'
+    - id: mtr-6.7-g033
+      type: list
+      blocks:
+      - id: mtr-6.7-b033
+        en: '* Core Set 2021'
+        zh: '* 核心系列'
+    - id: mtr-6.7-g034
+      type: list
+      blocks:
+      - id: mtr-6.7-b034
+        en: '* Zendikar Rising'
+        zh: '* 赞迪卡再起'
+    - id: mtr-6.7-g035
+      type: list
+      blocks:
+      - id: mtr-6.7-b035
+        en: '* Kaldheim'
+        zh: '* 凯德海姆'
+    - id: mtr-6.7-g036
+      type: list
+      blocks:
+      - id: mtr-6.7-b036
+        en: '* Strixhaven: School of Mages'
+        zh: '* 斯翠海文'
+    - id: mtr-6.7-g037
+      type: list
+      blocks:
+      - id: mtr-6.7-b037
+        en: '* Adventures in the Forgotten Realms'
+        zh: '* 被遗忘国度战记'
+    - id: mtr-6.7-g038
+      type: list
+      blocks:
+      - id: mtr-6.7-b038
+        en: '* Innistrad: Midnight Hunt'
+        zh: '* 依尼翠：黯夜猎踪'
+    - id: mtr-6.7-g039
+      type: list
+      blocks:
+      - id: mtr-6.7-b039
+        en: '* Innistrad: Crimson Vow'
+        zh: '* 依尼翠：猩红婚誓'
+    - id: mtr-6.7-g040
+      type: list
+      blocks:
+      - id: mtr-6.7-b040
+        en: '* Kamigawa: Neon Dynasty'
+        zh: '* 神河：霓朝纪'
+    - id: mtr-6.7-g041
+      type: list
+      blocks:
+      - id: mtr-6.7-b041
+        en: '* Streets of New Capenna'
+        zh: '* 新卡佩纳：喧嚣黑街'
+    - id: mtr-6.7-g042
+      type: list
+      blocks:
+      - id: mtr-6.7-b042
+        en: '* Dominaria United'
+        zh: '* 多明纳里亚：众志成城'
+    - id: mtr-6.7-g043
+      type: list
+      blocks:
+      - id: mtr-6.7-b043
+        en: '* The Brothers’ War'
+        zh: '* 兄弟之战'
+    - id: mtr-6.7-g044
+      type: list
+      blocks:
+      - id: mtr-6.7-b044
+        en: '* Phyrexia: All Will Be One'
+        zh: '* 非瑞克西亚：万界归一'
+    - id: mtr-6.7-g045
+      type: list
+      blocks:
+      - id: mtr-6.7-b045
+        en: '* March of the Machine'
+        zh: '* 邪军压境'
+    - id: mtr-6.7-g046
+      type: list
+      blocks:
+      - id: mtr-6.7-b046
+        en: '* March of the Machine: The Aftermath'
+        zh: '* 邪军压境：终战回响'
+    - id: mtr-6.7-g047
+      type: list
+      blocks:
+      - id: mtr-6.7-b047
+        en: '* Wilds of Eldraine'
+        zh: '* 艾卓仙踪'
+    - id: mtr-6.7-g048
+      type: list
+      blocks:
+      - id: mtr-6.7-b048
+        en: '* The Lost Caverns of Ixalan'
+        zh: '* 依夏兰迷窟'
+    - id: mtr-6.7-g049
+      type: list
+      blocks:
+      - id: mtr-6.7-b049
+        en: '* Murders at Karlov Manor'
+        zh: '* 卡洛夫庄园谋杀案'
+    - id: mtr-6.7-g050
+      type: list
+      blocks:
+      - id: mtr-6.7-b050
+        en: '* Outlaws of Thunder Junction'
+        zh: '* 光雷驿镖客'
+    - id: mtr-6.7-g051
+      type: list
+      blocks:
+      - id: mtr-6.7-b051
+        en: '* Bloomburrow'
+        zh: '* 斑隆洛'
+    - id: mtr-6.7-g052
+      type: list
+      blocks:
+      - id: mtr-6.7-b052
+        en: '* Duskmourn: House of Horror'
+        zh: '* 暮悲邸：鬼屋惊魂'
+    - id: mtr-6.7-g053
+      type: list
+      blocks:
+      - id: mtr-6.7-b053
+        en: '* Magic: The Gathering Foundations'
+        zh: '* 万智牌：基石构筑'
+    - id: mtr-6.7-g054
+      type: list
+      blocks:
+      - id: mtr-6.7-b054
+        en: '* Aetherdrift'
+        zh: '* 乙太飘移'
+    - id: mtr-6.7-g055
+      type: list
+      blocks:
+      - id: mtr-6.7-b055
+        en: '* Tarkir: Dragonstorm'
+        zh: '* 鞑契：龙岚录'
+    - id: mtr-6.7-g056
+      type: list
+      blocks:
+      - id: mtr-6.7-b056
+        en: '* Magic: The Gathering®—FINAL FANTASY™'
+        zh: '* 万智牌 – 最终幻想'
+    - id: mtr-6.7-g057
+      type: list
+      blocks:
+      - id: mtr-6.7-b057
+        en: '* Edge of Eternities'
+        zh: '* 虚空边域'
+    - id: mtr-6.7-g058
+      type: list
+      blocks:
+      - id: mtr-6.7-b058
+        en: '* Magic: The Gathering | Marvel’s Spider-Man'
+        zh: '* 万智牌 | 漫威的蜘蛛侠 （2025年9月19日生效）'
+    - id: mtr-6.7-g059
+      type: list
+      blocks:
+      - id: mtr-6.7-b059
+        en: |-
+          * Magic: The Gathering | Avatar: The Last Airbender (effective November 14, 2025)
+        zh: '* 万智牌 | 降世神通：最后的气宗（2025年11月14日生效）'
+    - id: mtr-6.7-g060
+      type: list
+      blocks:
+      - id: mtr-6.7-b060
+        en: '* Lorwyn Eclipsed (effective January 16, 2026)'
+        zh: ''
+    - id: mtr-6.7-g061
+      type: paragraph
+      blocks:
+      - id: mtr-6.7-b061
+        en: 'The following cards are banned in Pioneer tournaments:'
+        zh: 下列牌在先驱赛制比赛中禁用：
+    - id: mtr-6.7-g062
+      type: list
+      blocks:
+      - id: mtr-6.7-b062
+        en: '* Amalia Benavides Aguirre'
+        zh: '* 阿玛利亚贝纳维德阿格雷/Amalia Benavides Aguirre'
+    - id: mtr-6.7-g063
+      type: list
+      blocks:
+      - id: mtr-6.7-b063
+        en: '* Balustrade Spy'
+        zh: '* 栏外探子/Balustrade Spy'
+    - id: mtr-6.7-g064
+      type: list
+      blocks:
+      - id: mtr-6.7-b064
+        en: '* Bloodstained Mire'
+        zh: '* 血斑泥沼/Bloodstained Mire'
+    - id: mtr-6.7-g065
+      type: list
+      blocks:
+      - id: mtr-6.7-b065
+        en: '* Expressive Iteration'
+        zh: '* 展现迭代/Expressive Iteration'
+    - id: mtr-6.7-g066
+      type: list
+      blocks:
+      - id: mtr-6.7-b066
+        en: '* Felidar Guardian'
+        zh: '* 护卫晶角兽/Felidar Guardian'
+    - id: mtr-6.7-g067
+      type: list
+      blocks:
+      - id: mtr-6.7-b067
+        en: '* Field of the Dead'
+        zh: '* 亡者旷野/Field of the Dead'
+    - id: mtr-6.7-g068
+      type: list
+      blocks:
+      - id: mtr-6.7-b068
+        en: '* Flooded Strand'
+        zh: '* 潮没水滨/Flooded Strand'
+    - id: mtr-6.7-g069
+      type: list
+      blocks:
+      - id: mtr-6.7-b069
+        en: '* Geological Appraiser'
+        zh: '* 探地人/Geological Appraiser'
+    - id: mtr-6.7-g070
+      type: list
+      blocks:
+      - id: mtr-6.7-b070
+        en: '* Heartfire Hero (effective November 10, 2025)'
+        zh: ''
+    - id: mtr-6.7-g071
+      type: list
+      blocks:
+      - id: mtr-6.7-b071
+        en: '* Inverter of Truth'
+        zh: '* 逆真恶体/Inverter of Truth'
+    - id: mtr-6.7-g072
+      type: list
+      blocks:
+      - id: mtr-6.7-b072
+        en: '* Jegantha, the Wellspring'
+        zh: '* 丰饶泉源杰甘沙/Jegantha, the Wellspring'
+    - id: mtr-6.7-g073
+      type: list
+      blocks:
+      - id: mtr-6.7-b073
+        en: '* Karn, the Great Creator'
+        zh: '* 万创卡恩/Karn, the Great Creator'
+    - id: mtr-6.7-g074
+      type: list
+      blocks:
+      - id: mtr-6.7-b074
+        en: '* Kethis, the Hidden Hand'
+        zh: '* 幕宾柯希斯/Kethis, the Hidden Hand'
+    - id: mtr-6.7-g075
+      type: list
+      blocks:
+      - id: mtr-6.7-b075
+        en: '* Leyline of Abundance'
+        zh: '* 丰足地脉/Leyline of Abundance'
+    - id: mtr-6.7-g076
+      type: list
+      blocks:
+      - id: mtr-6.7-b076
+        en: '* Lurrus of the Dream-Den'
+        zh: '* 梦巢猫魇路拉斯/Lurrus of the Dream-Den'
+    - id: mtr-6.7-g077
+      type: list
+      blocks:
+      - id: mtr-6.7-b077
+        en: '* Nexus of Fate'
+        zh: '* 龙命连结点Nexus of Fate'
+    - id: mtr-6.7-g078
+      type: list
+      blocks:
+      - id: mtr-6.7-b078
+        en: '* Oko, Thief of Crowns'
+        zh: '* 窃冠瓯柯/Oko, Thief of Crowns'
+    - id: mtr-6.7-g079
+      type: list
+      blocks:
+      - id: mtr-6.7-b079
+        en: '* Once Upon a Time'
+        zh: '* 很久以前/Once Upon a Time'
+    - id: mtr-6.7-g080
+      type: list
+      blocks:
+      - id: mtr-6.7-b080
+        en: '* Polluted Delta'
+        zh: '* 聚污三角洲/Polluted Delta'
+    - id: mtr-6.7-g081
+      type: list
+      blocks:
+      - id: mtr-6.7-b081
+        en: '* Sorin, Imperious Bloodlord'
+        zh: '* 骄傲血领索霖/Sorin, Imperious Bloodlord'
+    - id: mtr-6.7-g082
+      type: list
+      blocks:
+      - id: mtr-6.7-b082
+        en: '* Teferi, Time Raveler'
+        zh: '* 理时泰菲力Teferi, Time Raveler'
+    - id: mtr-6.7-g083
+      type: list
+      blocks:
+      - id: mtr-6.7-b083
+        en: '* Undercity Informer'
+        zh: '* 地底城告密人/Undercity Informer'
+    - id: mtr-6.7-g084
+      type: list
+      blocks:
+      - id: mtr-6.7-b084
+        en: '* Underworld Breach'
+        zh: '* 冥界裂隙/Underworld Breach'
+    - id: mtr-6.7-g085
+      type: list
+      blocks:
+      - id: mtr-6.7-b085
+        en: '* Uro, Titan of Nature’s Wrath'
+        zh: '* 天怒泰坦乌洛/Uro, Titan of Nature’s Wrath'
+    - id: mtr-6.7-g086
+      type: list
+      blocks:
+      - id: mtr-6.7-b086
+        en: '* Veil of Summer'
+        zh: '* 夏色帘幕/Veil of Summer'
+    - id: mtr-6.7-g087
+      type: list
+      blocks:
+      - id: mtr-6.7-b087
+        en: '* Walking Ballista'
+        zh: '* 自行弩炮/Walking Ballista'
+    - id: mtr-6.7-g088
+      type: list
+      blocks:
+      - id: mtr-6.7-b088
+        en: '* Wilderness Reclamation'
+        zh: '* 复归荒野/Wilderness Reclamation'
+    - id: mtr-6.7-g089
+      type: list
+      blocks:
+      - id: mtr-6.7-b089
+        en: '* Windswept Heath'
+        zh: '* 风袭荒地/Windswept Heath'
+    - id: mtr-6.7-g090
+      type: list
+      blocks:
+      - id: mtr-6.7-b090
+        en: '* Winota, Joiner of Forces'
+        zh: '* 聚力领袖薇诺塔/Winota, Joiner of Forces'
+    - id: mtr-6.7-g091
+      type: list
+      blocks:
+      - id: mtr-6.7-b091
+        en: '* Wooded Foothills'
+        zh: '* 繁茂丘陵/Wooded Foothills'

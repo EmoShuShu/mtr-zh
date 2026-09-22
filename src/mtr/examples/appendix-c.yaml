@@ -1,0 +1,47 @@
+chapter:
+  id: mtr-appendix-c
+  chapter: "Appendix C"
+  en: "Tiebreaker Explanation"
+  zh: "平分处理释疑"
+  groups:
+    - id: mtr-appendix-c-g001
+      type: paragraph
+      blocks:
+        - id: mtr-appendix-c-b001
+          en: |-
+            A player’s opponents’ match-win percentage is the average match-win percentage of each opponent that player faced, ignoring rounds for which the player received a bye.
+          zh: |-
+            牌手的对手局胜率为该牌手所较量过的对手之局胜率的平均值，不计该牌手获得轮空的轮数。
+
+    - id: mtr-appendix-c-g002
+      type: markdown
+      blocks:
+        - id: mtr-appendix-c-b002
+          en: |-
+            ```text
+            Opponents’ match-win percentage
+              = sum of opponents’ match-win percentages
+                / number of opponents
+            ```
+          zh: |-
+            ```text
+            对手局胜率
+              = 所有对手局胜率之和
+                / 对手数量
+            ```
+
+    - id: mtr-appendix-c-g003
+      type: markdown
+      blocks:
+        - id: mtr-appendix-c-b003
+          en: |-
+            ```text
+            (0.50 + 0.88 + 0.33 + 0.43 + 0.75 + 0.71 + 0.57 + 0.86) / 8
+              = 0.62
+            ```
+          zh: |-
+            ```text
+            (0.50 + 0.88 + 0.33 + 0.43 + 0.75 + 0.71 + 0.57 + 0.86) / 8
+              = 0.62
+            ```
+

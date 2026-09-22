@@ -1,0 +1,1291 @@
+{
+  "source": {
+    "markdown": "AMTR_2025.md",
+    "legacyRepositoryUrl": "https://github.com/EmoShuShu/AMTR_2025",
+    "markdownSha256": "87ff603d9743a3177422dabc5c672c787acc8b3703e71af0e307679c712b33ce",
+    "officialPdf": "tmp/pdfs/MTG_MTR_2025_Nov10_EN.pdf",
+    "officialPdfUrl": "https://media.wizards.com/ContentResources/WPN/MTG_MTR_2025_Nov10_EN.pdf",
+    "officialPdfSha256": "162253d5cd84068bed69eefd09a0e96fcf13e095aa0ec2fce24a9209d1afc57b",
+    "overrides": "migration/legacy-v20251110.yaml"
+  },
+  "output": "src/mtr/2025-11-10",
+  "fileCount": 18,
+  "findings": [
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "1.4",
+      "message": "Official English differs from the legacy English (similarity 0.901); the old Chinese translation was retained for review.",
+      "source_lines": [
+        327,
+        329
+      ],
+      "official_text": "Premier Events include the following tournaments: Magic: The Gathering World Championship, Pro Tour, Magic: The Gathering Limited Championship, Pro Tour Qualifier, Spotlight Series, Regional Championship, Regional Championship Qualifier."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "1.4",
+      "message": "Official English differs from the legacy English (similarity 0.892); the old Chinese translation was retained for review.",
+      "source_lines": [
+        331,
+        333
+      ],
+      "official_text": "Some tournaments have additional criteria regarding player and tournament official eligibility (e.g., invitation-only tournaments, such as World Championship, Pro Tour, Limited Championship, and Regional Championships)."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "1.4",
+      "message": "Official English differs from the legacy English (similarity 0.884); the old Chinese translation was retained for review.",
+      "source_lines": [
+        335,
+        337
+      ],
+      "official_text": "The Premier Tournament Invitation Policy defines specific eligibility rules with regards to certain types of invitation-only Premier Tournaments."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "1.5",
+      "message": "Official English differs from the legacy English (similarity 0.930); the old Chinese translation was retained for review.",
+      "source_lines": [
+        361,
+        363,
+        365,
+        366,
+        367
+      ],
+      "official_text": "For tournaments run using the EventLink tournament management software, players must provide a Wizards Account and/or a first and last name. Players without a Wizards Account should obtain one from https://myaccounts.wizards.com."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "2.1",
+      "message": "Official English differs from the legacy English (similarity 0.991); the old Chinese translation was retained for review.",
+      "source_lines": [
+        786,
+        788,
+        790,
+        791,
+        792,
+        794,
+        796,
+        798,
+        799,
+        800,
+        802,
+        804,
+        806,
+        807,
+        808
+      ],
+      "official_text": "A match consists of a series of games that are played until one side has won a set number of games, usually two. Drawn games do not count toward this goal. If the round ends before a player has won the required number of games, the winner of the match is the player who has won the most games at that point. If both players have equal game wins, the match is a draw."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "2.4",
+      "message": "Official English differs from the legacy English (similarity 0.985); the old Chinese translation was retained for review.",
+      "source_lines": [
+        946,
+        948,
+        950,
+        951,
+        952,
+        954,
+        956,
+        958,
+        959,
+        960,
+        962,
+        964,
+        966,
+        967,
+        968
+      ],
+      "official_text": "If the match time limit is reached before a winner is determined, the player whose turn it is finishes their turn and five additional turns are played in total. This usually means that one player takes three turns and the other two, but a player taking extra turns may affect this. If the active player has already indicated that they would like to pass the turn when the time limit is reached, that is considered to be in the next turn."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "2.7",
+      "message": "Official English differs from the legacy English (similarity 0.929); the old Chinese translation was retained for review.",
+      "source_lines": [
+        1133,
+        1135,
+        1137,
+        1138,
+        1139,
+        1140,
+        1141,
+        1142,
+        1143
+      ],
+      "official_text": "Generally, decklists are not public information and are not shared with other players during a tournament. At Professional Rules Enforcement Level tournaments (World Championship, Pro Tour, Limited Championship, Spotlight Series, Regional Championships), opponents’ decklists will be provided to players."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "2.9",
+      "message": "Official English differs from the legacy English (similarity 0.911); the old Chinese translation was retained for review.",
+      "source_lines": [
+        1169,
+        1171,
+        1173,
+        1174,
+        1175,
+        1177,
+        1179,
+        1181,
+        1182,
+        1183
+      ],
+      "official_text": "If a player disagrees with a judge’s ruling, they may appeal the ruling to the Head Judge. In larger, Premier-level tournaments (such as World Championship, Pro Tour, Limited Championship, Spotlight Series, and Regional Championships), with prior approval, the Head Judge may designate additional Appeals Judges who are also empowered to hear appeals. They will be wearing the same uniform as the Head Judge."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "2.10",
+      "message": "Official English differs from the legacy English (similarity 0.986); the old Chinese translation was retained for review.",
+      "source_lines": [
+        1231,
+        1233,
+        1235,
+        1236,
+        1237
+      ],
+      "official_text": "Players who drop during limited tournaments own the cards that they correctly have in their possession at that time. This includes any unopened or partially drafted booster packs."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "2.13",
+      "message": "Official English differs from the legacy English (similarity 0.936); the old Chinese translation was retained for review.",
+      "source_lines": [
+        1434,
+        1436,
+        1438,
+        1439,
+        1440
+      ],
+      "official_text": "The Head Judge of a World Championship, Pro Tour, or Limited Championship tournament may, in their sole discretion, use video replay to assist in making rulings during a match. Video replays may not be used to assist in making rulings in tournaments other than a World Championship, Pro Tour, or Limited Championship tournament. Players may not request that a judge consult a video replay. Video replays may also be used for investigative purposes at a later time."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "3.1",
+      "message": "Official English differs from the legacy English (similarity 0.957); the old Chinese translation was retained for review.",
+      "source_lines": [
+        1450
+      ],
+      "official_text": "1. Match points"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "3.1",
+      "message": "Official English differs from the legacy English (similarity 0.982); the old Chinese translation was retained for review.",
+      "source_lines": [
+        1451
+      ],
+      "official_text": "2. Opponents’ match-win percentage"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "3.1",
+      "message": "Official English differs from the legacy English (similarity 0.971); the old Chinese translation was retained for review.",
+      "source_lines": [
+        1452
+      ],
+      "official_text": "3. Game-win percentage"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "3.1",
+      "message": "Official English differs from the legacy English (similarity 0.981); the old Chinese translation was retained for review.",
+      "source_lines": [
+        1453
+      ],
+      "official_text": "4. Opponents’ game-win percentage"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "3.3",
+      "message": "Official English differs from the legacy English (similarity 0.991); the old Chinese translation was retained for review.",
+      "source_lines": [
+        1512,
+        1514,
+        1516,
+        1517,
+        1518
+      ],
+      "official_text": "Players may use any Authorized Magic Game Cards from Magic: The Gathering expansions, core sets, special sets, supplements, and promotional printings. Authorized Game Cards must be regulation-sized, genuine Magic cards publicly released by Wizards of the Coast. Cards that are not Authorized Game Cards are prohibited in all sanctioned events."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "3.4",
+      "message": "Official English differs from the legacy English (similarity 0.966); the old Chinese translation was retained for review.",
+      "source_lines": [
+        1600,
+        1602
+      ],
+      "official_text": "A proxy card is used during competition to represent an otherwise legal Magic card or substitute card that can no longer be included in a deck without the deck being marked. For a proxy to be issued, the card it is replacing must meet at least one of the following criteria:"
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "3.7",
+      "message": "Legacy content is not present in the official PDF and was not emitted.",
+      "source_lines": [
+        1727
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "3.7",
+      "message": "Legacy content is not present in the official PDF and was not emitted.",
+      "source_lines": [
+        1729
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "3.7",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "* Lorwyn Eclipsed™ January 16, 2026"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "4.1",
+      "message": "Official English differs from the legacy English (similarity 0.947); the old Chinese translation was retained for review.",
+      "source_lines": [
+        2140,
+        2142
+      ],
+      "official_text": "* Life total."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "4.2",
+      "message": "Official English differs from the legacy English (similarity 0.971); the old Chinese translation was retained for review.",
+      "source_lines": [
+        2309,
+        2311,
+        2313,
+        2314,
+        2315,
+        2317,
+        2319,
+        2321,
+        2322,
+        2323,
+        2325,
+        2327
+      ],
+      "official_text": "A player may interrupt a tournament shortcut by explaining how they are deviating from it or at which point in the middle they wish to take an action. A player may interrupt their own shortcut in this manner. If part of the shortcut is discovered to be or becomes illegal, the shortcut stops at that point. A player is not allowed to use a previously undeclared tournament shortcut, or to modify an in-use tournament shortcut without announcing the modification, in order to create ambiguity in the game."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "4.2",
+      "message": "Official English differs from the legacy English (similarity 0.973); the old Chinese translation was retained for review.",
+      "source_lines": [
+        2329,
+        2331,
+        2333,
+        2334,
+        2335
+      ],
+      "official_text": "A player may not request priority and take no action with it. If a player decides they do not wish to do anything, the request is nullified and priority is returned to the player that originally had it."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "4.2",
+      "message": "Official English differs from the legacy English (similarity 0.906); the old Chinese translation was retained for review.",
+      "source_lines": [
+        2410,
+        2412,
+        2414,
+        2415,
+        2416
+      ],
+      "official_text": "* Whenever a player adds an object to the stack, they are assumed to be passing priority unless they explicitly announce that they intend to retain it."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "4.2",
+      "message": "Official English differs from the legacy English (similarity 0.985); the old Chinese translation was retained for review.",
+      "source_lines": [
+        2418,
+        2420,
+        2422,
+        2423,
+        2424
+      ],
+      "official_text": "* If a player adds a group of objects to the stack without explicitly retaining priority, they are assumed to be adding them to the stack individually and allowing each to resolve before adding the next. If another player wishes to take an action at a point in the middle of this sequence, the actions should be reversed to that point."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "4.2",
+      "message": "Official English differs from the legacy English (similarity 0.938); the old Chinese translation was retained for review.",
+      "source_lines": [
+        2442,
+        2444,
+        2446,
+        2447,
+        2448,
+        2449,
+        2450,
+        2451,
+        2452
+      ],
+      "official_text": "* A player is assumed to have paid any cost of 0 unless they announce otherwise."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "4.2",
+      "message": "Official English differs from the legacy English (similarity 0.803); the old Chinese translation was retained for review.",
+      "source_lines": [
+        2462,
+        2464,
+        2466,
+        2467,
+        2468,
+        2469,
+        2470,
+        2471,
+        2472
+      ],
+      "official_text": "* A player is assumed to be attacking another player with their creatures and not any planeswalkers that player may control."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "4.3",
+      "message": "Official English differs from the legacy English (similarity 0.984); the old Chinese translation was retained for review.",
+      "source_lines": [
+        2509,
+        2511,
+        2513,
+        2514,
+        2515
+      ],
+      "official_text": "All actions taken must be legal if they were executed in the correct order, and any opponent can ask the player to do the actions in the correct sequence so that they can respond at the appropriate time (at which point players will not be held to any still-pending actions)."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "4.3",
+      "message": "Official English differs from the legacy English (similarity 0.953); the old Chinese translation was retained for review.",
+      "source_lines": [
+        2545,
+        2547
+      ],
+      "official_text": "1. A player discards a card to pay for Masticore’s upkeep cost before untapping their land."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "4.3",
+      "message": "Official English differs from the legacy English (similarity 0.940); the old Chinese translation was retained for review.",
+      "source_lines": [
+        2549,
+        2551
+      ],
+      "official_text": "2. A player resolves Harrow and puts the card into their graveyard, then searches."
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "4.8",
+      "message": "Legacy content is not present in the official PDF and was not emitted.",
+      "source_lines": [
+        2775,
+        2777
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "6.3",
+      "message": "Legacy content is not present in the official PDF and was not emitted.",
+      "source_lines": [
+        3078
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "6.3",
+      "message": "Legacy content is not present in the official PDF and was not emitted.",
+      "source_lines": [
+        3079
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "6.3",
+      "message": "Legacy content is not present in the official PDF and was not emitted.",
+      "source_lines": [
+        3080
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "6.3",
+      "message": "Legacy content is not present in the official PDF and was not emitted.",
+      "source_lines": [
+        3081
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "6.3",
+      "message": "Legacy content is not present in the official PDF and was not emitted.",
+      "source_lines": [
+        3082
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "source-changed",
+      "severity": "error",
+      "section": "6.3",
+      "message": "Official English differs from the legacy English (similarity 0.733); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3094
+      ],
+      "official_text": "* Magic: The Gathering | Marvel’s Spider-Man™"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "6.3",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "* Lorwyn Eclipsed (effective January 16, 2026)"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "6.3",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "* Proft's Eidetic Memory (effective November 10, 2025)"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "6.3",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "* Screaming Nemesis (effective November 10, 2025)"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "6.3",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "* Vivi Ornitier (effective November 10, 2025)"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.4",
+      "message": "Official English differs from the legacy English (similarity 0.800); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3186
+      ],
+      "official_text": "* Core 2019"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.4",
+      "message": "Official English differs from the legacy English (similarity 0.846); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3191
+      ],
+      "official_text": "* Core Set 2020™"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.4",
+      "message": "Official English differs from the legacy English (similarity 0.846); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3195
+      ],
+      "official_text": "* Core Set 2021™"
+    },
+    {
+      "code": "source-changed",
+      "severity": "error",
+      "section": "6.4",
+      "message": "Official English differs from the legacy English (similarity 0.733); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3224
+      ],
+      "official_text": "* Magic: The Gathering | Marvel’s Spider-Man"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "6.4",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "* Lorwyn Eclipsed (effective January 16, 2026)"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.5",
+      "message": "Official English differs from the legacy English (similarity 0.973); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3310
+      ],
+      "official_text": "* All cards that bring a sticker or an Attraction into the game (56 Cards). Click here for the list."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.5",
+      "message": "Official English differs from the legacy English (similarity 0.986); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3311
+      ],
+      "official_text": "* Cards whose art, text, name, or combination thereof that are racially or culturally offensive are banned in all formats. This list is a work in progress. Click here for the list."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.5",
+      "message": "Official English differs from the legacy English (similarity 0.974); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3334
+      ],
+      "official_text": "* Karn, the Great Creator"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.6",
+      "message": "Official English differs from the legacy English (similarity 0.973); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3397
+      ],
+      "official_text": "* All cards that bring a sticker or an Attraction into the game (56 Cards). Click here for the list."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.6",
+      "message": "Official English differs from the legacy English (similarity 0.986); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3398
+      ],
+      "official_text": "* Cards whose art, text, name, or combination thereof that are racially or culturally offensive are banned in all formats. This list is a work in progress. Click here for the list."
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "6.6",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "* Entomb (effective November 10, 2025)"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "6.6",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "* Nadu, Winged Wisdom (effective November 10, 2025)"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.7",
+      "message": "Official English differs from the legacy English (similarity 0.800); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3497
+      ],
+      "official_text": "* Core 2019"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.7",
+      "message": "Official English differs from the legacy English (similarity 0.846); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3501
+      ],
+      "official_text": "* Core Set 2020"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "6.7",
+      "message": "Official English differs from the legacy English (similarity 0.846); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3505
+      ],
+      "official_text": "* Core Set 2021"
+    },
+    {
+      "code": "source-changed",
+      "severity": "error",
+      "section": "6.7",
+      "message": "Official English differs from the legacy English (similarity 0.733); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3530
+      ],
+      "official_text": "* Magic: The Gathering | Marvel’s Spider-Man"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "6.7",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "* Lorwyn Eclipsed (effective January 16, 2026)"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "6.7",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "* Heartfire Hero (effective November 10, 2025)"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "7.2",
+      "message": "Official English differs from the legacy English (similarity 0.951); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3585,
+        3587
+      ],
+      "official_text": "Cards must be received directly from tournament officials. This product must be new and previously unopened. Pro Tour, Limited Championship, Spotlight Series, Regional Championships, and World Championship tournaments may have had play boosters opened in order to stamp them. Each player (or team) must be given exactly the same quantity and type of product as all other players participating in the tournament. For example, if one player receives three Murders at Karlov Manor play boosters for a Booster Draft, all other players must also receive three Murders at Karlov Manor play boosters."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "7.2",
+      "message": "Official English differs from the legacy English (similarity 0.987); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3589,
+        3591
+      ],
+      "official_text": "Only cards from the expansions of the play boosters opened (and only cards opened or drafted in that player’s pool) may be used in a player’s deck. The following are exceptions to this rule:"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "7.2",
+      "message": "Official English differs from the legacy English (similarity 0.975); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3595,
+        3596
+      ],
+      "official_text": "* Non-basic lands from the Return to Ravnica and Gatecrash expansions are allowed when opened in Dragon’s Maze draft boosters."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "7.2",
+      "message": "Official English differs from the legacy English (similarity 0.971); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3597,
+        3598
+      ],
+      "official_text": "* Non-basic lands from the Khans of Tarkir expansion are allowed when opened in Fate Reforged draft boosters."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "7.2",
+      "message": "Official English differs from the legacy English (similarity 0.978); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3599,
+        3600
+      ],
+      "official_text": "* Non-basic lands from the Zendikar Expeditions set are allowed when opened in Battle for Zendikar or Oath of the Gatewatch draft boosters."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "7.2",
+      "message": "Official English differs from the legacy English (similarity 0.970); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3601,
+        3602
+      ],
+      "official_text": "* Cards from a Masterpiece Series are allowed when opened in draft boosters associated with that series."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "7.2",
+      "message": "Official English differs from the legacy English (similarity 0.987); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3610,
+        3612
+      ],
+      "official_text": "Because it was designed specifically for multiplayer play, the use of Conspiracy booster packs in sanctioned, rated Limited-format tournaments (Sealed Deck and Booster Draft) is not permitted."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "7.2",
+      "message": "Official English differs from the legacy English (similarity 0.981); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3614,
+        3616
+      ],
+      "official_text": "Six play boosters per player are recommended for individual format Sealed Deck tournaments and 3 play boosters per player for individual Booster or Team Rochester Draft tournaments. For the recommended product mix for the current block, refer to Appendix D."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "7.6",
+      "message": "Official English differs from the legacy English (similarity 0.991); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3727,
+        3729,
+        3731,
+        3732,
+        3733
+      ],
+      "official_text": "For Booster Draft and Team Rochester Draft tournaments, players assemble into random drafting circles (called pods) of roughly equal size at the direction of the Head Judge. Tournament officials then distribute identical sets of boosters to each player."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "7.7",
+      "message": "Official English differs from the legacy English (similarity 0.995); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3766,
+        3768,
+        3770,
+        3771,
+        3772,
+        3773,
+        3774,
+        3775,
+        3776
+      ],
+      "official_text": "Players and teams may not look at their drafted cards between or during picks at Competitive and Professional Rules Enforcement Levels. At Regular Rules Enforcement Level, players are allowed to review their drafted cards between or during picks as long as they are holding no other cards at the same time. The Head Judge may choose to disallow this provided they announce it before the first draft. Between booster packs there is a review period in which players may review their picks."
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "7.7",
+      "message": "Official content has no legacy translation.",
+      "source_lines": [],
+      "official_text": "If the draft is not being timed, and two players do not wish to make a pick before the other player, the player closer to providing the other player with the pack picks first. If the players are equidistant, then the player in the lower seat number picks first."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "8.3",
+      "message": "Official English differs from the legacy English (similarity 0.903); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3828,
+        3830
+      ],
+      "official_text": "The rules for team communication are the same as those for Two-Headed Giant. See section 4.6 for more details."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "8.5",
+      "message": "Official English differs from the legacy English (similarity 0.992); the old Chinese translation was retained for review.",
+      "source_lines": [
+        3860,
+        3862
+      ],
+      "official_text": "The player drafting first from the cards presented on the table is called the active player. The first active player is the participant who opened the first booster pack of the draft, as designated by a tournament official. All players in each drafting pod serve as the active player once for each group of booster packs. The identity of the active player moves in a horseshoe pattern, clockwise for the first and third booster packs and counterclockwise for the second. The player who was last to open a booster pack from a group is the first to open the booster pack from the next group."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "9.7",
+      "message": "Official English differs from the legacy English (similarity 0.990); the old Chinese translation was retained for review.",
+      "source_lines": [
+        4062,
+        4064
+      ],
+      "official_text": "Teams (not players) assemble into random drafting circles (called pods) of roughly equal size at the direction of the Head Judge. Teammates sit next to each other. Tournament officials then distribute identical boosters to each team in the pod."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "9.7",
+      "message": "Official English differs from the legacy English (similarity 0.985); the old Chinese translation was retained for review.",
+      "source_lines": [
+        4066,
+        4068
+      ],
+      "official_text": "After opening and counting the cards in their first pack, the team chooses two cards from the booster pack then passes the remaining cards face down to the team on its left. Selected cards may be placed into one or two piles. The cards chosen are not assigned to a particular player; they become part of a pool out of which both players will construct their decks. The open packs are passed around the drafting pod—with each team taking two cards from each before passing—until all cards are drafted."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "10.3",
+      "message": "Official English differs from the legacy English (similarity 0.993); the old Chinese translation was retained for review.",
+      "source_lines": [
+        4128,
+        4130,
+        4132,
+        4133,
+        4134
+      ],
+      "official_text": "Invitation-only tournaments have additional qualification criteria for player participation. The invitation list for Premier tournaments is defined in the Magic: The Gathering Premier Tournament Invitation Policy. Tournament Organizers may hold and sanction invitation-only non-Premier tournaments, as long as they are sanctioned as a Magic Premier Series."
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "10.4",
+      "message": "Official English differs from the legacy English (similarity 0.971); the old Chinese translation was retained for review.",
+      "source_lines": [
+        4142,
+        4144
+      ],
+      "official_text": "At Pro Tour, Limited Championship, and World Championship tournaments, competitors are advanced to the playoff rounds before the end of the Swiss rounds (and receive byes for the remaining Swiss rounds) if they have achieved the announced number of match points required to advance to the playoff rounds. In this case, competitors in the Top 8 playoff are seeded in order from 1st through 8th. Seeding is determined by:"
+    },
+    {
+      "code": "source-changed",
+      "severity": "warning",
+      "section": "10.4",
+      "message": "Official English differs from the legacy English (similarity 0.946); the old Chinese translation was retained for review.",
+      "source_lines": [
+        4194,
+        4196
+      ],
+      "official_text": "Premier Events include the following tournaments: Magic: The Gathering World Championship, Pro Tour, Limited Championship, Pro Tour Qualifier, Spotlight Series, Regional Championship, and Regional Championship Qualifier"
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4217
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4218
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4219
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4221
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4222
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4223
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4224
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4225
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4226
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4227
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4228
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4230
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4231
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4232
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4233
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4234
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4235
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4236
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-a",
+      "message": "Historical Appendix A entry is outside the current official appendix and was not emitted.",
+      "source_lines": [
+        4237,
+        4238
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "appendix-c",
+      "message": "Official Appendix C text has no legacy translation.",
+      "source_lines": [],
+      "official_text": "Game points are not used in team tournaments; only the overall result of the match is used for tiebreakers."
+    },
+    {
+      "code": "manual-pdf-transcription",
+      "severity": "info",
+      "section": "appendix-c",
+      "message": "English caption was transcribed from positioned PDF artwork.",
+      "source_lines": [
+        4367
+      ],
+      "official_text": "Translated to the decimal system, this equation is:"
+    },
+    {
+      "code": "manual-pdf-transcription",
+      "severity": "info",
+      "section": "appendix-c",
+      "message": "English caption was transcribed from positioned PDF artwork.",
+      "source_lines": [
+        4371
+      ],
+      "official_text": "With the individual match-win percentages added together, this equation becomes:"
+    },
+    {
+      "code": "manual-pdf-transcription",
+      "severity": "info",
+      "section": "appendix-c",
+      "message": "English caption was transcribed from positioned PDF artwork.",
+      "source_lines": [
+        4375
+      ],
+      "official_text": "This player’s opponents’ match-win percentage is 0.62."
+    },
+    {
+      "code": "manual-pdf-transcription",
+      "severity": "info",
+      "section": "appendix-c",
+      "message": "English caption was transcribed from positioned PDF artwork.",
+      "source_lines": [
+        4381
+      ],
+      "official_text": "With the individual match-win percentages added together, this equation becomes:"
+    },
+    {
+      "code": "manual-pdf-transcription",
+      "severity": "info",
+      "section": "appendix-c",
+      "message": "English caption was transcribed from positioned PDF artwork.",
+      "source_lines": [
+        4385
+      ],
+      "official_text": "This player’s opponents’ match-win percentage is 0.63."
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-c",
+      "message": "Legacy explanatory label is not present in the official PDF and was not emitted.",
+      "source_lines": [
+        4348
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "appendix-d",
+      "message": "Lorwyn Eclipsed content is absent from the legacy translation.",
+      "source_lines": [],
+      "official_text": "For Lorwyn Eclipsed, the recommended play booster mix for Limited tournaments is (effective January 16, 2026):"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "appendix-d",
+      "message": "Lorwyn Eclipsed content is absent from the legacy translation.",
+      "source_lines": [],
+      "official_text": "* Individual Sealed Deck – 6 Lorwyn Eclipsed (per player)"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "appendix-d",
+      "message": "Lorwyn Eclipsed content is absent from the legacy translation.",
+      "source_lines": [],
+      "official_text": "* Individual Booster Draft or Team Rochester Draft – 3 Lorwyn Eclipsed (per player)"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "appendix-d",
+      "message": "Lorwyn Eclipsed content is absent from the legacy translation.",
+      "source_lines": [],
+      "official_text": "* Three-Person Team Sealed – 12 Lorwyn Eclipsed (per team)"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "appendix-d",
+      "message": "Lorwyn Eclipsed content is absent from the legacy translation.",
+      "source_lines": [],
+      "official_text": "* Two-Headed Giant Sealed Deck – 8 Lorwyn Eclipsed (per team)"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "appendix-d",
+      "message": "Lorwyn Eclipsed content is absent from the legacy translation.",
+      "source_lines": [],
+      "official_text": "* Two-Headed Giant Booster Draft – 6 Lorwyn Eclipsed (per team)"
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-d",
+      "message": "Expired FINAL FANTASY booster mix is absent from the current official appendix and was not emitted.",
+      "source_lines": [
+        4422
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-d",
+      "message": "Expired FINAL FANTASY booster mix is absent from the current official appendix and was not emitted.",
+      "source_lines": [
+        4423
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-d",
+      "message": "Expired FINAL FANTASY booster mix is absent from the current official appendix and was not emitted.",
+      "source_lines": [
+        4424
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-d",
+      "message": "Expired FINAL FANTASY booster mix is absent from the current official appendix and was not emitted.",
+      "source_lines": [
+        4425
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-d",
+      "message": "Expired FINAL FANTASY booster mix is absent from the current official appendix and was not emitted.",
+      "source_lines": [
+        4426
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "legacy-only",
+      "severity": "warning",
+      "section": "appendix-d",
+      "message": "Expired FINAL FANTASY booster mix is absent from the current official appendix and was not emitted.",
+      "source_lines": [
+        4427
+      ],
+      "official_text": ""
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "appendix-f",
+      "message": "Appendix F table row has no legacy translation: Limited Championship",
+      "source_lines": [],
+      "official_text": "| Limited Championship | Professional |"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "appendix-f",
+      "message": "Appendix F table row has no legacy translation: Spotlight Series – Day 1",
+      "source_lines": [],
+      "official_text": "| Spotlight Series – Day 1 | Competitive |"
+    },
+    {
+      "code": "missing-translation",
+      "severity": "error",
+      "section": "appendix-f",
+      "message": "Appendix F table row has no legacy translation: Spotlight Series – Day 2",
+      "source_lines": [],
+      "official_text": "| Spotlight Series – Day 2 | Professional |"
+    }
+  ],
+  "summary": {
+    "error": 24,
+    "warning": 88,
+    "info": 5
+  }
+}

@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTR 中文维护流水线：完整架构设计</title>
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --paper: #ffffff;
+      --ink: #172033;
+      --muted: #5d687b;
+      --line: #dce2eb;
+      --accent: #3157c8;
+      --accent-soft: #edf1ff;
+      --ok: #13795b;
+      --ok-soft: #e8f7f1;
+      --warn: #9a6700;
+      --warn-soft: #fff5d9;
+      --danger: #b42318;
+      --danger-soft: #fff0ee;
+      --code: #101827;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font: 15px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+    }
+    main { max-width: 1180px; margin: 0 auto; padding: 28px 22px 72px; }
+    header {
+      background: linear-gradient(135deg, #172554, #3157c8 58%, #4e77e6);
+      color: #fff;
+      padding: 34px;
+      border-radius: 18px;
+      box-shadow: 0 14px 38px rgba(29, 50, 112, .18);
+    }
+    header h1 { margin: 0 0 10px; font-size: clamp(26px, 4vw, 42px); line-height: 1.2; }
+    header p { max-width: 890px; margin: 0; color: #e5ebff; font-size: 16px; }
+    h2 { margin: 44px 0 14px; font-size: 25px; line-height: 1.3; }
+    h3 { margin: 28px 0 10px; font-size: 19px; }
+    h4 { margin: 20px 0 8px; font-size: 16px; }
+    p { margin: 9px 0; }
+    a { color: var(--accent); }
+    code { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+    :not(pre) > code { padding: 2px 6px; background: #edf0f5; border-radius: 5px; font-size: .92em; }
+    pre {
+      overflow-x: auto;
+      margin: 12px 0;
+      padding: 16px 18px;
+      color: #e8eefc;
+      background: var(--code);
+      border-radius: 10px;
+      font: 13px/1.55 ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      white-space: pre;
+    }
+    ul, ol { padding-left: 24px; }
+    li + li { margin-top: 5px; }
+    .meta, .grid, .phases { display: grid; gap: 14px; }
+    .meta { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 22px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card {
+      padding: 18px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(20, 31, 55, .04);
+    }
+    .card h3, .card h4 { margin-top: 0; }
+    .meta .card { color: var(--ink); }
+    .meta strong { display: block; font-size: 13px; color: var(--muted); }
+    .meta span { display: block; margin-top: 3px; font-weight: 700; }
+    .status { display: inline-block; padding: 3px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+    .status.ok { color: var(--ok); background: var(--ok-soft); }
+    .status.warn { color: var(--warn); background: var(--warn-soft); }
+    .status.danger { color: var(--danger); background: var(--danger-soft); }
+    .callout {
+      margin: 16px 0;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      border-radius: 8px;
+    }
+    .callout.warn { border-color: var(--warn); background: var(--warn-soft); }
+    .callout.danger { border-color: var(--danger); background: var(--danger-soft); }
+    .toc { columns: 2; padding: 18px 22px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; }
+    .toc a { text-decoration: none; }
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(100px, 1fr));
+      gap: 8px;
+      align-items: stretch;
+      margin: 18px 0;
+    }
+    .flow div {
+      position: relative;
+      min-height: 92px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 12px;
+      text-align: center;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font-weight: 700;
+    }
+    .flow div:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -15px;
+      top: 35%;
+      z-index: 2;
+      color: var(--accent);
+      font-size: 21px;
+    }
+    .flow small { display: block; margin-top: 5px; color: var(--muted); font-weight: 500; line-height: 1.35; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+    table { width: 100%; border-collapse: collapse; min-width: 690px; }
+    th, td { padding: 10px 12px; vertical-align: top; border-bottom: 1px solid var(--line); text-align: left; }
+    th { background: #f1f4f9; font-size: 13px; }
+    tr:last-child td { border-bottom: 0; }
+    .phase {
+      display: grid;
+      grid-template-columns: 95px 1fr 150px;
+      gap: 16px;
+      padding: 17px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .phase .number { font-weight: 800; color: var(--accent); }
+    .phase .gate { color: var(--muted); font-size: 13px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 13px; }
+    .checklist { list-style: none; padding-left: 0; }
+    .checklist li { position: relative; padding-left: 25px; }
+    .checklist li::before { content: "□"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
+    footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); }
+
+    @media (max-width: 900px) {
+      .meta, .grid.two, .grid.three { grid-template-columns: 1fr 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .flow div:not(:last-child)::after { content: "↓"; right: 50%; top: auto; bottom: -20px; }
+      .phase { grid-template-columns: 75px 1fr; }
+      .phase .gate { grid-column: 2; }
+    }
+    @media (max-width: 620px) {
+      main { padding: 14px 12px 45px; }
+      header { padding: 24px 20px; }
+      .meta, .grid.two, .grid.three { grid-template-columns: 1fr; }
+      .toc { columns: 1; }
+      .phase { grid-template-columns: 1fr; }
+      .phase .gate { grid-column: 1; }
+    }
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      main { max-width: none; padding: 0; }
+      header { color: #000; background: #fff; border: 2px solid #000; box-shadow: none; }
+      header p { color: #222; }
+      .card, .phase { box-shadow: none; break-inside: avoid; }
+      pre { white-space: pre-wrap; color: #000; background: #f4f4f4; border: 1px solid #bbb; }
+      a { color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>MTR 中文维护流水线：完整架构设计</h1>
+    <p>北极星：以可人工校对的 YAML 为唯一内容事实源，把官方 PDF 更新可靠地转换为结构化英文差异，在不破坏既有中文译文与长期冻结注解的前提下，生成确定性的单文件 JSON 和 Markdown，并由人工合并 PR 触发正式发布。</p>
+    <div class="meta">
+      <div class="card"><strong>计划类型</strong><span>架构 / 数据流水线</span></div>
+      <div class="card"><strong>状态</strong><span>Schema v1 已冻结</span></div>
+      <div class="card"><strong>日期</strong><span>2026-09-22</span></div>
+      <div class="card"><strong>实施准备度</strong><span>可进入 PDF 获取与解析</span></div>
+    </div>
+  </header>
+
+  <h2>目录</h2>
+  <ol class="toc">
+    <li><a href="#decision">决策摘要</a></li>
+    <li><a href="#scope">范围、非目标与边界</a></li>
+    <li><a href="#sources">已审阅来源</a></li>
+    <li><a href="#current">当前状态与缺口</a></li>
+    <li><a href="#target">目标行为与系统边界</a></li>
+    <li><a href="#model">YAML 内容模型</a></li>
+    <li><a href="#ids">ID 生命周期</a></li>
+    <li><a href="#parse">PDF 解析与规范化</a></li>
+    <li><a href="#reconcile">两层对齐与差异算法</a></li>
+    <li><a href="#images">图片与 Base64</a></li>
+    <li><a href="#outputs">JSON / Markdown 输出</a></li>
+    <li><a href="#workflow">GitHub Actions 工作流</a></li>
+    <li><a href="#repo">仓库结构与技术选型</a></li>
+    <li><a href="#phases">实施阶段</a></li>
+    <li><a href="#qa">QA 与验收矩阵</a></li>
+    <li><a href="#risks">风险与缓解</a></li>
+    <li><a href="#migration">首次迁移与回滚</a></li>
+    <li><a href="#open">开放项与实施交接</a></li>
+  </ol>
+
+  <section id="decision">
+    <h2>1. 决策摘要</h2>
+    <div class="grid three">
+      <div class="card"><h3>内容事实源</h3><p><strong>YAML</strong>，按章节拆分，只允许人工编辑这里；JSON 和 Markdown 均为可重建产物。</p></div>
+      <div class="card"><h3>正文模型</h3><p><code>section → group → block</code>。group 保留官方段落边界；block 是按注解拆分的最小维护单位。</p></div>
+      <div class="card"><h3>差异模型</h3><p>先对完整 group 做官方原文 diff，再把变化投影到旧 block 边界；不直接拿 PDF 段落逐项匹配旧 block。</p></div>
+      <div class="card"><h3>注解</h3><p>每个 block 最多一条 <code>extras</code>，注解本身可包含多个 Markdown 段落；当前阶段长期冻结。</p></div>
+      <div class="card"><h3>图片</h3><p>YAML 引用仓库 PNG；构建时转为无换行 Base64 Data URI，直接写入最终 JSON/Markdown 的图片语法。</p></div>
+      <div class="card"><h3>发布授权</h3><p>机器人只创建更新 PR；人工合并是发布授权；合并到默认分支后自动构建和发布。</p></div>
+    </div>
+    <div class="callout"><strong>核心不变量：</strong>任何时候都能把同一 group 的英文 block 按规则拼回规范化官方段落；否则 YAML 无效，禁止发布。</div>
+  </section>
+
+  <section id="scope">
+    <h2>2. 范围、非目标与权限边界</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3>本设计覆盖</h3>
+        <ul>
+          <li>官方 MTR PDF 的动态发现、下载、归档与版本判断。</li>
+          <li>PDF 到临时英文 AST 的规范化解析。</li>
+          <li>旧 YAML 与新英文 AST 的 section/group/block 对齐。</li>
+          <li>英文 diff、中文继承、冻结注解继承和冲突报告。</li>
+          <li>YAML Schema、ID 规则、图片 Base64 规则。</li>
+          <li>单文件 JSON 和 Markdown 的确定性构建。</li>
+          <li>定时 PR、PR 校验、合并后发布、测试和回滚。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>当前明确不做</h3>
+        <ul>
+          <li>自动翻译中文正文。</li>
+          <li>自动更新英文注解或中文注解。</li>
+          <li>保证任意 PDF 布局均可零配置解析。</li>
+          <li>前端 Markdown 渲染器、Data URI 安全策略或 UI 改造。</li>
+          <li>把生成的 JSON 当成人工编辑入口。</li>
+          <li>在存在低置信度匹配或孤立注解时自动发布。</li>
+        </ul>
+      </div>
+    </div>
+    <h3>假设</h3>
+    <ul>
+      <li>官方 MTR 的章节编号 1–10 与附录 A–F 总体稳定；结构变化仍须可被报告。</li>
+      <li>现有英文/中文注解可视为冻结内容，只有其锚定正文发生结构冲突时需要人工处置。</li>
+      <li>图片数量少且长期稳定，Base64 体积开销可接受。</li>
+      <li>列表与表格可以作为 Markdown 字符串进入最终 JSON。</li>
+      <li>人工合并 PR 即表示本次翻译校对完成，无需在每个 block 中保存 review 状态。</li>
+    </ul>
+    <h3>权限边界</h3>
+    <p>定时工作流可以读取官方页面并向仓库创建分支和 PR，但不能绕过分支保护、自动合并或直接发布存在冲突的内容。设计阶段不修改实现代码、不下载或替换正式来源文件。</p>
+  </section>
+
+  <section id="sources">
+    <h2>3. 已审阅来源</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>来源</th><th>观察</th><th>对设计的影响</th></tr></thead>
+        <tbody>
+          <tr><td><code>D:\mtr-zh\rules.json</code></td><td>CR 风格数据：<code>version</code>、<code>intro</code>、<code>main</code>、<code>chapter/en/zh/subrules/extras</code>，另有 glossary 等 CR 专属内容。</td><td>沿用双语字段、章节树和 extras 命名；不强制复用 CR 专属顶层结构。</td></tr>
+          <tr><td><code>D:\mtr-zh\AMTR_2025.md</code></td><td>正文、译文和引用块注解混排；包含列表、表格和 9 个相对图片引用；附录结构与正文不同。</td><td>首次迁移采用人工录入；不能把旧 Markdown 的排版偶然性直接固化为 Schema。</td></tr>
+          <tr><td><a href="https://wpn.wizards.com/en/rules-documents">WPN Rules and Documentation</a></td><td>官方入口页列出 MTR 下载项，直接 PDF URL 含版本日期且会变化。</td><td>工作流从入口页动态发现链接，不硬编码当前 PDF 文件名。</td></tr>
+          <tr><td><a href="https://media.wizards.com/ContentResources/WPN/MTG_MTR_2026_Feb27_EN.pdf">官方 MTR PDF 示例</a></td><td>PDF 是官方英文权威来源，含章节、列表、表格、附录和图形；文本抽取可产生页码、断词等噪声。</td><td>保留原始 PDF；解析结果必须经过规范化与结构验收。</td></tr>
+          <tr><td>用户提供的四张淘汰赛/座次图</td><td>低分辨率 PNG，结构清楚但文本图不如图片直观。</td><td>保留 PNG；最终以内联 Base64 Data URI 发布。</td></tr>
+          <tr><td>当前工作区状态</td><td>仅有两个内容文件，且 <code>D:\mtr-zh</code> 当前不是 Git 仓库。</td><td>实施 Phase 0 必须先进入正式 GitHub 仓库或初始化并配置远端。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="current">
+    <h2>4. 当前状态与主要缺口</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3>已有资产</h3>
+        <ul>
+          <li>完整的旧 AMTR Markdown，可供人工迁移。</li>
+          <li>一个可参考字段风格的双语规则 JSON。</li>
+          <li>明确的人工校对和发布授权流程。</li>
+          <li>已经冻结的 group/block、extras、Base64 决策。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>缺口</h3>
+        <ul>
+          <li>没有 YAML Schema、样例或构建器。</li>
+          <li>没有官方 PDF 归档与来源索引。</li>
+          <li>没有 PDF parser、reconciler 或 diff 报告。</li>
+          <li>旧 Markdown 引用的图片文件不在当前工作区。</li>
+          <li>没有 Git 仓库、CI、发布目标和分支保护配置。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="target">
+    <h2>5. 目标行为与系统边界</h2>
+    <div class="flow" aria-label="MTR pipeline flow">
+      <div>发现<small>WPN 入口页定位当前 PDF</small></div>
+      <div>获取<small>校验并归档 PDF 与 SHA-256</small></div>
+      <div>解析<small>产生未分注解的英文临时 AST</small></div>
+      <div>对齐<small>group 匹配与 block 边界投影</small></div>
+      <div>校对<small>PR 中查看 diff 并编辑 YAML</small></div>
+      <div>构建<small>JSON / Markdown / Base64</small></div>
+      <div>发布<small>合并 main 后自动执行</small></div>
+    </div>
+    <h3>组件所有权</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>组件</th><th>输入</th><th>输出</th><th>失败原则</th></tr></thead>
+        <tbody>
+          <tr><td>Discoverer</td><td>WPN 页面</td><td>PDF URL、页面标注日期</td><td>标题多义或缺失即失败，不猜链接。</td></tr>
+          <tr><td>Fetcher</td><td>PDF URL</td><td>原始 PDF、SHA-256、HTTP 元数据</td><td>非 PDF、域名异常、体积异常即失败。</td></tr>
+          <tr><td>Parser</td><td>原始 PDF</td><td>Transient English AST</td><td>缺章节、低覆盖率或无法识别日期即失败。</td></tr>
+          <tr><td>Reconciler</td><td>旧 YAML + 新 AST</td><td>候选 YAML、映射、冲突</td><td>不静默跨边界、不静默丢注解。</td></tr>
+          <tr><td>Reporter</td><td>旧/新 group 与 block</td><td><code>changes.json</code>、<code>changes.md</code></td><td>报告生成失败则不创建可合并 PR。</td></tr>
+          <tr><td>Builder</td><td>已确认 YAML + assets</td><td>单文件 JSON、单文件 Markdown</td><td>Schema、资源或确定性校验失败即停止。</td></tr>
+          <tr><td>Publisher</td><td>main 上的 dist</td><td>正式发布物</td><td>只接受 main 合并事件，目标后续配置。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="model">
+    <h2>6. YAML 内容模型</h2>
+    <p>YAML 是唯一可编辑内容源。按章节拆分减少冲突和审阅噪声；manifest 决定顺序，不能依赖文件系统排序。</p>
+
+    <h3>6.1 Manifest</h3>
+    <pre><code>schemaVersion: 1
+document:
+  id: mtr
+  title:
+    en: "Magic: The Gathering Tournament Rules"
+    zh: "万智牌比赛规则"
+  version: "20260227"
+  effectiveDate: "2026-02-27"
+
+files:
+  - introduction.yaml
+  - chapter-01.yaml
+  - chapter-02.yaml
+  - chapter-03.yaml
+  - chapter-04.yaml
+  - chapter-05.yaml
+  - chapter-06.yaml
+  - chapter-07.yaml
+  - chapter-08.yaml
+  - chapter-09.yaml
+  - chapter-10.yaml
+  - appendix-a.yaml
+  - appendix-b.yaml
+  - appendix-c.yaml
+  - appendix-d.yaml
+  - appendix-e.yaml
+  - appendix-f.yaml</code></pre>
+    <p class="small muted">官方 URL、SHA-256 和获取时间不放进每条正文；它们由自动化维护在 <code>sources/index.json</code>。</p>
+
+    <h3>6.2 章节文件</h3>
+    <pre><code>chapter:
+  id: mtr-1
+  chapter: "1."
+  en: "Tournament Fundamentals"
+  zh: "比赛基本要素"
+
+sections:
+  - id: mtr-1.1
+    chapter: "1.1"
+    en: "Tournament Types"
+    zh: "比赛种类"
+    groups:
+      - id: mtr-1.1-g001
+        type: paragraph
+        blocks:
+          - id: mtr-1.1-b001
+            en: |-
+              There are two types of sanctioned Magic tournaments: rated and casual.
+            zh: |-
+              万智牌认证赛事分为两种：积分赛和休闲赛。
+            extras:
+              - en: |-
+                  First annotation paragraph.
+
+                  Second annotation paragraph.
+                zh: |-
+                  注解第一段。
+
+                  注解第二段。
+
+          - id: mtr-1.1-b002
+            en: |-
+              Rated tournaments are further divided into two types...
+            zh: |-
+              积分赛又分为两种类型……</code></pre>
+
+    <h3>6.3 字段约束</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对象</th><th>必填字段</th><th>约束</th></tr></thead>
+        <tbody>
+          <tr><td>chapter / section</td><td><code>id, chapter, en, zh</code></td><td>自然章节号与稳定技术 ID 分离；标题不能为空。</td></tr>
+          <tr><td>group</td><td><code>id, type, blocks</code></td><td><code>type</code> 为 paragraph/list/table/image/markdown；至少一个 block。</td></tr>
+          <tr><td>文本 block</td><td><code>id, en, zh</code></td><td>允许 Markdown；新内容候选阶段 zh 可为空，但 main 发布构建禁止为空。</td></tr>
+          <tr><td>extras</td><td><code>en, zh</code></td><td>数组最多一个元素；字符串可包含多个 Markdown 段落。</td></tr>
+          <tr><td>图片 block</td><td><code>id, asset, alt.en, alt.zh</code></td><td>asset 必须位于仓库 assets 根下；不允许 URL 或 Base64 写回 YAML。</td></tr>
+          <tr><td>未知字段</td><td>—</td><td>Schema 默认拒绝，避免拼写错误被静默忽略。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>6.4 拼接规则与不变量</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>group 类型</th><th>英文 block 间隔</th><th>中文 block 间隔</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>paragraph</td><td>单个空格</td><td>空字符串</td><td>注解拆分原则上只发生在完整句子边界。</td></tr>
+          <tr><td>list</td><td>换行</td><td>换行</td><td>可按列表项拆 block；Markdown 标记保留在字符串中。</td></tr>
+          <tr><td>table</td><td>换行</td><td>换行</td><td>通常整个表格只有一个 block。</td></tr>
+          <tr><td>markdown</td><td>换行</td><td>换行</td><td>用于无法归入前三类的静态富文本。</td></tr>
+          <tr><td>image</td><td>不拼接</td><td>不拼接</td><td>一个 group 通常一个图片 block。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>仅在无法使用默认间隔的极少数边界允许 block 指定 <code>joinAfter.en/zh</code>；Schema 禁止 image 使用该字段。</p>
+  </section>
+
+  <section id="ids">
+    <h2>7. ID 生命周期</h2>
+    <div class="callout"><strong>ID 是持久状态，不是正文哈希，也不是实时顺序。</strong>正文变化、block 移动或在中间插入内容，都不能导致既有 ID 重编号。</div>
+    <h3>格式</h3>
+    <ul>
+      <li>章节：<code>mtr-1.1</code>、<code>mtr-appendix-c</code>。</li>
+      <li>group：<code>mtr-1.1-g001</code>。</li>
+      <li>block：<code>mtr-1.1-b001</code>。block 编号在 section 内单调分配，与 group 无绑定，允许 group 调整后仍保留。</li>
+    </ul>
+    <h3>分配规则</h3>
+    <ol>
+      <li>初始人工迁移按阅读顺序分配三位十进制序号。</li>
+      <li>后续新增永远使用当前 section 的最大编号 + 1，即使插入数组中部。</li>
+      <li>删除的 ID 永不复用；历史可由 Git 追踪。</li>
+      <li>语义连续的正文修改保留 block ID；真正新增内容获得新 ID。</li>
+      <li>拆分 block：主要延续部分保留原 ID，其余获得新 ID；必须人工确认。</li>
+      <li>合并 block：保留一个主 ID，其他 ID 进入报告，不自动选择。</li>
+    </ol>
+  </section>
+
+  <section id="parse">
+    <h2>8. PDF 发现、解析与规范化</h2>
+    <h3>8.1 发现与获取</h3>
+    <ol>
+      <li>GET WPN 规则文档页面，定位标题精确匹配 “Magic: The Gathering Tournament Rules” 的下载链接。</li>
+      <li>限制目标主机为已批准的 Wizards 官方域名；跟随重定向后再次验证主机。</li>
+      <li>验证 HTTP 成功、<code>Content-Type</code>、<code>%PDF-</code> 文件头、合理体积上限。</li>
+      <li>计算 SHA-256。只有哈希变化才进入更新； ETag/Last-Modified 仅作记录。</li>
+      <li>解析首页 effective date，并与页面日期、文件名日期作一致性提示；首页日期是内容版本权威值。</li>
+      <li>原始 PDF 按 effective date + 哈希归档，禁止原地覆盖。</li>
+    </ol>
+    <h3>8.2 临时英文 AST</h3>
+    <pre><code>ParsedDocument
+  effectiveDate
+  sections[]
+    chapter
+    title
+    groups[]
+      type
+      en
+      sourcePages[]
+      parseWarnings[]</code></pre>
+    <p>临时 AST 不包含中文、注解或稳定 block ID，也不作为人工编辑格式。</p>
+    <h3>8.3 规范化</h3>
+    <ul>
+      <li>删除页眉、页脚、裸页码和目录页重复内容。</li>
+      <li>合并视觉换行；修复跨行断词与软连字符。</li>
+      <li>Unicode NFC；规范化不可见空白，但不随意替换弯引号、商标符号或标点。</li>
+      <li>识别章节标题、列表、表格和附录；跨页段落必须重新连接。</li>
+      <li>保留原始页码范围，供报告定位；不写进人工正文 block。</li>
+      <li>解析后必须检测 1–10 章、A–F 附录、effective date、文本覆盖率和异常空 section。</li>
+    </ul>
+  </section>
+
+  <section id="reconcile">
+    <h2>9. 两层对齐与差异算法</h2>
+    <h3>9.1 原则</h3>
+    <p>旧 YAML 已按注解拆 block，而新 PDF 没有。更新时先按 group 拼回旧官方段落，再进行 group diff；只有 group 对齐后才投影旧 block 边界。</p>
+    <pre><code>旧 YAML: [b001: Sentence A.] [b002: Sentence B.]
+拼接后:  Sentence A. Sentence B.
+新 PDF:  Sentence A. New sentence. Sentence B.</code></pre>
+
+    <h3>9.2 Group 匹配顺序</h3>
+    <ol>
+      <li>在相同 section 和相同 type 内进行有序匹配。</li>
+      <li>规范化文本完全相同：置信度 exact。</li>
+      <li>文本相似且前后邻居一致：置信度 high。</li>
+      <li>一对多或多对一候选：标记 split/merge，不自动提交最终映射。</li>
+      <li>低于阈值或候选并列：LOW_CONFIDENCE，阻止发布。</li>
+    </ol>
+
+    <h3>9.3 Block 边界投影</h3>
+    <p>对旧完整 group 与新 group 做单词+标点 token diff，建立旧位置到新位置的映射：</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>变化</th><th>处理</th><th>ID</th><th>注解</th></tr></thead>
+        <tbody>
+          <tr><td>group 未变</td><td>原样复用 YAML</td><td>全部保留</td><td>全部保留</td></tr>
+          <tr><td>修改完全位于一个 block 内</td><td>更新该 block.en，继承旧 zh</td><td>保留</td><td>继承并列入人工校对报告</td></tr>
+          <tr><td>在两个 block 边界新增完整句子</td><td>创建新 block，放在对应数组位置</td><td>分配新 ID</td><td>无 extras；zh 为空</td></tr>
+          <tr><td>修改跨越 block 边界</td><td>RESEGMENT_REQUIRED</td><td>不自动决定</td><td>不得静默迁移</td></tr>
+          <tr><td>带注解 block 被完全删除</td><td>ORPHANED_EXTRA</td><td>历史保留，不进入候选正文</td><td>必须人工确认处置</td></tr>
+          <tr><td>group 拆分/合并</td><td>GROUP_SPLIT / GROUP_MERGE</td><td>候选映射</td><td>必须人工确认</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>9.4 双层报告</h3>
+    <ul>
+      <li><strong>官方变化报告：</strong>以完整 group 为单位，展示旧/新英文和词级 diff。</li>
+      <li><strong>翻译工作清单：</strong>以 block 为单位，列出 changed/added/deleted/resegment/orphan。</li>
+    </ul>
+    <p>报告是 PR 产物，不写成 block 的 review 字段。人工编辑 YAML 后重新运行校验；当 YAML 拼接结果等于新 AST 且冲突消失，PR 才可合并。</p>
+  </section>
+
+  <section id="images">
+    <h2>10. 图片与 Base64 Data URI</h2>
+    <h3>10.1 YAML 表达</h3>
+    <pre><code>- id: mtr-10.4-g017
+  type: image
+  blocks:
+    - id: mtr-10.4-b028
+      asset: ../../../assets/playoff-bracket-8.png
+      alt:
+        en: "Eight-player playoff bracket"
+        zh: "八人决胜轮对阵图"</code></pre>
+    <h3>10.2 构建契约</h3>
+    <ol>
+      <li>解析并归一化 asset 的绝对路径，确认仍位于仓库 <code>assets/</code> 根内，防止路径穿越。</li>
+      <li>只允许显式白名单 MIME；首版允许 <code>image/png</code>。</li>
+      <li>验证 PNG 魔数，读取原始字节并使用 RFC 4648 标准 Base64。</li>
+      <li>保留 <code>=</code> padding；Base64 字符串不得换行或包含空白。</li>
+      <li>生成双语 Markdown：<code>![alt](data:image/png;base64,...)</code>。</li>
+      <li>英文和中文字段包含同一数据，允许重复体积；不在 YAML 内保存 Base64。</li>
+      <li>单文件 Markdown 同样内联 Data URI。</li>
+    </ol>
+    <pre><code>{
+  "id": "mtr-10.4-b028",
+  "en": "![Eight-player playoff bracket](data:image/png;base64,iVBORw0KGgo...)",
+  "zh": "![八人决胜轮对阵图](data:image/png;base64,iVBORw0KGgo...)"
+}</code></pre>
+    <div class="callout warn"><strong>当前范围：</strong>保证 Data URI 被正确生成、可逆解码且等于源文件；前端 Markdown 渲染器是否允许 <code>data:</code> URL 暂不作为流水线阻塞条件。</div>
+  </section>
+
+  <section id="outputs">
+    <h2>11. 输出模型</h2>
+    <h3>11.1 最终 JSON（建议契约）</h3>
+    <p>沿用 <code>rules.json</code> 的章节和双语字段习惯，引入 <code>contents</code> 表达 MTR 章节中的无编号正文。group 不进入最终产物。</p>
+    <pre><code>{
+  "version": "20260227",
+  "intro": { "contents": [] },
+  "main": [
+    {
+      "chapter": "1.",
+      "en": "Tournament Fundamentals",
+      "zh": "比赛基本要素",
+      "subrules": [
+        {
+          "chapter": "1.1",
+          "en": "Tournament Types",
+          "zh": "比赛种类",
+          "contents": [
+            {
+              "id": "mtr-1.1-b001",
+              "en": "...",
+              "zh": "...",
+              "extras": [
+                { "en": "...", "zh": "..." }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "appendices": []
+}</code></pre>
+    <p>精确的前端字段契约可在实现 builder 前调整，但中间模型必须无损映射到上述结构。<code>extras</code> 缺失表示无注解，不输出空数组。</p>
+
+    <h3>11.2 Markdown</h3>
+    <ul>
+      <li>目录和锚点由生成器统一生成，不人工维护。</li>
+      <li>章节标题按 <code>中文 + 英文</code> 或最终模板输出；模板与内容分离。</li>
+      <li>block 依次输出英文、中文；extras 以引用块输出英文注解和中文注解。</li>
+      <li>图片以 Base64 Data URI 内联；产物不得含相对图片路径。</li>
+      <li>生成器固定 UTF-8、LF、末尾单换行与稳定键序。</li>
+    </ul>
+
+    <h3>11.3 确定性</h3>
+    <p>任何时间戳、运行 ID、绝对路径、随机 UUID 都不得进入 dist。相同 Git 提交连续构建两次，JSON 与 Markdown 的 SHA-256 必须完全一致。</p>
+  </section>
+
+  <section id="workflow">
+    <h2>12. GitHub Actions 工作流</h2>
+    <div class="grid three">
+      <div class="card">
+        <h3>check-mtr.yml</h3>
+        <p>定时 + workflow_dispatch。发现新哈希，归档 PDF、解析、对齐、生成候选 YAML 与报告，并创建/更新单一机器人 PR。</p>
+      </div>
+      <div class="card">
+        <h3>validate.yml</h3>
+        <p>pull_request。执行 Schema、ID、group 重建、资源、冲突、测试和确定性构建；上传预览 artifact。</p>
+      </div>
+      <div class="card">
+        <h3>publish.yml</h3>
+        <p>push main。重新从 YAML 构建，不复用不受信任 PR artifact；运行全套校验后发布到待确定目标。</p>
+      </div>
+    </div>
+    <h3>PR 行为</h3>
+    <ul>
+      <li>同一官方版本只维护一个机器人分支和 PR，重复运行幂等更新。</li>
+      <li>无变化时零提交、零 PR。</li>
+      <li>存在冲突时仍可创建用于人工处理的 PR，但 Required Check 保持失败。</li>
+      <li>PR 摘要列出来源 URL、effective date、PDF SHA-256、group 变化数、block 工作量和冲突。</li>
+      <li>人工直接编辑该 PR 中的 YAML；每次提交重新生成报告和预览。</li>
+    </ul>
+    <h3>安全与配置</h3>
+    <ul>
+      <li>Actions 固定到提交 SHA；最小权限。PR 工作流默认只读，更新工作流仅需 contents/pull-requests write。</li>
+      <li>下载 URL 允许域名白名单、体积上限、超时和有限重试。</li>
+      <li>PDF 作为不受信任输入；解析运行不执行嵌入对象或脚本。</li>
+      <li>无需外部机密；GitHub 自带 token 足够。发布目标若需 token，使用 Environment Secret 和人工保护。</li>
+      <li>使用 workflow concurrency，防止两个定时更新互相覆盖。</li>
+    </ul>
+  </section>
+
+  <section id="repo">
+    <h2>13. 仓库结构与技术选型</h2>
+    <pre><code>.github/
+  workflows/
+    check-mtr.yml
+    validate.yml
+    publish.yml
+assets/
+  diagrams/
+docs/
+  design.md                 # 可选 Markdown 摘要
+schema/
+  mtr-source.schema.json
+  mtr-output.schema.json
+sources/
+  index.json
+  pdf/
+src/
+  mtr/
+    manifest.yaml
+    introduction.yaml
+    chapter-01.yaml ... chapter-10.yaml
+    appendix-a.yaml ... appendix-f.yaml
+scripts/
+  discover.py
+  fetch.py
+  parse.py
+  reconcile.py
+  report.py
+  build.py
+  validate.py
+reports/
+dist/
+  mtr.json
+  mtr.md
+tests/
+  fixtures/
+  golden/
+  test_*.py
+pyproject.toml</code></pre>
+    <h3>推荐技术栈</h3>
+    <ul>
+      <li>Python 3.12：统一处理网络、PDF、YAML、diff 和构建，减少跨语言边界。</li>
+      <li>PyMuPDF：主文本抽取与页级定位；必要时 pdfplumber 专门处理表格，避免一开始双解析器全量复杂化。</li>
+      <li>ruamel.yaml：保持可读 YAML 和稳定输出；jsonschema 校验。</li>
+      <li>标准库 hashlib/base64/difflib；只有实际质量不足时再引入 rapidfuzz。</li>
+      <li>pytest + snapshot/golden fixtures；ruff 做格式和静态检查。</li>
+    </ul>
+    <p class="muted">当前目录不是 Git 仓库，因此上述结构应在正式仓库建立后落地。设计 HTML 暂存于 outputs。</p>
+  </section>
+
+  <section id="phases">
+    <h2>14. 实施阶段与依赖关系</h2>
+    <div class="phases">
+      <div class="phase"><div class="number">Phase 0</div><div><strong>仓库与基线</strong><br>初始化/迁入 GitHub 仓库，保存旧文件，补齐图片原件，配置 Python 与基本 CI。</div><div class="gate">门禁：干净基线可构建</div></div>
+      <div class="phase"><div class="number">Phase 1</div><div><strong>Schema + 纵向样例</strong><br>建立 YAML Schema；人工录入 1.1、1.6、10.4、附录 B/C；实现 YAML→JSON/MD 与 Base64。</div><div class="gate">门禁：五类复杂内容无损</div></div>
+      <div class="phase"><div class="number">Phase 2</div><div><strong>发现与归档</strong><br>实现入口页发现、PDF 获取、哈希、有效日期和 sources index。</div><div class="gate">门禁：重复运行幂等</div></div>
+      <div class="phase"><div class="number">Phase 3</div><div><strong>PDF Parser</strong><br>实现章节、段落、列表、表格规范化和 golden fixtures。</div><div class="gate">门禁：结构覆盖与文本覆盖达标</div></div>
+      <div class="phase"><div class="number">Phase 4</div><div><strong>Reconciler + Diff</strong><br>实现 group 匹配、block 边界投影、冲突分类和双层报告。</div><div class="gate">门禁：所有边界用例通过</div></div>
+      <div class="phase"><div class="number">Phase 5</div><div><strong>自动化 PR</strong><br>接入定时 workflow、幂等 PR、required checks 和预览 artifact。</div><div class="gate">门禁：模拟新版本端到端</div></div>
+      <div class="phase"><div class="number">Phase 6</div><div><strong>全文首次迁移</strong><br>维护者按章节手工迁移旧译本；逐章验证 group 重建、注解与资源。</div><div class="gate">门禁：全文 Schema/内容检查通过</div></div>
+      <div class="phase"><div class="number">Phase 7</div><div><strong>发布</strong><br>确定发布目标，配置 main 合并后构建、发布、烟雾测试和回滚。</div><div class="gate">门禁：可重建、可回滚</div></div>
+    </div>
+    <p><strong>可并行：</strong>Phase 2 的来源发现与 Phase 1 的内容样例可并行；Parser 的表格专项与普通段落解析可并行。<strong>必须顺序：</strong>Reconciler 依赖 Schema 和 Parser；全文迁移应在纵向样例格式冻结后开始；发布依赖所有验证门禁。</p>
+  </section>
+
+  <section id="qa">
+    <h2>15. QA / 验证矩阵</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>层级</th><th>用例</th><th>预期证据</th><th>阻塞发布</th></tr></thead>
+        <tbody>
+          <tr><td>Schema</td><td>缺字段、未知字段、extras &gt; 1、非法 type</td><td>明确路径和错误消息</td><td>是</td></tr>
+          <tr><td>ID</td><td>重复 ID、格式错误、删除后复用</td><td>ID 审计报告</td><td>是</td></tr>
+          <tr><td>Group</td><td>拼接 block 后与新官方 AST 不同</td><td>首个不一致 token 与上下文</td><td>是</td></tr>
+          <tr><td>PDF</td><td>跨页段落、页眉页脚、断词、列表、表格</td><td>golden AST 快照</td><td>是</td></tr>
+          <tr><td>Diff</td><td>无变化、block 内修改、边界新增、跨边界修改</td><td>稳定映射和预期冲突码</td><td>是</td></tr>
+          <tr><td>Split/Merge</td><td>group 一拆二、二合一</td><td>候选映射，不静默决策</td><td>是</td></tr>
+          <tr><td>注解</td><td>正文删除但 extras 存在</td><td>ORPHANED_EXTRA 报告</td><td>是</td></tr>
+          <tr><td>图片</td><td>Base64 解码</td><td>解码字节 SHA-256 等于源 PNG</td><td>是</td></tr>
+          <tr><td>Markdown</td><td>相对图片、目录、引用块、表格</td><td>无相对图片；结构快照</td><td>是</td></tr>
+          <tr><td>JSON</td><td>输出 Schema、extras、group 展平</td><td>mtr-output Schema 通过</td><td>是</td></tr>
+          <tr><td>确定性</td><td>同提交连续构建两次</td><td>两产物 SHA-256 相同</td><td>是</td></tr>
+          <tr><td>端到端</td><td>fixture 旧 PDF→新 PDF→PR 候选→构建</td><td>报告、候选 YAML、dist 快照</td><td>是</td></tr>
+          <tr><td>前端</td><td>Data URI 是否由实际 renderer 显示</td><td>后续集成测试截图</td><td>当前否；上线前是</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Definition of Done</h3>
+    <ul class="checklist">
+      <li>相同 PDF 哈希不会产生提交或 PR。</li>
+      <li>新 PDF 可归档，并带 effective date、URL 和 SHA-256。</li>
+      <li>Parser 能识别 1–10 章与 A–F 附录，异常时硬失败。</li>
+      <li>未变化 group 原样继承全部 block、译文与注解。</li>
+      <li>局部变化保留稳定 ID；边界冲突不会被静默处理。</li>
+      <li>所有图片在最终 JSON/Markdown 中均为可逆 Base64 Data URI。</li>
+      <li>最终 JSON 不包含 group；extras 每 block 至多一个。</li>
+      <li>main 上任何一次构建均可由 YAML 和 assets 重现。</li>
+      <li>人工合并 PR 后才触发正式发布。</li>
+    </ul>
+  </section>
+
+  <section id="risks">
+    <h2>16. 风险与缓解</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>风险</th><th>影响</th><th>缓解</th></tr></thead>
+        <tbody>
+          <tr><td>官方页面结构变化</td><td>无法发现 PDF 或误抓其他文档</td><td>精确标题、域名白名单、多结果失败、workflow_dispatch 与告警。</td></tr>
+          <tr><td>PDF 抽取噪声</td><td>虚假 diff、段落错配</td><td>规范化、结构不变量、golden fixtures、置信度阈值、原始 PDF 永久归档。</td></tr>
+          <tr><td>模糊匹配误继承</td><td>中文或注解挂到错误正文</td><td>section 内有序匹配、邻居约束、跨边界冲突硬失败。</td></tr>
+          <tr><td>YAML 手工错误</td><td>内容丢失或格式破坏</td><td>严格 Schema、未知字段拒绝、PR checks、按章节拆文件。</td></tr>
+          <tr><td>冻结注解与新规则不一致</td><td>发布的注解语义过时</td><td>对应正文变化时始终列入工作清单；当前不自动修改，但人工可决定是否保留。</td></tr>
+          <tr><td>Base64 放大产物</td><td>JSON 体积增加、diff 不可读</td><td>Base64 只存在 dist；YAML 保留源 PNG；图片少且稳定。</td></tr>
+          <tr><td>渲染器过滤 Data URI</td><td>前端图片不显示</td><td>当前设计不阻塞；真正接入前增加 renderer 集成测试，必要时调整前端策略。</td></tr>
+          <tr><td>机器人 PR 权限过大</td><td>供应链风险</td><td>固定 Action SHA、最小权限、受保护 main、发布重新构建。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="migration">
+    <h2>17. 首次迁移、兼容与回滚</h2>
+    <h3>首次迁移</h3>
+    <ol>
+      <li>冻结 YAML Schema v1，并完成五个代表性样例：1.1、1.6、10.4、附录 B、附录 C。</li>
+      <li>从官方对应版本 PDF 建立旧英文 group 基线；不能只信任旧 Markdown 的换行。</li>
+      <li>维护者逐章把旧译本复制到 block，并依据现有注解边界拆分。</li>
+      <li>每章完成后运行：Schema、ID、group 英文重建、资源和生成快照。</li>
+      <li>附录缺英文、旧表格格式异常和缺失图片作为显式迁移问题，不自动猜测。</li>
+      <li>全文迁移完成前，旧 AMTR_2025.md 保持只读参考，不删除。</li>
+    </ol>
+    <h3>Schema 演进</h3>
+    <ul>
+      <li><code>schemaVersion</code> 只在中间格式发生不兼容变化时增加。</li>
+      <li>每次升级提供显式迁移脚本和前后 golden；不在读取时悄悄兼容旧形态。</li>
+      <li>最终 JSON 版本与 YAML Schema 版本分离，避免文档日期和格式版本混淆。</li>
+    </ul>
+    <h3>回滚</h3>
+    <ul>
+      <li>内容回滚：revert 产生问题的合并提交，重新从旧 YAML 构建。</li>
+      <li>发布回滚：重新发布上一个已知良好 dist；不得手工修补线上 JSON。</li>
+      <li>Parser 回滚：旧 PDF 和 sources index 保留，可用旧实现重放。</li>
+      <li>机器人异常：暂停 schedule，保留 workflow_dispatch 与人工更新路径。</li>
+    </ul>
+  </section>
+
+  <section id="open">
+    <h2>18. 开放项与实施交接</h2>
+    <h3>唯一需要在发布阶段前决定的事项</h3>
+    <div class="card">
+      <p><span class="status warn">可延期</span> <strong>正式发布目标</strong></p>
+      <p>尚未指定最终产物发布到 GitHub Release、专用分支、外部网站仓库还是对象存储。核心设计以 <code>dist/mtr.json</code> 和 <code>dist/mtr.md</code> 为稳定交付边界；Phase 7 前选择发布适配器即可，不影响 YAML、diff 或 builder。</p>
+    </div>
+    <h3>实施交接摘要</h3>
+    <ol>
+      <li>先建立正式 Git 仓库环境，不要在当前非仓库目录直接搭 CI。</li>
+      <li>第一张 PR 只应包含 Schema、样例、最小 builder 与测试，不包含 PDF parser。</li>
+      <li>用五类真实内容证明 YAML 能无损生成单文件 JSON/Markdown。</li>
+      <li>格式冻结后再实现 discover/fetch/parse；Parser 完成后再实现 reconciler。</li>
+      <li>任何阶段都以“不静默错配、不静默丢注解、产物可重建”为最高门禁。</li>
+    </ol>
+    <div class="callout"><strong>推荐的下一项实施任务：</strong>创建 <code>schema/mtr-source.schema.json</code>、五个代表性 YAML fixture，以及只支持这些 fixture 的最小 YAML→JSON/Markdown builder；通过验收后再扩大覆盖面。</div>
+  </section>
+
+  <footer>
+    <p>本文件是计划与架构设计，不包含实现变更。设计基于 2026-09-22 工作区状态和已确认的用户决策。</p>
+  </footer>
+</main>
+</body>
+</html>

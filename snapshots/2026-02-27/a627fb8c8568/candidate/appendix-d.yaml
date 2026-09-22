@@ -1,0 +1,131 @@
+chapter:
+  id: mtr-appendix-d
+  chapter: Appendix D
+  en: Recommended Play Booster Mix for Limited Tournaments
+  zh: 限制赛中推荐的补充包构成
+  groups:
+  - id: mtr-appendix-d-g001
+    type: paragraph
+    blocks:
+    - id: mtr-appendix-d-b001
+      en: |-
+        Note: The following play boosters mixes are required for Premier Play tournaments.
+      zh: 注：重要赛事比赛必须使用下列的补充包构成。
+  - id: mtr-appendix-d-g002
+    type: paragraph
+    blocks:
+    - id: mtr-appendix-d-b002
+      en: |-
+        For Secrets of Strixhaven, the recommended play booster mix for Limited tournaments is (effective April 17, 2026)
+      zh: ''
+  - id: mtr-appendix-d-g003
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b003
+      en: '* Individual Sealed Deck – 6 Secrets of Strixhaven (per player)'
+      zh: ''
+  - id: mtr-appendix-d-g004
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b004
+      en: |-
+        * Individual Booster Draft or Team Rochester Draft – 3 Secrets of Strixhaven (per player)
+      zh: ''
+  - id: mtr-appendix-d-g005
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b005
+      en: '* Three-Person Team Sealed – 12 Secrets of Strixhaven (per team)'
+      zh: ''
+  - id: mtr-appendix-d-g006
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b006
+      en: '* Two-Headed Giant Sealed Deck – 8 Secrets of Strixhaven (per team)'
+      zh: ''
+  - id: mtr-appendix-d-g007
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b007
+      en: '* Two-Headed Giant Booster Draft – 6 Secrets of Strixhaven (per team)'
+      zh: ''
+  - id: mtr-appendix-d-g008
+    type: paragraph
+    blocks:
+    - id: mtr-appendix-d-b008
+      en: |-
+        For Magic: The Gathering | Teenage Mutant Ninja Turtles, the recommended play booster mix for Limited tournaments is (effective, February 27, 2026 through April 16, 2026):
+      zh: ''
+  - id: mtr-appendix-d-g009
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b009
+      en: |-
+        * Individual Sealed Deck – 6 Magic: The Gathering | Teenage Mutant Ninja Turtles (per player)
+      zh: ''
+  - id: mtr-appendix-d-g010
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b010
+      en: |-
+        * Individual Booster Draft or Team Rochester Draft – 3 Magic: The Gathering | Teenage Mutant Ninja Turtles (per player)
+      zh: ''
+  - id: mtr-appendix-d-g011
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b011
+      en: |-
+        * Three-Person Team Sealed – 12 Magic: The Gathering | Teenage Mutant Ninja Turtles (per team)
+      zh: ''
+  - id: mtr-appendix-d-g012
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b012
+      en: |-
+        * Two-Headed Giant Sealed Deck – 8 Magic: The Gathering | Teenage Mutant Ninja Turtles (per team)
+      zh: ''
+  - id: mtr-appendix-d-g013
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b013
+      en: |-
+        * Two-Headed Giant Booster Draft – 6 Magic: The Gathering | Teenage Mutant Ninja Turtles (per team)
+      zh: ''
+  - id: mtr-appendix-d-g014
+    type: paragraph
+    blocks:
+    - id: mtr-appendix-d-b014
+      en: |-
+        For Lorwyn Eclipsed, the recommended play booster mix for Limited tournaments is (effective January 16, 2026 through April 16, 2026):
+      zh: ''
+  - id: mtr-appendix-d-g015
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b015
+      en: '* Individual Sealed Deck – 6 Lorwyn Eclipsed (per player)'
+      zh: ''
+  - id: mtr-appendix-d-g016
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b016
+      en: |-
+        * Individual Booster Draft or Team Rochester Draft – 3 Lorwyn Eclipsed (per player)
+      zh: ''
+  - id: mtr-appendix-d-g017
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b017
+      en: '* Three-Person Team Sealed – 12 Lorwyn Eclipsed (per team)'
+      zh: ''
+  - id: mtr-appendix-d-g018
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b018
+      en: '* Two-Headed Giant Sealed Deck – 8 Lorwyn Eclipsed (per team)'
+      zh: ''
+  - id: mtr-appendix-d-g019
+    type: list
+    blocks:
+    - id: mtr-appendix-d-b019
+      en: '* Two-Headed Giant Booster Draft – 6 Lorwyn Eclipsed (per team)'
+      zh: ''

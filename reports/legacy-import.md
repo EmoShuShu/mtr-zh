@@ -1,0 +1,243 @@
+# Legacy MTR import audit
+
+- Source SHA-256: `87ff603d9743a3177422dabc5c672c787acc8b3703e71af0e307679c712b33ce`
+- Physical lines: 4467
+- Structural blocks: 1965
+- Detected sections: 104
+- Issues: 0 errors, 48 warnings, 130 info
+
+## Official PDF alignment
+
+- Official sections: 94
+- Official structural units: 941
+- Exact matches: 659
+- Matches requiring review: 65
+- Low-confidence matches: 51
+- Official units without a legacy partner: 60
+- Legacy blocks without an official partner: 0
+
+### Sections requiring review
+
+- `1.4`: review=3, low=0, missing=0, legacy-only=0
+- `1.5`: review=1, low=0, missing=0, legacy-only=0
+- `1.6`: review=2, low=2, missing=0, legacy-only=0
+- `1.7`: review=0, low=2, missing=0, legacy-only=0
+- `1.9`: review=2, low=2, missing=0, legacy-only=0
+- `1.10`: review=2, low=4, missing=0, legacy-only=0
+- `2.1`: review=1, low=0, missing=0, legacy-only=0
+- `2.4`: review=1, low=0, missing=0, legacy-only=0
+- `2.7`: review=1, low=0, missing=0, legacy-only=0
+- `2.9`: review=1, low=0, missing=0, legacy-only=0
+- `2.10`: review=1, low=0, missing=0, legacy-only=0
+- `2.13`: review=1, low=0, missing=0, legacy-only=0
+- `3.1`: review=1, low=0, missing=0, legacy-only=0
+- `3.3`: review=1, low=0, missing=0, legacy-only=0
+- `3.4`: review=1, low=1, missing=1, legacy-only=0
+- `3.7`: review=1, low=2, missing=0, legacy-only=0
+- `3.10`: review=1, low=0, missing=0, legacy-only=0
+- `4.1`: review=4, low=7, missing=1, legacy-only=0
+- `4.2`: review=6, low=1, missing=0, legacy-only=0
+- `4.3`: review=2, low=0, missing=0, legacy-only=0
+- `4.8`: review=1, low=0, missing=0, legacy-only=0
+- `5.4`: review=0, low=4, missing=0, legacy-only=0
+- `6.3`: review=0, low=2, missing=4, legacy-only=0
+- `6.4`: review=3, low=3, missing=4, legacy-only=0
+- `6.5`: review=4, low=2, missing=1, legacy-only=0
+- `6.6`: review=0, low=7, missing=31, legacy-only=0
+- `6.7`: review=3, low=2, missing=4, legacy-only=0
+- `7.2`: review=7, low=3, missing=5, legacy-only=0
+- `7.5`: review=1, low=4, missing=4, legacy-only=0
+- `7.6`: review=1, low=0, missing=0, legacy-only=0
+- `7.7`: review=1, low=0, missing=1, legacy-only=0
+- `8.3`: review=1, low=0, missing=0, legacy-only=0
+- `8.5`: review=1, low=0, missing=1, legacy-only=0
+- `9.7`: review=2, low=0, missing=0, legacy-only=0
+- `10.1`: review=1, low=1, missing=0, legacy-only=0
+- `10.2`: review=2, low=0, missing=0, legacy-only=0
+- `10.3`: review=1, low=0, missing=0, legacy-only=0
+- `10.4`: review=3, low=2, missing=3, legacy-only=0
+
+## Legacy parsing issues
+
+- **INFO `unpaired-chinese`** L139: Chinese content has no adjacent English partner in introduction.
+- **INFO `unpaired-chinese`** L141: Chinese content has no adjacent English partner in introduction.
+- **INFO `unpaired-chinese`** L143: Chinese content has no adjacent English partner in introduction.
+- **INFO `unpaired-chinese`** L145: Chinese content has no adjacent English partner in introduction.
+- **INFO `unpaired-chinese`** L147: Chinese content has no adjacent English partner in introduction.
+- **INFO `unpaired-chinese`** L149: Chinese content has no adjacent English partner in introduction.
+- **INFO `unpaired-chinese`** L151: Chinese content has no adjacent English partner in introduction.
+- **WARNING `unpaired-chinese`** L537: Chinese content has no adjacent English partner in 1.9.
+- **WARNING `unpaired-chinese`** L707: Chinese content has no adjacent English partner in 1.11.
+- **WARNING `annotation-language-order`** L1255: English annotation paragraph follows Chinese annotation text.
+- **WARNING `unpaired-chinese`** L2182: Chinese content has no adjacent English partner in 4.1.
+- **WARNING `unpaired-english`** L3312: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3313: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3314: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3320: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3322: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3326: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3327: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3335: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3336: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3346: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3347: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3348: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3349: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3350: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3358: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3359: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3360: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3368: English content has no adjacent Chinese partner in 6.5.
+- **WARNING `unpaired-english`** L3399: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3402: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3403: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3405: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3407: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3408: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-chinese`** L3410: Chinese content has no adjacent English partner in 6.6.
+- **WARNING `unpaired-english`** L3413: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3414: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3423: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3426: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3431: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3432: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3433: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3434: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3435: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3436: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3444: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3450: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3451: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3452: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-english`** L3460: English content has no adjacent Chinese partner in 6.6.
+- **WARNING `unpaired-chinese`** L3551: Chinese content has no adjacent English partner in 6.7.
+- **WARNING `unpaired-chinese`** L3556: Chinese content has no adjacent English partner in 6.7.
+- **WARNING `unpaired-english`** L3593: English content has no adjacent Chinese partner in 7.2.
+- **WARNING `unpaired-chinese`** L3872-L3878: Chinese content has no adjacent English partner in 8.5.
+- **INFO `unpaired-chinese`** L4200: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4202: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4203: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4204: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4205: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4206: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4207: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4208: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4210: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4211: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4212: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4213: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4214: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4215: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4217: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4218: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4219: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4221: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4222: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4223: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4224: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4225: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4226: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4227: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4228: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4230: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4231: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4232: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4233: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4234: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4235: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4236: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4237-L4238: Chinese content has no adjacent English partner in appendix-a.
+- **INFO `unpaired-chinese`** L4241: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4243: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4245: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4246: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4247: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4249: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4251: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4252: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4253: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4254: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4255: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4256: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4258: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4260: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4262: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4264: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4266: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4268-L4284: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4286: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4288: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4290: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4292: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4294: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4296-L4306: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4308: Chinese content has no adjacent English partner in appendix-b.
+- **INFO `unpaired-chinese`** L4312: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4314: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4316: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4318: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4320: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4322: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4324: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4326: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4328: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4330: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4332: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4334: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4336: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4338-L4342: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4344: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4346: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4348: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4350: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4352-L4355: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4357: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4359: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4361: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4363: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4367: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4371: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4375: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4377: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4381: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4385: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4387: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4389: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4391: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4393: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4395: Chinese content has no adjacent English partner in appendix-c.
+- **INFO `unpaired-chinese`** L4399: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4401: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4402: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4403: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4404: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4405: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4406: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4408: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4409: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4410: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4411: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4412: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4413: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4415: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4416: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4417: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4418: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4419: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4420: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4422: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4423: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4424: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4425: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4426: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4427: Chinese content has no adjacent English partner in appendix-d.
+- **INFO `unpaired-chinese`** L4431: Chinese content has no adjacent English partner in appendix-e.
+- **INFO `unpaired-chinese`** L4433-L4445: Chinese content has no adjacent English partner in appendix-e.
+- **INFO `unpaired-chinese`** L4447: Chinese content has no adjacent English partner in appendix-e.
+- **INFO `unpaired-chinese`** L4449: Chinese content has no adjacent English partner in appendix-e.
+- **INFO `unpaired-chinese`** L4453: Chinese content has no adjacent English partner in appendix-f.
+- **INFO `unpaired-chinese`** L4455-L4467: Chinese content has no adjacent English partner in appendix-f.
+
+## Ignored nonblank lines
+
+L1, L3, L5, L7, L9, L11, L13, L15, L17, L19, L21, L23, L25, L27, L29, L30, L31, L32, L33, L34, L35, L36, L37, L38, L39, L40, L41, L42, L43, L44, L45, L46, L47, L48, L49, L50, L51, L52, L53, L54, L55, L56, L57, L58, L59, L60, L61, L62, L63, L64, L65, L66, L67, L68, L69, L70, L71, L72, L73, L74, L75, L76, L77, L78, L79, L80, L81, L82, L83, L84, L85, L86, L87, L88, L89, L90, L91, L92, L93, L94, L95, L96, L97, L98, L99, L100, L101, L102, L103, L104, L105, L106, L107, L108, L109, L110, L111, L112, L113, L114, L115, L116, L117, L118, L119, L120, L121, L122, L123, L124, L125, L126, L127, L128, L129, L130, L131, L132, L133, L134, L135

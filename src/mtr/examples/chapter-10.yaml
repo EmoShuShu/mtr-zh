@@ -1,0 +1,83 @@
+chapter:
+  id: mtr-10
+  chapter: "10."
+  en: "Sanctioning Rules"
+  zh: "认证规则"
+  sections:
+    - id: mtr-10.4
+      chapter: "10.4"
+      en: "Pairing Algorithm"
+      zh: "配对算法"
+      groups:
+        - id: mtr-10.4-g001
+          type: paragraph
+          blocks:
+            - id: mtr-10.4-b001
+              en: |-
+                For an 8-player playoff, the 1st place player plays the 8th place player, the 2nd place player plays the 7th place player, the 3rd place player plays the 6th place player, and the 4th place player plays the 5th place player.
+              zh: |-
+                如决胜轮有8位牌手参加，则第1名牌手对上第8名，第2名对上第7名，第3名对上第6名，第4名对上第5名。
+
+        - id: mtr-10.4-g002
+          type: image
+          blocks:
+            - id: mtr-10.4-b002
+              asset: assets/diagrams/playoff-bracket-8-seeding.png
+              alt:
+                en: "Eight-player playoff bracket by final Swiss standing"
+                zh: "按瑞士轮最终排名排列的八人决胜轮对阵图"
+
+        - id: mtr-10.4-g003
+          type: paragraph
+          blocks:
+            - id: mtr-10.4-b003
+              en: |-
+                For a 4-player playoff, the 1st place player plays the 4th place player, and the 2nd place player plays the 3rd place player.
+              zh: |-
+                对于有4位牌手参加的决胜轮而言，第1名牌手与第4名牌手对阵，第2名牌手与第3名牌手对阵。
+
+        - id: mtr-10.4-g004
+          type: image
+          blocks:
+            - id: mtr-10.4-b004
+              asset: assets/diagrams/playoff-bracket-4.png
+              alt:
+                en: "Four-player playoff bracket"
+                zh: "四人决胜轮对阵图"
+
+        - id: mtr-10.4-g005
+          type: paragraph
+          blocks:
+            - id: mtr-10.4-b005
+              en: |-
+                Use a random method to seat players around the draft table and conduct the draft.
+              zh: |-
+                使用随机方式将牌手安排在轮抽桌边依次就坐，进行轮抽。
+
+        - id: mtr-10.4-g006
+          type: image
+          blocks:
+            - id: mtr-10.4-b006
+              asset: assets/diagrams/draft-pod-seating.png
+              alt:
+                en: "Eight seats arranged around a Booster Draft table"
+                zh: "补充包轮抽桌周围的八个座位"
+
+        - id: mtr-10.4-g007
+          type: paragraph
+          blocks:
+            - id: mtr-10.4-b007
+              en: |-
+                After the draft, seat 1 plays seat 5, seat 2 plays seat 6, seat 3 plays seat 7, and seat 4 plays seat 8.
+              zh: |-
+                轮抽结束后，座号1对阵座号5，座号2对阵座号6，座号3对阵座号7，座号4对阵座号8。
+
+        - id: mtr-10.4-g008
+          type: image
+          blocks:
+            - id: mtr-10.4-b008
+              asset: assets/diagrams/playoff-bracket-8-seating.png
+              alt:
+                en: "Eight-player playoff bracket by Booster Draft seat"
+                zh: "按补充包轮抽座位排列的八人决胜轮对阵图"
+

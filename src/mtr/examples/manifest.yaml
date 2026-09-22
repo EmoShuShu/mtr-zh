@@ -1,0 +1,15 @@
+schemaVersion: 1
+document:
+  id: mtr
+  title:
+    en: "Magic: The Gathering Tournament Rules"
+    zh: "万智牌比赛规则"
+  version: "20250726"
+  effectiveDate: "2025-07-26"
+
+files:
+  - chapter-01.yaml
+  - chapter-10.yaml
+  - appendix-b.yaml
+  - appendix-c.yaml
+

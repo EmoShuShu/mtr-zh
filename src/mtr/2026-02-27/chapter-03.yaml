@@ -1,0 +1,1050 @@
+chapter:
+  id: mtr-3
+  chapter: '3.'
+  en: Tournament Rules
+  zh: 比赛规则
+  sections:
+  - id: mtr-3.1
+    chapter: '3.1'
+    en: Tiebreakers
+    zh: 同分处理
+    groups:
+    - id: mtr-3.1-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.1-b001
+        en: |-
+          The following tiebreakers are used to determine how a player ranks in a tournament:
+        zh: 在比赛中，依次采用下述的同分处理来决定牌手在本次比赛中的名次情况：
+    - id: mtr-3.1-g002
+      type: markdown
+      blocks:
+      - id: mtr-3.1-b002
+        en: 1. Match points
+        zh: 1. 对局积分
+    - id: mtr-3.1-g003
+      type: markdown
+      blocks:
+      - id: mtr-3.1-b003
+        en: 2. Opponents’ match-win percentage
+        zh: 2. 对手局胜率
+    - id: mtr-3.1-g004
+      type: markdown
+      blocks:
+      - id: mtr-3.1-b004
+        en: 3. Game-win percentage
+        zh: 3. 盘胜率
+    - id: mtr-3.1-g005
+      type: markdown
+      blocks:
+      - id: mtr-3.1-b005
+        en: 4. Opponents’ game-win percentage
+        zh: 4. 对手盘胜率
+    - id: mtr-3.1-g006
+      type: paragraph
+      blocks:
+      - id: mtr-3.1-b006
+        en: |-
+          Definitions of these tiebreakers can be found in Appendix C. Not all of these tiebreakers may be used in formats with single-game matches.
+        zh: 上述同分处理之定义可于附录C中找到。若某种赛制在每局对局中只有一盘游戏，则并非上述所有的同分处理都会在该类比赛中使用。
+        extras:
+        - en: Appendix C is awesome. People should go read it now. We will wait.
+          zh: 附录C很重要，建议读者现在可以转去阅读。
+  - id: mtr-3.2
+    chapter: '3.2'
+    en: Format Categories
+    zh: 赛制种类
+    groups:
+    - id: mtr-3.2-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.2-b001
+        en: |-
+          Wizards of the Coast sanctions the following formats as individual, three-person team, or Two-Headed Giant tournaments:
+        zh: 威世智公司认证下列赛制，受认证的比赛可采用单人赛、三人团队赛，或是双头巨人赛等形式：
+    - id: mtr-3.2-g002
+      type: paragraph
+      blocks:
+      - id: mtr-3.2-b002
+        en: Constructed Formats
+        zh: 构组赛制
+    - id: mtr-3.2-g003
+      type: list
+      blocks:
+      - id: mtr-3.2-b003
+        en: '* Standard'
+        zh: '* 标准赛'
+    - id: mtr-3.2-g004
+      type: list
+      blocks:
+      - id: mtr-3.2-b004
+        en: '* Pioneer'
+        zh: '* 先驱赛'
+    - id: mtr-3.2-g005
+      type: list
+      blocks:
+      - id: mtr-3.2-b005
+        en: '* Modern'
+        zh: '* 近代赛'
+    - id: mtr-3.2-g006
+      type: paragraph
+      blocks:
+      - id: mtr-3.2-b006
+        en: Eternal Constructed Formats
+        zh: 经典构组赛制
+    - id: mtr-3.2-g007
+      type: list
+      blocks:
+      - id: mtr-3.2-b007
+        en: '* Vintage'
+        zh: '* 特选赛'
+    - id: mtr-3.2-g008
+      type: list
+      blocks:
+      - id: mtr-3.2-b008
+        en: '* Legacy'
+        zh: '* 薪传赛'
+        extras:
+        - en: |-
+            For complete details on each of the Constructed formats, including their banned and restricted lists, check out MTR Sections 6.3–6.6
+          zh: |-
+            欲知更多有关构组赛制的详细细节，包括禁限牌列表，请查看[MTR 6.3～6.6](#目录)。（译注：已与原作者沟通过，应为MTR 6.3-6.7。此处为笔误。）
+    - id: mtr-3.2-g009
+      type: paragraph
+      blocks:
+      - id: mtr-3.2-b009
+        en: Limited Formats
+        zh: 限制赛制
+    - id: mtr-3.2-g010
+      type: list
+      blocks:
+      - id: mtr-3.2-b010
+        en: '* Sealed Deck'
+        zh: '* 现开赛'
+        extras:
+        - en: |-
+            MTR Section 7 covers Limited Tournament Rules, and Sealed Deck is explained more there.
+          zh: '[MTR章节7](#mtr-7-限制赛制规则)中详细描述了限制赛赛制规则，其中包括现开赛的更多详细细节。'
+    - id: mtr-3.2-g011
+      type: list
+      blocks:
+      - id: mtr-3.2-b011
+        en: '* Booster Draft (individual and Two-Headed Giant only)'
+        zh: '* 补充包轮抽（仅限个人赛和双头巨人赛）'
+        extras:
+        - en: |-
+            MTR Sections 7.6 and 7.7 cover Draft Pod Assembly and Booster Draft Procedures, respectively. Additionally, section 9.7 covers Two-Headed Giant Booster Draft procedures.
+          zh: |-
+            MTR的[7.6](#mtr-76-draft-pod-assembly-轮抽组的分配)与[7.7](#mtr-77-booster-draft-procedures-补充包轮抽程序)分别描述了轮抽组分配以及补充包轮抽流程。此外章节9.7描述了双头巨人补充包轮抽流程。
+    - id: mtr-3.2-g012
+      type: list
+      blocks:
+      - id: mtr-3.2-b012
+        en: '* Rochester Draft (three-person team only)'
+        zh: '* 罗彻斯特轮抽（仅限三人团队赛）'
+        extras:
+        - en: MTR Section 8.5 covers the details on this format.
+          zh: '[MTR8.5](#mtr-85-team-rochester-draft-tournaments-团队罗彻斯特轮抽赛)涵盖了本赛制的细节。'
+  - id: mtr-3.3
+    chapter: '3.3'
+    en: Authorized Cards
+    zh: 认可牌张
+    groups:
+    - id: mtr-3.3-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.3-b001
+        en: |-
+          Players may use any Authorized Magic Game Cards from Magic: The Gathering expansions, core sets, special sets, supplements, and promotional printings. Authorized Game Cards must be regulation-sized, genuine Magic cards publicly released by Wizards of the Coast. Cards that are not Authorized Game Cards are prohibited in all sanctioned events.
+        zh: |-
+          牌手可使用出自万智牌扩充系列、核心系列、特殊系列、补充版及推广印次中的「认可游戏牌张」。认可牌张必须是规定大小的，由威士智公开发行的正版万智牌张。不是认可游戏牌张的牌在所有认证赛事中均不可使用。
+        extras:
+        - en: |-
+            This section of the MTR defines authorized cards.  It used to spell out what cards were allowed, however Wizards has printed so many ‘whacky’ things in the last several years, that it has become easier to define what is not an Authorized Card, than what is.  Essentially we start with the universe of ‘everything printed by Wizards’, and then define groups of “no, not these”.
+          zh: |-
+            MTR的本章节旨在界定“认可牌张”。在过去，它会明确列出哪些牌张是允许使用的。然而，由于威世智在近几年印刷了太多千奇百怪的东西，以至于采用反向定义——即明确哪些牌张不被授权——反而比正面列举来得更容易。我们的逻辑起点基本上涵盖了“所有由威世智印刷的产品”这个全集，然后再从中划定出几类“不行，这些不能用”的牌张。
+    - id: mtr-3.3-g002
+      type: paragraph
+      blocks:
+      - id: mtr-3.3-b002
+        en: |-
+          Cards that, unaltered, feature gold borders on their front or back, and cards from the “Heroes of the Realm” and Theros block “Challenge Deck” series (usually denoted by a different card back), are not Authorized Game Cards.
+        zh: 正面或背面边框为金色、员工卡或是塞洛斯系列的挑战套组（通常使用不同的卡背）中的牌张不是认可游戏牌张。
+        extras:
+        - en: |-
+            Some collector edition cards feature gold borders on the front or back.  Most ‘Heroes of the Realm’ cards do not have a standard Magic back, although one does.
+          zh: 某些收藏版牌张的正面或背面采用了金色边框。大部分员工卡不具备标准的万智牌牌背，但其中有一张是例外。
+    - id: mtr-3.3-g003
+      type: paragraph
+      blocks:
+      - id: mtr-3.3-b003
+        en: |-
+          Silver-bordered cards and cards with an acorn-shaped security stamp or acorn-shaped symbol may only be used in casual events and only when the format explicitly permits them.
+        zh: 银边牌或是有橡果标记的牌张，只有在休闲赛事中、相关赛制明确允许使用的情况下方得使用。
+        extras:
+        - en: |-
+            Previously all un-cards were silver boarder.  However in order to increase their perceived legitimacy in casual play, WoTC discontinued silver boards, and instead use an acorn symbol to indicate the cards nutty-ness. Occasionally WOTC will create exceptions to tournament play for Silver Bordered events.
+          zh: |-
+            过去，所有鸡飞系列牌张均采用银色边框。然而，为了提升它们在休闲玩法中的正统感，威世智停用了银边设计，转而改用一个橡果符号来标明这些牌张的无厘头程度。偶尔，威世智也会为特定的银边赛事设立特例，允许这些牌张在比赛中使用。
+    - id: mtr-3.3-g004
+      type: paragraph
+      blocks:
+      - id: mtr-3.3-b004
+        en: |-
+          Cards labeled “Not for constructed play,” “Playtest”, or featuring a playtest sticker or picture of a playtest sticker on another Magic card may not be used in Constructed events.
+        zh: 标注有 “不可用于构组游戏”、 “游戏测试”的牌张，附有游戏测试贴纸绘有游戏测试贴纸的牌张，不得用于构组赛事。
+        extras:
+        - en: |-
+            These are for some cards from Mystery Boosters, or the special event Gavin Verhey hosts at MagicCons, or random secret lair style inserts.
+          zh: 这些内容适用于来自神秘补充包的部分牌，或是Gavin Verhey在MagicCon上主持的特别活动中的牌，或者是类似秘室珍品风格的赠牌。
+    - id: mtr-3.3-g005
+      type: paragraph
+      blocks:
+      - id: mtr-3.3-b005
+        en: |-
+          Wizards includes additional game material in packs, intended as game aids and not as traditional cards. Examples include tokens, title cards, dungeons, and art cards. These are not required for play and players are welcome to use any representation that is clear to both players when they are needed in the game.
+        zh: |-
+          在卡包中，威士智添加了一些额外的物件作为辅助工具，包括衍生物、封面牌、地城、插画等。这些并不是游戏中的必须品，我们鼓励牌手在游戏中根据需要使用任何能向双方作出清晰表述的方式。
+        extras:
+        - en: |-
+            While its fairly obvious that advertisements in packs are not cards, we do want to call out that tokens, dungeons, stickers, and The Ring Tempts You cards are not real cards.  But the more relevant part of this rule is that a player does not actually need a physical Dungeon insert to Venture into the Dungeon.  If both players are clear as to what is going on, any representation is fine.  If you want to make your favorite dungeon into your playmat, go for it.
+          zh: |-
+            虽然补充包里的广告牌显然不是牌张，但我们仍要特别指出，衍生物、地城、贴纸，以及魔戒引诱你等牌都不属于真正的牌张。 不过，这条规则更重要的一点是：玩家在深入地城时，并不需要实际的地城牌。只要双方都清楚目前的状况，任何形式的表示方式都可以接受。 如果你想把自己最喜欢的地城印在牌垫上使用，那完全没问题。
+    - id: mtr-3.3-g006
+      type: paragraph
+      blocks:
+      - id: mtr-3.3-b006
+        en: |-
+          Players may use otherwise-legal non-English and/or misprinted cards provided they are not using them to create an advantage by using misleading text or pictures. Official promotional textless spells are allowed in sanctioned Magic tournaments in which they would otherwise be legal.
+        zh: |-
+          非英语版本和／或具有印刷错误的卡牌，只要该牌符合其他使用要求，且牌手并非刻意利用牌面上具有误导性的文字或插画来获取优势，便可以使用。一些正式发行的无内文的咒语赠牌，在符合其他使用要求的情况下，可以在万智牌认证比赛中使用。
+        extras:
+        - en: |-
+            It is not required that players play with cards that are printed in the native language of the area in which the tournament is being run. If a player needs to know what a card does, either because it is in a language they cannot read, or it is a textless printing, they may call for a judge and ask for the Oracle text.
+
+            There are some famous misprints whose art is from a different card. For example, the German-language printing of Revised had a Forest (Wald) with Plains art. These cards, while an interesting curiosity, create an ambiguous and confusing game state and should not be used in tournament play.
+          zh: |-
+            并不苛求牌手使用比赛所在地文字的牌张参加比赛。如果牌手因语言障碍或者印刷原因无法得知牌张内容，那么他可以请求裁判帮助查询oracle叙述。
+
+            有一些经典的印刷错误的例子，牌张的图片印刷错误了。例如，德文R版的树林被印上了平原的图。这些带有明显歧义的牌会混淆游戏状态，不应在比赛中使用。
+    - id: mtr-3.3-g007
+      type: paragraph
+      blocks:
+      - id: mtr-3.3-b007
+        en: |-
+          Artistic modifications are acceptable in sanctioned tournaments, provided that the modifications do not make the card art unrecognizable, contain substantial strategic advice, disparaging remarks, or contain offensive images. Artistic modifications also may not cover or change the mana cost or name of the card.
+        zh: |-
+          在牌面上进行过艺术加工的牌可以在认证比赛中使用，但需保证此类加工：不会使得该牌上面的插画变得无法识别；未含有隐性的战术指导信息；未含有歧视性内容；未含有侮辱性的图像。艺术加工不得覆盖或更改牌张的法术力费用或名称。
+        extras:
+        - en: |-
+            While the Head Judge of an event may decide to allow or disallow any given altered card, it is important to keep the above guidelines in mind. If the art is still recognizable, the name and mana cost are not obstructed, and the card is not distinguishable from any other card in the deck while in a hidden zone (like the paint made it noticeably thicker), then it should be allowed.  The potential offensiveness of an alter is a more subjective area and should likely have a more conservative approach. Another thing to note, is that the alter cannot contain substantial strategic advice.  This means it can have non-substantial strategic advice.  An example of an acceptable non-substantial strategic alter is writing “play me pre-combat” on a creature with haste.  That alter does technically contain strategic advise, but you can’t make an argument that that advice is substantial, because…what else do you want to do with a hasty boi?  In fact, the opposite, outlining the reasons/conditions you would NOT want to play a haste creature in pre-combat main would probably qualify as substantial strategic advice.
+          zh: |-
+            尽管主审有权利允许或禁止一些带有加工的牌，但是仍需遵守上述的指导原则。如果对于牌张的艺术加工并未遮挡名称以及法术力费用，且该牌张不能在隐藏区域中被区分（例如加工使其显著变厚），那么这样的加工是应当认可的。而关于加工图案是否有可能冒犯他人则是较为主观的，裁判应当在这个问题上更加保守。另外需要注意的是，加工不能包含实质性的策略建议。 这意味着它可以包含非实质性的策略建议。 例如，一个可以接受的非实质性加工是：在一只具有敏捷的生物上写上“战斗前行动阶段使用我”。 从技术上讲，这确实算是一种策略建议，但你无法主张这种建议是“实质性的”，因为——说真的，你还能指望对一只有敏捷的家伙干别的事吗？ 事实上，反过来说，如果你在加工时详细说明为什么或在什么情况下不应在战斗前行动阶段施放一只具敏捷的生物，那就可能构成实质性的策略建议了。
+    - id: mtr-3.3-g008
+      type: paragraph
+      blocks:
+      - id: mtr-3.3-b008
+        en: The Head Judge is the final authority on acceptable cards for a tournament.
+        zh: 主审拥有最终决定确定何种牌能在比赛中使用的权利。
+        extras:
+        - en: |-
+            To ensure consistency within any given tournament, the Head Judge is the sole arbiter of the legality of a card. It is good practice for players using altered cards to get approval from the Head Judge prior to the start of the tournament.
+          zh: 为了确保在同一场比赛中的一致性，该比赛的主审是判别牌张是否合法的唯一仲裁者。对牌手而言，在使用加工牌张参赛前，先征得主审同意，是值得推崇的行为。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.3-b009
+        en: |-
+          If a player is required to replace a card in their deck and is unable to find a replacement, the player may replace the card with a card named Plains, Island, Swamp, Mountain, or Forest of their choice. This also applies to cards that are lost and must be replaced to have a legal deck.
+        zh: |-
+          如果在裁判要求某位牌手更换其套牌中的某张牌时，该牌手无法找到替代品，该牌手可以自行选择一张基本地牌（仅限名称为平原、海岛、沼泽、山脉或树林者）来替换该牌。此规则同样适用于牌手弄丢牌张而须更换以确保套牌合法的情形。
+        extras:
+        - en: |-
+            Never issue proxies for marked cards, unless it is a Limited format event and the cards were opened marked. Foils in humid environments are sometimes marked fresh out of the package. Note that lost sideboard cards are not required to be replaced with lands. The player may revert back to the original configuration of acceptable replacements are found later in the event. Please note that wastes and snow covered lands are not acceptable replacement lands!
+          zh: |-
+            除非是在限制赛比赛中、且牌在开到时就已带有标记，否则绝不要为有标记的牌制作代牌。潮湿环境下的闪卡有时在刚开出来时就是有标记的。注意丢失的备牌不必替换为地。牌手可以在稍后找到可接受的替代品时改回其套牌原有的配置。请注意荒野和雪境地不能用作替换用地！
+    - id: mtr-3.3-g009
+      type: paragraph
+      blocks:
+      - id: mtr-3.3-b010
+        en: |-
+          The Head Judge of a tournament may issue a proxy (see section 3.4) for a card that has become worn or damaged during the tournament.
+        zh: 比赛主审可为在比赛过程中磨损或损坏的牌张制作代牌（参见第3.4节）。
+        extras:
+        - en: |-
+            Further discussion of proxies may be found in MTR section 3.4, but it is important to note that a proxy may only be issued by the Head Judge of an event, and should only be issued for cards that are damaged during the course of the tournament, or from damaged or misprinted Limited product. The original, damaged card must be kept near the play area and will replace the proxy whenever that card is on the stack or the battlefield.
+          zh: |-
+            关于代牌的进一步说明详见MTR3.4，但是代牌只有在比赛主审的同意下，且原牌在比赛过程中被损毁、或限制赛产品印刷错误的情况下才能使用。原牌必须放置在游戏区域附近，并在代牌处于堆叠或战场时用于代替代牌。
+  - id: mtr-3.4
+    chapter: '3.4'
+    en: Proxy Cards
+    zh: 代牌
+    groups:
+    - id: mtr-3.4-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.4-b001
+        en: |-
+          A proxy card is used during competition to represent an otherwise legal Magic card or substitute card that can no longer be included in a deck without the deck being marked. For a proxy to be issued, the card it is replacing must meet at least one of the following criteria:
+        zh: |-
+          代牌指在比赛过程中用以代表符合规定之万智牌牌张或列表牌的用具。当在套牌中使用原本牌张会导致套牌出现明显标记的情况下，便可用代牌来代替之。可使用代牌来代替之牌张，须至少满足以下条件之一：
+    - id: mtr-3.4-g002
+      type: list
+      blocks:
+      - id: mtr-3.4-b002
+        en: |-
+          * The card has been accidentally damaged or excessively worn in the current tournament, including damaged or misprinted Limited product. Proxies are not allowed as substitutes for cards that their owner has damaged intentionally or through negligence.
+        zh: '* 该牌在当前比赛中被意外损毁或遭受过量磨损（包括遭损毁或具有印刷错误的限制赛用产品）。不得用代牌来代替拥有者出于故意或疏忽而损毁之牌张。'
+    - id: mtr-3.4-g003
+      type: list
+      blocks:
+      - id: mtr-3.4-b003
+        en: '* The card is a foil card for which no non-foil printing exists.'
+        zh: '* 该牌是闪卡，且非发行过该牌之普通版本。'
+        extras:
+        - en: |-
+            We want to issue proxies only in cases where the card or cards have been damaged through no fault of the player or they do not exist as a non-foil variant (“Kess, Dissident Mage” for example). Cards being expensive or rare are not reasons to issue a proxy.  “I don’t want to damage my Retro Frame Foil Etched Showcase+ storm crow” is not a reason to issue a proxy. Also, while purchasing well-worn or damaged cards will save money, if the cards are distinguishable from others in the deck, they cannot be played and no proxy will be issued.
+          zh: |-
+            我们只希望在牌张遭受非人为的意外损毁的情况下或不存在非闪版本的情况下（例如异见法师凯丝初次印刷的时候）为牌手制作代牌。牌张的价值或稀有程度不能成为制作代牌的合理理由。诸如“我不想损伤我的老框蚀刻闪风暴乌鸦”不构成制作代牌的理由。此外，一些牌手会因为旧牌或者破损牌的价值较低而特意购买并使用它们，如果这些牌能够在套牌中被明显区分，那么这些牌便不能使用，同时也不满足制作代牌的条件。
+    - id: mtr-3.4-g004
+      type: paragraph
+      blocks:
+      - id: mtr-3.4-b004
+        en: |-
+          Players may not create their own proxies; they may only be created by the Head Judge who has sole discretion as to whether the creation of a proxy is appropriate. When a judge creates a proxy, it is included in the player’s deck and must be denoted as a proxy in a clear and conspicuous manner. The original card is kept nearby during the match and replaces the proxy while in a public zone as long as it is recognizable. A proxy is valid only for the duration of the tournament in which it was originally issued.
+        zh: |-
+          牌手不得自己制作代牌；是否应当制作代牌，由主审自身判断为准，且只能由主审来制作。当裁判为牌手制作代牌时，将此牌放进该牌手的套牌中，且必须以清晰明了的方式表明此为代牌。原本那张牌便在对局进行过程中放在一旁备用。当代牌在公开区域当中时，只要它一直处于可被辨识的状态内，便使用原本的牌来替代。代牌只可在原本制作此张代牌的比赛中使用。
+        extras:
+        - en: |-
+            Using a sharpie on a basic land is a simple and effective way to issue a proxy. It is recommended to initial the proxy as well so that the judge staff and other players in the event can recognize that the proxy was properly issued. Include the name of the card, and its mana cost on the proxy. Any other information may be added at the Head Judge’s discretion.  Additionally, a proxy created by another head judge at last weeks event does not satisfy the criteria for “only created by the Head Judge”
+          zh: |-
+            在基本地上用细记号笔书写是简单有效的代牌制作方式。建议在牌上签署姓名的首字母，以便裁判和比赛中的其他牌手能够识别这确实是合法制作的代牌。在牌上写上名称，法术力费用。主审可酌情写上其他相关内容。此外，上周的比赛中由另一位主审制作的代牌，不符合“只由主审制作”的要求。
+  - id: mtr-3.5
+    chapter: '3.5'
+    en: Substitute Cards
+    zh: 辅助牌
+    groups:
+    - id: mtr-3.5-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.5-b001
+        en: |-
+          Official substitute cards are used to represent double-faced cards in the sets that contain them. Only official substitute cards may be used to represent double-faced cards in a deck.
+        zh: 正式的辅助牌用于代表含有双面牌之系列中的该类牌张。只有正式的辅助牌才能用于代表套牌中的双面牌。
+        extras:
+        - en: |-
+            It is a player’s responsibility to have substitute cards or appropriate sleeves. A judge should not create proxies to represent substitute cards unless the original card has become damaged during the current tournament.
+          zh: 牌手必须选择使用辅助牌或者使用合适的牌套。除非原辅助牌在当前比赛中被意外损毁，裁判不得为辅助牌制作代牌。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.5-b002
+        en: |-
+          The name of the card that the substitute card is representing must be legible. Other modifications must follow the rules for modifying normal Magic cards.
+        zh: 辅助牌所代表的牌的名称必须清晰可辨。其他的图样加工必须遵循通常牌张的图样加工原则。
+        extras:
+        - en: |-
+            Substitute cards represent cards, and cards have to have their name displayed clearly on them. There is space on these cards for other alterations, and do you know what happens to a substitute card that doesn’t follow the rules for modifying the card?  The same thing that happens to everything else.
+          zh: |-
+            辅助牌用来代表真正的牌张，而牌张必须清楚显示其名称。这些辅助牌上仍有空间用于其他加工。 你知道如果一张辅助牌没有遵守加工规则会发生什么吗？ 那就会适用和其他所有牌同样的处理。
+    - id: mtr-3.5-g002
+      type: paragraph
+      blocks:
+      - id: mtr-3.5-b003
+        en: |-
+          The use of substitute cards is required if a player has double-faced cards in their deck and is not using completely opaque sleeves.
+        zh: 如果牌手在其套牌中使用了双面牌，且并未使用完全不透明的牌套，则该牌手必须使用辅助牌。
+        extras:
+        - en: |-
+            The easiest way to check for a sleeves opaqueness is to look for the white mana symbol on the back of a non-double-faced card.
+          zh: 检查牌套是否透明最简单的方法，是从牌套背面观察是否能透过白色法术力符号。
+    - id: mtr-3.5-g003
+      type: paragraph
+      blocks:
+      - id: mtr-3.5-b004
+        en: |-
+          If a player uses a substitute card to represent a double-faced card in their deck, then all copies of that double-faced card in the deck must be represented by substitute cards, and any copies of that double-faced card in a hidden zone are considered to not exist for purposes of determining deck legality.
+        zh: |-
+          如果牌手决定使用辅助牌来代表其套牌中的某张双面牌，则其套牌中所有与该牌同名的其他牌张都必须用辅助牌来代表。此时，在判定套牌是否合乎规则时，所有处于非公开区域中具该名称的双面牌均视作不存在。
+        extras:
+        - en: |-
+            If a player accidentally shuffles their double-faced card into their deck with substitute cards, we treat them the same way we would a token shuffled in and remove them without issuing an infraction. Note that this also means you may not mix and match. If a player has Archangel Avacyn substitute cards in their deck, then they may also have Duskwatch Recruiter cards.
+          zh: |-
+            如果牌手意外将双面牌和对应的辅助牌同时洗回牌库，那么我们将用类似处理衍生物的方式来处理：移除原牌不作判罚。值得注意的是，现在的牌库中可以混合使用双面牌和辅助牌了：牌手可以在牌库中使用大天使艾维欣的辅助牌以及暮巡班招募官的原牌。
+    - id: mtr-3.5-g004
+      type: paragraph
+      blocks:
+      - id: mtr-3.5-b005
+        en: |-
+          A substitute card is only used while the card it represents is in a hidden zone. The card represented by a substitute card is not a playable Magic card until the substitute card has been placed in a public zone. Multiple substitute cards cannot be used to represent a single copy of the actual card. For each substitute card used, the player must have a copy of the actual card available, though they are not considered sideboard cards and are not presented to their opponent.
+        zh: |-
+          仅当需代表的牌处于非公开区域中的时候,才会使用辅助牌来代表之。辅助牌所代表的卡牌，只有在代表它的列表牌置于公共区域之后，才属于可在游戏中使用的万智牌卡牌。不得使用多张辅助牌来代表同一张实际卡牌。牌手需为其使用的每一张辅助牌准备一张相对应的实际卡牌，但所准备的这些实际卡牌不算作其备牌，亦不需呈视于对手。
+        extras:
+        - en: |-
+            When the card is on the battlefield, the real card should be placed over the substitute card. Checking to make sure a player has the proper number of double-faced cards for the number of substitutes in their deck is very important during deck checks. Also, you can’t have one physical copy of a DFC and use four substitute cards for it in your deck.
+          zh: 该牌在战场上时，需将真牌放在辅助牌上。切记，在套牌检查时，查看双面牌与辅助牌的数量是否对应是非常重要的。另外，不能只有一张双面牌却使用四张对应的辅助牌。
+    - id: mtr-3.5-g005
+      type: paragraph
+      blocks:
+      - id: mtr-3.5-b006
+        en: |-
+          Some older substitute cards contain a list of a set of cards that they may represent. These are sometimes referred to as “checklist cards” and can be used to represent any card listed on them. Each individual checklist card used must have one (and only one) of the items checked.
+        zh: 一些较早的辅助牌包含可以代替的一组牌张列表，它们被称为列表牌，可以用来表示其上的任一牌张。每张所使用的列表牌上都必须有一项（也仅能有一项）作了标记。
+        extras:
+        - en: |-
+            Checklist cards are substitute cards from early sets that had checkboxes for specific cards.  You didn’t have to write the name, you just checked a box.  Some players will black out all of the boxes except for the card they are representing. Any way of marking the checklist card that makes the card unambiguous is acceptable.
+          zh: |-
+            列表牌是早期系列中的辅助牌，上面带有用于特定牌的选择框。你无需写上牌名，只需勾选对应的选择框即可。有些牌手会将列表牌上不使用的区域全部涂黑，这也是可以接受的，只要确保牌手能够明确表示该列表牌对应哪张牌即可。
+  - id: mtr-3.6
+    chapter: '3.6'
+    en: Card Identification and Interpretation
+    zh: 牌张确认与牌张解释
+    groups:
+    - id: mtr-3.6-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.6-b001
+        en: |-
+          A card is considered named in game when a player has provided a description (which may include the name or partial name) that could only apply to one card. Any player or judge realizing a description is still ambiguous must seek further clarification.
+        zh: 当牌手作出能够唯一确定某张牌的描述（包括说出全部或部分名称）时，便视为说出了该牌的名称。若牌手或裁判觉得所说描述无法唯一确定牌张，便须要求对方进一步说明。
+        extras:
+        - en: |-
+            Anytime a player names a card, it needs to be done in a way so everyone is aware of what card they are naming. Describing the card is fine. If anyone believes they have not done so, they need to ask for further clarification. “That rare gaea’s cradle elf” is sufficient.
+          zh: |-
+            每当牌手说出一张牌的名称时，须以所有人都能知晓该名称所指为哪张牌的方式作出。描述一张牌也是可以的。如果有任何人认为他没有作到，应当要求该牌手作出进一步厘清。描述为“那张金牌苗地妖精”是足够厘清的。
+    - id: mtr-3.6-g002
+      type: paragraph
+      blocks:
+      - id: mtr-3.6-b002
+        en: |-
+          Players have the right to request access to the official wording of a card they can describe. That request will be honored if logistically possible.
+        zh: 牌手拥有要求查阅牌张标准叙述之权利，只是该牌手须能描述出该牌。如实际可行，便可准予牌手查阅。
+        extras:
+        - en: |-
+            The fact that most card-searching apps include Oracle text is made very relevant by this bit. Players will often request oracle text for cards they or their opponents are using in tournaments, and judges should be prepared to provide it. Several phone apps include complete, downloaded, searchable databases of every single card’s Oracle text, and these are by far the easiest way to quickly find and display it. As a general rule, if you can punch the info they give you into the search function and find a precise card, they’ve described it well enough. Saying “the green three drop that people play a lot in standard” or “The one-drop red burn spell” isn’t uniquely identifying a card, but saying “The white planeswalker from Magic: Origins” or “The take an extra turn card with Delve” is. If a card is revealed to a player, they do not need to know anything about the card to request Oracle text for it.
+          zh: |-
+            现在很多手机app能够帮助做到这一点。牌手通常会请求了解对手的某张牌的Oracle叙述，裁判应随时准备好进行回答。一些手机app提供了完整的离线数据库便于查询Oracle叙述。牌手提供的信息足以帮助你查询到想要的内容。通常来说，如果你能根据他们的描述使用app的搜索功能准确找到一张牌，就能算是唯一辨识。“3点绿费的标准赛用牌”，“1点红费的直伤咒语”类似的叙述不能帮助唯一辨识一张牌。但是”万智牌起源的白色鹏洛客“或者”带有掘穴的产生额外回合的咒语“可以唯一辨识。如果牌手能够看到某张牌，那么他无需知道任何事情便可以向裁判请求查询Oracle叙述。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.6-b003
+        en: |-
+          The official text of any card is the Oracle text corresponding to the name of the card.
+        zh: 牌张的规则文字以该牌在Oracle牌张参考文献中所对应的文字叙述为标准。
+        extras:
+        - en: |-
+            Regardless of what the text on the card says, any sanctioned event must use the current Oracle text for each card, which can be found on Gatherer or pretty much on any phone app that you can search for cards on. If we didn’t use Oracle text, several old cards wouldn’t work with the game’s rules, several cards would be missing important errata, and the Portuguese printing for Stoic Rebuttal wouldn’t actually do anything.
+          zh: |-
+            不管牌面叙述为何，任何认证比赛都应遵从牌张的Oracle叙述，Oracle叙述可以通过官方的牌张数据库以及一些手机app来查询。如果不使用Oracle叙述，一些老牌无法根据游戏规则运作，一些牌无法得到勘误，葡萄牙语版的寡欲抗辩什么都做不了。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.6-b004
+        en: |-
+          Players may not use errors or omissions in Oracle to abuse the rules. The Head Judge is the final authority for card interpretations, and they may overrule Oracle if an error is discovered.
+        zh: 牌手不得利用Oracle中的错误或遗漏来滥用规则。主审是所有牌张解释的最终裁决者，当发现Oracle有错误时，主审的判决高于Oracle。
+        extras:
+        - en: |-
+            This may look like a clause that’s included just in case a card has a typo, but there have been cases where a Head Judge has overruled an oracle to prevent abuse. Wizards of the Coast is much more careful about the cards they print and the errata they make these days, but there have been high profile cases of a Head Judge overruling Oracle, notably the 1999 French Nationals and the Oracle text for Yawgmoth’s Will.
+          zh: |-
+            虽然看起来这一条只是为了防止牌张印刷错误导致的问题，但过去确实曾有主审为防止滥用Oracle中的错误而做出高于Oracle判决的案例。如今，威世智也在设计牌张以及做出勘误方面做出了十分细致的工作，但确实有过主审做出高于Oracle判罚的著名案例，例如1999年法国国冠赛中关于约格莫夫的意志Oracle叙述的案例。
+    - id: mtr-3.6-g003
+      type: paragraph
+      blocks:
+      - id: mtr-3.6-b005
+        en: |-
+          Some cards with a Universes Beyond treatment have different names for the Universes Beyond and Universes Within versions. These cards are considered to be the same card. Other special treatments of cards may alter the name in ways that are clear references to the original card (e.g. Swords2Plowshares); these are also considered to be the same card.
+        zh: |-
+          一些联动宇宙牌张会具有和原宇宙不同的牌名，它们被视为同一张牌。牌张的一些特殊处理也可能会在清晰引用原牌名的前提下使用改动后的牌名（例如Swords2Plowshares 化剑为犁），它们也被视为同一张牌。
+    - id: mtr-3.6-g004
+      type: paragraph
+      blocks:
+      - id: mtr-3.6-b006
+        en: |-
+          Some nontraditional cards (i.e., attractions) may share a name across multiple versions of the card. The name is considered to refer to all versions and does not need further disambiguation, including during deck registration.
+        zh: 一些非传统牌（例如景点）可能会在多种版本中共享同一个名称。该名称被视为指代该牌的所有版本，不需要进一步区分，包括在登记牌表时也是如此。
+        extras:
+        - en: |-
+            Many attractions have multiple versions of the same card as indicated by the ‘lights’ on the frame.  In this case, naming one attraction names them all.  There is very little advantage gained in not-listing the specific light in deck registration, so judges are instructed to ignore that missing information when performing deck checks.
+          zh: |-
+            许多景点存在同一张牌的多个版本，这通常由牌框上的灯灯号标识。在这种情况下，说出其中一个景点就等于说出了全部版本。 在登记套牌时不列出具体的灯光几乎不产生任何优势，因此裁判在进行套牌检查时应忽略这类缺失信息。
+  - id: mtr-3.7
+    chapter: '3.7'
+    en: New Releases
+    zh: 新发售
+    groups:
+    - id: mtr-3.7-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.7-b001
+        en: |-
+          Newly released card sets become tournament-legal for sanctioned, rated tournaments on the following dates:
+        zh: 自下述日期起，新发售的系列便可以在认证比赛中使用：
+    - id: mtr-3.7-g002
+      type: list
+      blocks:
+      - id: mtr-3.7-b002
+        en: '* Magic: The Gathering | Teenage Mutant Ninja Turtles™ February 27, 2026'
+        zh: ''
+    - id: mtr-3.7-g003
+      type: list
+      blocks:
+      - id: mtr-3.7-b003
+        en: '* Secrets of Strixhaven™ April 17, 2026'
+        zh: ''
+    - id: mtr-3.7-g004
+      type: paragraph
+      blocks:
+      - id: mtr-3.7-b004
+        en: |-
+          For official Prerelease tournaments only, new sets are legal for use before the official format legal date. In these cases, any announced rules updates shall be in effect at these tournaments, including informal explanations of new rules and mechanics. Judges may apply additional rules that they believe will be updated.
+        zh: |-
+          新系列仅于正式举办的售前比赛当中可于上述的日期之前使用。如属于此种情况，则所有已公告之规则订正（包括针对新规则和机制的非正式说明）均适用于该场比赛。若裁判认为在此之外还会有其他规则订正，也可在该场比赛中适用这类订正。
+        extras:
+        - en: |-
+            Cards are essentially legal for their respective formats when you have them legally. Typically this means Prerelease Weekend.  However it is possible that prerelease tournaments are available before the release. This is uncommon now, but was common in the past. Any changes to the rule, whether big or small, are in effect at the Prerelease tournament even though they aren’t officially brought into effect until the release of the set. Judges applying rules they believe will be updated should be incredibly obvious rules additions, such as allowing masterpieces to be played without a legal magic border.
+          zh: |-
+            当你合法获得牌张时，这些牌在其对应的比赛环境中基本上是合法的。通常，这指的是在售前周获得的牌。然而，也有可能在正式发售前就能参加预发布赛事。这在现在已经不常见，但在过去很常见。任何大大小小的规则改动在售前赛都会提前生效，即使这些改动不会在发售日前的其他比赛中起作用。裁判所适用的即将更新之规则订正应当是极为明显的规则更新，例如允许没有合法万智牌边框的逸品重现在比赛中使用。
+    - id: mtr-3.7-g005
+      type: paragraph
+      blocks:
+      - id: mtr-3.7-b005
+        en: |-
+          These dates may be subject to change. Any changes will be announced at http://www.magicthegathering.com.
+        zh: 这些日期有可能变动。如有变动，则会公告于此网址：http://www.magicthegathering.com。
+        extras:
+        - en: |-
+            This clause is unlikely to ever be relevant, but it’s here in case it’s ever needed.
+          zh: 这句话很可能永远都没有用，但只是以防万一。
+  - id: mtr-3.8
+    chapter: '3.8'
+    en: Game Markers
+    zh: 游戏标记物
+    groups:
+    - id: mtr-3.8-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.8-b001
+        en: |-
+          Small items (e.g., glass beads) may be used as markers and placed on top of a player’s own library or graveyard as a reminder for in-game effects. These markers may not disguise the number of cards remaining in that zone nor completely obscure any card.
+        zh: |-
+          牌手可将一些小型物件（如玻璃珠）用作标记物放在自己的牌库或坟墓场顶上，以提醒自己注意游戏区中的效应。这些标记物不能用来隐瞒在该区域中的牌数，亦不得将该区域的任意牌张完全遮盖。
+        extras:
+        - en: |-
+            Players will often put something on top of their deck in order to remind them of an upkeep trigger, such as rebound, and occasionally players will put something on top of their graveyard in order to remind them of some continuous effect. “Small” is very subjective, and there are stories of a player using a plastic fishbowl to completely cover their own deck to prevent them from drawing a card before remembering the upkeep trigger. The key rules are that the item can’t obscure the cards, can’t make it difficult to see any revealed cards, and can’t be a card itself.
+          zh: |-
+            牌手有时会用一些小物件放在牌库顶来提醒自己记住维持触发，例如弹回。有时也会将小物件放在坟墓场里的牌上用于提醒自己一些持续性效应的存在。“小“是一个很主观的概念，传闻牌手曾用塑料鱼缸盖住整个牌库避免维持前抓牌来确保维持触发。这里的关键在于，这些小物件不能盖住牌张，让人无法辨认，并且也不能使用另一张牌来当做此类小物件。
+  - id: mtr-3.9
+    chapter: '3.9'
+    en: Die Rolling
+    zh: 掷骰
+    groups:
+    - id: mtr-3.9-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.9-b001
+        en: |-
+          Some game actions use a die roll to determine their outcome. Any method may be used to simulate this as long as all results have an equal chance of occurring. For example, using a 20-sided die to simulate a 6-sided die by dividing by 3 and rounding up (rerolling on 19 or 20) is acceptable. Dice with similar numbers clumped together (such as a spindown life tracker) may not be used for these actions.
+        zh: |-
+          一些游戏动作使用骰子来决定其结果，只要所有结果发生的概率相同，就可以使用任何形式来进行模拟。例如，可以使用20面骰将掷骰结果除以3后进位来模拟6面骰（19、20重掷）。但数字有明显聚集规律的骰子（比如生命计数器）不能作此用。
+        extras:
+        - en: |-
+            With Adventures in the Forgotten Realms, several cards were added that require the roll of a D20, (the associated Commander Products might use a D4 or a D12, etc).  If you don’t have the required die, you may use another method that yields the same results with the same probability.  Spindown life trackers are not allowed in tournament play as there is excessive anecdotal evidence that the results can be manipulated easier than with a fair D20. However, in casual games, the MTR doesn’t apply and a spindown is fine.  If you think you a player at your kitchen table is cheating, why are they at your kitchen table?
+          zh: |-
+            在被遗忘国度战记系列中，有几张牌需要掷 D20（相关的指挥官产品可能会使用 D4、D12 等其他骰子）。如果你没有所需的骰子，可以使用其他方法，只要该方法能产生相同概率的结果即可。 在比赛中，不允许使用旋转式生命计数器，因为大量的经验表明，其结果比普通的D20更容易被操纵。然而，MTR不适用，因此使用旋转式计数器是可以的。 如果你认为在自己餐桌上玩的玩家在作弊，那……他们为什么还在你餐桌上呢？
+    - id: mtr-3.9-g002
+      type: paragraph
+      blocks:
+      - id: mtr-3.9-b002
+        en: |-
+          Dice must have clear and easy to read values, and not be so large as to be disruptive when rolled. They must be rolled from a discernable height. Dice that leave the playing surface after landing, become mixed with similar dice, or do not land flat are ignored and rerolled.
+        zh: |-
+          骰子的数值必须清晰可见，且不得因其体型过大而影响正常滚动。它们必须从一定的高度掷出。忽略落地后离开桌面、混入其它相似骰子或是没有在平面上停止的骰子，并重掷它们。
+        extras:
+        - en: |-
+            These rules are just to ensure no one can hide the result of a roll, or roll improperly.  It also covers the age-old D&D question of “If it rolls off the table, do I re-roll or keep the result”. The section about the dice not being so large as to be disruptive, is because this game has trolls, and if that rule isn’t there, someone will bring a 1 ft diameter dice plushie and argue that it’s legit because the rules don’t say they can’t.
+          zh: |-
+            这些规则是为了确保没有人能隐藏骰子的结果，或不正当地掷骰。 它同样涵盖了DND由来已久的问题：“如果骰子滚下桌子，我是重新掷还是保留结果？” 关于骰子大小不应过大以免干扰游戏的规定，是因为这个游戏里有恶作剧玩家。如果没有这一条规则，总会有人带一个直径一英尺的骰子毛绒玩具来，并辩称这样做合法，因为规则中并没有明文禁止。
+    - id: mtr-3.9-g003
+      type: paragraph
+      blocks:
+      - id: mtr-3.9-b003
+        en: |-
+          Players are expected to be clear about why they are rolling a die. A player who wishes to respond to a die roll is expected to prevent the rolling player from taking action, but the rolling player cannot rush through to preempt responses. A die roll is complete once the result is visible to the opponent.
+        zh: |-
+          牌手应明确自己是出于什么原因掷骰。若牌手希望在对手掷骰前对该行动作出响应，则应先阻止对手做出该行动，但掷骰一方也不得通过贸然推进该行动的方式，致使对手错失响应的机会。一旦掷骰的结果可见于对手，则该行动便视作完成。
+        extras:
+        - en: |-
+            These rules are in place to stop gamesmanship on both sides of the table.  Typically cards that use dice rolling have the rolling as part of resolving the effect.  Once the roll starts, the effect is happening.  As such, it is important for the players to communicate that they are about to roll, so the opponent knows they need to respond. We don’t want opponents deciding that they werent given a chance to respond until after the result is known.  We also don’t want a player to push past any possible responses by rolling too fast and claiming its “too late” to respond.  We definitely don’t want a player just rolling D20s and then when they get a result they like, claim it was for an effect.
+          zh: |-
+            这些规则的设立是为了防止双方玩家在牌桌上耍小聪明。 通常，涉及掷骰的牌，其掷骰行为是效应结算的一部分。一旦开始掷骰，效应就已经在发生了。因此，玩家必须提前告知即将掷骰，以便对手知道需要做出反应。我们不希望对手在结果揭晓后才说自己没有机会响应。 同样，我们也不希望玩家通过过快掷骰来压制任何可能的响应，然后声称“已经太晚了，无法响应”。更不希望有人随意掷D20，当结果符合自己心意时，再声称这是为了某个效应而掷的。
+    - id: mtr-3.9-g004
+      type: paragraph
+      blocks:
+      - id: mtr-3.9-b004
+        en: |-
+          Some actions may require multiple dice to be rolled. If additional rolls would have no impact on the game, the player skips them. If a player rolls too many dice at once, all those dice are ignored and the correct number of dice are rolled.
+        zh: 有些动作可能需要投掷多个骰子，如果额外的掷骰对游戏不产生影响，则忽略它们。如果牌手一次掷了过量的骰子，忽略这次掷骰的所有结果，并重新投掷正确数量的骰子。
+  - id: mtr-3.10
+    chapter: '3.10'
+    en: Card Shuffling
+    zh: 洗牌
+    groups:
+    - id: mtr-3.10-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.10-b001
+        en: |-
+          Decks must be randomized at the start of every game and whenever an instruction requires it. Randomization is defined as bringing the deck to a state where no player can have any information regarding the order or position of cards in any portion of the deck.
+        zh: |-
+          在每盘游戏开始时，或是在有指示要求的情况下，牌手必须将自己的套牌随机化。「随机化」的定义为：「将套牌调整为随机状态的过程；调整过后的套牌内任意部分牌张的排列次序，或是其中某张牌具体位置这类的信息无从为任何牌手所知晓」。
+        extras:
+        - en: |-
+            The phrase “order or position” is key. A deck that is “mana-weaved” is not random; even though the player may have no information about the location of a specific card, they have information about the cards’ order (that is, land-spell-spell, land-spell-spell). Also key is that a player shouldn’t know any information on where a card is, not even which half of the deck it is in.
+          zh: |-
+            “排列次序与具体位置“是关键。经过“法术力编织”的套牌并不是随机化的：即使牌手不知道特定牌的位置，但是他却知道牌张的大致顺序（类似地-咒语-地）。牌手也不应知道某张牌的任何信息，包括知道该牌在牌库中的哪一部分也不行。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.10-b002
+        en: |-
+          Pile shuffling may not be performed other than once each at the beginning of a game to count the cards in the deck.
+        zh: 分堆洗法属于清点套牌张数的方法，每位牌手只能在每盘游戏开始时为此目的使用一次。
+        extras:
+        - en: |-
+            Pile shuffling is completely non-random, since individual cards can be tracked and since cards are shuffled into a deterministic order. A single pile shuffle can help players count their decks and loosen sticky cards, but more than that a pile shuffle does not contribute to randomization and will qualify as Slow Play. Once the game has begun the need to count the deck during randomization is largely gone.  As such, a single pile shuffle at the start of the game is permitted, but is not allowed at any other time.  Please remember when applying the IPG that habits are hard to break, and a single caution may be appropriate the first time.
+          zh: |-
+            分堆洗牌完全不是随机过程，因为单张卡牌可以根据洗牌的顺序来充分推定。一次分堆洗牌可以帮助牌手清点牌张数量、避免让牌张粘在一起，但多次分堆洗牌并不能帮助套牌更加随机化，并可视为游戏行动过慢来处理。一旦游戏开始，在随机化的时候再去清点牌张的必要性就基本不存在了。因此，在游戏开始时允许进行一次分堆洗牌，但在其他任何时间都不允许进行。请在应用IPG时注意，牌手的习惯是很难打破的，在第一次发生时可以先予口头注意。
+    - id: mtr-3.10-g002
+      type: paragraph
+      blocks:
+      - id: mtr-3.10-b003
+        en: |-
+          Once the deck is randomized, it must be presented to an opponent. By this action, players state that their decks are legal and randomized. The opponent may then shuffle it additionally. Cards and sleeves must not be in danger of being damaged during this process.
+        zh: |-
+          一旦牌手将自己的套牌随机化后，必须将自己的套牌呈交给对手。通过这一动作，牌手便表明自己的套牌是合乎规定，且已随机化。对手可以对其进行额外的洗牌。在此过程中，不得对牌张和牌套做出有可能将之损毁的举动。
+        extras:
+        - en: |-
+            The deck should be fully randomized when presented to the opponent, and the opponents’ shuffles are not meant to make the deck “more random.” The purpose of the second shuffle is to discourage deck-stacking and cheating.
+          zh: 在呈给对手之前，牌库必须完全随机化。对手再一次洗牌并不意味着让套牌“更随机化。“让对手洗牌的目的在于：阻碍牌手操纵牌库以及作弊。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.10-b004
+        en: |-
+          If the opponent does not believe the player made a reasonable effort to randomize their deck, the opponent must notify a judge.
+        zh: 如果该位对手认为牌手并未尽力使套牌充分随机化，他须就此告知裁判。
+        extras:
+        - en: |-
+            This rule is here so that a player doesn’t have to feel bad about calling a judge for insufficient shuffling.  It’s in the rules, you have to. You aren’t the bad guy accusing the player of cheating.  You are just bringing up an issue and the judge can investigate the issue.
+          zh: |-
+            这条规则的设立是为了让玩家在因对手洗牌不足而叫裁判时不必感到内疚。这是规则规定的，你必须这么做。你并不是在指责对手作弊的坏人，你只是提出了一个问题，由裁判来调查处理即可。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.10-b005
+        en: |-
+          Players may request to have a judge shuffle their cards rather than the opponent; this request will be honored only at a judge’s discretion.
+        zh: 双方牌手皆拥有请求裁判来代替自己的对手为自己洗牌的权利；但裁判可自行决定是否要为牌手洗牌。
+        extras:
+        - en: |-
+            Judges should use their discretion on this.  Shuffling takes a significant amount of time, during which the judge can’t take other calls. As shuffling for players is not a service that can be offered for all players it should be reserved for exceptional circumstances. Requests for judges to shuffle are exceedingly rare and typically arise when a player perceives there opponent as ill, or a ‘rough shuffler’, or there are mobility issues.  The first two can be handled with quick instructions to the players (e.g. ‘please be more gentle while shuffling’, or ‘you may have an extension to wash your hands if needed’). Note: If a player is visibly showing signs of illness to the point that it is causing player distress, notify the Tournament Organizer. With respect to mobility issues, players with those issues typically inform the judges in advance, and accommodations have already been made. If a mobility issue arises during the tournament, that is typically considered exceptional.
+          zh: |-
+            此处，裁判可以自行衡量。洗牌会花费一定的时间，这使得裁判会有一段时间无法回应其他裁判呼叫。洗牌不是为所有牌手提供的服务，而应尽量将机会留给特殊情况。请求裁判代为洗牌的情况极为罕见，通常发生在以下情形：玩家认为对手有卫生问题、洗牌手法粗暴，或存在行动不便的问题。对前两种情况，可以通过简短指导处理，例如：“如有需要，可以延长时间让你去洗手”，“洗牌时请轻一些”。注意：如果玩家明显出现疾病症状且影响其他玩家，应通知比赛主办方。关于行动不便的问题，通常玩家会提前告知裁判，并已安排好相关便利措施。如果在赛事中临时出现行动不便的情况，这通常被视为特殊情况。
+    - id: mtr-3.10-g003
+      type: paragraph
+      blocks:
+      - id: mtr-3.10-b006
+        en: |-
+          If a player has had the opportunity to see any of the card faces of the deck being shuffled, the deck is no longer considered randomized and must be randomized again.
+        zh: 在洗牌过程中，若牌手得以看到套牌中任意牌张的牌面，便不会认为该套牌「已随机化」，牌手必须将之重新随机化。
+        extras:
+        - en: |-
+            This rule is to codify a point where the shuffle has been undone.  If you shuffle and then maybe see the bottom card while putting the deck down, we have to start over.
+          zh: 这条规则的目的是明确什么时候洗牌被视为作废。 如果你洗完牌后，在放下牌堆时可能看到了最下面的牌，那么就必须重新洗牌。
+    - id: mtr-3.10-g004
+      type: paragraph
+      blocks:
+      - id: mtr-3.10-b007
+        en: |-
+          At Competitive and Professional Rules Enforcement Level tournaments, players are required to shuffle their opponents’ decks after their owners have shuffled them. The Head Judge can require this at Regular Rules Enforcement Level tournaments as well.
+        zh: 在「竞争」和「专业」级别的比赛中，牌手必须在对手洗完牌之后，为对手的套牌进行洗牌。主审也可以在「一般」级别的比赛中规定必须洗对手的套牌。
+        extras:
+        - en: |-
+            In some cultures, asking to shuffle an opponent’s deck would be considered an insult. The requirement to shuffle an opponent’s deck is intended to prevent cheaters from taking advantage of these cultural norms.
+
+            Because a deck presented to an opponent should be random, this additional shuffle does not need to be thorough. However, simply cutting the deck is often not sufficient to meet this requirement.
+          zh: |-
+            在一些文化中，要求洗对手的牌库会被认为是一种侮辱。明确要求洗对手的牌库是为了避免作弊者通过特定的文化规范得利。
+
+            由于呈给对手的套牌已经经过随机化，那么不必重新做彻底的随机化。然而，仅仅简单地切一下牌库也通常是不足以达到此要求的。
+  - id: mtr-3.11
+    chapter: '3.11'
+    en: Sleeves
+    zh: 牌套
+    groups:
+    - id: mtr-3.11-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.11-b001
+        en: Players may use plastic card sleeves or other protective devices on cards.
+        zh: 牌手可以在牌上使用塑料制的牌套或其他保护用设施来保护牌。
+        extras:
+        - en: |-
+            Often players will be using card sleeves to protect their cards from the dirt and friction they would otherwise be exposed to through repeated usage. Provided that they do not interfere with shuffling, or could be considered offensive, they will be allowed with the following conditions.
+          zh: 牌手通常会用牌套来保护牌张避免多次使用产生灰尘或者磨损。在不影响洗牌或者造成其他坏影响的前提下，牌手可以在符合下述要求的情形下使用牌套。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.11-b002
+        en: |-
+          If a player chooses to use card sleeves, all sleeves must be identical and all cards in their deck must be placed in the sleeves in an identical manner.
+        zh: 如果牌手决定使用牌套，则该牌手套牌中的所有牌都必须使用相同的牌套，并以相同的方式装入牌套中。
+        extras:
+        - en: |-
+            Having decks of mixed brands/types/colors/condition/size etc. of sleeves allows players to tell their cards apart. Additionally the conditions of the sleeves should be noted. If most of the set is scuffed and worn on the visible side when in the deck, but a few sleeves are in notably better condition, the sleeves are not identical. Another common practice is to “double sleeve” a deck, in this case all cards must be double sleeved so there exist no variation in rigidity and thickness of cards in the deck. Notable deviations from the identical nature of the sleeves ought be considered Marked Cards.
+          zh: |-
+            使用不同品牌、类型、颜色、新旧、尺寸等的牌套会让牌手能够区分特定牌张的位置。此外仍需注意牌套的状态。如果大多数牌套都已磨损，而少数几张牌套还比较新，那么这些牌套不能算完全一致。而另一种“双层牌套”的情况下，所有的牌都必须使用双层牌套来确保每张牌硬度和厚度一致。牌套有明显区别会被当作有记号的牌而做出相应处理。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.11-b003
+        en: |-
+          If the sleeves feature holograms or other similar markings, cards must be inserted into the sleeves so these markings appear only on the faces of the cards.
+        zh: 若牌套上有镭射标示或类似的记号，则在把牌装入牌套时，必须使得该些记号只出现在牌面一侧。
+        extras:
+        - en: |-
+            So as to prevent information being revealed by reflecting the face of a card above in a stack all holograms and the like must be solely on the face of the card sleeve.
+          zh: 为了避免镭射标示反射牌张信息，所有的镭射标示都应出现在牌面一侧。
+    - id: mtr-3.11-g002
+      type: paragraph
+      blocks:
+      - id: mtr-3.11-b004
+        en: |-
+          During a match, a player may request that a judge inspect an opponent’s card sleeves.
+        zh: 在对局进行过程中，牌手可以要求裁判检查对手的牌套。
+        extras:
+        - en: |-
+            If a player finds something suspicious they may request a judge to check opponents sleeves for Marked Cards. The process for this is similar to that of a deck check, where the cards are briefly examined for dissimilarity or problems. It should be noted that all sleeves could be considered marked if examined closely enough, and this ought be considered when evaluating sleeves.
+          zh: |-
+            如果牌手发现了对手牌套上的可疑现象，可以向裁判要求检查对手的牌套。此过程与套牌检查类似，检查时应着重注意牌张的异同点或任何问题。在仔细观察的情况下，每个牌套都有细微区别，这点在评估牌套合法性时也应作为参考。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.11-b005
+        en: |-
+          The judge may disallow the card sleeves if they believe they are marked, worn, or otherwise in a condition or of a design that interferes with shuffling or game play.
+        zh: 如果裁判认为牌手的牌套被作了记号、已磨损，或是出于其他会影响到洗牌或游戏进行的状态，他可以不允许牌手使用该牌套。
+        extras:
+        - en: |-
+            In the event that the card sleeves are determined to be interfering with game play or compromising the integrity of the game. The judge may require replacement sleeves to be used for the remainder of the tournament.
+          zh: 如果裁判认为牌套会影响游戏进行、或损害游戏的公平性，那么可以要求牌手在接下来的比赛中更换牌套。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.11-b006
+        en: |-
+          In the interest of efficiency, the judge may choose to delay any change of sleeves until the end of the match.
+        zh: 基于效率考虑，裁判可选择延迟到对局结束后才让牌手更换牌套。
+        extras:
+        - en: |-
+            The act of requiring a player to change sleeves mid match is undeniably disruptive, if the judge feels that there is no urgent need, postponing the change of sleeves until after the match is a superior alternative. If necessary a time extension may be given to complete the task and allow the player to continue in the tournament.
+          zh: |-
+            在对局过程中要求牌手更换牌套无疑会花费一定时间。如果裁判认为不是特别紧急，那么推迟更换牌套的时机是更好的选择。如果有必要的话，则可以考虑给牌手一些补时，让他能够继续进行比赛。
+    - id: mtr-3.11-g003
+      type: paragraph
+      blocks:
+      - id: mtr-3.11-b007
+        en: |-
+          Competitive and Professional Rules Enforcement Level tournaments impose additional restrictions on sleeves.
+        zh: 「竞争」和「专业」级别的比赛对牌套有额外的限制要求。
+        extras:
+        - en: |-
+            Due to the nature of Competitive and Professional Rules Enforcement Level events, additional restrictions are set in place to ensure that the integrity of the event is upheld. As such in these events the following observations and regulations ought be enforced and considered.
+          zh: 由于这些比赛竞技属性的原因，在竞争级别和专业级别的比赛中，会对牌套有额外的限制条件来保证比赛的公正性。因此这些比赛中需遵循如下规则。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.11-b008
+        en: |-
+          Highly reflective backs are not allowed. Sleeves with hologram patterns across some or all of the sleeve front or back are not allowed.
+        zh: 具有背面高度反光的不得使用。在正面或背面的一部分或全部具有镭射标示的不得使用。
+        extras:
+        - en: |-
+            If a sleeve has a highly reflective backing, information may be gained when picking up cards from the deck where some characteristics could be observed such as whether or not the card is a land, or what color it is. This of course is not something that can be allowed due to the risk it creates.
+
+            The restriction on hologram patterns across the front is in effort to maximize clarity of the game as to not disrupt the viewing of the card for both players. It should be noted that due to the insignificant nature of something like the Ultra Pro logo sticker, its placement and size make it a non-factor when evaluating the sleeves.
+          zh: |-
+            如果牌套背面具有高度反光性，在从牌堆中抽牌时可能会获取信息，例如该牌是否为地牌，或者它的颜色。这显然不能被允许，因为这样会带来潜在的风险。
+
+            对限制镭射标识的牌套而言，也是为了确保双方牌手能够清楚地看到牌面，不受干扰地进行游戏。但值得注意的是，Ultra Pro牌套上的logo镭射贴纸的影响很小，一般不考虑在内。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.11-b009
+        en: |-
+          Sleeves with artwork on their backs may be subjected to additional scrutiny, especially if there is no solid border around the edges.
+        zh: 背面有图案的牌套可能需进行额外复查，尤其是侧边未使用单一颜色者。
+        extras:
+        - en: |-
+            With solid borders a player cannot easily hide marks on the sleeves that can be seen when the cards are in a stack, whereas without a solid border, abnormalities are far harder to notice, and thus demand extra study when evaluating the sleeves.
+          zh: 单一颜色牌套上的记号很容易被发现，但是背面有图案的牌套可能会带来更多的问题，相应地需要通过更加细致的观察来判断牌套是否可用。
+    - id: mtr-3.11-g004
+      type: paragraph
+      blocks:
+      - id: mtr-3.11-b010
+        en: When using sleeves on double-faced cards, sleeves must be completely opaque.
+        zh: 如果要以装入牌套的方式来利用双面牌，则牌套须为完全不透明。
+        extras:
+        - en: |-
+            In the event that a player is using double-faced cards with in their deck rather than a checklist card, the sleeve must not allow any indication that a double-faced card is within. Often the easiest way to observe this is by looking at the back of the sleeve in various angles in light to determine opaqueness. If the sleeves prove ineffective at preventing the nature of the double-faced card from being revealed the player will either need to use appropriate checklist cards, or use new, suitable sleeves. The infraction Marked Cards may also apply.
+          zh: |-
+            在比赛中，如果牌手使用双面牌而不使用列表牌时，绝对不能使用能够透过其观察到牌张内容的牌套。可以通过不同角度的入射光观察牌套是否符合要求。如果牌套不符合要求，那么该牌手需使用合适的列表牌，或者新的合适的牌套。这里同样适用于有记号的牌的判罚。
+    - id: mtr-3.11-g005
+      type: paragraph
+      blocks:
+      - id: mtr-3.11-b011
+        en: The Head Judge is the final authority on what sleeves are allowed.
+        zh: 主审在确定何种牌套可用方面具有最终决定权。
+        extras:
+        - en: dat’s right!
+          zh: 没错！
+  - id: mtr-3.12
+    chapter: '3.12'
+    en: Marked Cards
+    zh: 有记号的牌
+    groups:
+    - id: mtr-3.12-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.12-b001
+        en: |-
+          Players are responsible for ensuring that their cards and/or card sleeves are not marked during the tournament. A card or sleeve is considered marked if it bears something that makes it possible to identify the card without seeing its face, including (but not limited to) scratches, discoloration, and bends.
+        zh: |-
+          在比赛过程中，牌手有责任确保自己所使用的牌张和／或牌套上没有记号。如果某张牌或牌套上有任何可以无需检视正面即能认出该牌的东西，就会被算作「有记号」，这包括刮痕、变色，以及折痕。
+        extras:
+        - en: |-
+            Cards must stand out when in the deck to be considered marked. If you have to bend the card and look at it from funny angles to get the light to hit it just right, it is not marked.
+          zh: 在牌库中很突出的牌张才算作有记号的牌。如果需要弯曲牌张或者要从非常特定的角度才能发现其不一样，这并不算有记号。
+    - id: mtr-3.12-g002
+      type: paragraph
+      blocks:
+      - id: mtr-3.12-b002
+        en: |-
+          If a player’s cards are sleeved, the cards must be examined while in the sleeves to determine if they are marked. Players should use care when sleeving their decks and should randomize their decks prior to sleeving them to reduce the possibility of cards becoming marked with a pattern. Players should also keep in mind that cards or sleeves may become worn and potentially marked through play during a tournament.
+        zh: |-
+          如果牌手的牌装在牌套中，则在检查它们是否有记号时也要装上牌套来检查。牌手在装牌套时应当特别留意，并且应先让套牌随机化之后再装上牌套，以降低有记号的牌具备特殊排列规则的可能性。牌手应当注意，在比赛过程中，随着牌张的使用，牌张或牌套有可能受到磨损并有可能被视为做了记号。
+        extras:
+        - en: |-
+            Many brands of sleeves will have inconsistencies in their coloring or cut. Players should shuffle the sleeves and cards prior to sleeving to prevent the inconsistencies from creating a pattern. Additionally, a good rule of thumb is: If you think a judge might consider the deck marked, go ahead and change your sleeves.
+          zh: |-
+            不少品牌的牌套会在颜色和切割上有细微的不一致。我们建议牌手在套牌套前能够打乱套牌以及牌套的顺序，来避免套牌显现出一些模式。此外，一个实用的经验法则是：如果你认为裁判可能会认为你的套牌有记号，那就换牌套吧。
+    - id: mtr-3.12-g003
+      type: paragraph
+      blocks:
+      - id: mtr-3.12-b003
+        en: |-
+          The Head Judge has the authority to determine if a card in a player’s deck is marked. Judges may request that a player remove their current sleeves or replace any of the deck’s current sleeves immediately, or before the next round.
+        zh: |-
+          主审有权判定牌手的套牌中是否含有具记号的牌张。裁判可以要求牌手取下当前所用牌套，或是更换套牌当前所使用的牌套的一部分，并决定该牌手须立即更换还是在下局开始之前更换完毕。
+        extras:
+        - en: |-
+            If the sleeves are marked enough that you are giving a Warning at Competitive Rules Enforcement Level, instruct the player to replace them between rounds. If their round runs late, give them a reasonable time extension in the following round to facilitate re-sleeving. If the penalty is being upgraded to a Game Loss, the player needs to replace the sleeves immediately. Judges are often tasked with assisting the player to expedite the process. Make sure to follow-up with players after instructing them to replace sleeves to ensure that they have done so.
+          zh: |-
+            如果你因牌套上的标记在竞争级别的比赛中给出了警告的判罚，那么就让牌手在局间更换牌套。如果该牌手这一局结束得晚，那么给他在下一局一些补时来确保牌套更换完毕。如果判罚被升级为一盘负，那么牌手需立即更换牌套。裁判可以帮助牌手更高效地完成牌套更换。跟进此事确保牌手完成牌套更换。
+  - id: mtr-3.13
+    chapter: '3.13'
+    en: Hidden Information
+    zh: 非公开信息
+    groups:
+    - id: mtr-3.13-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.13-b001
+        en: |-
+          Hidden information refers to the faces of cards and other objects at which the rules of the game and format do not allow you to look.
+        zh: 非公开信息指的是游戏规则及赛制禁止牌手窥视之信息，如牌张及其他物件的正面。
+        extras:
+        - en: |-
+            Cards in the library, cards in the opponent’s hand, cards exiled face down (such as from Pyxis of Pandemonium), and cards other players are drafting, are all examples of hidden information.
+          zh: 牌库中的牌，对手的手牌，牌面朝下放逐的牌（例如魔异盒），其他牌手轮抽抽到的牌，这些都是非公开信息的例子。
+    - id: mtr-3.13-g002
+      type: paragraph
+      blocks:
+      - id: mtr-3.13-b002
+        en: |-
+          Throughout the match, a draft, and pregame procedures, players are responsible for keeping their cards above the level of the playing surface and for making reasonable efforts to prevent hidden information from being revealed. However, players may choose to share the contents of their hands, or any other hidden information available to them, to any other players unless specifically prohibited by the rules. Players must not actively attempt to gain information hidden from them but are not required to inform opponents who are accidentally revealing hidden information.
+        zh: |-
+          在整个对局、轮抽、及游戏前程序的过程中，牌手有责任将自己所有的牌保持在游戏平面之上，并尽力防止自己的非公开信息被公开。然而，除有规则明令禁止之外，牌手可选择向任何人公开自己的手牌内容或其他自己知悉的非公开信息。牌手不得主动尝试去获取自己不应知道的非公开信息，但在对手无意间透露了非公开信息的情况下，亦无需就此提醒对手。
+        extras:
+        - en: |-
+            Players can show their opponent any information that that player is allowed to see. This means they cannot show the opponent the contents of their deck unless they are currently allowed to see it (i.e. searching). Players cannot try to look at the opponent’s hand, but if the opponent has it revealed they don’t need to inform them. It is also possible to accidentally reveal information.  Maybe they are playing with their hand tilted too far forward, or maybe they are wearing reflective sunglasses. This rule covers situations such as “show me the lightning bolt and I’ll concede” and accidentally dropping their hand on the table.
+
+            Note for Multiplayer play: The MTR is written predominately for 1v1 play, or 2v2 in the case of 2HG. It has not been given an overhaul for pod formats like Commander. To that end, parts of the MTR are written using language assuming one opponent or opposing team. In a game with multiple opponents, if a player is controlling another player, the controlling player cannot force the controlled player to reveal their hand to the other opponents. The controlling player may say what cards they can see, but they may not physically show the controlled players cards to other players or direct the controlled player to show the cards, outside of executing a game effect that requires the cards to be revealed.
+          zh: |-
+            牌手可以向对手展示自己允许查看的信息。例如，他不能向对手展示牌库的内容（除非他允许查看牌库内容，比如他在搜寻牌库）。牌手不能试图查看对手的手牌，但是对手不小心展示了手牌，也不需要提醒他。此外，也可能会无意中透露信息。例如，玩家手牌倾斜过多，或者戴着反光墨镜等。这条规则适用于类似“给我展示闪电击，我就认输”的情况，以及无意将手牌掉在桌面上而被看到的情况。
+
+            多人游戏注意事项： MTR 主要针对1v1对局编写，或者在双头巨人中为2v2对局编写，并未针对像指挥官这样的多人赛制进行全面修订。因此，MTR 中部分条款使用了假设只有一个对手或一个敌方团队的措辞。在有多个对手的游戏中，如果一名玩家控制另一名玩家，不能强制被控制的玩家向其他对手展示手牌。控制者可以说出自己所看到的牌，但不得将被控制玩家的牌实际展示给其他玩家，也不得指示被控制玩家展示牌，除非这是执行某个游戏效应所必须的展示行为。
+  - id: mtr-3.14
+    chapter: '3.14'
+    en: Tapped/Flipped Cards
+    zh: 已横置／已倒转的牌
+    groups:
+    - id: mtr-3.14-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.14-b001
+        en: |-
+          If a card must be tapped or flipped, it must be turned approximately 90 degrees (tapped) or 180 degrees (flipped), whichever is appropriate.
+        zh: 若必须横置或倒转一张牌，则牌手须根据相应动作将牌转动大约90度（横置）或180度（倒转）。
+        extras:
+        - en: |-
+            Flipped cards were introduced, and currently only in, Kamigawa Block. They consist of a card with two rules boxes, and have a condition to flip them from their original characteristics to alternate characteristics.
+
+            Whether a card is tapped or flipped is a status of the game, and needs to be clearly communicated with the opponent, and visual standards are very helpful in this regard.
+          zh: |-
+            倒转牌仅出现在神河环境中。它具有两个规则框，并具有将原特征转至另一组特征的倒转条件。
+
+            牌是否横置或倒转属于游戏状态，需要明确地向对手传达，在这方面保持统一的视觉标准非常有帮助。
+  - id: mtr-3.15
+    chapter: '3.15'
+    en: Graveyard Order
+    zh: 坟墓场的顺序
+    groups:
+    - id: mtr-3.15-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.15-b001
+        en: |-
+          In formats involving only cards from Urza’s Saga™ and later, players may change the order of their graveyard at any time.
+        zh: 在只使用克撒传及于其后发行的系列之赛制中，牌手可调整其坟墓场中牌的顺序。
+        extras:
+        - en: |-
+            The set Stronghold has the last cards that care about graveyard order. Urza’s Saga is the set following that, so in any format that only includes later sets players may change the order of their graveyard.
+
+            The most common formats for which players cannot change a graveyard’s order are Legacy & Vintage.
+          zh: |-
+            天罗城塞系列是最后一个印有关乎坟墓场顺序的牌之系列。克撒传是天罗城塞的下一个系列，所以仅包含该系列之后系列的赛制并不关心坟墓场的顺序。
+
+            薪传和特选是最常见的不能改变坟墓场顺序的赛制。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.15-b002
+        en: A player may not change the order of an opponent’s graveyard.
+        zh: 牌手不得改变其对手坟墓场的顺序。
+        extras:
+        - en: |-
+            A player may look through an opponent’s graveyard whenever they like. Players should always ask for the owner’s permission before touching cards that do not belong to them, as a courtesy. If a player is looking through a graveyard extra care should be taken to not mix any of the cards with their hand.
+          zh: 牌手可以在任意时刻查看对手的坟墓场。由于查看的不是自己的牌，出于礼貌，他必须经得对手的同意。在牌手查看坟墓场时，应时刻注意不要将牌与自己的手牌混淆。
+  - id: mtr-3.16
+    chapter: '3.16'
+    en: Sideboard
+    zh: 备牌
+    groups:
+    - id: mtr-3.16-g001
+      type: paragraph
+      blocks:
+      - id: mtr-3.16-b001
+        en: |-
+          A sideboard is a group of additional cards the player may use to modify their deck between games of a match. The player may use these cards in their main deck during all games after the first one in a match.
+        zh: |-
+          备牌是一组不属于牌手套牌之内的额外牌张。在一局对局中两盘游戏之间，牌手可利用其备牌里的牌来变更其套牌的组成。牌手可在一局对局中的第一盘游戏之后在自己的主牌中使用这些牌。
+        extras:
+        - en: |-
+            It is advisable for a player to have their sideboard sleeved in the same manner as their main deck in order to quickly swap cards.
+          zh: 强烈建议牌手将备牌套上与主牌同样的牌套（或都不使用牌套）来节约换备牌的时间。
+    - id: mtr-3.16-g002
+      type: paragraph
+      blocks:
+      - id: mtr-3.16-b002
+        en: |-
+          Before each game begins, players must present their sideboard (if any) face down. Opponents may count the number of cards in their opponent’s sideboard at any time. Players are not required to reveal how many cards they have swapped from their main deck to their sideboard and do not have to swap one for one.
+        zh: |-
+          在每盘游戏开始之前，牌手必须将自己的备牌（若有）以面朝下的方式呈示于对手。牌手可随时清点其对手备牌的张数。牌手不需告知对手自己在套牌和备牌之间交换了几张牌，且不需一一对应交换。
+        extras:
+        - en: |-
+            In the U.S. most players do not present their sideboard, instead leave it in their deck box, separate from their mainboard. This, like requiring opponents to shuffle as opposed to cutting a deck, is required but not strictly enforced. Deck Problem in the IPG also tells us that any other cards kept with the sideboard are considered part of the sideboard. This is one of the common occurrences of Deck Problems and why it is important for players to keep their deck separate from any other cards, for example last night’s draft rares. To avoid a penalty players can present the sideboard, which is common in some countries.
+          zh: |-
+            在美国，许多牌手没有呈现备牌的习惯，而是让它留在牌盒里与主牌做好区分。这和让对手认真洗牌而仅仅简单切一下牌库类似，即使我们要求牌手这样做，却没有强制执行。IPG中关于套牌问题的内容说明：与备牌在一起的其他牌会被视作备牌的一部分。这种问题屡见不鲜：牌手将之前轮抽得到的金牌和今天比赛用的备牌放在了一起。为了避免这种判罚，呈现备牌是一种好方法，一些国家的牌手也会习惯这么做。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.16-b003
+        en: |-
+          Other items (token cards, double-faced card represented in the deck by a substitute card, etc.) should be kept separate from the sideboard during game play.
+        zh: 在游戏过程中，应保证其他物品（衍生物牌、套牌中使用辅助牌代表的双面牌等等）与备牌之间有显著区隔。
+        extras:
+        - en: |-
+            The Deck/Decklist portion of the IPG instructs that these “other items” must be sleeved differently than the main deck/sideboard. We want to keep them separate so there is no confusion and less opportunity for abuse.
+          zh: IPG中有关套牌/套牌登记表的内容要求“其他物品”需与主牌/备牌有所区分。我们希望将它们分开，以避免混淆，并减少滥用的机会。
+    - id: mtr-3.16-g003
+      type: paragraph
+      blocks:
+      - id: mtr-3.16-b004
+        en: |-
+          During a game, players may look at their own sideboard, keeping it clearly distinguishable from other cards at all times. If a player gains control of another player, they may not look at that player’s sideboard, nor may they have that player access their sideboard.
+        zh: |-
+          于游戏进行的过程当中，牌手可检视自己的备牌，但须保证属于备牌的牌与其他的卡牌之间有明显区隔。如果某牌手获得了其他牌手的操控权，他不得检视后者的备牌，也不得要求后者查看其备牌。
+        extras:
+        - en: |-
+            It is very important that players keep the cards separate from their main deck. If at some point the sideboard becomes intermingled with the main deck there is no way to verify the legality of the deck and penalties may apply. Players are not allowed to look at another player’s sideboard while they control them.  This is because players may wish to scope if it means protecting their super secret sideboard tech. It also saves time, because you know the controlling player would want to see the sideboard and write down its contents, or see what they took out of their main.
+          zh: |-
+            区分主牌与备牌是非常重要的。如果主牌和备牌混在了一起，无法区分套牌当前的合法性，那么自然会得到判罚。牌手不能在操控另一位牌手时查看其备牌。这是因为牌手可能希望保护自己超级机密的备牌策略。此外，这也节省了时间，不然操控者可能会想查看备牌并记录内容，或者查看从主牌换出了哪些牌。
+    - id: mtr-3.16-g004
+      type: paragraph
+      blocks:
+      - id: mtr-3.16-b005
+        en: |-
+          The deck and sideboard must each be returned to their original compositions before the first game of each match.
+        zh: 在每局的第一盘游戏开始之前，牌手必须将自己的套牌与备牌还原至各自的原始组成。
+        extras:
+        - en: |-
+            This rule applies to all Constructed format events, including ones run at Regular Rules Enforcement Level, not only those that use decklists. This is only required for Limited format events if deck registration sheets are being used, otherwise the events are considered to be continuous construction.
+          zh: 此规则适用于所有构筑比赛，包括一般级别的比赛，而不仅仅是使用牌表的比赛。而在限制赛中，只有在使用牌表的情况下才需要还原主牌。
+    - id: mtr-3.16-g005
+      type: paragraph
+      blocks:
+      - id: mtr-3.16-b006
+        en: |-
+          Restrictions on the composition and use of a sideboard can be found in the deck construction rules for a particular format type.
+        zh: 关于备牌之组成和使用的要求与限制，请参见相应赛制的套牌构成规则。
+        extras:
+        - en: |-
+            Most Constructed formats use a maximum 15 card sideboard. In Limited format events the cards that are in your card pool but not in the main deck are considered the sideboard, along with an unlimited number of basic lands.
+          zh: 绝大多数的构组赛使用最多15张备牌。在限制赛中，牌池中不在主牌中使用的牌都算作备牌，另外还包括任意数量的基本地。
+    - id: mtr-3.16-g006
+      type: paragraph
+      blocks:
+      - id: mtr-3.16-b007
+        en: |-
+          If a penalty causes a player to lose the first game in a match before that game has begun, or the first game is intentionally drawn before any cards are played, neither player may use cards from their sideboard for the next game in the match.
+        zh: |-
+          若出现了以下两种情况之一，双方牌手均不得在该局对局的次盘游戏中使用备牌：(1)在游戏开始之前，便有牌手因处罚而输掉了该局中的第一盘游戏；或(2)双方牌手未使用任何牌就已约和第一盘游戏。
+        extras:
+        - en: |-
+            In this case there has not been a “first game” for this match so there is no sideboarding as the next game will be the “first game”. Note that this exception applies when a game loss penalty is given before the first game has started, not the second or any subsequent games. A Deck/Decklist Problem or Marked Cards upgraded Game Loss penalty discovered during a deck check are the common ways this can happen.
+          zh: |-
+            在这种情况下比赛为进行过“第一盘游戏”，所以接下来的一盘将会成为“第一盘游戏”。值得注意的是，这种例外只在第一盘游戏开始之前就给出判罚的情形下才适用，而不适用于第二盘或之后的游戏。这种情形通常是由于套牌/套牌等记表问题或者有记号的牌判罚升级所造成的。
+        joinAfter:
+          en: ' '
+          zh: ''
+      - id: mtr-3.16-b008
+        en: |-
+          If players restart a game due to an in-game effect, the composition of their decks must remain the same for the restarted game.
+        zh: 若有牌手因游戏中效应之故重新开始了游戏，则双方牌手的套牌组成在这盘重新开始的游戏中应保持不变。
+        extras:
+        - en: |-
+            Currently Karn Liberated’s ultimate is the only ability that can restart a game. See CR 719 for additional rules on restarting the game.
+          zh: 目前，重获自由的卡恩的大招是唯一一个会重新开始游戏的异能。详见CR 719了解关于重新开始游戏的额外规则。（译注：现在是CR 726）
+    - id: mtr-3.16-g007
+      type: paragraph
+      blocks:
+      - id: mtr-3.16-b009
+        en: |-
+          Certain cards refer to “a (card or cards) from outside the game.” In tournament play, these are cards in that player’s sideboard.
+        zh: 某些牌会提及「在游戏外由你拥有的牌」。在比赛中，「在游戏外由你拥有的牌」指该牌手备牌里的牌。
+        extras:
+        - en: |-
+            In order to prevent any debates or weird rulings over what defines “a card you own”, tournament play now strictly goes by this rule. This usually comes up in the form of “Wish” cards, which let you put such a card into your hand from your sideboard.
+          zh: 为了避免“你拥有的牌“这个用语所产生的争议，如今以这条规则来明确了此定义。这通常是由“祈愿”类的牌所造成，它们会让你将备牌加入手牌。

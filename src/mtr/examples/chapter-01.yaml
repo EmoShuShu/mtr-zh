@@ -1,0 +1,88 @@
+chapter:
+  id: mtr-1
+  chapter: "1."
+  en: "Tournament Fundamentals"
+  zh: "比赛基本要素"
+  sections:
+    - id: mtr-1.1
+      chapter: "1.1"
+      en: "Tournament Types"
+      zh: "比赛种类"
+      groups:
+        - id: mtr-1.1-g001
+          type: paragraph
+          blocks:
+            - id: mtr-1.1-b001
+              en: |-
+                There are two types of sanctioned Magic tournaments: rated and casual.
+              zh: |-
+                万智牌认证赛事分为两种：积分赛和休闲赛。
+
+        - id: mtr-1.1-g002
+          type: paragraph
+          blocks:
+            - id: mtr-1.1-b002
+              en: |-
+                There are two major tournament formats: Limited and Constructed.
+              zh: |-
+                主要的赛制有两种——限制赛和构组赛。
+              extras:
+                - en: |-
+                    Limited formats include any format in which a player constructs a deck during the event.
+
+                    Draft and Sealed Deck are common examples.
+                  zh: |-
+                    限制赛包括任何需要牌手在比赛过程中构筑套牌的赛制。
+
+                    轮抽赛和现开赛是常见的例子。
+
+            - id: mtr-1.1-b003
+              en: |-
+                Each has rules specific to its format. In Limited tournaments, all product for play is provided during the tournament. In Constructed tournaments, players compete using decks prepared beforehand.
+              zh: |-
+                每个赛制都有自身特有的规则。在限制比赛中，用于进行比赛的所有产品都是在比赛过程中提供。在构组比赛中，牌手使用赛前所准备好的套牌来参赛。
+              extras:
+                - en: |-
+                    Constructed formats include any format in which a player constructs their deck before the event.
+                  zh: |-
+                    构组赛包括任何需要牌手在比赛前构组套牌的赛制。
+
+    - id: mtr-1.6
+      chapter: "1.6"
+      en: "Tournament Organizer"
+      zh: "比赛主办人"
+      groups:
+        - id: mtr-1.6-g001
+          type: paragraph
+          blocks:
+            - id: mtr-1.6-b001
+              en: |-
+                The Tournament Organizer of a tournament is responsible for all tournament logistics including:
+              zh: |-
+                比赛主办人负责所有的比赛后勤工作，包括：
+
+        - id: mtr-1.6-g002
+          type: list
+          blocks:
+            - id: mtr-1.6-b002
+              en: "* Sanctioning the event."
+              zh: "* 规划认证赛事。"
+              extras:
+                - en: |-
+                    This is obtained by sanctioning the event in EventLink through the creation of the event. Each event has a unique sanctioning number.
+                  zh: |-
+                    这项认证通过在EventLink中创建比赛即可获得。每场比赛都会有一个唯一的认证号。
+
+            - id: mtr-1.6-b003
+              en: "* Providing a site for the tournament that meets the tournament’s expected needs."
+              zh: "* 为比赛提供满足需求的场所。"
+              extras:
+                - en: |-
+                    The organizer must provide enough play space for the expected number of players.
+                  zh: |-
+                    比赛主办人必须提供一个能够容纳预期牌手数量的场地。
+
+            - id: mtr-1.6-b004
+              en: "* Advertising the tournament in advance of the tournament date."
+              zh: "* 在比赛日前宣传本次比赛。"
+

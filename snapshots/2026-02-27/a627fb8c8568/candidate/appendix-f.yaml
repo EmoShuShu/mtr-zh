@@ -1,0 +1,65 @@
+chapter:
+  id: mtr-appendix-f
+  chapter: Appendix F
+  en: Rules Enforcement Levels of Programs
+  zh: 各比赛计划的执法严格度
+  groups:
+  - id: mtr-appendix-f-g001
+    type: paragraph
+    blocks:
+    - id: mtr-appendix-f-b001
+      en: |-
+        The following chart indicates the appropriate (minimum) Rules Enforcement level for various programs:
+      zh: 下表为各比赛计划对应（最低）的执法严格度：
+  - id: mtr-appendix-f-g002
+    type: table
+    blocks:
+    - id: mtr-appendix-f-b002
+      en: |-
+        | Program | Rules Enforcement Level |
+        | --- | --- |
+      zh: |-
+        | 比赛计划 | 执法严格度 |
+        | --- | --- |
+    - id: mtr-appendix-f-b003
+      en: '| Eternal Weekend | Competitive |'
+      zh: '| 永恒周末） | 竞争 |'
+    - id: mtr-appendix-f-b004
+      en: '| Friday Night Magic | Regular |'
+      zh: '| 周五认证赛） | 一般 |'
+    - id: mtr-appendix-f-b005
+      en: '| Game Day | Regular (Competitive recommended) |'
+      zh: '| 欢乐日） | 一般（建议竞争） |'
+    - id: mtr-appendix-f-b006
+      en: '| Launch Party | Regular |'
+      zh: '| 发售赛） | 一般 |'
+    - id: mtr-appendix-f-b007
+      en: '| Limited Championship | Professional |'
+      zh: ''
+    - id: mtr-appendix-f-b008
+      en: '| Prerelease | Regular |'
+      zh: '| 售前赛） | 一般 |'
+    - id: mtr-appendix-f-b009
+      en: '| Pro Tour | Professional |'
+      zh: '| 专业赛） | 专业 |'
+    - id: mtr-appendix-f-b010
+      en: '| Pro Tour Qualifier | Competitive |'
+      zh: '| 专业赛预选赛） | 竞争 |'
+    - id: mtr-appendix-f-b011
+      en: '| Regional Championships | Competitive |'
+      zh: '| 区域冠军赛） | 竞争 |'
+    - id: mtr-appendix-f-b012
+      en: '| Regional Championship Qualifiers | Competitive |'
+      zh: '| 区域冠军赛预选赛） | 竞争 |'
+    - id: mtr-appendix-f-b013
+      en: '| Spotlight Series – Day 1 | Competitive |'
+      zh: ''
+    - id: mtr-appendix-f-b014
+      en: '| Spotlight Series – Day 2 | Professional |'
+      zh: ''
+    - id: mtr-appendix-f-b015
+      en: '| Store Championship | Regular (Competitive recommended) |'
+      zh: '| 店家冠军赛） | 一般（建议竞争） |'
+    - id: mtr-appendix-f-b016
+      en: '| World Championship | Professional |'
+      zh: '| 世界冠军赛） | 专业 |'
