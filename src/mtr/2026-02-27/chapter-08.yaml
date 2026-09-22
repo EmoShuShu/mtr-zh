@@ -68,7 +68,7 @@ chapter:
       - id: mtr-8.3-b001
         en: |-
           The rules for team communication are the same as those for Two-Headed Giant. See section 4.6 for more details.
-        zh: 团队交流之规则与双头巨人之交流规则相同。团队交流规则详见第4.6节。
+        zh: 团队交流之规则与双头巨人之交流规则相同。详细规则见第4.6节。
   - id: mtr-8.4
     chapter: '8.4'
     en: Unified Deck Construction Rules

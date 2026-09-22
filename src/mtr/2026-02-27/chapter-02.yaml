@@ -15,7 +15,7 @@ chapter:
       - id: mtr-2.1-b001
         en: |-
           A match consists of a series of games that are played until one side has won a set number of games, usually two. Drawn games do not count toward this goal.
-        zh: 一局万智牌对局包含有一系列盘数的游戏，双方持续进行每盘游戏，直到有任何一方游戏获胜的盘数达到一定数量为止,通常此数量为二。以平局告终的游戏并不会计入此数量。
+        zh: 一局对局包含有一系列盘数的游戏，双方持续进行每盘游戏，直到有任何一方游戏获胜的盘数达到一定数量为止,通常此数量为二。以平局告终的游戏并不会计入此数量。
         extras:
         - en: |-
             This rule is often incorrectly abbreviated ‘best of three’.  While it is true that most matches are usually won as 2-0 or 2-1, draws can result in forth or even fifth games being played.  Two Headed Giant matches, unlike regular two player matches, are played till one team has won a match.
@@ -277,7 +277,7 @@ chapter:
       - id: mtr-2.4-b004
         en: |-
           If the active player has already indicated that they would like to pass the turn when the time limit is reached, that is considered to be in the next turn.
-        zh: 如果在达到对局时间限制时，主动牌手已表明要让过回合，则视作已进入对手的下一个回合。
+        zh: 如果在达到对局时间限制时，主动牌手已表明要让过回合，则视作已进入下一个回合。
         extras:
         - en: |-
             This rule is to handle the case where the opponent is “thinking” during the end of a players turn, in order for this tiny fraction of a turn to count as turn zero.
@@ -530,7 +530,7 @@ chapter:
         en: |-
           Generally, decklists are not public information and are not shared with other players during a tournament. At Professional Rules Enforcement Level tournaments (World Championship, Pro Tour, Limited Championship, Spotlight Series, Regional Championships), opponents’ decklists will be provided to players.
         zh: |-
-          通常情况下，套牌登记表不属于公开信息，在比赛过程中不会对其它的牌手开放阅览。在专业级别比赛中（世界冠军赛、专业赛及区域冠军赛）中，对手之套牌登记表将会提供给牌手查阅。
+          通常情况下，套牌登记表不属于公开信息，在比赛过程中不会对其它的牌手开放阅览。在专业级别比赛中（世界冠军赛、专业赛、限制冠军赛、聚光灯系列赛及区域冠军赛）中，对手之套牌登记表将会提供给牌手查阅。
         extras:
         - en: |-
             The reason certain events share decklists is to negate the disadvantage some players gain as a result of event coverage during the Swiss portion of the tournament. In the single-elimination playoffs of limited events, the chances of your opponent gaining information about your decklist are a lot smaller. As such, we only provide decklists for constructed-format events. Star City Games Open Series have also allowed Top 8 players to view the opponents decklists due to coverage.
@@ -600,7 +600,7 @@ chapter:
         en: |-
           In larger, Premier-level tournaments (such as World Championship, Pro Tour, Limited Championship, Spotlight Series, and Regional Championships), with prior approval, the Head Judge may designate additional Appeals Judges who are also empowered to hear appeals. They will be wearing the same uniform as the Head Judge.
         zh: |-
-          于大型的重要比赛级别比赛当中(比如专业赛，或地区冠军赛等)，在事前取得许可的情况下，主审可指定额外的申诉裁判，此类裁判也具有受理申诉之权利。申诉裁判穿着的制服与主审相同。
+          于大型的重要比赛级别比赛当中(比如世界冠军赛、专业赛、限制冠军赛、聚光灯系列赛及区域冠军赛等)，在事前取得许可的情况下，主审可指定额外的申诉裁判，此类裁判也具有受理申诉之权利。申诉裁判穿着的制服与主审相同。
         extras:
         - en: |-
             These other judges are called Appeals Judges, and often have the same certifications as the event Head Judge. Additionally, in non-premier level events, the HJ may designate a backup to handle appeals while they are on break, or in the bathroom or in an investigation.
@@ -988,7 +988,7 @@ chapter:
         en: |-
           The Head Judge of a World Championship, Pro Tour, or Limited Championship tournament may, in their sole discretion, use video replay to assist in making rulings during a match. Video replays may not be used to assist in making rulings in tournaments other than a World Championship, Pro Tour, or Limited Championship tournament. Players may not request that a judge consult a video replay. Video replays may also be used for investigative purposes at a later time.
         zh: |-
-          世界冠军赛或专业赛的主审可根据自身判断借助视频回放来辅助自己在对局过程中进行判罚。在世界冠军赛或专业赛之外的比赛中，不得使用视频回放来协助进行判罚。牌手不得要求裁判参考视频回放。在比赛结束之后，若系调查需要，也可利用视频回放进行。
+          世界冠军赛、专业赛或限制冠军赛的主审可根据自身判断借助视频回放来辅助自己在对局过程中进行判罚。在世界冠军赛、专业赛或限制冠军赛之外的比赛中，不得使用视频回放来协助进行判罚。牌手不得要求裁判参考视频回放。在比赛结束之后，若系调查需要，也可利用视频回放进行。
         extras:
         - en: |-
             The use of video to make a ruling is severely limited due to the consistency of the recording and the time added to even mundane investigations.  At the larger events where the stakes and visibility are amongst the highest, and the quality and availability of video is consistent, the Head Judge may utilize the option to use video replay to make a decision.  The decision to review video has to be at the HJs sole discretion because otherwise, players would call for a video review any time a judge call did not end up in their favor.

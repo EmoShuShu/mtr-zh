@@ -555,7 +555,7 @@ chapter:
       - id: mtr-4.2-b022
         en: |-
           * A player is assumed to be attacking another player with their creatures and not any planeswalkers that player may control.
-        zh: '* 未加特别说明时，认为进攻牌手生物的进攻对象为其他牌手，而非后者可能操控的鹏洛客。'
+        zh: '* 默认进攻牌手生物的进攻对象为其他牌手，而非后者可能操控的鹏洛客。'
         extras:
         - en: |-
             This is true for all attacking creatures that player controls, including any creatures put onto the battlefield attacking. The attacking player must explicitly state which creatures, if any, are attacking any planeswalkers controlled by the defending player as part of the turn-based actions of the declare attackers step (CR 508.1b). A player cannot wait to find out which of their creatures are unblocked before declaring that they are attacking a planeswalker.
@@ -1049,6 +1049,12 @@ chapter:
       - id: mtr-4.8-b010
         en: 3. A player says “Go. Wait, land, go.”
         zh: "3\\.\t牌手说「过。等等，下地，过。」"
+        extras:
+        - en: |-
+            Another good reading regarding Reversing Decisions can be found [here](https://blogs.magicjudges.org/whatsupdocs/2018/10/02/reversing-decisions/)!
+          zh: |-
+            关于反悔的更多参考资料可以在[这里](https://blogs.magicjudges.org/whatsupdocs/2018/10/02/reversing-decisions/)找到。
+
   - id: mtr-4.9
     chapter: '4.9'
     en: Day/Night

@@ -128,7 +128,7 @@ chapter:
         en: |-
           At Pro Tour, Limited Championship, and World Championship tournaments, competitors are advanced to the playoff rounds before the end of the Swiss rounds (and receive byes for the remaining Swiss rounds) if they have achieved the announced number of match points required to advance to the playoff rounds. In this case, competitors in the Top 8 playoff are seeded in order from 1st through 8th. Seeding is determined by:
         zh: |-
-          在专业赛和世界冠军赛上，会事先宣布进入决胜轮所需的对局积分，选手在瑞士式轮阶段结束前获得相应的对局积分即可晋级决胜轮（并在后续的瑞士式轮次中获得轮空）。在这种情况下，进入前8名决胜轮的选手会按照第1名至第8名进行排名。排名顺序根据以下原则确定：
+          在专业赛、限制冠军赛及世界冠军赛上，会事先宣布进入决胜轮所需的对局积分，选手在瑞士式轮阶段结束前获得相应的对局积分即可晋级决胜轮（并在后续的瑞士式轮次中获得轮空）。在这种情况下，进入前8名决胜轮的选手会按照第1名至第8名进行排名。排名顺序根据以下原则确定：
     - id: mtr-10.4-g003
       type: list
       blocks:
@@ -238,4 +238,4 @@ chapter:
       - id: mtr-10.4-b017
         en: |-
           Premier Events include the following tournaments: Magic: The Gathering World Championship, Pro Tour, Limited Championship, Pro Tour Qualifier, Spotlight Series, Regional Championship, and Regional Championship Qualifier
-        zh: 下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、专业赛预选赛、Spotlight系列赛、区域冠军赛、区域冠军赛预选赛。
+        zh: 下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、限制冠军赛、专业赛预选赛、聚光灯系列赛、区域冠军赛、区域冠军赛预选赛。

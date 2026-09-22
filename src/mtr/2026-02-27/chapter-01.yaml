@@ -312,21 +312,21 @@ chapter:
       - id: mtr-1.4-b020
         en: |-
           Premier Events include the following tournaments: Magic: The Gathering World Championship, Pro Tour, Magic: The Gathering Limited Championship, Pro Tour Qualifier, Spotlight Series, Regional Championship, Regional Championship Qualifier.
-        zh: 下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、专业赛预选赛、Spotlight系列赛、区域冠军赛、区域冠军赛预选赛。
+        zh: 下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、万智牌限制冠军赛、专业赛预选赛、聚光灯系列赛、区域冠军赛、区域冠军赛预选赛。
     - id: mtr-1.4-g021
       type: paragraph
       blocks:
       - id: mtr-1.4-b021
         en: |-
           Some tournaments have additional criteria regarding player and tournament official eligibility (e.g., invitation-only tournaments, such as World Championship, Pro Tour, Limited Championship, and Regional Championships).
-        zh: 某些比赛在参赛者资格或是担任比赛工作人员方面具有额外的限制条件（如专业赛及区域冠军赛等只对受邀牌手开放的比赛）。
+        zh: 某些比赛在参赛者资格或是担任比赛工作人员方面具有额外的限制条件（如世界冠军赛、专业赛、限制冠军赛及区域冠军赛等只对受邀牌手开放的比赛）。
     - id: mtr-1.4-g022
       type: paragraph
       blocks:
       - id: mtr-1.4-b022
         en: |-
           The Premier Tournament Invitation Policy defines specific eligibility rules with regards to certain types of invitation-only Premier Tournaments.
-        zh: 针对某些只对受邀牌手开放的比赛（如专业赛及区域冠军赛等），《重要比赛邀请方针》中规定了如何获取资格的规则。
+        zh: 针对某些只对受邀牌手开放的比赛，《重要比赛邀请方针》中规定了如何获取资格的规则。
     - id: mtr-1.4-g023
       type: paragraph
       blocks:
@@ -365,7 +365,7 @@ chapter:
       - id: mtr-1.5-b002
         en: |-
           For tournaments run using the EventLink tournament management software, players must provide a Wizards Account and/or a first and last name. Players without a Wizards Account should obtain one from https://myaccounts.wizards.com.
-        zh: 对于使用EventLink软件运行的赛事，牌手必须提供威士智账号和/或姓名。没有威士智账号的牌手可以通过注册。
+        zh: 对于使用EventLink软件运行的赛事，牌手必须提供威士智账号和/或姓名。没有威士智账号的牌手可以通过 https://myaccounts.wizards.com 注册。
         extras:
         - en: |-
             Eventlink is the current software for store level events.  It prefers Wizards Account information.  First/Last name can cause problems.

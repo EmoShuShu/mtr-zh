@@ -157,7 +157,7 @@ chapter:
         en: |-
           Players may use any Authorized Magic Game Cards from Magic: The Gathering expansions, core sets, special sets, supplements, and promotional printings. Authorized Game Cards must be regulation-sized, genuine Magic cards publicly released by Wizards of the Coast. Cards that are not Authorized Game Cards are prohibited in all sanctioned events.
         zh: |-
-          牌手可使用出自万智牌扩充系列、核心系列、特殊系列、补充版及推广印次中的「认可游戏牌张」。认可牌张必须是规定大小的，由威士智公开发行的正版万智牌张。不是认可游戏牌张的牌在所有认证赛事中均不可使用。
+          牌手可使用出自万智牌扩充系列、核心系列、特殊系列、补充版及推广印次中的「认可万智牌游戏牌张」。认可牌张必须是规定大小的，由威士智公开发行的正版万智牌张。不是认可游戏牌张的牌在所有认证赛事中均不可使用。
         extras:
         - en: |-
             This section of the MTR defines authorized cards.  It used to spell out what cards were allowed, however Wizards has printed so many ‘whacky’ things in the last several years, that it has become easier to define what is not an Authorized Card, than what is.  Essentially we start with the universe of ‘everything printed by Wizards’, and then define groups of “no, not these”.
@@ -287,7 +287,7 @@ chapter:
         en: |-
           A proxy card is used during competition to represent an otherwise legal Magic card or substitute card that can no longer be included in a deck without the deck being marked. For a proxy to be issued, the card it is replacing must meet at least one of the following criteria:
         zh: |-
-          代牌指在比赛过程中用以代表符合规定之万智牌牌张或列表牌的用具。当在套牌中使用原本牌张会导致套牌出现明显标记的情况下，便可用代牌来代替之。可使用代牌来代替之牌张，须至少满足以下条件之一：
+          代牌指在比赛过程中用以代表符合规定之万智牌牌张或辅助牌的用具。当在套牌中使用原本牌张会导致套牌出现明显标记的情况下，便可用代牌来代替之。可使用代牌来代替之牌张，须至少满足以下条件之一：
     - id: mtr-3.4-g002
       type: list
       blocks:
@@ -485,13 +485,13 @@ chapter:
       blocks:
       - id: mtr-3.7-b002
         en: '* Magic: The Gathering | Teenage Mutant Ninja Turtles™ February 27, 2026'
-        zh: ''
+        zh: '* 万智牌 | 忍者神龟 2026年2月27日'
     - id: mtr-3.7-g003
       type: list
       blocks:
       - id: mtr-3.7-b003
         en: '* Secrets of Strixhaven™ April 17, 2026'
-        zh: ''
+        zh: '* 斯翠海文的秘密 2026年4月17日'
     - id: mtr-3.7-g004
       type: paragraph
       blocks:

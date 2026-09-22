@@ -39,14 +39,14 @@ chapter:
         en: |-
           Cards must be received directly from tournament officials. This product must be new and previously unopened. Pro Tour, Limited Championship, Spotlight Series, Regional Championships, and World Championship tournaments may have had play boosters opened in order to stamp them. Each player (or team) must be given exactly the same quantity and type of product as all other players participating in the tournament. For example, if one player receives three Murders at Karlov Manor play boosters for a Booster Draft, all other players must also receive three Murders at Karlov Manor play boosters.
         zh: |-
-          牌手收到的牌都必须直接发放自比赛工作人员。此产品必须是全新的、且包装未被打开过。在专业赛、区域冠军赛及世界冠军赛中，所使用的补充包可能已事先拆封，以在其上盖好戳记。发给每位牌手（或团队）的产品之数量和种类，都必须与其他参加此场比赛的牌手所得到的相同。举例来说，如果在补充包轮抽时，发给了某位牌手三包卡洛夫庄园谋杀案的常规补充包，则必须发给所有牌手三包卡洛夫庄园谋杀案的常规补充包。
+          牌手收到的牌都必须直接发放自比赛工作人员。此产品必须是全新的、且包装未被打开过。在专业赛、限制冠军赛、聚光灯系列赛、区域冠军赛及世界冠军赛中，所使用的常规补充包可能已事先拆封，以在其上盖好戳记。发给每位牌手（或团队）的产品之数量和种类，都必须与其他参加此场比赛的牌手所得到的相同。举例来说，如果在补充包轮抽时，发给了某位牌手三包卡洛夫庄园谋杀案的常规补充包，则必须发给所有牌手三包卡洛夫庄园谋杀案的常规补充包。
     - id: mtr-7.2-g002
       type: paragraph
       blocks:
       - id: mtr-7.2-b002
         en: |-
           Only cards from the expansions of the play boosters opened (and only cards opened or drafted in that player’s pool) may be used in a player’s deck. The following are exceptions to this rule:
-        zh: 只有属于比赛过程中打开之所有补充包系列中的牌（且只有在该牌手开到或轮抽得到的牌池中的牌）才能在牌手的套牌当中使用。 此规则的例外情形如下：
+        zh: 只有属于比赛过程中打开之所有常规补充包系列中的牌（且只有在该牌手开到或轮抽得到的牌池中的牌）才能在牌手的套牌当中使用。 此规则的例外情形如下：
     - id: mtr-7.2-g003
       type: list
       blocks:
@@ -61,28 +61,28 @@ chapter:
       - id: mtr-7.2-b004
         en: |-
           * Non-basic lands from the Return to Ravnica and Gatecrash expansions are allowed when opened in Dragon’s Maze draft boosters.
-        zh: '* 从巨龙迷城补充包打开得到之来自再返拉尼卡与兵临古城这两个扩展系列的非基本地牌可以使用。'
+        zh: '* 从巨龙迷城轮抽补充包打开得到之来自再返拉尼卡与兵临古城这两个扩展系列的非基本地牌可以使用。'
     - id: mtr-7.2-g005
       type: list
       blocks:
       - id: mtr-7.2-b005
         en: |-
           * Non-basic lands from the Khans of Tarkir expansion are allowed when opened in Fate Reforged draft boosters.
-        zh: '* 从龙命殊途补充包打开得到之来自鞑契可汗此扩展系列的非基本地牌可以使用。'
+        zh: '* 从龙命殊途轮抽补充包打开得到之来自鞑契可汗此扩展系列的非基本地牌可以使用。'
     - id: mtr-7.2-g006
       type: list
       blocks:
       - id: mtr-7.2-b006
         en: |-
           * Non-basic lands from the Zendikar Expeditions set are allowed when opened in Battle for Zendikar or Oath of the Gatewatch draft boosters.
-        zh: '* 从再战赞迪卡或守护者誓约补充包打开得到之来自赞迪卡远探系列的非基本地牌可以使用。'
+        zh: '* 从再战赞迪卡或守护者誓约轮抽补充包打开得到之来自赞迪卡远探系列的非基本地牌可以使用。'
     - id: mtr-7.2-g007
       type: list
       blocks:
       - id: mtr-7.2-b007
         en: |-
           * Cards from a Masterpiece Series are allowed when opened in draft boosters associated with that series.
-        zh: '* 从含有逸品重现牌张之相关系列打开的该类牌张可以使用。'
+        zh: '* 从含有逸品重现牌张之相关系列的轮抽补充包打开得到之该类牌张可以使用。'
     - id: mtr-7.2-g008
       type: list
       blocks:
@@ -111,7 +111,7 @@ chapter:
         en: |-
           Six play boosters per player are recommended for individual format Sealed Deck tournaments and 3 play boosters per player for individual Booster or Team Rochester Draft tournaments. For the recommended product mix for the current block, refer to Appendix D.
         zh: |-
-          在此建议，进行个人现开赛时，发给每位牌手6包补充包；进行个人轮抽或团队罗彻斯特轮抽赛时，发给每位牌手3包补充包。关于当前环境下所推荐的产品构成，请参见附录 D。
+          在此建议，进行个人现开赛时，发给每位牌手6包常规补充包；进行个人轮抽或团队罗彻斯特轮抽赛时，发给每位牌手3包常规补充包。关于当前环境下所推荐的产品构成，请参见附录 D。
     - id: mtr-7.2-g012
       type: paragraph
       blocks:
@@ -343,19 +343,21 @@ chapter:
         extras:
         - en: |-
             Even though players can look at their picks in Regular Rules Enforcement Level, they must still draft at a reasonable pace. Please reinforce to players that they need to keep their picks and pack separate. Players are given a specific amount of time to examine their picks between each pack. For specific timing please see MTR Appendix B.
-
-            The last part about pick order is to deal with double-faced cards. Let’s say player 5 is waiting to pick based on player X’s pick. If X is from 2 to 4, 5 picks first. If X is from 6 to 8, X picks first. If X = 1, then X picks first.
           zh: |-
             即使在一般级别的比赛中，牌手可以看自己抓到的牌，但是他们也需以恰当的速度进行轮抽。向牌手申明，他们需将待抓的牌和已抓的牌分开。在抽每包牌之间，牌手会有更多的时间来检视已经抓到的牌。关于时间的说明，详见附录B。
-
-            关于抓牌顺序的说明，是为了避免双面牌带来的问题。假设牌手5在基于牌手X的选择来抓牌。如果X在2到4之间，那么牌手5先决定要抓的牌。如果X在6到8之间，X先决定要抓的牌。如果X是1，那么X先决定要抓的牌。
     - id: mtr-7.7-g004
       type: paragraph
       blocks:
       - id: mtr-7.7-b004
         en: |-
           If the draft is not being timed, and two players do not wish to make a pick before the other player, the player closer to providing the other player with the pack picks first. If the players are equidistant, then the player in the lower seat number picks first.
-        zh: ''
+        zh: |-
+          若轮抽并未计时，且有两位牌手均不愿在对方之前作出抽牌的决定，则由在传递方向上较为靠近对方的牌手先作出抽牌决定。若两位牌手之间距离相等，则由座号较小的牌手先作出抽牌决定。'
+        extras:
+        - en: |-
+            The last part about pick order is to deal with double-faced cards. Let’s say player 5 is waiting to pick based on player X’s pick. If X is from 2 to 4, 5 picks first. If X is from 6 to 8, X picks first. If X = 1, then X picks first.
+          zh: |-
+            关于抽牌顺序的说明，是为了避免双面牌带来的问题。假设牌手5在基于牌手X的选择来抽牌。如果X在2到4之间，那么牌手5先决定要抽的牌。如果X在6到8之间，X先决定要抽的牌。如果X是1，那么X先决定要抽的牌。
     - id: mtr-7.7-g005
       type: paragraph
       blocks:

@@ -70,7 +70,7 @@ chapter:
     - id: mtr-appendix-c-b010
       en: |-
         Game points are not used in team tournaments; only the overall result of the match is used for tiebreakers.
-      zh: ''
+      zh: '团队赛中不使用盘分。仅使用对局总成绩作为决胜方式。'
   - id: mtr-appendix-c-g011
     type: markdown
     blocks:
