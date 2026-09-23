@@ -10,6 +10,8 @@ import pytest
 
 from mtr_pipeline.core import (
     PipelineError,
+    _chapter_heading,
+    _flatten_groups,
     assemble_group,
     build_outputs,
     load_project,
@@ -19,12 +21,18 @@ from mtr_pipeline.core import (
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "src" / "mtr" / "examples" / "manifest.yaml"
+FULL_MANIFEST = ROOT / "src" / "mtr" / "2026-02-27" / "manifest.yaml"
 SCHEMA = ROOT / "schema" / "mtr-source.schema.json"
 
 
 @pytest.fixture(scope="module")
 def project():
     return load_project(MANIFEST, SCHEMA, ROOT)
+
+
+@pytest.fixture(scope="module")
+def full_project():
+    return load_project(FULL_MANIFEST, SCHEMA, ROOT)
 
 
 def _all_contents(output: dict):
@@ -61,6 +69,41 @@ def test_build_flattens_groups_and_preserves_extras(project):
     assert "\n\n" in annotated["extras"][0]["en"]
 
 
+def test_shared_version_notes_and_generated_toc_lead_both_outputs(project):
+    json_text, markdown_text = build_outputs(project)
+    output = json.loads(json_text)
+    version_notes, toc = output["intro"]["contents"][:2]
+
+    assert version_notes["id"] == "mtr-version-notes"
+    assert version_notes["en"] == ""
+    assert version_notes["zh"].startswith("# 版本说明\n")
+    assert toc["id"] == "mtr-table-of-contents"
+    assert toc["en"] == ""
+    assert "[MTR 1.1 Tournament Types 比赛种类](/mtr/1#1.1)" in toc["zh"]
+    assert "[Appendix B—Time Limits 时间限制](/mtr/appendix-b)" in toc["zh"]
+
+    assert markdown_text.startswith("# 版本说明\n")
+    assert markdown_text.index("# 目录\n") > markdown_text.index("# 版本说明\n")
+    assert markdown_text.index("# Magic: The Gathering Tournament Rules 万智牌比赛规则\n") > markdown_text.index("# 目录\n")
+    assert "[MTR 1.1 Tournament Types 比赛种类](#mtr-11-tournament-types-比赛种类)" in markdown_text
+
+
+def test_markdown_headings_use_english_then_chinese_without_duplicate_intro(project):
+    _, markdown_text = build_outputs(project)
+    assert "# MTR 1. Tournament Fundamentals 比赛基本要素\n" in markdown_text
+    assert "## MTR 1.1 Tournament Types 比赛种类\n" in markdown_text
+    assert "# Appendix B—Time Limits 时间限制\n" in markdown_text
+    assert "# MTR 1. 比赛基本要素 Tournament Fundamentals\n" not in markdown_text
+    assert _chapter_heading(
+        {
+            "id": "mtr-introduction",
+            "chapter": "Introduction",
+            "en": "Introduction",
+            "zh": "引言",
+        }
+    ) == "Introduction 引言"
+
+
 def test_images_are_inline_base64_and_round_trip(project):
     json_text, markdown_text = build_outputs(project)
     output = json.loads(json_text)
@@ -82,6 +125,28 @@ def test_images_are_inline_base64_and_round_trip(project):
             assert "\n" not in match.group(1)
             assert base64.b64decode(match.group(1), validate=True) == expected
     assert "assets/diagrams" not in markdown_text
+
+
+def test_multiblock_table_is_reassembled_for_json_and_markdown(full_project):
+    json_text, markdown_text = build_outputs(full_project)
+    output = json.loads(json_text)
+    appendix = next(item for item in output["appendices"] if item["chapter"] == "Appendix F")
+    table = next(item for item in appendix["contents"] if item["id"] == "mtr-appendix-f-b002")
+
+    assert "| --- | --- |\n| Eternal Weekend | Competitive |" in table["en"]
+    assert "| --- | --- |\n| 永恒周末 | 竞争 |" in table["zh"]
+    assert not any(item["id"] == "mtr-appendix-f-b003" for item in appendix["contents"])
+    assert "| --- | --- |\n| Eternal Weekend | Competitive |" in markdown_text
+    assert "| --- | --- |\n| 永恒周末 | 竞争 |" in markdown_text
+
+
+def test_multiblock_table_with_row_annotation_is_rejected(full_project):
+    source = next(item for item in full_project.sources if item.path.name == "appendix-f.yaml")
+    group = copy.deepcopy(source.data["chapter"]["groups"][1])
+    group["blocks"][1]["extras"] = [{"en": "Row note", "zh": "行注解"}]
+
+    with pytest.raises(PipelineError, match="cannot be published without losing row association"):
+        _flatten_groups(full_project, [group])
 
 
 def test_build_is_deterministic(project):

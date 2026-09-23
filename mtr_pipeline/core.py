@@ -13,6 +13,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 RELATIVE_IMAGE_RE = re.compile(r"!\[[^\]]*\]\((?!data:|https?://)[^)]+\)")
+VERSION_NOTES_PATH = Path("src/mtr/version-notes.md")
 
 
 class PipelineError(RuntimeError):
@@ -200,11 +201,31 @@ def _render_block(project: Project, group: dict[str, Any], block: dict[str, Any]
     return result
 
 
+def _render_group(project: Project, group: dict[str, Any]) -> list[dict[str, Any]]:
+    blocks = group["blocks"]
+    if group["type"] != "table" or len(blocks) == 1:
+        return [_render_block(project, group, block) for block in blocks]
+
+    annotated = [block["id"] for block in blocks if block.get("extras")]
+    if annotated:
+        raise PipelineError(
+            f"Multi-block table annotations cannot be published without losing row association: "
+            f"{group['id']} ({', '.join(annotated)})"
+        )
+    return [
+        {
+            "id": blocks[0]["id"],
+            "en": assemble_group(group, "en"),
+            "zh": assemble_group(group, "zh"),
+        }
+    ]
+
+
 def _flatten_groups(project: Project, groups: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
     return [
-        _render_block(project, group, block)
+        rendered
         for group in groups
-        for block in group["blocks"]
+        for rendered in _render_group(project, group)
     ]
 
 
@@ -234,35 +255,102 @@ def _quote_markdown(value: str) -> str:
     return "\n".join(">" if line == "" else f">{line}" for line in value.splitlines())
 
 
-def _markdown_for_block(project: Project, group: dict[str, Any], block: dict[str, Any]) -> list[str]:
-    rendered = _render_block(project, group, block)
+def _markdown_for_rendered(rendered: dict[str, Any]) -> list[str]:
     lines = [rendered["en"], "", rendered["zh"]]
     for extra in rendered.get("extras", []):
         lines.extend(["", _quote_markdown(extra["en"]), ">", _quote_markdown(extra["zh"])])
     return lines
 
 
-def _build_markdown(project: Project) -> str:
-    title = project.manifest["document"]["title"]
-    lines = [f"# {title['zh']} {title['en']}", ""]
+def _markdown_for_group(project: Project, group: dict[str, Any]) -> list[str]:
+    lines: list[str] = []
+    for rendered in _render_group(project, group):
+        lines.extend(_markdown_for_rendered(rendered))
+        lines.append("")
+    return lines
+
+
+def _read_version_notes(project: Project) -> str:
+    path = _ensure_within(project.root / VERSION_NOTES_PATH, project.root, "Version notes path")
+    try:
+        value = path.read_text(encoding="utf-8").replace("\r\n", "\n").replace("\r", "\n").strip()
+    except OSError as exc:
+        raise PipelineError(f"Unable to read shared version notes {path}: {exc}") from exc
+    if not value.startswith("# 版本说明\n"):
+        raise PipelineError(f"Shared version notes must start with '# 版本说明': {path}")
+    if re.search(r"(?m)^# 目录\s*$", value):
+        raise PipelineError(f"Shared version notes must not contain the generated table of contents: {path}")
+    return value
+
+
+def _chapter_heading(chapter: dict[str, Any]) -> str:
+    if chapter["id"] == "mtr-introduction":
+        return f"{chapter['en']} {chapter['zh']}"
+    if chapter["id"].startswith("mtr-appendix-"):
+        return f"{chapter['chapter']}—{chapter['en']} {chapter['zh']}"
+    return f"MTR {chapter['chapter']} {chapter['en']} {chapter['zh']}"
+
+
+def _section_heading(section: dict[str, Any]) -> str:
+    return f"MTR {section['chapter']} {section['en']} {section['zh']}"
+
+
+def _markdown_anchor(value: str) -> str:
+    normalized = "".join(
+        character
+        for character in value.casefold()
+        if character.isalnum() or character in {" ", "-", "_"}
+    )
+    return re.sub(r"\s", "-", normalized).strip("-")
+
+
+def _markdown_toc(project: Project) -> str:
+    lines = ["# 目录", "", "- [版本说明](#版本说明)", "- [目录](#目录)"]
     for source in project.sources:
         chapter = source.data["chapter"]
-        if chapter["id"].startswith("mtr-appendix-"):
-            lines.extend([f"# {chapter['chapter']}—{chapter['zh']} {chapter['en']}", ""])
-        else:
-            lines.extend([f"# MTR {chapter['chapter']} {chapter['zh']} {chapter['en']}", ""])
+        heading = _chapter_heading(chapter)
+        lines.append(f"- [{heading}](#{_markdown_anchor(heading)})")
+        for section in chapter.get("sections", []):
+            section_heading = _section_heading(section)
+            lines.append(f"  - [{section_heading}](#{_markdown_anchor(section_heading)})")
+    return "\n".join(lines)
+
+
+def _json_route(chapter: dict[str, Any]) -> str:
+    if chapter["id"] == "mtr-introduction":
+        return "/mtr"
+    if chapter["id"].startswith("mtr-appendix-"):
+        return f"/mtr/{chapter['id'].removeprefix('mtr-')}"
+    return f"/mtr/{chapter['chapter'].rstrip('.')}"
+
+
+def _json_toc(project: Project) -> str:
+    lines = ["# 目录", "", "- [版本说明](/mtr#版本说明)", "- [目录](/mtr#目录)"]
+    for source in project.sources:
+        chapter = source.data["chapter"]
+        route = _json_route(chapter)
+        lines.append(f"- [{_chapter_heading(chapter)}]({route})")
+        for section in chapter.get("sections", []):
+            lines.append(
+                f"  - [{_section_heading(section)}]({route}#{section['chapter']})"
+            )
+    return "\n".join(lines)
+
+
+def _build_markdown(project: Project, version_notes: str) -> str:
+    title = project.manifest["document"]["title"]
+    lines = [version_notes, "", _markdown_toc(project), "", f"# {title['en']} {title['zh']}", ""]
+    for source in project.sources:
+        chapter = source.data["chapter"]
+        lines.extend([f"# {_chapter_heading(chapter)}", ""])
 
         for group in chapter.get("groups", []):
-            for block in group["blocks"]:
-                lines.extend(_markdown_for_block(project, group, block))
-                lines.append("")
+            lines.extend(_markdown_for_group(project, group))
 
         for section in chapter.get("sections", []):
-            lines.extend([f"## MTR {section['chapter']} {section['en']} {section['zh']}", ""])
+            lines.extend([f"## {_section_heading(section)}", ""])
             for group in section["groups"]:
-                for block in group["blocks"]:
-                    lines.extend(_markdown_for_block(project, group, block))
-                    lines.append("")
+                lines.extend(_markdown_for_group(project, group))
 
     markdown = "\n".join(lines).rstrip() + "\n"
     if RELATIVE_IMAGE_RE.search(markdown):
@@ -271,6 +359,7 @@ def _build_markdown(project: Project) -> str:
 
 
 def build_outputs(project: Project) -> tuple[str, str]:
+    version_notes = _read_version_notes(project)
     main: list[dict[str, Any]] = []
     appendices: list[dict[str, Any]] = []
     intro_contents: list[dict[str, Any]] = []
@@ -287,14 +376,20 @@ def build_outputs(project: Project) -> tuple[str, str]:
 
     output = {
         "version": project.manifest["document"]["version"],
-        "intro": {"contents": intro_contents},
+        "intro": {
+            "contents": [
+                {"id": "mtr-version-notes", "en": "", "zh": version_notes},
+                {"id": "mtr-table-of-contents", "en": "", "zh": _json_toc(project)},
+                *intro_contents,
+            ]
+        },
         "main": main,
         "appendices": appendices,
     }
     json_text = json.dumps(output, ensure_ascii=False, indent=2) + "\n"
     if '"groups"' in json_text:
         raise PipelineError("Generated JSON unexpectedly contains intermediate groups")
-    return json_text, _build_markdown(project)
+    return json_text, _build_markdown(project, version_notes)
 
 
 def write_outputs(project: Project, json_path: Path | str, markdown_path: Path | str) -> None:

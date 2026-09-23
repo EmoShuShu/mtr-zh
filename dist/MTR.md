@@ -1,0 +1,6035 @@
+# 版本说明
+
+MTR正文翻译版本：2025年7月26日
+
+本文件新版中文译者：吴振宇、李思扬
+
+过往翻译贡献者：许兆本
+
+MTR精解（Annotated MTR）是对MTR逐字逐句的分析及解释。MTR是一份非常浓缩的文件，解释性的额外说明很少。因为文件中的每一句话都是有意义的，这份MTR精解的宗旨在于解析出隐藏于这些字句中的详细细节。它可以用作2级裁判的学习材料、为回归的裁判刷新知识、解决裁判间对问题的争论等，但它最主要的目的是教育。此文档的英文版位于裁判官方博客，如果你发现问题、或想要提供建议，请发邮件给Amtrfeedback@gmail.com。
+
+在本文件中，精解部分在对应的正文下方用方框包裹。形如：
+
+>这是一段注解
+
+MTR精解翻译版本：2025年7月26日
+
+MTR精解初版翻译团队：申成皓、陈锐鸣、常雨桐、吕家恺、杜昊
+
+决胜依夏兰版本更新：杜昊
+
+2025_7_26版本更新：鼠鼠
+
+克隆仓库：https://github.com/EmoShuShu/AMTR_2025
+
+克隆仓库提供PDF文件、更新列表以及创作者工具
+
+如精解部分有错漏，请直接在 GitHub Issues 提交反馈。亦可发邮件 Zjjshushu@outlook.com 。
+
+# 目录
+
+- [版本说明](#版本说明)
+- [目录](#目录)
+- [Introduction 引言](#introduction-引言)
+- [MTR 1. Tournament Fundamentals 比赛基本要素](#mtr-1-tournament-fundamentals-比赛基本要素)
+  - [MTR 1.1 Tournament Types 比赛种类](#mtr-11-tournament-types-比赛种类)
+  - [MTR 1.2 Publishing Tournament Information 比赛信息的发布](#mtr-12-publishing-tournament-information-比赛信息的发布)
+  - [MTR 1.3 Tournament Roles 比赛职责](#mtr-13-tournament-roles-比赛职责)
+  - [MTR 1.4 Participation Eligibility 参赛资格](#mtr-14-participation-eligibility-参赛资格)
+  - [MTR 1.5 Registration 登记](#mtr-15-registration-登记)
+  - [MTR 1.6 Tournament Organizer 比赛主办人](#mtr-16-tournament-organizer-比赛主办人)
+  - [MTR 1.7 Head Judge 主审](#mtr-17-head-judge-主审)
+  - [MTR 1.8 Floor Judges 巡场裁判](#mtr-18-floor-judges-巡场裁判)
+  - [MTR 1.9 Scorekeeper 记分员](#mtr-19-scorekeeper-记分员)
+  - [MTR 1.10 Players 牌手](#mtr-110-players-牌手)
+  - [MTR 1.11 Spectators 旁观者](#mtr-111-spectators-旁观者)
+  - [MTR 1.12 Rules Enforcement Levels 执法严格度](#mtr-112-rules-enforcement-levels-执法严格度)
+- [MTR 2. Tournament Mechanics 比赛的各项机制](#mtr-2-tournament-mechanics-比赛的各项机制)
+  - [MTR 2.1 Match Structure 对局结构](#mtr-21-match-structure-对局结构)
+  - [MTR 2.2 Play/Draw Rule 先手规则](#mtr-22-playdraw-rule-先手规则)
+  - [MTR 2.3 Pregame Procedures 游戏前程序](#mtr-23-pregame-procedures-游戏前程序)
+  - [MTR 2.4 End-of-Match Procedure 对局结束程序](#mtr-24-end-of-match-procedure-对局结束程序)
+  - [MTR 2.5 Conceding or Intentionally Drawing Games or Matches 认输或约和游戏(对局)](#mtr-25-conceding-or-intentionally-drawing-games-or-matches-认输或约和游戏对局)
+  - [MTR 2.6 Time Extensions 时间延长](#mtr-26-time-extensions-时间延长)
+  - [MTR 2.7 Deck Registration 套牌登记](#mtr-27-deck-registration-套牌登记)
+  - [MTR 2.8 Deck Checks 套牌检查](#mtr-28-deck-checks-套牌检查)
+  - [MTR 2.9 Appeals to the Head Judge 向主审申诉](#mtr-29-appeals-to-the-head-judge-向主审申诉)
+  - [MTR 2.10 Dropping from a Tournament 退出比赛](#mtr-210-dropping-from-a-tournament-退出比赛)
+  - [MTR 2.11 Taking Notes 作笔记](#mtr-211-taking-notes-作笔记)
+  - [MTR 2.12 Electronic Devices 电子设备](#mtr-212-electronic-devices-电子设备)
+  - [MTR 2.13 Video Coverage 视频转播](#mtr-213-video-coverage-视频转播)
+- [MTR 3. Tournament Rules 比赛规则](#mtr-3-tournament-rules-比赛规则)
+  - [MTR 3.1 Tiebreakers 同分处理](#mtr-31-tiebreakers-同分处理)
+  - [MTR 3.2 Format Categories 赛制种类](#mtr-32-format-categories-赛制种类)
+  - [MTR 3.3 Authorized Cards 认可牌张](#mtr-33-authorized-cards-认可牌张)
+  - [MTR 3.4 Proxy Cards 代牌](#mtr-34-proxy-cards-代牌)
+  - [MTR 3.5 Substitute Cards 辅助牌](#mtr-35-substitute-cards-辅助牌)
+  - [MTR 3.6 Card Identification and Interpretation 牌张确认与牌张解释](#mtr-36-card-identification-and-interpretation-牌张确认与牌张解释)
+  - [MTR 3.7 New Releases 新发售](#mtr-37-new-releases-新发售)
+  - [MTR 3.8 Game Markers 游戏标记物](#mtr-38-game-markers-游戏标记物)
+  - [MTR 3.9 Die Rolling 掷骰](#mtr-39-die-rolling-掷骰)
+  - [MTR 3.10 Card Shuffling 洗牌](#mtr-310-card-shuffling-洗牌)
+  - [MTR 3.11 Sleeves 牌套](#mtr-311-sleeves-牌套)
+  - [MTR 3.12 Marked Cards 有记号的牌](#mtr-312-marked-cards-有记号的牌)
+  - [MTR 3.13 Hidden Information 非公开信息](#mtr-313-hidden-information-非公开信息)
+  - [MTR 3.14 Tapped/Flipped Cards 已横置／已倒转的牌](#mtr-314-tappedflipped-cards-已横置已倒转的牌)
+  - [MTR 3.15 Graveyard Order 坟墓场的顺序](#mtr-315-graveyard-order-坟墓场的顺序)
+  - [MTR 3.16 Sideboard 备牌](#mtr-316-sideboard-备牌)
+- [MTR 4. Communication 沟通交流](#mtr-4-communication-沟通交流)
+  - [MTR 4.1 Player Communication 牌手之间的沟通](#mtr-41-player-communication-牌手之间的沟通)
+  - [MTR 4.2 Tournament Shortcuts 比赛中的行事简化](#mtr-42-tournament-shortcuts-比赛中的行事简化)
+  - [MTR 4.3 Out-of-Order Sequencing 次序不当的行事顺序](#mtr-43-out-of-order-sequencing-次序不当的行事顺序)
+  - [MTR 4.4 Loops 重复动作](#mtr-44-loops-重复动作)
+  - [MTR 4.5 Triggered Abilities 触发式异能](#mtr-45-triggered-abilities-触发式异能)
+  - [MTR 4.6 Team/Two-Headed Giant Communication 团队/双头巨人比赛中的交流](#mtr-46-teamtwo-headed-giant-communication-团队双头巨人比赛中的交流)
+  - [MTR 4.7 Game Layout 游戏用具摆放](#mtr-47-game-layout-游戏用具摆放)
+  - [MTR 4.8 Reversing Decisions 反悔](#mtr-48-reversing-decisions-反悔)
+  - [MTR 4.9 Day/Night 白昼/黑夜](#mtr-49-daynight-白昼黑夜)
+- [MTR 5. Tournament Violations 比赛违规](#mtr-5-tournament-violations-比赛违规)
+  - [MTR 5.1 Cheating 作弊](#mtr-51-cheating-作弊)
+  - [MTR 5.2 Bribery 贿赂](#mtr-52-bribery-贿赂)
+  - [MTR 5.3 Wagering 赌博](#mtr-53-wagering-赌博)
+  - [MTR 5.4 Unsporting Conduct 举止违背运动道德](#mtr-54-unsporting-conduct-举止违背运动道德)
+  - [MTR 5.5 Slow Play 游戏进行过慢](#mtr-55-slow-play-游戏进行过慢)
+  - [MTR 5.6 Outside Assistance 场外援助](#mtr-56-outside-assistance-场外援助)
+- [MTR 6. Constructed Tournament Rules 构组赛制规则](#mtr-6-constructed-tournament-rules-构组赛制规则)
+  - [MTR 6.1 Deck Construction Restrictions 套牌构组限制](#mtr-61-deck-construction-restrictions-套牌构组限制)
+  - [MTR 6.2 Card Legality 牌张可用情况](#mtr-62-card-legality-牌张可用情况)
+  - [MTR 6.3 Standard Format Deck Construction 标准赛制套牌构组](#mtr-63-standard-format-deck-construction-标准赛制套牌构组)
+  - [MTR 6.4 Modern Format Deck Construction 近代赛制套牌构组](#mtr-64-modern-format-deck-construction-近代赛制套牌构组)
+  - [MTR 6.5 Vintage Format Deck Construction 特选赛制套牌构组](#mtr-65-vintage-format-deck-construction-特选赛制套牌构组)
+  - [MTR 6.6 Legacy Format Deck Construction 薪传赛制套牌构组](#mtr-66-legacy-format-deck-construction-薪传赛制套牌构组)
+  - [MTR 6.7 Pioneer Format Deck Construction 先驱赛制套牌构组](#mtr-67-pioneer-format-deck-construction-先驱赛制套牌构组)
+- [MTR 7. Limited Tournament Rules 限制赛制规则](#mtr-7-limited-tournament-rules-限制赛制规则)
+  - [MTR 7.1 Deck Construction Restrictions 套牌构组限制](#mtr-71-deck-construction-restrictions-套牌构组限制)
+  - [MTR 7.2 Card Use in Limited Tournaments 限制赛中可用的牌](#mtr-72-card-use-in-limited-tournaments-限制赛中可用的牌)
+  - [MTR 7.3 Continuous Construction 连续构组](#mtr-73-continuous-construction-连续构组)
+  - [MTR 7.4 Abnormal Product 异常产品](#mtr-74-abnormal-product-异常产品)
+  - [MTR 7.5 Sealed Deck Pool Registration 登记现开套牌牌池](#mtr-75-sealed-deck-pool-registration-登记现开套牌牌池)
+  - [MTR 7.6 Draft Pod Assembly 轮抽组的分配](#mtr-76-draft-pod-assembly-轮抽组的分配)
+  - [MTR 7.7 Booster Draft Procedures 补充包轮抽程序](#mtr-77-booster-draft-procedures-补充包轮抽程序)
+- [MTR 8. Team Tournament Rules 团队赛规则](#mtr-8-team-tournament-rules-团队赛规则)
+  - [MTR 8.1 Team Names 团队名称](#mtr-81-team-names-团队名称)
+  - [MTR 8.2 Team Composition and Identification 团队组成与识别](#mtr-82-team-composition-and-identification-团队组成与识别)
+  - [MTR 8.3 Team Communication Rules 团队交流规则](#mtr-83-team-communication-rules-团队交流规则)
+  - [MTR 8.4 Unified Deck Construction Rules 套牌联合构组规则](#mtr-84-unified-deck-construction-rules-套牌联合构组规则)
+  - [MTR 8.5 Team Rochester Draft Tournaments 团队罗彻斯特轮抽赛](#mtr-85-team-rochester-draft-tournaments-团队罗彻斯特轮抽赛)
+  - [MTR 8.6 Team Sealed Deck Tournaments 团队现开赛](#mtr-86-team-sealed-deck-tournaments-团队现开赛)
+- [MTR 9. Two-Headed Giant Tournament Rules 双头巨人赛规则](#mtr-9-two-headed-giant-tournament-rules-双头巨人赛规则)
+  - [MTR 9.1 Match Structure 对局结构](#mtr-91-match-structure-对局结构)
+  - [MTR 9.2 Communication Rules 交流规则](#mtr-92-communication-rules-交流规则)
+  - [MTR 9.3 Play-Draw Rule 先手规则](#mtr-93-play-draw-rule-先手规则)
+  - [MTR 9.4 Pregame Procedure 游戏前程序](#mtr-94-pregame-procedure-游戏前程序)
+  - [MTR 9.5 Two-Headed Giant Constructed Rules 双头巨人构组赛规则](#mtr-95-two-headed-giant-constructed-rules-双头巨人构组赛规则)
+  - [MTR 9.6 Two-Headed Giant Limited Rules 双头巨人限制赛规则](#mtr-96-two-headed-giant-limited-rules-双头巨人限制赛规则)
+  - [MTR 9.7 Two-Headed Giant Booster Draft Tournaments 双头巨人补充包轮抽赛](#mtr-97-two-headed-giant-booster-draft-tournaments-双头巨人补充包轮抽赛)
+- [MTR 10. Sanctioning Rules 认证规则](#mtr-10-sanctioning-rules-认证规则)
+  - [MTR 10.1 Participation Minimums 参赛人数下限](#mtr-101-participation-minimums-参赛人数下限)
+  - [MTR 10.2 Number of Rounds 对局轮数](#mtr-102-number-of-rounds-对局轮数)
+  - [MTR 10.3 Invitation-Only Tournaments 只对受邀牌手开放的比赛](#mtr-103-invitation-only-tournaments-只对受邀牌手开放的比赛)
+  - [MTR 10.4 Pairing Algorithm 配对算法](#mtr-104-pairing-algorithm-配对算法)
+- [Appendix A—Changes From Previous Versions 与过往版本之间的更动](#appendix-achanges-from-previous-versions-与过往版本之间的更动)
+- [Appendix B—Time Limits 时间限制](#appendix-btime-limits-时间限制)
+- [Appendix C—Tiebreaker Explanation 平分处理释疑](#appendix-ctiebreaker-explanation-平分处理释疑)
+- [Appendix D—Recommended Play Booster Mix for Limited Tournaments 限制赛中推荐的补充包构成](#appendix-drecommended-play-booster-mix-for-limited-tournaments-限制赛中推荐的补充包构成)
+- [Appendix E—Recommended Number of Rounds in Swiss Tournaments 瑞士式比赛中推荐进行的局数](#appendix-erecommended-number-of-rounds-in-swiss-tournaments-瑞士式比赛中推荐进行的局数)
+- [Appendix F—Rules Enforcement Levels of Programs 各比赛计划的执法严格度](#appendix-frules-enforcement-levels-of-programs-各比赛计划的执法严格度)
+
+# Magic: The Gathering Tournament Rules 万智牌比赛规则
+
+# Introduction 引言
+
+The Magic: The Gathering (“Magic”) Tournament Rules provides the infrastructure used to run Magic tournaments by defining appropriate rules, responsibilities, and procedures to be followed in all sanctioned Magic tournaments.
+
+本份文档的目的在于：通过厘清相应的规则、责任及在一切受DCI认证的万智牌比赛中均须遵守之行事程序，从而为举办万智牌的比赛奠定基础。
+
+DCI-sanctioned tournaments are to be run consistently regardless of their location. This ensures equal treatment of players in different regions and enables their smooth transition to international tournaments. All players are treated equally and share responsibilities according to the Rules Enforcement Level (REL) of the tournament. Both players and officials should cooperate to achieve their common goal of running a proper DCI-sanctioned tournament. Players and officials must treat each other in a fair and respectful manner, following both the rules and the spirit in which those rules were created. They are responsible for following the most current version of the Magic Tournament Rules and Magic: The Gathering Comprehensive Rules. Spectators have their own set of responsibilities. Individuals violating DCI rules are subject to penalties defined by the appropriate document for the tournament’s Rules Enforcement Level.
+
+无论举办地点为何，DCI认证的比赛都应依照此标准进行。此举能保证身处不同地域的牌手都能得到相同的待遇，同时也使得他们能够顺利地融入国际比赛之中。所有的牌手都应平等相待，并依据赛事所采取的执法严格度（REL）共担责任。牌手和工作人员应该携手合作，以达成他们共同的目标～举办一场正规的DCI认证比赛。牌手和工作人员须坦诚相待，相互尊敬，共同遵守这些规则及其制订精神。他们都应遵从最新版本的《万智牌比赛规则》（MTR）以及《万智牌完整规则》（CR）。旁观者自身也有需担负的责任。违反了DCI规则的人，将根据比赛的执法严格度对应文档中载明之内容，受到相应的处分。
+
+Information in this document may contradict (or have information not contained in) the Comprehensive Rules. In such cases, this document takes precedence.
+
+本文档中所包含的信息或许会与《完整规则》中所述之信息相矛盾（或包含后者当中所未备载的信息），此时，以本份文档所述为准。
+
+Official tournament fact sheets located on the Wizards of the Coast website for specific tournaments may define alternative or additional policies or procedures. If a contradiction exists between this document and an official fact sheet located on the Wizards of the Coast website, the information in the fact sheet takes precedence.
+
+载于威世智官方网站之针对特定比赛的正式说明资料中，可能会规定不同的，或是额外的方针或程序。若本文档中所述情形与载于威世智官方网站之针对特定比赛的正式说明资料中所述情形相矛盾时，以说明资料中的信息为准。
+
+Wizards of the Coast reserves the right to alter these rules, as well as the right to interpret, modify, clarify, or otherwise issue official changes to these rules without prior notice.
+
+威世智公司保留更改此规则的权利，同时保有对此规则进行解释、修订、厘清，及以其它方式发布正式更动，而无需事先通知的权利。
+
+Updates to this document are scheduled to be announced the Monday after each Prerelease. There may be additional dates in which updates to the legality of individual cards in formats contained in this document will be announced. Those dates will be communicated with at least 4 weeks’ notice. Other updates not involving updates to card legality may occur without prior announcement.
+
+本文档的更新，计划于售前赛之后的星期一发布。可能会发生需要更改各赛制可用牌张规定，而在下列表定时间之外更新本文档的情况。此类例外修订之公告时间均会提前4周告知。其余不影响牌张可用性之更改，则可能会在未事前告知的情况下径行修订，敬请注意。
+
+The latest versions are available at https://wpn.wizards.com/en/rules-documents.
+
+最新的版本可于 http://wpn.wizards.com/en/document/magic-gathering-tournament-rules 找到。
+
+# MTR 1. Tournament Fundamentals 比赛基本要素
+
+## MTR 1.1 Tournament Types 比赛种类
+
+There are two types of sanctioned Magic tournaments: rated and casual.
+
+万智牌认证赛事分为两种：积分赛和休闲赛。
+
+Rated tournaments are further divided into two types: Premier and non-Premier. Premier tournaments are run by Wizards of the Coast or select Tournament Organizers. They have unique names and features. Non-Premier tournaments are tournaments that are not explicitly Premier.
+
+积分赛又分为两种类型：重要比赛及非重要比赛。「重要比赛」系指由威世智公司或指定的比赛主办人承办的比赛，具有独特的名称和制度。「非重要比赛」系指未明确标识为「重要比赛」的其他比赛。
+
+>Premier tournaments include or have included Magic: The Gathering World Championship, World Magic Cup, World Magic Cup Qualifiers, World Magic Cup Qualifier Trials, Pro Tour, Regional Pro Tour Qualifier, Preliminary Pro Tour Qualifier, Grand Prix, Grand Prix Trial, WPN Premium Tournament, and WPN Premium Qualifier. Non-Premier tournaments include any other sanctioned tournaments. The key point is that MTR is a policy document for both Premier and non-Premier sanctioned tournaments.
+>
+>重要比赛包括或曾包括：万智牌世界冠军赛，万智牌世界杯，万智牌世界杯资格赛，万智牌世界杯资格赛预选赛，专业赛，区域专业资格赛，初选专业资格赛，大奖赛，大奖赛预选赛，WPN顶级比赛以及WPN顶级比赛资格赛。非重要比赛包括任何其他的认证比赛。重点：MTR是一份同时针对重要认证比赛以及非重要认证比赛的方针文件。
+
+There are two major tournament formats: Limited and Constructed. Each has rules specific to its format. In Limited tournaments, all product for play is provided during the tournament. In Constructed tournaments, players compete using decks prepared beforehand. Some Premier tournaments may consist of multiple formats within the same tournament.
+
+主要的赛制有两种——限制赛和构组赛。每个赛制都有自身特有的规则。在限制比赛中，用于进行比赛的所有产品都是在比赛过程中提供。在构组比赛中，牌手使用赛前所准备好的套牌来参赛。一些重要比赛可能会在同一场比赛中包含多种赛制。
+
+>Limited formats include any format in which a player constructs a deck during the event — e.g., draft, sealed deck, and mini masters. Constructed formats include any format in which a player constructs their deck before the event. The most popular constructed formats are Standard, Pioneer, Modern, and Legacy.  Some ways people play are not sanctionable formats such as Old School or do not well fit into the MTR because of being multiplayer like Commander.
+>
+>限制赛包括任何需要牌手在比赛过程中构筑套牌的赛制——例如轮抽赛，现开赛以及单包赛。构组赛包括任何需要牌手在比赛前构组套牌的赛制。最流行的构组赛制有标准赛，先驱赛，近代赛以及薪传赛。社群中的某些玩法并非认证赛制（例如复古赛），或是因其多人游戏属性（例如指挥官）而不能完全适用《万智牌比赛规则》。
+
+## MTR 1.2 Publishing Tournament Information 比赛信息的发布
+
+Wizards of the Coast reserves the right to publish DCI-sanctioned tournament information at any time (including during the tournament). Tournament information includes, but is not limited to, the contents of one or more players' decks, descriptions of strategies or play, transcripts, and video reproductions. Tournament Organizers are also allowed to publish this information once their tournament is complete.
+
+威世智公司保留随时发布DCI认证的比赛信息之权利（「随时」包含比赛进行当中的时段）。「比赛信息」包括，但不限于：一位或更多牌手的套牌之内容；战术或打法的描述；对局记录；以及视频记录。比赛主办人在其比赛结束后，亦能发布此类信息。
+
+>Decklists should not be made public until an event has completed except in certain Premier events where player decklists are often shared with opponents at the beginning of the round. This is to minimize advantage created by certain lists being made public by coverage. Wizards of the Coast’s right to publish this information does not necessarily mean judge or Tournament Organizers have to record it.
+>
+>At Premier events like Grand Prix and Pro Tours, Wizards of the Coast often has online coverage of the event. This section is explicitly state they are allowed to publish lists. Tournament Organizers also have the right to publish this information after the event ends, but some TOs receive permission to handle the coverage similar to Wizards. For example, Star City Games Opens regularly publish decklists on the Star City Games website during the event or Top 8.
+>
+>除了在一些会将牌手的套牌登记表在赛前向对手共享的重要比赛外，在比赛结束之前，套牌登记表都不应该对外公开。这是为了尽量减少因为报道团队透露套牌登记表而对一些牌手带来的获利。威世智有权发布该信息并不意味着裁判或比赛主办人必须记录这些信息。
+>
+>在例如大奖赛和专业赛这样的重要比赛中，威世智通常会对比赛进行线上报道。本章节的内容明确规定了他们有权利公布相关内容。比赛主办人同样有权利在比赛结束时公布此类信息，一些比赛主办人同样有权利与威世智采用同样的方式公布信息。例如，[星城公开赛](http://www.starcitygames.com/)会在比赛中或八强决赛中在他们的网站上发布套牌登记表的内容。
+
+Wizards of the Coast reserves the right to publish penalty and suspension information.
+
+威世智公司保留发布处罚及停权信息之权利。
+
+>Judges should take all investigation and penalty information very seriously, as it could end up in an article on Wizards of the Coast’s webpage.
+>
+>Wizards of the Coast will often report on disqualifications or other high profile penalties during Pro Tours.
+>
+>While this statement says that Wizards can publish a list of players who are suspended from the game, they do not. This decision was made in 2019. Since then, outside of specific public articles, there is no way to tell if a player is suspended. If a Judge or tournament official attempts to register a suspended player, the Wizards event software will notify them, assuming they didn’t just use a new email address or DCI number.
+>
+>裁判必须作出充分的调查并严肃认真地做出判罚，因为处罚信息可能会记载在威世智的网页信息中。
+>
+>威世智通常会在专业赛期间就取消资格或者其他影响较大的处罚做出报告。
+>
+>尽管此条款声明威世智可以公布被停权牌手的名单，但他们并不会这样做。该决定于2019年做出。自此以后，除了特定的公开文章外，外界将无法得知一名牌手是否处于停权状态。如果裁判或赛事工作人员尝试为一名被停权的牌手进行注册，威世智官方赛事软件会向其发出提醒，前提是该牌手没有使用新的邮箱地址或DCI号码。
+
+## MTR 1.3 Tournament Roles 比赛职责
+
+The following roles are defined for tournament purposes:
+
+依比赛的角度，定义比赛相关职责如下：
+
+* Tournament Organizer
+
+* 比赛主办人
+
+* Head Judge
+
+* 主审
+
+* Floor Judge
+
+* 巡场裁判
+
+* Scorekeeper
+
+* 记分员
+
+* Player
+
+* 牌手
+
+* Spectator
+
+* 旁观者
+
+The first four roles above are considered tournament officials. The Head Judge and floor judges are collectively considered judges. A single individual may act in any combination of tournament official roles. Individuals who are not judges at a tournament are spectators in any match in which they are not playing. Members of the press are also considered spectators.
+
+上述职责中，前四者视为比赛工作人员。主审和巡场裁判统称「裁判」。数种不同的职责可以由同一位人士来兼任。在比赛中，不担任裁判的个人于其不参与的对局中视作旁观者。媒体记者亦视作旁观者。
+
+>It is possible for one person have multiple roles during at a small tournament. However, at larger events tournament officials typically only have a single role. Any player is a spectator of the matches taking place in nearby seats. All individuals that are not tournament officials of an event, including those with or without a DCI number, are considered spectators.
+>
+>Players and Spectators are expected to follow all instruction given by Tournament Officials, therefore it’s important to know who that title applies to. It’s also important to define each of these roles in detail, which luckily the MTR does for us in Sections 1.6-1.11, in the order listed above.
+>
+>在小规模的比赛中，一个人可能会身兼数职。在规模较大的比赛中，比赛工作人员通常只担任单一角色。处于比赛桌附近的位置的牌手便属于旁观者。
+>
+>所有非比赛工作人员的个人，无论他们是否有DCI号，都被当作旁观者。牌手及旁观者都应遵从比赛工作人员给出的指示，因此需要明确认识每个角色的职责。上述的角色也应当被明确定义，这在[MTR的1.6～1.11](#目录)中有详细的说明。
+
+## MTR 1.4 Participation Eligibility 参赛资格
+
+Anyone is eligible to participate as a player in a DCI-sanctioned tournament except for:
+
+任何人都有资格以牌手身份参加DCI认证的积分赛，但以下除外：
+
+* Individuals currently suspended by the DCI. Individuals currently suspended from the DCI may not act as tournament officials;
+
+* 目前被DCI所停权者。目前为DCI所停权者不得担当比赛工作人员；
+
+>This is kind of the definition of suspended or banned.
+>
+>这些牌手指的是被停权或禁赛的牌手。
+
+* Other individuals specifically prohibited from participation by DCI or Wizards of the Coast policy (such determination is at Wizards of the Coast’s sole discretion);
+
+* 其他被DCI或威世智公司的方针明令禁止参赛者（此类决定为威世智公司的单方判断）；
+
+>This could be another form of banning, or could apply to Wizard employees.  What it means is up to Wizards.
+>
+>此条款可指代另一种形式的禁赛，或适用于威世智员工的情况。其最终解释权归威世智所有。
+
+* Individuals thirteen (13) years of age and younger who do not have their parent/guardians’ permission;
+
+* 年龄十三（13）岁以下（含13岁），且未获父母／监护人许可者；
+
+>Thirteen is the recommended age for the game provided by Hasbro and Wizards of the Coast.
+>
+>十三岁是孩之宝以及威世智推出的这款游戏的推荐年龄。
+
+* Anyone prohibited by federal, state, or local laws, the rules of the Tournament Organizer, or by a venue’s management.
+
+* 被联邦、州或当地法律、比赛主办人制订的规则或比赛场馆之管理规定禁止参赛者。
+
+>Federal, state, and local laws supersede any rules set forth by Wizards of the Coast. For example, if a player isn’t allowed within 500 ft of a particular store, employee, or other players because of a restraining order or some other legal limitations, he or she can’t play. Being able to play is a privilege, not a right, and extenuating legal circumstance may prevent people from playing.The store owner has the right to bar anyone from their store or venue for any reason they see fit. Typically store owners only use this as a last resort for recurring problems players, or in the case of theft. Wizards cannot force a store or venue to allow a specific individual.
+>
+>联邦、州或当地法律优先于一切威世智制定的规则。例如，如果由于禁制令或其他法令限制，某牌手不允许与店家、员工或其他牌手距离低于500英尺，那么该牌手不能参与游戏。能够参加比赛是一项特权而非基本权利，对于合法条件的漠视会将参赛者拒而远之。店家有权利以任何理由拒绝他们认为不合适的牌手进店。一般来说，店家将其作为驱离有问题的牌手或者防止偷盗的最后手段。威世智无法强制店家或比赛场地接纳特定个人。
+
+* Tournament Organizers may choose to age restrict any Regular REL events that they organize. They must clearly indicate this in their marketing for the event on the Store and Event Locator description as well as any other place they display the event information. (i.e., Tournament Organizers may advertise an age 16 and under Friday Night Magic).
+
+* 比赛主办人可针对其主办的一般级别执法严格度赛事设置年龄限制。它们必须在店内为此活动进行的营销宣传、「Event Locator」上的说明以及其他显示赛事信息的场合清楚标明此限制。（即，比赛主办人可以宣传仅限16岁以下人士参加的周五认证赛。）
+
+Anyone is eligible to participate as a tournament official (Tournament Organizer, Head Judge, floor judge or Scorekeeper) for a tournament except for:
+
+任何人都有资格担任比赛工作人员之职务（比赛主办人、主审、巡场裁判或是记分员），但以下除外：
+
+* Individuals currently suspended by the DCI;
+
+* 目前被DCI所停权者；
+
+>If someone is suspended as a player, they aren’t allowed to judge either. Keep in mind, this does not directly correspond with judge certification. Just as non-certified individuals can act as judges for the event, being suspended does not directly revoke your certification, though it may be taken into consideration.
+>
+>如果某牌手作为牌手被停权，那么他也同样不能参与执法。切记，这和裁判的认证资格并无直接联系。就像未认证的裁判仍然可以执法一场比赛，被停权不意味着撤销裁判认证，虽然仍可能会被考虑在内。
+
+* Anyone who has played in the tournament, unless it is a tournament that explicitly allows tournament officials to play while acting as a tournament official.
+
+* 当前比赛的参赛者；明确允许比赛工作人员在行使职责的同时参与比赛之比赛不在此限。
+
+>This rule is to prevent conflicts of interest.  You cannot rule impartially in a tournament you are hoping to gain from. However, there are specific low-stakes tournaments where the conflict of interest is sufficiently mitigated.  These exceptions are outlined in the next section.
+>
+>本条规则旨在防止利益冲突。你无法在一场你希望从中获益的比赛中公正地执法。然而，在某些特定的低级别赛事中，这种利益冲突得到了充分的缓和。这些例外情况将在下一节中进行概述。
+
+Tournament officials may play in a DCI-sanctioned, rated tournament for which they are a tournament official if (and only if) the tournament is of the following types:
+
+在DCI认证比赛中担任职务的工作人员不得参加该场比赛，但当（且仅当）该场比赛属于下列类别的比赛时，不在此限：
+
+* Friday Night Magic
+
+* 周五认证赛
+
+* Prerelease
+
+* 售前赛
+
+* Launch Parties
+
+* 发售赛
+
+* Game Day
+
+* 欢乐日
+
+* Store Championship
+
+* 店家冠军赛
+
+* Other non-Premier Magic Tournaments
+
+* 其他的万智牌非重要比赛
+
+* Tournaments in which the official Wizards of the Coast tournament fact sheet specifically permits officials of that tournament to play
+
+* 在正式的威世智比赛说明文档上特别注明该场比赛之工作人员亦可参赛的比赛
+
+If one or more tournament officials play in the tournament, it must be run at Regular Rules Enforcement Level. If tournament officials play in the tournament and the tournament is not one of the allowed types listed above, the tournament will be invalidated. Tournament officials are required to officiate tournaments fairly and without regard to their own self-interest.
+
+若某场比赛有比赛工作人员参加，则该比赛必须以一般级别的执法严格度来举行。若比赛工作人员参加不在上述许可列表当中的比赛，则该场比赛无效。比赛工作人员及职员行使职责时，必须保证公平公正、不含私心。
+
+The owners of organizations that run Premier Events are not permitted to play in those tournaments, even if the owner is not listed as a tournament official (organizer, judge, and/or scorekeeper) for that tournament.
+
+举办重要比赛之组织的负责人不得参加此类比赛，即使此负责人不属于当场比赛的工作人员（主办人、裁判，和／或记分员），也需遵循此限制。
+
+Premier Events include the following tournaments: Magic: The Gathering World Championship, Pro Tour, Magic: The Gathering Limited Championship, Pro Tour Qualifier, Spotlight Series, Regional Championship, Regional Championship Qualifier.
+
+下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、万智牌限制冠军赛、专业赛预选赛、聚光灯系列赛、区域冠军赛、区域冠军赛预选赛。
+
+Some tournaments have additional criteria regarding player and tournament official eligibility (e.g., invitation-only tournaments, such as World Championship, Pro Tour, Limited Championship, and Regional Championships).
+
+某些比赛在参赛者资格或是担任比赛工作人员方面具有额外的限制条件（如世界冠军赛、专业赛、限制冠军赛及区域冠军赛等只对受邀牌手开放的比赛）。
+
+The Premier Tournament Invitation Policy defines specific eligibility rules with regards to certain types of invitation-only Premier Tournaments.
+
+针对某些只对受邀牌手开放的比赛，《重要比赛邀请方针》中规定了如何获取资格的规则。
+
+Individuals with questions regarding their tournament eligibility should contact PremierPlay@wizards.com.
+
+对自己的参赛资格有疑义者，请联系 PremierPlay@wizards.com。
+
+>All Competitive and Professional Rules Enforcement Level events require players and judges to be separate people, because of the potential problems it could cause. If someone were playing against the person judging the event at a large cash prize event, it might make them less confident in the judge’s ability to remain impartial, especially if they need to ask a question about a card in their hand.
+>
+>The “tournaments in which the official Wizards of the Coast tournament fact sheet specifically permits officials of that tournament to play” does not have anything under that category, but is an option for the future. The general policy is that all Regular Rules Enforcement Level events someone can both play and act as a Tournament Official, for Competitive and Professional they cannot.
+>
+>所有的竞争级别以及专业级别的比赛要求区分牌手和裁判，这是为了避免造成一些潜在问题。如果某牌手正在和执法该比赛的裁判对局，且比赛的奖池又很大，那么这位牌手很可能会质疑裁判的公正性，尤其是在他想询问关于手中的牌的相关信息时。
+>
+>暂时没有“在正式的威世智比赛说明文档上特别注明该场比赛之工作人员亦可参赛的比赛”这样的分类，这里的标注仅为了给将来带来方便。目前的一般方针是，一般级别的比赛工作人员也可以参加，但是竞争级别和专业级别则不行。
+
+## MTR 1.5 Registration 登记
+
+In order to participate in Magic: The Gathering tournaments, players must be able to provide the necessary and appropriate identifying information to participate in the tournament.
+
+牌手须提供合适的身份信息来参加万智牌的赛事。
+
+>Depending on the tournament, it may use different registration software such as EventLink or Melee.gg
+>
+>根据比赛的不同，可能会使用不同的注册软件，例如EventLink或Melee.gg。
+
+For tournaments run using the EventLink tournament management software, players must provide a Wizards Account and/or a first and last name. Players without a Wizards Account should obtain one from https://myaccounts.wizards.com.
+
+对于使用EventLink软件运行的赛事，牌手必须提供威士智账号和/或姓名。没有威士智账号的牌手可以通过 https://myaccounts.wizards.com 注册。
+
+>Eventlink is the current software for store level events.  It prefers Wizards Account information.  First/Last name can cause problems.
+>
+>Eventlink是当前用于店赛的软件。它优先使用威世智账户信息，直接使用姓名可能会导致问题。
+
+## MTR 1.6 Tournament Organizer 比赛主办人
+
+The Tournament Organizer of a tournament is responsible for all tournament logistics including:
+
+比赛主办人负责所有的比赛后勤工作，包括：
+
+* Sanctioning the event.
+
+* 规划认证赛事。
+
+>This is obtained by sanctioning the event in Eventlink, through the creation of the event. Each event has a unique sanctioning number.
+>
+>这项认证通过在Eventlink中创建比赛即可获得。每场比赛都会有一个唯一的认证号。
+
+* Providing a site for the tournament that meets the tournament’s expected needs.
+
+* 为比赛提供满足需求的场所。
+
+>To ensure a smooth running event, the tournament organizer must provide a play space that will allow the event to have space required for the expected number of players. This may range from the store they run having enough room for their FNM, or renting out a room in a hotel or convention center to make adequate space.
+>
+>为了确保比赛顺利进行，比赛主办人必须提供一个能够容纳预期牌手数量的场地。这包括在足够大的店铺中举办FNM，或者租借酒店会议室或会展中心来确保足够大的空间。
+
+* Advertising the tournament in advance of the tournament date.
+
+* 在比赛日前宣传本次比赛。
+
+>In order to ensure that players are available to participate in the tournament, we need to ensure that it is advertised when and where the event is happening. This can range from making sure the event shows up inWizards Store & Event Locator, to promoting the event on Facebook and other social media, to having large ads on magic related websites.
+>
+>为了确保牌手能够参加比赛，我们希望比赛的信息能够被公告，让大家知道比赛的举办时间和地点。确保比赛信息能够出现在[店家搜寻器](http://locator.wizards.com/)中，或者在Facebook或者其他社交媒体上推广比赛，以及在万智牌相关网站上投放大型广告。
+
+* Staffing the tournament with appropriate tournament officials.
+
+* 为比赛找到合适的工作人员。
+
+>Tournament Organizers need to ensure that they have properly qualified tournament officials to staff the event. As a rule of thumb, you want one judge per 32 players for smaller events,  with additional judges as you break 100 players.  Additionally the type of event (Regular REL or Competitive) may require additional rules that specific levels of judges have been trained in.
+>
+>比赛主办人需确保拥有足够的具有资质的比赛工作人员来为比赛进行分工。根据经验法则，在小规模的比赛中，建议为每32名牌手配备一名裁判；当牌手人数超过100人时，则需要增派额外的裁判。此外，赛事的类型（例如一般级或竞争级）可能要求裁判掌握某些特定规则，而这些是特定等级的裁判才接受过的训练。
+
+* Providing all materials necessary to operate the tournament (e.g., product for Limited format tournaments).
+
+* 提供所有用来举办该比赛的道具（如：用于限制赛的产品）。
+
+>Tournament Organizers need to ensure that sealed product and other required materials are available for limited format tournaments and that deck list sheets available for constructed tournaments. Those are pretty straightforward. The Tournament Organizer is also responsible for providing a lot of other things that players may take for granted — e.g., a computer and printer to take results and print pairings, tape, places to post pairings, round clock, and scissors/paper cutter to cut results slips. Some of these aren’t required but make the event go smoother, and typical Tournament Organizers will provide these. Some may find alternate ways to do some of the tasks these are used for, such as using a large TV to display pairings.
+>
+>比赛主办人需确保限制赛的产品数量和其他相关物料并确保为构筑赛制提供套牌登记表。比赛主办人也需要提供一些其他的必需品——例如记录成绩和打印配对的电脑和打印机，计时器，用于切开成绩条的剪刀或裁纸机。上述的某些物品可能不是必备的，但是无疑会使比赛的运行更流畅，一般来说比赛主办人都会提供这样物资。当然可以用一些其他的方式来替代上述物料，例如用大电视来显示配对。
+
+## MTR 1.7 Head Judge 主审
+
+Sanctioned tournaments require the physical presence of a Head Judge during play to adjudicate disputes, interpret rules, and make other official decisions. The Head Judge is the final judicial authority at any DCI-sanctioned tournament and all tournament participants are expected to follow their interpretations. Although it is beneficial, the Head Judge does not have to be certified.
+
+认证的比赛在进行时需要一位主审在场裁决争议、解释规则，及做出其他正式的决定。在所有的DCI认证赛中，主审都拥有最终裁判权，所有的参赛者都应当遵从主审的指示。虽然由认证裁判担任主审为佳，但担任主审者不需具备认证资格。
+
+>The Head Judge of a tournament is not necessarily a certified Judge. Often the Head Judge of an event will simply be a store employee or the Tournament Organizer themselves. Most Competitive Rules Enforcement Level events will have a certified Head Judge but this is not necessarily required. Note it is recommended that you have at least a Level 2 judge for any Competitive REL events.
+>
+>比赛的主审并非一定是认证裁判。一般来说，比赛的主审可能就是店里的员工或者比赛主办人自己。大多数的竞争级别比赛会有一位认证裁判作为主审，但这不一定是必要的。请注意，建议为所有竞争级别的赛事配备至少一名二级裁判。
+
+The Head Judge’s responsibilities include:
+
+主审的责任包括：
+
+* Ensuring that all necessary steps are taken to deal with game or policy rule violations that they notice or are brought to their attention.
+
+* 确保在处理他所知或被告知的违规举动（无论是游戏规则还是方针方面的规定）时采用了所有必要的处理步骤。
+
+>In larger events the Head Judge may not be the primary individual fielding judge calls. Sometimes the Head Judge will be handling other tournament aspects and be unable to take calls, or the Head Judge will be trying to let an available Floor Judge answer the call.
+>
+>The Head Judge should be a ready resource for Floor Judges to assist in making sure players get the best possible call. In addition to appeals discussed in the next bullet, investigations that may lead to a disqualification are among the most important tasks a Head Judge performs.
+>
+>在大型比赛中，主审的主要职责并不是第一时间去处理裁判呼叫。有时主审会因为处理比赛的其他事物而无法处理呼叫、或者试图让一个有空的巡场裁判来处理呼叫。
+>
+>主审应当是巡场裁判的可靠后援，以协助他们确保牌手能得到最优的判决。除了下一条目中将讨论的上诉外，那些可能导致取消资格的调查，亦是主审所执行的最重要的任务之一。
+
+* Issuing the final ruling in all appeals, potentially overturning the ruling of a floor judge.
+
+* 做出申述的最终裁定，主审可推翻巡场裁判所做出的裁定。
+
+>Players are allowed to appeal the decision of any Floor Judge to the Head Judge. The Head Judge is the final arbiter of all rulings and sometimes that will mean reversing the decision of a Floor Judge. If a decision is reversed, it is vital that the Head Judge explain the reasoning behind the reversal to both the players and the judge.
+>
+>牌手可以不满巡场裁判的判罚并上诉至主审。主审是判罚的最终裁决者，有时甚至可以推翻巡场裁判的判罚。如果后者的判罚被推翻，主审需同时向该巡场裁判和牌手解释其中的原因。
+
+* Coordinating and delegating tasks to floor judges as needed.
+
+* 协调巡场裁判之工作，并可以在需要时委之以相应的任务。
+
+>In tournaments with multiple judges, the Head Judge is responsible for assigning and organizing Team Leads and teams. The Head Judge creates the teams (at big events sometimes with the assistance of the Tournament Organizer or Judge Manager), and makes sure everyone’s tasks are understood. The Head Judge is also responsible for overseeing other judges at the event. Not all tasks assigned are always strictly tournament operations and may be other things needed by the organizer.
+>
+>在一场有多名裁判的比赛中，主审需要分派团队并指派队长。主审会创建团队（在大型比赛中可能会在比赛主办人或者裁判经理的帮助下），并确保每位裁判了解自己的职责。主审也需要在比赛中监督其他裁判，确保所有的任务能够按照比赛计划严格进行，并帮助主办人完成一些其他任务。
+
+If necessary, the Head Judge may temporarily transfer their duties to any judge if they are unable to fulfill them for a period of time. Also, in exceptional circumstances, if the tournament’s integrity would be damaged otherwise, the Tournament Organizer may replace the Head Judge.
+
+若有需要，当主审无法履行自身职责时，可将此职务临时转交给其他裁判来履行。此外，在比赛的严肃性可能受到损害的特殊场合，比赛主办者可更换主审。
+
+>At store level events this is most common during lunch breaks but this can also happen if the Head Judge becomes ill or ends their shift and a new Head Judge takes over. This is incredibly rare for Premier events but for side events the person acting as Head Judge may be more fluid. The Tournament Organizer has final say about whether the Head Judge needs to be replaced due to exceptional circumstances.
+>
+>在店赛中通常是因为午餐休息时间而出现这种情况，但是如果一旦主审生病或者下班，那么会由新的主审来接管比赛。这种情况对于重要比赛来说很少见，但在外围赛中作为主审的人员可能会经常变化。在特殊情况下，关于是否更换主审的最终决定权在于比赛主办人。
+
+Certain Premier tournaments have multiple Head Judges and/or different Head Judges for different portions of the tournament. All Head Judges share the same responsibilities and exercise the same authority while they are serving as a Head Judge.
+
+某些重要比赛会出现拥有多个主审和／或在竞赛的不同阶段由不同的人来担任主审的情况。所有的主审共同承担同一份责任，且在分别行使主审职务时具有同样至高无上的权威。
+
+>Large events will often have several judges acting as Head Judges (usually noted by wearing burgundy judge shirts at Premier events or red at Star City Games events). It is also possible that a tournament may be organized into multiple flights, each with its own Head Judge. No Head Judge is more ‘ahead’ of another and each of their rulings is final. Each of the Head Judges can take appeals, run investigations, and satisfy all of the other duties that the Head Judge of record is afforded.
+>
+>大型比赛中通常会有若干名裁判来充当主审的职责（他们通常在重要比赛中穿着酒红色裁判制服、或在星城公开赛中穿着红色制服）。也有可能一场比赛会分成若干个部分，每个部分都有各自的主审。这些主审没有相对的级别“高低”，他们作出的判罚均是最终判罚。每位这样的主审都能处理上诉，展开调查，以及开展主审所需要执行的工作。
+
+## MTR 1.8 Floor Judges 巡场裁判
+
+Floor judges are available to players and spectators to answer questions, deal with illegal plays, or assist with reasonable requests. They do not have to be certified.
+
+对牌手和旁观者而言，他们可向巡场裁判获取自身疑问的解答，召唤巡场裁判来处理非法动作，或请求巡场裁判协助自己完成合理的请求。此类裁判没有认证要求。
+
+>When it comes down to it, the biggest responsibility of Floor Judges is to be there to answer questions, fix play errors, and providing other assistance to help the event to run. They are the lifeblood of the event. Floor Judges at events, both at Competitive and Regular Rules Enforcement Level, do not need to be certified in order to judge at an event, however it is recommended that the judges at higher level events be certified or be working toward certification.
+>
+>关于巡场裁判，他们最大的职责是回答问题，修正游戏错误，以及提供其他资源来帮助比赛进行。他们是比赛的血脉。巡场裁判，无论是在竞争级别还是一般级别的比赛中，都不一定要是认证裁判。然而，在高级别的比赛中，强烈建议裁判是认证的或正在往认证方向努力。
+
+Judges will not generally assist players in determining the current game state but can answer questions about the rules, interactions between cards, or provide the Oracle™ wordings of relevant cards.
+
+总体而言，裁判不会协助牌手对当前游戏的场面做出判断，但会就下列这些问题做出回答：规则、牌张之间的互动，或是相关卡牌的Oracle（万智牌的牌张参考资料库）叙述。
+
+>Judges are able to answer questions about the rules and interactions between cards as long as they do not provide strategic advice regarding plays to make in a situation. Oracle text is the authoritative rules text for a card. Oracle text can be found on gatherer.wizards.com, but many other sources such as phone apps will have up to date Oracle text as well. More reading on what type of information judges can assist with is available in section 4.1.
+>
+>裁判们可以回答关于规则以及牌张互动的问题，只要他们不对牌手做出策略建议。Oracle叙述是牌张的权威规则解释。Oracle叙述能在[gatherer.wizards.com](gatherer.wizards.com)上找到，但是许多其他资源（例如手机app）中也可以查询到最新的Oracle叙述。关于裁判可以协助取得何种类型的信息可以参考[章节4.1](#mtr-41-player-communication-牌手之间的沟通)。
+
+At Regular Rules Enforcement Level, the judge may assist the player in understanding the game state in the interest of education.
+
+在执法严格度为一般级别的情况下，为了进行教学推广，裁判也可协助牌手对当前的游戏局面做出判断。
+
+>Regular Rules Enforcement Level events provides an entry into the game for players. As a result, players may ask judges what the game state is and why something is the way it is. The emphasis is on education and helping new players, and there are likely smaller prizes on the line. This doesn’t mean the judge can tell the player what they should do, but the judge may assist a player in understanding a more complex interaction or game state in a less formal way than at Competitive Rules Enforcement Level.
+>
+>一般级别的比赛是让牌手入门万智牌的好机会。在巡场时，牌手可能会询问裁判有关当前游戏状态和为什么会导致这种情况的问题。这里的重点侧重于教导并帮助新牌手，这些比赛的奖池也相对较小。这不意味着裁判可以告诉牌手后者应当怎么做，但是裁判可以帮助牌手理解复杂的牌张互动和游戏状态，且不需要使用像在竞争级别中那么严肃的方式。
+
+If a player wishes to ask their question away from the table, the request will usually be honored.
+
+牌手可请求在远离游戏的场所对裁判进行提问，此类请求通常会予以执行。
+
+>If the player wants to ask a question that they feels may give too much information to their opponent, the player may ask to have the question answered away from the table. A good habit for judges is to stand far enough away so opponents cannot hear them or the player asking for assistance.
+>
+>如果某牌手想要咨询一个问题但是害怕向对手透露过多信息，该牌手可以申请在牌桌外得到解答。裁判最好能够足够远离，这样对手就不会听到裁判的回答以及牌手询问的内容了。
+
+Players may not request specific judges to answer their calls but may request a tournament official to help translate. This request may be honored at the discretion of the original judge.
+
+牌手在呼叫裁判时，不得要求由某一名特定的裁判来响应此次呼叫，但可以请求比赛工作人员来协助翻译。经原裁判斟酌，此请求可予以执行。
+
+>Players may not request that a specific judge answer their call, as it would compromise tournament integrity and give the impression of partiality. But there are tournaments throughout the world, and players may not speak the local language. If there are tournament officials that speak the player’s language,they may help to translate in order to ensure clear and efficient communication. At international events like an European Grand Prix, there is often a list of judges who speak different languages as a resource provided to Scorekeepers and Judge Managers.
+>
+>牌手不得要求某一名特定的裁判来回应他们的呼叫，这可能会对比赛的公正性造成影响并给人一种偏袒的印象。然而全世界都有万智牌比赛，牌手可能不会使用该地的语言。如果有工作人员能使用该牌手的语言，那么他们可以帮助进行翻译确保沟通的效率和准确性。在例如欧洲大奖赛的国际比赛中，往往会有一些使用多国语言的裁判来协助记分员和裁判经理。
+
+Judges do not intervene in a game to prevent illegal actions but do intervene as soon as a rule has been broken or to prevent a situation from escalating.
+
+裁判不得在非法行动尚未发生时就中止比赛以防止其发生；但在已经发生违规行为，或是为了防止局势发生恶化的情形下，裁判应尽快介入比赛。
+
+>Like in other sports, judges aren’t there to prevent mistakes. However, as soon as a game infraction happens, judges step in and apply the necessary corrections and penalties. Judges may step in if they believe a tense situation would otherwise escalate to unsportsmanlike conduct.
+>
+>与其他运动一样，裁判不是为了阻止错误发生而存在的。然而一旦游戏中产生了违规情况，裁判就应当介入并且适用必要的修正，做出相应的判罚。裁判也可以在他们确信当前紧张的事态会导致违背运动精神的举止的情况下介入。
+
+## MTR 1.9 Scorekeeper 记分员
+
+The Scorekeeper ensures the correct generation of pairings and all other tournament records throughout the tournament.
+
+记分员须确保在比赛整个过程当中生成的对局配对和其他比赛记录文档都正确无误。
+
+>This includes both match slips and every sanction issued by a judge during the tournament. Scorekeepers usually keep slips separated and organized in round pairs, so if a problem arises they have both electronic and paper copies of relevant documents.
+>
+>这包括成绩条以及裁判在比赛中记录的判罚。记分员通常按轮次保管配对和成绩条，如果有问题，便可以从电子设备中和纸质记录的相关文件中找到依据。
+
+The Scorekeeper’s responsibilities include:
+
+记分员的责任包括：
+
+* Generating correct pairings each round and accurately entering the results of those rounds.
+
+* 为每局对局生成正确的对局配对并准确地输入该局对局的比赛结果。
+
+* Generating standings for posting before and after the final Swiss round. Other rounds may also be posted at the Head Judge’s discretion.
+
+* 在最后一局瑞士式对局开始之前及结束之后生成供张贴使用的排名。经主审斟酌，也可以在其他局次中张贴排名。
+
+* Solving all scorekeeping problems that arise in consultation with the Head Judge.
+
+* 在与主审协商后，解决所出现的一切记分问题。
+
+* Making sure all necessary information is included in the tournament’s report.
+
+* 确保在比赛报告中包含有所有的必要信息。
+
+>While scorekeeping might seem simple, ensuring that the results of each match are correctly kept is crucial to guarantee that the tournament runs as smooth as possible.
+>
+>The Tournament Organizer or the Head Judge is typically the Scorekeeper of smaller events, but in larger events (120+) a dedicated scorekeeper is recommended. Larger Premier events often have professional Scorekeepers who are experienced with scorekeeping software. Their scorekeeping ability does not correlate to their judge level; some professional Scorekeepers are uncertified, and others are Level 2+ judges.
+>
+>尽管记分的工作看似简单，确保每个对局的成绩能够完好保存对比赛的顺利运行来说是至关重要的。
+>
+>在小型比赛中，比赛主办人或主审往往担任了记分员的角色，但是在大型比赛（120人以上）中建议有专门的记分员。大型的重要比赛中则会有精通记分软件的专业记分员来负责。他们的记分水平和裁判等级无关，一些专业记分员并非认证裁判，一些专业记分员则是二级以上裁判。
+
+The Head Judge has the final authority in determining corrective action for scorekeeping errors.
+
+主审在确定如何对记分错误进行修正方面拥有最终决定权。
+
+>In the event of any issue with the pairings at any given round, the Head Judge may dictate a solution they see fit. In the end, the Head Judge is the final decision maker when it comes to the running of the event.
+>
+>如果在比赛中出现任何与配对相关的情况，主审将确定一个他认为最合适的解决方案。说到底，与比赛运行相关问题的最终决定权在于主审。
+
+## MTR 1.10 Players 牌手
+
+Players are responsible for:
+
+牌手的责任包括：
+
+* Behaving in a respectful manner toward tournament officials, other tournament participants, and spectators and refraining from unsporting conduct at all times.
+
+* 尊重比赛官员、其他参赛者以及旁观者，保持克制，任何时候都不得出现违反体育道德的行为。
+
+>Examples of behavior which are considered unsporting are found here. Players are otherwise expected to treat others with some level of respect.
+>
+>在[这里](#mtr-4-沟通交流)可以找到关于违反运动精神行为的案例。牌手必须在一定程度上对他人表示尊重。
+
+* Maintaining a clear and legal game state.
+
+* 保持对局状态清晰、合法。
+
+>Playing Magic can sometimes be complex, sometimes stressful, and sometimes frustrating, but still that’s not an excuse for a judge not penalizing a player for playing unclearly. Comprehension, legality and clarity are the most important things in a Magic game, for they can be the difference between no penalization and a Disqualification. There is a specific section about Maintaining the Game State in the IPG.
+>
+>万智牌的对局有时可能非常复杂，有时让人感到充满压力，有时甚至会让人沮丧。不过这都不是能让裁判宽恕未能清晰地进行游戏的牌手的原因。总的来说，理解、合法、清晰是进行万智牌对局最重要的三件事，这些事情可能会成为从无判罚到取消资格的巨大差异。在IPG中专门有一节是关于[维护游戏状态](http://blogs.magicjudges.org/rules/ipg2-6/)的。
+
+* Complying with announced start times and time limits.
+
+* 遵守宣告的开始时间以及时间限制。
+
+>Tournaments are always organized to run in a timely fashion, and Tournament Officials (judges and organizers) look to keep them running smoothly and quickly. If no extenuating situations appear, players are expected to follow every time limit to keep the tournament flowing. There is a specific section about Tardiness in the IPG.
+>
+>一般来说，比赛需要尽可能快地运行，比赛工作人员（裁判和主办人）会尽可能确保比赛快速并流畅地进行。如果没有特殊情况发生，我们希望牌手能够注意时间节点，确保比赛能够正常进行。在IPG中专门有一节是关于[迟到](http://blogs.magicjudges.org/rules/ipg3-1/)的。
+
+* Calling attention to any rules or policy infraction they notice in their matches.
+
+* 将在其对局中发现的违规举动（不论是游戏规则还是方针方面的规定）时提请他人注意。
+
+>Judges can’t be everywhere all the time, so players are encouraged to cooperate in maintaining a legal and clear game. Any rules and/or policy infraction should be pointed out to any judge as soon as noticed. This way we can all enjoy of a healthy and correct game! Failing to notice mistakes quickly may lead to Warnings (see IPG 2.6), and intentionally ignoring them can be much worse (see IPG 4.8).
+>
+>裁判不可能照顾到方方面面，所以我们鼓励牌手能够共同维护比赛的清晰合法。一旦发现规则或者方针上的问题，需及时向裁判提出。这样我们才能共同享受健康以及正确的游戏环境！未能及时注意到错误会导致警告的判罚（IPG2.6），故意忽略这些错误可能会得到更糟糕的判罚（IPG4.8）。
+
+* Bringing to a judge’s attention any discrepancies in their tournament match record.
+
+* 发现自己比赛对局记录有出入时告知裁判。
+
+>This is a very important responsibility. Players are required to inform a judge immediately if they are offered a bribe, or asked to record an improper game result. Failing to do so may result in a severe penalty for both the player offering and the player who did not call attention to the illegal action. Additionally, any errors that have been made in results entry should be brought to a Tournament Official’s attention as soon as they are noticed.
+>
+>这是一项十分重要的职责。当牌手遭遇行贿，或被要求记录非法游戏结果时，他应当及时通知裁判。如果不这样做，可能会为双方都带来十分严厉的判罚。此外，任何关于上报成绩的错误应当立即引起比赛工作人员的注意。
+
+* Accurately reporting the results of their matches in a timely manner.
+
+* 正确且及时地回报自己的比赛结果。
+
+>In a world without match slips, it’s even more important for players to report their results one way or another ideally before leaving the table or immediately thereafter.
+>
+>在不再使用纸质成绩条的今天，牌手及时汇报比赛结果变得尤为重要。理想情况下，这一汇报应在牌手离开牌桌前后立即完成。
+
+* Refraining from enrolling in tournaments in which they are not allowed by policy to participate.
+
+* 不报名参加受相应方针限制而无法参加的比赛。
+
+>Some tournaments award invitations to other events or have participation restrictions based on level, players’ invitation history, or other factors. Players are required to be aware of their eligibility and should not intentionally enter events they are ineligible for.
+>
+>一些比赛会提供参加另一些比赛的邀请，或者具有基于牌手级别、邀请历史或其他因素的参赛限制。牌手需要明晰自己是否符合参赛标准，不应去参加他们不能参加的比赛。
+
+* Being familiar with the rules contained within this document.
+
+* 熟识本文档中包含的规则。
+
+>While judges know how to handle rules and how to interpret them, players are responsible for knowing something about the rules contained in the game they play. Note, this is stated in the MTR, but not in the IPG. We expect players to know and adhere to Tournament Rules, but they don’t need to know what infraction or penalties are. Some violations of the MTR, such as Bribery and Improperly Determining a Winner involve penalties that will be applied whether or not the players know the relevant rules.
+>
+>裁判知道如何处理并解释规则，同时牌手也需要了解一些自己玩的游戏中所包含的规则。请注意，这是在MTR中说明的，但没有在IPG中说明。我们希望牌手了解并遵守比赛规则，但是他们不必了解违规和判罚的具体内容。一些违反MTR的违规，例如贿赂和不当决定胜方，一旦牌手触犯，无论他们是否知道相关规则，都会受到判罚。
+
+* Being physically present for the tournament.
+
+* 亲自到场参加比赛。
+
+>This document hasn’t yet been updated for online tournaments, but thats not what this rule is for.  You have to actually be at a tournament you are playing in.  For example, if an event gives a promo to everyone that registers, you actually have to appear at the event to be allowed in the event.  You cannot just pre-register, no-show, then expect your promo.  You were dropped from the event.
+>
+>本文件尚未针对线上赛进行更新，但本条规则的用意并非在于此。你必须亲身到场参加你所报名的比赛。例如，如果一场比赛为所有报名者提供一张纪念闪卡，你也必须实际到场才能被算作正式参赛。你不能只进行预先报名，然后缺席，还指望能拿到那张闪卡。在这种情况下，你已经被移出赛事了。
+
+A player must bring the following items to a tournament in order to participate:
+
+牌手须齐备下列所述各物品以参加比赛：
+
+* A physical, visible, and reliable method to maintain and record game information (tokens, score counters, pen and paper, and so on).
+
+* 具体的、可辨识的、可靠的方式，以维持和记录游戏信息（衍生物，记分器，纸笔，等等）。
+
+>Players are responsible for maintaining a clear and legal game state. Therefore players must bring items that help keep a clear game state — e.g., pen and paper for life totals, dice for counters and actual mana pool, tokens, etc.
+>
+>牌手有义务维持清晰合法的游戏状态。因此牌手需要携带一些物件来帮助体现清晰的游戏状态——例如，用于记录生命的纸笔，用于表示指示物或者法术力池的骰子，衍生物，等等。
+
+* Any materials specifically required for a particular tournament format, such as assembled decks and/or decklists for constructed tournaments.
+
+* 某些特定赛制所明定的其他必需物品，如构组赛中需要的已构组好的套牌和／或套牌登记表。
+
+>Some tournaments require players to have certain items in order to play, e.g., a decklists and constructed decks. Decklists help maintain an event’s integrity and provide information about the decks played at the tournament and their legality.
+>
+>一些比赛需要牌手携带特定的物品参赛，例如套牌登记表和构组赛用的套牌。套牌登记表帮助维护比赛公正并提供了参赛套牌的信息并确保该套牌合法。
+
+Players retain their responsibilities even if a judge provides them with extra assistance.
+
+在裁判提供了额外协助的情况下牌手也须履行好上述责任。
+
+>Players may request a judge’s assistance to comply with their responsibilities as a player. For example, during the pool registration portion of a limited event, a judge may step in to help a struggling player register their pool to get the event moving. Nevertheless, the player still needs to fulfill with his responsibilities as best they can.
+>
+>为了履行自己作为牌手的职责，牌手可以向裁判寻求帮助。例如，在限制赛的牌池登记环节，裁判可以帮助觉得困难的牌手登记牌池来确保比赛正常进行。然而，牌手仍需在可行的范围内尽可能地自己履行职责。
+
+The individual members of a team are considered players, and are equally responsible for required tournament procedures, such as accurately reporting the results of their match. Players are only responsible for the games they play themselves and not separate games being played by their teammates but are expected to point out rules violations they observe in their teammates’ matches.
+
+一个团队的每一位队员都算作一位牌手，因此也需要为必要的比赛过程承担同等的责任，例如准确回报他们的对局结果。每位牌手只需为他们自己所参与的对局负责，而不需为他们同队队员所参与的其他对局承担责任，但在发现队友对局中出现违反规则情事时，应予以指出。
+
+>Individual players on a team must comply with the same tournament procedures as players not playing on a team but should not be held responsible for their teammates’ errors, However that doesn’t mean they can ignore errors if they see them. If they see a problem with one of their teammate’s games they cannot deliberately ignore it.
+>
+>团队中的每一位队员都需要像个人赛中的牌手一样履行相应的职责，然而他们不需要为队友的错误负责。但这并不意味着他们可以无视其看到的错误。如果他们发现了队友游戏中的问题，他们不能故意忽略之。
+
+Players who do not fulfill their responsibilities may be subject to penalties and review by the DCI. Wizards of the Coast and the DCI reserve the right to suspend or revoke a player's membership without prior notice for any reason they deem necessary.
+
+未能确实达成以上责任的牌手可能会受到相应的处罚，并由DCI进行复核。只要威世智与DCI认定有此必要，则不论是否预先通知，均保留将玩家停权乃至取消会员资格的权利。
+
+>This is the big ultimatum. Not complying with a required responsibility consciously may end in a penalty and also a review or an investigation conducted by the judges at the event and/or the DCI itself. No player may interfere with the integrity of a tournament under any circumstances.
+>
+>这是最后通牒。明知却不履行职责的牌手会得到处罚并受到裁判和DCI的后续调查和跟进。任何情况下，牌手都不能干扰比赛的公正。
+
+## MTR 1.11 Spectators 旁观者
+
+Any person physically present at a tournament and not in any other category above is a spectator. Spectators are responsible for remaining silent and passive during matches and other official tournament sections in which players are also required to be silent.
+
+亲临比赛，但并不属于上述任一职能分类之人员便属于旁观者。在对局过程中及参加比赛之牌手亦须保持安静的正式比赛部分当中，旁观者得保持噤声，不主动与他人进行沟通。
+
+>Spectators are allowed as long as they are not disruptive.  Excessive chatting can be disruptive at best, and at the worst can actually aid a player and alter the outcome of a game.  Also, so much information can be gained from watching spectators facial expressions. Pretend you are [Aang talking to Koh](https://avatar.fandom.com/wiki/Koh).
+>
+>旁观是被允许的，前提是不能干扰比赛。过多的交谈，轻则会干扰赛场，重则实际上会帮助到某位牌手，甚至改变游戏结局。此外，通过观察旁观者的面部表情也可能获取大量信息。所以，请保持面无表情。
+
+If spectators believe they have observed a rules or policy violation, they are encouraged to alert a judge as soon as possible. At Regular or Competitive Rules Enforcement Level, spectators are permitted to ask the players to pause the match while they alert a judge. At Professional Rules Enforcement Level, spectators who are not members of the official coverage team must not interfere with the match directly.
+
+若旁观者认为自己发现了违反游戏规则或比赛方针的举动，鼓励其尽快提请裁判注意。在「一般」或「竞争」级别的比赛中，允许旁观者请求牌手在其寻找裁判期间暂停对局的进行。在「专业」级别的比赛中，不属于正式报导团队之旁观者不得直接干预对局。
+
+>Judges aren’t everywhere and sometimes spectators may identify an action or board state as illegal.  When this happens, a spectator may bring the issue to a judges attention away from the match.  Spectators may ask the players to pause at a Competitive Rel event.  But otherwise, do not tell the players what the concern is.  This is because the spectator may be in error regarding the rules and give the players information.  This can alter the game.
+>
+>Members of the coverage team are allowed to bring attention to the judge staff about possible problems with the game.
+>
+>裁判并非无处不在，有时旁观者可能会发现违规行为或不合法的场面状态。在这种情况下，旁观者应当在远离对局的地方提醒裁判注意此问题。在竞争级别赛事中，旁观者可以要求牌手暂停，但除此以外，不应告知牌手他们所顾虑的问题是什么。这是因为旁观者对规则的理解可能有误，而他们的言语会向牌手提供本不应获得的信息，进而可能影响游戏进程。
+>
+>允许报道团队的成员就游戏内可能的问题提请裁判。
+
+Players may request that a spectator not observe their matches. Such requests must be made through a judge. Tournament officials may also instruct a spectator not observe a match or matches.
+
+牌手可以要求旁观者停止观看自己的对局。所有类似的要求必须通过裁判提出。比赛工作人员同样也可要求旁观者停止观看对局或比赛。
+
+>Some spectators might be scouting other players or talking too much, or just hovering in a disconcerting way. Players can request the judge to have the spectator removed. This request can be refused, but would only happen in situations with extreme mitigating factors.
+>
+>一些旁观者可能会侦查其他牌手的情况，或者在一旁说太多的话，或仅是以令人不安的方式在旁徘徊。牌手可以请求裁判将这样的牌手驱离他的比赛。裁判一般会同意这样的请求，但是同样也会保留拒绝不合理请求的权利。
+
+## MTR 1.12 Rules Enforcement Levels 执法严格度
+
+Rules Enforcement Levels (REL) are a means to communicate to the players and judges what expectations they can have of the tournament in terms of rigidity of rules enforcement, technically correct play, and procedures used.
+
+执法严格度的用途，是让牌手和裁判对于此比赛的规则执法严厉与否、正确进行游戏的水准以及使用的程序，能够先有所预期。
+
+>The expected mindset and attitude of the average player as well as the standard of behavior judges  are different at each Rules Enforcement Level. From the most casual to most stringent the Rules Enforcement Levels are: Regular Rules Enforcement Level, Competitive Rules Enforcement Level, and Professional Rules Enforcement Level.
+>
+>牌手的态度和预期心态，以及裁判的行为标准会随着执法严格度的不同而有所改变。执法严格度从休闲轻松，到严格严肃分为以下级别：一般级别，竞争级别，以及专业级别。
+
+The Rules Enforcement Level of a tournament generally reflects the prizes awarded and the distance a player may be expected to travel.
+
+比赛的执法严格度通常应该配合所提供的奖品，以及牌手为参赛所可能花费的路程来增加。
+
+>Typically the higher the stakes for the tournament, the more rigidly the rules are enforced.  For example, FNM is run at Regular Rules Enforcement Level, draws from the store’s local player community, and often offers one or two booster packs per player as the prize pool.  This type of event is more laid back and casual, so a less strict Rules Enforcement Policy is appropriate.  However,  an SCG Tour event, is run at Competitive Rules Enforcement Level, can draw players from several hours away, and often have significant prizes.  For those events, where players are more incentivized to play competive, a stricter Rules Enforcement policy is appropriate.
+>
+>通常而言，一场赛事的利害关系越重大，其规则的执行也越严格。例如，FNM的执法严格度是一般级别，大多数参赛牌手都来自牌店的本地牌手社群，一般会提供平均每位牌手1到2包补充包作为奖品池。这类赛事更为轻松休闲，因此采用较为宽松的规则执行策略是恰当的。然而，星城巡回赛 (SCG Tour) 则以竞争级别运作，一些牌手可能会花费几小时的时间赶来参加，并通常设有更丰厚的奖品。对于这类牌手竞争意愿更强的赛事，采用更为严格的执法严格度便是恰当的。
+
+The appropriate Rules Enforcement Level for specific programs is listed in Appendix F.
+
+具体比赛计划对应的执法严格度于附录F中列出。
+
+Regular
+
+一般级别
+
+Regular tournaments are focused on fun and social aspects, not enforcement. Most tournaments are run at this level unless they offer sizeable prizes or invitations. Players are expected to know most of the game rules, may have heard of policy and what is “really bad,” but generally play in a fashion similar to the way they do casually. Players are still responsible for following the rules, but the focus is on education and sportsmanship over technically precise play. Infractions in these tournaments are covered by the Judging at Regular Rules Enforcement Level document, located at https://wpn.wizards.com/en/rules-documents.
+
+一般的比赛主要是为了娱乐和社交，而非铁面无私。大部分的比赛都是采用这个等级，除非比赛提供了一定程度的奖品或是邀请资格。对牌手的期待是应该知道大部分的游戏规则，可能听过一些比赛政策或知道哪些事情「很不好」，但通常是以类似休闲娱乐的方式来比赛。牌手还是有责任去遵循规则，但所强调的主要在于教育性和运动道德，而不是技术上的精确无误。在此类比赛中处理牌手违规行为的细则，由《一般执法严格度下执法指南》此份文档详述，该文档可于此处获取：https://wpn.wizards.com/en/rules-documents.
+
+>Regular Rel events are often players introduction to Magic tournaments.  As they are often coming from playing at home, it is expected that they bring that style of play with them.  Playing at home is fun and low stakes, and Regular tournaments should strive to capture that same vibe.  Note that the IPG does not apply at Regular Rules Enforcement Level. Instead, we use the Judging at Regular Rules Enforcement Level (JAR) document, which lays the groundwork for a fun, casual atmosphere where only repeat offenders and serious problems —like cheating, aggressive behavior, bribery, and theft— are punished. Instead of punishing players for innocent tournament and play errors, it’s our job as judges at Regular Rules Enforcement Level to help them learn the right way to play so that they can succeed at higher Rules Enforcement Level tournaments.
+>
+>一般级比赛是走向万智牌比赛的第一步。由于这些牌手通常习惯了在家打牌，他们自然也会将那套游戏风格带到赛场上。家庭对局的特点是充满乐趣且利害关系不大，而一般级比赛也应致力于营造出同样的氛围。请注意，IPG不适用于一般级别的比赛。取而代之的是，我们会使用JAR，这份文件基于创造快乐、休闲的游戏氛围而制定，只有重复犯错和触犯严重问题（例如作弊，进攻性举止，贿赂，偷窃）的牌手才会受到惩罚。比起惩罚犯错的牌手，在一般级别的比赛中我们裁判更应该帮助牌手懂得怎么做才是正确的，这样他们才能在未来更高级别的比赛中取得成功。
+
+Competitive
+
+竞争级别
+
+Competitive tournaments are usually those with significant cash prizes or invitations awarded to Professional tournaments. Players are expected to know the game’s rules and be familiar with the policies and procedures, but unintentional errors are not punished severely. These are tournaments that protect the interests of all players by providing tournament integrity while also recognizing that not all players are intimately familiar with Professional-level tournament structure, proper procedures, and rules. Infractions in these tournaments are covered by the Magic Infraction Procedure Guide, located athttps://wpn.wizards.com/en/rules-documents.
+
+竞争等级的比赛通常指有着高额奖金，或有专业比赛邀请资格的比赛。对牌手的要求是了解游戏规则并熟悉竞赛政策和流程，但是无意的失误不会导致严厉的处罚。为了保护所有牌手的乐趣，这类比赛要尽力维持一致性，也要了解并非所有牌手都十分清楚专业级比赛的架构、适当的流程，以及规则。在此类比赛中处理牌手违规行为的细则，由《万智牌违规处理方针》此份文档详述，该文档可于此处获取：https://wpn.wizards.com/en/rules-documents.
+
+>One thing to clarify here is that there is a difference between “Competitive tournaments” and “competitive tournaments”.  Any game of Magic you play, where you are trying to win, is a competitive game. However Competitive Tournaments is a class of tournaments where players begin competing for significant prizes. This is the Rules Enforcement Level at which many large magic tournaments are run. Grand Prix Trials, Preliminary Pro Tour Qualifiers, Regional Pro Tour Qualifiers, and the first day of Grand Prix are all run at Competitive Rules Enforcement Level. Tighter technical play and clearer communication are both important at this level, and tournament and game play infractions are penalized according to the IPG.
+>
+>Competitive tournaments have more expectations of players.  For example, decklists are required at Competitive events, which they are a discouraged option at Regular.
+>
+>首先需要区分，“竞争级比赛” 和“竞争性的比赛” 这两个概念的区别。任何一场你以获胜为目标的万智牌对局，都带有竞争性质。然而，“竞争级比赛”则是一个正式的赛事类别，在这一类别中，牌手们开始为更重大的奖品而战。大多数竞争性较强的万智牌比赛都会使用这个执法严格度。大奖赛预选赛，初选专业资格赛，区域专业资格赛，大奖赛第一天都是以竞争级别的执法严格度进行的。这个级别的比赛要求更严谨的游戏技巧以及更清晰的交流，并且会根据IPG对违规进行相应的处理。
+>
+>竞争级比赛对牌手有着更高的要求。例如，在竞争级赛事中，牌手必须提交套牌登记表，而在一般级赛事中，这通常是不鼓励的选择。
+
+Professional
+
+专业级别
+
+Professional level tournaments offer large cash awards, prestige, and other benefits that draw players from great distances. These tournaments hold players to a higher standard of behavior and technically-correct play than Competitive tournaments. Infractions in these tournaments are covered by the Magic Infraction Procedure Guide, located athttps://wpn.wizards.com/en/rules-documents.
+
+专业级别的比赛会提供高额的奖金、声望和其他福利，吸引牌手不远千里而来。这些比赛和竞争等级的比赛比起来，更要求牌手具备高水准的行为和精确的游戏动作。在此类比赛中处理牌手违规行为的细则，由《万智牌违规处理方针》此份文档详述，该文档可于此处获取:https://wpn.wizards.com/en/rules-documents.
+
+>This is the strictest Rules Enforcement Level and is correspondingly rare. Day two of Grand Prix and the Pro Tour are both run at Professional Rules Enforcement Level.  Its also very similar to Competitive REL, with most of the difference in the rules managing spectators.
+>
+>这是最严格的执法严格度，但相对也使用得最少。大奖赛第二天以及专业赛都是用这个执法严格度进行的。它与竞争级非常相似，主要区别在于有关旁观者管理方面的规则。
+
+# MTR 2. Tournament Mechanics 比赛的各项机制
+
+## MTR 2.1 Match Structure 对局结构
+
+A match consists of a series of games that are played until one side has won a set number of games, usually two. Drawn games do not count toward this goal.
+
+一局对局包含有一系列盘数的游戏，双方持续进行每盘游戏，直到有任何一方游戏获胜的盘数达到一定数量为止,通常此数量为二。以平局告终的游戏并不会计入此数量。
+
+>This rule is often incorrectly abbreviated ‘best of three’.  While it is true that most matches are usually won as 2-0 or 2-1, draws can result in forth or even fifth games being played.  Two Headed Giant matches, unlike regular two player matches, are played till one team has won a match.
+>
+>本条规则常被误称为“三盘两胜”。虽然大多数对局确实以2-0或2-1的比分结束，但平局的存在可能导致需要进行第四盘甚至第五盘游戏 。此外，双头巨人的对局与常规双人比赛不同，它是一盘定胜负的。
+
+If the round ends before a player has won the required number of games, the winner of the match is the player who has won the most games at that point.
+
+如果在本局对局时间终止之前,任一方牌手都未能赢下所需数量的游戏,则当时握有最多游戏获胜盘数的一方便为该局对局的胜利者。
+
+>If the round has ended and only one player has won a game then that player is the winner of that match because they have won the majority of games.
+>
+>如果当本局比赛时间结束时只有一个牌手赢过一盘比赛，那么该牌手就是本局的获胜者因为他赢得了更多的盘数。
+
+If both players have equal game wins, the match is a draw.
+
+若双方游戏获胜的盘数相同,该局对局结果为平局。
+
+>If the round has ended and the result is 1-1 or even 0-0  then the match is a draw.
+>
+>如果当本局对局时间结束时比赛结果为1-1或者0-0则该局为平局.
+
+The Tournament Organizer may change the required number of games to be won for any portion of the tournament as long as this choice is announced before the tournament begins.
+
+比赛主办人可在比赛任意阶段中，变更任意一方要获得对局胜利所需的游戏获胜盘数，但此变更须在比赛开始前公布。
+
+>For example, the Pro Tour finals are played until one player wins three games. While a local store can structure their tournment in this way, certain premier tournaments supported by Wizards, have a prescribed structure.  Certain tournaments supported by Wizards may have a specified structure required to run it. If so, that structure supersedes this rule.
+>
+>例如，专业赛的决赛需要牌手赢得3盘比赛。尽管本地店家可以自行设定其比赛结构，但某些由威世智支持的重要赛事有其指定的、必须遵守的结构。若存在此种指定结构，则其效力将优先于本条通用规则。
+
+Match results, not individual game results, are reported at the end of the tournament.
+
+对局结果(而不是各盘游戏的结果)将在赛后回报。
+
+>The results of these matches are sent to WoTC.  They used to do something with these results in the form of planeswalker points.  Now?  Who knows. Post your conspiracy theory online.
+>
+>这些比赛的结果会上报给威世智。过去，他们曾利用这些结果来计算鹏洛客分数 。至于现在？天晓得。欢迎把你的阴谋论发到网上。
+
+## MTR 2.2 Play/Draw Rule 先手规则
+
+For the first game of a match, a designated player - the winner of a random method (such as a die roll or coin toss) during Swiss rounds, or the player ranked higher at the end of Swiss rounds during playoff matches - chooses either to play first or to play second.
+
+每局对局的第一盘游戏由指定牌手决定哪方先手：若是在瑞士式对局期间，由随机方式（例如掷骰子或抛硬币）之胜利者决定；若是在决胜局期间，则是由瑞士式对局结束时排名较高的牌手决定。
+
+>For non-Playoff matches, both players must agree on the random method. This can get a little tricky when the players don’t agree on the method (such as rolling a spindown dice) so and Judges may step in and help players select a random method like odds and evens or something similar. ‘Higher ranked choosing’ is the default rule for any single elimination portion of a tournament. This only applies to the first game of each match. After the first game, the loser of the previous game makes the choice. This rule was created to discourage intentional draws during swiss, by giving players an incentive to play it out.  In practice, it isn’t enough of an incentive to have any practical effect.
+>
+>对于非淘汰赛的对局而言，双方牌手必须协定某个随机方式。当牌手无法决定出某个随机方式时就有点棘手了（例如丢一个顺数字骰子），此时裁判可以介入并帮助牌手决定一个随机方式，例如猜单双或者其他类似的方法。排名较高的牌手决定先手是单淘汰赛制比赛的默认规则。这只适用于对局第一盘的选择。在第一盘比赛之后，上一盘的输家选择先后手。制定本条规则的初衷，是通过激励牌手打完来减少瑞士轮的约和。然而事实上，这种激励的力度并不足以产生任何实际效果。
+
+They must state this choice before looking at their hand. If they state no choice, it is assumed that they are playing first.
+
+该位牌手须在检视手牌之前确定相应的选择。若该牌手未置可否，则认为他选择先手。
+
+>Players are supposed to decide whether they want to play or draw before looking at their opening hands, since the contents could influence their decision greatly. If someone does not announce their choice before seeing their opening hand, they gain information would could impact their decision. This is a fairly common and innocent mistake, so there is a simple solution; the player who sees their opener before declaring plays first by default.
+>
+>牌手应该在看到他们的手牌前决定是否先手，因为其内容会极大地影响他们的决定。如果有人在看到其手牌前没有宣告其选择，他们获得的信息会影响他们的决定。这是一个相当普遍和无意的错误，所以解决方案也很简单：牌手未宣布先手选择就看到手牌默认为选择先手。
+
+The player who plays first skips the draw step of their first turn. This is referred to as the play/draw rule.
+
+先手的牌手略过他第一个回合的抓牌步骤。此规则称为「先手规则」。
+
+>For more information this, check out CR 103.7, which covers the beginning of the game.
+>
+>更多关于游戏开始的信息，参见[CR 103.7](http://blogs.magicjudges.org/rules/cr103#7)。
+
+After each game in a match, the loser of that game decides whether to play first in the next game. They may wait until after sideboarding to make the decision. If the previous game was a draw, the player who decided to play or draw at the beginning of the drawn game chooses.
+
+在对局中的每盘游戏之后，输掉该盘游戏的人决定自己下盘是否先手。此决定可在更换完备牌后作出。如果某盘游戏以平局告终，则由决定该盘先后手的牌手来选择自己在下盘游戏中是否先手。
+
+>Games that have ended in a draw have functionally not happened. There is thus no need to rechoose, as we are instead merely beginning the act of playing again. Thus, if the previous game ended in a draw, the player who chose last chooses again.  Additionally, a player may wait until after sideboarding, but doesn’t have to.  However, they cannot announce a decision prior to sideboarding, and then try to change the choice after sideboarding
+>
+>以平局结束的游戏等同于是没有发生。因为我们只是重新开始这盘游戏，所以不需要重新选择。因此，如果某盘游戏以平局告终，由上一盘决定先后手的牌手再次决定。此外，牌手可以选择等到完成换备后再做决定，但这并非必须。然而，牌手不能在换备前先宣布决定，然后在换备后又试图更改该决定。
+
+## MTR 2.3 Pregame Procedures 游戏前程序
+
+The following steps must be performed in a timely manner before each game begins:
+
+在每盘游戏开始前,必须执行下列步骤，且须以合理的耗时完成之:
+
+>The term “timely” here is important. Players cannot take excessive time sideboarding or shuffling, or they may be subject to Slow Play or Stalling penalties.
+>
+>合理的耗时是很重要的，牌手不能花过多的时间用于换备或者洗牌，否则他们可能会受到拖延或者作弊的判罚。
+
+1. If sideboarding is allowed, players may remove cards from their decks and add cards from their sideboards.
+
+1\. 如果本盘游戏允许更换备牌，则牌手可以从套牌中去掉原有牌张，并将备牌中的牌加入套牌。
+
+>Sideboarding is allowed between games only when a previous game had actions taken during it. A tournament should test a player’s skill in deck building and technical play first, not in advance scouting opponents. This is just a fancy way of saying the game wasn’t lost because of a tardiness penalty or a Game Loss coming from a deck check. Additionally, a player may not offer to intentionally draw the opening game prior to taking game actions in order to introduce sideboard cards for the match. If the players have completed game actions, it’s reasonable for them to use that knowledge to sideboard effectively. Note that this applies to the first game of the match, or to any match that begins on a second or subsequent game due to penalties assessed to one or more players prior to the first game beginning. This includes games started by the third activated ability of Karn Liberated; treat these restarted games as the same game in the match.
+>
+>只有在上一盘游戏中进行过游戏动作的情形下才允许更换备牌。一场比赛首先测试的应该是牌手的套牌构筑技巧以及牌技，而不是从侦查对手中获得优势。说白了，因为迟到判罚或套牌检查判负不能换备。牌手不能在进行游戏动作前就提出约和第一盘比赛以使用备牌。如果牌手进行了游戏动作，使用因此而获得的信息进行有效换备便是合理的。注意这适用于每局的第一盘比赛或是由于在第一盘比赛开始前一个或多个牌手受到判罚而从第二盘或之后开始的比赛。这也包括了诸如因重获自由的卡恩的第三个异能而产生的情况；把这些重新开始的游戏当做原本的那盘游戏一样处理即可。
+
+2. Players shuffle their decks. Steps 1 and 2 may be repeated.
+
+2\. 双方牌手洗自己的套牌。步骤 1 和步骤 2 可重复进行。
+
+>Each player must present a fully randomized deck for each game — a player may not know the specific or general location of any card in the deck. “Pile shuffling,” or laying cards out in a determined number of stacks, is not considered sufficient for this process (MTR 3.9). Shuffling the deck is not a signal that all sideboarding is completed. Players may shuffle and reconsider their sideboard choices, so long as this is done in a reasonable time frame.
+>
+>每盘游戏中，每个牌手都必须呈出一副充分随机化的套牌——也就是说，任何一个牌手都不知道任何牌在套牌中的确切或大致位置。“分堆洗牌”，也就是把牌摊开在桌子上分成几堆，并不足以达到这个要求(MTR 3.9)。洗牌并不代表换备已经完成。牌手可以洗牌并重新考虑他们的换备选择，只要在合理的时间内完成即可。
+
+3. Players present their decks to their opponents for additional shuffling. The sideboard (if any) is also presented at this time.
+
+3\. 双方牌手将套牌呈视于对手，以让对手进行额外的洗牌。此时牌手也需将自己的备牌（若有）呈视于对手，以示数量正确。
+
+>This clause is to prevent players from stacking their own decks through sleight-of-hand tactics in the shuffling process. Players should also allow their opponent to verify the legality of the sideboard for each game (the number of cards but not the contents). Once a player has presented their deck and the opponent has shuffled it, the time for repeating steps 1-2 has passed.
+>
+>这一条款是为了防止牌手在洗牌过程中通过特殊的技巧排列他们的套牌。牌手也应当允许对手在每盘游戏中核实其备牌的合法性（牌的数量而非内容）。一旦一个牌手呈出了他或她的套牌并且对手已经为之洗牌，就不应当再重复步骤1-2了。
+
+4. If a companion is being used, it is noted. After the first game, the companion does not need to be noted again; it is assumed to be in use until rescinded.
+
+4\. 如果牌手使用行侣，展示之。在第一盘游戏之后，不需要再作表示，在取消使用之前行侣视为一直适用。
+
+>This gives explicit direction that once a companion is revealed, for game 2 and game 3, the players deck must conform to the companion restriction for those games, unless the companion is explicitly rescinded. This implicit assertion may impact how judges evaluate deck problem infractions.
+>
+>本条规则明确说明：一旦牌手展示了行侣，那么在第二盘和第三盘游戏中，除非牌手明确表示放弃使用该行侣，其套牌必须持续符合该行侣的构组限制。这种默认可能会影响裁判在评估套牌问题相关违规行为时的判罚。
+
+5. The appropriate player must decide whether to play first or second at this point, if they haven’t done so already (see section 2.2).
+
+5\. 若相关牌手尚未决定自己是先手还是后手，则他需在此时决定（参见第2.2节）。
+
+>This is covered in MTR 2.2 as well, but to recap: players decide if they want to play or draw before looking at their hand, as that could influence them greatly. Most people want to play first anyway, so we just default to that if they don’t explicitly announce it.
+>
+>这一条在[MTR 2.2](#mtr-22-playdraw-rule-先手规则)中也有说明，这里重复一下：牌手在看到自己手牌前决定是否先手，因为手牌会极大地影响这个决定。大多数人都习惯选择先手，所以我们默认如果他们不明确宣告就如此做。
+
+6. Each player draws seven cards. Optionally, these cards may be dealt face down on the table.
+
+6\. 每位牌手抓七张牌。牌手可以选择先将这七张牌以面朝下的方式发到桌面上。
+
+>This rule defines the starting hand size for sanctioned tournament play. The method of drawing these cards is inconsequential as long as far as exactly seven cards are drawn. Dealing the cards face down on the table does not mean they are drawn. Many players do this to count out the cards to make sure they get the correct number.
+>
+>这一条款定义了用于认证比赛的起手牌数量。只要正好抓了7张牌，抓牌的方法并不重要。将牌张面朝下地发在桌上并不意味着它们已经被抓起。许多牌手都会这么做来清点牌数，以确保他们抓起了正确的数目。
+
+7. Each player, in turn order, may take mulligans. (Rules on mulligans can be found in the Magic Comprehensive Rules, rule 103.4). If a player takes a mulligan, they shuffle again and repeat the presentation process described above.
+
+7\. 每位牌手可以依照回合顺序来进行再调度。（关于再调度的规则,请参阅《万智牌完整规则》规则 103.4）如果牌手进行再调度，则他需再次洗牌并重复执行上述之呈视流程。
+
+>Once a player has announced a decision to keep a starting hand, they may not later decide to take a mulligan based on the opponent’s decision. When a player announces a mulligan decision, they is held to that choice, even if it is made out of order. Note that steps 1-2 are not repeated during mulliganing. Cards may not be added or removed from the deck at this time. For all of the technical details in how to proceed with mulliganing, check the Comprehensive Rules, rule 103.5.
+>
+>一旦牌手宣告保留其起手手牌，他或她就不能依据对手的决定在之后再次决定再调度。当牌手宣告要再调度，他或她便应执行这个选择，即使宣告时并没有严格按照顺序。注意，步骤1-2在再调度时并不会再次进行。此时不能在套牌中添加或减少牌。有关再调度的所有技术细节，请参阅[CR 103.5](https://blogs.magicjudges.org/rules/comprehensive-rules/#rule-103-5)。
+
+The game is considered to have begun once all players have completed taking mulligans. Pregame procedures may be performed before time for the match has officially begun.
+
+一旦所有牌手的再调度均进行完毕，便视作双方已开始此盘游戏。于主办人为该局对局所指定的时间正式开始之前，便可以执行游戏前程序。
+
+>This rewards punctual players, who may be able to capture the full round time for game play, while still allowing a firm line of what can be done before the start of the round is announced.
+>
+>这一条奖励了准时的牌手，他们可以将完整的一轮时间用于对局本身，并且仍有一条明确的界限确定哪些可以在比赛开始的宣告前进行。
+
+## MTR 2.4 End-of-Match Procedure 对局结束程序
+
+Once the game is complete, players may not leave the table until the result of the match is recorded unless they are doing so to record the result.
+
+一旦对局结束，除非牌手是为了上报比赛结果，否则直到对局结果被上报前，牌手不得离开牌桌。
+
+>This is a warning shot. As events move away from match slips, and towards digital submissions, tournament officials are running into problems.  Too many players leave their match and do not report there results. A some events, as many as 60 matches can be empty and have no results submitted. This means the stage has to page each match to get the results. This sentence is “step 1” in moving towards a future where players are penalized for not submitting match results. If this is sufficient (spoilers: it won’t be) then further steps will not be necessary.
+>
+>这可以算是一种警示。随着赛事逐渐淘汰纸质成绩条，转向数字化提交，赛事工作人员正面临一个难题：太多的牌手在赛后不汇报结果就径直离开。在某些赛事中，甚至可能有多达60桌对局的结果无人提交，导致主办方不得不通过广播逐一呼叫这些对局来获取结果。本条规定就是迈向“未来将对不提交比赛结果的牌手进行处罚”这一方向的第一步。如果这一步就已足够（提前说一下：肯定不够），那么后续的措施也就没必要了。
+
+If the match time limit is reached before a winner is determined, the player whose turn it is finishes their turn and five additional turns are played in total.
+
+如果在确定对局胜利者之前，该对局的时间限制便已达到，则当正在进行回合的牌手结束他的回合后，双方再进行总共五个延长回合。
+
+>This “overtime” procedure is in place to allow all matches a chance to come to a natural conclusion and prevent one player from “milking the clock” and forcing a draw. While these additional turns are technically untimed, players are still expected to play at a reasonable pace, and are liable for slow play penalties.
+>
+>这个“加时”流程存在的目的是允许所有的比赛能有机会以一个自然的结果结束并防止牌手通过“磨洋工”来强迫平局。虽然这些延长回合理论上不计时，牌手依然需要以合理的速度进行游戏，并依然可能受到游戏进行过慢的处罚。
+
+This usually means that one player takes three turns and the other two, but a player taking extra turns may affect this.
+
+通常情况下,其中一方牌手得以进行三个回合，另一方得两个，但若有牌手能进行额外回合时则会改变这种情况。
+
+>There will only be five turns in the additional turn portion of the round. (But see IPG 3.3 — Slow Play, where two additional turns are added as an additional remedy.) Game circumstances (e.g., the activation of Ral Zarek’s third ability) may result in one player being entitled to all five turns. For more details on extra turns, see CR 500.7.
+>
+>每轮比赛将只有5个延长回合（需要注意[IPG 3.3 游戏进行过慢](http://blogs.magicjudges.org/rules/ipg3-3/)的进一步的修正部分，可能会额外加入两个延长回合）。游戏中的情形（如起动拉尔查雷克的第三个异能）可能会使这五个回合都属于其中一位牌手。关于额外回合的更多细节，参见[CR 500.7](http://blogs.magicjudges.org/rules/cr500#7)。
+
+If the active player has already indicated that they would like to pass the turn when the time limit is reached, that is considered to be in the next turn.
+
+如果在达到对局时间限制时，主动牌手已表明要让过回合，则视作已进入下一个回合。
+
+>This rule is to handle the case where the opponent is “thinking” during the end of a players turn, in order for this tiny fraction of a turn to count as turn zero.
+>
+>本条规则旨在应对下述情形：在当前牌手回合结束时，其对手故意进行所谓的思考，以此让回合末这极短的瞬间被算作时间的第0回合。
+
+Team tournaments featuring multiple players playing together (such as Two-Headed Giant) use three turns instead of five.
+
+在由多位牌手共同参加的团队比赛(如双头巨人赛)中,延长进行的回合数为三个，而不是五个。
+
+>Team turns take longer significantly longer, so they get less of them.  We are trying to start the round here.
+>
+>团队回合的耗时明显更长，因此他们获得的加时回合数也更少。毕竟，我们总得想办法开始下一轮比赛。
+
+Once time is called, no new games should begin.
+
+宣告本局时间终了之后，不得开始新一盘的游戏。
+
+>Players are not entitled to start a new game to take advantage of their remaining additional turns once time has been called. The round score should be reported following the conclusion of the most recent completed game.
+>
+>一旦时间终了，牌手便不允许开始一盘新的游戏来利用剩余的延长回合。本轮的成绩需以最近完成的游戏之后的结果来上报。
+
+If the game is incomplete at the end of additional turns, the game is considered a draw.
+
+若在延长进行的回合结束后，游戏仍未完成,则认为该盘游戏是平局。
+
+>Players may discuss and come to an agreement on an alternate outcome for the game/match (e.g. a concession) so long as there is no incentive offered for the result (see IPG 4.4: Bribery and Wagering). Players may not utilize out-of-game assets, including but not limited to rolling a die, revealing cards off the top of the library, or the results of adjacent matches, to come to this decision (see IPG 4.3: Improperly Determining a Winner). Players must decide in a reasonable time frame, as it is unfair to make other players wait on this individual match debating who would have won seven turns from now. If players cannot come to an agreement, the match is still a draw and Judges are encouraged to “nudge” players to fill out their results slips, without influencing the decision.
+>
+>牌手可以讨论并就比赛结果达成协议（如一方认输），只要这一结果不是因为提供了奖励而换来的（参见[IPG 4.4: 赌博与贿赂](http://blogs.magicjudges.org/rules/ipg4-4/)）。牌手不允许利用游戏外的因素，包括但不限于投骰子，展示牌库的顶牌或是临桌的比赛结果以达成此协议（参见[IPG 4.3: 不当决定胜方](http://blogs.magicjudges.org/rules/ipg4-3/)）牌手必须在一个合理的时间内做出决定，因为让其他牌手等待他们辩论“再给七个回合谁能赢”是不公平的。如果牌手不能达成一致，比赛将保持平局。我们鼓励裁判在不影响他们做出决定的前提下，“敦促”牌手填写好他们的成绩条。
+
+If a judge assigned a time extension (because of a long ruling, deck check, or other reason) the end-of-match procedure does not begin until the end of the time extension.
+
+如果裁判给予了时间延长（由于长时间的判罚、套牌检查或其他原因），则对局结束程序在给予的时间延长结束后方才开始。
+
+>Players are entitled to use the full time of a round to play their match of Magic. Should some interruption occur, time extensions are awarded to allow players a chance to fully play out their games. Players with a time extension who are still in a game when time is called should call a judge to ensure time continues to be kept accurately.  Typically a judge will write the extension in the top right corner of the match slip.
+>
+>牌手有权使用完整的一轮时间来进行万智牌比赛。一旦发生了中断，牌手将获得补时，以使牌手能够能完整地进行游戏。如果牌手获得了补时，在时间终了后仍然在比赛中的话，应当呼叫一个裁判来确保继续计时的准确无误。通常，裁判会将补时记在成绩条的右上角。
+
+In single-elimination rounds, matches may not end in a draw.
+
+在单淘汰赛制中，对局不会以平局收场。
+
+>This is because the winner advances to the next round, and if this is the last match, the tournament still needs a winner. There are some instances where the single-elimination portion of a tournament requires timed rounds (e.g., a venue closing or other curfew). Often this will be the case with single elimination Last Chance Trials at a Grand Prix. This necessitates the declaration of a winner despite a game or match not coming to a natural conclusion.
+>
+>原因在于，胜者需要晋级下一轮；而如果这已是最后一场比赛，那么整场比赛也必须决出一位最终的胜者。在某些情况下，比赛的单淘汰部分需要对每轮的时间加以限制（如场地关闭或其他宵禁）。通常这例子会出现在大奖赛的最后机会预选赛。这就需要在对局没有自然地产生结果的情形下决定一个胜者。
+
+If all players have equal game wins at the end of additional turns, the player with the highest life total wins the current game. In the event all players have equal life totals (or are between games and the game wins are tied), the game/match continues with an additional state-based action: if a player does not have the highest life total, they lose the game. Two-Headed Giant teams are treated as a single player for determining a game winner.
+
+若进行完延长回合后，双方牌手的游戏获胜盘数相同，则在当前游戏中，生命值最高的牌手获得该游戏的胜利。若出现双方牌手生命值相同的情况（或对局正处于两场游戏之间，且双方牌手游戏获胜盘数相同的情况），则游戏/对局会以附加下述之状态动作的情况下继续：“若某牌手的总生命并非当前对局中的最高者，则他输掉此盘游戏”。在双头巨人赛中判断对局胜利者时，将双方的团队视作单一牌手进行处理。
+
+>This is the “Sudden Death” rule. Life totals are used because things like board state position and the like cannot be objectively judged, and can be dependent on cards in hand and library manipulation. As such, the most common win condition, the life total, is used as the ultimate tiebreaker to the unfortunate detriment of decks that utilize alternate win conditions (poison, milling, etc.).
+>
+>这就是“突然死亡”规则。之所以使用生命值是因为场面局势或类似的东西无法被客观地判断，可能还会依赖于手牌及牌库操作。因此，最通常的获胜条件：生命值，被用作最终的决胜因素，即使这对于使用其他获胜方式（中毒指示物，磨牌库等等）的套牌来说非常不利。
+
+## MTR 2.5 Conceding or Intentionally Drawing Games or Matches 认输或约和游戏(对局)
+
+Until the result of a match has been recorded, players may concede or mutually agree to a draw in that game or match.
+
+直到对局成绩上报之前，游戏双方都可以在对局或比赛中认输或者约合。
+
+>Players may concede or mutually draw up until the point the match slip has been filed out, or the result submitted electronically. Once the result has been recorded, that is the result. Players are allowed to intentionally draw, as preventing mutually beneficial IDs would result in players trying to fabricate an ID through convoluted play. If players were not allowed to intentionally draw, but a draw would still benefit both players, we would be encouraging players to “intentionally unintentionally draw” by slow playing —or worse— by playing at a reasonable pace but deciding to never attack and eventually just stall the game out, which just wastes everyone’s time.
+>
+>Players can also agree to draw only a specific game, which must be accurately reported to the Scorekeeper (e.g., 2-1-1) for tiebreaker purposes.
+>
+>直到比赛记录条填写完毕或结果被电子化提交为止，牌手都可以认输或约和。一旦结果被记录，便成定局。允许牌手约和，是因为禁止对双方都有利的约和会导致牌手试图通过拖沓繁琐的对局来伪造出平局的结果。如果不允许约和，但平局的结果对双方仍有利，那我们无异于在鼓励牌手通过游戏进行过慢——或更恶劣地，通过表面上正常游戏但永不进攻，最终将游戏拖平的方式——来达成有意地制造平局。这纯粹是在浪费所有人的时间。
+>
+>牌手也可以只约和某一单盘游戏，但为了算小分，该结果必须被准确地报告给记分员（例如：2-1-1）。
+
+If the conceding player won a game in the match, the match must be reported as 2-1. Intentional draws where no games were played are always reported as 0-0-3 in EventLink.
+
+如果认输的牌手曾在该局中赢过一盘，则该局比赛必须以2-1的结果上报。未进行过游戏即约和的对局一律以 0-0-3 的成绩在EventLink上回报。
+
+>As players can concede at any time, they can concede up to the conclusion of the match.  However, if the conceding player won at least one game, they cannot concede 2-0, and their win must be recorded, as some tournament tiebreakers are dependent on games won and lost. The note for intentional draws codifies and standardizes the scorekeeping practice. Please note that EventLink records intentional draws as 0-0-1, and must be changed after submission as EventLink does not follow this specific tournament rule.
+>
+>直至整局比赛结束为止，牌手可在任何时候认输。然而，如果认输方已经赢下至少一盘游戏，他就不能以0-2的比分认输；其胜盘必须被记录在案，因为某些比赛的小分计算会依赖于具体的胜负盘数。有关约和的注释，其目的便是为了将记分实践法典化与标准化。请注意：EventLink会将约和的结果记录为0-0-1，该结果在提交后必须手动修改，因为EventLink并未遵循此项特定的比赛规则。
+
+Players may not agree to a concession or draw in exchange for any reward or incentive. Doing so will be considered Bribery (see section 5.2).
+
+牌手不得以认输或约和来换取奖励或报酬。以认输或约和来换取奖励或报酬的举动会被视为「贿赂」（请参见第 5.2 节）。
+
+>Ignorance of this rule is not a defense for having committed it, however there are different penalties on if this was done knowing/not knowing this was illegal (see IPG 4.4: Bribery and Wagering). Typically Judges make announcements stating this is illegal, so it is unlikely that a player can credibly claim ignorance. It is recommended that a player who is offered any reward or incentive alert a judge immediately.
+>
+>对这一规则的无知并不能成为触犯它的理由，然而，处罚的轻重将取决于该行为是明知故犯还是无意为之（详见[IPG 4.4：贿赂与赌博](http://blogs.magicjudges.org/rules/ipg4-4/)）。通常，裁判会在赛前就宣布此类行为是违规的，因此，牌手声称自己不知情的说法很难令人信服。一旦有人为此向牌手提供奖励或报酬，建议该牌手立刻向裁判报告。
+
+If a player refuses to play, it is assumed that they have conceded the match.
+
+如果有牌手拒绝进行比赛，则视为该牌手此局认输。
+
+>If you aren’t playing, what exactly are you doing?
+>
+>如果你没在玩游戏，那你在干什么呢？
+
+## MTR 2.6 Time Extensions 时间延长
+
+If a judge pauses a match for more than one minute while the round clock is running, they should extend the match time appropriately.
+
+若有裁判在本局尚在计时的情况下暂停对局超过了一分钟，该裁判须相应地延长比赛时间。
+
+>Players are entitled to use the full time of a round to play their match of Magic. If an interruption of more than a minute occurs, a time extension is given to allow players a chance to fully play out their games. Players with a time extension who are still in a game when time is called should call a judge to ensure time continues to be kept accurately.
+>
+>牌手有权使用完整的一轮时间来进行万智牌比赛。一旦发生了超过一分钟的中断，牌手将获得补时，以使牌手能够能完整地进行游戏。如果牌手获得了补时，在时间终了后仍然在比赛中的话，应当呼叫一个裁判来确保继续计时的准确无误。
+
+If the match was interrupted to perform a deck check, players are awarded time equal to the time the deck check took plus three minutes.
+
+如果因进行套牌检查需中断对局，则双方牌手获得等同于套牌检查用时再加上三分钟的时间。
+
+>Because a deck check typically orders the deck in an intentionally non-random way, players should be afforded adequate time to randomize their decks before proceeding with the next game. While no longer codified, the benchmark for pre-game and between-game procedures is three minutes, so this much time is afforded to each player. This extension is given even if one player is receiving a game loss as the result of a penalty discovered during the check.
+>
+>这是因为套牌检查通常会使套牌呈非随机排列，牌手应当在继续进行游戏前得到足够的时间来随机化他们的套牌。虽然并无明文规定游戏前程序和游戏间程序的基准为三分钟，但这是通常赋予牌手补时的标准。即便有牌手因本次检查发现的违规而被判一盘负，也应给予相应的补时。
+
+Feature matches at a tournament with online coverage receive a time extension equal to three minutes plus time elapsed in the round when players reach their table. This is not necessary if feature matches are being timed separately.
+
+进行在线转播之比赛的焦点对局会有时间延长，其延长时间为三分钟加上对局牌手来到对局桌边就座时已经过的时间。如果焦点对局单独计时，则不需延长时间。
+
+>Feature matches are often announced after players have already sat at their table number and pulled out their deck and playmats.  When the feature matches are announced, they then have to pack everything up and go to the feature match area.  The extra time is to account for the time it takes to move and get settled into a new space. Players who are on coverage are doing so at the request of the organizer. We do not want to put players at a disadvantage because they simply have an interesting match to watch, and are doing the TO a favor. Of course, if the feature matches are timed separately we do not have to worry about the players being at a time disadvantage!
+>
+>焦点桌的对局通常在牌手们已于各自的桌位号就座，并拿出套牌和牌垫之后才会被宣布。当焦点桌被宣布时，这些牌手就必须收拾好所有物品，并前往焦点桌区域。额外的补时便是为了补偿他们在移动和到新位置后重新布置所花费的时间。这些牌手是因比赛主办人的要求而被在线转播的。我们不应让牌手仅仅因为其比赛被直播（从而为主办方服务）而遭受比赛时间上的损失。当然，如果焦点对局单独计时，我们就不用担心牌手因此遭受不利了。
+
+Certain slow play penalties add turns rather than a time extension. These additional turns are added to the end-of-match additional turns.
+
+某些游戏进行过慢之惩罚会采取增加回合数的方式来执行。此类递补的回合会增加在对局结束程序所延长的回合之后。
+
+>For more information, see IPG 3.3: Slow Play. If a player receives a warning for slow play, each player is awarded an additional turn, totaling seven additional turns if one player is warned and nine additional turns if both players are warned. Note that no additional turns are awarded if slow play is penalized during the additional turns procedure. This is chosen as a way to give back some of the time that was lost, without having to try and quantify how much time was lost.
+>
+>需要更多信息，参见IPG 3.3: 游戏进行过慢。如果一个牌手因游戏进行过慢受到警告，每个牌手获得一个延长回合，即如果其中一个牌手受到警告将有总共七个延长回合，而如果两个牌手都受到警告则有九个。注意在延长回合中受到的游戏进行过慢判罚不会给予延长回合。我们选择这种方式来追回一些损失的时间的方式，并且不需要量化具体损失了多少时间。
+
+## MTR 2.7 Deck Registration 套牌登记
+
+Players are required to register their decks and sideboards (if applicable) in Competitive and Professional Rules Enforcement Level tournaments. The Head Judge may require registration in Regular Rules Enforcement Level tournaments.
+
+在「竞争」和「专业」级别的比赛中，牌手需要将他们的套牌和备牌(如果有的话)登记在案。主审亦可以在「一般」级别的比赛中要求套牌登记。
+
+>Decklists are expected in Comp and Professional REL.  If a Tournament Organizer wants to have decklists at Regular Rules Enforcement Level, they should make sure they inform the players as early as possible, as most won’t expect the requirement and won’t have them prepared in advance. If a Tournament Organizer decides the event is serious enough to warrant decklists at Regular Rules Enforcement Level, they may want to consider changing the Rules Enforcement Level to Competitive. Regular Rules Enforcement Level events with decklists are very rare.  Typically requiring lists at Regular is in response to suspected rampant cheating.
+>
+>在竞争级别和专业级别中，应进行套牌检查。如果比赛主办人要求在一般级别比赛中提交牌表，应确保其尽早通知牌手，因为通常不会有此要求，牌手也不会事先准备。如果比赛主办人判断该比赛严肃到需要在一般级别填写牌表，那么他们可能会考虑将比赛级别改为竞争。需要牌表的一般级别比赛是非常罕见的。通常，在一般级赛事中要求提交套牌登记表，是为了应对疑似猖獗的作弊行为。
+
+Registered decklists record the original composition of each deck and sideboard (if applicable). Once your decklist has been accepted by a Tournament Official it may not be altered. If electronic decklists are used, decklists cannot be altered after the date and time that decklists are required to be submitted.
+
+登记在案的套牌登记表中记录了每份套牌及其备牌（如果有的话）原本的内容组成。一旦套牌登记表已被比赛工作人员接收，牌手便不得对其套牌登记表进行修改。如果牌手使用电子牌表，在登记截止时间之后不得更改牌表。
+
+>Altering a decklist after it has been accepted by a Tournament Official, or after the official cutoff time for electronic submission, is not allowed for various reasons: TOs/Judges may perform tournament operations on the list, players might gain additional strategic information by scouting opponents.  Much like presenting a deck to an opponent is signifying a legal deck, submitting a decklist to Tournament Official (online or physically) is a declaration that the decklist is legal and final. A judge is allowed to alter the decklist when applying the fix for a Decklist Problem.
+>
+>在比赛工作人员收取牌表之后，或在电子提交时间截至后，便不能再改变牌表，此举是出于多种原因的考量：其一，主办人/裁判可能已基于该牌表进行赛事操作；其二，牌手可能会通过侦查对手来获取额外的战略信息。正如向对手出示套牌即代表该套牌合法一样，向赛事工作人员线上或实体地提交套牌登记表的行为，本身就是一项声明，即该登记表是合法且为最终版本的。允许裁判在修复套牌登记表问题时修改牌表。
+
+In Constructed tournaments, decklists must be submitted to a tournament official prior to the start of the tournament.
+
+在构组赛中，牌手须在比赛开始之前将牌表交至比赛工作人员处。
+
+>In tournaments using the IPG, not submitting your decklist prior to the announced first round of the tournament is considered Tardiness, and does upgrade.  This is irrespective of byes that might have been awarded.
+>
+>在采用IPG的比赛中，若未在宣布第一轮比赛开始前提交套牌登记表，该行为将被视为迟到违规，且其处罚会升级。此规定不受牌手是否持有奖励轮空的影响。
+
+In Limited tournaments, decklists must be submitted prior to the start of the first round in which that player participates.
+
+在限制赛中，牌手须在自己亲自参加的首局比赛开始之前将牌表交至比赛工作人员处。
+
+>Constructed decklists need to be turned in before round 1 begins. Limited needs to be turned in before the first round the player is actually playing in begins.   The rules for constructed and limited are effectively the same,  however, sometimes large sealed events may have byes, and in those rare cases players with byes may have different build times. The wording for this rule allows for that possibility without explicitly mentioning byes because WoTC doesn’t have any events that award byes anymore.
+>
+>构组赛的牌表应当在第一轮开始前提交。限制赛的牌表应当在牌手实际进行比赛的轮次之前提交。这两条规则的本质是相同的。然而，在某些大型现开赛中可能会有轮空，在这些罕见情况下，持有轮空资格的牌手可能会有不同的套牌构组时间。本条规则的措辞之所以如此设计，便是为了涵盖这种可能性，同时又避免了直接提及轮空——因为威世智官方已不再举办任何会给予奖励轮空的赛事了。(译注：奖励轮空是曾经的机制，牌手可通过比赛或者奖励轮空资格，从而在另一场比赛轮空，以1-0开局。)
+
+Players have the right to request to see their decklist between matches. Such a request will be honored if logistically possible.
+
+牌手有权在两局对局之间请求查看自己的套牌登记表。倘若行事上可为，便可予之查看。
+
+>What is logistically possible is up to the judges at an event. Some event have thousands of decklists collected around the same time and trying to find one before they are organized might not be possible. If a player has alerted a judge to an error before they could gain advantage or before the event has begun, please be mindful of this information if unable to provide their list. Additionally, players will now often take a picture of their decklist once they have requested it, for their future use.
+>
+>是否行事上可行由比赛中的裁判决定。有些比赛可能会在同一时间收集数千张牌表，因此在整理好前从中寻找特定的某张是不可能的。如果牌手在可能从中获得优势或比赛开始前就告知裁判有错误发生，如果此时尚不能为牌手提供牌表，请注意牌手提供的这个信息。此外，如果牌手请求查看了牌表，他们通常会对牌表拍照，以备其将来使用。
+
+Generally, decklists are not public information and are not shared with other players during a tournament. At Professional Rules Enforcement Level tournaments (World Championship, Pro Tour, Limited Championship, Spotlight Series, Regional Championships), opponents’ decklists will be provided to players.
+
+通常情况下，套牌登记表不属于公开信息，在比赛过程中不会对其它的牌手开放阅览。在专业级别比赛中（世界冠军赛、专业赛、限制冠军赛、聚光灯系列赛及区域冠军赛）中，对手之套牌登记表将会提供给牌手查阅。
+
+>The reason certain events share decklists is to negate the disadvantage some players gain as a result of event coverage during the Swiss portion of the tournament. In the single-elimination playoffs of limited events, the chances of your opponent gaining information about your decklist are a lot smaller. As such, we only provide decklists for constructed-format events. Star City Games Open Series have also allowed Top 8 players to view the opponents decklists due to coverage.
+>
+>Note that while they have the decklist, it is considered to be notes taken outside of the game so players may only view them while in between games.
+>
+>某些赛事之所以会公开所有牌表，是为了抵消因瑞士轮阶段的赛事报道而对部分牌手造成的劣势。在单淘汰决胜阶段的限制赛中，你对手获得关于你牌表信息的机会非常小。因此，我们只在构组赛中提供牌表。由于赛事报道，星城公开系列赛也允许8强牌手查看对手的牌表。
+>
+>注意，虽然这是他们的牌表，但在比赛中也被视为是游戏外做的笔记，因此牌手只能在两盘游戏间查看。
+
+Additional information regarding digital decklists can be found in section 2.12 – Electronic Devices.
+
+有关电子牌表的额外规定详见第2.12节 - 电子设备。
+
+## MTR 2.8 Deck Checks 套牌检查
+
+Deck checks must be performed at all Competitive and Professional Rules Enforcement Level tournaments, and the Head Judge has the option to perform deck checks at Regular Rules Enforcement Level tournaments. At least ten percent of all decks should be checked over the course of the tournament.
+
+在所有「竞争」或「专业」级别的比赛中都要进行套牌检查，主审亦可选择在「一般」级别的比赛中进行套牌检查。整个比赛期间至少应对所有参赛套牌的百分之十进行检查。
+
+>Deck Checks are an important deterrence to certain forms of cheating, discouraging players from doing anything dishonest with their deck, since deck checks are going on. Deck checks should be frequent and visible.  However, if you find yourself doing deck checks on more than 10% of the field, you might be unintentionally trolling the players.  While Deck checks are great for higher stakes tournaments, they are a fairly intrusive burden at Regular REL.  Be very wary of using this option.
+>
+>套牌检查是威慑某些作弊形式的重要手段，它能打消牌手在套牌上动歪脑筋的念头，因为他们知道套牌检查正在进行。套牌检查应当频繁且公开。然而，如果你已经检查了超过10%的牌手，你可能就是在无意中折腾大家了。尽管套牌检查对于高利害关系的比赛来说非常有效，但在一般级别的赛事中，它是一种干扰性很强的负担。因此，请务必谨慎使用此选项。
+
+A full deck check should not be performed if a player has drawn an opening hand and potentially made mulligan decisions.
+
+如果牌手已经抓好了起手的牌，且很可能已经做好了是否要进行再调度的决定，就不应对其进行完整的套牌检查。
+
+>Judges can still do a deck check after the opening hand/mulligans have been made, but the cost of a judge error is significantly higher in this case, and is typically not worth the risk unless there is a very specific reason for checking the deck at that exact moment.
+>
+>裁判在起手/再调度完成后仍可进行套牌检查，但在这种情况下，裁判失误所造成的代价将显著提高，因此通常不值得冒此风险——除非有非常明确的理由，必须在该特定时刻进行检查。
+
+## MTR 2.9 Appeals to the Head Judge 向主审申诉
+
+If a player disagrees with a judge’s ruling, they may appeal the ruling to the Head Judge.
+
+如果牌手不同意裁判的判决，他可就该判决向主审申述。
+
+>The ‘right to appeal’ is the right to have your case heard by the most authoritative judge at the event.  There is no ‘right to a second opinion’.  If the first judge to take your call is the Head Judge, then you just had your case heard by the most authoritative judge at the event. Additionally, judges should not go out of there way to protect the ‘chain of appeals’ because there is no such chain.  In single-judge events, this is a bit awkward because there is only a single judge.  There is no other judge to appeal to.  However, Judges are expected to take the necessary steps to ensure their ruling is correct.  If the judge has doubts in their ruling, it is correct and proper to take the appropriate steps to remove those doubts.
+>
+>上诉权指的是让赛事中最具权威的裁判来听取你申诉的权利，而并非征求第二意见的权利。如果第一位处理你裁判呼叫的恰好就是主审，那么你的申诉已经由赛事中最具权威的裁判听取完毕了。此外，裁判不应刻意去维护所谓的上诉链，因为这样的链条根本不存在。在只有一名裁判的赛事中，情况会有些尴尬，因为没有其他裁判可供上诉。然而，裁判仍应采取必要措施来确保其裁决的正确性。如果裁判对自己的裁决存有疑虑，那么采取适当步骤来消除这些疑虑便是正确且恰当的做法。（译注：上诉链是国外社区的说法，意思是牌手有上诉的权力。作者想要表达的是，牌手实际上拥有的是要求主审受理申诉的权力。因此若一开始就是主审受理申诉，则无法再上诉。）
+
+In larger, Premier-level tournaments (such as World Championship, Pro Tour, Limited Championship, Spotlight Series, and Regional Championships), with prior approval, the Head Judge may designate additional Appeals Judges who are also empowered to hear appeals. They will be wearing the same uniform as the Head Judge.
+
+于大型的重要比赛级别比赛当中(比如世界冠军赛、专业赛、限制冠军赛、聚光灯系列赛及区域冠军赛等)，在事前取得许可的情况下，主审可指定额外的申诉裁判，此类裁判也具有受理申诉之权利。申诉裁判穿着的制服与主审相同。
+
+>These other judges are called Appeals Judges, and often have the same certifications as the event Head Judge. Additionally, in non-premier level events, the HJ may designate a backup to handle appeals while they are on break, or in the bathroom or in an investigation.
+>
+>这些裁判被称为申诉裁判，并且通常拥有与赛事主审同等级别的裁判认证。此外，在非重要赛事中，主审可能会在其休息、离开处理个人事务或进行调查期间，指定一名备任裁判来处理上诉。
+
+Players may not appeal before the full ruling is made by the responding floor judge. Rulings made by the Head Judge or designated Appeals Judges are final.
+
+牌手不得在受其呼唤而来的巡场裁判做出完整判决之前即向主审申述。主审或指定的申述裁判做出的判决为最终判决。
+
+>Players are required to be respectful to judges, which includes letting them finish their ruling before disagreeing with them. Players appealing a judge based on perception of the Judge or how they think the judge is going to rule undermines that judge’s authority, and can be considered Unsporting Conduct — Minor.
+>
+>牌手应该尊重裁判，包括在他们进行完整判决前不反对他们。根据对裁判的观感或是他们认为裁判会如何判决而申述，将破坏这位裁判的权威，并有可能受到举止违背运动道德~轻微的判罚。
+
+## MTR 2.10 Dropping from a Tournament 退出比赛
+
+Players may drop from a tournament at any time. If a player drops from a tournament before the first round of play has started, they are considered to have not participated in the tournament and will not be listed in the finish order.
+
+牌手随时可自比赛中退出。如果某牌手在比赛第一局开始之前便退出，则该牌手便会被视作未参加本次比赛，不会在比赛的最终排名中列出。
+
+>They are also not considered to have contributed to the attendance total for the event.
+>
+>他们也不会被计算入该比赛的总人数。
+
+Players choosing to drop from a tournament must inform the Scorekeeper by the means provided for that tournament before the pairings for the next round are generated.
+
+选择退出比赛的牌手必须在下一局的配对完成前，以当次比赛提供的方式通知记分员。
+
+>The best way to do this is to designate you are dropping on the match slip.  However, you can go to the SK and drop directly.  If you are dropping from an event, please let the SK know.  After they start generating the next round, they arent going to undo that work to remove you from the event.   You will get paired, and someone is going to be sitting across from an empty seat.  They came to play Magic, and now have to be bored for an hour.
+>
+>最好的退赛方式是在成绩条上标明。不过，你也可以直接去找记分员办理退赛。如果你决定要退出比赛，请务必告知记分员。这样一旦他们开始生成下一轮的配对，就不会为了将你移出赛事而撤销已经完成的工作了。否则，你依然会被配对，而你的对手将会面对一个空荡荡的座位枯坐。别人是来打万智牌的，现在却不得不无聊一个小时。
+
+Players wanting to drop after the Scorekeeper begins pairing for the next round will be paired for that round.
+
+在记分员开始为下一局配对后才提出想要退出比赛的牌手会在该局中被配对。
+
+>The other alternative would be to withdraw all pairings that were posted, do a repair, repost everything, and make several announcements to try to avoid confusion among those who saw the first set of pairings. Overall this could add noticeable delay to the event.
+>
+>还有一种方法是取消刚刚公布的所有配对，修正人数，重新公布所有的东西，并进行一些公告，防止看到第一套配对的人产生混淆。总而言之这会显著延误比赛。
+
+If a player does not show up for their match, they will be automatically dropped from the tournament unless they report to the Scorekeeper. Players that repeatedly and/or intentionally drop from tournaments without informing the scorekeepers of those tournaments may be the subject of penalties up to and including suspension.
+
+若牌手并未出现在他们的比赛座位上，且未向记分员报到，则该牌手便会视作自动退赛。若牌手屡次和/或故意未通报比赛记分员便擅自离场退赛,则该牌手有可能会受到处罚，最严厉者可被处以停权。
+
+>Players who frequently drop and don’t inform anyone are bad for the community, as they force someone to sit around for 10 minutes doing nothing, and then for another 40 minutes also not playing Magic. It primarily affects lower tables, who are there at that point just to play Magic, not to win anything.
+>
+>The suspension line details the fact that Wizards of the Coast can suspend players for repeated no-shows, but that doesn’t happen in practice.
+>
+>频繁退赛而不通知任何的牌手对社群的影响很不好。他们这样做会迫使一个人坐在桌前10分钟做不了任何事，并且接下来40分钟也玩不了万智牌。这主要影响排名靠后的桌子，而坚持坐在那里比赛的牌手通常只是为了玩牌而不是赢得什么东西。
+>
+>这条关于停权的规定详细说明了威世智可以因牌手屡次缺席而对其处以停权，但实际上这种情况并未发生过。
+
+Players who drop during limited tournaments own the cards that they correctly have in their possession at that time. This includes any unopened or partially drafted booster packs.
+
+自限制赛制比赛中退出的牌手拥有他们当前持有的所有卡牌。这包括未开封或已在轮抽过程中使用的补充包。
+
+>This was clarified for Grand Prix Vegas in 2013 (Modern Masters). Players can take what they have in their hands and go home. This used to primarily cover players who wanted to drop before passing packs for value, but with the new registration procedure, players open the packs they will use, then have another player register. Players can still drop during this portion if there are time constraints/etc, and they get the boosters they originally were handed.
+>
+>这点在2013年摩登大师的拉斯维加斯大奖赛上被澄清。牌手可以将当前持有的牌全部带回家。这主要涉及那些在传牌前想拿着值钱的牌弃权的牌手，但是在新的套牌登记程序下，牌手打开的补充包就是他们所使用的。然后另一个牌手为之登记。如果牌手因为时间等原因不想继续比赛的话依然可以在这个阶段弃权，并且他们可以带走他们原来持有的补充包。
+
+If a player drops from a tournament after a cut has been made, no other player is advanced as a replacement. If the remaining part of the tournament is single elimination, the highest ranked remaining player receives a bye for the next round instead.
+
+如果牌手在分划赛程之后才退出比赛，则不会有牌手能递补进八强来替代其席位。若比赛接下来的赛程为单淘汰对局，则剩余牌手之中排名最高者将在下一局获得一个轮空。
+
+>It is rare for a player to voluntarily drop after a cut has been made, but emergencies do happen. However, sometimes a player is dropped involuntarily due to a disqualification. If that occurs, judges should not advance any other players into the Top X. The dropped player’s opponent just gets a bye for that round.
+>
+>在赛程划分后自愿弃赛的牌手是很少见的，但有时紧急情况确实会发生，导致牌手无法继续参赛。但是有时牌手会由于被取消资格而非自愿的退赛。在这种情况下，裁判不应该将任何牌手递补进前X名。退赛牌手的对手在该轮将直接轮空。
+
+Players who have dropped may reenter a tournament at the discretion of the Head Judge. Players may not reenter a portion of the tournament that requires a deck built during a construction period that the player missed. Players may not reenter a tournament after any cut has been made.
+
+主审在斟酌后，可允许已退赛的牌手重新参加比赛。若比赛有要求牌手使用自己组建的套牌参赛的部分，且该牌手未参加该次套牌组建，则牌手不得重新参加该部分的比赛。牌手不得在赛程分划之后重新参加比赛。
+
+>When considering whether or not to reenter a player in the event, the Head Judge should look at how disruptive that it would be to the event as a whole.
+>
+>Players may not enter into a portion of the event that requires a draft or sealed deck as they would not have a legal deck with which to play their matches.
+>
+>在考虑是否允许牌手重新加入比赛时，主审需要审视这会对比赛整体造成何种影响。
+>
+>如果牌手没有合法的套牌去比赛，则不能参加比赛中需要轮抽或现开套牌的部分。
+
+Players may not drop from a tournament in exchange for or influenced by the offer of any reward or incentive. Doing so is considered Bribery (see section 5.2).
+
+牌手不得以退赛此举动来换取对方给予的报酬或奖励，亦不得在对方给予报酬或奖励的诱惑下做出退赛的决定。在此两种情形下的退赛会被视作「贿赂」行为（请参见第 5.2 节）。
+
+## MTR 2.11 Taking Notes 作笔记
+
+Players are allowed to take written notes during a match and may refer to those notes while that match is in progress. At the beginning of a match, each player’s note sheet must be empty and must remain visible throughout the match.
+
+牌手可在对局当中进行笔头记录，并可在对局进行过程中参考该些记录。在一局对局开始的时候，每位牌手用于做笔记的纸都应是空白的，且应在整个比赛过程中保持可见。
+
+>This rule allows players to write down their opponent’s hand while resolving Thoughtseize. Players can take any kind of notes during their match, and they are allowed to check those notes anytime in the current round.  This does not include notes written before the match.  That is why the note sheet must be blank beforehand.  There are only certain times you can access notes written before the match.
+>
+>这条规则允许牌手在结算攫取思绪时记录其对手的手牌。牌手可以在一局对局过程中记录任意种类的笔记并且可以在本局对局中任意查看。本条规则的适用范围不包括赛前准备的笔记。正因如此，笔记纸在赛前必须是空白的。仅能在特定时刻，才允许查阅赛前准备的笔记。
+
+Players do not have to explain or reveal notes to other players. Judges may ask to see a player’s notes and/or request that the player explain their notes.
+
+牌手不需对其它牌手解释或展示笔记内容。裁判可请求参阅牌手的笔记和/或要求该牌手解释其笔记内容。
+
+>Since a lot of Magic events are multinational ones, players are allowed to take notes in any language they want, even in High Valyrian. Since those notes are only for a player’s personal use, players are not obligated to explain or translate them to their opponent. A judge may ask a player to explain what is on their notes since it is vital for the judge’s job.
+>
+>由于很多万智牌比赛都有很多国家的牌手参赛，所以牌手可以使用任何语言来记录笔记，甚至是高等瓦雷利亚语。由于这些笔记只是牌手个人使用，牌手没有义务向对手解释或翻译它们。如果对裁判的工作很重要的话，裁判可以要求牌手解释其笔记的内容。
+
+Players may not refer to other notes, including notes from previous matches, during games.
+
+在游戏进行的过程当中,牌手不得参考其他笔记，包括牌手于此前的对局中所作的笔记。
+
+>While each game in the match is in progress, players are allowed only to look at notes they made during the current match. Players cannot check notes from previous rounds or notes that were created before the match during a game of Magic.
+>
+>当对局的每盘比赛在进行时，牌手只能查看在在本局对局中所记录的笔记。牌手不能查看之前轮次记录的笔记，或者在本局比赛开始前所准备的笔记。
+
+Between games, players may refer to a brief set of notes made before the match. They are not required to reveal these notes to their opponents. These notes must be removed from the play area before the beginning of the next game.
+
+在两盘游戏之间，牌手可查阅在本局对局之前所作的简短笔记。牌手不需向对手展示这些笔记。在下盘游戏开始之前，牌手须将该些笔记收好，不得在游戏区域范围内出现。
+
+>Players may consult notes made outside the match in between games. This is most often used for notes on how to sideboard, which are perfectly fine. If a players are provided their opponent’s deck list, such as during the Top 8 of particular Constructed events (MTR 2.7), this is also the time they may look at them.  Also note that once you have sat for your match, you are not “between games” of that match.
+>
+>在两盘游戏之间牌手可以查阅在比赛外记录的笔记。这通常是用来记录如何换备，是完全合法的。如果牌手被提供了其对手的套牌登记表，例如某些特定比赛的构筑比赛（[MTR 2.7](#mtr-27-deck-registration-套牌登记)）8强赛，这也是他们可以查看这些牌表的时机。另请注意：当你为一局比赛坐下后，就不再算是“两盘游戏之间”的时间了。
+
+Excessive quantities of notes (more than a sheet or two) are not allowed and may be penalized as slow play.
+
+牌手不得参阅过量的笔记（如超过一两张纸的笔记），否则可能会以「游戏进行过慢」加以处罚。
+
+>Since browsing through notes can take a while, players are not allowed to have very many. While a sheet or two is perfectly fine, a player can’t go through a novel. Players should be able to find and read relevant sections of notes in a reasonable amount of time.
+>
+>虽然浏览笔记可以花费一些时间，但是牌手不能用去太多时间。例如一两张纸是可以的，要看一本书那么厚的笔记就不行。牌手需要在合理的时间内找到并阅读笔记的相关部分。
+
+In tournaments where opponents’ decklists are provided to players, players are not permitted to transcribe their opponent’s entire decklist as part of their notes for the match.
+
+在提供对手牌表的比赛中，不允许将对手的整个牌表转录为比赛笔记的一部分。
+
+>When the TO provides decklists, its considered an outside note the player can reference between games. That does not mean a player can write the list and turn it into a note they can reference during a game.
+>
+>若主办方提供了牌表，该列表便被视为一种外部笔记，牌手可以在盘间查阅。但这并不意味着牌手可以将该牌表抄写下来，从而将其转化为一份可在游戏进行期间查阅的笔记。
+
+The use of electronic devices to take and refer to notes is permitted at Regular Rules Enforcement Level (see section 2.12).
+
+在执法严格度为一般级别的比赛中,牌手可利用电子设备来记录或阅读笔记（参见第 2.12 节）。
+
+>But not at Competitive Rules Enforcement Level. The bulk of information is in Section 2.12, this is just specifically relaxing what is allowed at Regular Rules Enforcement Level.
+>
+>但是在竞争级别这是不行的。大部分这方面的信息在MTR 2.12节。关于一般级别比赛中电子设备的使用，这句话宽慰了牌手。
+
+Players and spectators (exception: authorized press) may not make notes while drafting.
+
+牌手和旁观者（经授权的媒体除外）不得于轮抽期间进行笔头记录。
+
+>Taking notes while drafting would add a lot of time to an event, and would have serious strategic impact on the game. Since spectators in a draft may be friends with players, they are not allowed to take notes either, and sometimes for Competitive and Professional Rules Enforcement Level, spectators aren’t even allowed to watch closely.
+>
+>在轮抽过程中记录笔记会导致比赛用去很多额外时间，并会对游戏产生重大战略影响。由于轮抽的旁观者可能是牌手的朋友，所以他们也不被允许记录笔记，并且在某些竞争级别或专业级别的比赛中，旁观者甚至不被允许接近观看。
+
+Players may not reference any outside notes during drafting, card pool registration, or deck construction.
+
+牌手不得在轮抽、牌池登记或构组套牌的过程中参阅外部笔记。
+
+>Rules in this section apply also to other parts of the tournament outside of matches, especially drafting and deckbuilding. In Competitive Rules Enforcement Level tournaments we are challenging players’ ability to create the best limited deck they can through card evaluation and deck construction, not just following a flowchart of what cards are best for different archetypes.
+>
+>这部分规则也适用于比赛之外的比赛其他部分，特别是轮抽以及构组过程中。在竞争级别比赛中，我们考验的是牌手运用其对牌张的评估以及套牌构组技术来构组最好的限制赛套牌的能力，而不是根据一张流程图选择出每种套牌最强的牌张来使用。
+
+Players may refer to Oracle text at any time. They must do so publicly and in a format which contains no other strategic information.
+
+牌手可随时参阅 Oracle 牌张参考文献。在参阅此类文献时，牌手须于公开的场合进行之，且所参阅之文献形式不得含有其他战术信息。
+
+>Oracle text is considered the text written on the card. Since there have been a lot of wording changes or even functional changes for a lot of older cards, Oracle is available for everyone. Players can have printed Oracle text for cards as long as there is no other information on those papers and it’s not reached via forbidden electronic devices.
+>
+>Oracle叙述是被认为印在牌上的文字。由于很多古老的牌有了很多文字甚至功能上的改变，所有人都可以查阅Oracle。只要其上没有其他信息、并且没有通过禁止的电子设备获取，牌手可以使用打印到纸上的Oracle叙述。
+
+Consulting online sources, such as gatherer.wizards.com, is allowed at Regular Rules Enforcement Level even if they contain a small amount of strategic information. If a player wishes to view Oracle text in private, they must ask a judge.
+
+在执法严格度为一般级别的比赛中,牌手可查询线上资源（例如gatherer.wizards.com）。如果牌手想要私下查阅 Oracle 的叙述,则必须询问裁判。
+
+>At Regular Rules Enforcement Level events players can access Oracle by themselves, yet you need to show what they are doing to the opponent as well. Of course players are always allowed to ask a judge for current Oracle text in private as long as they are able to identify the card they are looking for, either by name, or by description.
+>
+>在一般级别比赛中牌手可以自行获取Oracle，但是你需要向对手展示你在干啥。当然牌手也可以向裁判私下询问当前的Oracle 叙述，前提是他们能通过名字或是描述识别其需要查询的牌。
+
+Artistic modifications to cards that indirectly provide minor strategic information are acceptable.
+
+可间接透露细微战术信息的艺术加工可以出现在牌面上。
+
+>Players are allowed to have minor card alterations that don’t directly provide them with substantial strategic advice, but has some minor information. Painting a Sensei’s Divining Top on a Trinket Mage is OK. Writing the latest strategy article on a Plains is not.
+>
+>只要在牌张的改动上不直接提供大量的战略建议而只提供细微的信息，牌手可以使用这些经轻微改动的牌。在琐物法师上画一个师范占卜陀螺是可以接受的。在平原上写最新的策略文章则是不行的。
+
+The Head Judge is the final arbiter on what cards and notes are acceptable for a tournament.
+
+主审在确定哪类牌张及笔记可于比赛中使用方面拥有最终决定权。
+
+## MTR 2.12 Electronic Devices 电子设备
+
+Electronic devices are permitted, but players may not use them to access information that contains substantial strategic advice.
+
+使用电子设备是被允许的，但牌手不得使用电子设备浏览包含详尽策略建议的信息。
+
+>With the MTG companion App, Wizards has finally had to open up its electronic policy. Mobile devices are a fact of life now.  We can only mitigate what they are used for.
+>
+>随着Companion的推出，威世智最终也不得不放宽其电子设备方针。移动设备在今天已是大势所趋，我们唯一能做的，便是设法管控其用途。
+
+For events that use digital decklists, players may only access the decklists of other players prior to the start of a game or in between games. Digital decklists may not be referenced during games.
+
+对于使用电子牌表的赛事，牌手只能在对局开始前或两盘游戏之间浏览对手的牌表，在对局期间则不能查看。
+
+>There are some events that use digital tools and allow you to access your opponents decklist.  If you are in an event that makes this available, your opponents decklist is considered an outside note, and must be put away at the beginning of the first game. Accessing the decklist during the game is treated the same as if you accessed outside notes during a game with respect to the recognition of an infraction being committed
+>
+>在某些采用数字化工具的赛事中，会允许牌手查阅对手的牌表。如果你参加的赛事提供此功能，那么对手的套牌列表便被视为一种外部笔记，且必须在第一盘游戏开始时收好。就违规行为的认定而言，在游戏进行期间查阅该列表，与在游戏中查阅其他外部笔记将被同等对待。
+
+Device use during a match other than brief personal calls must be visible to all players. Players wishing to view information privately on electronic devices during matches must request permission from a judge.
+
+除简短接听电话外，牌手在对局过程中使用电子设备时应公开进行。希望在对局过程中私下使用电子设备查看信息的牌手须事前获得裁判的许可。
+
+>Sometimes an opponent is a first responder, or they have a pregnant spouse, or a sick family member.  Magic isn’t as important as those things.  However, the call must still be visible to the opponent so that they know you aren’t cheating.  If the nature of the call is private, speak to a judge in advance.
+>
+>有时，牌手的对手可能是急救人员，或是其配偶即将临盆，又或是家人身患重病。与这些事相比，万智牌并没有那么重要。然而，接打电话的过程必须让对手看见，以确保他们知道你并非在作弊。如果通话内容涉及隐私，请提前告知裁判。
+
+At Competitive and Professional Rules Enforcement Level during drafting and deck construction, players may not use electronic devices capable of taking and storing notes, communicating with other people, or accessing the internet.
+
+在执法严格度为竞争及专业级别的比赛中，于轮抽以及套牌构组期间，牌手不得使用具备下列功能的电子设备：记录并储存笔记，与他人通讯，或访问互联网。
+
+>At this moment, you aren’t tracking your life, or looking up gatherer text.  So your need to use your mobile device is nearly zero for legitimate purposes.  Again, if you need to take an emergency call, involve a judge.
+>
+>此时，你既不需要记录自己的生命，也不需要查询Gatherer上的牌张叙述。因此，你出于正当目的而需要使用移动设备的可能性趋近于零。再次重申，如果你需要接听紧急电话，请让裁判介入。
+
+The Head Judge or Tournament Organizer of a tournament may further restrict or forbid the use of electronic devices during matches.
+
+比赛主审或比赛主办人可进一步限制，甚或禁止对局过程中电子设备的使用。
+
+>The Head Judge, as always, has final authority on what is allowed, and can forbid players from being able to use electronic devices if they see fit.
+>
+>一如既往地，主审拥有最终权威来决定什么是允许的，并且如果他们觉得合适也可以禁止牌手使用电子设备。
+
+## MTR 2.13 Video Coverage 视频转播
+
+Some Competitive and Professional Rules Enforcement Level tournaments use video for live streaming or replay broadcast of matches. Players may decline to appear on camera; however, players in the playoff matches of Professional Rules Enforcement Level tournaments may not decline to appear on camera.
+
+一些「竞争」级别及「专业」级别的比赛会将实时视频用于网络现场直播或对局过程回放。牌手可拒绝被摄入镜头；但参加专业级别执法严格度比赛之决胜局阶段比赛的牌手不得拒绝出镜。
+
+>Typically every player fills out a press release form at larger events with video coverage. Players can refuse for reasons from being shy to being in witness protection, but all Top 8 matches are on coverage.
+>
+>通常来说，每位牌手在具有视频转播的大型比赛都会签署一份媒体发布协议。牌手可以因为各种理由拒绝出镜，例如害羞或者正受到证人保护，但所有的前八对局都会进行转播。
+
+Video commentators are considered spectators for the purpose of the tournament but may talk during the match as long as they can’t be heard by players being covered. They are responsible for behaving respectfully to all tournament participants during coverage.
+
+虽然从比赛职责划分的角度而言，视频评述员亦属于该场比赛的旁观者，但只要他们所言不为直播中的牌手听闻，他们在对局进行期间也可以用言语对比赛的过程进行评论。在转播期间，视频评述员应尊重每一位参赛人员。
+
+>At large events, the coverage team is usually more than 25m (75 ft) away from the feature match area so that players can’t overhear the coverage team talking about cards that were just drawn, or lines of play available to players.  If, at your local store, there is some sort of stream, the TO needs to ensure that the commentators cannot be heard.
+>
+>在大型赛事中，转播团队通常与焦点对局区距离25米以上，这样牌手便不能听到转播团队讨论他们刚抓到的牌、或是可能的战术思路。如果在你的本地店家设有某种形式的直播，主办方需要确保解说员的声音不会被牌手听到。
+
+Spectators are also permitted to record matches provided that they do so unobtrusively.
+
+在举止不过分夸张的情况下，旁观者也可以记录对局进行过程。
+
+>This typically takes the form of a buddy or helper recording the play so the player can review after the fact.  Its not common, but it can happen.  It’s typically considered safe because spectators can’t share those notes with a player during play.  However if the spectator is being obtrusive or disruptive, the opponent and/or the judge can ask the spectator to leave.
+>
+>这种情况的通常形式是，由一名同伴或助手记录对局过程，以便牌手在事后进行复盘。这虽不常见，但确有可能发生。此行为通常被认为是安全的，因为旁观者不能在游戏进行期间与牌手分享这些记录。然而，如果该旁观者的行为造成了冒犯或干扰，其对手及/或裁判便可以要求该旁观者离开。
+
+The Head Judge of a World Championship, Pro Tour, or Limited Championship tournament may, in their sole discretion, use video replay to assist in making rulings during a match. Video replays may not be used to assist in making rulings in tournaments other than a World Championship, Pro Tour, or Limited Championship tournament. Players may not request that a judge consult a video replay. Video replays may also be used for investigative purposes at a later time.
+
+世界冠军赛、专业赛或限制冠军赛的主审可根据自身判断借助视频回放来辅助自己在对局过程中进行判罚。在世界冠军赛、专业赛或限制冠军赛之外的比赛中，不得使用视频回放来协助进行判罚。牌手不得要求裁判参考视频回放。在比赛结束之后，若系调查需要，也可利用视频回放进行。
+
+>The use of video to make a ruling is severely limited due to the consistency of the recording and the time added to even mundane investigations.  At the larger events where the stakes and visibility are amongst the highest, and the quality and availability of video is consistent, the Head Judge may utilize the option to use video replay to make a decision.  The decision to review video has to be at the HJs sole discretion because otherwise, players would call for a video review any time a judge call did not end up in their favor.
+>
+>使用录像进行判决的做法受到了严格限制，这是出于对录像质量的可靠性以及时间成本的考量——即便是常规调查也会因此耗费大量额外时间。然而，在那些利害关系与曝光度均为顶格，且录像质量和可用性都稳定可靠的大型赛事中，主审可以选择通过录像回放来做出裁决。是否启用录像复核的决定权，必须完全由主审一人酌情而定。否则，牌手每当遇到于己不利的判决时，便会要求进行录像复核。
+
+# MTR 3. Tournament Rules 比赛规则
+
+## MTR 3.1 Tiebreakers 同分处理
+
+The following tiebreakers are used to determine how a player ranks in a tournament:
+
+在比赛中，依次采用下述的同分处理来决定牌手在本次比赛中的名次情况：
+
+1. Match points
+
+1. 对局积分
+
+2. Opponents’ match-win percentage
+
+2. 对手局胜率
+
+3. Game-win percentage
+
+3. 盘胜率
+
+4. Opponents’ game-win percentage
+
+4. 对手盘胜率
+
+Definitions of these tiebreakers can be found in Appendix C. Not all of these tiebreakers may be used in formats with single-game matches.
+
+上述同分处理之定义可于附录C中找到。若某种赛制在每局对局中只有一盘游戏，则并非上述所有的同分处理都会在该类比赛中使用。
+
+>Appendix C is awesome. People should go read it now. We will wait.
+>
+>附录C很重要，建议读者现在可以转去阅读。
+
+## MTR 3.2 Format Categories 赛制种类
+
+Wizards of the Coast sanctions the following formats as individual, three-person team, or Two-Headed Giant tournaments:
+
+威世智公司认证下列赛制，受认证的比赛可采用单人赛、三人团队赛，或是双头巨人赛等形式：
+
+Constructed Formats
+
+构组赛制
+
+* Standard
+
+* 标准赛
+
+* Pioneer
+
+* 先驱赛
+
+* Modern
+
+* 近代赛
+
+Eternal Constructed Formats
+
+经典构组赛制
+
+* Vintage
+
+* 特选赛
+
+* Legacy
+
+* 薪传赛
+
+>For complete details on each of the Constructed formats, including their banned and restricted lists, check out MTR Sections 6.3–6.6
+>
+>欲知更多有关构组赛制的详细细节，包括禁限牌列表，请查看[MTR 6.3～6.6](#目录)。（译注：已与原作者沟通过，应为MTR 6.3-6.7。此处为笔误。）
+
+Limited Formats
+
+限制赛制
+
+* Sealed Deck
+
+* 现开赛
+
+>MTR Section 7 covers Limited Tournament Rules, and Sealed Deck is explained more there.
+>
+>[MTR章节7](#mtr-7-限制赛制规则)中详细描述了限制赛赛制规则，其中包括现开赛的更多详细细节。
+
+* Booster Draft (individual and Two-Headed Giant only)
+
+* 补充包轮抽（仅限个人赛和双头巨人赛）
+
+>MTR Sections 7.6 and 7.7 cover Draft Pod Assembly and Booster Draft Procedures, respectively. Additionally, section 9.7 covers Two-Headed Giant Booster Draft procedures.
+>
+>MTR的[7.6](#mtr-76-draft-pod-assembly-轮抽组的分配)与[7.7](#mtr-77-booster-draft-procedures-补充包轮抽程序)分别描述了轮抽组分配以及补充包轮抽流程。此外章节9.7描述了双头巨人补充包轮抽流程。
+
+* Rochester Draft (three-person team only)
+
+* 罗彻斯特轮抽（仅限三人团队赛）
+
+>MTR Section 8.5 covers the details on this format.
+>
+>[MTR8.5](#mtr-85-team-rochester-draft-tournaments-团队罗彻斯特轮抽赛)涵盖了本赛制的细节。
+
+## MTR 3.3 Authorized Cards 认可牌张
+
+Players may use any Authorized Magic Game Cards from Magic: The Gathering expansions, core sets, special sets, supplements, and promotional printings. Authorized Game Cards must be regulation-sized, genuine Magic cards publicly released by Wizards of the Coast. Cards that are not Authorized Game Cards are prohibited in all sanctioned events.
+
+牌手可使用出自万智牌扩充系列、核心系列、特殊系列、补充版及推广印次中的「认可万智牌游戏牌张」。认可牌张必须是规定大小的，由威士智公开发行的正版万智牌张。不是认可游戏牌张的牌在所有认证赛事中均不可使用。
+
+>This section of the MTR defines authorized cards.  It used to spell out what cards were allowed, however Wizards has printed so many ‘whacky’ things in the last several years, that it has become easier to define what is not an Authorized Card, than what is.  Essentially we start with the universe of ‘everything printed by Wizards’, and then define groups of “no, not these”.
+>
+>MTR的本章节旨在界定“认可牌张”。在过去，它会明确列出哪些牌张是允许使用的。然而，由于威世智在近几年印刷了太多千奇百怪的东西，以至于采用反向定义——即明确哪些牌张不被授权——反而比正面列举来得更容易。我们的逻辑起点基本上涵盖了“所有由威世智印刷的产品”这个全集，然后再从中划定出几类“不行，这些不能用”的牌张。
+
+Cards that, unaltered, feature gold borders on their front or back, and cards from the “Heroes of the Realm” and Theros block “Challenge Deck” series (usually denoted by a different card back), are not Authorized Game Cards.
+
+正面或背面边框为金色、员工卡或是塞洛斯系列的挑战套组（通常使用不同的卡背）中的牌张不是认可游戏牌张。
+
+>Some collector edition cards feature gold borders on the front or back.  Most ‘Heroes of the Realm’ cards do not have a standard Magic back, although one does.
+>
+>某些收藏版牌张的正面或背面采用了金色边框。大部分员工卡不具备标准的万智牌牌背，但其中有一张是例外。
+
+Silver-bordered cards and cards with an acorn-shaped security stamp or acorn-shaped symbol may only be used in casual events and only when the format explicitly permits them.
+
+银边牌或是有橡果标记的牌张，只有在休闲赛事中、相关赛制明确允许使用的情况下方得使用。
+
+>Previously all un-cards were silver boarder.  However in order to increase their perceived legitimacy in casual play, WoTC discontinued silver boards, and instead use an acorn symbol to indicate the cards nutty-ness. Occasionally WOTC will create exceptions to tournament play for Silver Bordered events.
+>
+>过去，所有鸡飞系列牌张均采用银色边框。然而，为了提升它们在休闲玩法中的正统感，威世智停用了银边设计，转而改用一个橡果符号来标明这些牌张的无厘头程度。偶尔，威世智也会为特定的银边赛事设立特例，允许这些牌张在比赛中使用。
+
+Cards labeled “Not for constructed play,” “Playtest”, or featuring a playtest sticker or picture of a playtest sticker on another Magic card may not be used in Constructed events.
+
+标注有 “不可用于构组游戏”、 “游戏测试”的牌张，附有游戏测试贴纸绘有游戏测试贴纸的牌张，不得用于构组赛事。
+
+>These are for some cards from Mystery Boosters, or the special event Gavin Verhey hosts at MagicCons, or random secret lair style inserts.
+>
+>这些内容适用于来自神秘补充包的部分牌，或是Gavin Verhey在MagicCon上主持的特别活动中的牌，或者是类似秘室珍品风格的赠牌。
+
+Wizards includes additional game material in packs, intended as game aids and not as traditional cards. Examples include tokens, title cards, dungeons, and art cards. These are not required for play and players are welcome to use any representation that is clear to both players when they are needed in the game.
+
+在卡包中，威士智添加了一些额外的物件作为辅助工具，包括衍生物、封面牌、地城、插画等。这些并不是游戏中的必须品，我们鼓励牌手在游戏中根据需要使用任何能向双方作出清晰表述的方式。
+
+>While its fairly obvious that advertisements in packs are not cards, we do want to call out that tokens, dungeons, stickers, and The Ring Tempts You cards are not real cards.  But the more relevant part of this rule is that a player does not actually need a physical Dungeon insert to Venture into the Dungeon.  If both players are clear as to what is going on, any representation is fine.  If you want to make your favorite dungeon into your playmat, go for it.
+>
+>虽然补充包里的广告牌显然不是牌张，但我们仍要特别指出，衍生物、地城、贴纸，以及魔戒引诱你等牌都不属于真正的牌张。 不过，这条规则更重要的一点是：玩家在深入地城时，并不需要实际的地城牌。只要双方都清楚目前的状况，任何形式的表示方式都可以接受。 如果你想把自己最喜欢的地城印在牌垫上使用，那完全没问题。
+
+Players may use otherwise-legal non-English and/or misprinted cards provided they are not using them to create an advantage by using misleading text or pictures. Official promotional textless spells are allowed in sanctioned Magic tournaments in which they would otherwise be legal.
+
+非英语版本和／或具有印刷错误的卡牌，只要该牌符合其他使用要求，且牌手并非刻意利用牌面上具有误导性的文字或插画来获取优势，便可以使用。一些正式发行的无内文的咒语赠牌，在符合其他使用要求的情况下，可以在万智牌认证比赛中使用。
+
+>It is not required that players play with cards that are printed in the native language of the area in which the tournament is being run. If a player needs to know what a card does, either because it is in a language they cannot read, or it is a textless printing, they may call for a judge and ask for the Oracle text.
+>
+>There are some famous misprints whose art is from a different card. For example, the German-language printing of Revised had a Forest (Wald) with Plains art. These cards, while an interesting curiosity, create an ambiguous and confusing game state and should not be used in tournament play.
+>
+>并不苛求牌手使用比赛所在地文字的牌张参加比赛。如果牌手因语言障碍或者印刷原因无法得知牌张内容，那么他可以请求裁判帮助查询oracle叙述。
+>
+>有一些经典的印刷错误的例子，牌张的图片印刷错误了。例如，德文R版的树林被印上了平原的图。这些带有明显歧义的牌会混淆游戏状态，不应在比赛中使用。
+
+Artistic modifications are acceptable in sanctioned tournaments, provided that the modifications do not make the card art unrecognizable, contain substantial strategic advice, disparaging remarks, or contain offensive images. Artistic modifications also may not cover or change the mana cost or name of the card.
+
+在牌面上进行过艺术加工的牌可以在认证比赛中使用，但需保证此类加工：不会使得该牌上面的插画变得无法识别；未含有隐性的战术指导信息；未含有歧视性内容；未含有侮辱性的图像。艺术加工不得覆盖或更改牌张的法术力费用或名称。
+
+>While the Head Judge of an event may decide to allow or disallow any given altered card, it is important to keep the above guidelines in mind. If the art is still recognizable, the name and mana cost are not obstructed, and the card is not distinguishable from any other card in the deck while in a hidden zone (like the paint made it noticeably thicker), then it should be allowed.  The potential offensiveness of an alter is a more subjective area and should likely have a more conservative approach. Another thing to note, is that the alter cannot contain substantial strategic advice.  This means it can have non-substantial strategic advice.  An example of an acceptable non-substantial strategic alter is writing “play me pre-combat” on a creature with haste.  That alter does technically contain strategic advise, but you can’t make an argument that that advice is substantial, because…what else do you want to do with a hasty boi?  In fact, the opposite, outlining the reasons/conditions you would NOT want to play a haste creature in pre-combat main would probably qualify as substantial strategic advice.
+>
+>尽管主审有权利允许或禁止一些带有加工的牌，但是仍需遵守上述的指导原则。如果对于牌张的艺术加工并未遮挡名称以及法术力费用，且该牌张不能在隐藏区域中被区分（例如加工使其显著变厚），那么这样的加工是应当认可的。而关于加工图案是否有可能冒犯他人则是较为主观的，裁判应当在这个问题上更加保守。另外需要注意的是，加工不能包含实质性的策略建议。 这意味着它可以包含非实质性的策略建议。 例如，一个可以接受的非实质性加工是：在一只具有敏捷的生物上写上“战斗前行动阶段使用我”。 从技术上讲，这确实算是一种策略建议，但你无法主张这种建议是“实质性的”，因为——说真的，你还能指望对一只有敏捷的家伙干别的事吗？ 事实上，反过来说，如果你在加工时详细说明为什么或在什么情况下不应在战斗前行动阶段施放一只具敏捷的生物，那就可能构成实质性的策略建议了。
+
+The Head Judge is the final authority on acceptable cards for a tournament.
+
+主审拥有最终决定确定何种牌能在比赛中使用的权利。
+
+>To ensure consistency within any given tournament, the Head Judge is the sole arbiter of the legality of a card. It is good practice for players using altered cards to get approval from the Head Judge prior to the start of the tournament.
+>
+>为了确保在同一场比赛中的一致性，该比赛的主审是判别牌张是否合法的唯一仲裁者。对牌手而言，在使用加工牌张参赛前，先征得主审同意，是值得推崇的行为。
+
+If a player is required to replace a card in their deck and is unable to find a replacement, the player may replace the card with a card named Plains, Island, Swamp, Mountain, or Forest of their choice. This also applies to cards that are lost and must be replaced to have a legal deck.
+
+如果在裁判要求某位牌手更换其套牌中的某张牌时，该牌手无法找到替代品，该牌手可以自行选择一张基本地牌（仅限名称为平原、海岛、沼泽、山脉或树林者）来替换该牌。此规则同样适用于牌手弄丢牌张而须更换以确保套牌合法的情形。
+
+>Never issue proxies for marked cards, unless it is a Limited format event and the cards were opened marked. Foils in humid environments are sometimes marked fresh out of the package. Note that lost sideboard cards are not required to be replaced with lands. The player may revert back to the original configuration of acceptable replacements are found later in the event. Please note that wastes and snow covered lands are not acceptable replacement lands!
+>
+>除非是在限制赛比赛中、且牌在开到时就已带有标记，否则绝不要为有标记的牌制作代牌。潮湿环境下的闪卡有时在刚开出来时就是有标记的。注意丢失的备牌不必替换为地。牌手可以在稍后找到可接受的替代品时改回其套牌原有的配置。请注意荒野和雪境地不能用作替换用地！
+
+The Head Judge of a tournament may issue a proxy (see section 3.4) for a card that has become worn or damaged during the tournament.
+
+比赛主审可为在比赛过程中磨损或损坏的牌张制作代牌（参见第3.4节）。
+
+>Further discussion of proxies may be found in MTR section 3.4, but it is important to note that a proxy may only be issued by the Head Judge of an event, and should only be issued for cards that are damaged during the course of the tournament, or from damaged or misprinted Limited product. The original, damaged card must be kept near the play area and will replace the proxy whenever that card is on the stack or the battlefield.
+>
+>关于代牌的进一步说明详见MTR3.4，但是代牌只有在比赛主审的同意下，且原牌在比赛过程中被损毁、或限制赛产品印刷错误的情况下才能使用。原牌必须放置在游戏区域附近，并在代牌处于堆叠或战场时用于代替代牌。
+
+## MTR 3.4 Proxy Cards 代牌
+
+A proxy card is used during competition to represent an otherwise legal Magic card or substitute card that can no longer be included in a deck without the deck being marked. For a proxy to be issued, the card it is replacing must meet at least one of the following criteria:
+
+代牌指在比赛过程中用以代表符合规定之万智牌牌张或辅助牌的用具。当在套牌中使用原本牌张会导致套牌出现明显标记的情况下，便可用代牌来代替之。可使用代牌来代替之牌张，须至少满足以下条件之一：
+
+* The card has been accidentally damaged or excessively worn in the current tournament, including damaged or misprinted Limited product. Proxies are not allowed as substitutes for cards that their owner has damaged intentionally or through negligence.
+
+* 该牌在当前比赛中被意外损毁或遭受过量磨损（包括遭损毁或具有印刷错误的限制赛用产品）。不得用代牌来代替拥有者出于故意或疏忽而损毁之牌张。
+
+* The card is a foil card for which no non-foil printing exists.
+
+* 该牌是闪卡，且非发行过该牌之普通版本。
+
+>We want to issue proxies only in cases where the card or cards have been damaged through no fault of the player or they do not exist as a non-foil variant (“Kess, Dissident Mage” for example). Cards being expensive or rare are not reasons to issue a proxy.  “I don’t want to damage my Retro Frame Foil Etched Showcase+ storm crow” is not a reason to issue a proxy. Also, while purchasing well-worn or damaged cards will save money, if the cards are distinguishable from others in the deck, they cannot be played and no proxy will be issued.
+>
+>我们只希望在牌张遭受非人为的意外损毁的情况下或不存在非闪版本的情况下（例如异见法师凯丝初次印刷的时候）为牌手制作代牌。牌张的价值或稀有程度不能成为制作代牌的合理理由。诸如“我不想损伤我的老框蚀刻闪风暴乌鸦”不构成制作代牌的理由。此外，一些牌手会因为旧牌或者破损牌的价值较低而特意购买并使用它们，如果这些牌能够在套牌中被明显区分，那么这些牌便不能使用，同时也不满足制作代牌的条件。
+
+Players may not create their own proxies; they may only be created by the Head Judge who has sole discretion as to whether the creation of a proxy is appropriate. When a judge creates a proxy, it is included in the player’s deck and must be denoted as a proxy in a clear and conspicuous manner. The original card is kept nearby during the match and replaces the proxy while in a public zone as long as it is recognizable. A proxy is valid only for the duration of the tournament in which it was originally issued.
+
+牌手不得自己制作代牌；是否应当制作代牌，由主审自身判断为准，且只能由主审来制作。当裁判为牌手制作代牌时，将此牌放进该牌手的套牌中，且必须以清晰明了的方式表明此为代牌。原本那张牌便在对局进行过程中放在一旁备用。当代牌在公开区域当中时，只要它一直处于可被辨识的状态内，便使用原本的牌来替代。代牌只可在原本制作此张代牌的比赛中使用。
+
+>Using a sharpie on a basic land is a simple and effective way to issue a proxy. It is recommended to initial the proxy as well so that the judge staff and other players in the event can recognize that the proxy was properly issued. Include the name of the card, and its mana cost on the proxy. Any other information may be added at the Head Judge’s discretion.  Additionally, a proxy created by another head judge at last weeks event does not satisfy the criteria for “only created by the Head Judge”
+>
+>在基本地上用细记号笔书写是简单有效的代牌制作方式。建议在牌上签署姓名的首字母，以便裁判和比赛中的其他牌手能够识别这确实是合法制作的代牌。在牌上写上名称，法术力费用。主审可酌情写上其他相关内容。此外，上周的比赛中由另一位主审制作的代牌，不符合“只由主审制作”的要求。
+
+## MTR 3.5 Substitute Cards 辅助牌
+
+Official substitute cards are used to represent double-faced cards in the sets that contain them. Only official substitute cards may be used to represent double-faced cards in a deck.
+
+正式的辅助牌用于代表含有双面牌之系列中的该类牌张。只有正式的辅助牌才能用于代表套牌中的双面牌。
+
+>It is a player’s responsibility to have substitute cards or appropriate sleeves. A judge should not create proxies to represent substitute cards unless the original card has become damaged during the current tournament.
+>
+>牌手必须选择使用辅助牌或者使用合适的牌套。除非原辅助牌在当前比赛中被意外损毁，裁判不得为辅助牌制作代牌。
+
+The name of the card that the substitute card is representing must be legible. Other modifications must follow the rules for modifying normal Magic cards.
+
+辅助牌所代表的牌的名称必须清晰可辨。其他的图样加工必须遵循通常牌张的图样加工原则。
+
+>Substitute cards represent cards, and cards have to have their name displayed clearly on them. There is space on these cards for other alterations, and do you know what happens to a substitute card that doesn’t follow the rules for modifying the card?  The same thing that happens to everything else.
+>
+>辅助牌用来代表真正的牌张，而牌张必须清楚显示其名称。这些辅助牌上仍有空间用于其他加工。 你知道如果一张辅助牌没有遵守加工规则会发生什么吗？ 那就会适用和其他所有牌同样的处理。
+
+The use of substitute cards is required if a player has double-faced cards in their deck and is not using completely opaque sleeves.
+
+如果牌手在其套牌中使用了双面牌，且并未使用完全不透明的牌套，则该牌手必须使用辅助牌。
+
+>The easiest way to check for a sleeves opaqueness is to look for the white mana symbol on the back of a non-double-faced card.
+>
+>检查牌套是否透明最简单的方法，是从牌套背面观察是否能透过白色法术力符号。
+
+If a player uses a substitute card to represent a double-faced card in their deck, then all copies of that double-faced card in the deck must be represented by substitute cards, and any copies of that double-faced card in a hidden zone are considered to not exist for purposes of determining deck legality.
+
+如果牌手决定使用辅助牌来代表其套牌中的某张双面牌，则其套牌中所有与该牌同名的其他牌张都必须用辅助牌来代表。此时，在判定套牌是否合乎规则时，所有处于非公开区域中具该名称的双面牌均视作不存在。
+
+>If a player accidentally shuffles their double-faced card into their deck with substitute cards, we treat them the same way we would a token shuffled in and remove them without issuing an infraction. Note that this also means you may not mix and match. If a player has Archangel Avacyn substitute cards in their deck, then they may also have Duskwatch Recruiter cards.
+>
+>如果牌手意外将双面牌和对应的辅助牌同时洗回牌库，那么我们将用类似处理衍生物的方式来处理：移除原牌不作判罚。值得注意的是，现在的牌库中可以混合使用双面牌和辅助牌了：牌手可以在牌库中使用大天使艾维欣的辅助牌以及暮巡班招募官的原牌。
+
+A substitute card is only used while the card it represents is in a hidden zone. The card represented by a substitute card is not a playable Magic card until the substitute card has been placed in a public zone. Multiple substitute cards cannot be used to represent a single copy of the actual card. For each substitute card used, the player must have a copy of the actual card available, though they are not considered sideboard cards and are not presented to their opponent.
+
+仅当需代表的牌处于非公开区域中的时候,才会使用辅助牌来代表之。辅助牌所代表的卡牌，只有在代表它的列表牌置于公共区域之后，才属于可在游戏中使用的万智牌卡牌。不得使用多张辅助牌来代表同一张实际卡牌。牌手需为其使用的每一张辅助牌准备一张相对应的实际卡牌，但所准备的这些实际卡牌不算作其备牌，亦不需呈视于对手。
+
+>When the card is on the battlefield, the real card should be placed over the substitute card. Checking to make sure a player has the proper number of double-faced cards for the number of substitutes in their deck is very important during deck checks. Also, you can’t have one physical copy of a DFC and use four substitute cards for it in your deck.
+>
+>该牌在战场上时，需将真牌放在辅助牌上。切记，在套牌检查时，查看双面牌与辅助牌的数量是否对应是非常重要的。另外，不能只有一张双面牌却使用四张对应的辅助牌。
+
+Some older substitute cards contain a list of a set of cards that they may represent. These are sometimes referred to as “checklist cards” and can be used to represent any card listed on them. Each individual checklist card used must have one (and only one) of the items checked.
+
+一些较早的辅助牌包含可以代替的一组牌张列表，它们被称为列表牌，可以用来表示其上的任一牌张。每张所使用的列表牌上都必须有一项（也仅能有一项）作了标记。
+
+>Checklist cards are substitute cards from early sets that had checkboxes for specific cards.  You didn’t have to write the name, you just checked a box.  Some players will black out all of the boxes except for the card they are representing. Any way of marking the checklist card that makes the card unambiguous is acceptable.
+>
+>列表牌是早期系列中的辅助牌，上面带有用于特定牌的选择框。你无需写上牌名，只需勾选对应的选择框即可。有些牌手会将列表牌上不使用的区域全部涂黑，这也是可以接受的，只要确保牌手能够明确表示该列表牌对应哪张牌即可。
+
+## MTR 3.6 Card Identification and Interpretation 牌张确认与牌张解释
+
+A card is considered named in game when a player has provided a description (which may include the name or partial name) that could only apply to one card. Any player or judge realizing a description is still ambiguous must seek further clarification.
+
+当牌手作出能够唯一确定某张牌的描述（包括说出全部或部分名称）时，便视为说出了该牌的名称。若牌手或裁判觉得所说描述无法唯一确定牌张，便须要求对方进一步说明。
+
+>Anytime a player names a card, it needs to be done in a way so everyone is aware of what card they are naming. Describing the card is fine. If anyone believes they have not done so, they need to ask for further clarification. “That rare gaea’s cradle elf” is sufficient.
+>
+>每当牌手说出一张牌的名称时，须以所有人都能知晓该名称所指为哪张牌的方式作出。描述一张牌也是可以的。如果有任何人认为他没有作到，应当要求该牌手作出进一步厘清。描述为“那张金牌苗地妖精”是足够厘清的。
+
+Players have the right to request access to the official wording of a card they can describe. That request will be honored if logistically possible.
+
+牌手拥有要求查阅牌张标准叙述之权利，只是该牌手须能描述出该牌。如实际可行，便可准予牌手查阅。
+
+>The fact that most card-searching apps include Oracle text is made very relevant by this bit. Players will often request oracle text for cards they or their opponents are using in tournaments, and judges should be prepared to provide it. Several phone apps include complete, downloaded, searchable databases of every single card’s Oracle text, and these are by far the easiest way to quickly find and display it. As a general rule, if you can punch the info they give you into the search function and find a precise card, they’ve described it well enough. Saying “the green three drop that people play a lot in standard” or “The one-drop red burn spell” isn’t uniquely identifying a card, but saying “The white planeswalker from Magic: Origins” or “The take an extra turn card with Delve” is. If a card is revealed to a player, they do not need to know anything about the card to request Oracle text for it.
+>
+>现在很多手机app能够帮助做到这一点。牌手通常会请求了解对手的某张牌的Oracle叙述，裁判应随时准备好进行回答。一些手机app提供了完整的离线数据库便于查询Oracle叙述。牌手提供的信息足以帮助你查询到想要的内容。通常来说，如果你能根据他们的描述使用app的搜索功能准确找到一张牌，就能算是唯一辨识。“3点绿费的标准赛用牌”，“1点红费的直伤咒语”类似的叙述不能帮助唯一辨识一张牌。但是”万智牌起源的白色鹏洛客“或者”带有掘穴的产生额外回合的咒语“可以唯一辨识。如果牌手能够看到某张牌，那么他无需知道任何事情便可以向裁判请求查询Oracle叙述。
+
+The official text of any card is the Oracle text corresponding to the name of the card.
+
+牌张的规则文字以该牌在Oracle牌张参考文献中所对应的文字叙述为标准。
+
+>Regardless of what the text on the card says, any sanctioned event must use the current Oracle text for each card, which can be found on Gatherer or pretty much on any phone app that you can search for cards on. If we didn’t use Oracle text, several old cards wouldn’t work with the game’s rules, several cards would be missing important errata, and the Portuguese printing for Stoic Rebuttal wouldn’t actually do anything.
+>
+>不管牌面叙述为何，任何认证比赛都应遵从牌张的Oracle叙述，Oracle叙述可以通过官方的牌张数据库以及一些手机app来查询。如果不使用Oracle叙述，一些老牌无法根据游戏规则运作，一些牌无法得到勘误，葡萄牙语版的寡欲抗辩什么都做不了。
+
+Players may not use errors or omissions in Oracle to abuse the rules. The Head Judge is the final authority for card interpretations, and they may overrule Oracle if an error is discovered.
+
+牌手不得利用Oracle中的错误或遗漏来滥用规则。主审是所有牌张解释的最终裁决者，当发现Oracle有错误时，主审的判决高于Oracle。
+
+>This may look like a clause that’s included just in case a card has a typo, but there have been cases where a Head Judge has overruled an oracle to prevent abuse. Wizards of the Coast is much more careful about the cards they print and the errata they make these days, but there have been high profile cases of a Head Judge overruling Oracle, notably the 1999 French Nationals and the Oracle text for Yawgmoth’s Will.
+>
+>虽然看起来这一条只是为了防止牌张印刷错误导致的问题，但过去确实曾有主审为防止滥用Oracle中的错误而做出高于Oracle判决的案例。如今，威世智也在设计牌张以及做出勘误方面做出了十分细致的工作，但确实有过主审做出高于Oracle判罚的著名案例，例如1999年法国国冠赛中关于约格莫夫的意志Oracle叙述的案例。
+
+Some cards with a Universes Beyond treatment have different names for the Universes Beyond and Universes Within versions. These cards are considered to be the same card. Other special treatments of cards may alter the name in ways that are clear references to the original card (e.g. Swords2Plowshares); these are also considered to be the same card.
+
+一些联动宇宙牌张会具有和原宇宙不同的牌名，它们被视为同一张牌。牌张的一些特殊处理也可能会在清晰引用原牌名的前提下使用改动后的牌名（例如Swords2Plowshares 化剑为犁），它们也被视为同一张牌。
+
+Some nontraditional cards (i.e., attractions) may share a name across multiple versions of the card. The name is considered to refer to all versions and does not need further disambiguation, including during deck registration.
+
+一些非传统牌（例如景点）可能会在多种版本中共享同一个名称。该名称被视为指代该牌的所有版本，不需要进一步区分，包括在登记牌表时也是如此。
+
+>Many attractions have multiple versions of the same card as indicated by the ‘lights’ on the frame.  In this case, naming one attraction names them all.  There is very little advantage gained in not-listing the specific light in deck registration, so judges are instructed to ignore that missing information when performing deck checks.
+>
+>许多景点存在同一张牌的多个版本，这通常由牌框上的灯灯号标识。在这种情况下，说出其中一个景点就等于说出了全部版本。 在登记套牌时不列出具体的灯光几乎不产生任何优势，因此裁判在进行套牌检查时应忽略这类缺失信息。
+
+## MTR 3.7 New Releases 新发售
+
+Newly released card sets become tournament-legal for sanctioned, rated tournaments on the following dates:
+
+自下述日期起，新发售的系列便可以在认证比赛中使用：
+
+* Magic: The Gathering | Teenage Mutant Ninja Turtles™ February 27, 2026
+
+* 万智牌 | 忍者神龟 2026年2月27日
+
+* Secrets of Strixhaven™ April 17, 2026
+
+* 斯翠海文的秘密 2026年4月17日
+
+For official Prerelease tournaments only, new sets are legal for use before the official format legal date. In these cases, any announced rules updates shall be in effect at these tournaments, including informal explanations of new rules and mechanics. Judges may apply additional rules that they believe will be updated.
+
+新系列仅于正式举办的售前比赛当中可于上述的日期之前使用。如属于此种情况，则所有已公告之规则订正（包括针对新规则和机制的非正式说明）均适用于该场比赛。若裁判认为在此之外还会有其他规则订正，也可在该场比赛中适用这类订正。
+
+>Cards are essentially legal for their respective formats when you have them legally. Typically this means Prerelease Weekend.  However it is possible that prerelease tournaments are available before the release. This is uncommon now, but was common in the past. Any changes to the rule, whether big or small, are in effect at the Prerelease tournament even though they aren’t officially brought into effect until the release of the set. Judges applying rules they believe will be updated should be incredibly obvious rules additions, such as allowing masterpieces to be played without a legal magic border.
+>
+>当你合法获得牌张时，这些牌在其对应的比赛环境中基本上是合法的。通常，这指的是在售前周获得的牌。然而，也有可能在正式发售前就能参加预发布赛事。这在现在已经不常见，但在过去很常见。任何大大小小的规则改动在售前赛都会提前生效，即使这些改动不会在发售日前的其他比赛中起作用。裁判所适用的即将更新之规则订正应当是极为明显的规则更新，例如允许没有合法万智牌边框的逸品重现在比赛中使用。
+
+These dates may be subject to change. Any changes will be announced at http://www.magicthegathering.com.
+
+这些日期有可能变动。如有变动，则会公告于此网址：http://www.magicthegathering.com。
+
+>This clause is unlikely to ever be relevant, but it’s here in case it’s ever needed.
+>
+>这句话很可能永远都没有用，但只是以防万一。
+
+## MTR 3.8 Game Markers 游戏标记物
+
+Small items (e.g., glass beads) may be used as markers and placed on top of a player’s own library or graveyard as a reminder for in-game effects. These markers may not disguise the number of cards remaining in that zone nor completely obscure any card.
+
+牌手可将一些小型物件（如玻璃珠）用作标记物放在自己的牌库或坟墓场顶上，以提醒自己注意游戏区中的效应。这些标记物不能用来隐瞒在该区域中的牌数，亦不得将该区域的任意牌张完全遮盖。
+
+>Players will often put something on top of their deck in order to remind them of an upkeep trigger, such as rebound, and occasionally players will put something on top of their graveyard in order to remind them of some continuous effect. “Small” is very subjective, and there are stories of a player using a plastic fishbowl to completely cover their own deck to prevent them from drawing a card before remembering the upkeep trigger. The key rules are that the item can’t obscure the cards, can’t make it difficult to see any revealed cards, and can’t be a card itself.
+>
+>牌手有时会用一些小物件放在牌库顶来提醒自己记住维持触发，例如弹回。有时也会将小物件放在坟墓场里的牌上用于提醒自己一些持续性效应的存在。“小“是一个很主观的概念，传闻牌手曾用塑料鱼缸盖住整个牌库避免维持前抓牌来确保维持触发。这里的关键在于，这些小物件不能盖住牌张，让人无法辨认，并且也不能使用另一张牌来当做此类小物件。
+
+## MTR 3.9 Die Rolling 掷骰
+
+Some game actions use a die roll to determine their outcome. Any method may be used to simulate this as long as all results have an equal chance of occurring. For example, using a 20-sided die to simulate a 6-sided die by dividing by 3 and rounding up (rerolling on 19 or 20) is acceptable. Dice with similar numbers clumped together (such as a spindown life tracker) may not be used for these actions.
+
+一些游戏动作使用骰子来决定其结果，只要所有结果发生的概率相同，就可以使用任何形式来进行模拟。例如，可以使用20面骰将掷骰结果除以3后进位来模拟6面骰（19、20重掷）。但数字有明显聚集规律的骰子（比如生命计数器）不能作此用。
+
+>With Adventures in the Forgotten Realms, several cards were added that require the roll of a D20, (the associated Commander Products might use a D4 or a D12, etc).  If you don’t have the required die, you may use another method that yields the same results with the same probability.  Spindown life trackers are not allowed in tournament play as there is excessive anecdotal evidence that the results can be manipulated easier than with a fair D20. However, in casual games, the MTR doesn’t apply and a spindown is fine.  If you think you a player at your kitchen table is cheating, why are they at your kitchen table?
+>
+>在被遗忘国度战记系列中，有几张牌需要掷 D20（相关的指挥官产品可能会使用 D4、D12 等其他骰子）。如果你没有所需的骰子，可以使用其他方法，只要该方法能产生相同概率的结果即可。 在比赛中，不允许使用旋转式生命计数器，因为大量的经验表明，其结果比普通的D20更容易被操纵。然而，MTR不适用，因此使用旋转式计数器是可以的。 如果你认为在自己餐桌上玩的玩家在作弊，那……他们为什么还在你餐桌上呢？
+
+Dice must have clear and easy to read values, and not be so large as to be disruptive when rolled. They must be rolled from a discernable height. Dice that leave the playing surface after landing, become mixed with similar dice, or do not land flat are ignored and rerolled.
+
+骰子的数值必须清晰可见，且不得因其体型过大而影响正常滚动。它们必须从一定的高度掷出。忽略落地后离开桌面、混入其它相似骰子或是没有在平面上停止的骰子，并重掷它们。
+
+>These rules are just to ensure no one can hide the result of a roll, or roll improperly.  It also covers the age-old D&D question of “If it rolls off the table, do I re-roll or keep the result”. The section about the dice not being so large as to be disruptive, is because this game has trolls, and if that rule isn’t there, someone will bring a 1 ft diameter dice plushie and argue that it’s legit because the rules don’t say they can’t.
+>
+>这些规则是为了确保没有人能隐藏骰子的结果，或不正当地掷骰。 它同样涵盖了DND由来已久的问题：“如果骰子滚下桌子，我是重新掷还是保留结果？” 关于骰子大小不应过大以免干扰游戏的规定，是因为这个游戏里有恶作剧玩家。如果没有这一条规则，总会有人带一个直径一英尺的骰子毛绒玩具来，并辩称这样做合法，因为规则中并没有明文禁止。
+
+Players are expected to be clear about why they are rolling a die. A player who wishes to respond to a die roll is expected to prevent the rolling player from taking action, but the rolling player cannot rush through to preempt responses. A die roll is complete once the result is visible to the opponent.
+
+牌手应明确自己是出于什么原因掷骰。若牌手希望在对手掷骰前对该行动作出响应，则应先阻止对手做出该行动，但掷骰一方也不得通过贸然推进该行动的方式，致使对手错失响应的机会。一旦掷骰的结果可见于对手，则该行动便视作完成。
+
+>These rules are in place to stop gamesmanship on both sides of the table.  Typically cards that use dice rolling have the rolling as part of resolving the effect.  Once the roll starts, the effect is happening.  As such, it is important for the players to communicate that they are about to roll, so the opponent knows they need to respond. We don’t want opponents deciding that they werent given a chance to respond until after the result is known.  We also don’t want a player to push past any possible responses by rolling too fast and claiming its “too late” to respond.  We definitely don’t want a player just rolling D20s and then when they get a result they like, claim it was for an effect.
+>
+>这些规则的设立是为了防止双方玩家在牌桌上耍小聪明。 通常，涉及掷骰的牌，其掷骰行为是效应结算的一部分。一旦开始掷骰，效应就已经在发生了。因此，玩家必须提前告知即将掷骰，以便对手知道需要做出反应。我们不希望对手在结果揭晓后才说自己没有机会响应。 同样，我们也不希望玩家通过过快掷骰来压制任何可能的响应，然后声称“已经太晚了，无法响应”。更不希望有人随意掷D20，当结果符合自己心意时，再声称这是为了某个效应而掷的。
+
+Some actions may require multiple dice to be rolled. If additional rolls would have no impact on the game, the player skips them. If a player rolls too many dice at once, all those dice are ignored and the correct number of dice are rolled.
+
+有些动作可能需要投掷多个骰子，如果额外的掷骰对游戏不产生影响，则忽略它们。如果牌手一次掷了过量的骰子，忽略这次掷骰的所有结果，并重新投掷正确数量的骰子。
+
+## MTR 3.10 Card Shuffling 洗牌
+
+Decks must be randomized at the start of every game and whenever an instruction requires it. Randomization is defined as bringing the deck to a state where no player can have any information regarding the order or position of cards in any portion of the deck.
+
+在每盘游戏开始时，或是在有指示要求的情况下，牌手必须将自己的套牌随机化。「随机化」的定义为：「将套牌调整为随机状态的过程；调整过后的套牌内任意部分牌张的排列次序，或是其中某张牌具体位置这类的信息无从为任何牌手所知晓」。
+
+>The phrase “order or position” is key. A deck that is “mana-weaved” is not random; even though the player may have no information about the location of a specific card, they have information about the cards’ order (that is, land-spell-spell, land-spell-spell). Also key is that a player shouldn’t know any information on where a card is, not even which half of the deck it is in.
+>
+>“排列次序与具体位置“是关键。经过“法术力编织”的套牌并不是随机化的：即使牌手不知道特定牌的位置，但是他却知道牌张的大致顺序（类似地-咒语-地）。牌手也不应知道某张牌的任何信息，包括知道该牌在牌库中的哪一部分也不行。
+
+Pile shuffling may not be performed other than once each at the beginning of a game to count the cards in the deck.
+
+分堆洗法属于清点套牌张数的方法，每位牌手只能在每盘游戏开始时为此目的使用一次。
+
+>Pile shuffling is completely non-random, since individual cards can be tracked and since cards are shuffled into a deterministic order. A single pile shuffle can help players count their decks and loosen sticky cards, but more than that a pile shuffle does not contribute to randomization and will qualify as Slow Play. Once the game has begun the need to count the deck during randomization is largely gone.  As such, a single pile shuffle at the start of the game is permitted, but is not allowed at any other time.  Please remember when applying the IPG that habits are hard to break, and a single caution may be appropriate the first time.
+>
+>分堆洗牌完全不是随机过程，因为单张卡牌可以根据洗牌的顺序来充分推定。一次分堆洗牌可以帮助牌手清点牌张数量、避免让牌张粘在一起，但多次分堆洗牌并不能帮助套牌更加随机化，并可视为游戏行动过慢来处理。一旦游戏开始，在随机化的时候再去清点牌张的必要性就基本不存在了。因此，在游戏开始时允许进行一次分堆洗牌，但在其他任何时间都不允许进行。请在应用IPG时注意，牌手的习惯是很难打破的，在第一次发生时可以先予口头注意。
+
+Once the deck is randomized, it must be presented to an opponent. By this action, players state that their decks are legal and randomized. The opponent may then shuffle it additionally. Cards and sleeves must not be in danger of being damaged during this process.
+
+一旦牌手将自己的套牌随机化后，必须将自己的套牌呈交给对手。通过这一动作，牌手便表明自己的套牌是合乎规定，且已随机化。对手可以对其进行额外的洗牌。在此过程中，不得对牌张和牌套做出有可能将之损毁的举动。
+
+>The deck should be fully randomized when presented to the opponent, and the opponents’ shuffles are not meant to make the deck “more random.” The purpose of the second shuffle is to discourage deck-stacking and cheating.
+>
+>在呈给对手之前，牌库必须完全随机化。对手再一次洗牌并不意味着让套牌“更随机化。“让对手洗牌的目的在于：阻碍牌手操纵牌库以及作弊。
+
+If the opponent does not believe the player made a reasonable effort to randomize their deck, the opponent must notify a judge.
+
+如果该位对手认为牌手并未尽力使套牌充分随机化，他须就此告知裁判。
+
+>This rule is here so that a player doesn’t have to feel bad about calling a judge for insufficient shuffling.  It’s in the rules, you have to. You aren’t the bad guy accusing the player of cheating.  You are just bringing up an issue and the judge can investigate the issue.
+>
+>这条规则的设立是为了让玩家在因对手洗牌不足而叫裁判时不必感到内疚。这是规则规定的，你必须这么做。你并不是在指责对手作弊的坏人，你只是提出了一个问题，由裁判来调查处理即可。
+
+Players may request to have a judge shuffle their cards rather than the opponent; this request will be honored only at a judge’s discretion.
+
+双方牌手皆拥有请求裁判来代替自己的对手为自己洗牌的权利；但裁判可自行决定是否要为牌手洗牌。
+
+>Judges should use their discretion on this.  Shuffling takes a significant amount of time, during which the judge can’t take other calls. As shuffling for players is not a service that can be offered for all players it should be reserved for exceptional circumstances. Requests for judges to shuffle are exceedingly rare and typically arise when a player perceives there opponent as ill, or a ‘rough shuffler’, or there are mobility issues.  The first two can be handled with quick instructions to the players (e.g. ‘please be more gentle while shuffling’, or ‘you may have an extension to wash your hands if needed’). Note: If a player is visibly showing signs of illness to the point that it is causing player distress, notify the Tournament Organizer. With respect to mobility issues, players with those issues typically inform the judges in advance, and accommodations have already been made. If a mobility issue arises during the tournament, that is typically considered exceptional.
+>
+>此处，裁判可以自行衡量。洗牌会花费一定的时间，这使得裁判会有一段时间无法回应其他裁判呼叫。洗牌不是为所有牌手提供的服务，而应尽量将机会留给特殊情况。请求裁判代为洗牌的情况极为罕见，通常发生在以下情形：玩家认为对手有卫生问题、洗牌手法粗暴，或存在行动不便的问题。对前两种情况，可以通过简短指导处理，例如：“如有需要，可以延长时间让你去洗手”，“洗牌时请轻一些”。注意：如果玩家明显出现疾病症状且影响其他玩家，应通知比赛主办方。关于行动不便的问题，通常玩家会提前告知裁判，并已安排好相关便利措施。如果在赛事中临时出现行动不便的情况，这通常被视为特殊情况。
+
+If a player has had the opportunity to see any of the card faces of the deck being shuffled, the deck is no longer considered randomized and must be randomized again.
+
+在洗牌过程中，若牌手得以看到套牌中任意牌张的牌面，便不会认为该套牌「已随机化」，牌手必须将之重新随机化。
+
+>This rule is to codify a point where the shuffle has been undone.  If you shuffle and then maybe see the bottom card while putting the deck down, we have to start over.
+>
+>这条规则的目的是明确什么时候洗牌被视为作废。 如果你洗完牌后，在放下牌堆时可能看到了最下面的牌，那么就必须重新洗牌。
+
+At Competitive and Professional Rules Enforcement Level tournaments, players are required to shuffle their opponents’ decks after their owners have shuffled them. The Head Judge can require this at Regular Rules Enforcement Level tournaments as well.
+
+在「竞争」和「专业」级别的比赛中，牌手必须在对手洗完牌之后，为对手的套牌进行洗牌。主审也可以在「一般」级别的比赛中规定必须洗对手的套牌。
+
+>In some cultures, asking to shuffle an opponent’s deck would be considered an insult. The requirement to shuffle an opponent’s deck is intended to prevent cheaters from taking advantage of these cultural norms.
+>
+>Because a deck presented to an opponent should be random, this additional shuffle does not need to be thorough. However, simply cutting the deck is often not sufficient to meet this requirement.
+>
+>在一些文化中，要求洗对手的牌库会被认为是一种侮辱。明确要求洗对手的牌库是为了避免作弊者通过特定的文化规范得利。
+>
+>由于呈给对手的套牌已经经过随机化，那么不必重新做彻底的随机化。然而，仅仅简单地切一下牌库也通常是不足以达到此要求的。
+
+## MTR 3.11 Sleeves 牌套
+
+Players may use plastic card sleeves or other protective devices on cards.
+
+牌手可以在牌上使用塑料制的牌套或其他保护用设施来保护牌。
+
+>Often players will be using card sleeves to protect their cards from the dirt and friction they would otherwise be exposed to through repeated usage. Provided that they do not interfere with shuffling, or could be considered offensive, they will be allowed with the following conditions.
+>
+>牌手通常会用牌套来保护牌张避免多次使用产生灰尘或者磨损。在不影响洗牌或者造成其他坏影响的前提下，牌手可以在符合下述要求的情形下使用牌套。
+
+If a player chooses to use card sleeves, all sleeves must be identical and all cards in their deck must be placed in the sleeves in an identical manner.
+
+如果牌手决定使用牌套，则该牌手套牌中的所有牌都必须使用相同的牌套，并以相同的方式装入牌套中。
+
+>Having decks of mixed brands/types/colors/condition/size etc. of sleeves allows players to tell their cards apart. Additionally the conditions of the sleeves should be noted. If most of the set is scuffed and worn on the visible side when in the deck, but a few sleeves are in notably better condition, the sleeves are not identical. Another common practice is to “double sleeve” a deck, in this case all cards must be double sleeved so there exist no variation in rigidity and thickness of cards in the deck. Notable deviations from the identical nature of the sleeves ought be considered Marked Cards.
+>
+>使用不同品牌、类型、颜色、新旧、尺寸等的牌套会让牌手能够区分特定牌张的位置。此外仍需注意牌套的状态。如果大多数牌套都已磨损，而少数几张牌套还比较新，那么这些牌套不能算完全一致。而另一种“双层牌套”的情况下，所有的牌都必须使用双层牌套来确保每张牌硬度和厚度一致。牌套有明显区别会被当作有记号的牌而做出相应处理。
+
+If the sleeves feature holograms or other similar markings, cards must be inserted into the sleeves so these markings appear only on the faces of the cards.
+
+若牌套上有镭射标示或类似的记号，则在把牌装入牌套时，必须使得该些记号只出现在牌面一侧。
+
+>So as to prevent information being revealed by reflecting the face of a card above in a stack all holograms and the like must be solely on the face of the card sleeve.
+>
+>为了避免镭射标示反射牌张信息，所有的镭射标示都应出现在牌面一侧。
+
+During a match, a player may request that a judge inspect an opponent’s card sleeves.
+
+在对局进行过程中，牌手可以要求裁判检查对手的牌套。
+
+>If a player finds something suspicious they may request a judge to check opponents sleeves for Marked Cards. The process for this is similar to that of a deck check, where the cards are briefly examined for dissimilarity or problems. It should be noted that all sleeves could be considered marked if examined closely enough, and this ought be considered when evaluating sleeves.
+>
+>如果牌手发现了对手牌套上的可疑现象，可以向裁判要求检查对手的牌套。此过程与套牌检查类似，检查时应着重注意牌张的异同点或任何问题。在仔细观察的情况下，每个牌套都有细微区别，这点在评估牌套合法性时也应作为参考。
+
+The judge may disallow the card sleeves if they believe they are marked, worn, or otherwise in a condition or of a design that interferes with shuffling or game play.
+
+如果裁判认为牌手的牌套被作了记号、已磨损，或是出于其他会影响到洗牌或游戏进行的状态，他可以不允许牌手使用该牌套。
+
+>In the event that the card sleeves are determined to be interfering with game play or compromising the integrity of the game. The judge may require replacement sleeves to be used for the remainder of the tournament.
+>
+>如果裁判认为牌套会影响游戏进行、或损害游戏的公平性，那么可以要求牌手在接下来的比赛中更换牌套。
+
+In the interest of efficiency, the judge may choose to delay any change of sleeves until the end of the match.
+
+基于效率考虑，裁判可选择延迟到对局结束后才让牌手更换牌套。
+
+>The act of requiring a player to change sleeves mid match is undeniably disruptive, if the judge feels that there is no urgent need, postponing the change of sleeves until after the match is a superior alternative. If necessary a time extension may be given to complete the task and allow the player to continue in the tournament.
+>
+>在对局过程中要求牌手更换牌套无疑会花费一定时间。如果裁判认为不是特别紧急，那么推迟更换牌套的时机是更好的选择。如果有必要的话，则可以考虑给牌手一些补时，让他能够继续进行比赛。
+
+Competitive and Professional Rules Enforcement Level tournaments impose additional restrictions on sleeves.
+
+「竞争」和「专业」级别的比赛对牌套有额外的限制要求。
+
+>Due to the nature of Competitive and Professional Rules Enforcement Level events, additional restrictions are set in place to ensure that the integrity of the event is upheld. As such in these events the following observations and regulations ought be enforced and considered.
+>
+>由于这些比赛竞技属性的原因，在竞争级别和专业级别的比赛中，会对牌套有额外的限制条件来保证比赛的公正性。因此这些比赛中需遵循如下规则。
+
+Highly reflective backs are not allowed. Sleeves with hologram patterns across some or all of the sleeve front or back are not allowed.
+
+具有背面高度反光的不得使用。在正面或背面的一部分或全部具有镭射标示的不得使用。
+
+>If a sleeve has a highly reflective backing, information may be gained when picking up cards from the deck where some characteristics could be observed such as whether or not the card is a land, or what color it is. This of course is not something that can be allowed due to the risk it creates.
+>
+>The restriction on hologram patterns across the front is in effort to maximize clarity of the game as to not disrupt the viewing of the card for both players. It should be noted that due to the insignificant nature of something like the Ultra Pro logo sticker, its placement and size make it a non-factor when evaluating the sleeves.
+>
+>如果牌套背面具有高度反光性，在从牌堆中抽牌时可能会获取信息，例如该牌是否为地牌，或者它的颜色。这显然不能被允许，因为这样会带来潜在的风险。
+>
+>对限制镭射标识的牌套而言，也是为了确保双方牌手能够清楚地看到牌面，不受干扰地进行游戏。但值得注意的是，Ultra Pro牌套上的logo镭射贴纸的影响很小，一般不考虑在内。
+
+Sleeves with artwork on their backs may be subjected to additional scrutiny, especially if there is no solid border around the edges.
+
+背面有图案的牌套可能需进行额外复查，尤其是侧边未使用单一颜色者。
+
+>With solid borders a player cannot easily hide marks on the sleeves that can be seen when the cards are in a stack, whereas without a solid border, abnormalities are far harder to notice, and thus demand extra study when evaluating the sleeves.
+>
+>单一颜色牌套上的记号很容易被发现，但是背面有图案的牌套可能会带来更多的问题，相应地需要通过更加细致的观察来判断牌套是否可用。
+
+When using sleeves on double-faced cards, sleeves must be completely opaque.
+
+如果要以装入牌套的方式来利用双面牌，则牌套须为完全不透明。
+
+>In the event that a player is using double-faced cards with in their deck rather than a checklist card, the sleeve must not allow any indication that a double-faced card is within. Often the easiest way to observe this is by looking at the back of the sleeve in various angles in light to determine opaqueness. If the sleeves prove ineffective at preventing the nature of the double-faced card from being revealed the player will either need to use appropriate checklist cards, or use new, suitable sleeves. The infraction Marked Cards may also apply.
+>
+>在比赛中，如果牌手使用双面牌而不使用列表牌时，绝对不能使用能够透过其观察到牌张内容的牌套。可以通过不同角度的入射光观察牌套是否符合要求。如果牌套不符合要求，那么该牌手需使用合适的列表牌，或者新的合适的牌套。这里同样适用于有记号的牌的判罚。
+
+The Head Judge is the final authority on what sleeves are allowed.
+
+主审在确定何种牌套可用方面具有最终决定权。
+
+>dat’s right!
+>
+>没错！
+
+## MTR 3.12 Marked Cards 有记号的牌
+
+Players are responsible for ensuring that their cards and/or card sleeves are not marked during the tournament. A card or sleeve is considered marked if it bears something that makes it possible to identify the card without seeing its face, including (but not limited to) scratches, discoloration, and bends.
+
+在比赛过程中，牌手有责任确保自己所使用的牌张和／或牌套上没有记号。如果某张牌或牌套上有任何可以无需检视正面即能认出该牌的东西，就会被算作「有记号」，这包括刮痕、变色，以及折痕。
+
+>Cards must stand out when in the deck to be considered marked. If you have to bend the card and look at it from funny angles to get the light to hit it just right, it is not marked.
+>
+>在牌库中很突出的牌张才算作有记号的牌。如果需要弯曲牌张或者要从非常特定的角度才能发现其不一样，这并不算有记号。
+
+If a player’s cards are sleeved, the cards must be examined while in the sleeves to determine if they are marked. Players should use care when sleeving their decks and should randomize their decks prior to sleeving them to reduce the possibility of cards becoming marked with a pattern. Players should also keep in mind that cards or sleeves may become worn and potentially marked through play during a tournament.
+
+如果牌手的牌装在牌套中，则在检查它们是否有记号时也要装上牌套来检查。牌手在装牌套时应当特别留意，并且应先让套牌随机化之后再装上牌套，以降低有记号的牌具备特殊排列规则的可能性。牌手应当注意，在比赛过程中，随着牌张的使用，牌张或牌套有可能受到磨损并有可能被视为做了记号。
+
+>Many brands of sleeves will have inconsistencies in their coloring or cut. Players should shuffle the sleeves and cards prior to sleeving to prevent the inconsistencies from creating a pattern. Additionally, a good rule of thumb is: If you think a judge might consider the deck marked, go ahead and change your sleeves.
+>
+>不少品牌的牌套会在颜色和切割上有细微的不一致。我们建议牌手在套牌套前能够打乱套牌以及牌套的顺序，来避免套牌显现出一些模式。此外，一个实用的经验法则是：如果你认为裁判可能会认为你的套牌有记号，那就换牌套吧。
+
+The Head Judge has the authority to determine if a card in a player’s deck is marked. Judges may request that a player remove their current sleeves or replace any of the deck’s current sleeves immediately, or before the next round.
+
+主审有权判定牌手的套牌中是否含有具记号的牌张。裁判可以要求牌手取下当前所用牌套，或是更换套牌当前所使用的牌套的一部分，并决定该牌手须立即更换还是在下局开始之前更换完毕。
+
+>If the sleeves are marked enough that you are giving a Warning at Competitive Rules Enforcement Level, instruct the player to replace them between rounds. If their round runs late, give them a reasonable time extension in the following round to facilitate re-sleeving. If the penalty is being upgraded to a Game Loss, the player needs to replace the sleeves immediately. Judges are often tasked with assisting the player to expedite the process. Make sure to follow-up with players after instructing them to replace sleeves to ensure that they have done so.
+>
+>如果你因牌套上的标记在竞争级别的比赛中给出了警告的判罚，那么就让牌手在局间更换牌套。如果该牌手这一局结束得晚，那么给他在下一局一些补时来确保牌套更换完毕。如果判罚被升级为一盘负，那么牌手需立即更换牌套。裁判可以帮助牌手更高效地完成牌套更换。跟进此事确保牌手完成牌套更换。
+
+## MTR 3.13 Hidden Information 非公开信息
+
+Hidden information refers to the faces of cards and other objects at which the rules of the game and format do not allow you to look.
+
+非公开信息指的是游戏规则及赛制禁止牌手窥视之信息，如牌张及其他物件的正面。
+
+>Cards in the library, cards in the opponent’s hand, cards exiled face down (such as from Pyxis of Pandemonium), and cards other players are drafting, are all examples of hidden information.
+>
+>牌库中的牌，对手的手牌，牌面朝下放逐的牌（例如魔异盒），其他牌手轮抽抽到的牌，这些都是非公开信息的例子。
+
+Throughout the match, a draft, and pregame procedures, players are responsible for keeping their cards above the level of the playing surface and for making reasonable efforts to prevent hidden information from being revealed. However, players may choose to share the contents of their hands, or any other hidden information available to them, to any other players unless specifically prohibited by the rules. Players must not actively attempt to gain information hidden from them but are not required to inform opponents who are accidentally revealing hidden information.
+
+在整个对局、轮抽、及游戏前程序的过程中，牌手有责任将自己所有的牌保持在游戏平面之上，并尽力防止自己的非公开信息被公开。然而，除有规则明令禁止之外，牌手可选择向任何人公开自己的手牌内容或其他自己知悉的非公开信息。牌手不得主动尝试去获取自己不应知道的非公开信息，但在对手无意间透露了非公开信息的情况下，亦无需就此提醒对手。
+
+>Players can show their opponent any information that that player is allowed to see. This means they cannot show the opponent the contents of their deck unless they are currently allowed to see it (i.e. searching). Players cannot try to look at the opponent’s hand, but if the opponent has it revealed they don’t need to inform them. It is also possible to accidentally reveal information.  Maybe they are playing with their hand tilted too far forward, or maybe they are wearing reflective sunglasses. This rule covers situations such as “show me the lightning bolt and I’ll concede” and accidentally dropping their hand on the table.
+>
+>Note for Multiplayer play: The MTR is written predominately for 1v1 play, or 2v2 in the case of 2HG. It has not been given an overhaul for pod formats like Commander. To that end, parts of the MTR are written using language assuming one opponent or opposing team. In a game with multiple opponents, if a player is controlling another player, the controlling player cannot force the controlled player to reveal their hand to the other opponents. The controlling player may say what cards they can see, but they may not physically show the controlled players cards to other players or direct the controlled player to show the cards, outside of executing a game effect that requires the cards to be revealed.
+>
+>牌手可以向对手展示自己允许查看的信息。例如，他不能向对手展示牌库的内容（除非他允许查看牌库内容，比如他在搜寻牌库）。牌手不能试图查看对手的手牌，但是对手不小心展示了手牌，也不需要提醒他。此外，也可能会无意中透露信息。例如，玩家手牌倾斜过多，或者戴着反光墨镜等。这条规则适用于类似“给我展示闪电击，我就认输”的情况，以及无意将手牌掉在桌面上而被看到的情况。
+>
+>多人游戏注意事项： MTR 主要针对1v1对局编写，或者在双头巨人中为2v2对局编写，并未针对像指挥官这样的多人赛制进行全面修订。因此，MTR 中部分条款使用了假设只有一个对手或一个敌方团队的措辞。在有多个对手的游戏中，如果一名玩家控制另一名玩家，不能强制被控制的玩家向其他对手展示手牌。控制者可以说出自己所看到的牌，但不得将被控制玩家的牌实际展示给其他玩家，也不得指示被控制玩家展示牌，除非这是执行某个游戏效应所必须的展示行为。
+
+## MTR 3.14 Tapped/Flipped Cards 已横置／已倒转的牌
+
+If a card must be tapped or flipped, it must be turned approximately 90 degrees (tapped) or 180 degrees (flipped), whichever is appropriate.
+
+若必须横置或倒转一张牌，则牌手须根据相应动作将牌转动大约90度（横置）或180度（倒转）。
+
+>Flipped cards were introduced, and currently only in, Kamigawa Block. They consist of a card with two rules boxes, and have a condition to flip them from their original characteristics to alternate characteristics.
+>
+>Whether a card is tapped or flipped is a status of the game, and needs to be clearly communicated with the opponent, and visual standards are very helpful in this regard.
+>
+>倒转牌仅出现在神河环境中。它具有两个规则框，并具有将原特征转至另一组特征的倒转条件。
+>
+>牌是否横置或倒转属于游戏状态，需要明确地向对手传达，在这方面保持统一的视觉标准非常有帮助。
+
+## MTR 3.15 Graveyard Order 坟墓场的顺序
+
+In formats involving only cards from Urza’s Saga™ and later, players may change the order of their graveyard at any time.
+
+在只使用克撒传及于其后发行的系列之赛制中，牌手可调整其坟墓场中牌的顺序。
+
+>The set Stronghold has the last cards that care about graveyard order. Urza’s Saga is the set following that, so in any format that only includes later sets players may change the order of their graveyard.
+>
+>The most common formats for which players cannot change a graveyard’s order are Legacy & Vintage.
+>
+>天罗城塞系列是最后一个印有关乎坟墓场顺序的牌之系列。克撒传是天罗城塞的下一个系列，所以仅包含该系列之后系列的赛制并不关心坟墓场的顺序。
+>
+>薪传和特选是最常见的不能改变坟墓场顺序的赛制。
+
+A player may not change the order of an opponent’s graveyard.
+
+牌手不得改变其对手坟墓场的顺序。
+
+>A player may look through an opponent’s graveyard whenever they like. Players should always ask for the owner’s permission before touching cards that do not belong to them, as a courtesy. If a player is looking through a graveyard extra care should be taken to not mix any of the cards with their hand.
+>
+>牌手可以在任意时刻查看对手的坟墓场。由于查看的不是自己的牌，出于礼貌，他必须经得对手的同意。在牌手查看坟墓场时，应时刻注意不要将牌与自己的手牌混淆。
+
+## MTR 3.16 Sideboard 备牌
+
+A sideboard is a group of additional cards the player may use to modify their deck between games of a match. The player may use these cards in their main deck during all games after the first one in a match.
+
+备牌是一组不属于牌手套牌之内的额外牌张。在一局对局中两盘游戏之间，牌手可利用其备牌里的牌来变更其套牌的组成。牌手可在一局对局中的第一盘游戏之后在自己的主牌中使用这些牌。
+
+>It is advisable for a player to have their sideboard sleeved in the same manner as their main deck in order to quickly swap cards.
+>
+>强烈建议牌手将备牌套上与主牌同样的牌套（或都不使用牌套）来节约换备牌的时间。
+
+Before each game begins, players must present their sideboard (if any) face down. Opponents may count the number of cards in their opponent’s sideboard at any time. Players are not required to reveal how many cards they have swapped from their main deck to their sideboard and do not have to swap one for one.
+
+在每盘游戏开始之前，牌手必须将自己的备牌（若有）以面朝下的方式呈示于对手。牌手可随时清点其对手备牌的张数。牌手不需告知对手自己在套牌和备牌之间交换了几张牌，且不需一一对应交换。
+
+>In the U.S. most players do not present their sideboard, instead leave it in their deck box, separate from their mainboard. This, like requiring opponents to shuffle as opposed to cutting a deck, is required but not strictly enforced. Deck Problem in the IPG also tells us that any other cards kept with the sideboard are considered part of the sideboard. This is one of the common occurrences of Deck Problems and why it is important for players to keep their deck separate from any other cards, for example last night’s draft rares. To avoid a penalty players can present the sideboard, which is common in some countries.
+>
+>在美国，许多牌手没有呈现备牌的习惯，而是让它留在牌盒里与主牌做好区分。这和让对手认真洗牌而仅仅简单切一下牌库类似，即使我们要求牌手这样做，却没有强制执行。IPG中关于套牌问题的内容说明：与备牌在一起的其他牌会被视作备牌的一部分。这种问题屡见不鲜：牌手将之前轮抽得到的金牌和今天比赛用的备牌放在了一起。为了避免这种判罚，呈现备牌是一种好方法，一些国家的牌手也会习惯这么做。
+
+Other items (token cards, double-faced card represented in the deck by a substitute card, etc.) should be kept separate from the sideboard during game play.
+
+在游戏过程中，应保证其他物品（衍生物牌、套牌中使用辅助牌代表的双面牌等等）与备牌之间有显著区隔。
+
+>The Deck/Decklist portion of the IPG instructs that these “other items” must be sleeved differently than the main deck/sideboard. We want to keep them separate so there is no confusion and less opportunity for abuse.
+>
+>IPG中有关套牌/套牌登记表的内容要求“其他物品”需与主牌/备牌有所区分。我们希望将它们分开，以避免混淆，并减少滥用的机会。
+
+During a game, players may look at their own sideboard, keeping it clearly distinguishable from other cards at all times. If a player gains control of another player, they may not look at that player’s sideboard, nor may they have that player access their sideboard.
+
+于游戏进行的过程当中，牌手可检视自己的备牌，但须保证属于备牌的牌与其他的卡牌之间有明显区隔。如果某牌手获得了其他牌手的操控权，他不得检视后者的备牌，也不得要求后者查看其备牌。
+
+>It is very important that players keep the cards separate from their main deck. If at some point the sideboard becomes intermingled with the main deck there is no way to verify the legality of the deck and penalties may apply. Players are not allowed to look at another player’s sideboard while they control them.  This is because players may wish to scope if it means protecting their super secret sideboard tech. It also saves time, because you know the controlling player would want to see the sideboard and write down its contents, or see what they took out of their main.
+>
+>区分主牌与备牌是非常重要的。如果主牌和备牌混在了一起，无法区分套牌当前的合法性，那么自然会得到判罚。牌手不能在操控另一位牌手时查看其备牌。这是因为牌手可能希望保护自己超级机密的备牌策略。此外，这也节省了时间，不然操控者可能会想查看备牌并记录内容，或者查看从主牌换出了哪些牌。
+
+The deck and sideboard must each be returned to their original compositions before the first game of each match.
+
+在每局的第一盘游戏开始之前，牌手必须将自己的套牌与备牌还原至各自的原始组成。
+
+>This rule applies to all Constructed format events, including ones run at Regular Rules Enforcement Level, not only those that use decklists. This is only required for Limited format events if deck registration sheets are being used, otherwise the events are considered to be continuous construction.
+>
+>此规则适用于所有构筑比赛，包括一般级别的比赛，而不仅仅是使用牌表的比赛。而在限制赛中，只有在使用牌表的情况下才需要还原主牌。
+
+Restrictions on the composition and use of a sideboard can be found in the deck construction rules for a particular format type.
+
+关于备牌之组成和使用的要求与限制，请参见相应赛制的套牌构成规则。
+
+>Most Constructed formats use a maximum 15 card sideboard. In Limited format events the cards that are in your card pool but not in the main deck are considered the sideboard, along with an unlimited number of basic lands.
+>
+>绝大多数的构组赛使用最多15张备牌。在限制赛中，牌池中不在主牌中使用的牌都算作备牌，另外还包括任意数量的基本地。
+
+If a penalty causes a player to lose the first game in a match before that game has begun, or the first game is intentionally drawn before any cards are played, neither player may use cards from their sideboard for the next game in the match.
+
+若出现了以下两种情况之一，双方牌手均不得在该局对局的次盘游戏中使用备牌：(1)在游戏开始之前，便有牌手因处罚而输掉了该局中的第一盘游戏；或(2)双方牌手未使用任何牌就已约和第一盘游戏。
+
+>In this case there has not been a “first game” for this match so there is no sideboarding as the next game will be the “first game”. Note that this exception applies when a game loss penalty is given before the first game has started, not the second or any subsequent games. A Deck/Decklist Problem or Marked Cards upgraded Game Loss penalty discovered during a deck check are the common ways this can happen.
+>
+>在这种情况下比赛为进行过“第一盘游戏”，所以接下来的一盘将会成为“第一盘游戏”。值得注意的是，这种例外只在第一盘游戏开始之前就给出判罚的情形下才适用，而不适用于第二盘或之后的游戏。这种情形通常是由于套牌/套牌等记表问题或者有记号的牌判罚升级所造成的。
+
+If players restart a game due to an in-game effect, the composition of their decks must remain the same for the restarted game.
+
+若有牌手因游戏中效应之故重新开始了游戏，则双方牌手的套牌组成在这盘重新开始的游戏中应保持不变。
+
+>Currently Karn Liberated’s ultimate is the only ability that can restart a game. See CR 719 for additional rules on restarting the game.
+>
+>目前，重获自由的卡恩的大招是唯一一个会重新开始游戏的异能。详见CR 719了解关于重新开始游戏的额外规则。（译注：现在是CR 726）
+
+Certain cards refer to “a (card or cards) from outside the game.” In tournament play, these are cards in that player’s sideboard.
+
+某些牌会提及「在游戏外由你拥有的牌」。在比赛中，「在游戏外由你拥有的牌」指该牌手备牌里的牌。
+
+>In order to prevent any debates or weird rulings over what defines “a card you own”, tournament play now strictly goes by this rule. This usually comes up in the form of “Wish” cards, which let you put such a card into your hand from your sideboard.
+>
+>为了避免“你拥有的牌“这个用语所产生的争议，如今以这条规则来明确了此定义。这通常是由“祈愿”类的牌所造成，它们会让你将备牌加入手牌。
+
+# MTR 4. Communication 沟通交流
+
+## MTR 4.1 Player Communication 牌手之间的沟通
+
+Communication between players is essential to the successful play of any game that involves virtual objects or hidden information. While bluffing may be an aspect of games, there need to be clear lines as to what is, and is not, acceptable for players to say or otherwise represent. This will confirm expectations of both sporting and competitive players during a game.
+
+万智牌此游戏中含有为数众多的虚拟物件及丰富非公开信息，因此牌手之间的沟通情况便直接关系到游戏能否顺利进行。虽然游戏允许利用虚张声势作为战术之一，但比赛中仍需要有一条明晰的界限来指导牌手在进行口头或其他方面表示的时候何者可为，何者不可为。对此进行规定也符合竞技和竞争性牌手在比赛中的期望。
+
+>While players are willing to do whatever they can to win, judges need to make sure players behave within the rules. Bluffing is okay, for example, but we cannot condone any behavior that crosses the line into cheating or other unsportsmanlike conduct.
+>
+>牌手会用尽各种方式来取得胜利，同时裁判要做的就是确保牌手的行为在规则的约束范围内。虚张声势是可以的，但是我们不能容忍任何作弊或者有违运动家精神的行为出现。
+
+A player should have an advantage due to better understanding of the options provided by the rules of the game, greater awareness of the interactions in the current game state, and superior tactical planning.
+
+对游戏规则下可作出的所有选择理解更深刻，对当前游戏状态之间之互动知晓更清楚，对战术规划更充分的牌手自然应在比赛中占有优势。
+
+>We do not penalize a player for understanding the game better than their opponent. Instead, we want to encourage players to learn the rules and understand the rules and policy documents.
+>
+>我们不会因为一位牌手对规则的理解比他的对手更好而处罚他。而且我们鼓励牌手去学习理解规则和方针文档。
+
+Players are under no obligation to assist their opponents in playing the game. Regardless of anything else, players are expected to treat opponents politely and with respect. Failure to do so may lead to Unsporting Conduct penalties.
+
+牌手没有义务协助对手进行游戏。无论如何，牌手都应该以礼貌、尊敬的态度对待对手。做不到这一点的牌手可能会导致「举止违背运动道德」之处罚。
+
+>Sometimes a player might have an opponent of a drastically different skill level.  That’s fine. You do not have to help your opponent beat you. You don’t get to be a jerk about it though. We do want players to be sportsmanlike and to behave respectfully toward their opponents.
+>
+>有时候，牌手与对手可能实力差距很大。没关系，你没有义务帮助你的对手击败你。不过，这也不是你可以无礼对待他人的理由。我们希望所有牌手都有良好的体育精神，并尊重他们的对手。
+
+There are four categories of information: status, free, derived, and private.
+
+游戏中总共有四类信息：状态、自由、推断，以及私人。
+
+Status information is information that must be announced upon change and physically tracked by the affected player. Methods for tracking must be visible to both players during the match. A shared method is acceptable as long as all players in the match have access to it. At Competitive and Professional REL, methods that can easily be accidentally changed (such as dice) may not be used. Status information consists of:
+
+状态信息指在变化时，受影响牌手须宣告且确实记录之信息。记录此类信息的方式在整个对局过程当中均须对双方牌手可见。此类记录也可采用共用记录用具的方式进行，但需保证参与对局的各方牌手均能使用。在执法严格度为竞争及专业级别的比赛中，不得采用记录内容易被意外更改的方式来记录（例如骰子）。状态信息包括：
+
+* Life total.
+
+* 总生命。
+
+* Counters a player has attached to them.
+
+* 牌手具有之指示物数量。
+
+* Continuous effects with no defined expiration within the game that apply to that player, such as Monarch or City’s Blessing.
+
+* 游戏内影响该牌手，且没有明确终止时限的持续性效应（例如君主或黄金城祝福）。
+
+* Unspent mana in a player’s mana pool.
+
+* 牌手法术力池中未支付的法术力。
+
+* Location in a dungeon.
+
+* 在地城中所处的房间。
+
+* How many times the Ring has tempted a player.
+
+* 牌手被魔戒引诱的次数。
+
+* Current speed.
+
+* 当前速度。
+
+>Example: If a player asks their opponent for their current life total, that player is required to respond truthfully and directly. Answers like, “You can figure it out” or “Twenty” when the player is actually at seventeen life are unacceptable.
+>These types of information need to be immediately pointed out when the change occurs.
+>A very common method of tracking life or counters on a player is with pencil/paper.
+>
+>比如：一位牌手询问他的对手他自己的当前生命，对手必须直接地如实地回答他。像“你可以自己算”或者实际生命是17的情况下回答“20”，这种回答都是不可行的。当这类信息发生变化时，必须立即指出。记录牌手生命值或具有的指示物数量的常见方法之一是使用纸笔。
+
+Free information is information to which all players are entitled access without contamination or omissions made by their opponents. If a player is ever unable or unwilling to provide free information to an opponent that has requested it, they should call a judge and explain the situation.
+
+自由信息指的是所有牌手都有权获取的信息，而不受其对手的隐瞒或遗漏之举动的影响。如果牌手在其对手要求获取自由信息时出现无法或不愿提供该类信息的情况，牌手应该叫裁判过来并解释情况。
+
+>A player always has to give all free information to their opponent accurately upon request. If that is not possible they should call a judge to help clear up the communication. If a player unintentionally misrepresents free information at Competitive Rules Enforcement Level, it may result in a Communication Policy Violation.
+>
+>被问及时，牌手必须准确无误的将自由信息提供给对手。如果无法实现，那么他们应该叫裁判来帮助他们理清情况。如果一位牌手在竞争级比赛中非故意的给了对手错误的自由信息，这属于“违反交流原则”（参见IPG 3.7）。
+
+Free information consists of:
+
+自由信息包括：
+
+* Details of current game actions and past game actions that still affect the game state.
+
+* 当前游戏行动，及仍对游戏状态产生影响之过往游戏行动的详情。
+
+* The name of any visible object.
+
+* 可见物件的名称。
+
+* The number and type of any counter that isn’t defined as status information.
+
+* 不属于状态信息规定之指示物的数量和类别。
+
+* The state (whether it’s tapped, attached to another permanent, face down, etc.) and current zone of any object or player.
+
+* 物件或牌手当前的状况（是否已横置，是否结附或佩带在其他永久物上，是否牌面朝下等）及当前所在区域。
+
+* The game score of the current match.
+
+* 当前对局的盘数比分。
+
+* The current step and/or phase and which player(s) are active.
+
+* 当前所处步骤和／或阶段，以及当前何者为主动牌手。
+
+>A player always has to give all free information to their opponent accurately upon request. If that is not possible they should call a judge to help clear up the communication. If a player unintentionally misrepresents free information at Competitive Rules Enforcement Level, it may result in a Communication Policy Violation.
+>
+>被问及时，牌手必须准确无误的将自由信息提供给对手。如果无法实现，那么他们应该叫裁判来帮助他们理清情况。如果一位牌手在竞争级比赛中非故意的给了对手错误的自由信息，这属于“违反交流原则”（参见IPG 3.7）。
+
+Derived information is information to which all players are entitled access, but opponents are not obliged to assist in determining and may require some skill or calculation to determine. Derived information consists of:
+
+推断信息是指这类信息：所有牌手有权获取，但其对手没有义务协助判断，且可能需要一定程度的技巧或计算才能确定。推断信息包括：
+
+* The number of any kind of objects present in any game zone that are not defined as free information.
+
+* 在任一游戏区域中，属于任一种类之物件的总数，且未定义为自由信息者。
+
+* All characteristics of objects in public zones that are not defined as free or status information.
+
+* 处于公共区域之中的物件上一切未定义为自由或状态信息的特征。
+
+* Game Rules, Tournament Policy, Oracle content and any other official information pertaining to the current tournament. Cards are considered to have their Oracle text printed on them.
+
+* 与当前比赛有关的游戏规则、比赛方针、Oracle参考文献内容及其他正式信息。牌张视作其上印制的是Oracle参考文献中的叙述。
+
+>While a player is not obliged to assist their opponent with the Game Rules, Tournament Policy, Oracle text, or any other official information pertaining to the current tournament, a player may ask a judge for any of that information during a match. For example, if a player asks their opponent what a card does, for example, a player does not have to give all of the information about the card. Their opponent may say that Vampire Nighthawk is a flying 2/3 creature and omit that it has Deathtouch and Lifelink.
+>
+>如果一位牌手的对手不愿意告诉他与这场比赛有关的游戏规则，比赛方针，牌张信息或者任何其他的官方文档信息，那位牌手可以呼叫裁判来获取相关的信息。比如一位牌手询问他的对手关于特定牌张的信息，他的对手不一定要告诉他关于那张牌全部的信息。例如对手可以回答他说夜盗吸血鬼是一个2/3的飞行生物，而不提及死触和系命。
+
+Private information is information to which players have access only if they are able to determine it from the current visual game state or their own record of previous game actions.
+
+私人信息指只有在牌手能够从当前可见的游戏状态下，或是自己对以往游戏行动的笔记中推断出来后才能获取的信息。
+
+* Any information that is not status, free or derived is automatically private information.
+
+* 一切不属于状态信息、自由信息及推断信息的信息都自动归为私人信息。
+
+>Private information is the catchall category for everything that is not free or derived information. For example, the contents of hidden zones (i.e., library and hand) and the identity of face-down cards in public zones are considered private information. Players are allowed to give their opponents false information about the contents of a hidden zone. For example, if a player casts Slaughter Games and names Scapeshift, his opponent may say that he or she only has three copies of Scapeshift in their library, even if it actually contains four.
+>
+>私人信息包括了所有不是推断和自由信息的所有信息类别。比如非公开区域的牌张内容（例如牌库与手牌）以及公共区域中任何牌面朝下的牌的信息。牌手可以给对手关于非公开区域的假信息。比如一位牌手使用屠杀游戏喊了变境，他的对手可以说他牌库里有3张变境，而实际上有4张。
+
+The following rules govern player communication:
+
+牌手之间的交流应遵循下列规则：
+
+* Players must announce any changes to status information about themselves and must represent it with a physical designation.
+
+* 牌手必须明确宣告自身状态信息之更动，且以实际动作表示之。
+
+* If a player notices a discrepancy in recorded or announced status information, they are expected to point it out as soon as the discrepancy is noticed.
+
+* 如果牌手发现记录或宣告之状态信息有出入，应在注意到有关差异时即刻指出。
+
+* Players must answer all questions asked of them by a judge completely and honestly, regardless of the type of information requested. Players may request to do so away from the match.
+
+* 牌手必须完整、诚实地回答裁判问他的所有问题。牌手可以要求在私下里进行回答。
+
+* Players may not represent derived, free, or status information incorrectly.
+
+* 牌手不得错误表示推断、自由或状态信息。
+
+* Players must answer completely and honestly any specific questions pertaining to free information.
+
+* 牌手必须完整、诚实地回答关于自由信息的特定问题。
+
+* At Regular Rules Enforcement Level, all derived information is instead considered free.
+
+* 在执法严格度为一般级别的情况下，所有的推断信息都改为视作「自由信息」。
+
+Judges are encouraged to help players in determining free and status information but must avoid assisting players with derived information about the game state.
+
+裁判可以帮助牌手确定状态信息和自由信息，但必须避免协助牌手获取关于游戏局面的推断信息。
+
+>Players need to be honest with their opponents regarding free information and must be completely honest with judges, whether the judge asks about free or other information. But, as a judge, it is important to be mindful of asking players about derived or hidden information where their opponents can hear. When dealing with such questions, it is often appropriate to ask a player to step away from the table and speak privately.
+>
+>牌手需要诚实的回答其对手关于自由信息的问题，以及诚实的回答裁判提出的任何问题，不管裁判问及的是什么信息。但是，作为裁判，需要注意与牌手谈及推断和私人信息的时候避免让其对手听到。当处理这类问题的时候，建议让牌手离开当前座位来私下进行问询。
+
+## MTR 4.2 Tournament Shortcuts 比赛中的行事简化
+
+A tournament shortcut is an action taken by players to skip parts of the technical play sequence without explicitly announcing them. Tournament shortcuts are essential for the smooth play of a game, as they allow players to play in a clear fashion without getting bogged down in the minutiae of the rules.
+
+比赛中的行事简化是牌手采取的一组动作，以在不需明确说明的情况下，略过正常游戏行事顺序的某些部分。简化可使牌手进行游戏时步调清晰，无需为规则的细微定义束手束脚，因而对游戏的顺当进行至关重要。
+
+>Players naturally use shortcuts all the time to make the game to run smoothly and without unnecessary delays. Imagine if, every time a player casts a spell, they say, “I put it on the stack, choose these targets, tap a land for mana, pay the costs,” instead of simply tapping some lands, putting the card on the table and pointing to a target. Playing Magic Online with all possible yields and stops can give you a general idea of what that would be like.
+>
+>Tournament shortcuts go a step further to improve the pace of games and to reduce the number of “gotcha” situations. While shortcuts exist to expedite gameplay, players still make mistakes and may accidentally use shortcuts to pass a point when they intended to take an action.
+>
+>牌手们都会自然的进行一系列的行事简化来保证游戏流畅的进行，避免不必要的消耗时间。想象一下，一位牌手每次施放咒语的时候都会说“我把这个放进堆叠，选择这个作为目标，横置这些地来产费来支付他的费用”，而不是直接横置地并拿出那张牌放在桌上指向目标。玩玩Magic Online并且设置为不自动让过任何优先权，将会让你更深刻的体会到行事简化的必要性。
+>
+>比赛中的形式简化更进一步的保证了比赛的行进步调，减少了牌手互相纠结一些表述上的细枝末节的情况。行事简化在加快游戏进程的同时，有时也会造成玩家错误或意外的跳过一些本想执行某些动作的时机。
+
+Most tournament shortcuts involve skipping one or more priority passes to the mutual understanding of all players;
+
+大多数比赛中的行事简化是以双方都能理解的方式,来略过「让过一个或多个优先权」的行为表示；
+
+>These shortcuts make it easier for players to communicate even when there’s a language barrier involved. Thanks to shortcuts, players around the world can use simple phrases like “Go” and “Attacks?” to communicate. There’s almost no room for interpretation, leading to fewer “feel bad” moments for players.
+>
+>即使玩家之间存在语言障碍，这些行事简化也能使得玩家之间的交流更加简便。在行事简化的帮助下，全世界的玩家得以使用非常简单的短语比如“go”或者“attack？”来交流。这种言语不能解释出多种意思，避免了许多交流上的不愉快产生。
+
+if a player wishes to demonstrate or use a new tournament shortcut entailing any number of priority passes, they must be clear where the game state will end up as part of the request.
+
+如果有牌手想要做出或使用一种新的简化方式来让过任意数目的优先权，则该牌手必须在进行提出新的简化时明确表示最终游戏状态会到达何处。
+
+>A player may suggest a new tournament shortcut by saying something like, “I do this, you do this, I do this and this is where we end up”. The shortcut is invalid if a player cannot demonstrate or describe the exact sequence that leads to the desired result. It might also look like “I’m going to tap this elf to gain 1 green mana, then untap it using this process, and do that 100 times.”
+>
+>牌手可以提议使用一种新的行事简化方式，比如“我这么做，然后你那么做，我再这么着，最后结果是这样的。”如果牌手不能准确的描述或者演示简化中的每一步以及最终结果，他提议的这种形式简化便是不成立的。诸如“我横这个妖精产一点绿，再重置它，重复100次”也是可以的。
+
+A player may interrupt a tournament shortcut by explaining how they are deviating from it or at which point in the middle they wish to take an action. A player may interrupt their own shortcut in this manner.
+
+牌手可通过说明自己之简化与通用简化方式不同之处，或表明在此简化的过程中自己想要采取行动之时机等方式，来中断比赛简化的执行。牌手亦可以依此方式来中断自身行事简化的进行。
+
+>For example, Player A controls Basalt Monolith and Mesmeric Orb and says, “I’d like to tap and untap this Monolith 30 times or until I reveal a land.” This suggests a shortcut and a stopping point for interrupting the shortcut.  Another example would be “I cast lightning bolt and hold priority”
+>
+>例如，牌手A操控玄武巨石和催眠珠然后说：“我要横置重置玄武巨石30次或者把一张地磨下去为止”，这就是提议了一个行事简化并且确定了一个中断这个行事简化的条件。另一个例子是“我施放闪电击并保留优先权”。
+
+If part of the shortcut is discovered to be or becomes illegal, the shortcut stops at that point.
+
+如果简化的某一部分被发现是非法的或者变成非法的，则在非法时点停止简化。
+
+>If a shortcut is proposed, and in the course of executing it, the players discover some part is illegal, the shortcut stops at the illegal point.  It does not revert back to the beginning of the shortcut and reverse the whole chain.  If the player was performing actions out of order (such as allowed with out of order sequencing), we do the actions in the correct order and stop right at the illegal action.
+>
+>如果在执行一个行事简化的过程中，牌手们发现其中某个步骤是不合法的，那么这个简化就在该不合法的点上立即停止。 它不会逆转所有行动并回复到简化的起点。 如果牌手是在次序不当地行事（例如允许的次序不当的行事顺序），那么就按照正确的顺序依次执行动作，并在遇到不合法动作的地方立刻停下。
+
+A player is not allowed to use a previously undeclared tournament shortcut, or to modify an in-use tournament shortcut without announcing the modification, in order to create ambiguity in the game.
+
+牌手不得利用以下方式来混淆游戏进程：使用此前未宣告的简化方式；擅自变动通用的比赛简化方式且不事先声明变动之处。
+
+A player may not request priority and take no action with it. If a player decides they do not wish to do anything, the request is nullified and priority is returned to the player that originally had it.
+
+牌手不得在请求获得优先权后却不利用此优先权采取动作。如果牌手决定不作事情,则撤销其先前要求获取优先权的请求,将优先权归还到原本拥有优先权的牌手手中。
+
+>This is to prevent players from requesting priority, then passing, and claiming the game has moved to the next phase since both players passed priority. Yes, this was a thing that has happened in the past.
+>
+>这是为了防止牌手先请求获得优先权，然后立刻让过优先权，并声称因为双方都让过了优先权，所以游戏已经进入下一个阶段。是的，这种事情过去确实发生过。
+
+During the resolution of one of their spells or abilities, a player may not assume their opponent has taken a shortcut. They must seek confirmation that a choice with no visible impact was taken.
+
+在结算自己的咒语或异能的过程当中，牌手不得默认对手以简化方式行事，而必须确认对手已决定执行无可视影响之选项。
+
+>A player must make sure an opponent has chosen not to use an optional effect from their spell or ability. If a player casts Path to Exile on the opponent’s Grizzly Bears, and the opponent does not search for a basic land, they must be told that the spell allows them to do so. (Failure to do so may be a CPV).
+>
+>牌手必须确认对手选择不使用其咒语或异能产生的可选效应。如果牌手对对手的灰棕熊施放流放之径，而对手不搜寻基本地，牌手必须告知对手该咒语允许其如此作。（如果不这样做，可能属于违反交流原则）
+
+Certain conventional tournament shortcuts used in Magic are detailed below.
+
+一些在万智牌比赛中常见的行事简化如下详述。
+
+>These are Official tournament shortcuts that are universal across all sanctioned tournaments. Players are still free to propose other shortcuts during their games as long as they stick to the rules.
+>
+>这些是所有认证比赛中普遍使用的官方比赛行事简化。牌手依然可以在游戏中与对手确立其他的行事简化，只要他们遵守以上的规则。
+
+They define a default communication; if a player wishes to deviate from these, they should be explicit about doing so.
+
+以下即为规定之默认交流含义；如果牌手想要采取的简化方式与下列叙述有相异之处,则需要明确说明。
+
+>When a player wants to interrupt or change a shortcut, they must be explicit about it. When a player says, “Go,” and their opponent wants to act still in main phase, they must indicate the deviation. Otherwise, the action occurs at the moment defined by the shortcut (in this case in their opponent’s end step).
+>
+>如果一位牌手想要中止使用或者更改一个常规的行事简化，他必须清楚的说明这一点。当一位牌手说“过”，而他的对手想在他的行动阶段干一些事情，那该对手必须要清楚地说明这一点。要不然对手的行动就会如同常规的行事简化所规定的发生在结束步骤中。
+
+Note that some of these are exceptions to the policy above in that they do cause non-explicit priority passes.
+
+注意,下列的简化中有些会导致未明说的优先权让过,属于上述方针的例外情形。
+
+* If the active player passes priority with an empty stack during their first main phase, the non-active player is assumed to be acting in beginning of combat unless they are affecting whether a beginning of combat ability triggers.
+
+* 如果主动牌手在其战斗前的行动阶段于堆叠为空时让过优先权，则除了非主动牌手之行动会影响在战斗开始时触发之异能是否触发的情况之外，均认为非主动牌手是在战斗开始步骤中行事。
+
+>If the active player says “Combat” or “Attacks?”, they are assumed to be passing priority. If the opponent does something in response, generally they want to be doing it in Beginning of Combat, right before attackers are declared. This is their last chance, and is when they will want to do it a large majority of the time, so we treat it as the default, with an exception.
+>
+>The main exception will be if there are cards that have “At the beginning of combat” triggers, such as Goblin Rabblemaster. Opponents will often want to kill the creature before the effect goes on the stack, so if they act in response it’s assumed it is in main phase, as that is when such actions will normally be taken.
+>
+>如果主动牌手说“进战斗”或“宣攻”，就视同为让过优先权。如果对手响应作事的话，通常来说他想要在战斗开始步骤、宣告攻击者之前作事。这是他阻止生物攻击的最后机会，也是他绝大多数情况下想要作事的时机，因此我们将其作为默认选项，但有一个例外。
+>
+>这个例外就是场上存在具有“在战斗开始时”这类触发，例如鬼怪闹事头。对手通常想要在此类效应进入堆叠之前就杀掉生物，所以如果他响应作事的话，应当视同为在行动阶段，因为这是此类行动通常作出的时机。
+
+Then, after those actions resolve or no actions took place, the active player receives priority at the beginning of combat.
+
+在这些动作结算，或牌手表示无行动之后，由主动牌手在战斗开始步骤获得优先权。
+
+>This means that if the active player says “go to combat?”, they still have a chance to crew vehicles or activate creature lands if they want. However, the non-active player still has another chance to do something.
+>
+>这意味着即使主动牌手说了“进战斗”，他仍有机会搭载载具或起动变人地。但是，非主动牌手仍会有另一个机会来作事。
+
+Beginning of combat triggered abilities (even ones that target) may be announced at this time.
+
+在战斗开始时触发的异能（包括具目标者）可在此时宣告。
+
+>This sentence allows for more leniency in identifying whether a trigger was missed. It overrules the section in the IPG that states when players need to demonstrate awareness of triggered abilities. The IPG details that triggered abilities with targets need to have the targets announced before they pass priority, and with this shortcut we are blurring the lines for a couple of priority passes. This doesn’t mean the player can announce Beginning of Combat triggers whenever suits them, these triggers should still actually occur in Beginning of Combat. For more details and examples on the combat shortcut, see Toby Elliott’s policy blog post here. For more details on Missed Triggers, read the AIPG section here.
+>
+>这一条在鉴别牌手是否遗漏触发方面更加宽松。它凌驾于IPG关于牌手认识触发式异能存在时间点的规则之上。IPG中说，指定目标的触发式异能需要在让过优先权之前就必须宣告目标，但这条简化模糊了几次优先权转换之间的界限。这并不意味着牌手可以在任何他想要的时机下宣告战斗开始时的触发，这些异能仍然必须在战斗开始步骤发生。关于更多战斗简化的细节和例子，见[Toby Elliott的方针博客](https://blogs.magicjudges.org/telliott/2017/04/27/how-to-think-about-the-new-combat-shortcut/)。关于更多遗漏触发的细节，见[AIPG此章节](https://blogs.magicjudges.org/rules/ipg2-1/)。
+
+* If the active player passes priority with an empty stack during their second main phase or uses a phrase such as “Go” or “Your Turn” at any time, the non-active player is assumed to be acting in the end step unless they are affecting how or whether an end of turn ability triggers.
+
+* 如果主动牌手在其战斗后的行动阶段于堆叠为空时让过优先权，或在任何时候说出「过」、「到你」之类的表述，则除了非主动牌手之所为会对在结束步骤时触发之异能是否触发或触发方式产生影响的情况外，均认为非主动牌手是在结束步骤中行事。
+
+>This is worded similar to the combat shortcut, with some differences. When ending the turn, most players just say “Go” or “I’m done”, or just gesture with their hand. This shortcut is in use when players attempt to pass the turn. If there is confusion about the communication, just ask both players separately what they thought was meant, and how passing has worked so far in the game, using your judgement after that. If the non-active player is casting spells, they typically mean to do so at the last opportunity in order to limit options to the active player. The exceptions to this would involve pre-empting triggered abilities that occur at the beginning of the end step. This means killing a Jin-Gitaxias, Core Augur to prevent it from drawing a player cards, or killing multiple zombies in order to lessen the effect of Liliana, the Last Hope emblem would be assumed to happen in the post combat main phase.
+>
+>这与上面的战斗行事简化用词很相近，但也有一些区别。通常牌手在让过回合时只会说“过”或者“到你”，甚至仅仅用手势来表达。这条行事简化在牌手试图让过回合时便会起作用。如果交流中存在混淆，请分别问两位牌手他们想法的含义，以及在先前的游戏进程中是如何让过回合的，然后用你的判断力来作出裁定。如果非主动牌手正在施放咒语，为了减少主动牌手的行动可能性，他们通常会在尽可能晚的时机这样作。这也有一些例外，比如阻止在结束步骤开始时触发的触发式异能。这意味着杀掉核心卜算师金吉塔夏来阻止牌手抓牌，或杀掉几只灵俑来削弱最终救星莉莲娜徽记的效应这样的动作应当视为发生在战斗后行动阶段。
+
+End of turn triggered abilities that do not target resolve after the non-active player passes priority.
+
+对于不具目标，且在回合结束时触发的异能而言，此类异能会在非主动牌手让过优先权后结算。
+
+>This is a noticeable difference to the combat shortcut, but it reflects that people handle these two steps differently. For end of turn triggered abilities with targets, the controlling player still needs to follow the guidelines to show awareness as listed in the IPG. This means for ones that target, it needs to be announced as the player goes into the phase. For the most part, we expect players to announce triggered abilities pretty quickly as they pass the turn. This line provides clarity that if there are actions taken at end of turn, the active player can still demonstrate awareness of triggered abilities like those that create a token.
+>
+>这与战斗行事简化有显著的不同，但这也反映了牌手处理这两个阶段上的不同。对于具有目标的回合结束触发，操控异能的牌手仍然需要遵循IPG中认识触发式异能存在的指导方针。这意味着对于指目标的异能而言，牌手应当在一进入结束阶段就立即宣告之。通常我们期望牌手能够在让过回合时迅速宣告触发式异能。这一条厘清了如果在回合结束时有动作发生，主动牌手仍然能够认识到某些触发式异能（例如，派出衍生物的触发式异能）的存在。
+
+* Whenever a player adds an object to the stack, they are assumed to be passing priority unless they explicitly announce that they intend to retain it.
+
+* 每当牌手将物件加入堆叠时，除了明确宣告打算保有优先权之情况外，均视为其会让过优先权。
+
+>This is a perfect example of how shortcuts speed up the game by matching how people naturally play it. Otherwise, players would have to explicitly pass after each time they add an object to the stack (see CR 116.3c).If anything, this shortcut is more important for what it doesn’t allow-—namely, a player hesitating after a play, fishing for a reaction from their opponent, and then claiming to have kept priority and acting with the knowledge of the opponent’s reaction.This also explains why Legacy players who play Infernal Tutor and Lion’s Eye Diamond must explicitly state that they keep priority after they play the tutor, otherwise their opponent will just say, “OK I pass!” and they will not be hellbent.
+>
+>这是个行事简化在牌手日常对局中加快游戏进程的完美例子。如果没有这个行事简化，牌手就需要在每次将物件加入堆叠之后都要声明自己让过优先权（参见CR 116.3c）。更重要的是，这条行事简化可以防止一些不被允许的牌手行为。比如，一位牌手在做出动作之后停顿了一段时间，诱使对手以为自己让过了优先权而采取行动，那时他再说自己其实没有让过优先权而继续行动，从而获得额外的战术信息。这同时解释了在薪传赛制中，为什么牌手释放了炼狱导师之后要特意声明自己不让过优先权，且继续启动狮眼钻石的异能。如果他不这么做，他的对手只要说“好，我让过”，炼狱导师便会直接在没有“背水战”的情况下结算。
+
+* If a player adds a group of objects to the stack without explicitly retaining priority, they are assumed to be adding them to the stack individually and allowing each to resolve before adding the next. If another player wishes to take an action at a point in the middle of this sequence, the actions should be reversed to that point.
+
+* 如果牌手将一系列的物件加入了堆叠，但未明确宣告自己要保有优先权，则认为其是逐一将该些物件加入堆叠，且是待先加入者完成结算后再加入后续物件。如果其他牌手想要在此一系列动作过程中的某一时点采取行动，则应将此系列动作倒回至该时点。
+
+>This is relevant when dealing with cards that have an activated ability that pumps themselves (e.g. Shorecrasher Elemental); their controller can just say “I pump my Shorecrasher’s toughness six times” to speed up the game and, if their opponent wants to cast Mardu Charm on it choosing the four damage mode, they can still do so at any time. The opponent cannot argue that they played the Charm “as a response to the six abilities on the stack,” because under the first sentence, each ability is assumed to have already resolved before another one is added to the stack (because it can’t be done without priority). Therefore, if the opponent chose to play Mardu Charm after the sixth activation then the Elemental would have already been successfully pumped five times.
+>
+>这一条是关于处理一些拥有可以膨胀自己异能的牌，比如破岸元素。牌手说“我要给破岸元素膨6次防”。他的对手想释放玛尔都护符，选择打4的那项，他可以在任何时候施放它。但是不能说“我响应你6次膨都在堆叠里的时候”，因为这时候行事简化默认这6次膨都是在前一次已经结算的情况下才启动的。因此，如果对手想要响应第6次膨施放护符，则意味着前5次已经结算完毕。
+
+* If a player casts a spell or activates an ability and announces choices for it that are not normally made until resolution, the player must adhere to those choices unless an opponent responds to that spell or ability. If an opponent inquires about choices made during resolution, that player is assumed to be passing priority and allowing that spell or ability to resolve.
+
+* 如果有牌手在施放咒语或起动异能时，宣告了通常是在结算时才需作出的选择，则除非对手对该咒语或异能有所响应，否则该牌手便不得改变此选择。若对手就结算时才需作出的选择进行询问，则认为该牌手让过优先权并允许咒语结算。
+
+>Players sometimes announce choices early when they assume their opponents don’t have any responses to their actions or when they are fishing for information. This shortcut prevents players from announcing choices early in order to trick opponents or improperly gain information and then making a different choice when the decision should properly be made. But if an opponent responds to the spell or ability, the controller may make any choice they choose, regardless of any announcements made.
+>
+>Example: Albert’s only creatures are 3 2/2 Wolf tokens, and he plays Honor’s Reward, saying: “I’ll gain 4 life and Bolster this token”. Norman answers with: “In response, I’ll Murder it”. Since the choice of which creature to Bolster is not made until the resolution of the spell, and Norman has responded to Honor’s Reward, Albert can change his choice to a different token when Honor’s Reward resolves. Also note that, in this scenario, not changing the choice would make the resolution of the spell illegal, since there are still valid choices on the battlefield when the spell resolves.
+>
+>Example: Andy casts Void targeting Naomi. Naomi asks what number Andy chooses, and Andy states one. It is now too late for Naomi to respond to Void, and Andy may not choose a different number.
+>
+>牌手有的时候会提早宣告他们的选择，有时是因为假设对手没有响应，也有的牌手是想要骗取对手的额外信息。这一条行事简化防止了牌手在结算时候更改自己的选项从而骗取额外信息。但是如果对手响应了，那么牌手可以在结算的时候选择其他选项，而不用管之前宣告的选择。
+>
+>例如：Albert操控3个2/2的狼衍生物，然后释放了荣耀报偿，说“我获得四点生命，然后振励2给狼A”，Norman说：“那我响应用谋杀把狼A杀了。” 荣耀报偿的选择应该是在结算的时候做出的，而Norman响应了荣耀报偿。所以Albert应该可以在结算的时候重新选择。同时要注意的是，在这个场景中，如果你不更改选择，那么咒语的结算就会是非法的，因为当咒语结算时战场上还有其他合法的选择。
+>
+>例如：Andy释放了撤销目标Naomi，Naomi询问Andy选择的数字是几，Andy回答1。现在Naomi就没有机会再去响应这个咒语了，Andy也不能选择其他的数字。
+
+* A player is assumed to have paid any cost of 0 unless they announce otherwise.
+
+* 未加特别说明时,认为牌手已支付所有的{0}费用。
+
+>It is almost always in players’ best interests to pay a cost of 0 when an effect requires it, so this shortcut assumes they do so, unless they specifically announce otherwise. This both prevents less experienced players from being taken advantage of and allows them to concentrate on other parts of the game.
+>
+>Example: Player N attempts to prey on his opponent A’s ignorance by trying to use Clash of Wills to counter A’s spell when when X is zero, hoping that A will neglect to announce his choice to pay 0. This shortcut prevents this situation from becoming a problem.
+>
+>一般来讲当一个效应要求牌手支付{0}的时候，牌手都会愿意去支付它，所以这个行事简化就假设牌手都会那么做，除非该牌手特殊说明。这防止了一些新手在这个问题上吃亏，同时允许牌手将注意力集中在其他游戏内容上。
+>
+>例如：牌手N试图利用对手A不熟悉规则，打算在X为0时使用意志交锋来反击A的咒语，希望A忽略宣布自己选择支付0。使用这个行事简化可以防止这种问题。
+
+* A player who casts a spell or activates an ability that targets an object on the stack is assumed to target the legal spell closest to the top of the stack unless the player specifies otherwise.
+
+* 对于以堆叠上的物件当作目标的咒语或异能，认为其所指定的目标是最为靠近堆叠顶的合法咒语，有特别说明的情况除外。
+
+>This is generally for counterspell wars where there are multiple potential targets on the stack.
+>
+>这通常是针对反击咒语大战的时候，堆叠上有多个可能的目标。
+
+* A player is assumed to be attacking another player with their creatures and not any planeswalkers that player may control.
+
+* 默认进攻牌手生物的进攻对象为其他牌手，而非后者可能操控的鹏洛客。
+
+>This is true for all attacking creatures that player controls, including any creatures put onto the battlefield attacking. The attacking player must explicitly state which creatures, if any, are attacking any planeswalkers controlled by the defending player as part of the turn-based actions of the declare attackers step (CR 508.1b). A player cannot wait to find out which of their creatures are unblocked before declaring that they are attacking a planeswalker.
+>
+>For creatures put onto the battlefield attacking, the attacking player must explicitly state if those creatures are attacking any planeswalkers controlled by the defending player as those creatures enter the battlefield (CR 508.4).
+>
+>这一条包括了所有那位牌手宣告的攻击生物，以及随后被放入战场且进行攻击的生物。如果有的话，攻击牌手必须说明哪个生物是在攻击防御牌手所操控的某个鹏洛客的。这是宣告攻击者动作的一部分（CR 508.1b）。牌手不能等到对手决定怎么阻挡之后才说他的某几个生物是在攻击鹏洛客。
+>
+>对于被放入战场且正在进行攻击的生物，牌手需要在他们被放进场的时候就说明哪些是攻击鹏洛客的（CR 508.4）。
+
+* If an object has multiple mana abilities, a player is assumed to be activating the one that most specifically applies to the spell or ability for which that mana is being used, unless they announce otherwise.
+
+* 如果一个物件具有多个法术力异能，则未加特别说明时，认为牌手选择起动的法术力异能，能够产生最适用于相应咒语或异能的法术力。
+
+>This is known as the  Cavern of Souls rule, and handles similar cards.  While typically in the rules we dont assumptions like this, mana abilities get a little bit of a carve out as typically player dont give as much thought to announcing which mana ability they are activating. Its ‘obvious’ based on what they did with it.  This shortcut is an attempt to codify that narrow case where a player has a cavern of souls naming zombie and taps the Cavern to cast a Zombie, but doest explicitly annouce the color of mana or that they are using the second ability.
+>
+>这条规则被称为灵魂洞窟规则，也适用于类似的牌。虽然规则中通常不做此类假设，但法术力异能有一点例外，因为玩家通常不会特意去宣布他们正在起动哪个法术力异能。根据玩家的操作，这通常是显而易见的。 这个行事简化试图将这一狭窄情形进行规则化：当玩家使用灵魂洞窟并选择了灵俑，然后横置灵魂洞窟以施放一张灵俑牌，但没有明确宣布法术力的颜色或他们正在使用第二个异能时，该行事简化适用。
+
+* A player who does not scry/surveil when instructed to is assumed to have not looked and chosen to leave the cards in the same order.
+
+* 在有效应要求其进行占卜／刺探时并未如此作的牌手，认为其未检视相应牌张，并将其以相同顺序留在原处。
+
+>A big part of the reason for this change is not wanting to punish a player unjustly for ignoring information they have access to, but are not required to acquire. As a player is typically not required to access this information we also do not want to punish the opponent.
+>
+>这一变化的一个重要原因是，不希望因为玩家忽视了他们可以获取但并非必须获取的信息而对其进行不当惩罚。由于玩家通常没有义务去获取这些信息，我们同样不希望因此惩罚对手。
+
+* In the Two-Headed Giant format, attacking creatures are assumed to be attacking the head of the defending player sitting directly across from their controller, unless the creature's controller specifies otherwise.
+
+* 在双头巨人赛制中，进攻生物的操控者未加特别说明时，认为进攻生物攻击的是坐在其操控者正对面之防御牌手。
+
+>So for example Anna and April are playing against Nataly and Nicholas, and Anna is sitting in front of Nataly and April is sitting in front of Nicholas. If in the declare attackers step neither Anna nor April specifies who they are attacking, it is assumed that Anna is attacking Nataly and April is attacking Nicholas. Therefore, if Anna attacks with a Thief of Sanity without saying who is she attacking and there are no blockers, when the triggered ability resolves she will look at the top 3 cards of Nataly’s library and exile one of them.
+>
+>例如，Anna和April正在与Nataly和Nicholas对战，Anna坐在Nataly对面，April坐在 Nicholas对面。如果在宣告攻击者步骤中，Anna和April都没有明确说明她们攻击的对象，则默认Anna攻击Nataly，April攻击Nicholas。因此，如果Anna使用心智窃贼攻击而没有说明攻击对象，且没有阻挡生物，那么当触发式异能结算时，她将查看Nataly牌库顶的三张牌，并将其中一张放逐。
+
+## MTR 4.3 Out-of-Order Sequencing 次序不当的行事顺序
+
+Due to the complexity of accurately representing a game of Magic, it is acceptable for players to engage in a block of actions that, while technically in an incorrect order, arrive at a legal and clearly understood game state once they are complete.
+
+由于要想准确进行一盘万智牌游戏十分复杂，因此牌手在进行一组动作的时候,即便严格说来次序不当，但只要在动作全部完成之后仍能呈现出合法及清晰游戏状态，便是可以接受的。
+
+>Players aren’t robots and don’t do everything perfectly, and judges shouldn’t expect them to. Magic isn’t a game of gotcha and players shouldn’t be punished for performing clear and otherwise legal actions in a way that feels more natural to them.
+>
+>牌手不是机器人，做事十全十美，裁判也不应期望牌手完美的执行每个游戏动作。万智牌不是一个抓对手行为不规范的游戏，一位做出了清楚且合法的游戏动作的牌手也不应该只因为他按照更加自然的顺序行事而被处罚。
+
+All actions taken must be legal if they were executed in the correct order, and any opponent can ask the player to do the actions in the correct sequence so that they can respond at the appropriate time (at which point players will not be held to any still-pending actions).
+
+所有因此采取的行动必须在以正确次序执行时都属合法行动，对手可请求牌手以正确的行事顺序来执行，从而使自己能在恰当的时间加以响应（此时，没有牌手还有仍待定的动作需要处理）。
+
+>Out-of-Order Sequencing cannot be used to perform illegal actions, but more importantly, it also cannot be used to deprive an opponent of their chance to respond at the appropriate time. If an opponent wishes to respond, all actions prior to the point of response must be performed in the correct order. The player suggesting out-of-order sequencing is free to change their choices that they would have made after the opponent’s response.
+>
+>次序不当的行事顺序不能来执行非法的动作，更重要的是，不能剥夺对手在合适时机响应牌手的机会。如果对手想要响应，那么所有在响应时间点前的动作都会被按照正确的顺序执行。行事次序不当的牌手可以更改任何在那个响应动作时间点之后的决定。
+
+An out-of-order sequence must not result in a player prematurely gaining information which could reasonably affect decisions made later in that sequence.
+
+有的信息极有可能会对位于当前行事顺序稍后之决定产生影响，牌手不得藉由自己行事次序不当来提前获知此类信息。
+
+>An out-of-order sequence must not result in a player prematurely gaining information which could reasonably affect decisions made later in that sequence, because Out-of-Order Sequencing cannot be used to gain an advantage.
+>
+>Example: A player casts Cruel Ultimatum, which among other things has its controller return a creature from their graveyard to their hand, draw three cards, and gain five life. The player may not draw cards before returning a creature to their hand, because the information gained from the drawn cards might influence which creature will be returned.
+>
+>有的信息极有可能会对位于当前行事顺序稍后之决定产生影响，牌手不得藉由自己行事次序不当来提前获知此类信息。这是因为行事次序不当不能被用来获利。
+>
+>例如：牌手使用了残酷通牒，他不能将“你将一张生物牌从你的坟墓场移回你手上，抓三张牌，然后获得5点生命。”前两项的顺序调换，因为抓的三张牌会影响到他移回哪张生物牌的决定。
+
+Players may not try to use opponent's reactions to some portion of an out-of-order sequence to see if they should modify actions or try to take additional ones. Nor may players use out-of-order sequencing to try to retroactively take an action they missed at the appropriate time. In general, any substantial pause at the end of a completed batch is an indication that all actions have been taken, the sequence is complete and the game has moved to the appropriate point at the end of the sequence.
+
+牌手不得试图利用对手对自己次序不当的行事顺序中任何部分之反应，来判断自己是否需要修正行动或执行额外的行动。牌手亦不得利用次序不当的行事顺序试图回过头来执行自己错过了的、本应在适当的时间执行的行动。总而言之，在执行完一系列动作之后的短暂停顿即为该系列行动已全部完成的表示，行事顺序已执行完毕，游戏已前进到该顺序末尾后的适当时点。
+
+>Generally, all actions in the sequence must be performed as one block, which means there can’t be any pauses between actions and or interaction with an opponent. Each substantial pause or attempt to see an opponent’s reaction should be treated as an end of the sequence.
+>
+>Once again, Out-of-Order Sequencing cannot be used to gain an advantage. Therefore the sequence can’t contain previously missed actions nor can the player try to modify the sequence based on the opponent’s reaction to previous actions. “If you believe the player forgot to take an action and is now attempting to take it at a later time, that is not acceptable.”
+>
+>通常，行事顺序中的所有动作必须作为一个整体执行，这意味着动作之间不能有任何停顿，也不能与对手进行互动。每一次明显的停顿或试图观察对手反应的行为，都应被视为行事顺序的结束。
+>
+>再次重申，玩家不得利用次序不当的行事顺序获益。因此行事顺序中不能包含之前错过的行动，玩家也不能根据对手对之前行为的反应来修改行事顺序。“如果你相信该玩家忘记采取某个行动并试图在之后进行它，这是不可接受的。”
+
+Examples
+
+示例
+
+1. A player discards a card to pay for Masticore’s upkeep cost before untapping their land.
+
+1\. 牌手在重置地之前为异狮/Masticore 的维持费用弃掉了一张牌。
+
+2. A player resolves Harrow and puts the card into their graveyard, then searches.
+
+2\. 牌手结算整地/Harrow 时，先是把牌放进了坟墓场后才开始搜索牌库。
+
+3. While resolving Restore Balance, a player discards before sacrificing lands and creatures.
+
+3\. 在结算恢复均势/Restore Balance 时，牌手先弃掉了牌后才开始牺牲地和生物。
+
+4. A player with two creatures being put into the graveyard due to state-based actions resolves the leaves-the-battlefield triggered ability on one of them before putting the other creature in the graveyard.
+
+4\. 当牌手操控的两个生物因为状态动作要被置入坟墓场时，该牌手先行结算了其中一个生物的离战场触发式异能之后才把另一个生物放进坟墓场。
+
+5. A player declares a blocker, animates a Treetop Village, and then attempts to block with that Treetop Village.
+
+5\. 牌手宣告了一个阻挡者之后，然后再起动树顶村落/Treetop Village 的异能准备用其进行阻挡。
+
+>More information about Out-of-Order Sequencing can be found at this Rules Tips blog post by Level 3 Paul Baranay and in this article written by Donato Del Giudice.
+>
+>关于次序不当的行事顺序的更多信息可以可以查阅三级裁判Paul Baranay写的这篇[Magic Rules Tips](http://blogs.magicjudges.org/rulestips/2013/03/understanding-out-of-order-sequencing/)，以及Donato Del Giudice写的[这篇文章](https://blogs.magicjudges.org/whatsupdocs/2016/11/07/out-of-order-sequencing/)。
+
+## MTR 4.4 Loops 重复动作
+
+A loop is a form of tournament shortcut that involves detailing a sequence of actions to be repeated and then performing a number of iterations of that sequence. The loop actions must be identical in each iteration and cannot include conditional actions ("If this, then that".)
+
+「重复动作」是指这样一种比赛中的行事简化：牌手在详细说明需重复的动作次序之后，反复若干次执行前述动作次序。在每次执行的动作次序中，所重复的动作必须相同，且次序中不得包含附有条件的行动（「如果这样，就那样」）。
+
+If no players are involved in maintaining the loop, each player in turn order chooses a number of iterations to perform before they will take an action to break the loop or that they wish to take no action. If all players choose to take no action, the game is a draw. Otherwise, the game advances through the lowest number of iterations chosen and the player who chose that number takes an action to break the loop.
+
+如果此系列重复动作无涉牌手动作便可持续进行，则牌手有如下选择：（1）每位牌手依照回合次序，选择要重复进行之次数，完成之后便需执行其他动作来打破循环，或（2）不执行其他动作。如果所有牌手都选择不执行其他动作，本盘游戏便以平局告终。否则，游戏便进行到前述动作执行到所选之最低数字的时点，然后由选择此数字的牌手执行动作来打破循环。
+
+If one player is involved in maintaining the loop, they choose a number of iterations. The other players, in turn order, agree to that number or announce a lower number after which they intend to intervene. The game advances through the lowest number of iterations chosen and the player who chose that number receives priority.
+
+如果此系列重复动作需要一位牌手有所行动才能持续进行，则该牌手先选择一个次数。然后其他牌手依照回合次序决定是否同意该数字，或是提出一个较小的数字以在该时点干预。游戏进行到前述动作执行到所选之最低数字的时点，然后选择该数字的牌手获得优先权。
+
+If two or more players are involved in maintaining a loop within a turn, each player in turn order chooses a number of iterations to perform. The game advances through the lowest number of iterations chosen and the player who chose that number receives priority.
+
+如果此系列重复动作需要两位或更多牌手在同一个回合内有所行动才能持续进行，则每位牌手依照回合次序选择选择要重复的次数。游戏进行到前述动作执行到所选之最低数字的时点，然后选择该数字的牌手获得优先权。
+
+Loops may span multiple turns if a game state is not meaningfully changing. Note that drawing cards other than the ones being used to sustain the loop is a meaningful change. If two or more players are involved in maintaining a loop across turns, each player chooses a number of iterations to perform, or announces their intent to continue indefinitely. If all players choose to continue indefinitely, the game is a draw. Otherwise, the game advances through the lowest number of iterations chosen and the player who chose that number receives priority at the point they stop taking an action to sustain the loop.
+
+在某个游戏状态未发生实质变化的情况下，可能会发生重复动作横亘数个回合的情况。请注意：用于维持重复动作以外的抓牌属于实质变化。如果某一系列重复动作需要两位或更多牌手在数个回合内有所行动才能持续进行，则牌手可以选择：（1）要重复进行的次数；或（2）要无限持续。如果所有牌手都选择要无限持续，本盘游戏便以平局告终。否则，游戏便进行到前述动作执行到所选之最低数字的时点，然后由选择此数字的牌手停止执行维持重复动作之行动并获得优先权。
+
+A player intervening during a loop may specify that one iteration of the loop is only partly performed in order to be able to take action at the appropriate point. If they do, the final iteration is only performed up to the chosen point.
+
+要干预重复动作的牌手可以指定要在某次重复动作进行到具体时点再行干预。若其如此作，则最后一次重复只会执行到所选时点。
+
+Non-deterministic loops (loops that rely on decision trees, probability, or mathematical convergence) may not be shortcut. A player attempting to execute a nondeterministic loop must stop if at any point during the process a previous game state (or one identical in all relevant ways) is reached again. This happens most often in loops that involve shuffling a library.
+
+结果不确定的重复动作（依赖于决策树、概率或数学收敛的重复动作）不能形成行事简化。尝试执行结果不确定之重复动作的牌手如果在执行流程当中的任意时点再度形成与先前一致（或各方面均相同）的游戏状态，则其就不得再继续。此情景常见于涉及洗牌库的重复动作。
+
+Some loops are sustained by choices rather than actions. In these cases, the rules above may be applied, with the player making a different choice rather than ceasing to take an action. The game moves to the point where the player makes that choice. If the choice involves hidden information, a judge may be needed to determine whether any choice is available that will not continue the loop.
+
+某些重复动作需牌手作出特定选择（而非基于动作而自行反复）才会反复。若发生此情况，则能以“令牌手选择不同选择”（而非停止动作）的方式来适用上述规则，游戏会前进到牌手作出相应选择的时点。如果该选择涉及非公开信息，则可能需要裁判来判断是否存在终止重复动作的选择。
+
+The judge is the final arbiter of what constitutes a loop. A player may not 'opt-out' of shortcutting a loop, nor may they make irrelevant changes between iterations in an attempt to make it appear as though there is no loop. Once a loop has been shortcut, it may not be restarted until the game has changed in a relevant way. Proposing loops as an effort to use up time on the clock is Stalling.
+
+哪些动作会算到「重复动作」当中最终由裁判来判定。牌手不得选择「不以行事简化的方式来执行重复动作」，也不得在两次重复之间进行无谓变化以试图让整个行动次序看起来不像是重复动作。一旦某系列重复动作已形成简化，则除非游戏发生与之相关的变化为止，否则都不能再次重新执行。试图提议重复行动来消耗比赛时间属于「拖延」。
+
+## MTR 4.5 Triggered Abilities 触发式异能
+
+Players are expected to remember their own triggered abilities; intentionally ignoring one is Cheating. Players are not required to point out the existence of triggered abilities that they do not control, though they may do so if they wish.
+
+牌手应记住属于自己的触发式异能；故意忽略此类触发式异能属于「作弊」。牌手无需指出不由他操控的触发式异能，不过牌手希望的话，他们也可以指出。
+
+Triggered abilities are considered to be forgotten by their controller once they have taken an action past the point where the triggered ability would have an observable impact on the game.
+
+只要触发式异能的操控者错过该触发在原本对游戏造成显著影响的时点并执行了其他动作，便视作该牌手已遗漏了这个触发式异能。
+
+>Triggers happen all the time in a game of Magic and it can be difficult enough for a player to remember their own triggers, let alone opponents’ triggers. We don’t penalize players for not pointing out their opponent’s forgotten triggers, but it is cheating for a player to intentionally ignore their own triggers. Cheating is dealt with according to the IPG or JAR, as appropriate. If a player notices that their opponent forgot a trigger, they may point it out.
+>
+>万智牌游戏过程中会有许多许多的触发式异能。让牌手记住自己的触发式异能已经是很困难的，何况对手的触发式异能。我们并不处罚没有指出对手遗漏触发的牌手，但是牌手自己刻意遗漏自己的触发式异能是作弊行为。这些行为应该根据执法严格度按照IPG或者JAR处理。如果一位牌手注意到了其的对手遗漏的一个触发式异能，其可以指出这一点。
+
+Triggered abilities that are forgotten are not considered to have gone onto the stack. How forgotten triggered abilities are subsequently handled is defined by the Rules Enforcement Level of the tournament.
+
+遭遗漏的触发式异能不应视为此异能已进入堆叠。遭遗忘之触发式异能的后续处理方式由比赛的执法严格度确定。
+
+>Our good friends at the Annotated IPG project have a lot to say about missed triggers. Let’s let them take it.
+>
+>我们写IPG精解的朋友们已经关于遗漏触发问题谈了很多，所以我们可以看看他们是[怎么说的](http://blogs.magicjudges.org/rules/ipg2-1/)。
+
+## MTR 4.6 Team/Two-Headed Giant Communication 团队/双头巨人比赛中的交流
+
+Members of the same team may communicate between one another except during times where explicitly prohibited by the team format rules.
+
+除了团队赛制规则中明订之禁止交流时段外，同属一支队伍的各成员可在队员之间以口头方式进行交流。
+
+>Players on a team may talk to their teammates at any time about nearly anything, with the below exception.
+>
+>队伍中的牌手随时可以跟他的队友谈论任何事情，除了以下的例外情况。
+
+However, team members that have an opportunity to acquire hidden information (e.g., by speaking to spectators following their own match while a teammate is still playing), are restricted from communicating with teammates for the duration of that match.
+
+然而，有机会获取了私人信息的队员（例如，通过在自己的游戏结束后通过与旁观者的交流而得，此时他仍有队友在进行游戏）在该盘对局进行的过程中受到不得与队友交流的限制。
+
+Prohibitions against written notes of any kind during drafts apply to team drafts as well.
+
+禁止在轮抽过程中作一切种类的书面记录之规定，同样适用于团队轮抽。
+
+>If a member of a team has access to hidden information from outside their teammate’s match, they must refrain from communicating with teammates who are still playing. Common occurrences of this are during team events, once a player has stood up and moved around after their match they have the potential to see hidden information from their teammate’s opponents. This doesn’t mean the players can’t use the restroom once they are done with their match, but they should call a judge to direct them. Most times judges will direct players to walk to the restroom so they can confirm they aren’t trying to gain information. See MTR 8.3.
+>
+>如果一位队员有机会从非队友的人那里了解到任何关于他们队伍比赛的非公开信息，他便不能在和自己正在继续游戏的队友进行交流。通常来说，在团队比赛中，一旦牌手起身并在附近走动后，他便有可能会看到他队友的对手的隐藏信息。这并不意味着牌手在完成自己的对局后不能去洗手间，如果他想如此做的话，他应当叫裁判进行指引。大多数情形下，裁判会指引牌手走到洗手间，并以此确认牌手没有试图获取隐藏信息。参见MTR 8.3节。
+
+## MTR 4.7 Game Layout 游戏用具摆放
+
+Players in Competitive and Professional Rules Enforcement Level matches must arrange their cards, tokens, and other accessories on the battlefield using the following layout:
+
+参加执法严格度为竞争及专业级别赛事的牌手而言，他们必须依下述布局摆放其战场上的牌张、衍生物及其他辅助用具：
+
+* From the player’s perspective, nonlands must be kept closer to the player’s opponent than lands, and no non-land cards should be between the land area and the edge of the table closest to the player.
+
+* 从牌手的视角来看，非地永久物应比地永久物更靠近对手，且在地牌摆放的区域与该牌手所坐一侧的桌边之间不得摆放任何非地牌。
+
+* Non-creature permanents whose use may reasonably be associated with either the land or nonland area (e.g., an artifact whose only ability is a mana ability) may be located in either area, provided the overall layout is, in the judgment of tournament officials, clear. However, permanents that are also creatures (e.g., artifacts with March of the Machines on the battlefield, Dryad Arbor, or a Treetop Village that is currently a creature) must be placed in the nonland area. Players may not use other cards to intentionally obscure the presence of a permanent in any area of the battlefield.
+
+* 对于非生物永久物而言，若其用途与地区域或非地区域有合理联系（例如仅有法术力异能的神器），则此永久物便可放在对应区域，但此摆放以比赛工作人员判断确属清晰为限。然而，若该永久物同时也为生物（例如战场上有器械进击/Match of the Machines时的神器，树灵乔木/Dryad Arbor，或当前是生物的树顶村落/Treetop Village），则其必须摆放在非地区域。牌手不得使用其他牌来故意遮挡战场上任何区域的永久物。
+
+* Each card should remain clearly associated with any permanents attached to it. For example, an Aura enchanting a land should be in the land area in contact with that land.
+
+* 在牌张和与之贴附的永久物之间需始终展现清晰的关联关系。举例来说，结附于某张地的灵气，便需置于地区域，与所结附的地保持接触。
+
+* The player’s library, graveyard, and exiled cards should be kept all to the left of the battlefield or all to the right of the battlefield at the player’s discretion.
+
+* 牌手放置牌库、坟墓场和所放逐之牌此三个区域需一致放在战场的左侧或右侧。牌手可自行决定是要将此三个区域一致放在左侧还是右侧。
+
+* The player’s graveyard and exiled cards should be adjacent to the player’s library. All three should be distinct at all times.
+
+* 牌手放置坟墓场和所放逐之牌此两个区域须与牌手放置牌库的区域相邻。且这三个区域之间须始终具有明显区隔。
+
+* If a card is exiled by a permanent and that permanent includes a way to perform additional actions with the exiled card, the association of the two cards must be clear. Keeping the two cards together is recommended.
+
+* 如果某张牌遭某个永久物放逐，且该永久物有方法利用所放逐的牌执行额外动作，则应以能够清晰展示此两者之间这类联系的方式摆放两者。在此建议将此两张牌放在一起。
+
+>A player’s board needs to have creatures in front of lands. Non-creature permanents whose main uses are for mana
+>may be placed with or apart from the lands. Creatures who are also lands MUST be placed with creatures. This includes Dryad Arbor and animated man lands. This is to ensure a clear and consistent board state is maintained, and that everyone is aware of the board state.
+>
+>牌手的场面上生物必须放在地牌前面。主要用途为法术力的非生物永久物，可以放在地牌旁边或分开放置。同时也是生物的地必须与生物一起放置，这包括树灵乔木和变成人的地。这样做是为了确保场面状态清晰且一致，并让所有人都能了解当前的场面状态。
+
+* Each untapped permanent should face its controller. Players are permitted to briefly turn a card upside-down as a memory aid.
+
+* 所有的未横置永久物都应朝向其操控者。允许牌手暂时倒转牌张协助记忆。
+
+Physical objects used to represent permanents must have a way of clearly representing any in-game status, such as whether a permanent is tapped. Sleeves or card backs that appear similar to any player’s sleeves or card backs may not be used. The Head Judge is the final authority on what may be used to represent permanents.
+
+使用标记物来表示游戏中组件（例如永久物）的牌手必须使该标记物能清楚表示一切游戏中的状态，如该永久物是否已横置。
+
+Tournament officials may make exceptions or additions to these guidelines at their sole discretion in order to keep each player’s game layout clear. Players in exceptional situations (e.g., a player playing a deck with no lands or a deck that makes significant use of the graveyard) should consult with tournament officials to determine what allowances, if any, will be made.
+
+为确保每位牌手的游戏摆放区域清晰可辨，比赛工作人员可自行增减上述准则。会导致特殊情形的牌手（例如使用没有地牌之套牌的牌手，或是使用过多利用坟墓场之套牌的牌手）应询问比赛工作人员，以确定其比赛时是否能有例外。
+
+>Legacy, for example, has some decks that are unlike most Magic decks in most formats. Dredge players typically will have a spread-out graveyard on what would normally be the battlefield because of how much they do with their graveyard. Likewise, “Oops, All Spells” and Belcher are combo decks that run few or no lands.
+>
+>例如，薪传赛中的一些套牌跟万智牌中绝大部分的套牌都不一样。渡桥（发掘）牌手的坟墓场通常会把坟墓场摊开来放在原本是战场的位置上，因为他们的坟墓场互动太多了。“无地套”和喷火炮等组合技套牌放很少的（或甚至不放）地牌，也是同理。
+
+## MTR 4.8 Reversing Decisions 反悔
+
+Players are expected to consider their options before taking an action and players are not usually allowed to take back an action that has been communicated to their opponent, either verbally or physically.
+
+牌手应仔细考虑所有可能的情况之后再实际行事，且在牌手通过口头或动作让对手知晓其动作之后，通常便不允许其撤回。
+
+>Chess has something called the “touch-move” rule, which means that if a player touches a piece on the board on their turn, they are bound to move that piece (or capture that piece if it’s an opponent’s) if they have a legal move. In Magic, announcing a legal action, either by moving a card or by verbal confirmation ( saying “No blocks”, for example) might look alike that chess rule, and it could be reasonable to bound a player to that action.
+>
+>国际象棋中有一条触子必走规则，意思是在轮到玩家行动时，如果触碰了棋子，则必须移动该棋子（如果是对手的棋子则必须吃掉它），前提是有合法的走法。 在万智牌中，宣布一个合法动作——无论是通过移动牌张，还是通过口头确认（例如说“没有阻挡”）——看起来与象棋规则类似，因此在某些情况下将玩家绑定于该动作也是合理的。
+
+Sometimes, a player will realize that they have made a wrong decision after making a play. If that player has not gained any information since taking the action and they wish to make a different decision, a judge may allow that player to change their mind.
+
+某些时候，牌手会在做出动作后意识到自己决策失误。如果该牌手在做出该动作后未获得任何信息，且希望更改自己的决定，裁判可允许。
+
+>HOWEVER, unlike chess that has a fixed number of pieces per player, and is limited to only one move per turn, Magic has a lot of different moving pieces that affects the game in different ways (life totals, cards in hand, the board state, etc) and there might be times in which, right after a move has been made, a player might realize that they might want to make a different move. It has been a common -and very informal- practice to allow players to change their mind about an action taken during the game, but it wasn’t written anywhere. Now, as long as no information has been gained in between, policy allows us to have players reversing that last decision.
+>
+>然而，与每位玩家拥有固定棋子，且每回合仅限一次移动的国际象棋不同，万智牌中有大量不同的可行动元素，它们会以不同方式影响游戏（如生命值、手牌数量、场面状态等）。有时，在执行一个动作后，玩家可能会意识到自己想做出不同的选择。 在过去，允许玩家在游戏中改变已执行动作的想法是一种常见但非常不正式的做法，但并未写入任何规则。现在，只要在此期间没有获取任何信息，方针允许玩家反悔。
+
+Judges must carefully consider whether the player has gained information since making the play that might have affected the decision;
+
+但裁判须谨慎考虑牌手是否在做出动作后获得能够影响其决定的信息；
+
+>How much information was gained in between is something that we have to be very cautious about, since information can be gained in many different ways. Even by letting a spell resolve, players might be giving information to their opponents. There are cases in which reversing a decision is fairly easy; for example, when opponents are tapped out and cannot respond there’s not that much exchange of information as opposed to a fully-untapped opponent that have ways to interact with the other player.
+>
+>在此期间获得了多少信息，这是我们必须非常谨慎考虑的，因为信息可以通过多种方式被获取。即使只是让一个咒语结算，玩家也可能在无意中向对手透露信息。 有些情况下反悔相对容易，例如当对手地已横置无法响应时，信息交换很少；至于地完全未横置、能够与另一名玩家互动的对手，情况就复杂得多。
+
+in particular, players may not try to use opponent reactions (or lack thereof) to see if they should modify actions they committed to.
+
+具体来说，牌手不得试图利用对手反应（无论有无）来判断自己是否应更改先前提出的动作。
+
+>It is common that players announces “bolt this creatNOWAITBOLTTHEOTHERONE”, and it is fairly reasonable to let those players alter their decision since they are actively avoiding adding more information to the table before they change their minds. It would be a whole different story if the player waited for the opponent to confirm before they announced they wanted to change their decision. This is not Magic: the Gotcha! and trying to bait an opponent’s reaction is off-limits for allowing a decision to be reversed.
+>
+>常见的情况是，玩家会说出类似“现在闪电击这个生物——等等——闪电击另一个！”这样的口头操作。在这种情况下，让玩家修改他们的决定是相当合理的，因为他们在主动避免在改变主意前向游戏透露更多信息。 如果玩家是在等待对手确认后才宣布想要改变决定，那情况就完全不同了。万智牌不是纠结表述上的细枝末节的游戏，不允许通过试图诱导对手反应的行为来撤回决定。
+
+If the judge cannot be sure no information was gained, they should not allow the decision to be changed.
+
+如果裁判无法确认「牌手未获得信息」此事，则应不允许牌手反悔。
+
+>Like when we are deciding whether to backup or not, the safest bet is always to leave things the way they are. If you don’t feel comfortable enough with the amount of information that’s been exchanged before you were involved, it’s fine to not allow the decision to be reversed. Use your own judgement here!
+>
+>就像在决定是否反悔时一样，最安全的做法通常是保持现状。如果你对在你介入之前已经交换的信息量感到不够放心，完全可以选择不允许反悔。此时，请依靠你自己的判断！
+
+Teammates intervening before information has been gained is acceptable when considering a backup.
+
+如果牌手队友在牌手本人获得信息之前便加以干预，应允许其撤回先前动作。
+
+>Since we treat every player from a team as a single entity for the purpose of reporting the result of a match, and the fact that they can communicate with each other at all times during the match, it is also reasonable to take every member of the team into account when deciding whether to reverse a decision or not. If a player cast a creature, and one of their teammates says “No, cast this other one!”, it is ok to let them reverse that play, as long as no relevant information has been gained.
+>
+>由于在报告比赛结果时，我们将团队中的每位玩家视为单一个体，且他们在比赛中可以随时互相交流，因此在决定是否允许反悔时，也有理由考虑团队中的每一名成员。 例如，如果一名玩家施放了一个生物，而他们的队友说：“不，施放另一个！”，只要没有获得相关信息，允许他们反悔是可以的。
+
+Examples
+
+示例
+
+1. A player plays an Island and, before anything else happens, says “Sorry, I meant to play a Swamp.”
+
+1\.	牌手使用了海岛，但在任何人有动作前就说「抱歉，我想用的是沼泽。」
+
+2. A player says “No blocks” immediately followed by “Wait, no, I block with this creature.”
+
+2\.	牌手说了「不阻挡」后立刻跟着说「等等，我要挡这个生物。」
+
+3. A player says “Go. Wait, land, go.”
+
+3\.	牌手说「过。等等，下地，过。」
+
+>Another good reading regarding Reversing Decisions can be found [here](https://blogs.magicjudges.org/whatsupdocs/2018/10/02/reversing-decisions/)!
+>
+>关于反悔的更多参考资料可以在[这里](https://blogs.magicjudges.org/whatsupdocs/2018/10/02/reversing-decisions/)找到。
+
+## MTR 4.9 Day/Night 白昼/黑夜
+
+Day/Night is a state that can change over the course of the game, but is not controlled by either player. Once created, it continues to be tracked, even if there are no objects in the game that care about the current state. It is the responsibility of both players to track the current state and point out when it is represented incorrectly by the shared method being used to track it.
+
+白昼/黑夜是一种可以在游戏过程中发生变化的状态，但不为任一牌手所操控。该状态一旦被创造，便将持续被追踪，即使在当前游戏中没有关心该状态的物件也一样。双方牌手都有义务追踪其状态，并在其以双方共享的方式表达发生错误时指出。
+
+>The Day/Night status is brought into the game by certain double faced cards like, Brutal Cathar. When Day, it changes to night if a player casts no spells during their own turn.  It doesn’t change to night until the next turn.  Similarly, when it’s Night, a player needs to cast two or more spells during their turn for it to become Day next turn.
+>
+>As you can see there’s a lot going on with this mechanic and it continues to go on even if there are no cards with Daybound/Nightbound on them for the rest of the game.
+>
+>白昼/黑夜是由某些双面牌引入游戏的，例如护教蛮兵。当处于白昼时，如果玩家在自己回合内没有施放任何咒语，下一回合会变为黑夜。类似地，当处于黑夜时，玩家需要在自己回合内施放两张或更多咒语，下一回合才会变为白昼。
+>
+>如你所见，这个机制涉及的内容非常多，即便在游戏剩余时间内没有任何带白昼/黑夜的牌，机制仍然持续生效。
+
+Because responsibility for the state is shared, an erroneously-represented state should be handled as a Communication Policy Violation, but neither player receives the Warning.
+
+因为双方都有义务追踪该状态，所以当该状态表达错误时，应按照违反交流原则处理，但双方牌手都不会因此得到警告。
+
+>While it is certainly true that one player initially introduced the Day/Night status to the game, both players are fully responsible for this; however, no Communication Procedure Violation warning is given. That said, you may still apply the the rest of the CPV fix if a player made a decision relying upon it being Night when it is in fact Day.
+>
+>虽然确实有一名玩家最初将白昼/黑夜引入游戏，但双方玩家都要对此负全部责任；不过，不会给出违反交流原则的警告。 也就是说，如果玩家在实际上是白昼时，错误地基于黑夜做出决定，你仍然可以应用其余的违反交流原则修正措施。
+
+If the players and judges are unable to determine the current status, the judge should assume it is Night, as a turn with no spells played is more likely to be forgotten than a turn with multiple spells played.
+
+如果牌手和裁判都不能确定当前正确的游戏状态，裁判应当认定当前是黑夜，因为相较一个使用了复数咒语的回合而言，一个没有施放咒语的回合更有可能被遗忘。
+
+>You shouldn’t immediately set the game to Night. First, talk to the players about what they remember from the most recent turns. If you and the players can figure it out correctly, set the status to its current state and issue no penalties to either player. Only when you cannot figure it out default to Night.  You still give no penalties, though you may remind players to play more mindfully.
+>
+>你不应立即认定当前为黑夜。 首先，与玩家讨论他们对最近几个回合的记忆。如果你和玩家能够正确判断，将状态设为当前实际状态，并且不对任何玩家处罚。 只有在无法判断时，才默认当前为黑夜。即便如此，仍然不给出判罚，但你可以提醒玩家更专注地进行游戏。
+
+# MTR 5. Tournament Violations 比赛违规
+
+## MTR 5.1 Cheating 作弊
+
+Cheating will not be tolerated. The Head Judge reviews all cheating allegations, and if they believe that a player has cheated, they will issue the appropriate penalty based on the Infraction Procedure Guide or Judging at Regular Rules Enforcement Level document. All disqualifications are subject to DCI review and further penalties may be assessed.
+
+作弊将绝不宽贷。主审审核所有作弊的陈述,如果他认为某位牌手作弊,主审将根据《违规处理方针》或《一般级别执法严格度执法指南》做出适当处置。所有取消比赛资格的处罚都将会经由 DCI 审核，并可能在审核后给予该牌手进一步的处罚。
+
+>In short, cheating occurs when a person breaks a rule, is aware that they are doing so, and is attempting to gain advantage from their action. For a more detailed discussion about cheating and how to handle this infraction, see IPG 4.8. While the HJ disqualifies the player from the event, the Tournament Organizer submits the DQ report.  HJs used to submit the DQ report, but that responsibility was moved to TO for unannounced reasons.  The DQ process is found only in the article announcing its movement from the Judge Program to WOTC, and the form itself requires a WPN login.
+>
+>简单来说，作弊表示有牌手明知如此仍然违反规则，并意图获取优势。关于作弊的详细讨论以及如何处理该违规，请看IPG4.8节。虽然主审负责将玩家从赛事中取消资格，但由比赛主办人提交取消资格报告。过去主审会提交比赛主办人报告，但出于未公布的原因，这项责任被移交给比赛主办人。仅有一篇关于该职责从裁判项目移交给WOTC的文章中说明取消资格流程，而取消资格表格本身需要WPN登录。
+
+## MTR 5.2 Bribery 贿赂
+
+The decision to drop, concede, or agree to an intentional draw cannot be made in exchange for or influenced by the offer of any outside-the-game reward or incentive, nor may any in-game decision be influenced in this manner. Making such an offer or enticing someone into making an offer is prohibited and is considered bribery.
+
+牌手不得以给予游戏外回报或奖励的方式换取对手决定退出比赛、游戏认负或同意约和，不得以此方式影响他人做出此类决定，同时亦不得以此方式影响牌手在游戏内的任何决策。提出给予报酬或向他人索取回报的举动亦属于禁止行为，一并以贿赂论处。
+
+>Players can drop from an event, concede a match to their opponents, or agree to intentionally draw with their opponents. But they cannot ask for any kind of incentive or make any offer to the opponent in order to get a desired result. Similarly, a player cannot try to influence a player to take any other in-game action. Phrases like “If you concede to me, I’ll give you all my prizes” or “I will concede to you in exchange of half your prizes” are unacceptable, and Bribery results in a Match Loss at Competitive REL. At Regular REL, this kind of behaviour will spark a stern talk between you and the players, but do not disqualify them if they didn’t know that that was not legal. On the other hand, if the players knew that Bribery is not allowed, they are Disqualified for Cheating at all Rules Enforcement Levels.
+>
+>Basically if the exchange can be summarized by an “if X, then Y” discussion, we are in bribery territory. The “if/then” exchange does not have to be explicit.  Implied exchanges are still offers.
+>
+>牌手们可以退赛、或者向对手认输或约和。但是他们不能以任何形式要求报酬或提供奖励，用以获得想要的比赛结果。同样，一位牌手不能以此法影响另一位牌手做出任何游戏行动。例如“如果你认输，我将把我的奖品都给你”或“我可以认输，换你一半的奖品”这种话都是不可接受的，并且贿赂在竞争级别下将被判一局负。在一般级别下，这种行为会引发裁判与玩家之间的严肃谈话，但如果玩家不知道这属于违规行为，则不进行取消资格处罚。另一方面，如果玩家明知贿赂是不允许的，则在所有执法严格度下都会被认定为作弊。
+>
+>基本原则是：如果交换可以概括为“如果 X，那么 Y”的讨论，那就属于贿赂范畴。这个“如果/那么”的交换不必明说，即便是暗示性的交换也仍然属于提议。
+
+Players may not make any offers to tournament officials in an attempt to influence the outcome of a ruling.
+
+牌手不得试图提议予比赛工作人员好处，以此影响判罚结果。
+
+>Players are also prohibited from attempting to bribe tournament officials, including judges.
+>
+>牌手也禁止尝试贿赂比赛工作人员，包括裁判。
+
+It is not bribery when players share prizes they have not yet received in the current tournament and they may agree to such before or during their match, as long as any such sharing does not occur in exchange for any game or match result or the dropping of a player from the tournament.
+
+只要不是用以交换游戏或对局的结果，或是用以劝说牌手退出比赛，牌手可用任意方式来与对手分享他在当前比赛中尚未获得的奖品。此等行为不属贿赂。上述分享的决定可以在他开始对局之前或进行对局期间做出，但不得以某一方认输或双方约和为前提条件来达成此类协议。
+
+>This statement is for things like: players travelling in a car together agree that any prize money goes towards the hotel room.  Or players in a pre-release decide to split the prizes in the last round.
+>
+>这条说明适用于以下情况：例如，同行的玩家同意将任意奖金用于支付酒店费用，或者售前赛中，玩家在最后一轮决定平分奖品。
+
+It is not bribery when players in the announced last round of the single-elimination portion of a tournament agree to a winner and how to divide the subsequent tournament prizes. In that case, one of the players at each table must agree to drop from the tournament. Players receive the prizes according to their final ranking.
+
+在比赛的单淘汰赛部分中，要参加公告中最后一局比赛的牌手可就最终赛事优胜者归属与所得之赛事奖品分配方式达成合意。此等行为不属贿赂。在这种情况下，其中一位牌手必须同意自比赛中退出。牌手会根据最终的名次得到相应的奖励。
+
+>So this particular rule is a bit funny.  Its carving out an exception to the Bribery rules.  This is bribery,  It’s just not Bribery.  In this case though, it is the last round of the single elimination portion of the tournament.  No other players can possibly be impacted by the decision.  This exception was carved out for old school PTQs where the winner would get an invite to the event and there were pack prizes for 1st and 2nd place. This allowed the players to work out an agreement where the player who wanted the invite gets the invite, and the player that wanted the packs get the packs.
+>
+>It skirts around the issue of altering the results of the match by having one player dropping from the event, so technically the results weren’t affected by the split because there was not match played.
+>
+>这条规则有点有趣，它实际上是在贿赂规则下开了一个例外。 从某种角度看，这确实是贿赂，但它又不算真正的贿赂。在这个例子中，情况是比赛的单败淘汰赛阶段的最后一轮，没有其他玩家可能受到这个决定的影响。这个例外最初是为以前的PTQ设立的，当时冠军可以获得参加某个赛事的邀请，而第一名和第二名还有补充包奖励。这样玩家可以达成协议：想要邀请的玩家获得邀请，想要补充包的玩家获得补充包。
+>
+>这种做法通过让一名玩家退出赛事来绕开改变对局结果的问题，因此从技术上讲，因分奖品而导致的比赛结果并未受到影响——因为实际上没有进行对局。
+
+The result of a match or game may not be randomly or arbitrarily determined through any means other than the normal progress of the game in play. Examples include (but are not limited to) rolling a die, flipping a coin, arm wrestling, or playing any other game.
+
+不得通过除了正常游戏进行的程序之外的其他方式来随机或任意决定某一局的结果。其他方式的例子包括(但不限于)掷骰子、抛硬币、扳手腕，或进行其他游戏。
+
+>The result of a Magic game or match should be determined only by playing Magic. No other method is allowed. This often happens near the end of a round when drawing would knock both players out of playoff contention but a concession by one would allow the other to advance. Many inexperienced players do not even realize that randomly determining a winner is illegal; being proactive with Head Judge announcements and late-round vigilance can help judges avoid giving Match Losses to players who otherwise might not know about this rule. See IPG 4.3.
+>
+>For example, if a judge sees two players who are about to draw without any obvious win conditions on the board, they might simply remind the players that they cannot flip a coin or make any offers to their opponents to induce a concession. The judge might also remind them that they must report the game as a draw unless one of them wins or concedes. This proactive approach provides a better player experience than waiting for a player to say something unfortunate and avoids an unpleasant outcome for everyone.
+>
+>万智牌对局的结果只能由游戏本身来决定，其他方式都是不允许的。贿赂常常发生的情形：接近一轮结束时，若平局将导致双方牌手都失去进入淘汰赛的机会，但一方认输则对手可以晋级淘汰赛。许多缺乏经验的牌手甚至没有意识到随机地决定胜者是违规的。主审主动地声明并且在最后一轮警惕上述情况，可以帮助裁判避免对那些不知道这项规则的牌手做出一局负的判罚。请看IPG4.3。
+>
+>例如，如果一位裁判看到两位牌手将要在场面没有明显胜利条件的情况下战平，他或她可以简单地提醒牌手：他们不能通过投硬币或者贿赂对手来诱导对手认输。裁判也可以提醒牌手：他们必须填报平局成绩除非一方获胜或认输。这种积极地方法可提供更好的牌手体验，而不是等牌手说出令人遗憾（导致被取消资格）的话；并且避免了给大家造成不愉快的结果。
+
+Players may not reach an agreement in conjunction with other matches. Players can make use of information regarding match or game scores of other tables. However, players are not allowed to leave their seats during their match or go to great lengths to obtain this information.
+
+牌手不得根据其它对局之比赛结果来达成协议。虽然牌手可以利用其他桌次上局分或盘分方面的信息。但是，牌手在进行自己的对局之过程当中不得离开自己的位置，亦不得想方设法通过其他途径来获取此类信息。
+
+>While opponents may agree to intentionally concede or draw their matches, a group of players may not deliberate whether they should all draw in order to make Top 8, for example. Players may use information about the other matches to make up their minds, but they may not leave their seats during their match or go to other great lengths to obtain additional information.
+>
+>For instance, players may play their match until the match next to them finishes and agree to draw because that result favors their chances at making Top 8. But they cannot make any extraordinary effort to get the information they want, like pausing the match to recheck the standings or pairings or to find out the results of the match three tables over. Players may not play slowly to wait on relevant matches to finish.
+>
+>Some Head Judges and Tournament Organizers like to seat the final round’s matches randomly so that the top matches are not clumped together at the first few tables. Random seating makes it harder for players to observe the results of matches near them in standing.
+>
+>即使对手可能同意约和或认输，一部分牌手可能不会深思熟虑他们是否应当约和以进入八强。牌手可以利用其它比赛的信息来决策，但是在比赛期间他们不能离开座位或者不遗余力地获取额外信息。
+>
+>例如，牌手可以进行对局，并根据相邻对局的结果而决定约和，以进入八强。但是他们不能采用额外的手段来获得他们想要的信息，例如暂停对局来重新检视排名或配对，或者查看距离较远的对局结果。牌手不能以缓慢进行游戏的方式来等待相关对局先结束。
+>
+>一些主审或比赛主办者倾向于将最后一轮对局的座位安排随机化。这样高分段的对局将不会聚集在一起。随机安排座位将让牌手更难观察其他排名接近自己的牌手的对局结果。
+
+Players in the single-elimination rounds of a tournament offering only cash, store credit, prize tickets, and/or unopened product as prizes may, with the permission of the Tournament Organizer, agree to split the prizes evenly. The players may end the tournament at that point or continue to play. All players still in the tournament must agree to the arrangement.
+
+在只提供现金、代金券、奖品券和／或未开封的产品作为奖品的比赛中，参加单淘汰部分的牌手在经比赛主办人许可后，可以协议将奖品平均分配给仍在比赛中的每位牌手。此后，牌手可以就此结束他们的比赛，也可继续进行比赛。仍在比赛中的所有牌手均需要同意该协议，才可以如此做。
+
+Example: Before the semifinals of a tournament (in which first place gets 12 packs, second place gets 8 packs and 3rd and 4th get 4 packs each) begins, the players may get permission from the Tournament Organizer to end the tournament, with each player receiving 7 packs.
+
+示例：在一场比赛的半决赛开始前（该场比赛的奖品分配如下：第一名得 12 包，第二名得 8 包，第三及第四名各得 4 包），在征得比赛主办人的许可之后，剩下的四位牌手可就此结束比赛,每人分得 7 包奖品。
+
+Example: In the finals of a 1-slot Players Tour Qualifier that offers a travel award and an invitation to the winner, the two finalists may agree to split the tournament prizes, but this agreement cannot alter the results of the match. One player must drop from the tournament, leaving the travel award and the invitation to the player who did not drop from the tournament. That player is then free to split the remainder of the prizes as agreed upon. The travel award and invitation are a single item and may not be split.
+
+示例：在提供一个资格的专业赛预选赛（为比赛的胜利者提供旅费奖金与赛邀请资格）的决赛中，两位牌手可以协议分配奖品，但这不能牵涉到改变对局的结果。其中一位牌手必须自比赛中退出，将旅费奖金与邀请资格让给对手（即未从比赛中退出的那位牌手）。该牌手之后就可以自由地按照先前的协议来分配奖品。旅费奖金与专业赛邀请资格视作一项单独的奖品，不得将两者分配给不同的牌手。
+
+>Note that, for the event to end at this point, players ned to agree which of them is dropping, and the results must be reported as a “Win By Drop,” since no match took place. A prize split before the finals is only allowed when are no prizes other than cash and/or unopened product. If an invite or some other non-cash, non-product prize is on the line, then the prize cannot be split before the finals.
+>
+>请注意，以这种方式结束的比赛（其中一位牌手必须自比赛中退出，将旅费奖金与邀请资格让给对手），双方牌手必须同意哪一位退赛，而且比赛结果必须以“因对手退赛而获胜”呈报，因为并没有进行对局。决赛之前的奖品平分只能在奖品只包含现金或者未打开的产品时才是被允许的。如果奖品中包含邀请资格或其他非现金、非产品的奖品，那么在决赛之前便不能平分奖品。
+
+## MTR 5.3 Wagering 赌博
+
+Tournament participants, tournament officials, and spectators may not wager, ante, or bet on any portion (including the outcome) of a tournament, match, or game.
+
+参赛者、比赛工作人员，及旁观者不得以比赛、对局或游戏之任何部分（包括其结果），进行赌博或类似行为。
+
+>Wagering damages the integrity of a tournament and gives both players and spectators a terrible image of the game and the community. It is considered damaging to the integrity of the game. For more details, read the Generally Unwanted Behavior section of the JAR document and/or the IPG 4.4.
+>
+>赌博伤害比赛的公正性，并让牌手与观众对这个游戏和社群留下糟糕的印象。这被视为是对游戏公平性有害的。详情请看JAR常见不良行为部分与IPG4.4节。
+
+## MTR 5.4 Unsporting Conduct 举止违背运动道德
+
+Unsporting conduct will not be tolerated at any time. Tournament participants must behave in a polite and respectful manner. Unsporting conduct includes, but is not limited to:
+
+违背运动道德的举止将绝不宽贷。参赛者的举止必须保持礼貌及相互尊重。违背运动道德的举止包括，但不限于：
+
+>Broadly, this section exists to spell out one very important responsibility that all players share: to not ruin the enjoyable atmosphere of the tournament. While the behaviors cited below all have the potential to do so, they are not an exhaustive list, nor could such a list be written. If a player’s behavior is disruptive to the event or is making you or another person uncomfortable, this is a problem that needs to be addressed. Keep in mind that “will not be tolerated” doesnt mean anyone that behaves unsportingly will be removed.  It means that the issue will be addressed.  Depending on the rules enforcement level and the action taken, addressing the issue may take the form of a stern talk, all the way up to a DQ.  The appropriate guides (JAR and IPG) will provide guidance on the appropriate action level.
+>
+>大体上，本节内容意在阐明一个非常重要的牌手义务：不能破坏比赛的良好氛围。虽然下面所述的行为都有可能破坏比赛气氛，但是这并不是一个详尽的列表，这样的列表也是无法写出的。如果一位牌手的行为破坏了比赛或让任何人感到不适，那就是一个需要处理的问题。请记住，“决不宽贷”并不意味着任何举止违背运动道德的玩家都会被赶走。它的意思是该问题会被处理。根据执法严格度以及采取的具体措施，处理问题的方式可以从严肃的谈话到直接取消资格不等。相关指南（JAR和IPG）会提供关于适当处理方式的指导。
+
+* Using profanity.
+
+* 说脏话。
+
+>The above prohibition should not be taken to mean that any use of profanity at a Magic event is automatically considered Unsporting Conduct. Indeed, many Magic players routinely use profanity as part of their everyday speech without a second thought, and it would be senseless to try to eradicate it completely. Profanity becomes problematic when it is disruptive to other people’s enjoyment of the event. This can happen, for example, when it is used excessively, or directed maliciously toward another person. Such cases are more serious and merit the intervention of a judge. See IPG 4.1 for details.  Stores, however, are more than able to impose a more restrictive policy on profanity, gosh darn it.  However that restriction is based on store policy and not the MTR.
+>
+>上述禁止行为并不意味着在比赛中任何说脏话的行为都自动地被视作举止违背运动道德。确实，许多万智牌牌手常常使用脏话作为日常用语而没有经过仔细思考，并且试图根除脏话恐怕是毫无意义的。当脏话破坏牌手的比赛体验时，才会成为问题。例如，过度地使用脏话或者直接恶意地对他人使用脏话。这些情况是更为严重的，并且需要裁判的干预。详情请见IPG 4.1。然而，牌店完全有能力对粗话制定更严格的方针，例如禁止“该死的”。 不过，这类限制是基于商店方针而非MTR。
+
+* Engaging in behavior that could reasonably be expected to create a feeling of being harassed, bullied, or stalked.
+
+* 易使他人产生受骚扰、欺侮、尾随感受的不端行为。
+
+>This are words with strong meanings, and they require a strong response.
+>
+>这些词语含义强烈，因此需要强烈的回应。
+
+* Arguing with, acting belligerently toward, or insulting tournament officials, players, or spectators.
+
+* 与比赛工作人员、牌手或旁观者争执、挑衅或侮辱对方。
+
+* Violating the personal privacy or safety of any participant, including spectators and staff.
+
+* 侵犯其他参赛者（包括旁观者和工作人员）的个人隐私或安全。
+
+* Using social media to bully, shame, or intimidate other participants.
+
+* 使用社交媒体对其他参赛者进行欺侮、羞辱或恐吓。
+
+>A safe environment is a basic expectation of any tournament attendee. Behaviors that compromise this expectation should not be tolerated. See IPG 4.2 for details.
+>
+>一个安全的环境是任何比赛参与者的基本预期。破坏这种预期的行为是绝不容许的。详情请见IPG4.2。
+
+* Failing to follow the instructions of a tournament official.
+
+* 不服从比赛工作人员的指示。
+
+>Judges and other Tournament Officials are responsible for the smooth running of the event. If we need a player to do something and they don’t do it, that disrupts the tournament. That said, if you’re going to use this authority, it needs to be for something that benefits the tournament, not for something arbitrary or trivial.
+>
+>裁判与其他比赛工作人员有义务确保比赛的顺利进行。如果我们需要一位牌手做某件事情而他或她不配合，那将干扰比赛。也就是说，如果裁判打算使用这一权力，那么要求牌手做的事情必须是有利于比赛的，而不是任意的某件事或琐碎事项。
+
+Officials are expected to investigate potential matters brought their attention as soon as possible and take actions to discourage repeat behavior. All incidents of unsporting conduct are subject to further DCI review.
+
+当有人就此行为唤起工作人员注意时，工作人员应尽快对潜在事端进行调查,并采取措施制止累犯。所有违背运动道德的事件，都可能受到 DCI 进一步的调查。
+
+>Judges and other Tournament Officials are the people players turn to in case of a problem. This includes interpersonal problems like Unsporting Conduct. It’s very rare for someone to ask for an intervention when one isn’t warranted; quite the opposite, people often ignore or deal with such problems longer than they reasonably should. For this reason, we need to treat all such allegations seriously and deal with them before they can escalate.
+>
+>Consequences to discourage repeat behavior can include anything from a simple “Don’t do that,” to issuing an Unsporting Conduct penalty. Where a player has broken a venue or organizer’s rule — by smoking in the venue, for example — it may be necessary to involve representatives from these groups to resolve the issue.
+>
+>裁判或其他比赛工作人员是牌手遇到问题时的求助对象。这包括人际关系问题，如举止违背运动道德。牌手在没有正当理由的情况下要求裁判介入是很罕见的。恰恰相反，牌手常常忽略或者迟疑地处理这些问题。因此，裁判应当严肃对待所有这类问题，并在事态升级前处理好。
+>
+>为了阻止重复违规行为，处罚可以从简单地说“别那样做”到判定举止违背运动道德不等。 如果玩家违反了场地或主办方的规定——例如在场地内吸烟——则可能需要相关代表参与以解决该问题。
+
+## MTR 5.5 Slow Play 游戏进行过慢
+
+Players must take their turns in a timely fashion regardless of the complexity of the play situation and adhere to time limits specified for the tournament. Players must maintain a pace to allow the match to be finished in the announced time limit. Stalling is not acceptable. Players may ask a judge to watch their game for slow play; such a request will be granted if feasible.
+
+无论场上局势多复杂，牌手必须以合理的速度进行各自的回合，并遵守该场比赛所规定的时间限制。牌手必须保持一定的步调，使得每一局都能在公布的时间限制之内完成。牌手不得拖延时间。牌手可请求裁判来监督对局的进行以防止游戏进行过慢的发生；如果可行，此类请求便会被批准。
+
+>The round time limit is not equally split between players. This means that a player thinking too long to make plays is “stealing” time from their opponent. This can give them an unfair advantage or degrade an opponent’s play experience. Even when there are no time limits, one player taking too much time for their actions is wasting everyone’s time. For examples of Slow Play, see IPG 3.3.
+>
+>Intentionally playing slowly to take advantage of time limit is considered Stalling. For more information about how to handle these infractions at Competitive Rules Enforcement Level, see IPG 4.7.
+>
+>回合的时间限制并非在各牌手之间平均分配。这意味着牌手思考时间过长将“偷走”对手的时间。这可能给她/他带来不公平的优势或者降低对手的打牌体验。即使不使用时间限制，牌手消耗过长时间也会浪费所有其他人的时间。IPG 3.3列出了游戏进行过慢的例子。
+>
+>故意缓慢地进行游戏以利用时间限制被视为拖延。 关于如何在竞争级别处理此类违规，请参阅 IPG 4.7。
+
+## MTR 5.6 Outside Assistance 场外援助
+
+During matches, players may not seek play advice from spectators and spectators may not give play advice to players.
+
+在对局过程中，牌手不得自旁观者处寻求游戏建议，旁观者也不得向牌手提供游戏建议。
+
+>pretty obvious
+>
+>这是显而易见的。
+
+During deck construction, players and spectators may not provide any advice or commentary to a player until that player’s decklist has been handed in.
+
+在套牌构组过程中，直到某牌手提交套牌登记表之前，牌手和旁观者不得向其提供任何建议或评论。
+
+>While not during a match, advice or commentary during deck construction at a limited event can alter the deck the player is building.  Deck Building is a tournament skill being tested, and any help taints that.
+>
+>虽然不是在对局期间，但在限制赛中构筑套牌时的建议或评论可能会改变玩家正在构建的套牌。 套牌构筑是一项被考核的比赛技能，任何帮助都会影响这一考核。
+
+Players and spectators will refrain from providing any information about draft selections or strategies between pod announcement and the end of the draft. At Competitive and Professional Rules Enforcement Level, players and spectators are expected to remain silent during the draft.
+
+从轮抽组构成公布开始到轮抽结束这段期间内，牌手和旁观者应尽量避免提供任何有关轮抽选择或战略的信息。在执法严格度为竞争和专业级别的赛事中，牌手和旁观者应在轮抽过程中保持安静。
+
+>The remaining silent bit is actually there to protect the players from accidentally revealing too much information while chatting with their buddies. Talking can only get you in trouble during this part of the tournament.
+>
+>后面的“保持安静”的部分实际上是为了保护玩家，防止其在与朋友聊天时不小心透露过多信息。 在比赛的这一阶段，说话可能会带来麻烦。
+
+Some of these restrictions may be waived due to official press or coverage; in these situations, the player will be informed of the revised expectations. Teammates in certain team tournaments are also excepted from these restrictions (see section 4.5).
+
+以上限制可能会因正式报道或转播之故而有所调整；若发生此类情形，应将修订后的限制告知牌手。在特定团队赛制的比赛中，队友之间也不受这些限制影响（参见第4.5节）。
+
+>This is carved out for coverage when they cover a specific drafter.  They might have to make changes to information shared to mitigate the advantages their opponents might have.  Unless you are dealing with coverage at a GP-equivalent event, or a PT-equivalent event, you don’t need to worry about this.
+>
+>这条规则是为了在对特定选手进行赛事报道的时候提供指导而设的。裁判可能需要对共享的信息进行调整，以减轻对手可能获得的优势。 除非你是在处理GP等级赛事或PT等级赛事的报道，否则无需担心这条规定。
+
+# MTR 6. Constructed Tournament Rules 构组赛制规则
+
+## MTR 6.1 Deck Construction Restrictions 套牌构组限制
+
+Constructed decks must contain a minimum of sixty cards. There is no maximum deck size. If a player chooses to use a sideboard, it may not contain more than fifteen cards.
+
+构组的套牌必须包含最少六十张牌。没有套牌张数上限。如果牌手希望使用备牌，则备牌数量不得超过十五张。
+
+>This is one of the announcements that many Head Judges include before beginning a tournament. It holds true at any constructed tournament, and is fairly self-explanatory.
+>
+>一些主审会将这句话加入赛前公告中。无需更多解释，这对所有的构组赛都适用。
+
+Except for cards with the basic supertype or cards with text that specifies otherwise, a player’s combined deck and sideboard may not contain more than four of any individual card, based on its English card title.
+
+除了带有「基本」此超类别的牌及牌面文字叙述有其他规定的牌之外,牌手的套牌及备牌里合起来同一张牌不得超过四张,此规定以英文牌的名称为准。
+
+>For most cards, a player may only play a maximum of four copies of a given card across their entire seventy-five. There are currently fourteen exceptions to this rule: Plains, Island, Swamp, Mountain, Forest, the five Snow-Covered variants, Relentless Rats, Shadowborn Apostle, Rat Colony and Persistent Petitioners. Note that you cannot get around this rule by using foreign or misprinted cards; the count is based on the English name of the card.
+>
+>对于整个75张的套牌来说，同一张牌不得超过四张。但有14个例外：平原，海岛，沼泽，山脉，树林，五种覆雪基本地，无情鼠群，影裔宗徒，老鼠群落，以及执着诉愿人。当然，你不能借助外文牌或者错版牌来滥用此规则；牌张的计数以英文版为标准。（译注：实际上这里仍没列举完整。总之有很多例外。）
+
+## MTR 6.2 Card Legality 牌张可用情况
+
+A card may only be used in a particular format if the card is from a set that is legal in that format or has the same name as a card from a set that is legal in that format. Zendikar Expeditions and Masterpiece Series cards may only be played in formats where the card is already legal.
+
+某张牌在特定赛制中是否可用，由以下情况确定：（1）出自可于该赛制中使用之系列的牌张，可以在该赛制中使用；或（2）名称与可在此赛制中使用之系列中某张牌相同之牌张，可以在该赛制中使用。逸品重现牌张只能在该牌张原本可用的赛制中使用。
+
+>The complete format list is below in this section. Note that it is perfectly legal to use old cards, as long as a version of that card is legal in the format in question. For example, a player may use a Beta Lightning Bolt in Modern, even though Beta isn’t a part of Modern, because Lightning Bolt was printed in a Modern-legal set. Masterpiece cards are a special addition to a set, and not actually part of the set itself. Since they are opened in packs they are legal for limited, however they are only legal in constructed formats where the normal edition of the card is also legal.
+>
+>本章节的后半部分有关于各赛制的详细列举。此外，用老版本的牌当然是可以的，前提是这张牌在赛制中合法的系列中有过重印。例如，牌手可以在近代赛中使用BETA版本的闪电击，即使BETA版本并不在近代赛的范围内，这是因为闪电击在摩登可使用的系列中有过重印。逸品重现是某些系列中的特殊附加，并不是系列本身的一部分。即使这些牌在开出它们的系列之限制赛中可以合法使用，在构组赛中它们只能在其普通版本在赛制中合法的情况下才能合法使用。
+
+Cards banned in a specific format may not be used in decks for that format. Cards restricted in a specific format may only have one copy in a deck, including sideboard.
+
+在特定赛制中禁用的牌不得用于参加该赛制比赛的套牌中。在特定赛制中限用的牌只能在套牌中使用一张,包括备牌。
+
+>If a card is banned, it cannot be used. If a card is restricted, it doesn’t follow the “four-of” rule above; rather than having up to four copies in a given seventy-five, a player may have at most one copy. As explained in section 6.5, Vintage is the only format with a restricted list.
+>
+>如果某张牌被禁用，则该牌不能使用。如果某张牌被限用，则牌手最多只能使用一张，而不遵循上述的“四张上限”的原则。根据章节6.5的说明，特选赛是唯一具有限用牌的赛制。
+
+## MTR 6.3 Standard Format Deck Construction 标准赛制套牌构组
+
+The following card sets are permitted in Standard tournaments:
+
+下述各系列可在标准赛制比赛中使用：
+
+>These are the sets legal in Standard. Note that these include dates where sets will rotate in and out of Standard.
+>
+>以下是标准赛的合法系列。所标注的日期反映了系列加入或退出标准赛的时间。
+
+* Wilds of Eldraine™
+
+* 艾卓仙踪
+
+* The Lost Caverns of Ixalan™
+
+* 依夏兰迷窟
+
+* Murders at Karlov Manor™
+
+* 卡洛夫庄园谋杀案
+
+* Outlaws of Thunder Junction™
+
+* 光雷驿镖客
+
+* Bloomburrow™
+
+* 斑隆洛
+
+* Duskmourn: House of Horror™
+
+* 暮悲邸：鬼屋惊魂
+
+* Magic: The Gathering Foundations™
+
+* 万智牌：基石构筑
+
+* Aetherdrift™
+
+* 乙太飘移
+
+* Tarkir: Dragonstorm™
+
+* 鞑契：龙岚录
+
+* Magic: The Gathering®—FINAL FANTASY™
+
+* 万智牌 – 最终幻想
+
+* Edge of Eternities™
+
+* 虚空边域
+
+* Magic: The Gathering | Marvel’s Spider-Man™
+
+* 万智牌 | 漫威的蜘蛛侠
+
+* Magic: The Gathering | Avatar: The Last Airbender™
+
+* 万智牌 | 降世神通：最后的气宗
+
+* Lorwyn Eclipsed™
+
+* 洛温：暗影笼罩
+
+* Magic: The Gathering | Teenage Mutant Ninja Turtles (Effective February 27, 2026)
+
+* 万智牌 | 忍者神龟 （2026年2月27日生效）
+
+* Secrets of Strixhaven (effective April 17, 2026)
+
+* 斯翠海文的秘密 （2026年4月17日生效）
+
+Any cards with expansion symbols from the above sets are legal to play in Standard, even if they are not available in that set’s play booster (or draft booster for sets released before February 2, 2024). Cards from older sets that share the same name as a card legal in Standard may also be played.
+
+所有牌张上面有上述系列符号的牌，即使它们无法在普通补充包（或是在2024年2月2日前发行之系列的轮抽补充包）中被开出，也都可以在标准赛制上合法被使用。
+
+When Snow-Covered Lands are not legal in Standard, they are treated as the equivalent basic lands. Players must replace them when discovered, but no infraction is committed.
+
+当标准赛制的可用牌张不包括覆雪地时，所有在该赛制中使用的覆雪地均视为对应的普通基本地。牌手若发现自己在此情形下使用了覆雪地，则须进行替换，但不算违规。
+
+The following cards are banned in Standard tournaments:
+
+下列牌在标准赛制比赛中禁用：
+
+* Abuelo’s Awakening
+
+* 先父觉醒
+
+* Cori-Steel Cutter
+
+* 科黎钢介刀
+
+* Heartfire Hero
+
+* 心火勇士
+
+* Hopeless Nightmare
+
+* 无望梦魇
+
+* Monstrous Rage
+
+* 怪物狂怒
+
+* Proft's Eidetic Memory
+
+* 波费的清晰记忆
+
+* Screaming Nemesis
+
+* 尖鸣宿敌
+
+* This Town Ain’t Big Enough
+
+* 一镇难容二虎
+
+* Up the Beanstalk
+
+* 爬上豆茎
+
+* Vivi Ornitier
+
+* 比比·奥尼提尔
+
+## MTR 6.4 Modern Format Deck Construction 近代赛制套牌构组
+
+The following card sets are permitted in Modern tournaments:
+
+下述各系列可在近代赛制比赛中使用：
+
+>These are the sets legal in Modern. Note that these include dates where sets will rotate into Modern, but that no sets will ever rotate out. This section is updated with each release of the MTR to reflect the newest sets.
+>
+>以下为近代赛中的合法系列。所标注的日期表明了该系列加入近代赛的时间，但不会有系列从近代赛制中退出。本章节会随着每次MTR的更新而不断修改，以反映当前最新的系列。
+
+* Eighth Edition
+
+* 第八版
+
+* Mirrodin
+
+* 秘罗地
+
+* Darksteel
+
+* 玄铁
+
+* Fifth Dawn
+
+* 五色曙光
+
+* Champions of Kamigawa
+
+* 神河群英录
+
+* Betrayers of Kamigawa
+
+* 神河叛将谱
+
+* Saviors of Kamigawa
+
+* 神河任侠传
+
+* Ninth Edition
+
+* 第九版
+
+* Ravnica: City of Guilds
+
+* 公会城拉尼卡
+
+* Guildpact
+
+* 十会盟
+
+* Dissension
+
+* 纷争
+
+* Coldsnap
+
+* 骤霜
+
+* Time Spiral
+
+* 时间漩涡
+
+* Planar Chaos
+
+* 时空混沌
+
+* Future Sight
+
+* 预知将来
+
+* Tenth Edition
+
+* 第十版
+
+* Lorwyn
+
+* 洛温
+
+* Morningtide
+
+* 晨光
+
+* Shadowmoor
+
+* 暗影荒原
+
+* Eventide
+
+* 暮光
+
+* Shards of Alara
+
+* 阿拉若断片
+
+* Conflux
+
+* 聚流
+
+* Alara Reborn
+
+* 阿拉若新生
+
+* Magic 2010 core set
+
+* 万智牌2010核心系列
+
+* Zendikar
+
+* 赞迪卡
+
+* Worldwake
+
+* 天地醒转
+
+* Rise of the Eldrazi
+
+* 奥札奇再起
+
+* Magic 2011 core set
+
+* 万智牌2011核心系列
+
+* Scars of Mirrodin
+
+* 秘罗地创痕
+
+* Mirrodin Besieged
+
+* 围攻秘罗地
+
+* New Phyrexia
+
+* 新非瑞克西亚
+
+* Magic 2012 core set
+
+* 万智牌2012核心系列
+
+* Innistrad
+
+* 依尼翠
+
+* Dark Ascension
+
+* 黑影笼罩
+
+* Avacyn Restored
+
+* 艾维欣重临
+
+* Magic 2013 core set
+
+* 万智牌2013核心系列
+
+* Return to Ravnica
+
+* 再访拉尼卡
+
+* Gatecrash
+
+* 兵临古城
+
+* Dragon’s Maze
+
+* 巨龙迷城
+
+* Magic 2014 core set
+
+* 万智牌2014核心系列
+
+* Theros™
+
+* 塞洛斯
+
+* Born of the Gods™
+
+* 天神创生
+
+* Journey Into Nyx™
+
+* 尼兹之旅
+
+* Magic 2015 core set
+
+* 万智牌2015核心系列
+
+* Khans of Tarkir™
+
+* 鞑契可汗
+
+* Fate Reforged™
+
+* 龙命殊途
+
+* Dragons of Tarkir™
+
+* 鞑契龙王
+
+* Magic Origins™
+
+* 万智牌：起源
+
+* Battle for Zendikar™
+
+* 再战赞迪卡
+
+* Oath of the Gatewatch™
+
+* 守护者誓约
+
+* Shadows over Innistrad™
+
+* 依尼翠暗影
+
+* Eldritch Moon™
+
+* 异月传奇
+
+* Kaladesh™
+
+* 卡拉德许
+
+* Aether Revolt™
+
+* 乙太之乱
+
+* Amonkhet™
+
+* 阿芒凯
+
+* Hour of Devastation™
+
+* 幻灭时刻
+
+* Ixalan
+
+* 依夏兰
+
+* Rivals of Ixalan
+
+* 决胜依夏兰
+
+* Dominaria
+
+* 多明纳里亚
+
+* Core 2019
+
+* 2019核心系列
+
+* Guilds of Ravnica™
+
+* 烽会拉尼卡
+
+* Ravnica Allegiance™
+
+* 效忠拉尼卡
+
+* War of the Spark™
+
+* 火花之战
+
+* Modern Horizons™
+
+* 摩登新篇
+
+* Core Set 2020™
+
+* 2020核心系列
+
+* Throne of Eldraine™
+
+* 艾卓王权
+
+* Theros Beyond Death™
+
+* 塞洛斯：冥途求生
+
+* Ikoria: Lair of Behemoths™
+
+* 依克黎：巨兽时空
+
+* Core Set 2021™
+
+* 2021核心系列
+
+* Zendikar Rising™
+
+* 赞迪卡再起
+
+* Kaldheim™
+
+* 凯德海姆
+
+* Strixhaven: School of Mages™
+
+* 斯翠海文
+
+* Modern Horizons 2™
+
+* 摩登新篇2
+
+* Adventures in the Forgotten Realms™
+
+* 被遗忘国度战记
+
+* Innistrad: Midnight Hunt™
+
+* 依尼翠：黯夜猎踪
+
+* Innistrad: Crimson Vow™
+
+* 依尼翠：猩红婚誓
+
+* Kamigawa: Neon Dynasty™
+
+* 神河：霓朝纪
+
+* Streets of New Capenna™
+
+* 新卡佩纳：喧嚣黑街
+
+* Dominaria United™
+
+* 多明纳里亚：众志成城
+
+* The Brothers’ War™
+
+* 兄弟之战
+
+* Phyrexia: All Will Be One™
+
+* 非瑞克西亚：万界归一
+
+* March of the Machine™
+
+* 邪军压境
+
+* March of the Machine: The Aftermath™
+
+* 邪军压境：终战回响
+
+* The Lord of the Rings: Tales of Middle-earth®
+
+* 魔戒：中州传说
+
+* Wilds of Eldraine
+
+* 艾卓仙踪
+
+* The Lost Caverns of Ixalan
+
+* 依夏兰迷窟
+
+* Murders at Karlov Manor
+
+* 卡洛夫庄园谋杀案
+
+* Outlaws of Thunder Junction
+
+* 光雷驿镖客
+
+* Modern Horizons 3™
+
+* 摩登新篇3
+
+* Magic: The Gathering – Assassin’s Creed®
+
+* 万智牌 – 刺客信条
+
+* Bloomburrow
+
+* 斑隆洛
+
+* Duskmourn: House of Horror
+
+* 暮悲邸：鬼屋惊魂
+
+* Magic: The Gathering Foundations
+
+* 万智牌：基石构筑
+
+* Aetherdrift
+
+* 乙太飘移
+
+* Tarkir: Dragonstorm
+
+* 鞑契：龙岚录
+
+* Magic: The Gathering®—FINAL FANTASY™
+
+* 万智牌 – 最终幻想
+
+* Edge of Eternities
+
+* 虚空边域
+
+* Magic: The Gathering | Marvel’s Spider-Man
+
+* 万智牌 | 漫威的蜘蛛侠
+
+* Magic: The Gathering | Avatar: The Last Airbender
+
+* 万智牌 | 降世神通：最后的气宗
+
+* Lorwyn Eclipsed
+
+* 洛温：暗影笼罩
+
+* Magic: The Gathering | Teenage Mutant Ninja Turtles (Effective February 27, 2026)
+
+* 万智牌 | 忍者神龟 （2026年2月27日生效）
+
+* Secrets of Strixhaven (effective April 17, 2026)
+
+* 斯翠海文的秘密 （2026年4月17日生效）
+
+The following cards are banned in Modern tournaments:
+
+下列牌在近代赛制比赛中禁用：
+
+* Amped Raptor
+
+* 激放迅猛龙
+
+* Ancient Den
+
+* 远古狮穴
+
+* Arcum’s Astrolabe
+
+* 阿肯的星盘
+
+* Birthing Pod
+
+* 诞生荚
+
+* Blazing Shoal
+
+* 煌炎群列
+
+* Bridge from Below
+
+* 阴界渡桥
+
+* Chrome Mox
+
+* 五彩玛珂
+
+* Cloudpost
+
+* 云际哨站
+
+* Dark Depths
+
+* 黑暗深渊
+
+* Deathrite Shaman
+
+* 丧仪祭师
+
+* Dig Through Time
+
+* 历时挖掘
+
+* Dread Return
+
+* 颤栗再现
+
+* Eye of Ugin
+
+* 乌金之眼
+
+* Field of the Dead
+
+* 亡者旷野
+
+* Fury
+
+* 怒火
+
+* Gitaxian Probe
+
+* 吉塔厦探刺
+
+* Glimpse of Nature
+
+* 瞥视自然
+
+* Golgari Grave-Troll
+
+* 葛加理墓地巨魔
+
+* Great Furnace
+
+* 大熔炉
+
+* Grief
+
+* 悲恸
+
+* Hogaak, Arisen Necropolis
+
+* 醒转古陵寝霍佳葛
+
+* Hypergenesis
+
+* 多重创生
+
+* Jegantha, the Wellspring
+
+* 丰饶泉源杰甘沙
+
+* Krark-Clan Ironworks
+
+* 喀勒克族制铁厂
+
+* Lurrus of the Dream-Den
+
+* 梦巢猫魇路拉斯
+
+* Mental Misstep
+
+* 心灵失足
+
+* Mycosynth Lattice
+
+* 构生菌格栅
+
+* Mystic Sanctuary
+
+* 神秘圣地
+
+* Nadu, Winged Wisdom
+
+* 翼展智慧拿杜
+
+* Oko, Thief of Crowns
+
+* 窃冠瓯柯
+
+* Once Upon a Time
+
+* 很久以前
+
+* Ponder
+
+* 沉思
+
+* Punishing Fire
+
+* 惩戒火焰
+
+* Rite of Flame
+
+* 烈焰仪式
+
+* Seat of the Synod
+
+* 悉诺议会宅邸
+
+* Second Sunrise
+
+* 二度日升
+
+* Seething Song
+
+* 热血战歌
+
+* Sensei’s Divining Top
+
+* 师范占卜陀螺
+
+* Simian Spirit Guide
+
+* 猿猴精怪向导
+
+* Skullclamp
+
+* 备忘夹
+
+* Summer Bloom
+
+* 仲夏之花
+
+* The One Ring
+
+* 至尊戒
+
+* Tibalt’s Trickery
+
+* 提勃的诈术
+
+* Treasure Cruise
+
+* 宝船巡游
+
+* Tree of Tales
+
+* 传说之树
+
+* Underworld Breach
+
+* 冥界裂隙
+
+* Umezawa’s Jitte
+
+* 梅泽的十手
+
+* Up the Beanstalk
+
+* 爬上豆茎
+
+* Uro, Titan of Nature’s Wrath
+
+* 天怒泰坦乌洛
+
+* Vault of Whispers
+
+* 细语暗窖
+
+* Violent Outburst
+
+* 暴烈迸发
+
+* Yorion, Sky Nomad
+
+* 游空牧鸟约力昂
+
+## MTR 6.5 Vintage Format Deck Construction 特选赛制套牌构组
+
+Vintage decks may consist of cards from all Magic card sets, plus the following cards: Sewers of Estark, Windseeker Centaur, and Nalathni Dragon.
+
+特选赛制的套牌可以由威世智公司所发售的所有万智牌系列的牌组成。此外,下列牌张也可用于构组特选赛制套牌:Sewers of Estark、Windseeker Centaur 和 Nalathni Dragon。
+
+Cards from expansions and special sets (like From the Vault, Magic: The Gathering—Commander, Duel Decks, Conspiracy, etc.) are legal in the Vintage format on the date of release of the expansion or special set.
+
+来自扩展系列及特殊系列的卡牌(如 From the Vault、万智牌 — 指挥官、Duel Deck、诡局等等)自该扩展系列和特殊系列发售当日起便可以在特选赛制中使用。
+
+>Cards don’t have to be released in normal sets in order to be legal in Vintage. Any time a card is printed in any set, it is legal on the release of that set. Note that this does not include cards obtained at a Prerelease; those are legal on the set’s release date.
+>
+>These are the cards banned in Vintage. Any of these are illegal to be played in Vintage tournaments. Generally speaking, they fall into three categories: cards dealing with the Ante zone (e.g. Demonic Attorney), cards dealing with physical manipulation of cards (e.g. Chaos Orb), and Conspiracies (e.g. Backup Plan).
+>
+>特选赛中的合法系列不一定必须是正常系列。每当一张牌在任何新发售的系列中出现时，那它就是特选赛的合法牌张。这不包括售前赛上获得的牌，这些牌将在该系列正式发售时在赛制中合法。
+>
+>以下是特选赛禁止使用的牌。在特选赛中，这些牌都是不合法的。总的来说，它们可分为三类：与赌注区相关的牌（例如恶魔律师）；涉及物理操作牌张的牌（例如混沌法球）；诡局牌（例如后备计划）。
+
+The following cards are banned in Vintage tournaments:
+
+下列牌在特选赛制比赛中禁用：
+
+* All cards with the card type “Conspiracy” (25 cards)
+
+* 所有牌张类别为「诡局」的牌（共25张）
+
+* All cards that reference “playing for ante” (9 cards)
+
+* 所有提及「赌注」的牌（共9张）
+
+* All cards that bring a sticker or an Attraction into the game (56 Cards). Click [here](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement) for the list.
+
+* 将贴纸和景点带入游戏的所有牌张（共56张），点击[此处](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement)可以查询列表。
+
+* Cards whose art, text, name, or combination thereof that are racially or culturally offensive are banned in all formats. This list is a work in progress. Click [here](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10) for the list.
+
+* 禁止图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张。该列表还在施工中，可以点击[此处](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10)查询。
+
+* Chaos Orb
+
+* 混沌法球
+
+* Falling Star
+
+* 流星
+
+* Shahrazad
+
+* 雪赫拉莎德
+
+The following cards are restricted in Vintage tournaments:
+
+下列牌在特选赛制比赛中限用：
+
+* Ancestral Recall
+
+* 先人的召还
+
+* Balance
+
+* 均势
+
+* Black Lotus
+
+* 黑莲花
+
+* Brainstorm
+
+* 脑力激荡
+
+* Chalice of the Void
+
+* 虚空圣杯
+
+* Channel
+
+* 魔力通道
+
+* Demonic Consultation
+
+* 恶魔协商
+
+* Demonic Tutor
+
+* 邪魔导师
+
+* Dig Through Time
+
+* 历时挖掘
+
+* Flash
+
+* 闪现
+
+* Gitaxian Probe
+
+* 吉塔厦探刺
+
+* Golgari Grave-Troll
+
+* 葛加理墓地巨魔
+
+* Gush
+
+* 宣泄
+
+* Imperial Seal
+
+* 玉玺
+
+* Karn, the Great Creator
+
+* 万创卡恩
+
+* Library of Alexandria
+
+* 亚历山大图书馆
+
+* Lion’s Eye Diamond
+
+* 狮眼钻
+
+* Lodestone Golem
+
+* 磁石魔像
+
+* Lotus Petal
+
+* 莲花瓣
+
+* Mana Crypt
+
+* 魔法力墓穴
+
+* Mana Vault
+
+* 魔法力库
+
+* Memory Jar
+
+* 记忆瓶
+
+* Mental Misstep
+
+* 心灵失足
+
+* Merchant Scroll
+
+* 行商卷轴
+
+* Mind’s Desire
+
+* 心之所欲
+
+* Monastery Mentor
+
+* 寺院明师
+
+* Mox Emerald
+
+* 翡翠玛珂
+
+* Mox Jet
+
+* 黑玉玛珂
+
+* Mox Pearl
+
+* 珍珠玛珂
+
+* Mox Ruby
+
+* 红宝石玛珂
+
+* Mox Sapphire
+
+* 蓝宝石玛珂
+
+* Mystic Forge
+
+* 神秘熔炉
+
+* Mystical Tutor
+
+* 神秘导师
+
+* Narset, Parter of Veils
+
+* 揭帷娜尔施
+
+* Necropotence
+
+* 死冥权能
+
+* Sol Ring
+
+* 阳光戒
+
+* Strip Mine
+
+* 废矿
+
+* Thorn of Amethyst
+
+* 紫水晶刺
+
+* Time Vault
+
+* 时之库
+
+* Time Walk
+
+* 时间行走
+
+* Timetwister
+
+* 时间扭曲
+
+* Tinker
+
+* 打造
+
+* Tolarian Academy
+
+* 陶拉里亚大学院
+
+* Treasure Cruise
+
+* 宝船巡游
+
+* Trinisphere
+
+* 三定法球
+
+* Urza’s Saga
+
+* 克撒传
+
+* Vampiric Tutor
+
+* 吸血鬼导师
+
+* Vexing Bauble
+
+* 乱心饰品
+
+* Wheel of Fortune
+
+* 命运之轮
+
+* Windfall
+
+* 横财
+
+* Yawgmoth’s Will
+
+* 约格莫夫的意志
+
+>This is the only restricted list in Magic. These cards are generally the most powerful allowed in Vintage, and only one of each card can be played in a player’s library or sideboard (but not in both).
+>
+>这是万智牌中唯一一份限牌表。这些牌在特选赛中过于强大，牌手只能在主牌或备牌中至多使用一张（不能在主牌和备牌中都使用）。
+
+## MTR 6.6 Legacy Format Deck Construction 薪传赛制套牌构组
+
+Legacy decks may consist of cards from all Magic card sets, plus the following cards: Sewers of Estark, Windseeker Centaur, and Nalathni Dragon.
+
+薪传赛制的套牌可以由威世智公司所发售的所有万智牌系列的牌组成。此外，下列牌张也可用于构组薪传赛制套牌：Sewers of Estark、Windseeker Centaur和Nalathni Dragon。
+
+Cards from expansions and special sets (like From the Vault, Magic: The Gathering—Commander, Duel Decks, Conspiracy, etc.) are legal in the Legacy format on the date of release of the expansion or special set.
+
+来自扩展系列及特殊系列的卡牌（如From the Vault、万智牌 — 指挥官、Duel Deck、诡局等等）自该扩展系列和特殊系列发售当日起便可以在薪传赛制中使用。
+
+>Cards don’t have to be released in normal sets in order to be legal in Legacy. Any time a card is printed in any set, it is legal on the release of that set. Note that this does not include cards obtained at a Prereleases; those are legal on the set’s release date.
+>
+>薪传赛中的合法系列不一定必须是正常系列。每当一张牌在任何新发售的系列中出现时，那它就是薪传赛的合法牌张。这不包括售前赛上获得的牌，这些牌将在该系列正式发售时在赛制中合法。
+
+The following cards are banned in Legacy tournaments:
+
+下列牌在薪传赛制比赛中禁用：
+
+* All cards with the card type “Conspiracy” (25 cards)
+
+* 所有牌张类别为「诡局」的牌（共25张）
+
+* All cards that reference “playing for ante” (9 cards)
+
+* 所有提及「赌注」的牌（共9张）
+
+* All cards that bring a sticker or an Attraction into the game (56 Cards). Click [here](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement) for the list.
+
+* 将贴纸和景点带入游戏的所有牌张（共56张），点击[此处](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement)可以查询列表。
+
+* Cards whose art, text, name, or combination thereof that are racially or culturally offensive are banned in all formats. This list is a work in progress. Click [here](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10) for the list.
+
+* 禁止图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张。该列表还在施工中，可以点击查询。
+
+* Ancestral Recall
+
+* 先人的召还
+
+* Arcum’s Astrolabe
+
+* 阿肯的星盘
+
+* Balance
+
+* 均势
+
+* Bazaar of Baghdad
+
+* 巴格达市集
+
+* Black Lotus
+
+* 黑莲花
+
+* Channel
+
+* 魔力通道
+
+* Chaos Orb
+
+* 混沌法球
+
+* Deathrite Shaman
+
+* 丧仪祭师
+
+* Demonic Consultation
+
+* 恶魔协商
+
+* Demonic Tutor
+
+* 邪魔导师
+
+* Dig Through Time
+
+* 历时挖掘
+
+* Dreadhorde Arcanist
+
+* 震惧军奥术师
+
+* Earthcraft
+
+* 操地术
+
+* Entomb
+
+* 入土
+
+* Expressive Iteration
+
+* 展现迭代
+
+* Falling Star
+
+* 流星
+
+* Fastbond
+
+* 极速扩张
+
+* Flash
+
+* 闪现
+
+* Frantic Search
+
+* 狂搜乱寻
+
+* Gitaxian Probe
+
+* 吉塔厦探刺
+
+* Goblin Recruiter
+
+* 鬼怪征兵员
+
+* Grief
+
+* 悲恸
+
+* Gush
+
+* 宣泄
+
+* Hermit Druid
+
+* 隐者德鲁依特
+
+* Imperial Seal
+
+* 玉玺
+
+* Library of Alexandria
+
+* 亚历山大图书馆
+
+* Lurrus of the Dream-Den
+
+* 梦巢猫魇路拉斯
+
+* Mana Crypt
+
+* 魔法力墓穴
+
+* Mana Drain
+
+* 汲取魔力
+
+* Mana Vault
+
+* 魔法力库
+
+* Memory Jar
+
+* 记忆瓶
+
+* Mental Misstep
+
+* 心灵失足
+
+* Mind Twist
+
+* 心灵扭曲
+
+* Mishra’s Workshop
+
+* 米斯拉的作坊
+
+* Mox Emerald
+
+* 翡翠玛珂
+
+* Mox Jet
+
+* 黑玉玛珂
+
+* Mox Pearl
+
+* 珍珠玛珂
+
+* Mox Ruby
+
+* 红宝石玛珂
+
+* Mox Sapphire
+
+* 蓝宝石玛珂
+
+* Mystical Tutor
+
+* 神秘导师
+
+* Nadu, Winged Wisdom
+
+* 翼展智慧拿杜
+
+* Necropotence
+
+* 死冥权能
+
+* Oath of Druids
+
+* 德鲁依之誓约
+
+* Oko, Thief of Crowns
+
+* 窃冠瓯柯
+
+* Psychic Frog
+
+* 灵能蛙
+
+* Ragavan, Nimble Pilferer
+
+* 巧手窃猴勒格文
+
+* Sensei’s Divining Top
+
+* 师范占卜陀螺
+
+* Shahrazad
+
+* 雪赫拉莎德
+
+* Skullclamp
+
+* 备忘夹
+
+* Sol Ring
+
+* 阳光戒
+
+* Sowing Mycospawn
+
+* 茂生孽菌体
+
+* Strip Mine
+
+* 废矿
+
+* Survival of the Fittest
+
+* 适者生存
+
+* Time Vault
+
+* 时之库
+
+* Time Walk
+
+* 时间行走
+
+* Timetwister
+
+* 时间扭曲
+
+* Tinker
+
+* 打造
+
+* Tolarian Academy
+
+* 陶拉里亚大学院
+
+* Treasure Cruise
+
+* 宝船巡游
+
+* Troll of Khazad-dûm
+
+* 卡扎督姆食人妖
+
+* Underworld Breach
+
+* 冥界裂隙
+
+* Vampiric Tutor
+
+* 吸血鬼导师
+
+* Vexing Bauble
+
+* 乱心饰品
+
+* Wheel of Fortune
+
+* 命运之轮
+
+* White Plume Adventurer
+
+* 白羽山冒险家
+
+* Windfall
+
+* 横财
+
+* Wrenn and Six
+
+* 芮恩与六树妖
+
+* Yawgmoth’s Bargain
+
+* 约格莫夫式交易
+
+* Yawgmoth’s Will
+
+* 约格莫夫的意志
+
+* Zirda, the Dawnwaker
+
+* 熠晓灵狐泽尔达
+
+## MTR 6.7 Pioneer Format Deck Construction 先驱赛制套牌构组
+
+The following card sets are permitted in Pioneer tournaments:
+
+下述各系列可在先驱赛制比赛中使用：
+
+* Return to Ravnica
+
+* 再访拉尼卡
+
+* Gatecrash
+
+* 兵临古城
+
+* Dragon’s Maze
+
+* 巨龙迷城
+
+* Magic 2014 core set
+
+* 万智牌2014核心系列
+
+* Theros
+
+* 塞洛斯
+
+* Born of the Gods
+
+* 天神创生
+
+* Journey Into Nyx
+
+* 尼兹之旅
+
+* Magic 2015 core set
+
+* 万智牌2015核心系列
+
+* Khans of Tarkir
+
+* 鞑契可汗
+
+* Fate Reforged
+
+* 龙命殊途
+
+* Dragons of Tarkir
+
+* 鞑契龙王
+
+* Magic Origins
+
+* 万智牌：起源
+
+* Battle for Zendikar
+
+* 再战赞迪卡
+
+* Oath of the Gatewatch
+
+* 守护者誓约
+
+* Shadows over Innistrad
+
+* 依尼翠暗影
+
+* Eldritch Moon
+
+* 异月传奇
+
+* Kaladesh
+
+* 卡拉德许
+
+* Aether Revolt
+
+* 乙太之乱
+
+* Amonkhet
+
+* 阿芒凯
+
+* Hour of Devastation
+
+* 幻灭时刻
+
+* Ixalan
+
+* 依夏兰
+
+* Rivals of Ixalan
+
+* 决胜依夏兰
+
+* Dominaria
+
+* 多明纳里亚
+
+* Core 2019
+
+* 2019核心系列
+
+* Guilds of Ravnica
+
+* 烽会拉尼卡
+
+* Ravnica Allegiance
+
+* 效忠拉尼卡
+
+* War of the Spark
+
+* 火花之战
+
+* Core Set 2020
+
+* 2020核心系列
+
+* Throne of Eldraine
+
+* 艾卓王权
+
+* Theros Beyond Death
+
+* 塞洛斯：冥途求生
+
+* Ikoria: Lair of Behemoths
+
+* 依克黎：巨兽时空
+
+* Core Set 2021
+
+* 2021核心系列
+
+* Zendikar Rising
+
+* 赞迪卡再起
+
+* Kaldheim
+
+* 凯德海姆
+
+* Strixhaven: School of Mages
+
+* 斯翠海文
+
+* Adventures in the Forgotten Realms
+
+* 被遗忘国度战记
+
+* Innistrad: Midnight Hunt
+
+* 依尼翠：黯夜猎踪
+
+* Innistrad: Crimson Vow
+
+* 依尼翠：猩红婚誓
+
+* Kamigawa: Neon Dynasty
+
+* 神河：霓朝纪
+
+* Streets of New Capenna
+
+* 新卡佩纳：喧嚣黑街
+
+* Dominaria United
+
+* 多明纳里亚：众志成城
+
+* The Brothers’ War
+
+* 兄弟之战
+
+* Phyrexia: All Will Be One
+
+* 非瑞克西亚：万界归一
+
+* March of the Machine
+
+* 邪军压境
+
+* March of the Machine: The Aftermath
+
+* 邪军压境：终战回响
+
+* Wilds of Eldraine
+
+* 艾卓仙踪
+
+* The Lost Caverns of Ixalan
+
+* 依夏兰迷窟
+
+* Murders at Karlov Manor
+
+* 卡洛夫庄园谋杀案
+
+* Outlaws of Thunder Junction
+
+* 光雷驿镖客
+
+* Bloomburrow
+
+* 斑隆洛
+
+* Duskmourn: House of Horror
+
+* 暮悲邸：鬼屋惊魂
+
+* Magic: The Gathering Foundations
+
+* 万智牌：基石构筑
+
+* Aetherdrift
+
+* 乙太飘移
+
+* Tarkir: Dragonstorm
+
+* 鞑契：龙岚录
+
+* Magic: The Gathering®—FINAL FANTASY™
+
+* 万智牌 – 最终幻想
+
+* Edge of Eternities
+
+* 虚空边域
+
+* Magic: The Gathering | Marvel’s Spider-Man
+
+* 万智牌 | 漫威的蜘蛛侠
+
+* Magic: The Gathering | Avatar: The Last Airbender
+
+* 万智牌 | 降世神通：最后的气宗
+
+* Lorwyn Eclipsed
+
+* 洛温：暗影笼罩
+
+* Magic: The Gathering | Teenage Mutant Ninja Turtles (Effective February 27, 2026)
+
+* 万智牌 | 忍者神龟 （2026年2月27日生效）
+
+* Secrets of Strixhaven (effective April 17, 2026)
+
+* 斯翠海文的秘密 （2026年4月17日生效）
+
+The following cards are banned in Pioneer tournaments:
+
+下列牌在先驱赛制比赛中禁用：
+
+* Amalia Benavides Aguirre
+
+* 阿玛利亚贝纳维德阿格雷
+
+* Balustrade Spy
+
+* 栏外探子
+
+* Bloodstained Mire
+
+* 血斑泥沼
+
+* Expressive Iteration
+
+* 展现迭代
+
+* Felidar Guardian
+
+* 护卫晶角兽
+
+* Field of the Dead
+
+* 亡者旷野
+
+* Flooded Strand
+
+* 潮没水滨
+
+* Geological Appraiser
+
+* 探地人
+
+* Heartfire Hero
+
+* 心火勇士
+
+* Inverter of Truth
+
+* 逆真恶体
+
+* Jegantha, the Wellspring
+
+* 丰饶泉源杰甘沙
+
+* Karn, the Great Creator
+
+* 万创卡恩
+
+* Kethis, the Hidden Hand
+
+* 幕宾柯希斯
+
+* Leyline of Abundance
+
+* 丰足地脉
+
+* Lurrus of the Dream-Den
+
+* 梦巢猫魇路拉斯
+
+* Nexus of Fate
+
+* 龙命连结点Nexus of Fate
+
+* Oko, Thief of Crowns
+
+* 窃冠瓯柯
+
+* Once Upon a Time
+
+* 很久以前
+
+* Polluted Delta
+
+* 聚污三角洲
+
+* Sorin, Imperious Bloodlord
+
+* 骄傲血领索霖
+
+* Teferi, Time Raveler
+
+* 理时泰菲力
+
+* Undercity Informer
+
+* 地底城告密人
+
+* Underworld Breach
+
+* 冥界裂隙
+
+* Uro, Titan of Nature’s Wrath
+
+* 天怒泰坦乌洛
+
+* Veil of Summer
+
+* 夏色帘幕
+
+* Walking Ballista
+
+* 自行弩炮
+
+* Wilderness Reclamation
+
+* 复归荒野
+
+* Windswept Heath
+
+* 风袭荒地
+
+* Winota, Joiner of Forces
+
+* 聚力领袖薇诺塔
+
+* Wooded Foothills
+
+* 繁茂丘陵
+
+# MTR 7. Limited Tournament Rules 限制赛制规则
+
+## MTR 7.1 Deck Construction Restrictions 套牌构组限制
+
+Limited decks must contain a minimum of forty cards. There is no maximum deck size. Any drafted or opened cards not used in a player’s Limited deck function as their sideboard.
+
+限制赛制的套牌必须至少包含四十张牌。没有套牌张数上限。牌手轮抽到或者开得的，但未在该牌手的限制赛套牌中使用的牌，都视作该牌手的备牌。
+
+Players are not restricted to four of any one card in Limited tournament play.
+
+在限制赛制的比赛中，牌手不受同一张牌只能放四张的限制。
+
+>One of the most frequent questions by newer players is if they are allowed to play more than four copies of a card in limited. The answer is yes! Note that they can of course play the cards in their main, or are allowed to have excess copies in their sideboard. A good idea is to have players who have more than four of particularly good cards mention it to you ahead of time. This can help offset any potential accusations of cheating.
+>
+>新手最多的疑问就是是否允许在限制赛中使用4张以上的同名牌。答案是可以！他们可以使用在主牌和备牌中使用超过4张的同名牌。可以建议牌手提前告诉你他们开到了超过四张同名的强力牌。这也能尽量避免怀疑作弊的可能性。
+
+## MTR 7.2 Card Use in Limited Tournaments 限制赛中可用的牌
+
+Cards must be received directly from tournament officials. This product must be new and previously unopened. Pro Tour, Limited Championship, Spotlight Series, Regional Championships, and World Championship tournaments may have had play boosters opened in order to stamp them. Each player (or team) must be given exactly the same quantity and type of product as all other players participating in the tournament. For example, if one player receives three Murders at Karlov Manor play boosters for a Booster Draft, all other players must also receive three Murders at Karlov Manor play boosters.
+
+牌手收到的牌都必须直接发放自比赛工作人员。此产品必须是全新的、且包装未被打开过。在专业赛、限制冠军赛、聚光灯系列赛、区域冠军赛及世界冠军赛中，所使用的常规补充包可能已事先拆封，以在其上盖好戳记。发给每位牌手（或团队）的产品之数量和种类，都必须与其他参加此场比赛的牌手所得到的相同。举例来说，如果在补充包轮抽时，发给了某位牌手三包卡洛夫庄园谋杀案的常规补充包，则必须发给所有牌手三包卡洛夫庄园谋杀案的常规补充包。
+
+Only cards from the expansions of the play boosters opened (and only cards opened or drafted in that player’s pool) may be used in a player’s deck. The following are exceptions to this rule:
+
+只有属于比赛过程中打开之所有常规补充包系列中的牌（且只有在该牌手开到或轮抽得到的牌池中的牌）才能在牌手的套牌当中使用。 此规则的例外情形如下：
+
+* Players may add an unlimited number of cards named Plains, Island, Swamp, Mountain, or Forest to their deck and sideboard. They may not add additional snow basic land cards (e.g., Snow-Covered Forest, etc) or Wastes basic land cards, even in formats in which they are legal.
+
+* 牌手可以将不限数量具有下列名称之牌张加入套牌及备牌中:平原/Plains、海岛/Island、沼泽/Swamp、山脉/Mountain、树林/Forest。牌手不得添加额外的雪境基本地牌(例如覆雪树林/Snow-Covered Forest这类)或荒野基本地牌,就算是在当前的赛制中这两类基本地牌属于可用牌也是一样。
+
+* Non-basic lands from the Return to Ravnica and Gatecrash expansions are allowed when opened in Dragon’s Maze draft boosters.
+
+* 从巨龙迷城轮抽补充包打开得到之来自再返拉尼卡与兵临古城这两个扩展系列的非基本地牌可以使用。
+
+* Non-basic lands from the Khans of Tarkir expansion are allowed when opened in Fate Reforged draft boosters.
+
+* 从龙命殊途轮抽补充包打开得到之来自鞑契可汗此扩展系列的非基本地牌可以使用。
+
+* Non-basic lands from the Zendikar Expeditions set are allowed when opened in Battle for Zendikar or Oath of the Gatewatch draft boosters.
+
+* 从再战赞迪卡或守护者誓约轮抽补充包打开得到之来自赞迪卡远探系列的非基本地牌可以使用。
+
+* Cards from a Masterpiece Series are allowed when opened in draft boosters associated with that series.
+
+* 从含有逸品重现牌张之相关系列的轮抽补充包打开得到之该类牌张可以使用。
+
+* Prerelease tournaments may feature additional exceptions. These will be announced as part of the Prerelease information.
+
+* 售前赛可能会有其他例外规定,此类规定会随着售前赛信息一同公布。
+
+Players may ask a judge for permission to replace a card with another version of the same card.
+
+牌手在征得裁判许可后，可用不同版本的同名牌替换牌池中的牌。
+
+Because it was designed specifically for multiplayer play, the use of Conspiracy booster packs in sanctioned, rated Limited-format tournaments (Sealed Deck and Booster Draft) is not permitted.
+
+由于诡局此系列系专为多人游戏设计，因此不得在认证的竞技类限制赛制比赛（现开赛和补充包轮抽）中使用该产品之补充包。
+
+Six play boosters per player are recommended for individual format Sealed Deck tournaments and 3 play boosters per player for individual Booster or Team Rochester Draft tournaments. For the recommended product mix for the current block, refer to Appendix D.
+
+在此建议，进行个人现开赛时，发给每位牌手6包常规补充包；进行个人轮抽或团队罗彻斯特轮抽赛时，发给每位牌手3包常规补充包。关于当前环境下所推荐的产品构成，请参见附录 D。
+
+If the Tournament Organizer allows players to provide their own product, that product must be pooled with the rest of the product for the tournament and randomly distributed.
+
+如果比赛主办人允许由牌手自己提供产品来参赛，则该些产品必须与用于该次比赛的其余产品放在同一产品池内并随机分配给参赛牌手。
+
+If the Tournament Organizer is not providing extra land cards for use in a Limited tournament, they must announce this before tournament registration. Tournament Organizers may require players to return these land cards when they leave the tournament. Players may use their own basic lands during tournaments.
+
+如果比赛主办人不提供用于限制赛的基本地，则他必须在比赛报名前公告相关事宜。比赛主办人可以要求牌手在离开比赛的时候归还所用的基本地牌。牌手可以在比赛中使用自己拥有的基本地。
+
+>Though they are not sanctioned (apart from perhaps casual unrated), Chaos drafts exist. Players in a Chaos draft are of course assigned product at random and do not need to receive the same product. Remember that if the event is sanctioned, then players do need to receive the same product as noted above.
+>
+>As a reminder, players in Prerelease tournaments may use the foil promotional card they open, as that card is from the current set. As a small additional reminder, checklist cards that are opened may be used if the player has opened the appropriate dual sided card as well.
+>
+>Players may ask to replace a card with another version of the same card. Often players will ask for a proxy for foil cards. While this proxy should not be issued unless the card is opened damaged, the player may use an equivalent non-foil version if available.
+>
+>Players often prefer to use their own basic lands for a variety of reasons. While this is typically not an issue, be aware of foil basic lands that are marked (warped), or Alpha lands that cause particular markings on sleeves through the course of the day. While the lands themselves may be fine, the markings can become an issue.
+>
+>在一些非认证的比赛，比如混沌轮抽中，牌手可以不必使用相同的产品。但是，一旦比赛被认证，那么牌手就需按照规则，使用相同的产品。
+>
+>牌手在售前赛中可以使用产品中的纪念闪，这是因为纪念闪也是来自当前系列中的牌。另外，如果牌手开到了双面牌，那他也可以用开到的列表牌来代替。
+>
+>牌手可以要求用相同的其他版本的牌来替代牌池中的牌，有时候牌手会在想要使用闪卡时这么做。尽管这种情况下不得制作代牌，牌手如果自己有的话，可以使用相同的非闪牌来替代。
+>
+>牌手可能会想要使用自己的基本地。虽然这是允许的，但是仍请注意：闪牌是会弯曲的，ALPHA版本的牌也会在牌套上留下特殊的印记。这些牌本身可能没有问题，但有时某些牌会成为“有记号的牌”。
+
+## MTR 7.3 Continuous Construction 连续构组
+
+Players participating in Limited tournaments that do not use decklists may freely change the composition of their decks between matches by exchanging cards from their deck for cards in their sideboard without being required to return their deck to its original composition before their next match. The Head Judge or Tournament Organizer must inform players if this option is not being used prior to the start of deck construction. This option is not available at Competitive or Professional Rules Enforcement Level tournaments.
+
+参加无需提交套牌登记表的限制比赛之牌手可以在局与局之间，通过以套牌中的牌交换备牌中的牌之方式，自由地变更其套牌的组成，而不需要在其下一局比赛开始之前将其套牌组成恢复原样。如果主审或比赛主办人不想在比赛中使用此可选规则，则须在构组套牌之前将此决定告知所有牌手。此可选规则在执法严格度为竞争或专业级别的比赛中不可用。
+
+>The default for events that do not have a decklist is continuous construction. Remember that Competitive and Professional Rules Enforcement Level events should have decklists, and thus the original composition needs to be restored prior to the start of each match.
+>
+>对于不使用牌表的比赛而言，默认选项是连续构组。在竞争级别以及专业级别的比赛中必须使用牌表，因此牌手必须在每局比赛开始前还原主牌。
+
+## MTR 7.4 Abnormal Product 异常产品
+
+Neither Wizards of the Coast nor the Tournament Organizer guarantee any specific distribution of card rarities or frequency in a particular booster pack or tournament pack. If a player receives an unconventional distribution of rarities or frequencies in a particular booster pack or tournament pack, they must call a judge. The final decision to replace or allow the atypical product is at the discretion of the Head Judge and the Tournament Organizer.
+
+威世智公司和比赛主办人皆无法保证在所有的补充包或比赛用牌产品中具有某种特定的稀有度或频率的分布。如果在牌手拿到的某个补充包或比赛用牌中具有不合常规的稀有度或频率的分布，该牌手必须立刻告知裁判。是否要更换或是允许此异常产品继续使用的最终决定，由主审和比赛主办人协商后做出。
+
+>It is recommended that Tournament Organizers allow the player who opened the irregular product to keep the pack, but provide them with a replacement pack for the remainder of the limited event. On the whole, the cost of the pack is less than the cost of a disruption that will occur if you attempt to do anything else.
+>
+>Players should open and verify a pack one at a time. It gets messy if someone is missing an uncommon/has an extra uncommon and they find out after all 6 packs are opened.
+>
+>If a player is missing a card, the Head Judge (with TO approval) can open a booster and pick a random card of that rarity to replace the missing one. If a player has an extra card, your options are to leave it, replace the whole pack, or have the player add a random card from the rarity of the extra one to their trade binder. It is generally best to minimize disruption to the pool by removing a card.
+>
+>It is also worth noting that in the past Wizards of the Coast has rarely and (unintentionally?) put product from a future or previous set into a pack. If that occurs then this would also fall under the abnormal product policy listed here.
+>
+>建议赛事组织者允许开出异常产品的玩家保留该补充包，同时为其提供一个替换补充包，用于本次限制赛的剩余部分。总体而言，卡包的成本低于如果采取其他处理方式可能导致的比赛中断成本。
+>
+>牌手有义务在打开每一包产品时都检查产品的情况。如果在开完6包牌之后才发现多了或少了一张非普通牌会非常麻烦。
+>
+>如果牌手少开出一张牌，主审（在主办方许可下）可以打开一包补充包随机挑选一张相同稀有度的牌加入该牌手的牌池。如果牌手多开出了一张牌，你可以考虑维持现状，或者替换整包产品，或者让牌手随机从牌池中移除一张多出的稀有度的牌。移除牌张时要尽可能减少对牌池的影响。
+>
+>值得注意的是，威世智偶尔会（不小心？）将未来或者从前系列中的某张牌放进当前系列的补充包里。这种情况也会算作异常产品。
+
+## MTR 7.5 Sealed Deck Pool Registration 登记现开套牌牌池
+
+In Sealed Deck tournaments, the Head Judge may require players to perform a Sealed Deck pool registration procedure prior to deck construction:
+
+在现开赛中，主审可要求牌手在进行套牌构组前进行现开牌池登记的流程：
+
+* Each player is distributed the appropriate number of boosters. The booster packs should be marked in a way that distinguishes they came from the Tournament Organizer for that tournament.
+
+* 每位牌手获得对应数量的补充包。补充包上应有明确记号，证明其属于比赛主办人为本次比赛所发之补充包。
+
+>A quick and easy way to mark the boosters can be to run a marker down one of the sides. This is easy and scales well to large events like Grand Prix, if Grand Prix were still a thing, or even if large sealed Comp Rel events were still a thing. For smaller events Judges and TOs can use more personal touches like stickers to better uniquely identify the packs as belonging to the event.
+>
+>简单的做记号的方法是用记号笔在产品周边画上一圈。这能够增加大型比赛（例如大奖赛）上的工作效率，如果大奖赛仍然存在的话，或者大型竞争级别现开赛事依然存在的话。对于小型比赛而言，裁判和主办方可以考虑用贴纸等方法来完成此项工作。
+
+* Players on one side of each table open their booster packs (Player A). The player directly across (Player B) observes this. Both players will observe and verify the contents of those booster packs. After this process, the opened cards are stacked face down in a single pile and placed near Player B.
+
+* 同位于所有桌子某一侧的牌手打开手中的所有补充包（牌手 A）。坐于其正对面的牌手（牌手 B）查看此流程。双方牌手共同查看并核对补充包的内容。在此流程后,将开得的牌面朝下地放成一堆，并放在靠近牌手 B 的地方。
+
+>When making announcements, it is important to let players know who is going first and who is going second. An easy way to denote this would be to tell players on a side of the table relative to a certain point, like the main stage or the Head Judge. For example “all players sitting on the sides of tables further away from the main stage will open packs first, followed by those closer.”
+>
+>在赛前公告时，让牌手知道谁先开谁后开十分重要。一个简单的分辨方法是相对于某一点（例如主席台或主审本人）的位置。例如“远离主席台的牌手先打开补充包，然后对面的牌手再打开补充包”。
+
+* Player B will now open their booster packs. Player A observes. Both players will observe and verify the contents. After this process, the opened cards are stacked face down in a single pile and placed near Player A.
+
+* 轮到由牌手B来打开补充包。牌手A查看。双方牌手共同查看并核对补充包的内容。在此流程后，将开得的牌面朝下地放成一堆，并放在靠近牌手A的地方。
+
+* Player A then sorts and registers the contents of Player B's pool, and vice versa.
+
+* 然后牌手A和牌手B各自整理并登记对方牌池的内容。
+
+* After registration, each player returns the registered card pool to the player who originally opened the pool.
+
+* 登记完成后，牌手将所登记的牌池还给原本开得此牌池的牌手。
+
+* Players construct and record decks as normal.
+
+* 牌手如常构组并登记套牌。
+
+>Sealed Deck Swap procedures are typical in Competitive Rules Enforcement Level events requiring decklists and help ensure that no one is trying to slip extra cards into their pool. By having other players register and observe the opening of the pool, we help minimize the ability of a player to slip additional cards in discretely. By seating players randomly for this, as is the norm, we help prevent collusion from friends who may get regularly seated together due to similar last names.
+>
+>Previous methods went to even greater lengths to randomize the pool that a player would obtain to build, but lead to other problems. Details on the reasons for this change can be read about here.
+>
+>We have realistically asked players to sort the pools for easy verification for some time now. Now we are making it more formal by requiring it via this document! It may be worth noting that some players may have trouble sorting the pools in a timely manner. If so please allot any resources available to help those players and keep the flow of the tournament moving.
+>
+>为了防止加牌，在需要登记牌表的竞争级别比赛中交换填写牌表是很普遍的。有了其他牌手的监督，可以更好地避免牌手往牌池里加牌。通过随机安排座位，可以尽量避免由于姓名相似而经常坐在一起的牌手勾结作弊。
+>
+>过去的方法更加费力，随机化了牌手获得的牌池，虽然有效，但会带来一些其他问题。可以在[这里](http://magic.wizards.com/en/articles/archive/news/sealed-pool-procedure-update-starting-gp-sydney-and-gp-madison-2015-10-08)了解详细信息。
+>
+>在实际操作中，我们有时会要求牌手整理牌池，以便牌手能够容易地确认牌池内容。现在通过这份文件，我们将这一操作变成了正式的要求！值得注意的是，有些牌手可能会对于在合理的时间内完成牌池整理有一定困难。如果发生这种情况，请安排任何可用的资源来帮助这些牌手，确保比赛流程正常运转。
+
+## MTR 7.6 Draft Pod Assembly 轮抽组的分配
+
+For Booster Draft and Team Rochester Draft tournaments, players assemble into random drafting circles (called pods) of roughly equal size at the direction of the Head Judge. Tournament officials then distribute identical sets of boosters to each player.
+
+在补充包轮抽及团队罗彻斯特轮抽赛中，牌手会随机分配到各个轮抽圈中（称为轮抽组），每个轮抽组的人数由主审斟酌确定，应大略相同。之后，比赛工作人员将同样组合的补充包发放给各轮抽组的每位牌手。
+
+>Pods should be as close to 8 as you can get. In general, try to get pods of 6 or 8 over odd numbers to avoid byes. Typically, the software will sort players automatically into pods of these size. The pods created should be used unless an error has occurred.
+>
+>轮抽组的人数应尽可能接近8人。一般而言，尽量组织6人或8人的轮抽组来避免产生轮空。比赛软件会自动按照上述情况为牌手分配轮抽组。除非软件出现错误，应尽量按照此分配。
+
+Players within a pod may play only against other players within that pod. In Regular Rules Enforcement Level tournaments, the Tournament Organizer may elect to lift this restriction. This must be announced before the tournament starts.
+
+属于某个轮抽组的牌手只会在比赛中对上同属于该轮抽组的其他牌手。在「一般」级别的比赛中，比赛主办人可以选择取消此限制，不过必须在比赛开始前公告相关事宜。
+
+>In general, players prefer playing against people in the same pod. Remember that a player losing to a player in a different pod may feel as though they have lost to measures outside of their control.
+>
+>一般而言，牌手应和同一轮抽组的其他牌手进行对局。如果某牌手输给了其他轮抽组的牌手，他会认为自己是输在可控范围外的其他因素。
+
+## MTR 7.7 Booster Draft Procedures 补充包轮抽程序
+
+All players must open and draft the same type of booster at the same time. Players open their first booster pack and count the cards face down, removing token cards, rules cards, and any other non-game cards. Players who receive an erroneous number of cards at any time must immediately notify a judge. Players choose one card from their current booster pack and then pass the remaining cards face down to the player on their left until all cards are drafted (Exception: When the Booster Draft consists of Double Masters boosters, players choose two cards for their first pick from each booster. All other Booster Draft rules remain the same). Once a player has removed a card from the pack and put it on top of their single, front face-down drafted pile, it is considered selected and may not be returned to the pack.
+
+所有牌手必须在同一时间打开相同种类的补充包进行轮抽。牌手打开各自的第一包补充包，以牌面向下的方式数补充包内的牌，并将补充包内有的衍生物牌、规则叙述牌，以及其他与游戏无关的牌拿出。如果牌手在任意时刻发现自己手中的补充包内牌的数量有误，必须立刻告知裁判。牌手从当前的补充包中选择一张牌，之后将剩余的牌以面向下的方式传给左边的牌手，直到所有牌都已被抽走（例外：当轮抽中包含双星大师补充包时，牌手在每包的第一抓选择两张牌。其他的轮抽规则保持不变）。一旦牌手从补充包中把牌拿出，放到自己单独的、牌面朝下的已选牌堆之中，便视为该牌手已选择该牌，不得再放回到补充包中。
+
+>Players changing their minds can cause problems or provide cover for sleight of hand shenanigans. It’s a good idea to have players put the tip/token/basic land card face up to avoid non-lands accidentally being removed from the pack. Lands used to be removed from the packs, but occasionally packs will sometimes replace a basic land with non-basic lands. Keeping the lands with the pack allows for a consistent draft experience.
+>
+>牌手改变主意可能会导致一些情况，一些牌手也会借此对抓到的牌做出一些手段。建议让牌手事先移除广告牌、基本地、衍生物等内容，避免发生混乱。过去，地会从补充包中移除，但有时补充包会用非基本地来替换一张基本地。将地保留在补充包中可以确保一致的轮抽体验。
+
+Players may not reveal the front face of their card selections or the contents of their current packs to other participants in the draft and must make a reasonable effort to keep that information from the sight of other players. Players are not permitted to reveal hidden information of any kind to other participants in the draft regarding their own picks or what they want others to pick. (Exception: This does not apply to double-faced cards, both faces of which may be revealed at any time during a draft.)
+
+在轮抽过程中，牌手不得向其他参赛者展示自己所选牌的正面，或是自己当前补充包的内容，同时牌手也应当尽力使自己的该些信息不被其他牌手看到。牌手不得向轮抽中的其他参赛者展示非公开信息，以表示自己选了哪些牌，或是要别人选什么牌。（例外：双面牌不适用于此规定，在轮抽过程中牌手可以随时展示双面牌的任一面。）
+
+>Drafters should hold their cards so only they can view them. They may need to be reminded to keep their cards up.
+>
+>If a player develops a case of wandering eyes, that’s bad. If you think they are doing so to get info on what’s in the next pack, please remove them from the event.
+>
+>牌手必须以适当的方式拿起牌，确保只有他们自己才能查看。可能需要提醒牌手把牌拿高一点。
+>
+>如果某牌手经常斜眼去看旁边，这是不恰当的。如果你确信他在看旁边的人有什么牌，将他移出比赛。
+
+Players and teams may not look at their drafted cards between or during picks at Competitive and Professional Rules Enforcement Levels. At Regular Rules Enforcement Level, players are allowed to review their drafted cards between or during picks as long as they are holding no other cards at the same time. The Head Judge may choose to disallow this provided they announce it before the first draft. Between booster packs there is a review period in which players may review their picks.
+
+在「竞争」和「专业」级别的比赛中，牌手和团队不得在两次抽牌之间或是进行选择的过程中检视自己已抽到的牌。在「一般」级别的比赛中，只要牌手没有手持其他未抽取的牌张，便可以在两次抽牌之间或是进行选择的过程中检视自己所抓到的牌。主审可以选择禁止此行为，但须在牌手进行第一次抽牌前公告相关事宜。在两包补充包之间有检视时间，牌手可以在这段时间内检视自己所抽到的牌。
+
+>Even though players can look at their picks in Regular Rules Enforcement Level, they must still draft at a reasonable pace. Please reinforce to players that they need to keep their picks and pack separate. Players are given a specific amount of time to examine their picks between each pack. For specific timing please see MTR Appendix B.
+>
+>即使在一般级别的比赛中，牌手可以看自己抓到的牌，但是他们也需以恰当的速度进行轮抽。向牌手申明，他们需将待抓的牌和已抓的牌分开。在抽每包牌之间，牌手会有更多的时间来检视已经抓到的牌。关于时间的说明，详见附录B。
+
+If the draft is not being timed, and two players do not wish to make a pick before the other player, the player closer to providing the other player with the pack picks first. If the players are equidistant, then the player in the lower seat number picks first.
+
+若轮抽并未计时，且有两位牌手均不愿在对方之前作出抽牌的决定，则由在传递方向上较为靠近对方的牌手先作出抽牌决定。若两位牌手之间距离相等，则由座号较小的牌手先作出抽牌决定。'
+
+>The last part about pick order is to deal with double-faced cards. Let’s say player 5 is waiting to pick based on player X’s pick. If X is from 2 to 4, 5 picks first. If X is from 6 to 8, X picks first. If X = 1, then X picks first.
+>
+>关于抽牌顺序的说明，是为了避免双面牌带来的问题。假设牌手5在基于牌手X的选择来抽牌。如果X在2到4之间，那么牌手5先决定要抽的牌。如果X在6到8之间，X先决定要抽的牌。如果X是1，那么X先决定要抽的牌。
+
+After the first pack is drafted and the review period completed, players open the next pack and draft in the same fashion, except that the direction of drafting is reversed—it now proceeds to the right. This process is repeated, reversing the direction of drafting for each booster pack until all cards in all booster packs are drafted.
+
+在第一包补充包轮抽完毕，检视时间结束之后，所有牌手打开下一包补充包，并以相同的方式进行轮抽，不过轮抽的方向要逆转——现在将补充包向右边传。重复此过程，每开一包新的补充包就逆转一次轮抽方向，直到所有补充包中的所有牌都轮抽完毕为止。
+
+If a player is unable or unwilling to continue drafting, but wishes to remain in the tournament, they are suspended from drafting and must construct a deck from whatever cards they have drafted thus far. For the remainder of the draft, their picks are skipped and the draft continues with one fewer player.
+
+如果有牌手无法或不愿继续进行轮抽，但仍希望能继续参加比赛的，则他会自本次轮抽过程中停权，且必须从自己已抽到的牌当中构组出一副套牌。在当前补充包轮抽剩下的过程，会略过该牌手的抽选，且轮抽以少一位牌手的状况继续。
+
+>It is very rare to see “unable or unwilling” being applied, but can theoretically happen. If they are disqualified during a draft, the draft continues and skips over that seat.
+>
+>很少遇到“无法或不愿”的情况，但理论上会发生。如果他们在轮抽过程中被取消资格，轮抽将继续并在经过该位置时略过。
+
+# MTR 8. Team Tournament Rules 团队赛规则
+
+## MTR 8.1 Team Names 团队名称
+
+Wizards of the Coast reserves the right to disallow any team name it deems offensive and/or obscene. Tournament officials may disallow teams from registering team names that may be considered offensive and/or obscene.
+
+威世智公司保留禁止使用任何视为有攻击性／猥亵的团队名称之权利。比赛工作人员可禁止团队使用可能被认为有攻击性／猥亵的团队名称来报名。
+
+>It is important to remember that Wizards of the Coast is the ultimate arbiter in what may be deemed offensive. While certain names (come on, you know what they are) are directly offensive, others may also be deemed unacceptable. Do not be surprised if a name that subtly insults players or officials is not allowed. Similarly a name that touts another game or competitor may also be viewed as poor.
+>
+>威世智对于行为是否具有攻击性具有最终裁定权。侮辱牌手以及工作人员的名称会被禁止，即使这种冒犯很隐晦也是不行的。鼓吹另一款游戏或竞争对手的名称也会被认为不适当。
+
+## MTR 8.2 Team Composition and Identification 团队组成与识别
+
+A valid team consists of two or three members, as appropriate to the format. A team is identified by the individual registration information (Wizards Account) of its respective members and all teams must provide the Tournament Organizer with the full information when registering for the tournament. Individuals may be members of more than one team, though not during the same tournament. If a player drops from the tournament, the entire team is dropped from the tournament. If a player is disqualified from the tournament, the entire team is disqualified from the tournament.
+
+合法的团队包含两名或三名成员，视具体的团队赛制而定。团队系以其成员的个人注册信息（威士智账户）来作识别，所有参赛团队在报名参加比赛时,必须向比赛主办人提供各自团队的完整信息。同一人可以在不同的比赛中分属不同的团队。如果团队中某位牌手自比赛中退出，则整支队伍都会退出比赛。如果某位牌手被取消比赛资格，则整支队伍都会被取消资格。
+
+Teams must designate player positions during tournament registration. For example, in a three-player team tournament, each team must designate who is player A, player B, and player C. Players retain these designations throughout the entire tournament.
+
+在进行比赛报名登记的时候，团队必须为其牌手指定位置代号。举例来说，在三人团队赛中，每支队伍都必须指定谁是牌手A、牌手B，及牌手C。在比赛的整个过程期间，牌手的代号保持不变。
+
+When two teams are paired against each other during the course of a tournament, the team members designated as “player A” play against each other, the team members designated as “player B” play against each other, and so on.
+
+当两个团队在比赛中被配对在一起时，被指定为牌手A的团队成员互相游戏，被指定为牌手B的团队成员互相游戏，依次类推。
+
+>Teams being identified by their individual Wizards Accounts mean that even if a team should change names, as long as the same three people are members of the team they will still be counted in the same event history. Teams of course may not compete with only two members, and are not allowed to “start down a match” a common question.
+>
+>Team seating is less important than making sure they play the correct opponent from the opposing team. If team member C would like to sit in the middle then that is fine, as long as both teams’ Cs are in the center. Teams should never intentionally scramble their orders mid tournament.
+>
+>团队以队员的DCI号来识别，意味着队伍即使改变了队名，只要队伍里的三位牌手不变，该团队仍会继承比赛中的记录。一个队伍不能只有两位牌手，也不允许他们“自动放弃”一位牌手的比赛。
+>
+>队伍的座位不是太重要，但要确保牌手能够与正确的对手进行对局。如果队员C想要坐在中间，那没问题。但是要确保两队的队员C都坐在中间。不允许在比赛中途随意打乱牌手的顺序。
+
+## MTR 8.3 Team Communication Rules 团队交流规则
+
+The rules for team communication are the same as those for Two-Headed Giant. See section 4.6 for more details.
+
+团队交流之规则与双头巨人之交流规则相同。详细规则见第4.6节。
+
+## MTR 8.4 Unified Deck Construction Rules 套牌联合构组规则
+
+Team Constructed tournaments use Unified Deck Construction rules: Except for cards with the basic supertype, no two decks on a team may contain the same card, based on its English card title. (For example, if one player is using Naturalize in a Team Constructed tournament, no other player on that team may use Naturalize in their deck.) No players may use cards that are banned in a particular format. Cards that override deck construction rules (i.e., Relentless Rats) may only override them for one deck on a team.
+
+团队构组赛中使用「套牌联合构组规则」：除了带有「基本」此超类别的牌之外，同一名称的牌只能在队伍中的一副套牌中使用；以英文牌名为判别标准。（例如，在团队构组赛中，某一位牌手的套牌里使用了回归自然/Naturalize，则同队伍的其他牌手就不能使用回归自然/Naturalize这张牌。）如果某张牌在该赛制中被禁用，便没有任何牌手可以使用之。具改变套牌构组规则异能之牌张（例如无情鼠群）只能改变一支队伍内一副套牌的该类规则。
+
+Unified Deck Construction rules are only applied when all members of a team have decks of the same format.
+
+套牌联合构组规则仅在团队中所有队员所使用之套牌属于同一赛制的情况下适用。
+
+>Note the change here!  Prior to this update we had the “four of” rule, that simply applied across the team instead of across a deck.  Now we only allow one player on a team to use any copies of a card.  This makes checking legality considerably easier, both for teams and judges.
+>
+>注意这里的更动！在这次更新前，联合构组使用的是“四张”规则，只是应用于整个团队而非个人。更改后，对于任何一张牌而言，队伍中都只能有一位牌手使用该牌。这个改动对于参赛队伍和裁判而言都使得验证套牌合法性更加简单。
+
+## MTR 8.5 Team Rochester Draft Tournaments 团队罗彻斯特轮抽赛
+
+Team Rochester Draft tournaments require teams of three players each. Two teams are seated at each table for the draft. Team members sit clockwise in A-B-C order around the table. (For example, in a three-person team tournament, players sit around the table clockwise in this order: 1A, 1B, 1C, 2A, 2B, 2C.)
+
+团队罗彻斯特轮抽赛中，每支队伍需要三名成员,轮抽时两支队伍分别坐在轮抽桌的两侧。团队的成员按 A-B-C 的顺序，按顺时针方向围着桌子就坐。（举例来说，在三人团队赛中，牌手以 1A、1B、1C、2A、2B、2C 的顺序，顺时针坐在桌旁。）
+
+A team determined at random chooses either to pick first or to allow the other team to pick first. Player B of the team that picks first lays out the first pack.
+
+以随机方式决定的队伍选择是要先选牌，还是要让对手队伍先选牌。由先选队伍的 B 牌手展开第一包补充包中所有的牌。
+
+The draft begins with the first player opening their first booster and laying out the entire contents of the pack face up on the table as directed by tournament officials, with the cards facing them. After reviewing the cards, drafting proceeds with each player selecting a single card in turn. Once a player has selected a card and placed it with their other drafted cards, they may not select a different card. If a player fails to select a card in the time given, a tournament official selects for that player the “oldest” card remaining from the booster pack (the card on the table the longest).
+
+随着第一位牌手听从比赛工作人员的指示，打开自己手头上第一包补充包，并将补充包内的所有牌以面朝上、对向自己的方式展开在桌面上，轮抽正式开始。在检视完该些牌之后，每位牌手轮流从中选择一张牌，使得轮抽进行下去。一旦某牌手选择了某张牌并将其与自己其它已抽选的牌放在一起，他便不得再去选择其它的牌。如果牌手没能在给定的时间内选好牌，则由比赛工作人员代替该位牌手选择该包牌中「最老」的那张牌（在桌面上停留时间最长的牌）。
+
+The player drafting first from the cards presented on the table is called the active player. The first active player is the participant who opened the first booster pack of the draft, as designated by a tournament official. All players in each drafting pod serve as the active player once for each group of booster packs. The identity of the active player moves in a horseshoe pattern, clockwise for the first and third booster packs and counterclockwise for the second. The player who was last to open a booster pack from a group is the first to open the booster pack from the next group.
+
+从展示在桌面上的牌中第一个进行轮抽的牌手称为「主动牌手」。该次轮抽中第一名打开包补充包的牌手便是第一位主动牌手。第一位主动牌手由比赛工作人员指定。在同一组补充包中，同桌的每一位牌手都会轮流担任一次主动牌手。主动牌手一职依照 U 形顺序轮换：第一和第三包补充包时轮换方向为顺时针，第二包时方向为逆时针。某一组中最后一位打开补充包的牌手，将会是下一组第一位打开补充包的牌手。
+
+The draft order also begins moving in a horseshoe pattern, clockwise for the first and third boosters and counterclockwise for the second, beginning with the active player, continuing around the table to the last player in the group to draft a card. The last player in the group selects two cards sequentially, and then drafting continues in reverse order, moving back to the player who began the drafting. If there are still cards remaining, the player who began the drafting selects two cards, and drafting continues again in the opposite direction.
+
+轮抽顺序同样依照 U 字形进行移动：第一和第三包时移动方向为顺时针，第二包时方向为逆时针，从主动牌手开始，绕桌让各位牌手依次抽选一张牌。本组的最后一位牌手连续选择两张牌，之后轮抽继续，方向倒转，向开始轮抽之牌手的方向移动。如果桌面上还有牌，则第一位轮抽的牌手选择两张牌，且轮抽方向再次倒转，轮抽继续进行。
+
+Example: Team 1 and Team 2 are seated around a table. They are numbered 1A-1B-1C-2A-2B-2C in a clockwise order. Team 2 wins the coin toss, and the members of Team 2 choose to let Team 1 pick first. The active player for the first pack is Player 1B. The first booster pack for Player 1B is opened and placed face up in front of Player 1B. After the 20-second review period has expired, the draft order is as follows:
+
+示例：甲队和乙队围着桌子就座，依顺时针顺序，牌手的编号依次为 1A-1B-1C-2A-2B-2C。乙队赢得了掷硬币，并且乙队的队员决定让甲队先来选牌。第一包的主动牌手是 1B。牌手 1B 打开了他的第一个补充包并把牌面朝上地放在了牌手 1B 面前。经过了 20 秒的检视时间之后，轮抽的顺序如下所示：
+
+| | | |
+|------|------|------|
+|Player 1B—card 1|Player 1A—card 6|Player 1C—card 11|
+|Player 1C—card 2|Player 1A—card 7|Player 1B—card 12|
+|Player 2A—card 3|Player 2C—card 8|Player 1B—card 13|
+|Player 2B—card 4|Player 2B—card 9|Player 1C—card 14|
+|Player 2C—card 5|Player 2A—card 10|Player 2A—card 15|
+
+| | | |
+|------|------|------|
+|牌手1B—第1张|牌手1A—第6张|牌手1C—第11张|
+|牌手1C—第2张|牌手1A—第7张|牌手1B—第12张|
+|牌手2A—第3张|牌手2C—第8张|牌手1B—第13张|
+|牌手2B—第4张|牌手2B—第9张|牌手1C—第14张|
+|牌手2C—第5张|牌手2A—第10张|牌手2A—第15张|
+
+During card selection, players must display the most recent card they drafted from the current pack. At all other times, players may leave one of their drafted cards face up on their draft pile or may leave all cards face down. Players may not review their draft picks while drafting proceeds or at any other time specifically indicated by tournament officials.
+
+在进行选牌的过程中，每位牌手都必须展示他自当前包中最近抽到的那张牌。在其余时间里，牌手可以选择让自己已选牌堆中顶上那张牌以面朝上的方式放着，或是让所有牌都面朝下的方式放着。在轮抽进行的过程中，以及比赛工作人员指明的时间内，牌手不得检视自己在轮抽中所选的牌。
+
+## MTR 8.6 Team Sealed Deck Tournaments 团队现开赛
+
+All the rules for individual Limited tournaments (Section 7) apply to Team Sealed Deck tournaments except as follows.
+
+为个人限制赛制订的所有规则（第 7 节），均适用于团队现开赛，但下列事项除外。
+
+Each team must receive the same product mix. For example, if one team receives twelve Murders at Karlov Manor play boosters, every team must receive twelve Murders at Karlov Manor play boosters.
+
+每一支队伍所得到的产品组合必须一样。例如,如果某支队伍得到了十二包卡洛夫庄园谋杀案的常规补充包，那么其他的队伍一定也是得到十二包卡洛夫庄园谋杀案的常规补充包。
+
+Eight boosters per team are recommended for two-person team tournaments, and twelve boosters per team for three-person team tournaments. For the recommended product mix for the current block, refer to Appendix D.
+
+在此建议，双人团队赛中，发给每支队伍八包补充包；三人团队赛中，发给每支队伍十二包补充包。关于当前环境下所推荐的产品构成，请参见附录 D。
+
+All cards must be assigned to a player’s deck or sideboard during deck construction and cannot be transferred to another player during that tournament. (Players do not share main deck or sideboard cards.) Players may exchange cards in their pool in Regular Rules Enforcement Level tournaments that do not use decklists, but only between rounds.
+
+在构组套牌时，所有的牌都必须有相对应的指定牌手在其套牌或备牌中使用之，且在该次比赛进行期间，属于某位牌手的牌不得转交给其他牌手来使用。（牌手之间并不共享主牌或备牌里面的牌。）在不使用套牌登记表的「一般」级别比赛当中，牌手可交换自己团队牌池中的牌，但是只能在两局之间进行。
+
+>For competitive tournaments the recommended product mix in the appendix is highly preferred to allow players to have a reasonable expectation of the format, though technically any product may be used within the rules above. Outside of team Grand Prix events competitive team events are rare, though when they do occur each match is still expected to follow the same guidelines as individual tournaments.
+>
+>即使理论上在符合规则的条件下可以使用任何产品，对于竞争级别的比赛而言，强烈建议使用附录中推荐的产品构成，这能让牌手有更好的准备。除了团队限制大奖赛外，团队现开赛制的比赛很少。在这些比赛中，对局参考个人赛的处理方式进行处理即可。
+
+# MTR 9. Two-Headed Giant Tournament Rules 双头巨人赛规则
+
+## MTR 9.1 Match Structure 对局结构
+
+Two-Headed Giant matches consist of one game. All players from the two teams play in the same game.
+
+双头巨人赛的对局包含有一盘游戏。两支队伍的所有牌手共同进行一盘游戏。
+
+Drawn games (games without a winner) do not count toward the one game. As long as match time allows, the match continues until a team has won a game.
+
+结果为平局的游戏（即没有胜利者的游戏）并不会记入此处所谓的「一盘游戏」之中。只要尚在规定的对局时限之内，双方就需继续进行比赛，直到决出有一支队伍为胜利者为止。
+
+>Two-Headed Giant games are slower than regular ones, so there is only time for a single game in each match for tournaments to finish in a reasonable amount of time. Most of the following rules attempt to mitigate the extra randomness of single game matches.
+>
+>This is a reference to different nature of Two-Headed Giant. The MTR isn’t the right place to explain the rules of Two-Headed Giant, they are contained in Magic Comprehensive Rules section 810.
+>
+>Just like in regular matches where “best of three” really means “first to two wins”, “best of one” really means “first to one win”.
+>
+>双头巨人赛的进程要比正常比赛要慢，所以在规定时间内，一般只能够进行1盘对局。后面的规则大多用于减缓只打一盘比赛产生的随机性。
+>
+>这只是引用了双头巨人赛的比赛特性。MTR不会讨论双头巨人的游戏规则，详细可参考CR 810。
+>
+>就像一般比赛中“三局两胜”实质上是“先赢两盘”一样。“一局定胜负”这里指的是“先赢得一盘游戏”。
+
+## MTR 9.2 Communication Rules 交流规则
+
+Teammates may communicate with each other at any time.
+
+队员可随时互相交流。
+
+>“Any” really does mean “any”. Players can’t abuse this to waste time, but otherwise there is no limit to how this works. Players can communicate at any time.
+>
+>A quick and definitely not complete list of such times:
+>- When deciding what to draft.
+>- When deciding to mulligan.
+>- At each step of casting a spell.
+>- Between turns.
+>- After untapping creatures but before untapping lands.
+>- The car ride home.
+>
+>“随时”确实就是指随时。牌手不能滥用这一点来浪费时间，其他方面则没有限制，牌手可以随时交流。交流的时机例如但不限于如下内容：
+>- 考虑轮抽时抽什么牌
+>- 考虑是否再调度时
+>- 在施放咒语的每个步骤中
+>- 两个回合之间
+>- 在重置了生物，还未重置地之前
+>- 在开车回家路上
+
+## MTR 9.3 Play-Draw Rule 先手规则
+
+A team determined at random chooses either to play first or to play second. The choice must be made before either player on that team looks at their hand. If either player on that team looks at their hand before their choice is made, that team plays first. The team who plays first skips the draw step of their first turn.
+
+通过随机的方式，决出一支队伍来选择是否要为先手。须在该队伍所有牌手看到自己手牌之前选择是否先手。如果在做出选择之前，队伍中有牌手看到了自己的手牌，则认为该队伍是先手。先手的队伍略过其首回合的抓牌步骤。
+
+>This should just be a rewording of the regular matches’ Play-Draw Rule with the word “player” replaced with “team”. All that is missing is the two paragraphs dealing with game two and three. If a game two is happening because game one ended in a draw do feel free to refer to the regular rules in section 2.2 for how that works.
+>
+>这仅仅是对于一般比赛中先手规则的改写，即将“牌手”改为“队伍”。去掉了关于第二盘以及第三盘的先手规则。如果两队因为平局而开始第二盘，那么可以参考章节2.2的一般规则来处理。
+
+## MTR 9.4 Pregame Procedure 游戏前程序
+
+1. Players decide which teammate will be the primary player and which teammate will be the secondary player. Players should be seated with the primary player to the right of their teammate. Players can choose a different primary and secondary player before each match.
+
+1\. 一支队伍中的两位牌手决定何者为主要牌手，何者为次要牌手。就座时，每支队伍的主要牌手应坐在其队友的右手边。在每一局开始之前，每支队伍都能重新选择主要和次要牌手。
+
+>Technically this rule is very important. In practice it never matters. The major practical effect is that, if the players can’t agree on something, the primary player gets to decide (see CR 805.2). Additionally, opponents’ attacking creatures are presumed to be attacking the team’s primary player unless otherwise specified. See MTR 4.2 for more details.
+>
+>理论上这个规则很重要，虽然实际游戏中几乎没有用到。它主要的作用在于：如果牌手不能达成一致，那么主要牌手将会做出决定（CR 805.2）。此外，对手的进攻生物在未加说明时会默认攻击主动牌手。详见 MTR4.2。
+
+2. Players shuffle their decks.
+
+2\. 牌手洗自己的套牌。
+
+>This means that each player is responsible for shuffling their own deck. This is consistent with each player being responsible for manipulating their own cards in every other way.
+>
+>这说明每位牌手都有责任洗自己的套牌。这与其他游戏方式中一样，牌手应当为操作自己的牌负责任。
+
+3. Players present their decks to their opponents for additional shuffling.
+
+3\. 双方牌手将套牌交给对手来再次洗牌。
+
+>Just like in individual games, opponents are encouraged to shuffle their opponents’ cards to discourage cheating and promote randomness in shuffling.
+>
+>与个人游戏一样，我们鼓励对手来洗牌，这样可以防止作弊同时鼓励洗牌更加随机化。
+
+4. The appropriate team must decide whether to play first or second at this point, if they have not done so already (see section 9.3)
+
+4\. 如果还未决定，相关团队应于此时决定先手还是后手（参见第9.3节）。
+
+5. Each player draws seven cards. Optionally, these cards may be dealt face down on the table.
+
+5\. 每位牌手抓七张牌。牌手可选择先将该些牌以面朝下的方式发到桌面上。
+
+>Another rule repeated so the reader doesn’t have to look anywhere else for the rule. We hope this rule isn’t a surprise to anyone. The instruction to draw the cards face down on the table helps a player avoid drawing an extra card.
+>
+>又是重复的一条规则（读者可以参考MTR2.3）。应该不必感到惊讶，将牌以面朝下的方式发到桌面上，可以帮助牌手避免抓多牌。
+
+6. Each player, in turn order, decides whether to mulligan. (Rules on Two-Headed Giant mulligans can be found in the Magic Comprehensive Rules, rule 103.4c)
+
+6\.  每位牌手依照回合顺序来决定是否要再调度。（双头巨人赛中再调度的规则可于《万智牌完整规则》规则103.4c中找到。）
+
+>The Magic Comprehensive Rules do cover this, but it is pretty dry reading. Rule 103.5d is also relevant to how mulligans in Two-Headed Giant works. A worked example is very helpful. Let’s walk through how the two teams take their mulligans:
+>- Alice and Alister have won the die roll and chosen to be on the draw. They look at their first seven cards, Alice doesn’t like her’s but Alister’s is fine and he declares that he will keep his. Alice starts shuffling.
+>- Nancy and Nigel look at their initial sevens and decide that they are both going to mulligan. They shuffle and Alice, Nancy and Nigel draw 7 new cards.
+>- Alice is happy with her second seven and declares that she is keeping, but Nancy and Nigel both choose to mulligan again. At this point Alister realises that he should have mulliganed, but it is too late and he must keep his original seven.
+>- Nancy and Nigel look at their six card hands and declare that they are happy with them. Mulligans are completed.Note that the ‘seven’ above is not a typo. Remember that multiplayer formats have a free mulligan!
+>
+>万智牌完整规则涵盖了这一点，但是阅读起来则有些枯燥。规则103.5d中的内容说明了双头巨人的再调度流程。在这里添加一个例子进行说明：
+>- Alice和Alister赢得了比点并选择了先手。他们看了各自的7张起手牌，Alice不太满意，但是Alister觉得不错，后者决定保留起手。Alice开始洗牌。
+>- Nancy和Nigel在看过起手牌后都决定再调度。然后Alice，Nancy和Nigel重新抓了7张牌。
+>- Alice这次很满意自己抓的7张牌，表示自己接了此起手牌。但是Nancy和Nigel决定再次再调度。此时Alister发现他想要再调度，但是此时已经为时过晚，他必须保留手上的七张牌。
+>- Nancy和Nigel再调度之后觉得6张牌的起手不错。再调度过程结束。注意上面的“7”张并没有写错，因为多人赛制有一次免费的再调度机会！
+
+Once players have completed their mulligans, the game can begin.
+
+一旦再调度完成，游戏便可开始。
+
+## MTR 9.5 Two-Headed Giant Constructed Rules 双头巨人构组赛规则
+
+Two-Headed Giant Constructed tournaments use Unified Deck Construction rules (see section 8.4).
+
+双头巨人构组赛使用「套牌联合构组规则」（请参见第 8.4 节）。
+
+In addition to cards banned in particular formats, the following card is banned in ALL Two-Headed Giant Constructed tournaments (Vintage, Legacy, Modern, and Block Constructed):
+
+除了在不同的赛制中被禁用的其他牌之外，下列牌张在所有的双头巨人构组赛中（特选、薪传、近代以及环境构组）均被禁用：
+
+* Erayo, Soratami Ascendant
+
+* 入圣空民伟代/Erayo, Soratami Ascendant
+
+Sideboards are not allowed in constructed Two-Headed Giant tournaments.
+
+在双头巨人构组赛中不得使用备牌。
+
+>Sideboards are disallowed because Two-Headed Giant matches are still best of 1 game. While this does impact the ability of players to functionally use cards like Living Wish that is an acceptable trade off. Aside from this, please remember that Two-Headed Giant constructed will be a particular format (Modern, Standard, Vintage!, etc) and as such is subject to those deck building restrictions. Additionally, Erayo is banned, no matter the format.
+>
+>不使用备牌是因为双头巨人赛一局定胜负。即使这仍会影响“祈愿”一类的牌。此外，双头巨人构组赛会属于一种赛制（近代，标准，特选等），构组套牌须遵循相应赛制的限制条件。此外，入圣空民伟代被禁，无论使用何种赛制。
+
+## MTR 9.6 Two-Headed Giant Limited Rules 双头巨人限制赛规则
+
+All the rules for Limited Tournaments (Section 7) apply, except as described below.
+
+为限制赛制订的所有规则（第 7 节），均适用于双头巨人限制赛，但下列事项除外。
+
+Eight boosters per team are recommended for Two-Headed Giant Sealed Deck tournaments and six boosters per team for Two-Headed Giant Booster Draft tournaments. For the recommended product mix for the current block, refer to Appendix D.
+
+在此建议，双头巨人现开赛中，发给每支队伍八包补充包；双头巨人轮抽赛中，发给每支队伍六包补充包。关于当前环境下所推荐的产品构成，请参见附录 D。
+
+Cards not used in a team’s starting decks are considered a shared sideboard by the two players that both players can access.
+
+未在队伍的主牌中使用的牌，均视作两位牌手的共用备牌，双方皆可使用此备牌。
+
+>Remember that while both players share the sideboard, matches are best of one game in Two-Headed Giant. Any tournament where the players may swap main deck and sideboard cards (e.g. where no decklists are used) make this rule important.
+>
+>尽管两位牌手共享备牌，比赛仍是一局定胜负。在一些比赛中，牌手可以更换自己的主牌和备牌（亦即不使用套牌登记表的比赛），这时此规则就比较重要了。
+
+## MTR 9.7 Two-Headed Giant Booster Draft Tournaments 双头巨人补充包轮抽赛
+
+Teams (not players) assemble into random drafting circles (called pods) of roughly equal size at the direction of the Head Judge. Teammates sit next to each other. Tournament officials then distribute identical boosters to each team in the pod.
+
+队伍（而非牌手）会随机分配到各个轮抽圈（称作轮抽组）中。每个轮抽组的队伍数由主审所斟酌，应大略相同。同一队的队员并肩而坐。之后比赛工作人员便将同样组成的补充包分发给该轮抽组中的每支队伍。
+
+After opening and counting the cards in their first pack, the team chooses two cards from the booster pack then passes the remaining cards face down to the team on its left. Selected cards may be placed into one or two piles. The cards chosen are not assigned to a particular player; they become part of a pool out of which both players will construct their decks. The open packs are passed around the drafting pod—with each team taking two cards from each before passing—until all cards are drafted.
+
+在打开各自手中的第一包补充包并完成计算包内牌数的工作之后，每支队伍从中选取两张牌，然后将剩余的牌以面朝下的方式传给左手边的队伍。已选取的牌可分作一堆或两堆来摆放。已选取的牌并不指定由特定的牌手来使用；而是构成两位牌手共用牌池的一部分，牌手利用该牌池来构组各自使用的套牌。已打开的补充包绕着轮抽组依次传递——每支队伍在每次传出前都会从中拿走两张牌——直至所有牌都已轮抽完毕为止。
+
+For the second pack, the direction of drafting is reversed as usual. Thus, the overall draft direction is left–right– left–right–left–right.
+
+在进行第二包的轮抽时，轮抽方向如常进行反向。因此，总体的轮抽方向是左-右-左-右-左-右。
+
+>The ideal situation here are pod sizes comparable to a typical draft. We would normally like to have six to eight players per pod and we want that here as well. This means three to four teams instead. You should not use six to eight teams per pod!
+>
+>Also remember that while drafting is typically a time without discussion, Two-Headed Giant is absolutely an exception. Players are allowed to communicate with their teammates and assist each other (as they are making picks together, as a team).
+>
+>与一般的轮抽一样，我们也希望能有6到8人参加一场轮抽。这表示最好能有3到4支队伍。别在每个轮抽组分配6到8队牌手啊！
+>
+>另外，一般来说轮抽的过程中不允许交流，但是双头巨人比赛是个例外。牌手可以互相交流并互相帮助（他们可以一起决定抓什么牌）。
+
+# MTR 10. Sanctioning Rules 认证规则
+
+## MTR 10.1 Participation Minimums 参赛人数下限
+
+Participation minimums for a tournament to be sanctioned as a rated tournament are as follows:
+
+可获认证为积分赛的比赛之参赛人数下限如下所述：
+
+* For individual tournaments, a minimum of four (4) players must participate.
+
+* 在个人赛中，至少须有四（4）位牌手参赛。
+
+* For team and Two-Headed Giant tournaments, a minimum of four (4) teams must participate.
+
+* 在团队赛和双头巨人赛中，至少须有四（4）支队伍参赛。
+
+Certain Premier tournaments (e.g, Regional Championship Qualifiers) require a higher minimum number of players.
+
+某些重要比赛（例如，区域冠军赛预选赛）需要达到更高的参赛人数下限。
+
+If the participation minimum is not met, the tournament is no longer DCI-sanctioned. If participation minimums are not met for any DCI-sanctioned tournament, the Tournament Organizer should report the tournament as “Did Not Occur.”
+
+若参赛人数未达下限，该比赛便不再属于DCI认证的比赛。若某个DCI认证的比赛未达参赛人数下限，其主办人必须向DCI回报该比赛「未举办（Did Not Occur）」。
+
+## MTR 10.2 Number of Rounds 对局轮数
+
+The minimum number of rounds required for a tournament to be sanctioned as a rated tournament is as follows:
+
+若要将比赛认证为积分赛，则所要求的局数下限如下所述：
+
+* For individual tournaments, a minimum of three (3) rounds
+
+* 在个人赛中，至少进行三（3）轮对局。
+
+* For team and Two-Headed Giant tournaments, a minimum of two (2) rounds
+
+* 在团队赛和双头巨人赛中，至少进行两（2）轮对局。
+
+If the minimum number of rounds is not met, the tournament is no longer DCI-sanctioned. If the minimum number of rounds is not met for any DCI-sanctioned, rated tournament, the Tournament Organizer should report the tournament as “Did Not Occur.”
+
+若对局轮数未达下限，该比赛便不再属于DCI认证的比赛。若某个DCI认证的积分赛未达对局轮数下限，其主办人必须将该比赛回报为「未举办（Did Not Occur）」。
+
+The number of rounds should be announced at or before the beginning of the first round; once announced, it cannot be changed. A variable number of rounds can be announced instead, with specific criteria for ending the tournament. For example, a tournament with 20 players can be announced as five rounds unless only one player has four match wins after four rounds.
+
+本次比赛所需要进行的对局轮数应在第一局开始之时或之前宣布；一旦宣布了相关事宜，便不得再更改。主办人可改为宣布一个非特定数目的局数，并附上结束比赛的特定条件。举例来说，在一场有20位牌手参加的比赛中，可宣布除非四轮对局后仅有一位牌手获得四胜，否则就需进行五局对局。
+
+The recommended number of rounds for Swiss tournaments can be found in Appendix E.
+
+在使用瑞士氏交叉赛程的比赛中所推荐的对局轮数可在附录E中找到。
+
+## MTR 10.3 Invitation-Only Tournaments 只对受邀牌手开放的比赛
+
+Invitation-only tournaments have additional qualification criteria for player participation. The invitation list for Premier tournaments is defined in the Magic: The Gathering Premier Tournament Invitation Policy. Tournament Organizers may hold and sanction invitation-only non-Premier tournaments, as long as they are sanctioned as a Magic Premier Series.
+
+只对受邀牌手开放的比赛对于牌手的参赛有额外的资格要求。重要比赛的邀请名单之确定于[《万智牌重要比赛邀请方针》](https://magic.gg/pro-tour)中详述。比赛主办人可以举办并认证非重要的邀请赛，但需认证为万智牌重要赛事。
+
+>The link takes you to a pro-tour page that has a link to the PDF at the bottom. There is no perma-link to the document.
+>
+>该链接会带你到一个专业赛的页面，页面底部有该PDF文件的链接。目前没有该文件的永久链接。
+
+## MTR 10.4 Pairing Algorithm 配对算法
+
+Unless otherwise announced, tournaments are assumed to follow the Swiss pairing algorithm. Some tournaments may proceed to single-elimination playoff rounds between the top 2, 4, or 8 (or other number) players after the Swiss rounds are over. The Swiss pairing algorithm is modified in booster draft tournaments as explained in section 7.6.
+
+除非宣布了其他配对方案，否则都认为所举办的比赛遵从瑞士式交叉赛程的配对算法。某些比赛可在瑞士式轮结束之后接着进行在头2、4、8（或其他数字）位牌手之间进行单淘汰决胜轮的对局。在补充包轮抽赛制中，瑞士式交叉赛程配对算法依第7.6节中所述进行了修正。
+
+At Pro Tour, Limited Championship, and World Championship tournaments, competitors are advanced to the playoff rounds before the end of the Swiss rounds (and receive byes for the remaining Swiss rounds) if they have achieved the announced number of match points required to advance to the playoff rounds. In this case, competitors in the Top 8 playoff are seeded in order from 1st through 8th. Seeding is determined by:
+
+在专业赛、限制冠军赛及世界冠军赛上，会事先宣布进入决胜轮所需的对局积分，选手在瑞士式轮阶段结束前获得相应的对局积分即可晋级决胜轮（并在后续的瑞士式轮次中获得轮空）。在这种情况下，进入前8名决胜轮的选手会按照第1名至第8名进行排名。排名顺序根据以下原则确定：
+
+* The round in which a competitor received the required number of match points to advance to the playoff rounds.
+
+* 选手在获得了能够晋级决胜轮所需的对局积分的轮次。
+
+* Their opponents’ match-win percentage, the competitor’s game-win percentage, and their opponents’ game-win percentage as of the round in which they receive the required number of match points to advance to the playoff rounds.
+
+* 选手在获得了能够晋级决胜轮所需的对局积分的轮次中达到的对手局胜率，选手的盘胜率，以及选手的对手盘胜率。
+
+* Seeding for the Top 8 playoff is locked after each round in which a competitor receives the required number of match points to advance to the playoff rounds.
+
+* 在每个有选手获得足够对局积分以晋级决胜轮的轮次结束后，这些晋级选手的前8名决胜轮排名即会被锁定。
+
+For constructed tournaments that have a single-elimination playoff (or Sealed Deck tournaments that do not use a Booster Draft for the playoff), the recommended pairing method is to pair the playoff players by the final Swiss standings.
+
+对于需进行单淘汰决胜轮的构筑赛制比赛（或未在决胜轮中进行补充包轮抽的现开赛制比赛）而言，在此建议根据瑞士轮末的最终排名来为参加决胜轮的牌手进行配对。
+
+For an 8-player playoff, the 1st place player plays the 8th place player, the 2nd place player plays the 7th place player, the 3rd place player plays the 6th place player, and the 4th place player plays the 5th place player. The winners of the 1st/8th place and 4th/5th place matches play each other in the next round of the playoff. The winners of the 2nd/7th place and 3rd/6th place matches play each other in the next round of the playoff. The remaining players play in the last round of the playoff.
+
+如决胜轮有8位牌手参加，则第1名牌手对上第8名，第2名对上第7名，第3名对上第6名，第4名对上第5名。第1名与第8名比赛的胜者将在次局与第4名和第5名比赛的胜者交手。第2名与第7名比赛的胜者将在次局与第3名和第6名比赛的胜者交手。这两场对局的胜者将在决胜轮的最后一局对阵。
+
+![Eight-player playoff bracket seeded by final Swiss standings](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAAC0CAIAAAAGpWdqAAAQAElEQVR4AezdCbzX07o/8HN+97r33HPvPfcYo0Eyh0qFIlRESjQZMp6KNGhQ0SANIo2IEM1K0SwNCBkylEqk0ZBoIuO5szvwf/96/H9n3/ruXcm227vffj2W57vWs6ZnfdaznvWsdqV+3P7zySef+P///M//fP/995gvv/zylVde6dy5c/fu3fv06XPrrbd26tTpzjvvvO2227pu/7n99ttvueWWXr16yWzbtu3dd9/drVu39u3b9+zZs2PHjh06dFDlrrvuatOmDYaw6mTatWtHWL7MO+64Q0tqaYSAuhoMRiOYhQsXfvPNNwYT9F//9V//+7//G/wO6Z///OcffvhB5g8/pNOcDD5LRUADqX/913/9zW9+c9RRR/3Lv/zLX/3VX/3N3/zNM888c9FFF9WoUWPdunUrVqyYP3/+p59++u677z733HOrVq1atmzZ+++//9JLL3388cevvfYa4c8///zpp59etGjR1q1b33777ZUrV7733nvLly9/9tlnFan4xhtv2AY+P9z+8+qrrxKI1pQuXrxYaxs3blyzZs1bb71FhMC0adPOOeecG264wW4xPIo+4IADUqnUDz/88G//9m///d//LRP953/+p/H/4Q9/+O1vf6sIRWYw+CwVDQ2k/uEf/sFKm8zvf/97KSPXokWLMmXKPPbYY8A3c+bMF154YfLkyZD05ptvzpkzB9qmTp0KlJD08ssvL1269PHHH1+yZAmBJ598UhWwnjVr1osvvgidcp5//nlQIyyVD50ho4pPrU2fPl1rU6ZMUaQvuAdTeO3Xr9/s2bNr1qw5atSof//3f4dIw4NU4wRZPPrd737313/91xiG1jlgm+HttGDwWSoaGkj98z//M6QCgaWdMWPGI488csEFFwANSyYHIMCCMTNbxy6jBRZyYEJOkE8MABGDG54D8wZY3377LcT4VKpIRZ/y//7v/17Of/zHfxDAxKcBKNIjMbbwoIMO4jww3kDcrl070FdEGByNAWMAeIwepejv/u7vpPJRFPnMUtHQQAqkzARovvrqK15jnTp1xo0bBygBL/kYnx988AF/EQJ8OnaBEuZUhF1HsJQMJHESGjduzByO2P5DYPTo0eyiWsgnSSkYQdXBBx9sk/j885//bKto8Mcff/Sp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IJtIihD8kVfXO5PHT8/shOXAOkQS0I7UZ5hYPALl8FPZbLyI5wsvvMBh8HAlyA+4PF1iKAtTSsjSXzQAmhl4QQ+s5ATWX+T+PwegHFkABUfUqlUrb91SngC8koLXOMTxWpZCpFoY+brAbN261QuW933Pqg899FDlypWZcMY15AlkYUoJWfqLBoASsHyzf3xTx3HwEJNIAEoA4KQwzZscMWJE48aNzzrrrEsuuWT27Nmeo7i1npeEqziyrlwQLEc+niM7adKkSy+9lE/RpEmT+++//+qrrzYGrWkK7jEoZTThARiTb/3FyDCKNm7c6I108+bNHmT5DSDv8sUg85TJb9myhYDYAQbxSwjH56ZNm/DeGAjYoEoxOpJPwO7xqSkNIvuGsGZdKhXJ/+ijjwwGUY3U0WAwGPTD//+JIjlBhm3MCEMkMgs8LYwDCO3BH5Nm/D4d1hCTSARQOAYYtUqXLj1+/PjHHnvs8ssvv+22284555zTTz89PFfYPffcc88888wzzjjj7LPPFuGqWbNm165d+am9evWaMWNG27ZtYVSP0VRm0dPhfR6AaKogGcToz55wZevYsaNQbYMGDU488cT69etfcskl1apV003FihXFYLWubwGziy66yAhq1aqF4UHLJEDefsKz/yoatwERPumkk1SsUKGCz/PPP58AkmPE5cuXZ+rr1q178cUXE2D8b7rppgULFlANZ8XRYP6Gjux1JB8fZFbmY9gGjzA5S0Mmm/7KGmjatKnjm70UyXr66acFX72CTps2DXzHjBkzbty4qVOnCg54F+WPzps374477gBfg+QPsErMDd72kKL070L5X3x7h2XJmjdv7sFq1KhR3mcxU6ZMadasGbDfc889cgYOHNivX78777yTs9ynTx/bZcCAAfI7d+5sW+Bvv/12romKSocNG+aVFiNTCyqy6nK6d++uiga1hvGJV0rmlltuwYDsyJEjQfnWW29ljI0QmQA4YhBowqIUb0qAi8nQDoY2k59lfjUNMHzWBaIsJbN11VVXXXnlld4CWrRo4SHAyY5naE877TQPpCwoBDoGmST2SEyKubG4VjwGnP43S31bV2j46quv1Gd777333vfff9+FC2RZ0JYtW7KOSA5Lft1117F5PAm2lrGU4xlXkdHgVbnhhhsMJQS4Ha1bt77sssswAg3sKMmGDRsat0xDJyaf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)
+
+![按瑞士轮最终排名排位的八人决胜轮对阵图](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAAC0CAIAAAAGpWdqAAAQAElEQVR4AezdCbzX07o/8HN+97r33HPvPfcYo0Eyh0qFIlRESjQZMp6KNGhQ0SANIo2IEM1K0SwNCBkylEqk0ZBoIuO5szvwf/96/H9n3/ruXcm227vffj2W57vWs6ZnfdaznvWsdqV+3P7zySef+P///M//fP/995gvv/zylVde6dy5c/fu3fv06XPrrbd26tTpzjvvvO2227pu/7n99ttvueWWXr16yWzbtu3dd9/drVu39u3b9+zZs2PHjh06dFDlrrvuatOmDYaw6mTatWtHWL7MO+64Q0tqaYSAuhoMRiOYhQsXfvPNNwYT9F//9V//+7//G/wO6Z///OcffvhB5g8/pNOcDD5LRUADqX/913/9zW9+c9RRR/3Lv/zLX/3VX/3N3/zNM888c9FFF9WoUWPdunUrVqyYP3/+p59++u677z733HOrVq1atmzZ+++//9JLL3388cevvfYa4c8///zpp59etGjR1q1b33777ZUrV7733nvLly9/9tlnFan4xhtv2AY+P9z+8+qrrxKI1pQuXrxYaxs3blyzZs1bb71FhMC0adPOOeecG264wW4xPIo+4IADUqnUDz/88G//9m///d//LRP953/+p/H/4Q9/+O1vf6sIRWYw+CwVDQ2k/uEf/sFKm8zvf/97KSPXokWLMmXKPPbYY8A3c+bMF154YfLkyZD05ptvzpkzB9qmTp0KlJD08ssvL1269PHHH1+yZAmBJ598UhWwnjVr1osvvgidcp5//nlQIyyVD50ho4pPrU2fPl1rU6ZMUaQvuAdTeO3Xr9/s2bNr1qw5atSof//3f4dIw4NU4wRZPPrd737313/91xiG1jlgm+HttGDwWSoaGkj98z//M6QCgaWdMWPGI488csEFFwANSyYHIMCCMTNbxy6jBRZyYEJOkE8MABGDG54D8wZY3377LcT4VKpIRZ/y//7v/17Of/zHfxDAxKcBKNIjMbbwoIMO4jww3kDcrl070FdEGByNAWMAeIwepejv/u7vpPJRFPnMUtHQQAqkzARovvrqK15jnTp1xo0bBygBL/kYnx988AF/EQJ8OnaBEuZUhF1HsJQMJHESGjduzByO2P5DYPTo0eyiWsgnSSkYQdXBBx9sk/j885//bKto8Mcff/Sp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IJtIihD8kVfXO5PHT8/shOXAOkQS0I7UZ5hYPALl8FPZbLyI5wsvvMBh8HAlyA+4PF1iKAtTSsjSXzQAmhl4QQ+s5ATWX+T+PwegHFkABUfUqlUrb91SngC8koLXOMTxWpZCpFoY+brAbN261QuW933Pqg899FDlypWZcMY15AlkYUoJWfqLBoASsHyzf3xTx3HwEJNIAEoA4KQwzZscMWJE48aNzzrrrEsuuWT27Nmeo7i1npeEqziyrlwQLEc+niM7adKkSy+9lE/RpEmT+++//+qrrzYGrWkK7jEoZTThARiTb/3FyDCKNm7c6I108+bNHmT5DSDv8sUg85TJb9myhYDYAQbxSwjH56ZNm/DeGAjYoEoxOpJPwO7xqSkNIvuGsGZdKhXJ/+ijjwwGUY3U0WAwGPTD//+JIjlBhm3MCEMkMgs8LYwDCO3BH5Nm/D4d1hCTSARQOAYYtUqXLj1+/PjHHnvs8ssvv+22284555zTTz89PFfYPffcc88888wzzjjj7LPPFuGqWbNm165d+am9evWaMWNG27ZtYVSP0VRm0dPhfR6AaKogGcToz55wZevYsaNQbYMGDU488cT69etfcskl1apV003FihXFYLWubwGziy66yAhq1aqF4UHLJEDefsKz/yoatwERPumkk1SsUKGCz/PPP58AkmPE5cuXZ+rr1q178cUXE2D8b7rppgULFlANZ8XRYP6Gjux1JB8fZFbmY9gGjzA5S0Mmm/7KGmjatKnjm70UyXr66acFX72CTps2DXzHjBkzbty4qVOnCg54F+WPzps374477gBfg+QPsErMDd72kKL070L5X3x7h2XJmjdv7sFq1KhR3mcxU6ZMadasGbDfc889cgYOHNivX78777yTs9ynTx/bZcCAAfI7d+5sW+Bvv/12romKSocNG+aVFiNTCyqy6nK6d++uiga1hvGJV0rmlltuwYDsyJEjQfnWW29ljI0QmQA4YhBowqIUb0qAi8nQDoY2k59lfjUNMHzWBaIsJbN11VVXXXnlld4CWrRo4SHAyY5naE877TQPpCwoBDoGmST2SEyKubG4VjwGnP43S31bV2j46quv1Gd777333vfff9+FC2RZ0JYtW7KOSA5Lft1117F5PAm2lrGU4xlXkdHgVbnhhhsMJQS4Ha1bt77sssswAg3sKMmGDRsat0xDJyaf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)
+
+For a 4-player playoff, the 1st place player plays the 4th place player, and the 2nd place player plays the 3rd place player. The remaining players play in the last round of the playoff.
+
+对于有4位牌手参加的决胜轮而言，第1名牌手与第4名牌手对阵，第2名牌手与第3名牌手对阵。这两场对局的胜者将在决胜轮的最后一局对阵。
+
+![Four-player playoff bracket](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAABTCAIAAACAiQsEAAAQAElEQVR4AezdB7iX8xcAcF57r2xKqCgrSkRTQsjemZGZGUqFCqVEGReRESoje++9UxmlaCqVEmVklf/n7Xjep+f23pv+j+u6dXvO83V+5z3fdfb3+w3Jn/P+jB071j//+OOPX3/9FTJt2rRXX331ggsuaNeu3eWXX96mTZvzzz+/U6dOF1544cXz/lxyySXnnnvupZdeinjWWWddccUVbdu2Pfvsszt27Hjeeeedc845unTp0uWMM86AYNYdT+vWrTGjI3bo0MFIehkEg74GDMQgkDfeeGPGjBkWE/Dbb7/NmTMn8ELtzJkz586dizh3btrOj8DLoRgJJD/++ONSSy212Wab/fDDD8sss8zyyy//+OOP77333g0bNhw5cuTHH3/8/PPPjx8/fujQoc8+++xnn302ePDgTz755KWXXho9evTrr7+OecqUKY8++ui77747efLk999//9NPPx02bNiQIUOeeeYZn3R86623mJefX8z789prr2GI0Xx97733jPbVV1+NGDHinXfewYLhoYceqlevXsuWLVmh5dnAcsstlyTJ3Llzf/rpp99//x0R/PLLL9a/+uqrL7300j6BIAYCL4fiJZCsuuqqJIhp5ZVX1nLKU045pXLlyrfeeiulPvLIIy+88ML9999PQ2+//faTTz5Jiw8++CBl09Arr7zy4Ycf3n333R988AGGAQMG6MJcHnvssRdffJHWUZ577jkqxKxFp/Xg0cVPow0aNMhoDzzwgE/mYk/Uzw6uvPLKJ554olGjRrfffvvPP/9M05bHAqyTKcDBiiuuuOyyy0IEBnGL+cJZcCDwciheAsmsWbNYAOES2cMPP1xQULDnnntSBs9DIWji5nxGEX45GXGjkDVKgJ8QisFGHzIId6Sw7777jib89NUnHf1EX2WVVVBmz56NARI/LcAnM2Lju2uvvbYkItgwjtatWzMpnzBTszVALAAOMaMWrLTSSlp0EJ/8LIfiJZBQFQ7KmD59uqy8zz773HXXXRQQakOH+Dlq1Cj5mGT9FH4pmy51ZBNCsRYPDUkWhxxyCPftM+8Phr59+/JjvYCfOLXUQ1vrrLMO4/Nz5syZTNCAf/75p58GD6Rq1arSkE+dO3c2i0/olgRhl6aLMZkOHBESI8dPlHIo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)
+
+![四人决胜轮对阵图](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAABTCAIAAACAiQsEAAAQAElEQVR4AezdB7iX8xcAcF57r2xKqCgrSkRTQsjemZGZGUqFCqVEGReRESoje++9UxmlaCqVEmVklf/n7Xjep+f23pv+j+u6dXvO83V+5z3fdfb3+w3Jn/P+jB071j//+OOPX3/9FTJt2rRXX331ggsuaNeu3eWXX96mTZvzzz+/U6dOF1544cXz/lxyySXnnnvupZdeinjWWWddccUVbdu2Pfvsszt27Hjeeeedc845unTp0uWMM86AYNYdT+vWrTGjI3bo0MFIehkEg74GDMQgkDfeeGPGjBkWE/Dbb7/NmTMn8ELtzJkz586dizh3btrOj8DLoRgJJD/++ONSSy212Wab/fDDD8sss8zyyy//+OOP77333g0bNhw5cuTHH3/8/PPPjx8/fujQoc8+++xnn302ePDgTz755KWXXho9evTrr7+OecqUKY8++ui77747efLk999//9NPPx02bNiQIUOeeeYZn3R86623mJefX8z789prr2GI0Xx97733jPbVV1+NGDHinXfewYLhoYceqlevXsuWLVmh5dnAcsstlyTJ3Llzf/rpp99//x0R/PLLL9a/+uqrL7300j6BIAYCL4fiJZCsuuqqJIhp5ZVX1nLKU045pXLlyrfeeiulPvLIIy+88ML9999PQ2+//faTTz5Jiw8++CBl09Arr7zy4Ycf3n333R988AGGAQMG6MJcHnvssRdffJHWUZ577jkqxKxFp/Xg0cVPow0aNMhoDzzwgE/mYk/Uzw6uvPLKJ554olGjRrfffvvPP/9M05bHAqyTKcDBiiuuuOyyy0IEBnGL+cJZcCDwciheAsmsWbNYAOES2cMPP1xQULDnnntSBs9DIWji5nxGEX45GXGjkDVKgJ8QisFGHzIId6Sw7777jib89NUnHf1EX2WVVVBmz56NARI/LcAnM2Lju2uvvbYkItgwjtatWzMpnzBTszVALAAOMaMWrLTSSlp0EJ/8LIfiJZBQFQ7KmD59uqy8zz773HXXXRQQakOH+Dlq1Cj5mGT9FH4pmy51ZBNCsRYPDUkWhxxyCPftM+8Phr59+/JjvYCfOLXUQ1vrrLMO4/Nz5syZTNCAf/75p58GD6Rq1arSkE+dO3c2i0/olgRhl6aLMZkOHBESI8dPlHIo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)
+
+For Limited tournaments that have a single-elimination Booster Draft playoff, it is recommend that only an 8-player playoff is run using the following method described below.
+
+对于决胜轮采用单淘汰补充包轮抽的限制赛制比赛而言，在此建议决胜轮一律由8位牌手参加，且依照下文叙述的方式进行。
+
+Use a random method to seat players around the draft table and conduct the draft.
+
+使用随机方式将牌手安排在轮抽桌边依次就坐，进行轮抽。
+
+![Eight randomly assigned seats around a booster draft table](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAIAAABoJHXvAAAQAElEQVR4AezcCbSWVdUH8CSbB8sss0xNxXkqtbSs1NSszIE0zQlHFGdxnnAW5xkBBxBEBWQQES1UELWYtAjNTMIhhygT0YzUyr4f/r91vvvBfa/3ubw33tvqrs1Z+zlnn332cPY++5x3LTr9q+P//fOf//z73//+9ttvUwX+9tvzEfgbb7yhHwJee+017X8AdHpPx//r1Gm+FnxDFfgSSyzx9ttv/+Mf/5g3bx6E2/jpYx/7mNHXX39d26FhvqodWgEuIf+SSy75/ve/HwL+9Kc//fKXv1xvvfXOOeccbvvgBz+oE6D86Ec/CunQ0OEdJrB45a233vrb3/4mkjjjM5/5zDrrrLPxxht/9rOf/fCHP6zHkFa21HZ06PAO+8AHPpDwEkliKF7RudJKK0mGHMmjcdt73/terv2vwxazBd588824wdHFJRwmnjiJF/UkT/rkS87TuZjFXeTl/0MijB24BPDQhz70ofe9732cxENaOFCMGOJdlB0aOrzDEl5OL+7hsDiDY+A8JKQgOhHwmVQJ79Cw2BzGgoEFzMfuzJ1O8RFzQ/TAAQRIfaZDuEQLhFHBkc2ZM+d3v/vdX//6V34yKj3CIQV4GluUpQeywKeeRoPF5rAYgh2DlFZYANYEXBJzc0YhCOK4ylyee8973gPXY4gPlPW///3vV1hhhVVXXfWPf/zjX/7yFzvAPvjIRz6CoADvgvC3ED7a8olPYzpvcTqMlYv5CsJPqjufrMlzrAZYXA96NoUsAAgC+rn205/+9IorrtijR4/jjjtulVVWcWWWCTnMqHoEZWGCoU4A4W8tHEB4jgszS0/jwGJzGKM0awV+UjVoM8pq7Mvi+WRBwOiAa8UBQzOuT07laZ0olficnVlo9HBkWsRNlzYRGAIWwsT7CCbYmoKJ/oaCxeawlq3AZMXQbMemc+fOffzxx+++++7LL7+8e/fu3/nOd7xlfPGLX4xZPWEsvfTSSy21FGfrAbwCuIfRcRBnOhG4Vpv1jW98A5M+ffo8+OCDf/jDH/B/+eWXbQ4+xsHEiKcnSOO0jeUwezx+YuhY7ZVXXrnnnnsuu+yyE0888cwzz7ziiituuummu+66a/Lkyb/97W9feOEFU5iVg0UegOSTn1iZk7T8wWeG4Bg64bxd/eQnPxkwYMB55513/PHHH3nkkYMGDcJz3rx51kWMEmCubShoIIfFOkmGzz///L333suIV1111fnnn3/GGWf079//tttue+CBBx577DGjnnHR8wf3QITFsssuK3TWWGONr371q9tss40Q/NrXvrbWWmutvPLKX/jCF/LYwR8cyX8qxmeeeWbatGnjxo275ZZbrr/++gvf+bv44ovhNsSsWbNsnQjzX4c1YwFGT69afMqUKf369TvwwAO7du16+umn33///dwjPoSdw+mTn/wk33zuc59TWfDQV77yFb7ZY489Dj/8cLGi0BAuhx56qImnnnpqt27dfGK14447brPNNlxoigISB7lRnsyiDr/Zs2eLOTvDlJNOOunWW2+dPn26IjMEjdNWjrA333wz0jtUgrBmEBmpjKZHVQYRBACyMJR+yLPPPnvllVcedNBBP/rRjy655BLVuWjgJLPs9Hh0ueWW22qrrRh04MCBAu7mm2+WIW+88UbhwUldunTZZ599ll9+eUNikUe5itf5wMu9GB05cqQA0pqOXiwKPpvAEtYSeVlFsiXA3nvvbS56giEwCiChgbQBbDuamih8g8ArQWWHOZYtwEmf+MQnII4EBz4E0DmjRSyZSr8jAZAvCuuJzhysHy6GRAbjXnPNNRMmTHDG4IAYgfbzn//8d7/7XefN4MGDe/fuzVu77babquHLX/7yl770JV4RLu5YxBA05LnvvvvGjh0rRmfOnMnfZEDg5V7Fscwyy2yyySYbbrih6XvuuefZZ5/dt2/fq6++2kkmBL0XRzaiUvCJJ5746U9/KicrT0455RQnHG4IsgtJSDwtCQEtgE8EtcConUdlBJaAmAivBJUdhrvFciQQnZn0vPTSS6SBBIgCiTRRwxSdznMhCDIq4Tj8beFevXppHVryoSGAkicY0XXq5JNP5k72/fGPf8xznMQBdgbz4QlBz3Y+HVGOHwHEbaKEdydOnGgbIcCQqFo4IL+zjfO+973vSaeYK2psBQvtsssuPFfUefTRR5Wm3EZIoSxPvvrqq5Riepy11gU4A5xrAdlIa9QTDAskrN944w09/wetwNriMJIRkY1sXsc+CdxVIw1NAAKfEAJpaZVP/ewLCPbcc8+pKQ4++GD5ysnP90ax/fjHP+7XrO22207KuvTSS6UmSVJAGDUrwP1WL1lFNOBviMslVSYW/ZyqvBRDKotsHQRmEcl0Umn1ALaTGO0D6VRqVZE6DjlSwSIDU5CniXfnnXcKtaOPPhpbS+MJmB7ghg+gqbZZsEWiAtlYwJQ///nPOpslbqGzLQ5jVhztr9dee2306NE33HDDQw89FGm0lDEKGJEtymcspd/hZBY3XHDBBVOnTtVDAcA0SglWk6DYXYZUIBi12ZkGNziEqnCro4fgT22fjz/+uDQoZG2jFCbSoAR7wgkncKG5KkPyALPIqQ1nQwBnEkJkYHtInlSd7r///jYQN/MuCflG9lbOENLtjSQ6AW6GgOktgLNQkkAvoAkjP7dAXGuossMoRs+wu+iii37xi19sttlmDucnn3wyCrOjURoyJYQp4RB2pOHPf/5zuaVnz57jx4/3yhff47nmmmtKSkOGDLGLf/CDH9jy3IChuRiGzHSUWtwCPtnd6FNPPSUylHmbb775IYccIt1ttNFGWKkh+Uy5yJEYZpaWCiBzMbQKJg5CncTmVHuFGByjfiGY+DMLpVZuuP32261iV82YMcMUndyQUXgtcInccsstyXPHHXc4rZHZ8dpKUNlhFGMma0jKzgnqbbrppvKPY4N99dtuWmSsAPEJQYzAGc6sIjJbXqphIwlQYlTFOT+wcpEyC1sbluHYlCHM1QmwBZAA5j5ffPFFtSIjqg8V8XYxczOxvMrWG2ywgWzmgsVnJDGRiYOY7lNridhOTrM/KEIAQxxvB8iQ5557rk3pbLOcuTIkoys7xbRTU7gg5rNYBt4sOIztAHvIq7RDRKYRvs1SttBZ2WF4CRoi2rASPesrjldbbbV1111XdjZKGS0rMDeE8ugFkzKP+YYPHw6nG4u4Bn3rW99ybHht2nbbbflPpykswi6JSJ9YSXFB9EMAEwNDcNvcuWJWly5d3Mnw4Wx5jNu23357qbVz587uVTZ1DMorBNCaG4DHdnhyJ8m5DY6/1qMX8Qgph2+99daEQWCiKzyetqC6lJqIi3hGFwDisQ+2yNyI+ExNuwBNaz7b4jBriww+4zCpzKlOK/a1Hm0h7MJk+WSaX/3qV3KgvPT0009/6lOf0s+a3Kz08sogo2KIg076GBVVAEI3bbNgCGRIbeklUA7cd999bQ7mMB03cYktL0pfcoBSNvwzq9kWT87LEByixQTCSfR18+MhV+/CyoVPbrDtPJ0gCzELZPPp4cu0OLOPxHjssce6k6g29VeFyg6T3JiDiS3vPN9hhx2kizFjxshInERQQzaalkfRqIk9QAwbNozn9LAsbU10pNNfkAkIyrMLiLaVdGAO2e+oo4467LDDPAeba2msIIAASg8+YyNXAhLqrAQ0ilR4EtWGE7V8tvvuuyuRsEJgI7rPCUGpHpkcwwKUYisEPE1xW9ynu53tK2n7dC9sgzyVHSYTEoJMHEA+acf1Ze+997adddrgJLaPkPHrqFGjOMYetOuBiQJLtCnZv/nNb4pFlCzOxIYY11xIJWBNp6DLk5cnE8ONsXAzlG1ui7hsff/739eJphIwPUVMwQ1zAkuJ1rLnnJfCmhZWUTTasl62lJFxA0cSw0TAPVoPAt7GXFHOOuss56vbCBvqrwSVHYY7oe01iJ3rLukR/ZFHHiGBHK2Thgj4T9hJg36/4AaOJJy6yzEgcdmbyBCzIIUhdGYRSFWwfx0/jAixLsATK5Al2EV6dMirPGP6qkuQH1sOsATmpmudBe5k6ggOECsU9NOBDSo3uqsgtjqHQeI/s1wSONiFQX2//vrrsyEh9VeCtjgsC5CDuG6mTginbo5QsW+UoJ6RPOf85je/IbfIs8VcbrhWHUj/hBTKADuagpJd0vP/2hY/cAugYkdWYDuyiYaw1RPmCNoMOOPWdDpNsZUexZnNSkHCo5FO3PcZJMQcZqcSRhX6s5/9zGVGiSR5OkcQ/JsclmUIZ0nFIVnZiAI+4dwzYsQINaGnPD208mRgM8qcDhteYV+dNOE2ILa0KIFObRsgImW6lmwWgoSVFQE8ZJDWQ5mCG1F5JcANeizkJD7ttNO8A7gDGGIHtxcPNJ5drMLTOAhNacCnWDdLioY7IwgJqQRtiTBCWEOrQIcQXctVWltJKvdU4dJDGrI65I455hgVgcOfwjGcNGWUtlo9WnOL2+BVQUiZorWE1oYgntUZyFFvCM5S1oJXArNCT8gAzgEC09fo6quv7pbm/cL2tbQePvOqIM6UgnawHkAYOxsScILwbvDWt5UdxiLU1lpejWcln0SnGDe47hBUIaSfcG7Bzmf1Bat5OkLDmiLPL5CzZ8+WJTBhBRzsTTY1xcRKYCJ6c7WOQ/ayik5gQ/hkXEOWCA28EmCCFQXNglOcDxxXNIJzBr0UGu4MDjOJxMuWgguxd2fFpMdinzjooR16+vqkuB5D2kpQ2WFMQHOt5bMSCQJEVIOILdEmCSiyPWEgcw477eRJruJR9ZW7iLLKbVdaNxdDZmVTtg7P1rcmmsVVZQqzwrUMiicBfFpCD6QNYAmz2NpzrfJKrlMeu3Vde+21qirpxIuapxanl/PSye1SjN7qKD0suF8TQw8nRU4MgZ7sA0jrobLDyGF5bRajxpw5c/TQIecWu4h0G01a92OjksklzI/IbmCTJk3iJJtRUad6pKENiNh0ErM750EaCqhJWUoJC1p4iFL9cpWbjI3IVbwiwlyovWTax440xbNTilLmhljusWPoJcHgA6EpfSFVobLDsgDJ6AC3ZZxhnsXoQBlxY+94VvCrMbk97nGnHMKvBJUDFSByveu29x6/eAHhiA9omwImtiswNLAE8ZQJwkUKkdKZXgpxQvtVz8VZhkTmugLcW/yS54jiMFP8mupNR3iJdbZChhswylaQSlDZYVzF9FkjRYet5ElbrqOSfp8uHIp4Jxxv8aiLrdNYJFFy5513Fnmuzw62XXfd1Qlnii1M+uwAnw0FpGJoEjKuy5OnZK+3VPDrqBccl3HvqBIGT/i5xC5kBOHlkderY/aijNKnTx8FPR2pJrZiQIjPqlDZYRYoe4QyNo4sR3oZj0Dk9jbIEx62DSGgjAdZ0i+11FLOasDNOIhCaZNKZqXWYhHMGw3sPyJpncpqKKr51WavvfbaeOON5RWmp51fru1FiYQ6IFrZIQAAEABJREFUXIveBcb5rQyB01f8KfSd8RTnJ5/62waVHWZJliWf9RQ5fg9TaLggcxXpeUt9IVcY1SMtSBHAW6dgEm2Kfg++UopRm5FTMRSLXAsxqwGBYFQmIQU9cNBFGhw6dKhDS79D6+tf/7pyg+QURGYLwv0QwbWI4Xbkfffd58jwgxTfC1md2GIIqQSVHcbKFrCY1llKaEcuufVL6K4jW2yxhSEetZUIJz94ibH7KGDHmegMUHHwGXFtW3PRA3piAmk0IGdEEj1wT4J+YFMx2Y40kvC98rgXxw0o+YyaED/KeAZyS+Mwn8oTAKG1FqDUVoLKDuMGcjvJGFcF6G7oXI18HqGJyO4+BRA5qCc30tAvIPagotFPrsTlY4lUhYImGQM3nsNcT6NBMatMIA1Onjz517/+tXqKt7y08RYCG5RZpERakD9GYCUHHhp6oXE9HTdunAsogoANHaT17bs4jB2tDSCFabaSEPHznZ/89dNEHndQ+fWBcJHDLClC2lRuOLp4kT7f/va3/cxhihsYf/MlbmjM4l39AXPpn0W1OKS/XVuLNpXBWmTWCSEDl/CTK4rdZs9xgxqEgjwhhTjC7UhaoDTLFC1QFSuJHQqxCZW96FOHdlzrREBZCVpymPXCy2Kg4BCVj6uizKafxOKpR48eG264IYnLLDhKb+T6V1lllfQrPeQQz/Z0Fp1AJRmjUAB9AE+AuU98eBrS3mDFpjJYjgAcQAAgHzC305owjmplBdX0yxAyHm9RTTWB3ix8DEHwdMJ59fZzAYYOP+WiXS74fKLRVoKaDrNwTGxVHNNCAsLLnVF+0C+Vy3UKXHFmSqyPzBC5ndIes9XxEU6rONx8881NsQTRH3roITvUjjOF5toASogtjyekvWGBVciWHlqILW80dqfHAVtTfeic9jQKJ5UrpgNMwKkv6JtZ+oEA8slVDgu7lqd1YuX5w0MJHL22EtR0mJVAeBE6SFr3Xy80Ch7bhEFtNBcvW4mSCHRC9MMJpKz3I5CCWCfQCbhWkAFekdadCnxvCiZGC1nW5cvSY7SdwOpNOWdpFiChn4lVGfYWiyviVU+CCXG2JrfZlDvttJObpQyJ3hCZeYs6JMcZ4hdURRlinD1/iDMERhFXgpoOwwXrtEHggWnTpvnhn0w+nUC2mwCCg1ASmqt8EohYpKQJev3p1NLBz6+U1Ok8o8CLL77I2YaYiZIQgI8lwtZn+wF5mjK3YkAu4SoblBbUBKoMuiCmnZbzHFSMYFP6DB9KBfcJ51pvH+ZSTb/M6U721FNPFTV1thJqOiziWgyCl5XIB+CM61UNQm5Gt3fYFKUegAZAAKT046AnLQUMUVUiFWcyoTjjNucEAkryE+ICiAveTkiRs6wlE6roJkyY4D1e2hdYkqGzitYRL1NIKz36MQwN4SOeztjNJzL71ZktOpX4oXErUOKzG4JKUNNhlilL4mgZmjC0W5QMRhMEcrenJtk5lDQBQgo9gFMMmOgzwtlTJurB0BAl7U2aMIQj3dUy73LogeW0AL323wZkc3FMFe4HYhvLbUTtILbIDKJvEY8zaEevpv0+Ywoqk5z7cWAuxNzpDLPvHQSGKkFNhy3MhRoMJxk6vYwSzunFW+QmgR6ayGkEIqvPCApxLGvTiQkcZaa89dZbDgYvxWoQNvJ47+lEFrIQsgLYFrydkAiGOTlJrpwjid8h4cpaVy7eIhXJEUSjTNGpx0SUWqBq11KQFyEMpZVRFff4OL/Tb2v6+cJQJXgXh3FG2JGJfM8995zc5c6hU4/fkfmMZD5BQeBAHtACLtEGImt00JNPq3i4+uEPf/jKK694OrG1+cyWDMNiCPQoBS4bwbUxDbwSYIiPKTSCpI1IeOpXqcsicolrJcFUgCo9/Si1IGLzAZwdtIAvtUDi0RaIFj5Jvtxyy/ldJqvQsX///io4mholVfrhBYEvAC05jHygTBDgHObNwpGj0wO88k+NDieKthKQiaDhTyX7TrDymQB1OQPtdz9jYiuSlpMgaX0CqsmBo0aNUlhxkiN27bXXhhhqCqY0/WwNjrM84d3HJScM/RzKmPJKcTzBwqog+WzatuQwu48+qBlXq4qTIpJ2cWTf4i2iIKgEOGDeVHNHt3cQudFyCrP2u59ZOqI23dS2jg3kRmhpJRUaJYbYYmIPMehJRWAIQKytBNGUoexy76txksSrqBFkWIWnVeAtQEsOI3SWyfwnn3zS7156JARFkRcmmogtfg1B1Rb/BaZIJopGYEjulZfsD2aNpYoyZDDR0qXHZyshdkFsLs4QAMfTOxlveX8S7p7ZnDfC3SgFUSIA+SxMfLYS4iEFvfJK4Prl1kRJa+DAgQxLgPC0FtxQLXgXh5mGBfNBvAe6OmAH/I7nZwXlEx2iFYKqwOIMkVl4AkLzjatC+93PsopFs1ZUk6/sDCWAc8t29GLradSvkciKkDT1yRraclzBK4Etjt7Pm507d7Y0/1nUQQMPT6sAQiJrFmo6jD6ZEBGdKDYgvkzMphJFtkyW0RniSi3JMM9COPsEZLUP7EFxxo7irL73syxHTitKUBDbnGp+MRdevKWCd9PwQGPIJxqaRk09gPraqmBdqplLZeVijjE404kECIYhgJBN2yzUdBjbmYCRNTBy1ZfZia7Tj+KePmV8BjWkB422KjBHMQR9Mh2is/3uZ/QC1kprOY97zsuHH35YshLZHnZV8EzGlMgWgLZpikmWYy52s6haRsWo30JsK3XB9SNDA68FNR2WCdgR0RpyhYstD+HoldO1n/MkQwQodWorQcyBeeaSFeCgR2vXuwy0x/0s/C1hL5LBFcW10mHJfPGWA0w/AvsGDSAYI0J0BqSyIG1oZUUqOyBXXXVVCNuqSP0IgKdVMMzqkGahpsNIKX3jCMGCVm6LcOBXSvUhJBwLks9WtszRlJLjQekRfHA2cg1S67dwP6OkiRxMc1MCRNVvepHNZ4a0+qmmZSY3IaWvAtUPCN5wRTZuaELPu4ARdEL0Bxg9SGnfFcEQE2BpxIoAaT/izZo1S/bCkxaGREL64QtDTYdFShMg7CW24MB1mK1xBD4BhDSQugBWTI8nbmxkv7s/8JlodjkDTlO2NkoMLfG0DIEYYqJTR7XpE2RUfwFz9aNxS2EmL/GIle9+jfQIEJ6YhB5xkEVvSRK2RMWNDDKwFs6FwgvCVVrACNpmoabDUIc1xCMKn5HeAgp6RszahuoOFrUK9Qpn27+F+1koGRqYQnn5IJ1Y6VkA2AKBTe293JOKxOsRXYaXM+wJxEZNJAM8fCCLDljFaDiTgbROSoAzw9qFylSdPluGmg7DHZiMux/uXPF8ylSuk8suuyyVfBrVEsUnvF6wMDdBoGgEhtSNjhzqsSzlCWBduBb45DO5hdg+C6CEMw0C6d2LqOJTFpLeJUObHb0hLTKraAHVtHWHrKJW9EM8k+LvMd39DwKMRlr4wlDTYXQLtfkqDg7zKWZdkqwEL1B3rVi8OMDqgCnpYGl1AWuytaduOU1mM0QS0gYhoU4iIdMPTNcG9HvBU74rzFCKLfetZZZZxoqmGzXLQnD0WgCpCzRlFVzmWG+99YQ4/n5XUqZCSEsMSC2o6TBMzUzrByHVFBa4y/WeROHtB9YtDmBBn4Amte5nJLFPiQoBsbj0Yq5PE7VA2InL+++//7HHHhOy7luOLkHGW3xsFhpgLa1ZkHDwuehAPAy1WEG0NorbUfKwd0U/DugEGYU0CzUdRlYzAU3syhQdUod9oafwQkAI6pWeRUdYn7nDB/OC6FTFudUu8PuZIoUYAGXo+buIpB9uwzmx/GbIW7SQBgUrXYwCEwMocaA7SE+9WpwtRDAMGRBCDLcxSun3+4CHYEvDEUC0zUJNh2FaJuR1EmvbAeiXssIaThTLQ+oCOONj9fAnOkiPVpSI8oXvZ6LEKDBLuAA9BNODFdwhYQvfc889OpnJb4nyBGLq0CuL0gKS5Uw0y/UAUhcIW6vjZl1raV3+8kkvWyq41tLaZqETRqkpIaFIMAVPZ3oo43lNDzBqDwahFQNFFDTAqLZtP1Yxn+kFrALKp+CDW0uQ+fV27ty5fOBAeumll8SZIWBdTiJAEVuJ64QQYUpBAerSqjxjMoAetyxhFv7B9VPKHQbSBsAzs4oYuOmhXRb1+frrr0sYJEGsk8O4EIKMGKwKiQoSJpxe2vkRJo/DUCPCxabjcCvpjEtwhOvnMFqhtDACoN9F/eCDD77jjjsUJvqBTq1THR94vaDsOzaVT9zP+IxuSj6gMiYngY3SjUVcPyztLdzVWHixvldd57xMqJ8WdIGgB5C6QGyCIWHYk61VAFKxT1tKv0UhVqdCrG1dYiMIogWsndamdNohYE8WmB9hBljWNqQSLtixQlyNDkQI+rtaWk+PJMkljOLnnD59+ti8JNCDlYUzd8kll0Tgsy5g0YAlIFq3C0eRpxAi2TRqfW+4RCU8YZjG9nTf8hP2gw8+6FNNKLy++M5/xG16U8CwLkJigq0WWJE9WUC93rt379GjRzOaUUBCcnKnJ2BBRn70MZrRQD55C4Ee3mFe3DolH2KR92k+tD1R0Lm0EKCy8subOQg4Tw9DXH755XgdccQRfkByKugEJGACgEkdwdK44Z8Wom50kdpxxx3tvrFjx6oA7Wj9RNWjVlLBu0SS1q93fhpFbxQwEINCQH3lZFbMY27MyWwhvrn44ouHDx+uTBUPPpFxJ2n5DIKSC7UBIiE44YQTiH3kkUcKRLnNEJpOQgqGC/WcB15rZDZb1QT9FivWcdo7A/RDdHolOv/88zlPPtxll13kVeyIYoqJhIaTG2VdAE+bCUMIwJ9WEI5R7wG4w0zqI79RtvDpJV4gGvU7rx1JTUJqM9cUlFpQFyExCUN+whPYOvL2FVdc4eXwwgsvPProo1mfrcQJSYwSjz1RRjUc4MTzwyYvnHfeedddd53KVlQIUMbvxKwopMQDDzxwr732OvXUU50NzzzzTOxuqAC+TkixiOmdd97JW0LqxBNP3GmnnTCyhjabxRTT4Sjh9QKBG3NgiH9hTm2PIDaNFTlJfia/wJKLnAQCS5UhyBiIdwnJmlhhQmZt4QNfdCCYJchpe7EtN1h09dVXZ9uzzjrLWocddtiQIUMIhkzSZlKGta4pWtO1oGvXrn6is9X8Nu3XR7uNmvo7URIpfXD0ZiOrrLHGGuiMAUNaYCV8BaYQHDZsmC3DKH50dob7wfTZZ5/1KUaB+4Rj1uEBNwSpCzz7zp9V8Pe2iSdEH5khcr0S2ROMXfnAAw94hvcLk+inpzPALccUxIp7BHB8gPiD61GYYFgXIIylcdZKgJ5j4AwiqrzqaVVAgsZRwtQxKRewcICdg2gZ0C6UM7ncp6Dijk7z/3XqxNW77767FK/Y88BlGNiARiHAdhBb1uMqrvWLn59zaChyRRsXjhgxYtCgQYMHD/ZJJmesTjCqTn925e233z5mzBicsRQAymIAABAASURBVBw5cqRWj0+nl3X5ibTyhghjJo890o7E6B2LbHfddRfBBgwY4CABekynrH4c7GWfdQGslKzKQmxvu+22oUOHYuv9E3LmmWdy3vLLL+9d7ZRTTiE27zKpiGfhpsBtdht1/EzhXfCMM86Qxtlf/M0HpCi0r776KlvvueeeAhm1TqAfYCqNCPMZ7/ynqRC7Vf7xqbWDHB52KwkgTCYjGdJvs9cF5Lfp06fjLKHjDAFuV5grEadPn67fJwGSiEgodFDqN5dUNPdjik9BqV8PHBL58akLCCyCTZkyRWshFiCbJchgDzG62GBPLSO7e5FTMLAzT+gxBHwKPieOKOrbty83J8gQd/IPRb5FmL2www478I35+s3UAgcAJ9uz5vfs2VPmtby3uOOOO6579+7qjkMPPXS//fbbd999u3fvLk3rcSjCD6jTX7du3Q466CBs01pCaXrUUUdZ8dhjjz388MM9DauJpGj5XCtDqmnXWmst5StJnPYk3H///bu984cJ0K/nkEMO6dGjR53EPMDZs88+++CpurMUttaF77fffv369fMbqegnuYDr0qUL8WwvLpDMGLkpyNI62V9KO+aYY+RDo8KmE9/AgGQiaXgShReI23xiKkjVKswhBGnoWuNUUPNIzXCPPfznZqpVkkF0poUsOnhWxxlAwg1z9RF5/HrLN4QkLZwKDnk/cSnA6GmreovyzBpi0wHvbrbZZpAvv/MXhnVpyUMwnLUeyhmHZRjE6gLaqbbbbrvxn9c1AogQJuUzwvMND0GA9CadOoAVlq65fg70LKBfCNKxE618OPqE3kknneSZx6c52sICwjfWUzQ75Gxqe5wEtjyOCXD0toAWoM9WmL9APf7hhg3OgG7aBD055Tpnm+Qm4ay77rrcwxAQ1RPBXD/keSVG1DSxAJ7SUT4xrwkVB7Clfowbg7Cbu7MqUQXRq1cvPwLLVdYlniGRALeINmC6Q06QyBw8TXKvM0onNPOfpujMyVgLZHkTU6TWM1lrMgSYIJxtWIvBpRpVhqJZpIs5udvyyABTausLcRKepNX6ZGuyKXy4ZNKkSbJ6NrWHHCajgo0JnBOOd4eKvWwioBSAACYIH3hdAGcSEo8MOOPp9FKJyGyEkdyYV6e9pQVNHWaWngAmEFGk1e9TJQ+ZH165ExigsxYwhBYRQJSF5UxlOjkUNiYj8FK1xx57iG5eFHlCUCdgBWRa0mNVF8AWkAdAgH2nSlKvKnbcUXhLTuMtrnLc2oLE81Kw3XbbCTg1tDcqQppONhCp8AF1lBMrzPEENi7ZrGtn77rrrs4RqTvbmkkJSVR1rABAbBZTQ0BB4EAsYUVyczv5SBdz24M8QVX+x5HFDQG4lsPcDJBZySeFzRewznN2cWBkOxgqEyOE5RcdsAU4RxghrhBVH0vLsoKTw2HkmhipGIJeRCWAtyuvDOZOnDjRU47SkYI+iYQYEvBZF2C6MEzLyo4iO+n0008XWyxWCPiAnPacnYeYqLSDAJLAOZLNfRKYOqQVWp2M4aLLGxXWhsNRPzwtXnB8HX1wgWgxs4qHHKQeVcWZ/cWdpERfX6BbGJKbJ+xcseUeRh4FhRLD5oUTmG6ADARGTCrHPrdR0OOnOwCfGcUtLcREbV0gcmqZyN5y3ivNr7zySjip5lu80/9W5gQDzJh1eSiIlhZamUzm4DN21hMh559huOhCEchAUzwu5CcO41pDaDKFzvr1EEir32fTtXVWBYbGtuksytPWbmAIotPBzcbp5ShO3UixDJnISeYSwxTEhCEqj3qXEZcKEOWJVGFjRWbMkZkCsgQmcG3KAXjrwaKItWEOZ144pUhCNksYtbohNYHbEaMRQIpCoxOg0QaoFiTtfIcFW7glsQX0Zw6LWCa89AchBECJrF6AIWjKjcJWpJiFXFBcFjnMBpQJ11lnHZfCEJhC84CNZfOapdNED1Syt3dY5lOkAJsvKpiLJoAS4OCTDCIAUhfArSkfi1qdw3QS0vaSz7OuHjJom4WaDrPvMDJH6/S2SRlLVnVIWkl/WghAo60XFN2sWDhD7BgPGbzlRxM0Dga/O8s51EMZbdMi1okmnxFMOKrTlLWIcZBR3SPxNMq12oBZkKI+vC7AQ/gQLCIRT55QQDIjeYREFEHTMtR0WFjja76bDf9DKObFRW1CqyysM5SQekHhzJqUwdYSVpTHWNmty2nkd0vhBdGPAGVERQn0MFB64CB8lFTe9YFZHD958mRVNd+EMjSIIwCepUdnvSDMcbP16SJpwSUJt2xSER7oqQU1HWYyMM0CkomXHjjuaq0EMovooS2tQumzLkDigCViSuu+8MIL7OtpztZxIHmqUBw6Y+R9MhAyMtiwcLN0srjPiAQhJ7aGzOVs9N6F1ZnUcaggM2oWBFjayY0VvL6Ap4XwpJEIk7rhHtUYGRIIQfAF2pYcVkiVYX658Mk6bqBuM/AlllgCXwCvL4QnxRgXZyq5/3mqEV7suPnmm3vUcSYZcsYwq85YXI+5PjnDdMABevSnB0Nucy1T6IszCUOccZuTH5lRcxEXQFzwuiBWwYdgWgmjvL8wr3dFncAosSHNQk2HmZYJ1ujcubMLqU8Os4arA1w/GpZiC591BGwxD0MrqjK4SmmnXhAcykKxhSYETVuzGN2QiNTyJfF0okkbhFf4e4sttnAESqpTp071I4t7ghMaARCOWlBHhy3Ail5+7lD4EIwBmdcRCwfWbQFqOiwztVayJZVkuMDtSovZAkUrptFvtF6AoXVxw1ai95uIsFb1+uFYySAllqWZOJLIfohNpLy5+uMznzqx0gkgPKqlguj0RoOh/ecXEL+22PKYGC3A3wVfRKTIHD7EVnToJKFVYl5SRcjIHMoF2poOM8dkLQ0pr4axr032aT/KUfapTzTWtiq8KphbprAU6dOj9Wln+IHK75YTJkxQLPCW2oeVTQkBhJ7EIKRgKjJwHjJyYoLGqBZZIfCJXmtFxYsfCZVRHpDUU3xGWXON0ksbQIltGGqdnelvfRsxCr0rPL0shBu9PFVbl5AI9ASBLww1HYaUXQCEeo4xZbS9QHS1jfVsBzZtmbu5LcACOjBoeiAWUgsovh3LrO+pQhHldhFNIhXOhNFWAgIzTTiwl63gtOcz+dblDEhTYZu1whwlKOIRKf2tbzMXE0eyWXKGw8VCbmBs6zYJQUN3LYJaUNNhUclkO0vrpY7D4Bi5DHnH40VKkkBP+iGtB4ZrSlwETb8I9pO/NEUNr7rKQnWU5Uyx8RFnXYLpqQSZ23Siw+PfcD+zYkzqRktg5W5+xtIpvFZbbTWd8ELms1mo6TAzgTlMg5GduOKKK/oEbMqgnnmCawWEdtHBjhO4flmXoBTxKgLPyqoDj5wWJYbWKoyuBZEQUgnK9DLLvVXRCAypGy1d9/sZzlSjoEXteHUpRCfzuoRRhHZanXakthbUdJgJ4Y5pAmj55Ze3EXwCb+R+nuYzNFZCXBUwWXiKhSjjqpeXJ+W7ZEgfacQq9DGLhnBztQBSFaxSjGIHAHywVYK26/3MEqohbhswYICfD4khtSp6PVtTQT/tIC1DSw6jSSYH8bu7V3mZHWvreUV1GIgtdgxBiCu1JnJ5plBA4eSHKxW8akJgUUZkM670S9uQWQ5iIqQ1GiJeAEy0KCfpx8EnwFAx3H73M1owHXX4jI7uslaU5Lt27ZobWFEQGcFqQUsOMxNTM8PLKeLBW5zpYVwHjLwRtUmjsxLgEOaMhYlfTNQXYkuEMZyacJNNNhFbRtk0AuBvCmI9wGfbgPuplrn/+te/CqKz/e5nJLeQjSLfeuOgvk8mtS8lfHjRsWXVWnKYmeyFF0QLV6eJs0QV+/IZ+xpiAm0lYB1sA0LWb1ReHPy+hdV6660ntvzcZx+EDAHmtNXDYXBAZ6kSUglwQM861IHgBiB6tBaSptrjfkYv0noEcFFxebCWfemI0cLpogURRuqCNwstOcyEaBVlfHpBsff9Vklt9VvPnj3dOu0domQlNAX0B2doSFpIpAlnn0AmVOYqnISvU0RZqHLTXzjwq09iUDu4T/smFRe89WAHNCXGDZQe/OFEbc39rFjZlIia1m1HD/DJLNHXp4Vmzpw5fPhwiE/vR/vtt596B06XGCQt2+psFt7FYQvPcYy5RJPDZhQWkhixGM5KOsnKeXpMJBbNIQGjQXTyd3BM1ISOQ28N8rs06BbpUSOjeAbBKkj7tWRm2QhpZxCm5fsZb7FykYeE5gI98XpwKuBGZZaRCWURl25zka200kpuSpBKUNlhwmvjjTf29kUgckhikyZNypKEszWaqhHH6EdctjZ96GAKHbxlKKNdw40qCCV0/FUcRptOgetpV2BxUhG1rCLKW7ifERglwew5COByHKgcJryCp36dyNQXvDVq1Cg9gLco68iEV4LKDuOkrbfe2k028nn1GDZsmMRIUD1kpUkEJQfnkdWlTRi5A6DRiQAZxO+HXnU9CHHzlltuiWcUwMcqaAAyn0Hg7QpF7LKKfOVyBgzZWOoFdRYt4gNkZDNEEVldpx76LiAtXfQjkEikxIxSlsoZMtp6qOwwYjlj+IzdrSfAGd3DhyV9EhdCDTiEMjag9x4/jrgJCCmdRuksPzi3KOCJUmzJP6yDmyGALBCG+OSzXVsxUZYmJLA6fZu9nxmlo1F2mDZtGkXIJqnaoxATyawFEMRiy88CiE2hqaNaLjGEuBJUdhjultlggw3cauH2i0LxuuuuIxNZfdIZAbH0IBA9BOUzEeao08NtAk5cyqXSo72GVYolFRqVdJqOEkRhyL8BCM8HVrQWFXwCWpBt4fsZOSOkh2Ov4bK6m4mJAdvU3ALKwptvvtnjIeNYYrvtthNe1EQQ+ta3lR1GAVc/dcchhxyy6qqrUoygto+HjzyO0STLowwyd+5cTlKmR0MZkqu8lXh5Eqxiy3WE9CFeoMVfT4wIaVcgQxG+rAjRKVc7cpr+fuZtOsLIdfafep36did/8ApPgBD4pY23nB0iWM8aa6yhOHSGwdsAlR3GgiJa0eGF24WJMiTjj8suu+zhhx9uKgG580lnd0O3YMooLKnn5Wm55Zbz27Hw4khk8aWUYhZPo4ToB6bbIpB2hSxHDOpYyKIAokcrYkR/0/uZqLLzzNIvBM2Sz1GiZxO+ZyiK0MhttV+/fn7YM6qQEVtumSxmSpbQ33qo5bCWONhTViLQRRddJL8HFzTA8UtKk9NCAEoKE92b07333uvslRuVmhtttBFv2XfcgwzYobRFH7X1AIoxCqRdwbpN+ZMB6HFL0XJANJLNdtppJ+nduTV+/Hidyj9GIKTXJrog1skmAAdlsItXnnoNubecdNJJ1qIpZ5ulsxJUdphlmI80HCCuFb5u03BGHzlyJB0MkYCsNLGP4KxPPhlDXas8EWpm2WX4mGUIAcQO1aJvKCAeBxCJbCSE+Plql112gbjpU9kutO2QUdAprp+JeAKr2j3iAAAPwElEQVRIDHanHyrh+k1UrCX/6wE6q0Jlh1mAffmDGlqvi4TQ6fLksap///6OX0NxG58ZItmsWbMUk7Nnz1YTeutUs1DSFEN2JX/jyX8+0TcU0JEuJOQMEnKMDbrtttvuvvvu8oTqV/XEVTKeDBnJBRDE0e6SOmLECDcB2olRhrJTDbGPFlttVajsMNKQ3jLEtaSfSvfcc083dnanm0r98ssvly7sxyQT+dOOkyoFH4fxE5/pAc4ztb6SJArgiYm20YC5k9J5Ra0ky+lRLkkVSg9J3uu7zPHyyy+TnE3YQeuQ6/POfzmj00aUS/22p0zzSXctGm1VqOwwCyTRQahh3ykcjj76aAevUorF7777br/3uGbxKGf4mR+O0gWZDk888YStR+3Bgwefe+65N9xwA51R4sZtVIU0FJCcPApa2+uaa64ZNGiQ67NsoY4QUu5SrO9TEcgstinfUASN2FKFmU4pRXWPHj08w/I0bqJNi1hbFSo7jEv4xjLEkh8gfLbjjjsedNBBZPWpX6K48cYbZXB6Op8duXaTgPMgYoo8ST3nGc95NhRzZiGgGFbwhgIisSzVtGKLduQcO3Ysz9HIZpVjCB+Z9UBsR+r70ZwLfXrR3nfffT0O8JbpHKyzzVDZYRTIYtYOYhNxg2uZkF966aVtnzlz5ggy4FKpfHfYqo4c1Mcdd9wOO+xAAdXtiiuu6DZqioqfnkXn8GyclqsAeYi9/fbb77rrri4zZCa8k4zDqEB3Z/nKK6/ssHCQSx5jxoxxFpjo1yjP5Q48HLiK1yGA9RhKC68ElR0W7uLMRiOBTwv7FCvHHHMMBQQWQSUQ6c4Dh3jae++9Tz755NNOO+2MM86Q+j2E09ynaw195ENAE9zaoAAB2hUIRlOxIlvYbW4jHLPzzjuffvrpHOZMcq86//zz/dJkX5JfEX/LLbdIKozAMh5x9tprL3WKIXxsd0UAnmT2CSCVoLLDbCLrWZiTrG2x8qn2c4enEgeIGHnvkksukR+UJN5P7UrE1PArqLoDLkVoAWKtoSDw1kPczBzkySxMiKTfXtGTfgT6fVYFQuIWVspaTBzVK6ywAv5h5W4jwdBRvX7rrbfapmLLkInKQptVzsSBbyQS/QAOHBbwqlDZYYSzmGV4ji2IQjKfVHJNUQudc845REQDnLp8dscd8/8rxWioE3HaTGRKQ3aAT2C0Etg0AENz8SESm9ox5Jk3bx5WOGuN2hACBV4VMMeZvpI/5vgA/PGhPhziTnbTTTddddVVKhGUpji0jjjiCA9vFrW61q0AJVaZItP4rAqVHVYW8EDFFkTRQw0tUbR+q5UbpQJDJBNhHkQuvPBCKhkFyNBTFQ588hmAp4W0HvDhJPRsFM+lh2zsi7khxtIJaQN/otKCLhCtVfCB8ArE9tV64unVq1fv3r29g/tE44Q79thjZUtO4lqr6zQEiUgQn22Qpy0Oo4CVKGBtRrEwRKt6hBiS4p3DNpfswXAeDxUgLiXu1GwXs2JiCpDoqR19fFYFtiNJmeUTQzKQBJKhspacVihbiWCFEgd2xxweW+MP5zZ3lSuuuGLo0KGuz1YEMuFRRx3FZ6EPmX4bizz4pAcHn/BKUNlhPEQH9qUDgYBVtVGDM3wiUE2dcsoprimkJKuC3k8wsqUrS+TDAUJhBBBgYjrhVcHqFsUKE1tESiSn3U1IrGwIEtor8KpgYpmCOSuHJ+YOIRcYFYcXDUsT3tKi6vDDD1d8ITaRYKqwbBQI++gERELflLnO1kBlh7E+iVknYElnqbVJRhlLwkkPUUSpnbbaaiuRhxiBCFNcXXzxxRK9TzTk1hpl37YZ1KJ+Z3L7JhV74YYPYC+SAD3kUQh4ibCKz6pAPNzMsgSL40l4aZCr6AKx7Yy6qNimJ554okdtZkGsExJvwdlB67lEqx8fSFWo7DALEIUCjGJVn2oNLZwyLEIZG5yBqKEO5jM3FRcvZ55ZHj7oKYf4/SyiszLR7YPkCqwqgW3rZUgxnTOSbNxDNjwJoxXcRhU+nFqJcyEmNrY+bQ7Oc1ApBc8++2wlhucbQ/T1luH3JklFbPlErJ8FIMCe1gKFCYAAbNkKUgna4jDLcI+NwzR+uPN7gedE708WZndDEO6RNCDeY1y/DjjgAP3s6FRjQT+euZmxo1k+8UFJQ21VsJBadODAgePGjXNhN53jU4BZzqcrkZushyIRRjw9lYBZgSlchb9XbAmQyq6YUiKGhFfQd3/n/7BzRfNJAPSclPwB4ULTaao24TAMkaFhE20laIvDsnGYg7dchA899FCP9G5XHGltdiec3U0snzq9EXhs9BDnvcPron0qqjz78tlhhx3mB4jIjd5Eo+aaCHzSVj8cH5+QADz9EHnJ25j9buMbZR3EWm7jpL59+xLJj1hqgXAz0Sw01tL6NCtQPukIdJqLGAI8k+6zzz5et73g6NdDVA/wV199NSNwG4ZUw8SrW5RCo0fLQ1deeSVzeYqTFYR+OBiqBJUdZjGxFWX8ZOya5ecSS1qeiJSnHmlsPT0+dZLYk5Xf17nNzXq11VYznb+pzVvHH3+8+4qUZf+aIq+aiwnAh9110t8ncwBrAUNapoEAEaw0dW8VTDjolwAhSjhLcJW3FSYLNwxNIRgCrU+smN4S5VNwAPIbssk8XnDVeeed5+djvznop8K6666rGiQ/O4gq3IA9gYlnEVpYEU+dmPhVjEg2qLiUe9Cg1F8VKjuMt9iaMhIRtdV+zqezzjory1O+2LSIkiEvHY40Enfr1s39moamM5NfXgSo7O9go9XTTz/NHIZoaxSOD/15nZL05ww9wFo+Af0FcdeuXT2yDBky5NJLLzXR77+kGj16tEPFO4tUbMXMxTOASQH2tahP8juVsdV67XXWumA5d6UyWUE/JlQW06JKQejeyRr6bWXT7QktIL82PCVSm/WCCy5AJocTzypWtBHRvDs0oajsMHNprp04cSIr+B3BBcvVmDIRkVmNAp9sCrHF4BCKeXDjM+mL85JF0ZDe/dr+9UB8/fXXewt3sNsWVMooPU3Hmdvg6H0CPSyChhHXXntth6XfqFjWD3J+x2FoHGwFR0s2jbAwC6DHRMtzPgM8FAtaRbiPHz9e9lNKuI3MnDkzq5hCbJ2GvMHjnLnEoB0cgbUIiQnQo4j1cu+0ViWKRRFPdzaxdAjQtB7a4jAbhG42FNGt5IZIeUizQAGqsiz5kGkp5v1NmaDQogD3x52My17XXnutI91+FLvMZDq2zGE5VsAKjglcv0+toXjCLwMnnHCC89/u4TOZ0DN5hLQKSulBaxZ7MRap4KQy3UIiVSgrUsSToLSxXLOQWQtY1Cz9jkwHgSKewCaqhyM/bj61+q2ikzoQyjoI/O6Mw8iRI73rOwst6pMpEFSCyg6zDIHo5q1dPS0xkoxW9prW2jTXAp+I2ZeeWqaB6InymDjVlIt+CZRVWMrGpIZaX7RJRKJQwmF9R7oLHIaYaFkEZzhWDKQHq3jC8eD5n5/wsYpza9NNN+VOn1YnJ2L9JATwAj79PidPeFl3Vvk165FHHvGDg9MrS8glXbp0kbT96OqWYiI+WhaX4sgDBz7RGyKeToLZ3PopniF8EKQHgX0PrwSVHUZz6cIa66+/PrPa0SxuRyd3MyLhjBZgLAqwCEQbXIuPU22DDTZgIyF15JFHchue1MBBQHjpkT3Eme0s/3Atzzn8/SQv8hgCB2T0R285PJWFEDvaw5gDxgXWzwJ8yWf6cSYAU5ri5j516lQ73e+QijdPnQ4YKVTNIhM6R+NdzvAw77gS8WraAw880IawKOvjQ1lsAWK7TQs3ZCEIeQjGZ3A9pGUBdTKj6UEM7Ht4JajsMGGu5LOG9ZjYdUQQ+L2H9MxBLJqQlUH1+CSrHmFRQA8cB4gW+G3COaH+Vi56GUkS0880ODz//PNqyFNPPVVJBiAs6w7Hspyn9AKeKxUvingBysqin3H9WMU3alGjfKC6w0okOSM5hp/kZNxslzPPPNMxg4NFWdm63Mw33pmIJHt7v1hzzTUNkZzYVEPJAbYCZfXYr1r9zGII6Kc4BOhnN+5xMGNuCLFRFjNaCSo7TO7KAlkSLsy1LEsZCCCKnaUHXiCfaUtnENpCPDxKR56J3UxZsHPnzsyND9sxDQJqc4mf2Zjbj9cOBjlTQS8CfIoSsW6uc0J0OorU9FyiVlSFKr79NOUEEtCiWbwqIOU9oWZvkTxGjEv8pqx+GTZsmIsdYjvA6sTQBqIFC+ikbDq1+nVCAFbagP7Yjbf0ZIpFgc9KUNlhlbi3gdgv1+o95aKTX8Xo7dGZoWqnP2BW9uU2USUghI448yg1ZcqUUaNGKQd69uzpUcNJA1Hfc7+kB0Skstbv9yYKNVndlseKhKyJs2uv6slGEejCXYy6ZiWXoGkcaDiHMaINKNr4SQz5aU1wSFwHH3yw+PNgoY5w9Xb+MaKYQyzPqMFcvNhdYHmu9ATjle/RRx/lHr6RpgzJP/wtanmIJ2wLGc912yqYq/7lRj9iWUXZoghEZopVGgoazmGyBDeAmElKdB2WzRSNig4pTrXNyn4g9cLitJOQmdV7j1wkE5ol7ThaOF6/TgDRLykts8wypvhBfIsttvCyjtVpp50mlIWmJbwbWc7SycCm8Jm2oaARHSZoYimRIXpY0CEHFyVii7ekLCfQjBkzVN7SIwIIJ0EEkFqch+CA25TOKeH086jgkz89YnGVeOU8LreiioBj0OMjEOFAv7ahoOEcxlg2uJaZBIdwidXgvKjlNghAAPhAa4p+s4DC2hR3MrghU0LMi3owBDoNAUMmouddnyKM54yiRA90NhQ0nMPYjgXZiMm0gCmFF4CwYOk3BCRDnao1uAOMMyRPblBEqCEVJvo5QIszgODAwbjBC+Cvs3yiwUR+Lj0NgjScw2IXlgWxKcOxOICwYNyJDIGWZXXCmZuTZD/XJr88qUF4Tu3AE7IcStO1vJsp+bSENAjEFj6G0BiyiqF86mkcaFCHxUAMF6TZNqNclQKdw5A5nGbMmKEkcRvjBkbnaWAo1ucVzshcnaZzFYDr9AkJoGz6mc7F3ja0w1ppHeUfizM3ejW6ByfP4fkRXKfH8jiM9eNUZB0XOrzDpLhYX62hRBRSfgJ23d5///21kqGnRZ0eqJCJLW2Hhv8QhzmolO98JqTcBDjGDzdKdlHFizzkoq0f0tGhwztMMuQqSU85LuP16tXL7cozlcdAP4YpGnmRzwQiRKj912GL3wI8QQhJT/XBWx6WvDH6KdwvI56mDIk/FUSCz2eDQTVxOnyEUTdxI+l5s/DG75cwv4Z4hRJVfvdB4KFE600kCLzjQod3mOiRDxUXEG7gJAGXCl6G1KN1pLmZ+TFToa+nQ8P/AAAA//+DwhKyAAAABklEQVQDAGpeudg51DCkAAAAAElFTkSuQmCC)
+
+![补充包轮抽桌边随机安排的八个座位](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAIAAABoJHXvAAAQAElEQVR4AezcCbSWVdUH8CSbB8sss0xNxXkqtbSs1NSszIE0zQlHFGdxnnAW5xkBBxBEBWQQES1UELWYtAjNTMIhhygT0YzUyr4f/r91vvvBfa/3ubw33tvqrs1Z+zlnn332cPY++5x3LTr9q+P//fOf//z73//+9ttvUwX+9tvzEfgbb7yhHwJee+017X8AdHpPx//r1Gm+FnxDFfgSSyzx9ttv/+Mf/5g3bx6E2/jpYx/7mNHXX39d26FhvqodWgEuIf+SSy75/ve/HwL+9Kc//fKXv1xvvfXOOeccbvvgBz+oE6D86Ec/CunQ0OEdJrB45a233vrb3/4mkjjjM5/5zDrrrLPxxht/9rOf/fCHP6zHkFa21HZ06PAO+8AHPpDwEkliKF7RudJKK0mGHMmjcdt73/terv2vwxazBd588824wdHFJRwmnjiJF/UkT/rkS87TuZjFXeTl/0MijB24BPDQhz70ofe9732cxENaOFCMGOJdlB0aOrzDEl5OL+7hsDiDY+A8JKQgOhHwmVQJ79Cw2BzGgoEFzMfuzJ1O8RFzQ/TAAQRIfaZDuEQLhFHBkc2ZM+d3v/vdX//6V34yKj3CIQV4GluUpQeywKeeRoPF5rAYgh2DlFZYANYEXBJzc0YhCOK4ylyee8973gPXY4gPlPW///3vV1hhhVVXXfWPf/zjX/7yFzvAPvjIRz6CoADvgvC3ED7a8olPYzpvcTqMlYv5CsJPqjufrMlzrAZYXA96NoUsAAgC+rn205/+9IorrtijR4/jjjtulVVWcWWWCTnMqHoEZWGCoU4A4W8tHEB4jgszS0/jwGJzGKM0awV+UjVoM8pq7Mvi+WRBwOiAa8UBQzOuT07laZ0olficnVlo9HBkWsRNlzYRGAIWwsT7CCbYmoKJ/oaCxeawlq3AZMXQbMemc+fOffzxx+++++7LL7+8e/fu3/nOd7xlfPGLX4xZPWEsvfTSSy21FGfrAbwCuIfRcRBnOhG4Vpv1jW98A5M+ffo8+OCDf/jDH/B/+eWXbQ4+xsHEiKcnSOO0jeUwezx+YuhY7ZVXXrnnnnsuu+yyE0888cwzz7ziiituuummu+66a/Lkyb/97W9feOEFU5iVg0UegOSTn1iZk7T8wWeG4Bg64bxd/eQnPxkwYMB55513/PHHH3nkkYMGDcJz3rx51kWMEmCubShoIIfFOkmGzz///L333suIV1111fnnn3/GGWf079//tttue+CBBx577DGjnnHR8wf3QITFsssuK3TWWGONr371q9tss40Q/NrXvrbWWmutvPLKX/jCF/LYwR8cyX8qxmeeeWbatGnjxo275ZZbrr/++gvf+bv44ovhNsSsWbNsnQjzX4c1YwFGT69afMqUKf369TvwwAO7du16+umn33///dwjPoSdw+mTn/wk33zuc59TWfDQV77yFb7ZY489Dj/8cLGi0BAuhx56qImnnnpqt27dfGK14447brPNNlxoigISB7lRnsyiDr/Zs2eLOTvDlJNOOunWW2+dPn26IjMEjdNWjrA333wz0jtUgrBmEBmpjKZHVQYRBACyMJR+yLPPPnvllVcedNBBP/rRjy655BLVuWjgJLPs9Hh0ueWW22qrrRh04MCBAu7mm2+WIW+88UbhwUldunTZZ599ll9+eUNikUe5itf5wMu9GB05cqQA0pqOXiwKPpvAEtYSeVlFsiXA3nvvbS56giEwCiChgbQBbDuamih8g8ArQWWHOZYtwEmf+MQnII4EBz4E0DmjRSyZSr8jAZAvCuuJzhysHy6GRAbjXnPNNRMmTHDG4IAYgfbzn//8d7/7XefN4MGDe/fuzVu77babquHLX/7yl770JV4RLu5YxBA05LnvvvvGjh0rRmfOnMnfZEDg5V7Fscwyy2yyySYbbrih6XvuuefZZ5/dt2/fq6++2kkmBL0XRzaiUvCJJ5746U9/KicrT0455RQnHG4IsgtJSDwtCQEtgE8EtcConUdlBJaAmAivBJUdhrvFciQQnZn0vPTSS6SBBIgCiTRRwxSdznMhCDIq4Tj8beFevXppHVryoSGAkicY0XXq5JNP5k72/fGPf8xznMQBdgbz4QlBz3Y+HVGOHwHEbaKEdydOnGgbIcCQqFo4IL+zjfO+973vSaeYK2psBQvtsssuPFfUefTRR5Wm3EZIoSxPvvrqq5Riepy11gU4A5xrAdlIa9QTDAskrN944w09/wetwNriMJIRkY1sXsc+CdxVIw1NAAKfEAJpaZVP/ewLCPbcc8+pKQ4++GD5ysnP90ax/fjHP+7XrO22207KuvTSS6UmSVJAGDUrwP1WL1lFNOBviMslVSYW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)
+
+After the draft has concluded, the player in seat 1 plays the player in seat 5, the player in seat 2 plays the player in seat 6, the player in seat 3 plays the player in seat 7, and the player in seat 4 plays the player in seat 8. The winners of the seat 1/5 and the 3/7 matches play each other in the next round of the playoff. The winners of the seat 2/6 and the seat 4/8 matches play each other in the next round of the playoff. The remaining players play in the last round of the playoff.
+
+在轮抽结束后，座号为1的牌手与座号为5的牌手进行对局，座号为2的牌手与座号为6的牌手进行对局，座号为3的牌手与座号为7的牌手进行对局，座号为4的牌手与座号为8的牌手进行对局。座号1/5对局的胜者与座号3/7对局的胜者在决胜轮次轮进行对局。座号2/6对局的胜者与座号4/8对局的胜者在决胜轮次轮进行对局。这两场对局的胜者将在决胜轮的最后一局对阵。
+
+![Eight-player playoff bracket based on draft seat numbers](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAAC0CAIAAAAGpWdqAAAQAElEQVR4AezdC/zPVbY//s7nnDlnmnP+MzVdddNF9yKSW+QyEipFhS4aKYWSWxFypyiJFCNCki4ukUslVKioSIqQpKSilJlzZs7d//f8WJ3PfIf3xyV9+/p++3wea/as995r39Z+7bXXXluk/v/tv08++cT//8///M9//ud/Yr7++uu5c+f26tXr7rvvvuuuuzp37tyxY8euXbt26NChU6dO7dq169u3b8uWLe+55562bdv67N69O8nWrVsT6927d48ePVq0aNGnTx+pIlUUtW/fXs6tt96qtTZt2shMpNtvv71bt25dunRZsGDBt99+azBB//Vf//W///u/we+Q/vGPf9y2bZvMbdvSaV4Gn6MioIHUv/3bvx1wwAHHH3/8v/7rv/793//9P/7jPz7//PO1a9e++OKLX3311dmzZ69YsWLx4sULFy58/fXXP/7447ffflvOm2+++d57782YMUPOypUrYXrhwoWwvmzZsunTp7/yyiufffYZnMlR9M477xBbvnz5Cy+8sHr1anU//fTTd7P8Pvroo9dee23SpElVqlS58cYbjcHwKPoXv/hFKpXatm3bn//85//+7/+Wif7jP/7D+H/961//3d/9nSIUmcHgc1Q0NJD6l3/5FyttMr/61a+kjGLz5s1POOGEO++8c968eQAKtZAHo9OmTZs4ceKcOXOmTp06ZcoUOQQmT54sH0ZBE0/yrbfegrOZM2dOmDDhxRdfVIQPIv/yyy8TUx1kE0l3qoNyv379tFa9evVRo0b95S9/gUjDg1TjBFk8+uUvf/kP//APGIbWOWCb4e20YPA5KhoaSP3pT3+CVCCwtNAzbNiwCy+88Nlnn3V2myHTBQGQgWexYEJ64IEHcg+cwmHk/umf/sknHj4Qhs9A/re//a1mtSDTp5Tkpk2b5GsE4BJJF2whGb4Esw3THAZG3fA0YjDqYoASj4FUKTIqqXwURT5zVDQ0kHJimsm///u/f/PNN3zHOnXqjB07FlD4AOif//mf4QPsnnjiCYf7+PHjWVNnLuCCHYgAJUzAVqAHXqHksMMO06YidbXAqfUJ9999990RRxzByupIF4lEEnzVxZxyyincD7tIXZ3KkW+oGAZV47rD2wz4YAwGXuNTTo6KhgbSVyhwOfjg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)
+
+![按轮抽座位号配对的八人决胜轮对阵图](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAAC0CAIAAAAGpWdqAAAQAElEQVR4AezdC/zPVbY//s7nnDlnmnP+MzVdddNF9yKSW+QyEipFhS4aKYWSWxFypyiJFCNCki4ukUslVKioSIqQpKSilJlzZs7d//f8WJ3PfIf3xyV9+/p++3wea/as995r39Z+7bXXXluk/v/tv08++cT//8///M9//ud/Yr7++uu5c+f26tXr7rvvvuuuuzp37tyxY8euXbt26NChU6dO7dq169u3b8uWLe+55562bdv67N69O8nWrVsT6927d48ePVq0aNGnTx+pIlUUtW/fXs6tt96qtTZt2shMpNtvv71bt25dunRZsGDBt99+azBB//Vf//W///u/we+Q/vGPf9y2bZvMbdvSaV4Gn6MioIHUv/3bvx1wwAHHH3/8v/7rv/793//9P/7jPz7//PO1a9e++OKLX3311dmzZ69YsWLx4sULFy58/fXXP/7447ffflvOm2+++d57782YMUPOypUrYXrhwoWwvmzZsunTp7/yyiufffYZnMlR9M477xBbvnz5Cy+8sHr1anU//fTTd7P8Pvroo9dee23SpElVqlS58cYbjcHwKPoXv/hFKpXatm3bn//85//+7/+Wif7jP/7D+H/961//3d/9nSIUmcHgc1Q0NJD6l3/5FyttMr/61a+kjGLz5s1POOGEO++8c968eQAKtZAHo9OmTZs4ceKcOXOmTp06ZcoUOQQmT54sH0ZBE0/yrbfegrOZM2dOmDDhxRdfVIQPIv/yyy8TUx1kE0l3qoNyv379tFa9evVRo0b95S9/gUjDg1TjBFk8+uUvf/kP//APGIbWOWCb4e20YPA5KhoaSP3pT3+CVCCwtNAzbNiwCy+88Nlnn3V2myHTBQGQgWexYEJ64IEHcg+cwmHk/umf/sknHj4Qhs9A/re//a1mtSDTp5Tkpk2b5GsE4BJJF2whGb4Esw3THAZG3fA0YjDqYoASj4FUKTIqqXwURT5zVDQ0kHJimsm///u/f/PNN3zHOnXqjB07FlD4AOif//mf4QPsnnjiCYf7+PHjWVNnLuCCHYgAJUzAVqAHXqHksMMO06YidbXAqfUJ9999990RRxzByupIF4lEEnzVxZxyyincD7tIXZ3KkW+oGAZV47rD2wz4YAwGXuNTTo6KhgbSVyhwOfjg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)
+
+For most Premier Events, the playoff options above are required, not optional.
+
+在大多数重要比赛中，必须执行上述决胜轮程序，比赛不得选择不进行决胜轮。
+
+Premier Events include the following tournaments: Magic: The Gathering World Championship, Pro Tour, Limited Championship, Pro Tour Qualifier, Spotlight Series, Regional Championship, and Regional Championship Qualifier
+
+下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、限制冠军赛、专业赛预选赛、聚光灯系列赛、区域冠军赛、区域冠军赛预选赛。
+
+# Appendix A—Changes From Previous Versions 与过往版本之间的更动
+
+Only changes from the current version and the previous version of this document will be displayed in this appendix.
+
+本附录只会反映本份文档与此前一份文档之间的更动。
+
+February 27, 2026
+
+2026年2月27日
+
+* 3.7: New sets added.
+
+* 3.7：添加新系列。
+
+* 6.3: New sets added.
+
+* 6.3：添加新系列。
+
+* 6.4: New sets added.
+
+* 6.4：添加新系列。
+
+* 6.7: New set added.
+
+* 6.7：添加新系列。
+
+* Appendix D: Upcoming sets added.
+
+* 附录D：添加即将发行的新系列 
+
+November 10, 2025
+
+2025年11月10日
+
+* 3.7: New set added.
+
+* 3.7：添加新系列。
+
+* 6.3: Three (3) cards banned. New set added.
+
+* 6.3：3张牌被禁用。添加新系列。
+
+* 6.4: New set added.
+
+* 6.4：添加新系列。
+
+* 6.6: Two (2) cards banned.
+
+* 6.6：2张牌被禁用。
+
+* 6.7: One (1) card banned. New set added.
+
+* 6.7：1张牌被禁用。添加新系列。
+
+* Appendix D: Upcoming set added.
+
+* 附录D：添加即将发行的新系列。
+
+# Appendix B—Time Limits 时间限制
+
+The required minimum time limit for any match is 40 minutes.
+
+对局最少时间限制规定为40分钟。
+
+The following time limits are recommended for each round of a tournament:
+
+以下是比赛中每一局对局的建议时间限制：
+
+* Constructed and Limited tournaments—50 minutes
+
+* 构组赛及限制赛～50分钟
+
+* Single-elimination quarterfinal or semifinal matches—90 minutes
+
+* 单淘汰的四分之一决赛或半决赛～90分钟
+
+* Single-elimination final matches—no time limit
+
+* 单淘汰决赛～无时间限制
+
+The following additional time limits are recommended for Limited tournaments:
+
+以下是限制赛中的建议时间限制：
+
+* Sealed Deck—20 minutes for deck registration and 30 minutes for deck construction. For Prereleases and Sealed Deck events that take place on the weekend of a new set release, 15 additional minutes for deck construction is recommended.
+
+* 现开～套牌登记20分钟，套牌构组30分钟。对于在新系列发售当周周末举办的现开赛事，建议多增加15分钟套牌构组时间。对于在新系列发售当周周末举办的售前和现开赛事，建议多增加15分钟套牌构组时间。
+
+* Draft—25 minutes for deck registration and construction.
+
+* 轮抽～套牌登记及构组共25分钟
+
+* Team Sealed Deck—20 minutes for deck registration and 60 minutes for deck construction. For Team-format Sealed Deck events that take place on the weekend of a new set release, 15 additional minutes for deck construction is recommended.
+
+* 团队现开～套牌登记20分钟，套牌构组60分钟。对于在新系列发售当周周末举办的现开赛事，建议多增加15分钟套牌构组时间。
+
+* Team Draft—40 minutes for deck construction and registration.
+
+* 团队轮抽～套牌构组及登记共40分钟
+
+* Two-Headed Giant Sealed Deck—20 minutes for deck registration and 60 minutes for deck construction. For Two-headed Giant Sealed Deck events that take place on the weekend of a new set release, 15 additional minutes for deck construction is recommended.
+
+* 双头巨人现开～套牌登记20分钟，套牌构组60分钟。对于在新系列发售当周周末举办的现开赛事，建议多增加15分钟套牌构组时间。
+
+* Two-Headed Giant Draft—40 minutes for deck construction and registration
+
+* 双头巨人轮抽～套牌构组及登记共40分钟
+
+The Head Judge of the tournament is the final authority on time limits for a tournament. However, any deviation from these recommendations must be announced prior to and during tournament registration.
+
+主审对比赛中的时间限制有最终决定权。如果比赛所使用的时间限制与这些建议有异，则须在比赛登记报名之前及进行报名登记时进行宣告。
+
+Magic Premier Tournaments may have different time limits. These time limits can be found in the tournament or tournament series fact sheet.
+
+万智牌重要比赛的时间限制可能会与上述不同。这些不同的时间限制可以在该场比赛或该系列比赛的说明资料上面找到。
+
+In timed rounds, players must wait for the officially tracked time to begin before starting their match.
+
+在计时进行的局次中，牌手必须等待正式计时开始之后再开始进行各自的对局。
+
+Booster Draft Timing
+
+补充包轮抽的时间限制
+
+Individual Booster Drafts have the following default time limits for each pick:
+
+进行个人补充包轮抽时，每一次选牌的默认时间限制如下表所示：
+
+| Cards remaining in pack | Time allotted |
+| --- | --- |
+| 15 cards | 40 seconds |
+| 14 cards | 40 seconds |
+| 13 cards | 35 seconds |
+| 12 cards | 30 seconds |
+| 11 cards | 25 seconds |
+| 10 cards | 25 seconds |
+| 9 cards | 20 seconds |
+| 8 cards | 20 seconds |
+| 7 cards | 15 seconds |
+| 6 cards | 10 seconds |
+| 5 cards | 10 seconds |
+| 4 cards | 5 seconds |
+| 3 cards | 5 seconds |
+| 2 cards | 5 seconds |
+| 1 card | N/A |
+
+|补充包剩余牌张数量|可使用时间|
+|-----|-----|
+|15张牌|40秒|
+|14张牌|40秒|
+|13张牌|35秒|
+|12张牌|30秒|
+|11张牌|25秒|
+|10张牌|25秒|
+|9张牌|20秒|
+|8张牌|20秒|
+|7张牌|15秒|
+|6张牌|10秒|
+|5张牌|10秒|
+|4张牌|5秒|
+|3张牌|5秒|
+|2张牌|5秒|
+|1张牌|无|
+
+The time for review after the first booster pack is 60 seconds. Each subsequent review period increases by 30 seconds.
+
+第一包补充包之后供检视的时间为60秒。之后每次检视之时限增加30秒。
+
+Rochester Draft Timing
+
+罗彻斯特轮抽的时间限制
+
+The review period for a booster after it has been laid out on the table and before the first card is drafted is 20 seconds. Players have 5 seconds for each pick.
+
+在每包补充包被放在桌面上之后，到选取第一张牌之前，有20秒的检视时间。牌手各有5秒钟的时候来进行每次的选牌。
+
+Two-Headed Giant Draft Timing
+
+双头巨人轮抽的时间限制
+
+Two-Headed Giant Booster Drafts have the following default time limits for each pick:
+
+在双头巨人补充包轮抽中，每一次选牌的默认时间限制如下表所示：
+
+| Cards remaining in pack |  |  |
+| --- | --- | --- |
+| 15-Card Booster | 14-Card Booster | Time allotted |
+| 15 | 14 | 50 seconds |
+| 13 | 12 | 45 seconds |
+| 11 | 10 | 40 seconds |
+| 9 | 8 | 30 seconds |
+| 7 | 6 | 20 seconds |
+| 5 | 4 | 10 seconds |
+| 3 | - | 5 seconds |
+| 1 | 2 | N/A |
+
+|补充包剩余牌张数量|补充包剩余牌张数量|补充包剩余牌张数量|
+|-----|-----|-----|
+|15张牌的补充包|14张牌的补充包|可使用时间|
+|15|14|50秒|
+|13|12|45秒|
+|11|10|40秒|
+|9|8|30秒|
+|7|6|20秒|
+|5|4|10秒|
+|3|-|5秒|
+|1|2|无|
+
+In addition, players receive 60 seconds to review their drafted cards in between booster packs.
+
+此外，在两包补充包之间，牌手们有60秒的时间来检视自己已选择的牌。
+
+# Appendix C—Tiebreaker Explanation 平分处理释疑
+
+**Match Points**
+
+**局分**
+
+Players earn 3 match points for each match win, 0 points for each match loss and 1 match point for each match ending in a draw. Players receiving byes are considered to have won the match.
+
+牌手每赢得一局对局便获得3个局分，输了得0分，平手得1分。获得轮空的牌手视作赢得了该局对局。
+
+* A player's record is 6–2–0 (Wins–Losses–Draws). That player has 18 match points (6*3, 2*0, 0*1).
+
+* 若牌手成绩为6-2-0（胜-负-平）。该牌手的局分便为18分（6*3，2*0，0*1）。
+
+* A player's record is 4–2–2. That player has 14 match points (4*3, 2*0, 2*1).
+
+* 若牌手的比赛成绩为4-2-2。该牌手的局分为14分（4*3，2*0，2*1）。
+
+**Game Points**
+
+**盘分**
+
+Game points are similar to match points in that players earn 3 game points for each game they win and 1 point for each game that ends in a draw, and 0 points for any game lost. Unfinished games are considered draws. Unplayed games are worth 0 points.
+
+盘分与局分类似，牌手每赢得一盘游戏便获得3个盘分，平手得1分，输了得0分。未进行完的游戏视作平局。未进行的游戏算0分。
+
+* A player wins a match 2–0–0, so they earn 6 game points and their opponent receives 0 game points from the match.
+
+* 若牌手以2-0-0赢得了一局对局，则在该局中，她获得了6个盘分，而对手获得了0个盘分。
+
+* A player wins a match 2–1–0, so they earn 6 game points and their opponent earns 3 game points from the match.
+
+* 若牌手以2-1-0赢得了一局对局，则在该局中，她获得了6个盘分，而对手获得了3个盘分。
+
+* A player wins a match 2–0–1, so they earn 7 game points and their opponent earns 1 game point from the match.
+
+* 若牌手以2-0-1赢得了一局对局，则在该局中，他获得了7个盘分，而对手获得了1个盘分。
+
+Game points are not used in team tournaments; only the overall result of the match is used for tiebreakers.
+
+团队赛中不使用盘分。仅使用对局总成绩作为决胜方式。
+
+**Match-win percentage**
+
+**局胜率**
+
+A player’s match-win percentage is that player’s accumulated match points divided by the total match points possible in those rounds (generally, 3 times the number of rounds played). If this number is lower than 0.33, use 0.33 instead. The minimum match-win percentage of 0.33 limits the effect low performances have when calculating and comparing opponents’ match-win percentage.
+
+牌手的局胜率计算公式如下：用牌手的总对局积分除以在该些对局中所能够获得的总局分（通常为3乘以所进行过的对局数），取所得结果与0.33之间较大者。规定0.33此最低局胜率值有助于降低表现欠佳的牌手对于其对手局胜率计算及比较方面的影响。
+
+Examples:
+
+示例：
+
+These three players competed in an 8-round tournament, although only the first player completed all rounds.
+
+在一场共有八局的比赛当中，三位牌手的成绩如下表所示，只有第一位牌手参加了所有局次的比赛：
+
+| Tournament<br>Record | Match Points | Rounds Played | Match-win<br>Percentage |
+| --- | --- | --- | --- |
+| 5-2-1 | 16 | 8 | 16/(8*3) = 0.667 |
+| 1-3-0, then<br>withdraws | 3 | 4 | 3/(4*3) = 0.25, so<br>0.33 is used. |
+| 3-2-0, including a<br>first-round bye, then<br>withdraws | 9 | 5 | 9/(5*3) = 0.60 |
+
+|比赛成绩|局分|进行过的局数|局胜率|
+|-----|-----|-----|-----|
+|5-2-1|16|8|16/(8*3) = 0.667|
+|1-3-0，后退出比赛|3|4	|3/(4*3) = 0.25，因此使用0.33|
+|3-2-0，其中包括首局的轮空，之后退出比赛|9|5|9/(5*3) = 0.60|
+
+**Game-win percentage**
+
+**盘胜率**
+
+Similar to the match-win percentage, a player’s game-win percentage is the total number of game points they earned divided by the total game points possible (generally, 3 times the number of games played). Again, use 0.33 if the actual game-win percentage is lower than that.
+
+与局胜率的计算方法类似，牌手的局胜率计算方法如下：用牌手获得的总盘分除以可能获得的总盘分（通常为3乘以与该牌手进行过的盘数）。同样的，若实际计算出来的盘胜率低于0.33，则改为使用0.33。
+
+These two players competed in a four-round tournament:
+
+在一场共有四局的比赛中，两位牌手游戏成绩如下表所示：
+
+| Game Record by Match | Game Points | Games<br>Played | Game-win<br>Percentage |
+| --- | --- | --- | --- |
+| • Round 1: 2 wins (6 game points)<br>• Round 2: 2 wins and 1 loss (6 game points)<br>• Round 3: 1 win and 2 losses (3 game points)<br>• Round 4: 2 wins (6 game points) | 21 | 10 | 21/(3*10) = 0.70 |
+| • Round 1: 1 win and 2 losses (3 game points)<br>• Round 2: 1 win and 2 losses (3 game points)<br>• Round 3: 2 losses (0 game points)<br>• Round 4: 1 win and 2 losses (3 game points) | 9 | 11 | 9/(3*11) = 0.27, so<br>0.33 is used. |
+
+|每局游戏成绩|盘分|进行过的盘数|盘胜率|
+|-----|-----|-----|-----|
+|第一局：2胜（6个盘分）<br>第二局：2胜1负（6个盘分）<br>第三局：1胜2负（3个盘分）<br>第四局：2胜（6个盘分）|21|10|21/(3*10) = 0.70|
+|第一局：1胜2负（3个盘分）<br> 第二局：1胜2负（3个盘分）<br> 第三局：2负（0个盘分）<br> 第四局：1胜2负（3个盘分）|9|11|9/(3*11) = 0.27，因此使用0.33|
+
+**Opponents’ match-win percentage**
+
+**对手局胜率**
+
+A player’s opponents’ match-win percentage is the average match-win percentage of each opponent that player faced (ignoring those rounds for which the player received a bye). Use the match-win percentage definition listed above when calculating each individual opponent’s match-win percentage.
+
+牌手的对手局胜率为该牌手所较量过的对手之局胜率的平均值（不计该牌手获得轮空的轮数）。每位对手的局胜率均系根据前述定义之局胜率计算方式进行计算。
+
+Examples:
+
+示例：
+
+* A player’s record in an eight-round tournament is 6–2–0. Her opponents’ match records were: 4–4–0, 7–1–0, 1–3–1, 3–3–1, 6–2–0, 5–2–1, 4–3–1, and 6–1–1, so her opponents’ match-win percentage is:
+
+* 某牌手在一场八轮的比赛中的成绩为6-2-0。她的对手的对局成绩分别为：4-4-0，7-1-0，1-3-1，3-3-1，6-2-0，5-2-1，4-3-1，及6-1-1，因此，她的对手局胜率为：
+
+![Sum of eight opponents’ match-win fractions divided by eight](data:image/png;base64,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xrRC+KW/1hoTx3FkqGAupm4m5hNawMXExKX8/EGHHjeWrhr10tixo8ePffbtsQ+utVxecu2YXWPHvDHu5QkjXnhhzLgxo18eteoK7Q34HUMD6IBKYDjFmogSIkNNaHYhljhnrM3FYnPChuW2YAtRbEQkEts2jnNxbAlcjbXG2EIhZyJS6lPZOKFa1KkKxtF1MAbg2QdUWeiQNDImTb1iaYPAMWwmgpDKCISqxbx5LuxAFBWEQZAYpCELnvvJMwQrhsU7ifK1W22zdY/uPXbYYYdtt9mm67Zb77PPXjB2jXXW3WLzzYjcqfv23XfYaqcdtltrtZUYRvIQ0clJWlUSItrwwUeAoWsB5+hZSjXsexeM0RTzgLAP71wiDjawFSHXnpNoBCfBGBEJnpy8MfFKq6yxzXbdd9551x123HGHnXbabPvt99h595oo37NXj80233Tb7XbYoceO3XfafuONN8pZZgtFUoKnDICVqIustugBK2BxfBlDHGzOeapHhKe2OUtiiCoTIn1AeVBZC0T8XZwfdLKZAiGGeLg416Zz51W23a5795122r7HDptv2W2jHtvstutO9PB2O3Tbaadu3XfYeqee3Xv26LHZZl1ravIMGBx5WhEDAeiKULbiLFIC5SIgUJEs20ngvReqI0SzZ5j9MaA/ihJh6GASk4DKgwhSgB6DcYFvnjVbbrPNDj167LDDdltus/Um22651757QeI11t5w8602236H7j122rHH9tvstONWa6/SyYYgcHB6ArIWIYB+sKLK0l1RZMCm94aO5Ri7JKIaNm8BAaxVxWkLo0VSPYrncxwIgYpwmEQc8T54Y6IVV1176+122nmXXjvuuG2PnXpsvv32u+2ya43N9+zZs1u3bjtst12PHtv36L7jJr/YKMeDNrXKoiPQYsSwIcGJT6lSIc/fonzML3qiTx5KRPCI6eTAhytJI6HvIHzfQeoCeDiJCwU96HkYpWYgYI3lzebrNttym+7du+/Ast2OW26z7V577EGRy620crfNVtyh+zY79uzeY+edtt1mq9VXXoEhMIAVwzwQsfSdCEKocKFRomUEASJdUGeRENzqHSXCCJPcCSfCWwNaFiCwjCMHQgoQqIwAhvwUopVWX3NbJnyP7t179Ni6+3brbL3ZvnvuJia31bZb7LDjZttsu+1OPXfZYdsddth+25jcKRDC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)
+
+![八位对手局胜率分数之和除以八](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYQAAABcCAIAAADhxVVyAAAQAElEQVR4Aey9B4AdtdU2/Bxp5t67u+42vXcIGExvNja9997BGFNDSUIgQAgQIAESQg3NGHfTezUYF3Ch945p7r1suWVG0v+cubtrG0heTN58/8eXyGc00tHR6dJo5m6CCS4oBJYkeHaSciiVQxLSwIpYz2EXgq8iXBK0wW4gXikqIZRCqGjPBR1zvJGMoMM+LFNxwScZsMGJzgdXzgRkfIh0IcMQGbKSBpWpmnMiBz2xiQ+0IrTSUFtFq4pJ0Jo0/y7wytgFXwquKVCloOpRqld8yPR0IVCj7GrGhn+pkMl3oIUd0WlQBRRBseXAkHh1YCUNzocQXAto6DOtiAw65IN2v1OHUJ0QtHiteLXc2cyAfUIzZZU+q4lsBSZMpor3VfVc5q6GNLg0hOArwTOIpKAOLvDunfLzgfSe4xmkakgpCU2BY06r4INC+PHF+UBgfCjRqSppIAcfKD1JlL9mURpYHPHBZY3AKUqrmKpEqufJhMAhNYGtKnCcc5YFlINXEa7Kn9LJqtoOgc2kpR20uMAupZAsDap24AL0XH2EJIQkeEeCKviw7IVzMmCViXAh0y0JVQ/QSRRabYdMFkfUAyRWoUrGZCNZCJyqVyUw+nSXr46H1mKwuBiIdiyM5d0ABGQ4QWthM0MDwQQQiMgGq3fWQqQREEA+RODHl2DIVgEmE8zKG6QC75WJ0QocU6i2F9ecK609Q1JCa19Ca/P/SEOVWSx/sV4twhWjV0v//8ydGmVCDf2KzKNZNxNusppVhuf93wcqlKmRSdQ2JRmIASKjWlEBYg2xvLFeCpZCMcokI3g1qEq3FEEV9U9qzq2OSjMH0W5WEaGjvDKtFE8UGNks+4hXVJWUGNW/iqNWSsgRgtIs4/X9Wd/HLGa51FgEROpJoQI+ozGgbtXklwzxr1Zc3WShq5us2aIkMm5ts0sku4SsrWq0tDlSBVElAakqhuZiwL5oh3e9gTuRWBgncCZDsGoZI6ENGYsASnIkQxRoLQDxxBACdw5oySi98tfej78oNZOuMzzgbAbsUSaYCsFE8LY5a4muijdqnnhVg/GAOova6jCnsUXgXBgoKPrfeRmIgFuxGErhRWBDQQACWsqS7RbcMt/J5DvwfRZ0ApHcAawXMMS6YEAfVieiWjyQVltV9PdrqPdarJEq7VIGKYp4QjMliVuASAWvujAWBDTPdWDJA7FogH2QKIhGkPpyBqqshDQQncwGVVWswBLAoqHn7SeAgT5TtVZtBFqDhRhUFRA6ipCJZnrzTjUUKZ5tJyBA1TEIRoIy4MQqCDktG1AugXOyWpQvWMiIwEYrBOjiIlK8IDHwuk8Q2UIgnBpMCw0APtQZX3UdO8sEtJr0tIg6cT4hW92AGLWWd6DaCNmGUHUC6DQ4A5aIVwacSo3YzdBELaGwocLEZMBhApta8yKwA9qjBithC0bRZEk0eTtYgqLEVxViWykphsDOjwdyzIDzCNBthdnGlUPsUlxE7SSG5ybPWwsYqJqqhQGHWtCtd9rS2v73NiKNU4syAlUJWpo11Ob/iYvOafGDKpFm+UFldKmznTm5VQ8SL41oHVn2xg/OIHcCh6rJzQZ1yAAZhs6xRLoqiiEOVIkIQ40V2ATvRBLAYsDcMAC5NmOI/PHAaST2GiZdyGTNLigX2iTfKkD5B0WhpQjFcSfSA3uo4ngjtLaVCb1NqKKWudYMZ8h0HiNIcdpCpmq1pbWqoXeA+1G2JVZ76pbIKjGWUJv60bX4CUWWmmO0txhl1D2KokOyIbY5SmmoirNEtALRNIZ1K6a1YVRXzoTeM6aMCoGPIC9MBU4SMFGyO2la6HUotaCbkMIkekQy9Aiguy9bGUug6g7efzRQ1mKnUqqPEPjA5AGe0j3EU0QmqJmjoIpXJUF6sCiNoLrewGGwcEhJOcTOvxEohNxpRQDdwGYVfuCESI0I1eH/3ZpsM/Bka0F3aoPt70Crquoi7dBjesNSmn9n0k/pZsq0BAeG2hDoIkV5HtOUZwJUBE5HI/bVd8wx0G/aJEaJeRNeXHisFSRQ9yqBthT1ky7qQ6BKhBYG2RmHXAMRHGStkEmkLsYhIgTFtfiLHRISqDZIo5CNL0NFHgS1UieRF43NIhiUW4Ah6AgvSZEJgsr3ui6EWJDaIVsoyiiFpMSwiZ9WMp6UzTvZUgy3FoIyIyoYEHRVckRx1UvFtSCdbg4gh+pQtV6KuoqC2tbSXOIu2iY9QZl4tVnbRGdiwBRQJYJmEokJ1YxAVgSp3oklaGuZLgrSB87iORTpVSDU6UQvKQqqX1Z51sLRKtBH7LNNdBXYJiw9l4h/DywpEuo9ZNnBR0dVX/yfKVIVDc81RkDmQLqTUG1XdcuGqBGdUwW2/41AGZlcOqkqJUNUm5laAkimIlq8xZ4qyQG1SHtARpM1s6qFFMtQlN8S5FSIABWBZnZkXe2yXoKaZBxhDXCz0AcwG0twqlrEbZd7xxLoZWt6isjYUk6oLoDFDKhMyHrVWt8huIl7IT5Dt1SBm1hVGyiLliaWsbTsLDqNEgmgVgRFZFertirmO1q0djmPcwz4mQXNdK1jAB+GHCWo8zXeoRpjrzfRCawWW8BR8BmWBj0dK5pJw3d9AhvQ18UowECZpSoMaK6xrMU3TwgZM3boVNbKnPwJ9LIL6hESMOoUySmqG7hVe8O+kuvFDb0MSYjhHEX8Wy8qvBR/apX19TmvjZa+tn/KRf6E780krhW4B2XwfSL6LaICBPVSYPqSxos+PDKcupeYViCyFVqRSzeqUpfAVRFL1q2DzKVMsSwX+SA0+kWB4SExH7Yx+I0mESSWMokSA64tAQNX5UAcQHLtEa03XooVztDmYix7PxYM1GzW2YQ0q7Oecs56mQrs6QIhgi3WoLY0RL9pZuNUwUOgABbmJJkQ2P5pwLkZUByThzU03T3QrAa5KtIj8F8cQP8RxfcVNYeLgGSOCIgEXc3Q5Un9jOJ+/BUA9S7FclFlnMmDQDyBDQKF6UjLGYJ4kqtWJqV0QANKDFR/DgqDyF/Ssliyi5bSrFmAMsrooc1s1bbSQSVllM1q0Tfg2Y8+WAwZR3LwTLKs/VMrFWSUfbqYQ2huNt/V+GZVMt2qo5lwVQjVCkK8cuMN6ofs3swia/+frtTJLTKpbUvz33jnpswc5aZDcYSlJQV6iE8jItVLgfd/O3DlZADugM3CqnKpgYAaEkC1FLC4cDllnerjl00NLW/Ngdb8bMEodhkuTlMIVYEp/aWTg1ZVVNaiZtxcqk1U8Zxl0GqFV6TuntmoqF60iEAy/MTC2ZzJmsAGz1/Ktqoa+9DTkFEUoP5pHuCNC8ejOeMp37DdAku2W3A/+k5ehBZyiiBU5QOB/lmSOYeq2c5jSzaDM9UtrTQkaJmbjbMywavqHt75bBulLSAdgaNKTURSHWImhFAl43OMn9NJke1avCs4pz3SVzwbKpVtHViWK5vJ38u4wfMsk6nE6bQEGm7ap1qoVZEP1MIQ63Vv5J1LLqOrShU4r/oDNmR7Oh8UOiL49xbdJFWC0Yoa8PhmeGlv8dXs3sWIf6FFowgItA8IfEZ47xy7YByriyXQOT4EPR7qUydkwrQFdRB3dl2DfKFIPJKq00jCBgOakXqWjDLrfaeivYTvIJfuqssz9bJKqA00il5c9XOCUgtFUhPElYqjDTQmVMq0gBaR3ntdbw5S0VQUtD7wBByFbkaMPn5KUU10nnf8QSoE2qkYoxXRwoufh1jz0wtrheCZnHosEpITQVLGGRG/eZWl+uVLlZLQ8tWVND8WyKt6uldFXIrgAT1+UQ8HpOxxuJkZEeoxDoFa86ZxB08h2boAg0qI0hRMP/UnteWtefKy3FSKhgcMW9BAZHEJysIrRzL22stSnliqQpmBZ0ZhVDSyRBo9X2BxpLzGlPglwIgxSaoGWmNdWVlmDnDcnYJTV5SZMRzyNJ3zxJpY6UlIdwWIoYLcyEKF8bDiHJPeRyaq7lnCGcsIIpTvQU05kQtCWXiECqTsfAkW6hmA9lN1wOjGZwzFcp7AMCpwJRifUD3DtQXSSPZpK0mceo6IfytQM/quwsyk2g6ZIwLdJJRa1Z2N/30QEe896xCCsZa1yhDqAE1HHwXJB2aqY4pAk0mgXvEejgHO0jww62HoQg8WNowxVT5sE/PTgNlCJlQsUy+4NABGF6vjwwbCZuDaTsmcKUbd41zBu5KEisQxXIDaBZ7fvKfWIqYAnggyR2o0ReexMrz/NOCekZTBpWvhQ5nWgz9GB5WcuYFI3vnkNfx1ioKAREKKQOWdq7COgymkJs8lFH6aAkvPMlzsXHYizGRK1GxqJvAuTbgIqQMVclnU6BGSg9GrVEjFMHnQK5LNilLH2AYGEQZMfmEBZ5NwGSGb1BxHgNqRTaACZCPOp1x8uiq92s9Hmt5gRKgNd1NPF4F6UmcOsPZUEJYaWgMDZLxRLewaY3mSB0Ka489WJI9ESbw3sK+Me6eYkhVEM5c04P4W2xy8XzBzxheffTJu/LjxE8dNmTWjYsGQWmsMmNPcj2yg56pClqUOHrrLmDxCDCrG/ShtgqWvEz5Gv/xm0ptvvTl61Kh33ny3WA+a5CAOsDpHfMUhsOMgyWdfT3/zw2+M5VJMESI4E8fWMd+XRZmfQEv5gFdPuiJdOmfu7Hc+/GwRnQi6Wvllt6zS3v/mlaa6pEUEacIqJOx6mOLUqV+89/E3Kd2XGGviqmw+Y1Q2j0uh9NGkj8e8Om7sqPGzps6jA3lAYhYU6UwRTxuYUkqaXQEkyFrVioTVxj+oQ8hFsQineWZGuVSycaQcuLW4MP61txY2li215doG0hASQTGtxEyC4CZPnvLG+++NGjXmvXfebliwgNMdNBXL5YTjzfKoIHFBE7YZs+w3coaumdQK85opZF8f/w4PISU2A3Q0ix03q1S3LYERlOtRaZw1a84LL7/2TT0WAdyMBMghzfGbF1UCCz1tllEzA/5IV4G6SB8uDFgKV4YJCH7a5KkffDyZgrgnWWvJOfCbTCiHpGRyZvJXn4+f+MrEieM//vDzNAF3ImOjyIo1nmkv/KZErdRdVGyZIQBxFOvGJ55mpsUmxDkqgOCMcxNefW9hA12nbAVS4abJwy17Ji0vmvfe2++OHTfh5bFjZsyY6YEKTYERxEmlSVo+VpKWYBCCFcM8gBjP/VVADGA/ev21VTt36bXTHmPHvZ1SF9KKoFxB8KOfff6gffZbcdU1NvjFRjv16N6r+05rrrrybvsePb1eQ2IkCp5p40i+OGk4/cdAUDVJGPixTSIImwnidOGsyb+/4rIo12b99dbbduut9tpll52337JThy4PPjxaDH2MVBdMaiKDpISm+qsv/+Mm6//iiGNP5ILKksmDZMFbY8nx3woiVDqg3ABxTXOmb7zxxltvtsXYCa/Tsu/IJd13MP9iN5fLJYxgAJipgERRpWHRtX+4dJ211jvoiGO43zr28wAAEABJREFUM0VcT/SIgCUfASFpnD5r3VXW3HijzXbbeefdd91l9VVXHDLkYRtpnPM56wEjhoX0PwQc/yF0C45Z5/T56YPnnuaYOfl8jjWSylvjx6+y6mo77rzH+NffB7OcjxyAO3gO5drIffn55yutsMrqa6639dbb77bH7lttuUWXzh3PPuOMUgqu01w+rgY9E+91hVAirYZmApvLBnxQG5NlmuPEd958Z/UVV99hp56jxrwWRTwfka8nXncrnxCjjaam+wYP79J55ZVXX3+P3fe++NLLBcrAaF2lz6YAisUylsBlnnMVhssbjQDz36T1i66//PK11l7v4MOOJ2vGMeG2qPtCsmjhzKuvubxz+85rrLPhjt132XGHnTbbZP32Ne2feeE13ba4p8LnDB/s/KYT3DIvSFVeH/kaRwRO1yNGGuULVCNx6Tvjxq6x8ko79dxt4mvvatIFnwYfR9Zyl6wU/3btX9p3Xnmzrbbu1avn7rv0Wm3lFf/8lzvo7CKfzSbEuZxyX+Iy1TeZIDyIwuTpz2TO5Olnn3LaljvsPHPhfCBadeX1IjqbenAaU3jR3JOPO+rxEaNXWX/TV99+b/7cqf1uuKgm4NUXR57xm8uZK8XEc1tDWtZIWM5ZRvDeV3iC17TzfF5ZHvMan37swauu+Ruiuiuvu3XOnLmfvTV65U5554vHHHXMB1/M4V6bswY8mUnjmBFPrrL8KldecS1Qs/UOOwcBjecrnk+buK4yl+LfWpiM4KLIBaRNvz737LlzF0Gsybdh8CiXj17WSpDdfkrFWBCymZRFYI8QgqtUSnEuB658jgY89/jjq6+86jVX3pCDbN19hxKQeG9ywSPwaQk0cMfceptek2cXf//HmxfUlx9/pF8sOOGEo+974LkoB3JOnfLyTEYy/GGomtU8ximEaocqSUAUGZemQmbss3aV+ZO//M0vz9h+p12mz6Nn6tovv6YLESxfITm1iNL0r94cve4vus2Yn5x58R++nbtg/sLGhx4YlrO46847DjnkBEfuAfroATiBQMQSLe0t0xVEYDRN58+YcdqpfbbZZsd58xflpW7lVVbjYoalEVyDScQ04gnFF0uTJ2247jpH971wLjpd/feBr7z19tUXnt0OPBOBxSEG8pk+3E2IWHagdeXUMo667KlC8twTj6266qpX/fEvkch2O+xMFB8occyjjoPxDw7vd+01f53XkNwz5Im58xe8/864dZZvE/yigw47mqco4eOZ2vAolfoAScSEZdWIEwLE5hLPL1DZZHVJMn3a9HPPOWfHnfaYM29egO283CqaK2JETKnUgLDo12f3+dXFf3K1K014/d1iaeGEsY+v2DF3xUV/+NO1A2sLETSGtuSpD1duxhYw4HMwGAG/0gm1vW9Av1XXWHPgwEH7770jN2BEbdq2bwOAFKyRJPqUAySKnn9hxKabdm3Xsf1JfU7avVc3SO699z8J4PMt4265bwceqYjBjy/i6V9YnSCAsQytgEsiWDiccsY5vz7vzE4dOq7R9RePPDgs5u7jSzNnzREBN+0FM2bs2X3H/Q84dusturVv3x5RvPKaa2Wx4BM6mDims2zGWbn/O6+01IS09N7YkcPve5ZJhbjQkNATzSKprLZC5iVt/e9cIpLjR5YAiJk9Zeou3bsfcvBhW2+5eV3MZAxrrbuup5N0yw4pHcEjrGt84r5Bk2ZM33CTbS/8zemFSPY5eJ8+p+5fU1tzyaWXNTVxQ4Vw0wqwJuanGzTrjZbiWxo/fA+By5zaMDJcM5Tt4NP7hg5dY6317rhrwAH77Bx8ChN3Wr6Loyf0FCw888MXh/S/K+TabLrL3ldceWmnDrVta/MHHXLIFZedRwXGjHt10SJVzDKZlxKrynxXwaUI/nFHp5mh/futvPJ6Awfef8D++wisD9J5uS5ZzLwLiTUWwTMzm6ZN/cVmW381o373g4/4ZvaU008/cvONV19r5U7WlyN4JhdNgRbeDRUO2l6WixMEllsvQO/Pnso47nTwwUdtueWWtTn6kHFchyTGsO309QOmrlCTJrjyyquPPWbfdu3ab7LpZo8/ep/aVCx/O22WJzXpVH9hGAw4E8tWAkTZwYWsRY4+HTZ0yBprrXPH7XcfuHd35WZyyy3fhVqRe+rTmoKd/M74IQMeRNThqZFvbL7VRvl8vOX2W952y1/EFa+59JIFC/kGHPNDgeEcnd98GTha5SguUOm0UmxcdMTRx8yYM3fYgAGd27aDyTHOBMB7nivivLTt8MKYMe+/9dpaK3fMUTg/TBTqjjr6OHjJ2ygtwfFTNiLP0PEATb7Ngn7sLUiQyMfwhifMAIQ6RF0OPPT4iRMm/PF3F1jQNQHGbNR1k9VX6IjQUCwtcoq0tfl2kz6b+uKzDz82+rlLfn8eMzs1MRkA3NFq4awxmlj4Nxd+54sKOTQsOHj/4woG1hoEMTE/u9KWzB3UqWUnyvr/qwq5hAHo0KHDN199/fijDz85csT1111qDMolphK8cBOKjbFIizwWPTjwnorYfY87mufdPDwCDjvimGJT+dtvJ3/1zRSqaQAjfHYF1qqlaKUXx/TWepGwtd3cCCoQzJkoiskZTGKReQsb9j78uKmz5t3X7661O7dBZLmCycw5F/iRgxGPc7PrmxBy62y2Nb1Hr6lMnx5y0D6xRWhMGop0o4rgLA8qzTZJqDx7bC8bkAkPDawbmhpPOOHgmTO/6d9/QNuajlYPAs4KyqFsRYQG8JySVM4+5zdfN9WtsfnuD93ff+UatPOhlib6BHQpIEGBtBBDCGBZRq3EQ/hKUabfQooO7Zf75supjz3yxNMjx1x37WUUUkoWka2hQiFYPiSS+MCDj5848YXTeh9jPYNLp0e17fT0QN+UGhZa+kaPGUJXM5BkT52WCciR9C64vOV2qE0g1C9YeOBhh8yYO2tg/3tW7tTORgV9ogT6IhQoJm18+9WJ/LjffvX1N9hiZS5PToPJ7bPnHut1tLXpnHFvfNQALg0xOrD4MjxBGKs6M0lho5PPPmfQkKF17dtGubitNcbY0DLDWEtpyOXX3bjrBhutzaemuApZwofnnnuONYPRpoB8bFLnRCIBqlOpJKqFjlTwyLJIm4pv7rIZYFKoxySkkc2sIAsfte288lbdtlqxS0f1B6Mk+GbqtG9nzuHOVCjoluhTPk3bfTF99ja77AZUVlmxI5BaCXoIIF8gGAv4SCjTs6EZA60yGRmFVszpDNtcKSq7OCW7/w8VydIcH9rOn3vBFfNLePKJe8454xR+ZTAmM5jTScKaILyqQBQha1M7gjaJqYJ2VFH6d0mtMjLyIGQUoAfoDfAsaXNxbZtJUybvfsAB8L5tuwIf6jmrniOlETJLERk0Nb75wfuwsuWO2xlyCxXAdOu2xaqdO6LcNHPuvBTwAcEnhkTNkSSDDJQ+m6R4RkiRxOmt5TK0GaxiLktQpnZx5i9/OfS+we07d7T5uC2En/pcyjEmkRgrEIViqQTjp37zFfkSwGdkZKbOnFdkqGpq83lAwJJVvNPdRjEGZGS1IjK7fUeh73QzKlbGIgSc9stz77x3YPuOndvka9q3bWsDbQ4UEQvfXI3ndiN+0ltvPPTYcwH5oQ8/UhchckxROi0xJu/5pqnrxCOLMzVNyVrbdKG29KICBFDNxaB4vZonsulpr9AbVmwUF9pP+nbGnvvvz0i0bVfDOEZR81wxEXPbRlFNu+U326bH8it3tpLUoOJd6dNvpiRkZMOG66wGX6ZAJn8SQOdwTdIoDlYhU6faZO2hCrNBWNwWTgNi4V6nomE0oKed88sHhg5bvmPHuJAvWHHeJVw6AZYRpFomalNb64G1110HjA/56Ydqk89FdeIMP0iamI6jl0ijgy2XgQGEU7yuF6mBArUKSH2diKRlJh0NcM6Cu4Rl6GygQpFJuBGLTlrwzaQHHnmR20jf004BOA+RtcKjiOPvyVVEFhKaTqB8uptnFCDThkMu0NmZI7hX2MCFogZDBMLpgLW82SgiibBFbOoHDhpeRp20XWnrzbvlAENikpmAKEASy13SJbk00Y1KwI8WFfBYAKMJ5hE86LIAxixF5mKtVTPFc0hvGT7oAJANLa5VCY5Qda2VHuCTk2xZp+XRz71084Dnexx81Na77l4/+xugyQq/a+ksMg3FMi1wWQ+LeXoOaS/oPWiLJBkyk0GdqQRR353SzAcmopcYSwMGhStMvWHUddaQQS5nnGeUocvMkY35esasz/hJkGSx5QzwpUlinvlXMElbNHwzbVaTehWRiOpC2SqIN37CS7WpevCZW9VW6yqS1FWgUAUhmioxJS3IClyyDlKmg+NgrM/HgCEJga4LZG5223VnpAtee3rIhNfeY4DgSygVL77q5mDbbtV9+w4dVDDJOasKgZknxjE5CRQJhoXjoE7sEdhQUJwHlgQIFCD0dwRuKBx03iQ+EoivUOkYEVJjTODH/muuuUaA448/tOtahY/f+XDc6JcmTBg/bcYcBzCDwcJhcZDUEZNJIo7QrIO2NKAcpV2sKU2HqBJTKKjaDkZMISDWPKV5QqcRwFUemUAtanIUQEYEDifUPtiCD3k1kD+Munmvjhmx+/7HOVv7uysv3WBNHifo4JgbPkNMKwlKSYk0KNNQFeClXZctCCrVDEQrsd44gU1KpGIR+GATq5tTGuDSODhjPBetEWpFiBFy/KGLrZnTJhkPy5au9VSErzyFMuJXXn/dKRLV43PW1IoGUgyN0rUKUJ5iFeUd4xMYCu4/AdaKDrAyjDlSeN2HQhGVpvN/e2UCbLT1liccsTPHbSYcZEkH0MvQQrzeApSztkC/ZMgWCiI5CtVA2FbCAJ+1wHWkLZ9wS0ngkncmvv3H629HXPfAQ4+0r0FEy6g4xRmjfOlVzous6KpjS9kIt3by0PWgmOpFgQSiq12ocG0SyRs1ZJ2ByervVsyYJGEkOEoegYGB937O7JNO6g3T7s8390NkJOVLRyWtNKlX1FYjhTz5p77iWRjOJbnKkp0l2i345jvnLzG4VJMUVVBbDAQiITYolZtYqz8CDLcqcsgVAldbFJWaGpUDw0akWCk1toF88MmnjKlnFJKkGjIOBvIUpW29sp5v7bY0FJMNKYITwS2IczUtxZAdHxWqWuADlctew0MiOkezPD6y76lnnHgIivW77dTr1L7n3HrD9auuuOKYsW9tseOuDzx4N91oDdVSEcodOtuDaayMwcRU7OJR7f1Pl0CgK0m4OKyESPhSUswZSVwqARCuruAaFk589XUBBt/br2PH1TffYrPdd9uz1w67rLH6qn+48mZn4DgGLUxGTmKLagpYtSijWHYpDK1FJym+GcGmB9cvoRmjNyUC40jDy8VSDHA90IuGugYNKX360buv3n3Ttb227Lb7rkeI5Abd99glF51VSTmbEg0/HbAVeH0X6PRMPRWRNUjQTMeJYIajeYjdZq1SGDbb7vAAABAASURBVAej6FSn2OB9yuMhc5+TCQyE7bDcKmxN++jVFx57hiHjd0oEvPzKuK9mzq4g8kZ3Xk6Oll6PypR8mxXQyJIJqho4l4gIJfKRT14IxjvnqX/w+lgjsVl4603XDXjstajtek8//NDyeU23iuMKkwCjTLg7gC00F4F2jAUB+pQ2UEQ2ymZ2zyoKEc+1oh3uqJ78JLHc4n39vG8m7X3wCSna/PFPV++72xZ5QPSp7lOXOj7HJA++wYpF6m0cM1bOuRggGMOUDSANQcA0pgDDO2gc92I2DcRAdTaKVhqoFaojMa2Aagku5GLLdlrKvmRwv/b+st9fOXPOvL/eddvqq9ahUs7lcjBxIVcDV6yfP4f7ZCpcMWmO2lAStwAqowAVRIkCtVUxgqwwIbiWWVt4Athp1aeZhPo3QzZjqUpzxYOqBaJpAaeIgYgrN/FwSw1LDQ30khpOZJIUamvKcLX5NqRPAclx6/QAg60Q6EgTgUwAKkMQVHtYungqJEGHSJDdKJQT+YCL+IDjQcPGHlL2nBZ4GUR5mFqYAkUest++lMoPNkMGDL/7nn5zFyVWopzQjdBCeqZii0oG4E+XEX0iHkI/edLwRj9RtJCYfbZYk0brxRcHOZ0THH1iBdaJMDTMPF+pVHI2ymz2PDaWFjUsaKoUAdjCMb1PffWtdyZOHHPoXltFCa656vL7Hh9HVtBVagM0ueMAoQakz/TMPACtQb/RiQxlpk0AeBcDaV7qWZ9VFXx1NicKWx5ClQBjqqNGWMDB5IMPXz3v11e99d4sx1EvV/zuDxNemy4R2C1XyjVRpJHSLYAhBaiYoLU4UTKBFf5MVNUnRKBWqBbf2s7EcqW0jHGVBm9iEsN77uRKmBo4ibbfc//1Vmtf45I+h+57yUWX9ht4/8GHHrnngceWgQCz/TZbklUe8EkiVSFZbTjY3OBNVUHgOCE2PqTGWtrKiu/VbAiXkAQrdKXji8kDAweff/FfTWG5cRPfXX2FGmaXBSL1lwGsD955Wsp5ZN0CQl25KZAACDQsE9ky2HwPzsDCCLuqDG/wwdVDSm72nJ167DpjbsMZv7rwt7/uoynrYCN1h1g9IWU/Wxk+0ig1BbgpGQgZEZAJVHnsiGHXwsfIjnjsVEGH4KttJQWrKlRxS9bGas+llSifZ74iqYwbOfLmfoPat+lw4pH7Ox4tQpizsJEPsnJD05OPPbviyqtNnzs/FRhktglc2swfoD4ekkIYVSgWi0sCfRYp0mdIAQhoLlSvufX9W0AUJAaMFSUT0J8pHy9AwUhElPiVOi9nLSUKvLf5PJecR66uro44bhUOhj4M2WySO4DQLCdUVaVOjGMLDjSkCopniMFpZJ9NbJ7LeDF5rRgwrKD0wM0pgDs1jH119Cv7HXJKgvihRx8rl2a/+/Fn77z1SrtamTj62f33PkqqcjQdqy0ohiIoTUWzR+mqpMoinkAcaas1Gy3AETbVMk8d6WH2PBi27AUtl8ulRHBW0MP4ApYmVGD+PnToDX/9/YabbLLp1lsOG3bvqitww5IRY8aR2CtHwxkRVBXObgFVrqXNO91FyDRnjyDNK0LAbGS/FRzzgSEjqYjQMCP8aaiZeTWOqjDSI447vtHNmN8w98WRI1fu2O7LL97bvXv3Dz5vckA+V0BQHoFeEWlmHdAiSw0PxHKHIrBBaKFCy1IgLgOq7Rk1HeccbkPBiVW9GE8TUQ54IrCMaFx4+oUXd99tB7riumuv7XvqqTOmTb7kkvMcCkAhn4tzANMnjuKMbXNlGAcFNZBM6TWyBTVFILF3PqnqzzoEiNgQuA0lKM4b/+zTx/a9OI3bjJvwyia/qPFcMbQvhSeAX9JSMUaEapMtIeMpcMJzAegjqJ0URwqCIR14KXgQQQjgLssYG0gEL7YJTXMPPOKET6cvOOWXZ1/310v58DGkNQgCp4kMllifAb7A2pqFjfXEUA2GLYA0zhiNJdvEKwQ6l7p4bfMKGSs2qiCeqcCmBwicVQViCMEzKoJAZTnNwxjC9X+7oQLMbViwfF2+S17atVn3vsde5Yo7ct/9DznsxMS3gQVNzHZMfoAs83RAzgQybBYSPHkqoDlBOUpwoJ3I8FqFrFmts7k/WHEevKPLwec8Kdinn2wUcbYJCRMCaSo+6O6k+gu7pq6DlzbdNt2MeuYN0kDX+kAiqBPIQYVyjOxac5co0JNEISMwoLbCLntVqOJVc9XGpBCpVJw4nkE0GYhkwK0roVK+/dqby1jh6LOv3u/AnpEyKWyw6eZ33HZlbb7hzVfGT5umTyqy5wmEiWyUMbl5kJL68JEetOkzbVUetYDeQ0udITINoZQcIysDZ8mUIQXf7oUp7o1NAT4VwWdsFIquzETJ17XZc+892NBFRInt2px66mkwdWNfeZsfBdW3PljKDqk+VyiRqYnFhTpoRwk4ps3qRTxxtIVQxRi9eU0/+ihr84BPZIlO41ROCIg0jrBGoF+PayFtEbfrvvNO48c+WjCNkMaBwwaSsFJhDA0C6fgx3tJe5cfcBkNGls0IErS0KCAD0D+ZDtBCcwWeA1qTr+I8RIr68cQzfB6QgAI58xkbRSts0PWxF8bxt9HJU78uNc6aMHHkHt138GiLXJcN11+XgiMqRUdhcSFycafaakaJSMxweyZECKAq2RKCUKBLF3w7fa99j0nTmhET3ti02yoW4C5JY0wEifSOYMhNmOJsEGgEQThEtNoEkKAViKQt1dqB42qxEisFxRO8+91FF4945e1d9j78L3/7c3BBuC0az8WfAGLoZQoDuNeVG8G09r5Dh06OzMjO0EPUnGqSgNy1zq6Q1YsryRBZtRhZ7Vb1a8WKSNbmBheTNbiHG3PBhRcNGjrooUcfHjKg37CB9zz0wO3bbrMeyXqffubgYQ8OHn5/27ZtOS3mXhlgLPXxHF0KOEyA2l7F0wNsZDg2Cez9GKhyDrm4lj6obdeWNadZqZrvV+rSeaWOFBN9M3WmrkEYVIrz5839bMbsRUEKkdQAKpRrX5/bbGZUWKIQp71MJfVRVSIoiAAyVFCKJa8AfoRyiHOpC1GuEEXwoWVcgDmz3n39Ta6rj7+dowtZ0sDkkXjbrTZOGelyZcb02SRPvUpgsDJrAsRkugIaZ1SLqd6+V4fvYCjUcLYP+nuiILbeioMU9S9U0MgHPV+ZA7jyuRDKjQ2ffPIRZ6ipjg8ht+rKK8IYvqo4QBUmJ+XPIb0h6xpkhdMIbFZrNlQV5aQXSOpbRzK7XIs5HE9zcSEF2rZtz0lVhmxAS8KZcDlILfhSIm7VdVbp2XMznjULtXwTQi5XMIw64FMEcmqVAW4GvGBBBhwAtGfYYYsgvKoYbbReGSX9TPHM+ThX8YxjxM8V7GUe8FQ7BKaB5U94hZqaVVZeKaZHE/fQQ494RDvsvOvKnXk+SshRuFnw1gJGG6FVAe2pEhRWLDbxsYm0WHQi6uiI0aA1roiGpl47H56g7s6hQ7fZcgMaY0J51rdfnnfG6QuKZeYMMXkTcX9EUIZLXmQuzSceQCidgJbioSuFWtIKzQKefbLnTIKk/NLDz99060Nd1u3W/+GhNRZt+dwyxRtuvOax50Y2cpqAW5HwjM1Ddb7cVD8LMGkZhnuUAEacVobxoDwCtPAuvOvFWwtQeTZVcS4DAtQ5JCWQkoCsiEjKExf5ald0D079jj13Oeyo4w846JAjjj3+sGOO3ePA/TZfby1YOfzkEw8/eq9DDt6rTT5KKjqHpqb6JYxcoZcy4Z3CWXvQ/80YcMlxwVp6RqCqsMYPFKIJmcM9/dECmD1nPm1Z1FSiVHIX8uHjiI5oW9hy818AtSPHvVMGt3DDRTf5qy9LKOQ6rNi167o5oACfNzygiYEROEHCt1oLVQkslMcRAqgz+wqURfGUxQaah4jgRuY50cJHpGKoik0NruIjU18E08pCyAywyMf8wQhIdtx+K2pVImeLkJZzNqcybG6VVZYnc6tPVWSFaa/BJRLqNN4pDlReBQlAwA8XjlBJrh+CWkc2JikXF80tLUyMmLg2BaLIOsSwtauuuNKanXO18HNnzg1VfrwFGTvqRbj6LTbfgFaQj56kaB0Nackc0AQFnSOsBEFM4CLUDvsKBi0U2gMjDu62DJOSkR1XhJs9d44ADY1lkkS8gJQLPvjJn3/w8sgRpUTYJSn4hBZqXYAxxWKRGwRpnZoH5ypCSUIFiDOoahgQIbXMCnLPRlFts6sGZmSi6nEQWnjnVuvVsSZCsVRKUmNDsck1M+d0IyJR8Pphr2BI6E2h9s3xb912131A5Zo/XcajaB29mn3GUZYtl9EGBZMFW+TX3PZTZs6ePr/iSg2zpn0bAsoJhENqqhvQ744vZkxt336VHjt0//qbb76c/OlHH31w9pnnDbh32MKGBprgyCqAj3+wQ4DeifO8kOZQtnCpgJANZjpwKOtwHoE9Q5WI4faXLPKNc0/se1piccHFF82ZU/zmq8nffjXpkfuG/eaC349//W0SO4DaWaQajNS8+NIY7qJjX3iKEhOAo+QEgHsT68UgFC2AEbABLRSXkXKiclRU85hk7daKOxGfluBUvk+lHvRRlIMxYlBOA8OkmlTS4qImmGh+/SJmtlgmKWpz1nkwPyxjCGdaOWpysGdUrq6r1gGmCz3GDVpnZdotHlq65aETPeg6dTlp5YVRr7A/bswoZjD94ClFIpgc8u332Hs/mPShAXd9M7mepEB87U23QvJ7HnBgx7aAKwsc2TDmlGJA5b1Ad1AiiYGuGO5qoC2AIVKguiMrFKr3FlR2Z8CdHoS8TJ42bcaipNI0b/K0b5SSF5WjhDZtd9hpR4SFt/zp0kUNxBpeEkc339af6ceDVF2dctWLHPXGy1B5AltUCRLAINLFOhPcIIgnLSFr0A7em4FIUgU4ncJZSWXGrOmzmuY0hcqkSZM4SrZ6Qgq5qGOXPXbtxT3uzptvqPB5y4EoLk2fO3LUeCBstulGFtRe2XJEb9lF6VRHsjZAUUxGfs/gtyeKhDqrZUzvnMnoICu0li7VKepzokaMepkpNH7Mi4yjpgLA1LOCcWPH7LXXIXf1uzuLgofI159NHvHiq9yrdtph+5jmqnnshThnGNOA6gZFloBK9Ahl5iqbWXgUp2PsV0E7rRfZsU0pgVMg+GbazNkLk0r9/GlTvuYANfQmp6sBNjI2kpQS6dt33nxv74OPbfT45e9+teXmK+QFSFMrhoWzWqHKnWoxFzyYm6l/6/WJTz3y0Ml9z6QynHTS8Ufd/8CTr7/5VkJPOl+ZPf2aP11RRjpz4bRN19mg25ob/WLdjbp23eaJZ18OoUPw/GWDzD1M4n1ZXSrsIqn6j84NJaA0d9aUQ48+td/QZyiV3yTAGPgAT1tM4vmOHgcXWSI51dUjV7yz/41TGpEa/KrPsd1WX36Dtddbc+2Njzj6tBBMLtb0DEAlqZ8786tXXxh5+1/5y+bsy7L0AAAQAElEQVREoOHtMQ9cfNmfRox+6/NPZzJXUpdC6HB6HynzCdRGAugBAiWB/h165x2nHHPUzNnZuwCVEzq8GYKq58FJFBagOxGg3hQIv8fZCNxsRD8HshkYYOM/f+2dB598BU7+dt1fFzYxIQCni8UpF7hQMnxnodkp2cI78s3UENZGVFCG4SJJFw25+5ZDj+4zfQFnMbhqBfUhDcG7hDWVB6fQRqaTdzOnTB39wot/+/N1jz41llzefvHxq/5wzTMjX/ts6oIUpKiF7XTiqb/cqLOtq//8xEP3++CTSdfecOewJ19C+/bXXncVPaIZEzjVWCPUSNQNJtUk8Np0zIbyzNkzDjrmlLuHPclVB+cQUhscfUpvs6YZCjrGu1exlfSDCW+NfOSpE/ucxi0WpnziSUcOHf7ExDfeL5c9vYm45rw/XJrDAiz6Zqfte7z40oT33nn9dxf89vpbBxV9/v4Hh3RsC2WuUaMVoZJyaZkAoLlQccoJ991x92lHHTdj5mxqqS7JhAtpAr3HiQp6BfApbbzAy/svT3zxqedO6t03hU9C+cQTjn7ooRET3/iqElASPmbiS666goEbN/LJs3uf8NnHH48eOXqDrXb7ak6y0TY9zjjl0AhqUKio+fQDjGOQyhQXqA+Dy5fTtH721GOOOezuYQ9zDZCVZzbA+EDxgCedoYLChjDK5JeHq8ye+uWLL43483V/fejp8QzcGy88cfUl1z3z0hufT51HYgQXmTwb55535i233fjJZ+8/8ejj23ff36Fu+1322nfXLZxHmkXCagwDTKC4oJZzEsD48k3Clwbdecthx5w2fZ4q5Km6Hsq8RtmTJqNkFRhfg0D3I6SVd9549bnHHzv5lDOUsbiTTjpm+LAnXn39/UYXnMl7b+DSZObXD9x94+EHH7T5dj1mLwy/uvSKq6+6OIb6nFtVcF5EyLgV1H7VKcPSDzzaHXjg/ocddsL4Nz4tQ9NjyucfnXjMUb169VqwYAEiO2Pm3BnzghPHhR1cqYY/XfOASCuRKztfy4cX4MGXrJRZDKRVw+NYmDWBplBQqMyaNvmJhx//ZJL+qaixotoIglAZTtKHu6uuzMSBK9uFDz+bpK4hHTc45oaGztBRgKkp5APxQC6OnnrqqV32OvK3l13LFGSSwSc3XvPH/XffffDgwT6l7nzdcdROwK1E5wTQjKARoZ8DL/fSiGeffPRhjiUcswgeCXUAHVsRw0hwdgi0hBRAaIGsZyBcFYZtYUt82rDogMOOoQ8B8/pzz9z411sy+xjINDbqoIibF9R4ocMCjJUAsqaGJlAnQIgAZThI+bnHHnx2xKhFRUBgqAkgIgCcc9Zaz3kSXJpyDJwr5tlnn919j31+d8mVJRIBxuK26645bM8977jrbro2YbxCAW07fvTxu4fvv8fbr0/YYpOuF118xRbb7fjJZx+suoK4JFV7ub48PCcEcrWAjaIaKgv6ynqgPHP65KcfferDSVO56tB8EnY2MBNhhIJJw1qtCtySGFTn9t5734OOOOrVt7/SD8Ioz570Ye/jjunZqxcTL3UeJrfqRr/49quPTj356K8/fJex22qLba7/6y1HHHXSxDfe3XOPHegS6kH55CsikdWlGOgkQgiewLAEP/q5F5565BFneAbxlhNoRYXxBV1kjGYODcrUol0pQurq6w846NADD+k94bUPxOQgbtoXH552/JG77bjVnFkLGVQfcp1XWWPSl2/tvdfOj94/pNvGv9hl971mLij9+YbbRj77eBsLNRfMKwtakXW4/WROYJBgjHWVplnTvrnvvkcnTZ5SgXqRJlBz1lQZIhnKsJGmqTGKg5jnnnl2j90Ouvh3VxZTwCIX+Ruvu+rgPfe87e57HJer91032aJ376PbtM1dcN75m27a7aBDjm4opjfd+PcXnhpSEFgDgN5y6hg2xRrJUGwTyIH7DhpHjnj6sSeebUwyFShHonKJieNhASVXUl5cDsji6Fyy5z57H3TYEa++8wk3ayCdNunjk487plevXnMXLKww7JwlsnD+3NPPvOixx5899viT3/zkiyuvvCxvwJ+QXDmlmWIpzmGJwknUNmQYQ0E1tW0mT/6mlC5sTBvK3jFKSahvrDSWS4u6dOkAb1bvut0iV3LlJKTF1DXVL5zjnUt80uBmNrop7WtiHo0scgixgjeeCYKsGJomcA4+bVvHzxGQfE02AAiBu4dxwZOCe4bJScJnr+ZRDuh4650PJ+VKWuG4855nrkoIiQtJ6pOLz+9dC76AAohOPPX8Rp/Mq1SaQkiDq5RK5bSplMy95o+/iS2YdzAG3kE8E4YTaLZAhJep3qRNTSEtMxUM06hU8RyKOTPAigGpGVYJdCLntoIn4xZQJMmc3qM2bT6eOaNB/2ClvpzMv+KSX0oAn5aIoxBQS32otad1hkWZA06/oZIflbE+aCPlpgiulsblO9WVmhKbY/yUeQhBRNgS0Vo5wIgIPGcZ2njSKb0TXyq5cqNLFlWShY2l+mJDKZ1/3ZUX5ISCIUbAs2f75e596IlpcxctLDbNmj7ljZdHrblcPqS+Jo4QLIlAT0gI3ns+8nWTAazhVgZfIrSvZRwtCu2D0AUGql0w1Jx7P7Oc7mJbtTSev8NaK3F+8vy59WloLC9MfYNPyuVyfdk1NDbNbde2NorIgWkQrbDmun+/604SzJzxzdzZ08ulxv6D7t18yw04zE8zNFEMlHHQbCJ7gH4lUDNmH9UzbWtqU1emqgJTLjvwxjgCYg3j4xECUeQCzypYMe3afzV3YaMPTYlvKpeDLztXnzTO8OW5a6/U3iS0OI98p+XW/MXTT744d9aieTNnL5q/oFgpn3f+mcu3A/M4gL+lcI2BQiFccXSyxKAYaHD5zMjFcURpcGIcqoUGQYyqpH0OBnCCiMDxDvjo+FPO8L7JO6qWlIpJQ0NDUlpUdHP/fOUF1ghMvMEW299y58D6BYsWNcybOvnbhfXz5jfOPeucE2q5/rLNpez5pc+qZC5JH1fKzpJ3cIEBovykhLShU3v+Gm4jqgtVFkAuLnCZKE2GEXh2qRd4GcPXgplz55Z80lhqJP/UU7VFiW8oNs5dpXOHGgOhIUG6rLPB1DnfJq40uH//dddaLQIqRVh6KMdKjzCOv0JRWAsYFW6qx2/FMWFoIYyFzXHfJFPvoM88gLbDGG4hDL1YJiuY+jYfec0Lz8QOQhtgACahkQgCiJgoiHjnHfHgoKUe1KkEMSwArQQFEYIy14uWByRxlj2QOETtUtREyGZm5BCfzSNL/SAas8edKyBV70fBRoHDHnGcD84HByMAAeByVxPgVf1AnDdcuEnKEYU0DSHUFJq/MRdy5K/oSrkME2krCOewEZQR76qN3pa4xEPXFFUyBjGzVM2gQgXDqcTqFPFkhHKxAhGAGhnWgYsMEGSFBNlQ848G5VIcxxCjwaIRjplETQPv9CHrbA6MjUHD2OHKJzfJ6FnbKI7UALqeB5oImZSqDSZGLtexY6EQo327dgJnkdSRItCZdJ7aKVYl0/vCYYeqDmA/uKTYBAaYbWQlBF3m1gilsZ3hIKLWatsiivWgaYBcdsJKKlHQD9sUGMcC7mOgq3LMUcZMfLr8ch07dO5i84V8DE4iS+aaYUsgRp0ZR5DAIUqgN+hPr3I0jq4mqkkS/uiNXMEqUlCuJEYn04JQxai2gCdfY9MgLkAiMUquicE4SlpGxVfzH5IHOGw6dGjToUuXNu3aq7AA+sgEprcXslMU+bMVIjJOOQwOqLs8D5vatTauepGaqxpUQMgD0Pk611oRphFpTT5V9xgGGzBiTZyLqJ6BkkGLCgGDCFubq1t+uZXatmkb5Zhf6hauGZLE+h7nqtnFbj4XCzzEC7kIdMX6NCmXbL6mXOI4R+A9gtAEEWM81VA0JPunTbGwsU/4+mGQK9B5PtNSAANYwLlUBDARbKGm0/L0KWfVquKo44IQwNMBIGejSnCwGQwZOFeJYpqdmUw8xTtBACOXJCG21IICGDLKDdSS6QsmBc84QukQFngfSgHOEJEyYghZGKDPgMQnpcjQ84GpikB2kVg+4hNU+NGE8sBoEVLweaBiQ2AsqK6nZc4j8cay5WkDQEsIIBkASjMhTa3x1ghEbC4mEwFtghg+cHzegqko1IyuE9EZyIooB+MTgbN8GMODkqz1ECruHHMRBnRaIDou5CGcFWANgrbYqQJpCNU2Bwgkca6SBro6DiEqFhMSUDJp2GCYWQtS58v5Qo7IFqdDhAuBD366rghDOzgInwRQkXybpmJFghcP7dtYGGmxxlJ1A1G1AwyZkzhNHcRIFKsKNqIkY5SVAPRIFgcoFxgbxd7TL4hFh3JxLWCZ3RKSpMKUsJSczXXglwXhGyus1akMkN5gNMFcBeVqHD04QSJX1T5bIWAJVJk3AuUj5FCuIkwkUc6IsamjXfr1TPH89QoQWGNbPeN8wghKqnpGBiz0HsSBczgl8PgtzCrqBs2gBJYOCUnwznGPYGjBYBBy+ZjkNMaouWySk4GPLHIuBSWajLkuR51kkAI2L5EJdLtBKXA7EUgS0hIMgoFPlJGxRFoJiKE1p0pwVgRwxqa0xURQntYC7EFSnwfYEfYCyVVOk4euORu8Jp3OComjilHEM4GIUMPUiAGdGTiN8hWULW0SGhcFyfmWtA2MF7i8fPBKRrOM8d477SANaZnagoUY8ozzUb7gSo1cKdTUGtAPYkzFCyeIkE4hVDO/uWtMLs8HfaaKiSMTC/jUJ11ASocqfwfYQlomzvIiVNKSB9dZ5rXAqXwTInoxGLjERlEghip4kIvjxhDlnNd8i3KiI0BkIRIIgROYf9TRWBgOcgpnIhLmiegcA/rRWCYYvUnGnn2AfuIcEpBhLuaPpHmbk9RCeZCImlNT1qknT2ON9cGlPjCQsYEQVwV9eGpOV3vERzwH6euaLioirejnMQMWr/sYN0XPKCKKEYgQKhecp2JKIIyZKyn3EGA4ybRp257Lv2PHjhymc2kFlfZQs3ygNAN1QRCh4iRZDBzLOqT15GRtrsJMECnwuAz4lOuBanjaQuGMtzU2MHy0XIRrRucG8ogoSaIEoZEdfq7SIJMlamradMlZtK0FjXdV9clWhzLFg2TGcZCW5iE2Tb1LyQM20lcGtphndIFQIoETMxPoaB8qVAUpOCWATTFi41y2UaaqF8hal4wPJAIEXjg30AM5FsSMY6LM4TkYJGpyYAbqVKG7CLzRLNBcKA3YT/kkIzndzoa1Okx+QCmh0gaaFDAiyMJtDIOXkEqVo9e8p/fAubqWvDC1HLWvgKHhBBg2atu1pcs7d9A4Um9D5qTLxAdOpKIQ5WAETDgPvnckqaaQsgf9G8gbNq80JFT9YA3dy06A5SoFc5XnMgMt5dSJUIahcJ0CUSzdJRQemJ7aDR5iI4uCoT0QDzpDBDwqpoBEypDSHRJDB8FIZHWUljlyszZSpvXh9QAAEABJREFUH1N5IqlOVS67GRedC3AO0Z5xtDZmN1cwOYO0nIBagJOocgrXlD28OG5AMqph6mxcV5M33IzUMFIz9QGxhopxHFqMiOVdncf8gQDGWFumNKUPPnWRJdal3BwAR4nUJSDinuU4j0PIcRHCGyvQjAoiYBNLFANR3kwCQKwFi7U554Ixhm1COQ0CZ+D5fg/ygo+tCUa8AQd0xUG8IxdObp4iuRCEhw7KEp0SyZCBA+66647+/QcNHjJ8UL8BN918G4pNb00cN3DgkKHDhg4aNPTewfff1X/Yq299qpJEkoozXiLDRoUsdLkaj4w9JRFDoG6BFyBxjvs0wG2ybIMuVzCng+50IkyHAA9oJal3QWgZTwT0Jb765ONB/e4cMrDf4IH3Dux37/ABgwYNG95USW+++dZhwx8ZMnjwoHvv7T9wcL/+gxpKiRPmIoVQCQIbiyFThjKq4ESsBOpUYJ4zEFwpdGy2XdCOouVpkWdvmkXdDNPIq8ZBNVQ9PZkVP/vwtbvuvmvo0OFDBgy4b/CQB/rdN3Dow67ccM/f+w0b/lD/gYP63TtowOBhd/e/t7GkbyI6yaDiNMh8ilQSZ6NclItdoN2ZRwOoNC2HkD8g8ErLlVgy4njujSIYqy524GeX7OEUEFnQ2/BOJ8PFkRs+8K4Bd95+7z0DBg9+cGi/QRrH8qJ3Xx0zZED/B4cOGjh4yF2Dht864MFX3vma+5Eubs4MlAxLmcJ8YVj5CQOR/m/Q8hCLyDJREpIIEDwfUx7MPOMT2hSBT3E+HGD4D/xKJUw6GFZ8OxcDG9EKETf1kzeH333rwAED+w8c1r//vUMGDBg4fGijK99888333T980OCh/QYOvmfg4H733ttULlIJT1EESgQQA5YIxLpU6C7xiB1iYziAjLhiIlcpF9m3VEoiGJ5GkPkPKJckTfIRz21SgfIBnUvdOFypPDDw3v733H3fg/fdO+jeIUOH/e2WW/kbw7hRLw6+9/HhAx+4f9DwYQOHDxgweMzEDxyYCZzPYCHliStQP/A3X4bARhpHBKKq/BGJugCAiICyYDi9ooMVklmT41ZAAAddWshbQwOCsVHkeaazyefvvzXwzn4D+w3qf8+999/30LB+wwYPezgpLRzSv9/Qwcy5gf3uufPue+8eMPihYhmUSp5gENkiQ6FUC0p03FxhTSQwQiWsBUX6kLe5wIaVJA2gSoFRYmamBrCwwQkQgcScBCpIB6O1GBg9wDEJSKWSRStrYxHx/BAD0NEC61Kf1+/NBvCVhD/Dqnrcs9iFeGutgTgqAbCrSGUDwMCj1FQ855yzzzzzzD6nnHLiiSefeeZvbrq1HyAjnnqyz8knH3/8cX1OOumM3qf89vTT7rj9NgMwYDG/nxl9FOSimNu/sVwx3As4iGbGIGOF1Csi5S4TJIryGtIAtlrUgKhqYDEGkbEuU5Lt4P0LI1887fQLTzr5zFNOObVP3z69+/RpaGwS4PI/Xn7KccecfPLJvU/pferJvU/v23fevHki4M4bAKEDA/2oAC2+WZeQqUIMSZk6AZTMHmVBNIs5KbIxGFfmDt0O1TzAGYqsAqnF8rEy9pVxp/c9u/fJp7Cc3KfvaWdc0Fikvv73F1100rEnnNanT99TTul94vFnnHHG/Pnz6Rd6SgJylOcZT8Sx5Vog9+CpClmDKUPloQ5DSCmGZHRmoEOgMdLMIim1loyI+0+zedWTi6Pb0qZiwznnnHPWGWef2ueUk0868XSNY39m6ktPPH7yyaccc/wpJ9FXfU69+Iwzbr/9dpWx5EXWmecjQzk+SbOdCoy1YtWjFCxCnQzYgo0i0AYrcWRT/TzhwUcbUdTHqIoMONkLnRsYxxdOP/PCk0+mXvTNGX16911UbATkyiuv7HPcCX040Lt33969T+/bd/7ceQbZfIBCoSWwonaUWuHrNTvINFA0W8K08pB8Ph8cjNBcqa4ySuZSQN4ikJ48WXOYU6glYGylsXTuL8879dTTTjj22N4n9T3hhDNu//v9Ihjz4ku/7HPqSb1PPqH3CSecdMIZfU4dMKB/4IxmYFAidYpBlIM2qKrqRxIvTBu6RSl5FqkgK4lLBeAhCML1n1IEwxdULw8qHbzOBtMEJo4h9sWRo/qefuapp/btc2rv444/+fTTLmxsDKlLLrrwt71PPumE43ufeeZZp53a97STTpg3b4FBED3i6U01QKA3AoyxQpv5K5MwqcQHLlqhdoY9JlXq0ignYI8tOGuNeNXOWqkwlYQJa3QiFcXiYiAwxtAKAxgrLHFUI5KL4ziKc0REEsU0Iq4T4Q4ViynU1bSJSGH5rslUiU1kxWjS5C1pI7E0OBJEzjv1m+SjuO75F0aOGj1yzJhRE14ZM+GVJ2+75WqY6PC+Z7385hujXn555Jixo8eMfmHkiGsu+x0fOll86UKA1osYa4wl6zgyeWPiyMax2JgHa0rLmTgnUWxyNhcb3mtMXCtRbRTnIlphtWFNJMZqzZi4lLrSUNobQtjn0KNemjBmxEvPjX559JhRoyaOeXnNTivVIh4+fNio18ePHku1XmE1YeK45VfoBLoZqXqQWnlEIrmYmgmVM5EVE8cmLthcZHJGbJSzxkosMYHyhRiTK0S1RmoLti6fj3M5E0WS55EdEND3yHxF1ULF1RxwyMkTxo4dO3Lk6DEvvzLmhfEjh6+7UhvY2mGPv/jCmPFjXxk/atRLL40Z9eqrr3bu0F5fNgPPFtxQvBUw6pGpjWzBGv4mljM2Mpbus5G1QjAS19SJpWBjJJeTuoKpMfk8TbCSjw31lziyURxbw5cUwFhAwIlibFx45oWxL4wZO3bUyFdfHjFh3ONZHC3jOOH1d0a/PGb06JdfGvPSUyOf+9NlF+aBiA5n6gLcQCCcn6NEsqasXK5Aj7FNOXlr8kZMlBObp4o5iYxYMWI4YCVnbS2pbSGSglC1XB4CFiOGNYPiIHsddvSL40eOfHHUK6PHjh09csLLo9bqtEINouHD7h/16mujFDl27JjRr04Yv+LyXazGUXkIVxlgTCRiY/6jefl8bCRv41hYC9vG2CiutbZGoppcLlLNjMlZm8/VxCaOcvk8I54r5GJ9G6enAk9INk1ByyNb0+bZES+NfZm5NeaVl8e+PmHUHbdcTp2P6nvWiLfeG/nyqJdGvzBq5MjxE165+tILY4ALlEmgewZ3DwMeGE2UjyKhGnEUWRsbE0c2HzF2kme7UMiLsWLiAlvGxrRC+KW/1hoTx3FkqGAupm4m5hNawMXExKX8/EGHHjeWrhr10tixo8ePffbtsQ+utVxecu2YXWPHvDHu5QkjXnhhzLgxo18eteoK7Q34HUMD6IBKYDjFmogSIkNNaHYhljhnrM3FYnPChuW2YAtRbEQkEts2jnNxbAlcjbXG2EIhZyJS6lPZOKFa1KkKxtF1MAbg2QdUWeiQNDImTb1iaYPAMWwmgpDKCISqxbx5LuxAFBWEQZAYpCELnvvJMwQrhsU7ifK1W22zdY/uPXbYYYdtt9mm67Zb77PPXjB2jXXW3WLzzYjcqfv23XfYaqcdtltrtZUYRvIQ0clJWlUSItrwwUeAoWsB5+hZSjXsexeM0RTzgLAP71wiDjawFSHXnpNoBCfBGBEJnpy8MfFKq6yxzXbdd9551x123HGHnXbabPvt99h595oo37NXj80233Tb7XbYoceO3XfafuONN8pZZgtFUoKnDICVqIustugBK2BxfBlDHGzOeapHhKe2OUtiiCoTIn1AeVBZC0T8XZwfdLKZAiGGeLg416Zz51W23a5795122r7HDptv2W2jHtvstutO9PB2O3Tbaadu3XfYeqee3Xv26LHZZl1ravIMGBx5WhEDAeiKULbiLFIC5SIgUJEs20ngvReqI0SzZ5j9MaA/ihJh6GASk4DKgwhSgB6DcYFvnjVbbrPNDj167LDDdltus/Um22651757QeI11t5w8602236H7j122rHH9tvstONWa6/SyYYgcHB6ArIWIYB+sKLK0l1RZMCm94aO5Ri7JKIaNm8BAaxVxWkLo0VSPYrncxwIgYpwmEQc8T54Y6IVV1176+122nmXXjvuuG2PnXpsvv32u+2ya43N9+zZs1u3bjtst12PHtv36L7jJr/YKMeDNrXKoiPQYsSwIcGJT6lSIc/fonzML3qiTx5KRPCI6eTAhytJI6HvIHzfQeoCeDiJCwU96HkYpWYgYI3lzebrNttym+7du+/Ast2OW26z7V577EGRy620crfNVtyh+zY79uzeY+edtt1mq9VXXoEhMIAVwzwQsfSdCEKocKFRomUEASJdUGeRENzqHSXCCJPcCSfCWwNaFiCwjCMHQgoQqIwAhvwUopVWX3NbJnyP7t179Ni6+3brbL3ZvnvuJia31bZb7LDjZttsu+1OPXfZYdsddth+25jcKRDC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)
+
+Translated to the decimal system, this equation is:
+
+转换为小数表示，可得：
+
+![Eight opponents’ match-win percentages expressed as decimals](data:image/png;base64,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)
+
+![八位对手的局胜率转换为小数后的计算式](data:image/png;base64,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)
+
+With the individual match-win percentages added together, this equation becomes:
+
+将个人的局胜率相加，可得：
+
+![4.94 divided by 8](data:image/png;base64,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)
+
+![4.94除以8](data:image/png;base64,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)
+
+This player’s opponents’ match-win percentage is 0.62.
+
+该牌手的对手局胜率为0.62。
+
+* Another player’s record at the same tournament was 6–2–0. His opponents’ records were: bye, 7–1–0, 1–3–1, 3–3–1, 6–2–0, 5–2–1, 4–3–1, and 6–1–1, so his opponents’ match-win percentage is:
+
+* 在同一场比赛中，另一位牌手的成绩为6-2-0。他的对手的成绩依次为：轮空，7-1-0，1-3-1，3-3-1，6-2-0，5-2-1，4-3-1，及6-1-1，因此，他的对手的局胜率为：
+
+![Seven opponents’ match-win percentages expressed as decimals](data:image/png;base64,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zz351pufkiVvA+TASuqdtZJyc2GDjFDiEpw3c9qsmbO//vqbb6bPWLBg0YzZDcedetbxJ59Jq11atobB5UGvSgDPC9faMP3Lzz77ZGFTK8VRZyOqJRX7a7DWcs+p4I0xXFZLmxVkW64R7FkPejmLWAGXAPfbEBYtan3rjXcmPvP0G6+9RApKbPWG8RwXCj4ooSAUIoukFb4456vPZs5mWjBn5vzZX89eMGva/DnTpk/7YlpDw0Knez4HVPFQKaVNX3z1+uSXJj4/Yeq7b/KMp3/I2WlAc4naJE24WYFzDc623gXoCqMuF2YUS02SW/54Vc8eyw/fePOdd9xl+LDBGw7ZfvY8nQOPNneUyYUbJW+moRRKLb8+//z6+l6DNxix6WabbTxiw43WX6M6zk2Y8jL3mCIPQDoxNH/x5su9eq+wwiprDB+x2bbbbjti6ODle3c74aRTFzbrsccLUTtvKgBNQbPsoVAB5VvPadXfsdlIPQPIgWHCaSKVIMTwGsnZeI/QKnlp+Hra6iusts5aA7feartttt52heX73DTuQQeo+dxh4zjVj5sUbmwoty5q+M0F53Vfrtvqa6+z4bCNdthi26HrbVDXpdujT76gruJumDY3z5l24a8v7NKj70r9BgwbPmKnrbccut5a9dW1Dz/2PJdNZdqozffC7bffPm3atNNPP529aZoyaEIIMUMi+CRtpbkLmloY4BF86+J54HU/bfnZL84759zzbh8/jr0Q53z57gceW9iEgtWPPGQCoz2OU2ftGoP6//rcU015ydGjxvCuAJsPFJKr77UcuzMvOSc5TrdaYgy4adKtNperXGxTl0KMsaL7hUluueIP3XuuPGTIZjvtss1GwwYMHbrlrAXFokqixmAYoTItZFEuTXry8V2236Zr75XWGThkqy023m6zoeuuuuJW2+w8qxmtAPkC7rlHHuy36jorrbjiSiutzDhYYYXV1lq73yqrrLjKKmuus9raL778Fk8swBghf2cszjrrp++88/6jjz4OgG9RzAlGjEjlqITT9wkYKyCCHyEjw/jg1SEFaD5fB8UYKLVGhAjJYCSbekYNfeD10Lj+j9d27dF3k+Gb7LL1lptvOGCTTbZdtDibRmEscbyx8BaJoREUD4hR9ThF8MUbrvvTegOGbr/H/o0peOuIJUFohSl++O77vfqsvNrq62w6YrPN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)
+
+![七位对手的局胜率转换为小数后的计算式](data:image/png;base64,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zz351pufkiVvA+TASuqdtZJyc2GDjFDiEpw3c9qsmbO//vqbb6bPWLBg0YzZDcedetbxJ59Jq11atobB5UGvSgDPC9faMP3Lzz77ZGFTK8VRZyOqJRX7a7DWcs+p4I0xXFZLmxVkW64R7FkPejmLWAGXAPfbEBYtan3rjXcmPvP0G6+9RApKbPWG8RwXCj4ooSAUIoukFb4456vPZs5mWjBn5vzZX89eMGva/DnTpk/7YlpDw0Knez4HVPFQKaVNX3z1+uSXJj4/Yeq7b/KMp3/I2WlAc4naJE24WYFzDc623gXoCqMuF2YUS02SW/54Vc8eyw/fePOdd9xl+LDBGw7ZfvY8nQOPNneUyYUbJW+moRRKLb8+//z6+l6DNxix6WabbTxiw43WX6M6zk2Y8jL3mCIPQDoxNH/x5su9eq+wwiprDB+x2bbbbjti6ODle3c74aRTFzbrsccLUTtvKgBNQbPsoVAB5VvPadXfsdlIPQPIgWHCaSKVIMTwGsnZeI/QKnlp+Hra6iusts5aA7feartttt52heX73DTuQQeo+dxh4zjVj5sUbmwoty5q+M0F53Vfrtvqa6+z4bCNdthi26HrbVDXpdujT76gruJumDY3z5l24a8v7NKj70r9BgwbPmKnrbccut5a9dW1Dz/2PJdNZdqozffC7bffPm3atNNPP529aZoyaEIIMUMi+CRtpbkLmloY4BF86+J54HU/bfnZL84759zzbh8/jr0Q53z57gceW9iEgtWPPGQCoz2OU2ftGoP6//rcU015ydGjxvCuAJsPFJKr77UcuzMvOSc5TrdaYgy4adKtNperXGxTl0KMsaL7hUluueIP3XuuPGTIZjvtss1GwwYMHbrlrAXFokqixmAYoTItZFEuTXry8V2236Zr75XWGThkqy023m6zoeuuuuJW2+w8qxmtAPkC7rlHHuy36jorrbjiSiutzDhYYYXV1lq73yqrrLjKKmuus9raL778Fk8swBghf2cszjrrp++88/6jjz4OgG9RzAlGjEjlqITT9wkYKyCCHyEjw/jg1SEFaD5fB8UYKLVGhAjJYCSbekYNfeD10Lj+j9d27dF3k+Gb7LL1lptvOGCTTbZdtDibRmEscbyx8BaJoREUD4hR9ThF8MUbrvvTegOGbr/H/o0peOuIJUFohSl++O77vfqsvNrq62w6YrPN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)
+
+With the individual match-win percentages added together, this equation becomes:
+
+将个人的局胜率相加，该公式变为：
+
+![4.44 divided by 7](data:image/png;base64,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)
+
+![4.44除以7](data:image/png;base64,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)
+
+This player’s opponents’ match-win percentage is 0.63.
+
+该牌手的对手局胜率为0.63。
+
+**Opponents’ game-win percentages**
+
+**对手盘胜率**
+
+Similar to opponents’ match-win percentage, a player’s opponents’ game-win percentage is simply the average game-win percentage of all that player’s opponents. And, as with opponents’ match-win percentage, each opponent has a minimum game-win percentage of 0.33.
+
+与对手局胜率类似，牌手的对手盘胜率即是该牌手所有对手的盘胜率之平均值。并且，与计算对手局胜率时的处理相同，每位对手盘胜率的最小值为0.33。
+
+**Byes**
+
+**轮空**
+
+When a player is assigned a bye for a round, they are considered to have won the match 2–0.
+
+当一位牌手获得某一局的轮空时，视作该牌手以2-0赢得了该轮游戏。
+
+Thus, that player earns 3 match points and 6 game points. A player’s byes are ignored when computing their opponents’ match-win and opponents’ game-win percentages.
+
+因此，该牌手获得3个对局积分和6个游戏积分。牌手获得轮空的局次不参与该牌手之对手局胜率及对手盘胜率的计算。
+
+# Appendix D—Recommended Play Booster Mix for Limited Tournaments 限制赛中推荐的补充包构成
+
+Note: The following play boosters mixes are required for Premier Play tournaments.
+
+注：重要赛事比赛必须使用下列的补充包构成。
+
+For *Secrets of Strixhaven*, the recommended play booster mix for Limited tournaments is (effective April 17, 2026)
+
+在*斯翠海文的秘密*的限制赛中，推荐使用的常规补充包构成如下（2026年4月17日起）：
+
+* Individual Sealed Deck – 6 *Secrets of Strixhaven* (per player)
+
+* 个人现开赛～6包*斯翠海文的秘密*（每位牌手）
+
+* Individual Booster Draft or Team Rochester Draft – 3 *Secrets of Strixhaven* (per player)
+
+* 个人补充包轮抽赛或团队罗彻斯特轮抽赛～3包*斯翠海文的秘密*（每位牌手）
+
+* Three-Person Team Sealed – 12 *Secrets of Strixhaven* (per team)
+
+* 三人团队现开赛～12包*斯翠海文的秘密*（每支队伍）
+
+* Two-Headed Giant Sealed Deck – 8 *Secrets of Strixhaven* (per team)
+
+* 双头巨人现开赛～8包*斯翠海文的秘密*（每支队伍）
+
+* Two-Headed Giant Booster Draft – 6 *Secrets of Strixhaven* (per team)
+
+* 双头巨人补充包轮抽赛～6包*斯翠海文的秘密*（每支队伍）
+
+For *Magic: The Gathering | Teenage Mutant Ninja Turtles*, the recommended play booster mix for Limited tournaments is (effective, February 27, 2026 through April 16, 2026):
+
+在*万智牌 | 忍者神龟*的限制赛中，推荐使用的常规补充包构成如下（2026年2月27日起至2026年4月16日）：
+
+* Individual Sealed Deck – 6 *Magic: The Gathering | Teenage Mutant Ninja Turtles* (per player)
+
+* 个人现开赛～6包*万智牌 | 忍者神龟*（每位牌手）
+
+* Individual Booster Draft or Team Rochester Draft – 3 *Magic: The Gathering | Teenage Mutant Ninja Turtles* (per player)
+
+* 个人补充包轮抽赛或团队罗彻斯特轮抽赛～3包*万智牌 | 忍者神龟*（每位牌手）
+
+* Three-Person Team Sealed – 12 *Magic: The Gathering | Teenage Mutant Ninja Turtles* (per team)
+
+* 三人团队现开赛～12包*万智牌 | 忍者神龟*（每支队伍）
+
+* Two-Headed Giant Sealed Deck – 8 *Magic: The Gathering | Teenage Mutant Ninja Turtles* (per team)
+
+* 双头巨人现开赛～8包*万智牌 | 忍者神龟*（每支队伍）
+
+* Two-Headed Giant Booster Draft – 6 *Magic: The Gathering | Teenage Mutant Ninja Turtles* (per team)
+
+* 双头巨人补充包轮抽赛～6包*万智牌 | 忍者神龟*（每支队伍）
+
+For *Lorwyn Eclipsed*, the recommended play booster mix for Limited tournaments is (effective January 16, 2026 through April 16, 2026):
+
+在*洛温：暗影笼罩*的限制赛中，推荐使用的常规补充包构成如下（2026年1月16日起至2026年4月16日）：
+
+* Individual Sealed Deck – 6 *Lorwyn Eclipsed* (per player)
+
+* 个人现开赛～6包*洛温：暗影笼罩*（每位牌手）
+
+* Individual Booster Draft or Team Rochester Draft – 3 *Lorwyn Eclipsed* (per player)
+
+* 个人补充包轮抽赛或团队罗彻斯特轮抽赛～3包*洛温：暗影笼罩*（每位牌手）
+
+* Three-Person Team Sealed – 12 *Lorwyn Eclipsed* (per team)
+
+* 三人团队现开赛～12包*洛温：暗影笼罩*（每支队伍）
+
+* Two-Headed Giant Sealed Deck – 8 *Lorwyn Eclipsed* (per team)
+
+* 双头巨人现开赛～8包*洛温：暗影笼罩*（每支队伍）
+
+* Two-Headed Giant Booster Draft – 6 *Lorwyn Eclipsed* (per team)
+
+* 双头巨人补充包轮抽赛～6包*洛温：暗影笼罩*（每支队伍）
+
+# Appendix E—Recommended Number of Rounds in Swiss Tournaments 瑞士式比赛中推荐进行的局数
+
+The following number of Swiss rounds is required for Premier tournaments (such as Regional Championship Qualifiers). It may be used at the Tournament Organizer’s discretion for non-Premier tournaments.
+
+下表所示的瑞士式局数通常是重要比赛（例如区域冠军赛预选赛）中规定需要进行的局数。经比赛主办人的斟酌后也可以在非重要比赛中使用。
+
+| Players (Teams) | Swiss Rounds | Playoff |
+| --- | --- | --- |
+| 4 (Team/2HG Only) | 2 Single-Elimination<br>Rounds (No Swiss) | None (Run Single Elimination) |
+| 5-8 | 3 Single-Elimination<br>Rounds (No Swiss) | None (Run Single Elimination) |
+| 9-16 | 4 (if Limited Format with<br>Booster Draft in Playoff)<br>5 (All Other Formats) | Top 8 (If Limited Format with<br>Booster Draft in Playoff)<br>Top 4 (All Other Formats) |
+| 17-32 | 5 | Top 8 |
+| 33-64 | 6 | Top 8 |
+| 65-128 | 7 | Top 8 |
+| 129-226 | 8 | Top 8 |
+| 227-409 | 9 | Top 8 |
+| 410+ | 10 | Top 8 |
+
+|牌手数（队伍数）|瑞士式对局|决胜局|
+|---|---|---|
+|4（仅限团队/2HG）|2局单淘汰对局（无瑞士轮）|无（进行单淘汰）|
+|5-8|3局单淘汰对局（无瑞士式对局）|无（进行单淘汰）|
+|9-16|4（若为限制赛制，且决胜局采补充包轮抽）<br>5（其他赛制）|8强（若为限制赛制，且决胜局采补充包轮抽）<br>4强（其他赛制）|
+|17-32|5|8强|
+|33-64|6|8强|
+|65-128|7|8强|
+|129-226|8|8强|
+|227-409|9|8强|
+|410+|10|8强|
+
+Team tournaments consider each team as a single player for this purpose.
+
+在团队比赛中，为了计算应进行的局数，可将每支队伍视作一位牌手。
+
+In tournaments where awarded byes are used, each player with a 1-round bye should count as 2 players, each player with a 2-round bye should count as 4 players, and each player with a 3-round bye should count as 8 players when using the above chart.
+
+对有牌手会获得轮空的比赛而言，在使用上述图表时，应将每位有一局轮空的牌手视作2位牌手，每位有两局轮空的牌手视作4位牌手，每位具有三局轮空的牌手视作8位牌手。
+
+# Appendix F—Rules Enforcement Levels of Programs 各比赛计划的执法严格度
+
+The following chart indicates the appropriate (minimum) Rules Enforcement level for various programs:
+
+下表为各比赛计划对应（最低）的执法严格度：
+
+| Program | Rules Enforcement Level |
+| --- | --- |
+| Eternal Weekend | Competitive |
+| Friday Night Magic | Regular |
+| Game Day | Regular (Competitive recommended) |
+| Launch Party | Regular |
+| Limited Championship | Professional |
+| Prerelease | Regular |
+| Pro Tour | Professional |
+| Pro Tour Qualifier | Competitive |
+| Regional Championships | Competitive |
+| Regional Championship Qualifiers | Competitive |
+| Spotlight Series – Day 1 | Competitive |
+| Spotlight Series – Day 2 | Professional |
+| Store Championship | Regular (Competitive recommended) |
+| World Championship | Professional |
+
+| 比赛计划 | 执法严格度 |
+| --- | --- |
+| 永恒周末 | 竞争 |
+| 周五认证赛 | 一般 |
+| 欢乐日 | 一般（建议竞争） |
+| 发售赛 | 一般 |
+| 限制冠军赛 | 专业 |
+| 售前赛 | 一般 |
+| 专业赛 | 专业 |
+| 专业赛预选赛 | 竞争 |
+| 区域冠军赛 | 竞争 |
+| 区域冠军赛预选赛 | 竞争 |
+| 聚光灯系列赛 - 第1天 | 竞争 |
+| 聚光灯系列赛 - 第2天 | 专业 |
+| 店家冠军赛 | 一般（建议竞争） |
+| 世界冠军赛 | 专业 |

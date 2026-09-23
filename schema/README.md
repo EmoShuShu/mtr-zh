@@ -18,6 +18,7 @@ Schema v1 已通过代表性内容验证，覆盖普通段落、按注解拆分�
 - 一个 block 最多包含一个 `extras` 元素；注解可包含多个 Markdown 段落。
 - 图片 block 在 YAML 中引用 `assets/` 下的 PNG，不直接保存 Base64。
 - 最终 JSON 展平 group，只输出 block。
+- 多 block 表格在最终产物中重新组装为一个连续 Markdown 单元；其中间行 block 仍保留在 YAML 中用于维护和差异审阅。
 - `review` 和逐条 `source` 不属于内容节点。
 - 既有 ID 不因正文修改、移动或中间插入新内容而重新编号。
 

@@ -1,17 +1,17 @@
 # MTR 中文维护流水线
 
-本仓库以 YAML 作为人工维护的唯一结构化源，并确定性生成单文件 JSON 与 Markdown。Schema v1 已于 2026-09-22 冻结；完整设计见 [`outputs/2026-09-22-mtr-pipeline-design.html`](outputs/2026-09-22-mtr-pipeline-design.html)，字段约束及演进规则见 [`schema/README.md`](schema/README.md)。
+本仓库以 YAML 作为 MTR 双语正文与注解的结构化源，并确定性生成单文件 JSON 与 Markdown。共用的中文版本说明单独维护在 `src/mtr/version-notes.md`，不参与官方 PDF 对照。Schema v1 已于 2026-09-22 冻结；完整设计见 [`outputs/2026-09-22-mtr-pipeline-design.html`](outputs/2026-09-22-mtr-pipeline-design.html)，字段约束及演进规则见 [`schema/README.md`](schema/README.md)。
 
 ## 当前状态
 
-`src/mtr/2026-02-27/` 是从旧版 `AMTR_2025.md` 和 Wizards 当前发布的 2026-02-27 MTR PDF **直接对比**生成的全量 Schema v1 审阅草稿，不是可发布版本。`src/mtr/2025-11-10/` 仅作为历史基线保留，不再是当前校对目标。
+`src/mtr/2026-02-27/` 是从旧版 `AMTR_2025.md` 和 Wizards 当前发布的 2026-02-27 MTR PDF **直接对比**生成并完成人工校对的全量 Schema v1 文档。`src/mtr/2025-11-10/` 仅作为历史基线保留，不再是当前校对目标。
 
 - 已生成 1 个 manifest 和 17 个正文文件；
 - 官方英文的每个结构单元均须逐字重组回 PDF 解析结果，否则迁移立即失败；
 - 9 张图片均以稳定资源路径保存在 YAML 中，构建 JSON/Markdown 时转为 Base64 Data URI；
-- 当前报告有 46 个阻断项：40 处新英文缺少中文翻译，6 处低相似度但同名系列的继承需要人工确认；
-- 另有 107 个警告：54 处新版英文变化、53 处已从官方文档移除或明确拒绝错误继承的旧内容；
-- 严格校验会拒绝当前草稿，因此它不会被误当成正式发布输入。
+- 不可变快照中的迁移报告保留初次迁移时的 46 个阻断项和 107 个警告，作为历史审计记录；
+- 当前可编辑文档已经完成人工处理并通过严格校验；
+- 正式构建会在正文之前加入共用版本说明，并分别为 JSON 路由和 Markdown 锚点自动生成目录。
 
 当前处理的不可变快照位于 [`snapshots/2026-02-27/a627fb8c8568/`](snapshots/2026-02-27/a627fb8c8568/)，权威审计清单见其中的 [`comparison/migration.md`](snapshots/2026-02-27/a627fb8c8568/comparison/migration.md)。迁移决策、五处 PDF 图片文字人工转录、正文拆分、拒绝错误继承规则和图片映射集中记录在 [`migration/legacy-v20260227.yaml`](migration/legacy-v20260227.yaml)，没有散落在生成结果中。
 
@@ -52,7 +52,7 @@ python -m venv .venv
 - 同一日期但 PDF 哈希不同会创建新的并列快照；
 - 快照中的任一文件被修改后，完整性校验会失败；
 - `--editable-output` 只会创建不存在的目录，或确认现有目录与候选完全一致；绝不覆盖人工修改；
-- 人工校对开始后只编辑 `src/mtr/<版本>/`，不编辑 `snapshots/`。
+- 人工校对开始后只编辑 `src/mtr/<版本>/`，不编辑 `snapshots/`；各版本共用的版本说明编辑 `src/mtr/version-notes.md`。
 
 快照目录约定及恢复方法见 [`snapshots/README.md`](snapshots/README.md)。底层 `migrate_legacy.py` 保留用于开发和诊断，不作为日常操作入口。
 
@@ -83,7 +83,7 @@ python -m venv .venv
   --markdown-out dist\MTR.md
 ```
 
-最终 JSON 会扁平化中间 YAML 的 `group` 层，不包含 `groups` 字段。图片 Markdown 直接含 `data:image/png;base64,...`，产物不依赖附属图片文件。
+最终 JSON 会扁平化中间 YAML 的 `group` 层，不包含 `groups` 字段。普通 group 逐 block 发布；多 block 表格会在发布边界重新组装成一个连续的 Markdown 表格，避免表头和数据行被分别渲染。版本说明与自动目录位于 `intro.contents` 最前面；JSON 目录使用 `/mtr/5#5.1` 形式的站内路由，Markdown 目录使用文档内锚点。图片 Markdown 直接含 `data:image/png;base64,...`，产物不依赖附属图片文件。
 
 ## 测试
 
@@ -91,4 +91,4 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pytest
 ```
 
-测试覆盖 Schema/构建、Base64 图片、官方段落拆分、Tab 列表标记、含斜杠牌名、双语表格、旧文档的异常注解格式，以及快照完整性和禁止覆盖人工编辑的规则。
+测试覆盖 Schema/构建、Base64 图片、多 block 双语表格重组、官方段落拆分、Tab 列表标记、含斜杠牌名、旧文档的异常注解格式，以及快照完整性和禁止覆盖人工编辑的规则。
