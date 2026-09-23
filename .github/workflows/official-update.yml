@@ -1,0 +1,144 @@
+name: Check official MTR update
+
+on:
+  schedule:
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: official-mtr-update
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Detect official PDF and open review PR
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: "1"
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - name: Check out master
+        uses: actions/checkout@v7
+        with:
+          ref: master
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install project
+        run: python -m pip install -e ".[dev]"
+
+      - name: Detect and prepare official update
+        run: >-
+          python scripts/check_official_update.py
+          --project-root .
+          --result tmp/official-update-result.json
+
+      - name: Read update result
+        id: update
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+
+          result = json.loads(Path("tmp/official-update-result.json").read_text(encoding="utf-8"))
+          for key in ("changed", "effectiveDate", "pdfSha256", "branch", "report"):
+              value = result.get(key, "")
+              if isinstance(value, bool):
+                  value = str(value).lower()
+              print(f"{key}={value}")
+          PY
+
+      - name: Report unchanged official PDF
+        if: steps.update.outputs.changed != 'true'
+        run: echo "Official MTR PDF is unchanged."
+
+      - name: Check for an existing automation branch
+        id: existing
+        if: steps.update.outputs.changed == 'true'
+        shell: bash
+        env:
+          UPDATE_BRANCH: ${{ steps.update.outputs.branch }}
+        run: |
+          if git ls-remote --exit-code --heads origin "$UPDATE_BRANCH" >/dev/null 2>&1; then
+            pr_url="$(gh pr list --head "$UPDATE_BRANCH" --state open --json url --jq '.[0].url // ""')"
+            if [[ -z "$pr_url" ]]; then
+              echo "Automation branch exists without an open PR: $UPDATE_BRANCH" >&2
+              echo "Delete the stale branch or create its review PR before retrying." >&2
+              exit 1
+            fi
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "pr_url=$pr_url" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Report existing review pull request
+        if: steps.existing.outputs.exists == 'true'
+        run: |
+          echo "Official update already has an open review PR: ${{ steps.existing.outputs.pr_url }}"
+
+      - name: Commit generated snapshot and candidate
+        if: steps.update.outputs.changed == 'true' && steps.existing.outputs.exists != 'true'
+        shell: bash
+        env:
+          UPDATE_BRANCH: ${{ steps.update.outputs.branch }}
+          EFFECTIVE_DATE: ${{ steps.update.outputs.effectiveDate }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$UPDATE_BRANCH"
+          git add snapshots src/mtr
+          git commit -m "检测到官方 MTR $EFFECTIVE_DATE 更新"
+          git push --set-upstream origin "$UPDATE_BRANCH"
+
+      - name: Create draft review pull request
+        if: steps.update.outputs.changed == 'true' && steps.existing.outputs.exists != 'true'
+        shell: bash
+        env:
+          UPDATE_BRANCH: ${{ steps.update.outputs.branch }}
+          EFFECTIVE_DATE: ${{ steps.update.outputs.effectiveDate }}
+          PDF_SHA256: ${{ steps.update.outputs.pdfSha256 }}
+          REPORT_PATH: ${{ steps.update.outputs.report }}
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+
+          report = os.environ["REPORT_PATH"]
+          body = f"""## 官方 MTR 更新候选
+
+          - 生效日期：`{os.environ['EFFECTIVE_DATE']}`
+          - PDF SHA-256：`{os.environ['PDF_SHA256']}`
+          - 审计报告：[`{report}`](../blob/{os.environ['UPDATE_BRANCH']}/{report})
+
+          此 PR 由定时任务创建，并保持 Draft 状态。候选 YAML 中的英文来自新官方 PDF；中文和注解从当前已校对版本继承。
+
+          合并前请完成：
+
+          - [ ] 阅读英文差异和全部 error/warning findings
+          - [ ] 校对所有继承的中文，补齐空白翻译
+          - [ ] 必要时修正解析或对齐逻辑并重新生成候选
+          - [ ] 更新版本说明
+          - [ ] 重新生成 `dist/rules.json` 和 `dist/MTR.md`
+          - [ ] 确认 `Validate and build current release` 全部通过
+          - [ ] 将 PR 标记为 Ready for review 后人工合并
+          """
+          Path("tmp/official-update-pr.md").write_text(body, encoding="utf-8")
+          PY
+          gh pr create \
+            --draft \
+            --base master \
+            --head "$UPDATE_BRANCH" \
+            --title "MTR $EFFECTIVE_DATE 官方更新（待人工校对）" \
+            --body-file tmp/official-update-pr.md

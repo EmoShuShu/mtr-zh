@@ -31,6 +31,19 @@ assets/                              候选文档引用的图片副本
 4. 解析器和迁移器实现文件的 SHA-256 也记录在 `snapshot.yaml` 中。
 5. 人工校对只在 `src/mtr/<版本>/` 进行。
 
+## 后续版本快照
+
+第一次迁移使用 `inputs/legacy.md` 和 `inputs/migration-overrides.yaml`。自动检测到后续官方版本时，不再回到旧版 Markdown，而是以当前已校对的 `src/mtr/<版本>/` 为基线，快照结构相应为：
+
+```text
+inputs/base/                        当前已校对的 Schema v1 YAML
+comparison/update.json              机器可读的版本重基报告
+comparison/update.md                含英文差异的人工审阅报告
+candidate/*.yaml                    继承 ID、中文和注解后的新版本候选
+```
+
+同一有效日期下如果官方 PDF 的 SHA-256 改变，仍会建立并列快照。自动任务只有在确认现有可编辑目录与快照记录的基线完全一致后，才允许同日期候选替换工作分支中的旧目录；所有替换都会作为 Draft PR 差异接受人工审阅，不会直接进入 `master`。
+
 ## 已保存快照
 
 - `2025-11-10/162253d5cd84`：历史基线；官方 PDF 完整哈希 `162253d5cd84068bed69eefd09a0e96fcf13e095aa0ec2fce24a9209d1afc57b`。
