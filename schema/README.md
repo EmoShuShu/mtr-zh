@@ -34,3 +34,22 @@ Schema v1 已通过代表性内容验证，覆盖普通段落、按注解拆分�
 
 Schema 冻结不代表完整流水线已经完成。PDF 获取、PDF 解析、新旧版本对齐、差异报告和 GitHub Actions 属于后续阶段。
 
+## 最终 JSON Output Schema
+
+- 当前版本：`1`
+- 状态：已冻结
+- 冻结日期：2026-09-23
+- 规范文件：[`mtr-output.schema.json`](mtr-output.schema.json)
+
+Output Schema v1 固定 `version / intro / main / appendices` 层级，以及 chapter、subrule、content 和 extras 的发布字段。版本说明和自动目录是仅有的允许英文为空的 content。
+
+构建器会在写出文件前自动执行 Output Schema 校验，并额外检查：
+
+- 所有发布 content ID 全局唯一；
+- 主章节和附录完整且顺序固定；
+- 目录包含每个章节、小节和附录的站内路由；
+- Base64 Data URI 能严格解码为 PNG，且中英文引用同一图片；
+- 以管道符开头的 Markdown 表格包含连续表头、分隔行和至少一行数据，且每行列数一致。
+
+Output Schema v1 不得原地进行不兼容修改。需要改变顶层结构、必填字段、content 结构或路由模型时，必须新增 Output Schema 版本，并同步修改构建器和前端消费方。
+
