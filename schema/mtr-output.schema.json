@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/mtr-output-v1.schema.json",
+  "title": "Published MTR JSON v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "intro", "main", "appendices"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]{8}$"
+    },
+    "intro": {
+      "$ref": "#/$defs/intro"
+    },
+    "main": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "$ref": "#/$defs/mainChapter"
+      }
+    },
+    "appendices": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/appendix"
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyText": {
+      "type": "string",
+      "minLength": 1
+    },
+    "extra": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "zh"],
+      "properties": {
+        "en": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "zh": {
+          "$ref": "#/$defs/nonEmptyText"
+        }
+      }
+    },
+    "normalContent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "en", "zh"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^mtr-[a-z0-9.-]+-b[0-9]{3,}$"
+        },
+        "en": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "zh": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "extras": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "$ref": "#/$defs/extra"
+          }
+        }
+      }
+    },
+    "versionNotes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "en", "zh"],
+      "properties": {
+        "id": {
+          "const": "mtr-version-notes"
+        },
+        "en": {
+          "const": ""
+        },
+        "zh": {
+          "type": "string",
+          "pattern": "^# 版本说明(?:\\n|$)"
+        }
+      }
+    },
+    "tableOfContents": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "en", "zh"],
+      "properties": {
+        "id": {
+          "const": "mtr-table-of-contents"
+        },
+        "en": {
+          "const": ""
+        },
+        "zh": {
+          "type": "string",
+          "pattern": "^# 目录(?:\\n|$)"
+        }
+      }
+    },
+    "contents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/normalContent"
+      }
+    },
+    "intro": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contents"],
+      "properties": {
+        "contents": {
+          "type": "array",
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "$ref": "#/$defs/versionNotes"
+            },
+            {
+              "$ref": "#/$defs/tableOfContents"
+            }
+          ],
+          "items": {
+            "$ref": "#/$defs/normalContent"
+          }
+        }
+      }
+    },
+    "subrule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["chapter", "en", "zh", "contents"],
+      "properties": {
+        "chapter": {
+          "type": "string",
+          "pattern": "^(?:[1-9]|10)\\.[0-9]+$"
+        },
+        "en": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "zh": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "contents": {
+          "$ref": "#/$defs/contents"
+        }
+      }
+    },
+    "mainChapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["chapter", "en", "zh", "subrules"],
+      "properties": {
+        "chapter": {
+          "type": "string",
+          "pattern": "^(?:[1-9]|10)\\.$"
+        },
+        "en": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "zh": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "subrules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/subrule"
+          }
+        }
+      }
+    },
+    "appendix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["chapter", "en", "zh", "contents"],
+      "properties": {
+        "chapter": {
+          "type": "string",
+          "pattern": "^Appendix [A-F]$"
+        },
+        "en": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "zh": {
+          "$ref": "#/$defs/nonEmptyText"
+        },
+        "contents": {
+          "$ref": "#/$defs/contents"
+        }
+      }
+    }
+  }
+}

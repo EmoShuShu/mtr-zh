@@ -1,0 +1,120 @@
+name: Validate MTR
+
+on:
+  pull_request:
+  merge_group:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mtr-validation-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate and build current release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONUTF8: "1"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install project
+        run: python -m pip install -e ".[dev]"
+
+      - name: Resolve current release
+        shell: bash
+        run: |
+          version="$(tr -d '\r\n' < src/mtr/current-version.txt)"
+          if [[ ! "$version" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid current MTR version: $version" >&2
+            exit 1
+          fi
+          manifest="src/mtr/$version/manifest.yaml"
+          if [[ ! -f "$manifest" ]]; then
+            echo "Current MTR manifest does not exist: $manifest" >&2
+            exit 1
+          fi
+          echo "MTR_VERSION=$version" >> "$GITHUB_ENV"
+          echo "MTR_MANIFEST=$manifest" >> "$GITHUB_ENV"
+
+      - name: Strictly validate source
+        run: >-
+          python scripts/validate.py
+          --manifest "$MTR_MANIFEST"
+          --schema schema/mtr-source.schema.json
+          --project-root .
+
+      - name: Run tests
+        run: python -m pytest
+
+      - name: Build release candidate
+        run: >-
+          python scripts/build.py
+          --manifest "$MTR_MANIFEST"
+          --schema schema/mtr-source.schema.json
+          --output-schema schema/mtr-output.schema.json
+          --project-root .
+          --json-out ci-artifacts/rules.json
+          --markdown-out ci-artifacts/MTR.md
+
+      - name: Independently validate published JSON
+        run: >-
+          python scripts/validate_output.py
+          --input ci-artifacts/rules.json
+          --schema schema/mtr-output.schema.json
+
+      - name: Rebuild for determinism check
+        run: >-
+          python scripts/build.py
+          --manifest "$MTR_MANIFEST"
+          --schema schema/mtr-source.schema.json
+          --output-schema schema/mtr-output.schema.json
+          --project-root .
+          --json-out ci-repeat/rules.json
+          --markdown-out ci-repeat/MTR.md
+
+      - name: Verify deterministic output
+        shell: bash
+        run: |
+          cmp ci-artifacts/rules.json ci-repeat/rules.json
+          cmp ci-artifacts/MTR.md ci-repeat/MTR.md
+
+      - name: Verify checked-in artifacts are current
+        shell: bash
+        run: |
+          cmp ci-artifacts/rules.json dist/rules.json || {
+            echo "dist/rules.json is stale; rebuild and commit it." >&2
+            exit 1
+          }
+          cmp ci-artifacts/MTR.md dist/MTR.md || {
+            echo "dist/MTR.md is stale; rebuild and commit it." >&2
+            exit 1
+          }
+
+      - name: Write artifact checksums
+        if: always() && hashFiles('ci-artifacts/**') != ''
+        shell: bash
+        run: |
+          cd ci-artifacts
+          sha256sum rules.json MTR.md > SHA256SUMS
+
+      - name: Upload preview artifacts
+        if: always() && hashFiles('ci-artifacts/**') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: mtr-${{ env.MTR_VERSION }}-${{ github.sha }}
+          path: ci-artifacts/
+          if-no-files-found: error
+          retention-days: 14

@@ -10,6 +10,11 @@ def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Build deterministic MTR JSON and Markdown")
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--schema", type=Path, required=True)
+    parser.add_argument(
+        "--output-schema",
+        type=Path,
+        default=Path("schema/mtr-output.schema.json"),
+    )
     parser.add_argument("--project-root", type=Path, default=Path.cwd())
     parser.add_argument("--json-out", type=Path, required=True)
     parser.add_argument("--markdown-out", type=Path, required=True)
@@ -20,7 +25,12 @@ def main() -> int:
     args = _parser().parse_args()
     try:
         project = load_project(args.manifest, args.schema, args.project_root)
-        write_outputs(project, args.json_out, args.markdown_out)
+        write_outputs(
+            project,
+            args.json_out,
+            args.markdown_out,
+            output_schema_path=args.output_schema,
+        )
     except PipelineError as exc:
         raise SystemExit(str(exc)) from exc
     print(f"Wrote {args.json_out}")

@@ -78,12 +78,21 @@ python -m venv .venv
 .\.venv\Scripts\python.exe scripts\build.py `
   --manifest src\mtr\2026-02-27\manifest.yaml `
   --schema schema\mtr-source.schema.json `
+  --output-schema schema\mtr-output.schema.json `
   --project-root . `
   --json-out dist\rules.json `
   --markdown-out dist\MTR.md
 ```
 
-最终 JSON 会扁平化中间 YAML 的 `group` 层，不包含 `groups` 字段。普通 group 逐 block 发布；多 block 表格会在发布边界重新组装成一个连续的 Markdown 表格，避免表头和数据行被分别渲染。版本说明与自动目录位于 `intro.contents` 最前面；JSON 目录使用 `/mtr/5#5.1` 形式的站内路由，Markdown 目录使用文档内锚点。图片 Markdown 直接含 `data:image/png;base64,...`，产物不依赖附属图片文件。
+构建器在写文件前自动使用 Output Schema v1 以及全局语义规则校验最终 JSON。最终 JSON 会扁平化中间 YAML 的 `group` 层，不包含 `groups` 字段。普通 group 逐 block 发布；多 block 表格会在发布边界重新组装成一个连续的 Markdown 表格，避免表头和数据行被分别渲染。版本说明与自动目录位于 `intro.contents` 最前面；JSON 目录使用 `/mtr/5#5.1` 形式的站内路由，Markdown 目录使用文档内锚点。图片 Markdown 直接含 `data:image/png;base64,...`，产物不依赖附属图片文件。
+
+已有产物也可以单独校验：
+
+```powershell
+.\.venv\Scripts\python.exe scripts\validate_output.py `
+  --input dist\rules.json `
+  --schema schema\mtr-output.schema.json
+```
 
 ## 测试
 
@@ -91,4 +100,20 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pytest
 ```
 
-测试覆盖 Schema/构建、Base64 图片、多 block 双语表格重组、官方段落拆分、Tab 列表标记、含斜杠牌名、旧文档的异常注解格式，以及快照完整性和禁止覆盖人工编辑的规则。
+测试覆盖 Source/Output Schema、构建、Base64 图片、多 block 双语表格重组、官方段落拆分、Tab 列表标记、含斜杠牌名、旧文档的异常注解格式，以及快照完整性和禁止覆盖人工编辑的规则。
+
+## PR 自动校验
+
+当前准备发布的版本由 `src/mtr/current-version.txt` 指定。切换正式版本时，应在同一个 PR 中更新该指针、版本 YAML 以及重新生成的 `dist/rules.json` 和 `dist/MTR.md`。
+
+`.github/workflows/validate.yml` 会在 Pull Request、Merge Queue 和手动触发时执行以下门禁：
+
+1. 从版本指针解析当前 manifest；
+2. 严格校验全部 YAML；
+3. 运行完整测试；
+4. 构建并独立校验最终 JSON；
+5. 重复构建并进行字节级确定性比较；
+6. 确认仓库中的 `dist` 与干净构建结果完全一致；
+7. 上传包含 JSON、Markdown 和 SHA-256 校验和的预览 artifact，保留 14 天。
+
+仓库启用分支保护时，应将 `Validate and build current release` 设置为合并前必需通过的检查。该工作流只有 `contents: read` 权限，不使用发布密钥，来自 fork 的 PR 也能安全运行。

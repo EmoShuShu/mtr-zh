@@ -22,6 +22,7 @@ mtr-import-legacy = "mtr_pipeline.legacy_import:main"
 mtr-migrate-legacy = "mtr_pipeline.legacy_migrate:main"
 mtr-snapshot = "mtr_pipeline.snapshot:main"
 mtr-validate = "mtr_pipeline.validate:main"
+mtr-validate-output = "mtr_pipeline.output_validate:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import base64
+import binascii
 import json
 import re
 from dataclasses import dataclass
@@ -14,6 +15,12 @@ from jsonschema import Draft202012Validator, FormatChecker
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 RELATIVE_IMAGE_RE = re.compile(r"!\[[^\]]*\]\((?!data:|https?://)[^)]+\)")
 VERSION_NOTES_PATH = Path("src/mtr/version-notes.md")
+OUTPUT_SCHEMA_PATH = Path("schema/mtr-output.schema.json")
+OUTPUT_IMAGE_RE = re.compile(
+    r"^!\[(?P<alt>[^\]\r\n]+)\]\(data:image/png;base64,"
+    r"(?P<payload>[A-Za-z0-9+/]+={0,2})\)$"
+)
+TABLE_SEPARATOR_RE = re.compile(r"^:?-{3,}:?$")
 
 
 class PipelineError(RuntimeError):
@@ -52,6 +59,16 @@ def _read_schema(path: Path) -> dict[str, Any]:
     return value
 
 
+def _read_json(path: Path) -> dict[str, Any]:
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise PipelineError(f"Unable to read JSON {path}: {exc}") from exc
+    if not isinstance(value, dict):
+        raise PipelineError(f"JSON root must be an object: {path}")
+    return value
+
+
 def validate_document(document: dict[str, Any], schema: dict[str, Any], label: str) -> None:
     validator = Draft202012Validator(schema, format_checker=FormatChecker())
     errors = sorted(validator.iter_errors(document), key=lambda error: list(error.absolute_path))
@@ -64,6 +81,112 @@ def validate_document(document: dict[str, Any], schema: dict[str, Any], label: s
     if len(errors) > 8:
         details.append(f"... and {len(errors) - 8} more error(s)")
     raise PipelineError(f"Schema validation failed for {label}:\n" + "\n".join(details))
+
+
+def _iter_output_contents(document: dict[str, Any]) -> Iterable[tuple[str, dict[str, Any]]]:
+    for index, content in enumerate(document["intro"]["contents"]):
+        yield f"intro.contents.{index}", content
+    for chapter_index, chapter in enumerate(document["main"]):
+        for section_index, section in enumerate(chapter["subrules"]):
+            for content_index, content in enumerate(section["contents"]):
+                yield (
+                    f"main.{chapter_index}.subrules.{section_index}.contents.{content_index}",
+                    content,
+                )
+    for appendix_index, appendix in enumerate(document["appendices"]):
+        for content_index, content in enumerate(appendix["contents"]):
+            yield f"appendices.{appendix_index}.contents.{content_index}", content
+
+
+def _table_cells(line: str) -> list[str] | None:
+    stripped = line.strip()
+    if not stripped.startswith("|") or not stripped.endswith("|"):
+        return None
+    return [cell.strip() for cell in re.split(r"(?<!\\)\|", stripped[1:-1])]
+
+
+def _validate_output_markdown(value: str, label: str) -> bytes | None:
+    if value.startswith("!["):
+        match = OUTPUT_IMAGE_RE.fullmatch(value)
+        if match is None:
+            raise PipelineError(f"Invalid inline PNG Markdown in {label}")
+        try:
+            raw = base64.b64decode(match.group("payload"), validate=True)
+        except (binascii.Error, ValueError) as exc:
+            raise PipelineError(f"Invalid Base64 image payload in {label}") from exc
+        if not raw.startswith(PNG_SIGNATURE):
+            raise PipelineError(f"Inline image is not a PNG in {label}")
+        return raw
+
+    lines = value.splitlines()
+    if not lines or not lines[0].lstrip().startswith("|"):
+        return None
+    if len(lines) < 3:
+        raise PipelineError(f"Incomplete Markdown table in {label}: expected a header and data row")
+    rows = [_table_cells(line) for line in lines]
+    if any(row is None for row in rows):
+        raise PipelineError(f"Incomplete Markdown table in {label}: rows must be contiguous")
+    assert all(row is not None for row in rows)
+    cell_count = len(rows[0])
+    if cell_count == 0 or any(len(row) != cell_count for row in rows):
+        raise PipelineError(f"Invalid Markdown table column count in {label}")
+    if not all(TABLE_SEPARATOR_RE.fullmatch(cell) for cell in rows[1]):
+        raise PipelineError(f"Invalid Markdown table separator in {label}")
+    return None
+
+
+def validate_built_output(document: dict[str, Any], schema: dict[str, Any], label: str) -> None:
+    validate_document(document, schema, label)
+
+    main_chapters = [chapter["chapter"] for chapter in document["main"]]
+    expected_main = [f"{number}." for number in range(1, 11)]
+    if main_chapters != expected_main:
+        raise PipelineError(f"Unexpected main chapter order in {label}: {main_chapters}")
+    appendix_chapters = [appendix["chapter"] for appendix in document["appendices"]]
+    expected_appendices = [f"Appendix {letter}" for letter in "ABCDEF"]
+    if appendix_chapters != expected_appendices:
+        raise PipelineError(f"Unexpected appendix order in {label}: {appendix_chapters}")
+
+    seen_ids: set[str] = set()
+    duplicates: set[str] = set()
+    for location, content in _iter_output_contents(document):
+        content_id = content["id"]
+        if content_id in seen_ids:
+            duplicates.add(content_id)
+        seen_ids.add(content_id)
+
+        en_image = _validate_output_markdown(content["en"], f"{location}.en")
+        zh_image = _validate_output_markdown(content["zh"], f"{location}.zh")
+        if (en_image is None) != (zh_image is None):
+            raise PipelineError(f"Image languages do not match in {location}")
+        if en_image is not None and en_image != zh_image:
+            raise PipelineError(f"Image payloads do not match in {location}")
+
+    if duplicates:
+        raise PipelineError("Duplicate published content IDs: " + ", ".join(sorted(duplicates)))
+
+    toc = document["intro"]["contents"][1]["zh"]
+    for chapter in document["main"]:
+        route = f"/mtr/{chapter['chapter'].rstrip('.')}"
+        if f"]({route})" not in toc:
+            raise PipelineError(f"Missing table-of-contents route in {label}: {route}")
+        for section in chapter["subrules"]:
+            section_route = f"{route}#{section['chapter']}"
+            if f"]({section_route})" not in toc:
+                raise PipelineError(f"Missing table-of-contents route in {label}: {section_route}")
+    for appendix in document["appendices"]:
+        route = f"/mtr/{appendix['chapter'].lower().replace(' ', '-')}"
+        if f"]({route})" not in toc:
+            raise PipelineError(f"Missing table-of-contents route in {label}: {route}")
+
+
+def validate_output_file(json_path: Path | str, schema_path: Path | str) -> dict[str, Any]:
+    json_path = Path(json_path).resolve()
+    schema_path = Path(schema_path).resolve()
+    document = _read_json(json_path)
+    schema = _read_schema(schema_path)
+    validate_built_output(document, schema, str(json_path))
+    return document
 
 
 def _ensure_within(path: Path, root: Path, label: str) -> Path:
@@ -358,7 +481,19 @@ def _build_markdown(project: Project, version_notes: str) -> str:
     return markdown
 
 
-def build_outputs(project: Project) -> tuple[str, str]:
+def _resolve_output_schema(project: Project, schema_path: Path | str | None) -> Path:
+    candidate = OUTPUT_SCHEMA_PATH if schema_path is None else Path(schema_path)
+    if not candidate.is_absolute():
+        candidate = project.root / candidate
+    return _ensure_within(candidate, project.root, "Output schema path")
+
+
+def build_outputs(
+    project: Project,
+    *,
+    output_schema_path: Path | str | None = None,
+    validate_output: bool = True,
+) -> tuple[str, str]:
     version_notes = _read_version_notes(project)
     main: list[dict[str, Any]] = []
     appendices: list[dict[str, Any]] = []
@@ -386,14 +521,23 @@ def build_outputs(project: Project) -> tuple[str, str]:
         "main": main,
         "appendices": appendices,
     }
+    if validate_output:
+        schema_path = _resolve_output_schema(project, output_schema_path)
+        validate_built_output(output, _read_schema(schema_path), "generated MTR output")
     json_text = json.dumps(output, ensure_ascii=False, indent=2) + "\n"
     if '"groups"' in json_text:
         raise PipelineError("Generated JSON unexpectedly contains intermediate groups")
     return json_text, _build_markdown(project, version_notes)
 
 
-def write_outputs(project: Project, json_path: Path | str, markdown_path: Path | str) -> None:
-    json_text, markdown_text = build_outputs(project)
+def write_outputs(
+    project: Project,
+    json_path: Path | str,
+    markdown_path: Path | str,
+    *,
+    output_schema_path: Path | str | None = None,
+) -> None:
+    json_text, markdown_text = build_outputs(project, output_schema_path=output_schema_path)
     json_path = Path(json_path)
     markdown_path = Path(markdown_path)
     json_path.parent.mkdir(parents=True, exist_ok=True)

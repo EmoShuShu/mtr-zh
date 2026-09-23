@@ -7,6 +7,7 @@ import re
 from pathlib import Path
 
 import pytest
+import yaml
 
 from mtr_pipeline.core import (
     PipelineError,
@@ -15,6 +16,7 @@ from mtr_pipeline.core import (
     assemble_group,
     build_outputs,
     load_project,
+    validate_built_output,
     validate_document,
 )
 
@@ -23,6 +25,8 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "src" / "mtr" / "examples" / "manifest.yaml"
 FULL_MANIFEST = ROOT / "src" / "mtr" / "2026-02-27" / "manifest.yaml"
 SCHEMA = ROOT / "schema" / "mtr-source.schema.json"
+OUTPUT_SCHEMA = ROOT / "schema" / "mtr-output.schema.json"
+CURRENT_VERSION = ROOT / "src" / "mtr" / "current-version.txt"
 
 
 @pytest.fixture(scope="module")
@@ -48,6 +52,16 @@ def test_representative_sources_validate(project):
     assert len(project.sources) == 4
 
 
+def test_current_version_pointer_identifies_release_manifest():
+    version = CURRENT_VERSION.read_text(encoding="utf-8").strip()
+    assert re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", version)
+    manifest_path = ROOT / "src" / "mtr" / version / "manifest.yaml"
+    assert manifest_path.is_file()
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    assert manifest["document"]["effectiveDate"] == version
+    assert manifest["document"]["version"] == version.replace("-", "")
+
+
 def test_paragraph_group_reconstructs_official_text(project):
     chapter_one = project.sources[0].data["chapter"]
     group = chapter_one["sections"][0]["groups"][1]
@@ -60,7 +74,7 @@ def test_paragraph_group_reconstructs_official_text(project):
 
 
 def test_build_flattens_groups_and_preserves_extras(project):
-    json_text, _ = build_outputs(project)
+    json_text, _ = build_outputs(project, validate_output=False)
     output = json.loads(json_text)
     assert '"groups"' not in json_text
     blocks = list(_all_contents(output))
@@ -70,7 +84,7 @@ def test_build_flattens_groups_and_preserves_extras(project):
 
 
 def test_shared_version_notes_and_generated_toc_lead_both_outputs(project):
-    json_text, markdown_text = build_outputs(project)
+    json_text, markdown_text = build_outputs(project, validate_output=False)
     output = json.loads(json_text)
     version_notes, toc = output["intro"]["contents"][:2]
 
@@ -89,7 +103,7 @@ def test_shared_version_notes_and_generated_toc_lead_both_outputs(project):
 
 
 def test_markdown_headings_use_english_then_chinese_without_duplicate_intro(project):
-    _, markdown_text = build_outputs(project)
+    _, markdown_text = build_outputs(project, validate_output=False)
     assert "# MTR 1. Tournament Fundamentals 比赛基本要素\n" in markdown_text
     assert "## MTR 1.1 Tournament Types 比赛种类\n" in markdown_text
     assert "# Appendix B—Time Limits 时间限制\n" in markdown_text
@@ -105,7 +119,7 @@ def test_markdown_headings_use_english_then_chinese_without_duplicate_intro(proj
 
 
 def test_images_are_inline_base64_and_round_trip(project):
-    json_text, markdown_text = build_outputs(project)
+    json_text, markdown_text = build_outputs(project, validate_output=False)
     output = json.loads(json_text)
     expected_assets = {
         "mtr-10.4-b002": "playoff-bracket-8-seeding.png",
@@ -149,8 +163,57 @@ def test_multiblock_table_with_row_annotation_is_rejected(full_project):
         _flatten_groups(full_project, [group])
 
 
+def test_output_schema_rejects_empty_normal_translation(full_project):
+    output = json.loads(build_outputs(full_project)[0])
+    output["main"][0]["subrules"][0]["contents"][0]["zh"] = ""
+    schema = json.loads(OUTPUT_SCHEMA.read_text(encoding="utf-8"))
+
+    with pytest.raises(PipelineError, match="Schema validation failed"):
+        validate_built_output(output, schema, "invalid output")
+
+
+def test_output_validation_rejects_duplicate_published_id(full_project):
+    output = json.loads(build_outputs(full_project)[0])
+    contents = output["main"][0]["subrules"][0]["contents"]
+    contents[1]["id"] = contents[0]["id"]
+    schema = json.loads(OUTPUT_SCHEMA.read_text(encoding="utf-8"))
+
+    with pytest.raises(PipelineError, match="Duplicate published content IDs"):
+        validate_built_output(output, schema, "invalid output")
+
+
+def test_output_validation_rejects_incomplete_markdown_table(full_project):
+    output = json.loads(build_outputs(full_project)[0])
+    appendix = next(item for item in output["appendices"] if item["chapter"] == "Appendix F")
+    table = next(item for item in appendix["contents"] if item["id"] == "mtr-appendix-f-b002")
+    table["en"] = "| Program | Rules Enforcement Level |\n| --- | --- |"
+    schema = json.loads(OUTPUT_SCHEMA.read_text(encoding="utf-8"))
+
+    with pytest.raises(PipelineError, match="Incomplete Markdown table"):
+        validate_built_output(output, schema, "invalid output")
+
+
+def test_output_validation_rejects_non_png_data_uri(full_project):
+    output = json.loads(build_outputs(full_project)[0])
+    image = next(
+        content
+        for chapter in output["main"]
+        for section in chapter["subrules"]
+        for content in section["contents"]
+        if content["en"].startswith("![")
+    )
+    image["en"] = "![diagram](data:image/png;base64,QUJDRA==)"
+    image["zh"] = "![示意图](data:image/png;base64,QUJDRA==)"
+    schema = json.loads(OUTPUT_SCHEMA.read_text(encoding="utf-8"))
+
+    with pytest.raises(PipelineError, match="Inline image is not a PNG"):
+        validate_built_output(output, schema, "invalid output")
+
+
 def test_build_is_deterministic(project):
-    assert build_outputs(project) == build_outputs(project)
+    assert build_outputs(project, validate_output=False) == build_outputs(
+        project, validate_output=False
+    )
 
 
 def test_schema_rejects_more_than_one_extra(project):
