@@ -21,6 +21,7 @@ mtr-build = "mtr_pipeline.build:main"
 mtr-import-legacy = "mtr_pipeline.legacy_import:main"
 mtr-migrate-legacy = "mtr_pipeline.legacy_migrate:main"
 mtr-snapshot = "mtr_pipeline.snapshot:main"
+mtr-check-official-update = "mtr_pipeline.official_update:main"
 mtr-validate = "mtr_pipeline.validate:main"
 mtr-validate-output = "mtr_pipeline.output_validate:main"
 
