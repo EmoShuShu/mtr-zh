@@ -8,9 +8,13 @@ import yaml
 from mtr_pipeline.legacy_import import OfficialSection, OfficialUnit, sha256_file
 from mtr_pipeline.official_update import (
     EXPECTED_TITLE,
+    OfficialRelease,
     OfficialUpdateError,
     UpdateFinding,
+    _exact_text_changes,
     _rebase_groups,
+    _render_exact_text_changes,
+    _write_update_report,
     load_source_state,
     parse_rules_page,
 )
@@ -110,6 +114,75 @@ def test_rebase_preserves_ids_chinese_annotations_and_split_boundaries():
     assert [block["zh"] for block in result[0]["blocks"]] == ["第一句。", "第二句。"]
     assert result[0]["blocks"][0]["extras"] == [{"en": "Note", "zh": "注解"}]
     assert findings[0].code == "official-text-changed"
+    assert "similarity" not in findings[0].message
+
+
+def test_exact_diff_reports_concrete_insertions_and_deletions():
+    changes = _exact_text_changes(
+        "A player draws one card.",
+        "A player immediately draws two cards.",
+    )
+    assert "".join(change["text"] for change in changes if change["op"] != "insert") == (
+        "A player draws one card."
+    )
+    assert "".join(change["text"] for change in changes if change["op"] != "delete") == (
+        "A player immediately draws two cards."
+    )
+    rendered = _render_exact_text_changes(changes)
+    assert "[-one-]" in rendered
+    assert "{+immediately +}" in rendered
+    assert "{+two+}" in rendered
+
+
+def test_rebase_reports_punctuation_only_official_change():
+    groups = [
+        {
+            "id": "mtr-1.1-g001",
+            "type": "paragraph",
+            "blocks": [{"id": "mtr-1.1-b001", "en": "A player acts.", "zh": "牌手行动。"}],
+        }
+    ]
+    official = OfficialSection(
+        "1.1",
+        "Test",
+        [OfficialUnit("paragraph", "A player acts!", (1,))],
+    )
+    findings: list[UpdateFinding] = []
+    _rebase_groups(groups, official, "mtr-1.1", findings)
+    assert len(findings) == 1
+    assert findings[0].old_en == "A player acts."
+    assert findings[0].new_en == "A player acts!"
+
+
+def test_update_report_contains_human_and_machine_readable_exact_diff(tmp_path: Path):
+    report_path = tmp_path / "update.json"
+    report = _write_update_report(
+        report_path,
+        "2026-01-01",
+        OfficialRelease(
+            "https://wpn.wizards.com/en/rules-documents",
+            EXPECTED_TITLE,
+            "2026-02-01",
+            "https://media.wizards.com/mtr.pdf",
+            "a" * 64,
+        ),
+        [
+            UpdateFinding(
+                "official-text-changed",
+                "warning",
+                "1.1",
+                "Official English changed; retained Chinese requires exact review.",
+                "mtr-1.1-g001",
+                "Draw one card.",
+                "Draw two cards.",
+            )
+        ],
+    )
+    operations = [change["op"] for change in report["findings"][0]["changes"]]
+    assert operations.count("delete") == 2
+    assert operations.count("insert") == 2
+    markdown = report_path.with_suffix(".md").read_text(encoding="utf-8")
+    assert "Draw [-one-]{+two+} [-card-]{+cards+}." in markdown
 
 
 def test_rebase_new_official_unit_gets_stable_new_id_and_empty_translation():
@@ -183,6 +256,9 @@ def test_workflows_keep_detection_review_and_release_separate():
     release_workflow = (ROOT / ".github/workflows/release.yml").read_text(encoding="utf-8")
     assert "gh pr create" in update_workflow
     assert "--draft" in update_workflow
+    assert 'cron: "0 6 * * *"' in update_workflow
+    assert 'timezone: "Asia/Shanghai"' in update_workflow
+    assert '--assignee "$REPOSITORY_OWNER"' in update_workflow
     assert "git push --set-upstream" in update_workflow
     assert "gh release create" not in update_workflow
     assert 'branches:\n      - master' in release_workflow

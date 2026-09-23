@@ -411,7 +411,6 @@ def _rebase_matched_group(
     unit: OfficialUnit,
     allocator: _IdAllocator,
     section: str,
-    similarity: float,
     findings: list[UpdateFinding],
 ) -> dict[str, Any]:
     old_en = assemble_group(group, "en")
@@ -443,14 +442,13 @@ def _rebase_matched_group(
                 else:
                     block.pop("joinAfter", None)
     new_en = assemble_group(result, "en")
-    if _match_normalize(old_en) != _match_normalize(new_en):
-        severity = "warning" if similarity >= 0.80 else "error"
+    if old_en != new_en:
         findings.append(
             UpdateFinding(
                 "official-text-changed",
-                severity,
+                "warning",
                 section,
-                f"Official English changed (alignment similarity {similarity:.3f}); retained Chinese requires review.",
+                "Official English changed; retained Chinese requires exact review.",
                 group["id"],
                 old_en,
                 new_en,
@@ -541,7 +539,6 @@ def _rebase_groups(
                 official.units[step.official[0]],
                 allocator,
                 official.key,
-                step.similarity,
                 findings,
             )
             result.append(rebased)
@@ -608,6 +605,42 @@ def _dump_yaml(path: Path, value: dict[str, Any]) -> None:
     )
 
 
+_DIFF_TOKEN_RE = re.compile(r"\s+|[\w]+(?:[’'][\w]+)*|[^\w\s]", re.UNICODE)
+
+
+def _exact_text_changes(old: str, new: str) -> list[dict[str, str]]:
+    """Return an exact, reversible lexical diff without semantic scoring."""
+
+    old_tokens = _DIFF_TOKEN_RE.findall(old)
+    new_tokens = _DIFF_TOKEN_RE.findall(new)
+    matcher = difflib.SequenceMatcher(None, old_tokens, new_tokens, autojunk=False)
+    changes: list[dict[str, str]] = []
+    for operation, old_start, old_end, new_start, new_end in matcher.get_opcodes():
+        if operation == "equal":
+            changes.append({"op": "equal", "text": "".join(old_tokens[old_start:old_end])})
+        elif operation == "delete":
+            changes.append({"op": "delete", "text": "".join(old_tokens[old_start:old_end])})
+        elif operation == "insert":
+            changes.append({"op": "insert", "text": "".join(new_tokens[new_start:new_end])})
+        else:
+            changes.append({"op": "delete", "text": "".join(old_tokens[old_start:old_end])})
+            changes.append({"op": "insert", "text": "".join(new_tokens[new_start:new_end])})
+    return [change for change in changes if change["text"]]
+
+
+def _render_exact_text_changes(changes: list[dict[str, str]]) -> str:
+    rendered: list[str] = []
+    for change in changes:
+        text = change["text"]
+        if change["op"] == "delete":
+            rendered.append(f"[-{text}-]")
+        elif change["op"] == "insert":
+            rendered.append(f"{{+{text}+}}")
+        else:
+            rendered.append(text)
+    return "".join(rendered)
+
+
 def _write_update_report(
     path: Path,
     base_version: str,
@@ -618,13 +651,22 @@ def _write_update_report(
         severity: sum(finding.severity == severity for finding in findings)
         for severity in ("error", "warning", "info")
     }
+    finding_rows = []
+    for finding in findings:
+        row = asdict(finding)
+        row["changes"] = (
+            _exact_text_changes(finding.old_en, finding.new_en)
+            if finding.old_en != finding.new_en
+            else []
+        )
+        finding_rows.append(row)
     report = {
         "baseVersion": base_version,
         "effectiveDate": release.effective_date,
         "officialPdfUrl": release.pdf_url,
         "officialPdfSha256": release.pdf_sha256,
         "summary": summary,
-        "findings": [asdict(finding) for finding in findings],
+        "findings": finding_rows,
     }
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -648,15 +690,21 @@ def _write_update_report(
         for finding in selected:
             suffix = f" (`{finding.content_id}`)" if finding.content_id else ""
             lines.append(f"- `{finding.section}` **{finding.code}**{suffix}: {finding.message}")
-            if finding.old_en or finding.new_en:
-                diff = difflib.unified_diff(
-                    finding.old_en.splitlines(),
-                    finding.new_en.splitlines(),
-                    fromfile="previous",
-                    tofile="official",
-                    lineterm="",
+            if finding.old_en != finding.new_en:
+                exact_diff = _render_exact_text_changes(
+                    _exact_text_changes(finding.old_en, finding.new_en)
                 )
-                lines.extend(["", "```diff", *diff, "```", ""])
+                lines.extend(
+                    [
+                        "",
+                        "  Exact diff (`[-deleted-]`, `{+inserted+}`):",
+                        "",
+                        "```text",
+                        exact_diff,
+                        "```",
+                        "",
+                    ]
+                )
         lines.append("")
     path.with_suffix(".md").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     return report

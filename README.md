@@ -120,17 +120,19 @@ python -m venv .venv
 
 ## 自动检测官方更新
 
-官方来源状态记录在 `src/mtr/official-source.yaml`。`.github/workflows/official-update.yml` 每天北京时间 09:17 检查一次 WPN 的 [Rules and Documentation](https://wpn.wizards.com/en/rules-documents) 页面，也可以在 Actions 页面手动触发。
+官方来源状态记录在 `src/mtr/official-source.yaml`。`.github/workflows/official-update.yml` 每天北京时间 06:00 检查一次 WPN 的 [Rules and Documentation](https://wpn.wizards.com/en/rules-documents) 页面，也可以在 Actions 页面手动触发。GitHub 的定时任务在繁忙时可能比设定时间稍晚开始。
 
 检测器只接受 `wpn.wizards.com` 的来源页面和 `media.wizards.com` 的 HTTPS PDF，下载后还会验证 PDF 文件头、大小上限和 SHA-256：
 
 - 哈希不变：不产生提交、分支或 PR；
-- 哈希变化：以当前已校对 YAML 为继承基线，创建不可变快照、英文差异、候选 YAML 和审计报告；
+- 哈希变化：读取 `src/mtr/current-version.txt` 指向的当前已校对 YAML 作为唯一继承基线，创建不可变快照、精确英文增删、候选 YAML 和审计报告；历史文件 `AMTR_2025.md` 只参与过首次迁移，此后不会再参与比较；
 - 既有内容保留稳定 ID、中文与注解，新内容生成新 ID 并将中文留空；
-- 自动推送 `automation/mtr-<日期>-<哈希前缀>` 分支并创建 Draft PR；
+- 自动推送 `automation/mtr-<日期>-<哈希前缀>` 分支，创建 Draft PR，并把仓库所有者设为负责人；
 - 自动任务永远不会直接修改 `master`，也不会自动把 Draft PR 合并。
 
 第一次启用前，需要在 GitHub 仓库的 `Settings → Actions → General → Workflow permissions` 中勾选 **Allow GitHub Actions to create and approve pull requests**。该选项只允许工作流创建 PR；本项目不会让机器人批准或合并 PR。GitHub 可能要求维护者在机器人创建的 PR 上点击 **Approve workflows to run**，之后 PR 校验才会执行。
+
+不需要每天打开仓库检查。发现官方 PDF 哈希变化后，自动创建的 Draft PR 会指派给仓库所有者，从而出现在 GitHub 通知中。建议在个人头像菜单的 `Settings → Notifications → System → Actions` 中启用 GitHub 站内通知或邮件，并至少保留工作流失败通知；同时确认与仓库所有者账号关联的邮箱可以正常收信。没有变化时不会创建 PR。
 
 可以在本地执行同一检测；官方文件未变化时该命令只写入被忽略的结果文件：
 
@@ -140,7 +142,7 @@ python -m venv .venv
   --result tmp\official-update-result.json
 ```
 
-检测到更新后，人工工作始终在自动创建的 PR 分支中进行。应阅读快照内的 `comparison/update.md`，逐项处理 error/warning，更新版本说明并重新构建 `dist`；现有 PR 门禁全部通过后，再将 Draft 标记为 Ready for review 并人工合并。
+检测到更新后，人工工作始终在自动创建的 PR 分支中进行。应阅读快照内的 `comparison/update.md`，其中 `[-文字-]` 表示官方删除、`{+文字+}` 表示官方新增；机器可读的 `comparison/update.json` 同时保存 `equal`、`delete`、`insert` 操作。逐项处理 error/warning，更新版本说明并重新构建 `dist`；现有 PR 门禁全部通过后，再将 Draft 标记为 Ready for review 并人工合并。段落对应关系仍由同章节内的顺序和普通字符序列对齐保守确定，只用于继承稳定 ID、中文和注解，不作为改动程度或翻译正确性的判断指标。
 
 ## GitHub Release 发布
 

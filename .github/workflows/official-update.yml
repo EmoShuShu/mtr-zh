@@ -2,7 +2,8 @@ name: Check official MTR update
 
 on:
   schedule:
-    - cron: "17 1 * * *"
+    - cron: "0 6 * * *"
+      timezone: "Asia/Shanghai"
   workflow_dispatch:
 
 permissions:
@@ -110,6 +111,7 @@ jobs:
           EFFECTIVE_DATE: ${{ steps.update.outputs.effectiveDate }}
           PDF_SHA256: ${{ steps.update.outputs.pdfSha256 }}
           REPORT_PATH: ${{ steps.update.outputs.report }}
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
         run: |
           python - <<'PY'
           import os
@@ -140,5 +142,6 @@ jobs:
             --draft \
             --base master \
             --head "$UPDATE_BRANCH" \
+            --assignee "$REPOSITORY_OWNER" \
             --title "MTR $EFFECTIVE_DATE 官方更新（待人工校对）" \
             --body-file tmp/official-update-pr.md
