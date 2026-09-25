@@ -1,0 +1,35 @@
+name: Validate bilingual MTR reference project
+
+on:
+  pull_request:
+    paths:
+      - "reference-pipeline/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: reference-pipeline
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: reference-pipeline/pyproject.toml
+      - name: Install the reference project
+        run: python -m pip install -e ".[dev]"
+      - name: Run tests
+        run: python -m pytest
+      - name: Validate a translation project
+        run: mtr-reference validate examples/de-DE/manifest.yaml
+      - name: Build deterministic example outputs
+        run: >-
+          mtr-reference build examples/de-DE/manifest.yaml
+          --json-out build/de-DE.json
+          --markdown-out build/de-DE.md

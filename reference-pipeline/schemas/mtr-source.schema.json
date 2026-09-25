@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/mtr-reference-source-v1.schema.json",
+  "title": "Language-neutral editable MTR translation source",
+  "oneOf": [
+    { "$ref": "#/$defs/manifest" },
+    { "$ref": "#/$defs/chapterFile" }
+  ],
+  "$defs": {
+    "translatedText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "translation"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "translation": { "type": "string" }
+      }
+    },
+    "manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "document", "files"],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "document": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "sourceLanguage", "targetLanguage", "title", "version", "effectiveDate"],
+          "properties": {
+            "id": { "const": "mtr" },
+            "sourceLanguage": { "const": "en" },
+            "targetLanguage": {
+              "type": "string",
+              "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+            },
+            "title": { "$ref": "#/$defs/translatedText" },
+            "version": { "type": "string", "pattern": "^[0-9]{8}$" },
+            "effectiveDate": { "type": "string", "format": "date" }
+          }
+        },
+        "files": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-zA-Z0-9._/-]+\\.yaml$" }
+        }
+      }
+    },
+    "chapterFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["chapter"],
+      "properties": { "chapter": { "$ref": "#/$defs/chapter" } }
+    },
+    "chapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "chapter", "en", "translation"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^mtr-[a-z0-9.-]+$" },
+        "chapter": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 },
+        "translation": { "type": "string" },
+        "groups": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/group" }
+        },
+        "sections": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/section" }
+        }
+      },
+      "oneOf": [
+        { "required": ["groups"] },
+        { "required": ["sections"] }
+      ]
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "chapter", "en", "translation", "groups"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^mtr-[a-z0-9.-]+$" },
+        "chapter": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 },
+        "translation": { "type": "string" },
+        "groups": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/group" }
+        }
+      }
+    },
+    "group": {
+      "oneOf": [
+        { "$ref": "#/$defs/textGroup" },
+        { "$ref": "#/$defs/imageGroup" }
+      ]
+    },
+    "textGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "blocks"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^mtr-[a-z0-9.-]+-g[0-9]{3,}$" },
+        "type": { "enum": ["paragraph", "list", "table", "markdown"] },
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/textBlock" }
+        }
+      }
+    },
+    "imageGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "blocks"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^mtr-[a-z0-9.-]+-g[0-9]{3,}$" },
+        "type": { "const": "image" },
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/imageBlock" }
+        }
+      }
+    },
+    "textBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "en", "translation"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^mtr-[a-z0-9.-]+-b[0-9]{3,}$" },
+        "en": { "type": "string", "minLength": 1 },
+        "translation": { "type": "string" },
+        "extras": {
+          "type": "array",
+          "maxItems": 1,
+          "items": { "$ref": "#/$defs/extra" }
+        },
+        "joinAfter": { "$ref": "#/$defs/joinAfter" }
+      }
+    },
+    "imageBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "asset", "alt"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^mtr-[a-z0-9.-]+-b[0-9]{3,}$" },
+        "asset": { "type": "string", "pattern": "^[a-zA-Z0-9._/-]+\\.png$" },
+        "alt": { "$ref": "#/$defs/translatedText" },
+        "extras": {
+          "type": "array",
+          "maxItems": 1,
+          "items": { "$ref": "#/$defs/extra" }
+        }
+      }
+    },
+    "extra": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "translation"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "translation": { "type": "string" }
+      }
+    },
+    "joinAfter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "translation"],
+      "properties": {
+        "en": { "type": "string" },
+        "translation": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+schemaVersion: 1
+document:
+  id: mtr
+  sourceLanguage: en
+  targetLanguage: de-DE
+  title:
+    en: 'Magic: The Gathering Tournament Rules'
+    translation: 'Magic: The Gathering Turnierregeln'
+  version: '20260227'
+  effectiveDate: '2026-02-27'
+files:
+- chapter-01.yaml
