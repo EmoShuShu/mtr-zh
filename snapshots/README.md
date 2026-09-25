@@ -49,4 +49,4 @@ candidate/*.yaml                    继承 ID、中文和注解后的新版本�
 - `2025-11-10/162253d5cd84`：历史基线；官方 PDF 完整哈希 `162253d5cd84068bed69eefd09a0e96fcf13e095aa0ec2fce24a9209d1afc57b`。
 - `2026-02-27/a627fb8c8568`：当前校对基线；官方 PDF 完整哈希 `a627fb8c8568d8fbb0d4bd6ffeaee460501c07b80b6928cf8c038d708ad0602e`。
 
-2026-02-27 快照处于 `review-required` 状态；候选 YAML 与 `src/mtr/2026-02-27/` 在开始人工校对前完全一致。该审计直接比较最新官方 PDF 与 `AMTR_2025.md`，不经过 2025-11-10 官方 PDF。
+`snapshot.yaml` 中的 `review-required` 记录的是快照刚生成时的状态，不会在后续人工校对后回写。2026-02-27 候选已经在 `src/mtr/2026-02-27/` 完成人工校对并发布。该审计直接比较最新官方 PDF 与快照内保存的 `inputs/legacy.md`，不经过 2025-11-10 官方 PDF。

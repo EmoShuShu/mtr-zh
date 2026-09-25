@@ -161,7 +161,7 @@ def test_fail_on_errors_returns_nonzero_after_draft_is_written(monkeypatch):
     )
     result = legacy_migrate.main(
         [
-            "AMTR_2025.md",
+            "legacy.md",
             "--official-pdf",
             "official.pdf",
             "--overrides",
