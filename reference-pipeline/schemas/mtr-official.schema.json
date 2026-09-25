@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/mtr-reference-official-v1.schema.json",
+  "title": "Parsed official English MTR",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["formatVersion", "officialPdfSha256", "sectionCount", "unitCount", "sections"],
+  "properties": {
+    "formatVersion": { "const": 1 },
+    "officialPdfSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "sectionCount": { "type": "integer", "minimum": 1 },
+    "unitCount": { "type": "integer", "minimum": 1 },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["key", "en", "units"],
+        "properties": {
+          "key": {
+            "type": "string",
+            "pattern": "^(?:introduction|(?:[1-9]|10)\\.[0-9]+|appendix-[a-f])$"
+          },
+          "en": { "type": "string", "minLength": 1 },
+          "units": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["kind", "text", "pages"],
+              "properties": {
+                "kind": { "enum": ["paragraph", "list", "table", "markdown"] },
+                "text": { "type": "string", "minLength": 1 },
+                "pages": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": { "type": "integer", "minimum": 1 }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

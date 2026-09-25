@@ -1,0 +1,39 @@
+chapter:
+  id: mtr-1
+  chapter: '1.'
+  en: Tournament Fundamentals
+  translation: Turniergrundlagen
+  sections:
+  - id: mtr-1.1
+    chapter: '1.1'
+    en: Tournament Types
+    translation: Turnierarten
+    groups:
+    - id: mtr-1.1-g001
+      type: paragraph
+      blocks:
+      - id: mtr-1.1-b001
+        en: 'There are two types of sanctioned Magic tournaments:'
+        translation: 'Es gibt zwei Arten sanktionierter Magic-Turniere:'
+        joinAfter:
+          en: ' '
+          translation: ' '
+      - id: mtr-1.1-b002
+        en: rated and casual.
+        translation: gewertete und Freizeitturniere.
+        extras:
+        - en: This annotation belongs to the second part of the official paragraph.
+          translation: Diese Anmerkung gehört zum zweiten Teil des offiziellen Absatzes.
+    - id: mtr-1.1-g002
+      type: table
+      blocks:
+      - id: mtr-1.1-b003
+        en: |-
+          | Type | Description |
+          | --- | --- |
+        translation: |-
+          | Art | Beschreibung |
+          | --- | --- |
+      - id: mtr-1.1-b004
+        en: '| Rated | Results are recorded. |'
+        translation: '| Gewertet | Ergebnisse werden erfasst. |'
