@@ -1,5 +1,7 @@
 # MTR 中文维护流水线
 
+> **International maintainers:** A self-contained, language-neutral PDF parser and bilingual translation workflow is available in [`reference-pipeline/`](reference-pipeline/README.md). It uses `en` and `translation` fields and does not depend on the Chinese production pipeline.
+
 本仓库以 YAML 作为 MTR 双语正文与注解的结构化源，并确定性生成单文件 JSON 与 Markdown。共用的中文版本说明单独维护在 `src/mtr/version-notes.md`，不参与官方 PDF 对照。Schema v1 已于 2026-09-22 冻结；完整设计见 [`outputs/2026-09-22-mtr-pipeline-design.html`](outputs/2026-09-22-mtr-pipeline-design.html)，字段约束及演进规则见 [`schema/README.md`](schema/README.md)。
 
 ## 当前状态
