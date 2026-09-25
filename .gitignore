@@ -1,7 +1,10 @@
 .venv/
+.idea/
 __pycache__/
 .pytest_cache/
 *.pyc
 *.egg-info/
+outputs/
+reports/
 tmp/
 
