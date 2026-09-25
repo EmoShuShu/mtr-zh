@@ -5,12 +5,12 @@
 ## 常用文件
 
 - [`dist/MTR.md`](dist/MTR.md)：生成的中文版 MTR，适合直接阅读；
-- [`dist/rules.json`](dist/rules.json)：网站使用的 JSON；
+- [`dist/rules.json`](dist/rules.json)：JSON格式文件；
 - [`src/mtr/current-version.txt`](src/mtr/current-version.txt)：当前正式版本的位置；
 - [`src/mtr/version-notes.md`](src/mtr/version-notes.md)：所有版本共用的版本说明；
 - [`snapshots/`](snapshots/)：官方文件、解析结果和更新记录的备份。
 
-网站可以从以下固定地址获取最新 JSON：
+获取最新 JSON：
 
 ```text
 https://github.com/EmoShuShu/mtr-zh/releases/latest/download/rules.json

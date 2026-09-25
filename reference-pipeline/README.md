@@ -10,6 +10,7 @@ It is separate from the Chinese production workflow. You can study it, copy it, 
 - exact additions and deletions between official versions;
 - a bilingual YAML format using `en` and `translation`;
 - translated text, annotations, tables, lists, images, and paragraph splits;
+- inheritance of stable IDs, translations, annotations, and paragraph splits when the official PDF changes;
 - generic JSON and Markdown output;
 - examples for validation and automatic update checks.
 
@@ -54,6 +55,17 @@ mtr-reference diff previous.json current.json \
 
 The Markdown report uses `[-deleted-]` and `{+inserted+}` markers. It does not use a semantic-similarity score.
 
+Prepare a complete update from an existing reviewed translation:
+
+```bash
+mtr-reference prepare-update \
+  --state official/official-source.yaml \
+  --manifest translations/current/manifest.yaml \
+  --snapshot-root snapshots
+```
+
+When the PDF changes, this creates a snapshot containing the official PDF and parsed text, an exact English diff, inherited candidate YAML, and a review report. The currently reviewed translation is not overwritten. Copy the candidate to your editable translation directory, review every finding, then validate and build it.
+
 ## Translation format
 
 Choose the target language once in the manifest:
@@ -89,9 +101,30 @@ mtr-reference build examples/de-DE/manifest.yaml \
 
 ## Automatic updates
 
-The `check` command can look for a new official PDF and prepare parsed files and an exact change report. It never merges or publishes a translation by itself.
+The full update example is [`workflow-examples/official-update.yml`](workflow-examples/official-update.yml). A file in `workflow-examples` is documentation only; GitHub does not run it there.
 
-Copyable GitHub Actions examples are available in [`workflow-examples`](workflow-examples/). Review their paths and permissions before enabling them in a fork.
+To enable it in a fork:
+
+1. Copy it to `.github/workflows/official-update.yml` in your repository.
+2. Edit `MTR_MANIFEST`, `MTR_STATE`, and `MTR_SNAPSHOT_ROOT` near the top of the job so they match your repository.
+3. In **Settings → Actions → General → Workflow permissions**, allow read and write access and allow GitHub Actions to create pull requests.
+4. Commit the workflow to the default branch. Open **Actions → Check official MTR update → Run workflow** once to test and initialize the state.
+
+The example runs every day at 06:00 in `Asia/Shanghai`:
+
+```yaml
+schedule:
+  - cron: "0 6 * * *"
+    timezone: "Asia/Shanghai"
+```
+
+Change those two values to use another local time. Scheduled workflows run from the default branch and may start a little late when GitHub Actions is busy.
+
+No pull request is created when the official PDF is unchanged. When it changes, the workflow opens one draft pull request containing the snapshot and candidate. You do not need to inspect Actions every day: use the repository's **Watch → Custom → Pull requests** setting, or your normal GitHub email/web notification settings, if you want an explicit notification.
+
+In that draft pull request, read `comparison/update.md`, copy `candidate` to the editable translation location named by `MTR_MANIFEST`, correct the target text and annotations, run `validate` and `build`, and only then mark the pull request ready and merge it. Keeping `MTR_MANIFEST` pointed at the newly reviewed version ensures that the next update compares against the previous version rather than the original translation.
+
+The workflow never merges or publishes a translation by itself.
 
 ## Limitations
 
@@ -101,9 +134,3 @@ Copyable GitHub Actions examples are available in [`workflow-examples`](workflow
 - A new official PDF layout may require parser changes; validation is intended to stop major incomplete parses.
 
 The data formats are documented by the JSON Schemas in [`schemas`](schemas/).
-
-## Disclaimer
-
-This is unofficial Fan Content and is not approved or endorsed by Wizards of the Coast. Portions of the materials used are property of Wizards of the Coast LLC.
-
-The parser code and the official MTR text are different kinds of material. Review the repository license and Wizards' current policies before redistributing an official PDF, a complete parsed English document, or a translation.
