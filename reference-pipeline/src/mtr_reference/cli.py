@@ -9,6 +9,7 @@ from .official_io import read_official_json, write_official_json, write_official
 from .official_source import check_for_update
 from .pdf_parser import parse_official_pdf
 from .project import build_project, load_project
+from .update import prepare_update
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -49,6 +50,15 @@ def _parser() -> argparse.ArgumentParser:
     check = subparsers.add_parser("check", help="Check the official WPN page for an update")
     check.add_argument("--state", type=Path, required=True)
     check.add_argument("--output-dir", type=Path, required=True)
+
+    prepare = subparsers.add_parser(
+        "prepare-update",
+        help="Create a review snapshot and inherit the previous translation and annotations",
+    )
+    prepare.add_argument("--state", type=Path, required=True)
+    prepare.add_argument("--manifest", type=Path, required=True)
+    prepare.add_argument("--snapshot-root", type=Path, required=True)
+    prepare.add_argument("--schema", type=Path, default=SOURCE_SCHEMA)
     return parser
 
 
@@ -82,8 +92,16 @@ def main(argv: list[str] | None = None) -> int:
             args.markdown_out,
         )
         print(f"Wrote {args.json_out} and {args.markdown_out}")
-    else:
+    elif args.command == "check":
         result = check_for_update(args.state, args.output_dir)
+        print(json.dumps(result, ensure_ascii=False))
+    else:
+        result = prepare_update(
+            state_path=args.state,
+            manifest_path=args.manifest,
+            source_schema_path=args.schema,
+            snapshot_root=args.snapshot_root,
+        )
         print(json.dumps(result, ensure_ascii=False))
     return 0
 
