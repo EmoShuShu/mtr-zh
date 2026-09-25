@@ -134,9 +134,3 @@ The workflow never merges or publishes a translation by itself.
 - A new official PDF layout may require parser changes; validation is intended to stop major incomplete parses.
 
 The data formats are documented by the JSON Schemas in [`schemas`](schemas/).
-
-## Disclaimer
-
-This is unofficial Fan Content and is not approved or endorsed by Wizards of the Coast. Portions of the materials used are property of Wizards of the Coast LLC.
-
-The parser code and the official MTR text are different kinds of material. Review the repository license and Wizards' current policies before redistributing an official PDF, a complete parsed English document, or a translation.
