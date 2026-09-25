@@ -1,24 +1,21 @@
 # MTR Reference Pipeline
 
-This directory is a self-contained, language-neutral reference implementation for parsing and maintaining a bilingual version of the Magic: The Gathering Tournament Rules (MTR).
+This directory is a language-neutral example for people who want to parse the official English Magic Tournament Rules PDF or maintain an MTR translation in another language.
 
-It is intentionally isolated from the production Chinese translation pipeline in the parent repository. It does not import the parent `mtr_pipeline`, modify Chinese source files, or participate in the Chinese release process. Maintainers can study this directory, copy it, or fork the repository and adapt it for another target language.
+It is separate from the Chinese production workflow. You can study it, copy it, or adapt it in a fork without using any Chinese source files.
 
-## What is included
+## What it provides
 
-- deterministic extraction of English paragraphs, lists, tables, headings, and page provenance from the official PDF;
-- exact additions and deletions between two parsed versions, without a semantic-similarity score;
-- a bilingual YAML Schema using `en` and the language-neutral `translation` field;
-- support for translated annotations, annotation-driven paragraph splits, `joinAfter`, Markdown tables, and PNG assets;
-- generic bilingual JSON and Markdown builders;
-- secure discovery of the current official MTR PDF from the WPN rules page;
-- an isolated German example and copyable GitHub Actions workflows.
+- an English MTR PDF parser;
+- exact additions and deletions between official versions;
+- a bilingual YAML format using `en` and `translation`;
+- translated text, annotations, tables, lists, images, and paragraph splits;
+- generic JSON and Markdown output;
+- examples for validation and automatic update checks.
 
-The three public data contracts are documented by `schemas/mtr-official.schema.json`, `schemas/mtr-source.schema.json`, and `schemas/mtr-output.schema.json`.
+The parser, schemas, example, and tests are all contained in this directory.
 
-The Chinese translation in the parent repository is the proven production implementation from which this reference was derived. The reference parser is tested against that parser on the same official PDF and must produce the same 94 sections and 947 structural units.
-
-## Install
+## Quick start
 
 Python 3.12 or newer is required.
 
@@ -27,21 +24,19 @@ cd reference-pipeline
 python -m venv .venv
 ```
 
-Windows PowerShell:
+Install the project with the command for your system:
 
 ```powershell
+# Windows PowerShell
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
 ```
 
-Linux or macOS:
-
 ```bash
+# Linux or macOS
 ./.venv/bin/python -m pip install -e ".[dev]"
 ```
 
-## Parse an official PDF
-
-The parser does not require a translation project or any Chinese files.
+Parse an official PDF:
 
 ```bash
 mtr-reference parse MTR_EN.pdf \
@@ -49,9 +44,7 @@ mtr-reference parse MTR_EN.pdf \
   --markdown-out build/official.md
 ```
 
-The JSON contains the PDF SHA-256, section and unit counts, section keys, content kinds, exact English text, and source page numbers.
-
-## Compare official versions
+Compare two parsed versions:
 
 ```bash
 mtr-reference diff previous.json current.json \
@@ -59,17 +52,11 @@ mtr-reference diff previous.json current.json \
   --markdown-out build/changes.md
 ```
 
-The Markdown report uses these exact markers:
+The Markdown report uses `[-deleted-]` and `{+inserted+}` markers. It does not use a semantic-similarity score.
 
-```text
-[-deleted text-]{+inserted text+}
-```
+## Translation format
 
-The JSON report stores reversible `equal`, `delete`, and `insert` operations. Sequence alignment is used only to keep unchanged units in order; the report contains no semantic similarity score.
-
-## Maintain another language
-
-The target locale is declared once in the manifest:
+Choose the target language once in the manifest:
 
 ```yaml
 document:
@@ -77,7 +64,7 @@ document:
   targetLanguage: de-DE
 ```
 
-Translated content always uses `translation`, regardless of the target locale:
+Use the same `translation` field for every target language:
 
 ```yaml
 blocks:
@@ -89,9 +76,9 @@ blocks:
     translation: Eine deutsche Anmerkung.
 ```
 
-If an annotation applies to only part of an official paragraph, split that paragraph into multiple blocks and use `joinAfter` to record how the source and translation are reconstructed. The German example in `examples/de-DE` demonstrates this structure.
+See [`examples/de-DE`](examples/de-DE/) for a small working example.
 
-Validate and build it:
+Validate and build a translation:
 
 ```bash
 mtr-reference validate examples/de-DE/manifest.yaml
@@ -100,41 +87,23 @@ mtr-reference build examples/de-DE/manifest.yaml \
   --markdown-out build/de-DE.md
 ```
 
-Blank translations are allowed only during editing:
+## Automatic updates
 
-```bash
-mtr-reference validate examples/de-DE/manifest.yaml --allow-incomplete
-```
+The `check` command can look for a new official PDF and prepare parsed files and an exact change report. It never merges or publishes a translation by itself.
 
-## Check the official source
+Copyable GitHub Actions examples are available in [`workflow-examples`](workflow-examples/). Review their paths and permissions before enabling them in a fork.
 
-Once a project has an `official/official-source.yaml` and its referenced `official.json`, run:
+## Limitations
 
-```bash
-mtr-reference check \
-  --state official/official-source.yaml \
-  --output-dir official-candidate
-```
+- The parser is designed for the official English MTR layout, not arbitrary PDFs.
+- Diagrams and formula artwork may still require reviewed PNG files and alt text.
+- A website may need a small adapter for its own JSON format.
+- A new official PDF layout may require parser changes; validation is intended to stop major incomplete parses.
 
-If the PDF hash has not changed, no candidate is generated. If it changed, the command writes parsed JSON and Markdown, exact change reports, and a candidate state file. A maintainer must review and promote the candidate; this command does not merge or publish anything.
+The data formats are documented by the JSON Schemas in [`schemas`](schemas/).
 
-## GitHub Actions examples
-
-Files in `workflow-examples` are documentation and are not executed by this repository. Copy the desired file into `.github/workflows/` in a fork, review its permissions, and adjust paths before enabling it.
-
-## Known limitations
-
-- The parser is specific to the current layout of the official English MTR PDF, not arbitrary PDFs.
-- Positioned diagrams and formula artwork are not silently converted to text. Translation projects must supply reviewed PNG assets and alt text, or maintain explicit overrides.
-- A new official layout can invalidate spacing or typography assumptions. Required chapters and appendices are checked so that major failures stop instead of producing an apparently complete document.
-- The generic output is a reference format. A website may require a small adapter, like the Chinese website-specific `rules.json` builder in the parent project.
-
-## Project isolation
-
-This reference has its own package, schemas, tests, and dependency manifest. Removing the entire `reference-pipeline` directory has no effect on the Chinese production pipeline.
-
-## Legal notice
+## Disclaimer
 
 This is unofficial Fan Content and is not approved or endorsed by Wizards of the Coast. Portions of the materials used are property of Wizards of the Coast LLC.
 
-The parser code and the official MTR text are different categories of material. Review the repository's code license and Wizards' current policies before redistributing a PDF, a complete parsed English document, or a translation. The example workflows download the source from Wizards rather than bundling an official PDF in this reference directory.
+The parser code and the official MTR text are different kinds of material. Review the repository license and Wizards' current policies before redistributing an official PDF, a complete parsed English document, or a translation.
