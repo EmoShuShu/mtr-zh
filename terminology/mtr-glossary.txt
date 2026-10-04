@@ -1,0 +1,160 @@
+Magic: The Gathering	万智牌
+Tournament Organizer	比赛主办人	根据语境，译为“主办方”也是可以考虑的
+Rules Enforcement Level	执法严格度	缩写为REL
+policy	方针	受控词汇，采用其他译法时需谨慎
+Tournament Fundamental	比赛基本要素	第一章大标题
+Tournament Type	比赛种类	第一章小标题
+Rated tournament	积分赛
+Premier tournament	重要比赛
+Non-Premier tournament	非重要比赛
+World Championship	世界冠军赛
+World Magic Cup	万智牌世界杯
+World Magic Cup Qualifiers	万智牌世界杯资格赛
+World Magic Cup Qualifier Trials	万智牌世界杯资格赛预选赛
+Pro Tour	专业赛
+Regional Pro Tour Qualifier	区域专业资格赛
+Qualifier	资格赛	虽然本文档并未明确列为术语，但是在威世智官方比赛公告的译法几乎固定。
+Preliminary Pro Tour Qualifier	初选专业资格赛	译法出处为官方文档：https://media.wizards.com/2016/WPN/Marketing%20Materials/WPN/casual_play_cs.pdf?utm_source=chatgpt.com
+Grand Prix,	大奖赛
+Grand Prix Trial	大奖赛预选赛
+WPN Premium Qualifier	WPN顶级比赛资格赛	https://magic.wizards.com/zh-Hans/news/feature/what-happened-magic-showcase-2021-08-24?utm_source=chatgpt.com 此官方公告曾将WPN premium译为“顶级”，但是现在多译为“优质”。这里暂时沿用旧MTR文档的译法。
+WPN Premium Tournament	WPN顶级比赛	https://magic.wizards.com/zh-Hans/news/feature/what-happened-magic-showcase-2021-08-24?utm_source=chatgpt.com 此官方公告曾将WPN premium译为“顶级”，但是现在多译为“优质”。这里暂时沿用旧MTR文档的译法。
+Trial	预选赛	虽然本文档并未明确列为术语，但是在威世智官方比赛公告的译法几乎固定。
+Constructed tournament	构组赛
+Limited tournament	限制赛
+Construct	构组	对于construct及其各种词性的变体，官方用过构组/构筑两种译法。构筑主要出现在19、20、22年的官方公告，当前构组是官方公告的固定译法，且MTR旧译文中大多数地方的译法也是构组。但是旧译文仍然有若干地方译为“构筑”。你选择哪一种译法都有你自己的道理，但是同一个技术文档中混用两种译法肯定比单纯使用任何一种译法都灾难。
+Limited format	限制赛制	注意MTR旧译文倾向于把Limited format events等翻译成“限制赛比赛”，此情况下可考虑沿用旧习惯不强行译出“赛制”
+Constructed format	构组赛制	注意MTR旧译文倾向于把Constructed format events等翻译成“限制赛比赛”，此情况下可考虑沿用旧习惯不强行译出“赛制”
+Standard	标准赛
+Pioneer	先驱赛
+Modern	近代赛
+Legacy	薪传赛
+Old School	复古赛	几乎没有官方译法，建议在MTR中保留旧译法“复古赛”
+draft	轮抽赛
+sealed deck	现开赛
+mini master	单包赛
+Commander	指挥官
+Publishing Tournament Information	比赛信息的发布	第一章小标题
+Star City Game	星城公开赛
+Decklist	套牌登记表
+Judge	裁判
+Tournament Role	比赛角色	第一章小标题
+Head Judge	主审
+Floor Judge	巡场裁判
+Scorekeeper	记分员
+Player	牌手
+Spectator	旁观者
+tournament official	比赛工作人员
+Premier Tournament Invitation Policy	《重要比赛邀请方针》
+match slip	成绩条
+Swiss round	瑞士轮
+Swiss pairing algorithm	瑞士式交叉赛程配对算法
+SCG Tour	星城巡回赛
+Registration	登记	第一章小标题
+Prerelease	售前赛
+Launch Party	发售赛
+Game Day	欢乐日
+Store Championship	店家冠军赛
+Participation Eligibility	参赛资格	第一章小标题
+round	轮	视语境可以译为“轮次”等。
+game	游戏/盘
+match	局/对局
+Tournament Mechanics	比赛的各项机制	第二章大标题
+Match Structure	对局结构	第二、九章小标题
+Play/Draw Rule	先后手规则	第二章小标题
+Playoff	决胜局
+Pregame Procedures	游戏前程序	第二章小标题
+End-of-Match Procedure	对局结束程序	第二章小标题
+ruling	裁定	比较通用的译法，采取其他译法时需谨慎
+Time Extensions	时间延长	第二章小标题
+Deck Registration	套牌登记
+Deck Check	套牌检查	第二章小标题
+Appeals to the Head Judge	向主审申诉	第二章小标题
+bye	轮空
+Video Coverage	视频转播	第二章小标题
+Electronic Device	电子设备	第二章小标题
+Taking Notes	作笔记	第二章小标题
+Dropping from a Tournament	退出比赛	第二章小标题
+Tournament Rules	比赛规则	第三章大标题
+Tiebreakers	同分处理	第三章小标题
+Format Categories	赛制种类	第三章小标题
+Authorized Cards	认可牌张	第三章小标题
+Proxy Card	代牌
+Substitute Card	辅助牌
+Card Identification and Interpretation	牌张确认与牌张解释	第三章小标题
+New Releases	新发售	第三章小标题
+Game Marker	游戏标记物
+Die Rolling	掷骰	第三章小标题
+Card Shuffling	洗牌	第三章小标题
+Sleeves	牌套
+Marked Card	有记号的牌
+Hidden Information	非公开信息
+Tapped/Flipped Cards	已横置／已倒转的牌	第三章小标题
+Graveyard Order	坟墓场的顺序	第三章小标题
+Sideboard	备牌
+public zone	公开区域
+Prerelease Weekend	售前赛周末
+Communication	沟通交流	第四章大标题。注意，这也是一个通用词汇，没必要各处都机械化地译为跟标题一模一样
+Player Communication	牌手之间的沟通	第四章小标题
+Status information	状态信息
+Free information	自由信息
+Derived information	推断信息
+Private information	私人信息
+Tournament Shortcuts	比赛中的行事简化	第四章小标题
+Out-of-Order Sequencing	次序不当的行事顺序	第四章小标题
+Loops	重复动作	第四章小标题
+Triggered Abilities	触发式异能	第四章小标题，也是游戏术语
+Game Layout	游戏用具摆放	第四章小标题
+Reversing Decisions	反悔	第四章小标题
+Day/Night	白昼/黑夜	第四章小标题
+backup	倒回
+step	步骤
+phase	阶段
+Daybound	昼形
+Nightbound	夜形
+Tournament Violations	比赛违规	第五章大标题
+Cheating	作弊	第五章小标题
+Bribery	贿赂	第五章小标题
+Wagering	赌博	第五章小标题
+Slow Play	游戏进行过慢	第五章小标题
+Outside Assistance	场外援助	第五章小标题
+Constructed Tournament Rules	构组赛制规则	第六章大标题
+Deck Construction Restrictions	套牌构组限制	第六、七章小标题
+Card Legality	牌张可用情况	第六章小标题
+Standard Format Deck Construction	标准赛制套牌构组	第六章小标题
+Modern Format Deck Construction	近代赛制套牌构组	第六章小标题
+Vintage Format Deck Construction	特选赛制套牌构组	第六章小标题
+Legacy Format Deck Construction	薪传赛制套牌构组	第六章小标题
+Limited Tournament Rules	限制赛制规则	第七章大标题
+Card Use in Limited Tournaments	限制赛中可用的牌	第七章小标题
+Continuous Construction	连续构组	第七章小标题
+Abnormal Product	异常产品	第七章小标题
+Sealed Deck Pool Registration	登记现开套牌牌池	第七章小标题
+Draft Pod Assembly	轮抽组的分配	第七章小标题
+Booster Draft Procedures	补充包轮抽程序	第七章小标题
+Chaos draft	混沌轮抽
+Team Tournament Rules	团队赛规则	第八章大标题
+Team Names	团队名称	第八章小标题
+Team Composition and Identification	团队组成与识别	第八章小标题
+Team Communication Rules	团队交流规则	第八章小标题
+Unified Deck Construction Rules	套牌联合构组规则	第八章小标题
+Team Rochester Draft Tournaments	团队罗彻斯特轮抽赛	第八章小标题
+Team Sealed Deck Tournaments	团队现开赛	第八章小标题
+Two-Headed Giant Tournament Rules	双头巨人赛规则	第九章大标题
+Communication Rules	交流规则	第九章小标题
+Play-Draw Rule	先手规则	第九章小标题
+Pregame Procedure	游戏前程序	第九章小标题
+Two-Headed Giant Constructed Rules	双头巨人构组赛规则	第九章小标题
+Two-Headed Giant Limited Rules	双头巨人限制赛规则	第九章小标题
+Two-Headed Giant Booster Draft Tournaments	双头巨人补充包轮抽赛	第九章小标题
+primary player	主要牌手
+secondary player	次要牌手
+Sanctioning Rules	认证规则	第十章大标题
+Participation Minimums	参赛人数下限	第十章小标题
+Number of Rounds	对局轮数	第十章小标题
+Invitation-Only Tournaments	只对受邀牌手开放的比赛	第十章小标题
+Pairing Algorithm	配对算法	第十章小标题
+Changes From Previous Versions	与过往版本之间的更动	附录A大标题
+match point	局分
+game point	盘分
+Play Booster	常规补充包

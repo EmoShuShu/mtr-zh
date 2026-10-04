@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTR OmegaT 工作流整合与目录清理计划</title>
+  <style>
+    :root { color-scheme: light; --ink:#17202a; --muted:#5d6d7e; --line:#d5dce3; --panel:#f6f8fa; --accent:#315f8c; --good:#246b45; --warn:#8a5a00; --danger:#9c2f2f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font:15px/1.62 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif; color:var(--ink); background:#fff; }
+    main { max-width:1120px; margin:auto; padding:40px 28px 72px; }
+    h1 { font-size:2rem; margin:0 0 8px; }
+    h2 { margin-top:42px; padding-bottom:8px; border-bottom:2px solid var(--line); }
+    h3 { margin-top:28px; }
+    p, li { max-width:92ch; }
+    .lead { font-size:1.08rem; color:#34495e; max-width:96ch; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:20px 0; }
+    .card { border:1px solid var(--line); border-radius:10px; padding:16px; background:var(--panel); }
+    .card strong { display:block; margin-bottom:5px; }
+    .good { color:var(--good); } .warn { color:var(--warn); } .danger { color:var(--danger); }
+    table { border-collapse:collapse; width:100%; margin:14px 0 24px; font-size:.94rem; }
+    th, td { border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top; }
+    th { background:#eef2f5; }
+    code { background:#eef2f5; border-radius:4px; padding:.08em .32em; }
+    pre { background:#18222d; color:#eef5fb; padding:18px; border-radius:10px; overflow:auto; line-height:1.5; }
+    .flow { display:flex; flex-wrap:wrap; gap:9px; align-items:center; margin:18px 0; }
+    .step { border:1px solid #aebdca; border-radius:8px; padding:10px 13px; background:#f8fbfd; }
+    .arrow { color:var(--muted); font-weight:700; }
+    .tag { display:inline-block; padding:2px 7px; border-radius:999px; background:#e8eef4; font-size:.82rem; margin-right:5px; }
+    .decision { border-left:5px solid var(--accent); padding:12px 16px; background:#f1f6fa; }
+    .warning { border-left:5px solid #d89b22; padding:12px 16px; background:#fff8e7; }
+    a { color:var(--accent); }
+    @media print { main { max-width:none; padding:12mm; } .card, pre, table { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>MTR OmegaT 工作流整合与目录清理计划</h1>
+  <p class="lead"><strong>北极星：</strong>仓库中只保留一套正式的中文源文件、一套当前 OmegaT 工作区、一个可双击的入口和必要的审校记录；开始审校与完成回写使用同一个入口，人工翻译仍在 OmegaT 内完成，术语告警继续只作参考而不阻塞发布。</p>
+
+  <div class="grid">
+    <div class="card"><strong class="good">复用现有能力</strong>当前导出、回写、验证、构建、批注归档和审校进度逻辑已完整，不重写解析器。</div>
+    <div class="card"><strong class="warn">只解决真实缺口</strong>补上“准备项目”和“查看进度”的入口，并停止永久累积候选目录。</div>
+    <div class="card"><strong class="danger">本计划不执行删除</strong>先由用户批准精确路径；执行清理前必须关闭 OmegaT。</div>
+  </div>
+
+  <h2>1. 范围、非目标与边界</h2>
+  <h3>范围</h3>
+  <ul>
+    <li>识别并删除 OmegaT 试验期间产生、且不再被正式流程引用的文件。</li>
+    <li>把“生成 OmegaT 项目 → 人工审校 → 预览/确认 → 写回 YAML → 测试 → 生成 dist → 登记进度”整理为一个双击入口。</li>
+    <li>保留现有稳定 ID、PO 格式、术语库、批注归档和审校台账。</li>
+  </ul>
+  <h3>非目标</h3>
+  <ul>
+    <li>不自动操作 OmegaT 编辑界面，也不替代人工审校。</li>
+    <li>不把 LLM 语义审计嵌入确定性发布流程。</li>
+    <li>不修改 YAML/输出 JSON 的数据结构，不引入数据库、GUI 框架或新依赖。</li>
+    <li>不把术语审计改成阻塞条件。</li>
+    <li>不处理官方英文版本更新；该职责继续由现有 official-update/reference 流程承担。</li>
+  </ul>
+  <h3>假设与权限边界</h3>
+  <ul>
+    <li>正式中文源以 <code>src/mtr/&lt;current-version&gt;/*.yaml</code> 为准，<code>dist</code> 只能由构建器生成。</li>
+    <li>OmegaT 当前项目为 <code>outputs/omegat-mtr-full</code>，其中 <code>omegat/project_save.tmx</code> 是尚未写回内容与批注的重要工作数据。</li>
+    <li>清理是不可逆删除；只有用户批准清单且 OmegaT 已关闭后才执行。</li>
+  </ul>
+
+  <h2>2. 已审阅的依据</h2>
+  <ul>
+    <li><a href="../../README.zh-CN.md">README.zh-CN.md</a>：当前日常、首次导出、手动回写和状态流程。</li>
+    <li><a href="../../审校助手.cmd">审校助手.cmd</a>：当前唯一双击入口，但只执行完成阶段。</li>
+    <li><a href="../../mtr_pipeline/review_workflow.py">mtr_pipeline/review_workflow.py</a>：预览、候选验证、确认、写回、测试、术语审计、dist 构建和审校登记。</li>
+    <li><a href="../../mtr_pipeline/omegat.py">mtr_pipeline/omegat.py</a>：从正式 YAML 生成 17 个 PO 和 OmegaT 项目。</li>
+    <li><a href="../../mtr_pipeline/omegat_import.py">mtr_pipeline/omegat_import.py</a>：稳定 ID 校验、最小差异写回与隔离候选。</li>
+    <li><a href="../../mtr_pipeline/review_status.py">mtr_pipeline/review_status.py</a>：批注解析、审校台账和 stale 检测。</li>
+    <li><a href="../../mtr_pipeline/terminology.py">mtr_pipeline/terminology.py</a>：非阻塞术语审计。</li>
+    <li><a href="../../tests/test_review_workflow.py">tests/test_review_workflow.py</a> 及相关 OmegaT 测试：当前安全门和回归覆盖。</li>
+    <li>实际文件盘点、Git 跟踪状态、忽略目录和目录体积；未使用外部网络资料。</li>
+  </ul>
+
+  <h2>3. 当前状态与差距</h2>
+  <div class="flow" aria-label="当前流程">
+    <span class="step">手工运行导出命令</span><span class="arrow">→</span>
+    <span class="step">OmegaT 人工审校</span><span class="arrow">→</span>
+    <span class="step">创建已译文档</span><span class="arrow">→</span>
+    <span class="step">双击审校助手</span><span class="arrow">→</span>
+    <span class="step">YAML + 测试 + dist + 台账</span>
+  </div>
+  <p>完成阶段已基本达到目标。真实差距只有三个：首次准备仍需复制长命令；进度查看仍需复制命令；每次完成阶段都会在 <code>outputs/omegat-candidates</code> 永久留下完整 YAML 副本。</p>
+
+  <h3>文件分类</h3>
+  <table>
+    <thead><tr><th>类别</th><th>路径</th><th>结论</th></tr></thead>
+    <tbody>
+      <tr><td>正式源与发布物</td><td><code>src/</code>、<code>dist/</code>、<code>schema/</code>、<code>assets/</code></td><td><strong>保留</strong></td></tr>
+      <tr><td>工作流实现</td><td><code>mtr_pipeline/</code>、<code>scripts/</code>、<code>tests/</code>、<code>pyproject.toml</code>、<code>审校助手.cmd</code></td><td><strong>保留</strong>；这些是正式实现，不是实验残留</td></tr>
+      <tr><td>语言资产</td><td><code>terminology/</code>、<code>review/mtr-2026-02-27.json</code></td><td><strong>保留并纳入版本管理</strong></td></tr>
+      <tr><td>当前工作区</td><td><code>outputs/omegat-mtr-full/</code></td><td><strong>保留</strong>；这是当前 OmegaT 项目</td></tr>
+      <tr><td>历史与参考</td><td><code>snapshots/</code>、<code>reference-pipeline/</code>、<code>.github/</code></td><td><strong>保留</strong>；均已被 Git 跟踪且职责明确</td></tr>
+      <tr><td>本地运行环境</td><td><code>.venv/</code></td><td><strong>保留</strong>；双击工作流依赖它</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4. 一次性清理提案</h2>
+  <p class="warning"><strong>执行前置条件：</strong>关闭 OmegaT；确认 <code>project_save.tmx</code>、target PO、正式 YAML 与审校台账均可通过现有验证。删除只限下表列出的明确路径，不递归删除整个 <code>outputs</code>。</p>
+  <table>
+    <thead><tr><th>处理</th><th>精确路径/模式</th><th>理由</th><th>约占空间</th></tr></thead>
+    <tbody>
+      <tr><td class="danger">删除</td><td><code>outputs/omegat-pilot*</code>（6 个目录）</td><td>早期 XLIFF/PO 试验项目；正式流程已使用 full PO 项目</td><td>约 568 KB</td></tr>
+      <tr><td class="danger">删除</td><td><code>outputs/probe-po</code>、<code>outputs/probe-po2</code></td><td>过滤器探针；无代码引用</td><td>约 77 KB</td></tr>
+      <tr><td class="danger">删除</td><td><code>outputs/omegat-roundtrip-candidate-20260926</code></td><td>旧往返测试候选；已被正式 YAML 和测试取代</td><td>约 2.69 MB</td></tr>
+      <tr><td class="danger">删除</td><td><code>outputs/omegat-candidates/</code></td><td>4 次运行留下的隔离副本；只在当次确认前有用</td><td>约 2.36 MB</td></tr>
+      <tr><td class="danger">删除</td><td><code>review/llm-audit-2026-10-04.md</code>、<code>review/llm-reaudit-2026-10-04.md</code></td><td>一次性对话审计报告；正式批注已在 OmegaT/审校台账中</td><td>约 9 KB</td></tr>
+      <tr><td class="danger">删除</td><td><code>.pytest_cache/</code>、所有 <code>__pycache__/</code>、<code>mtr_zh_pipeline.egg-info/</code></td><td>可自动重建的 Python 缓存/安装元数据</td><td>少量</td></tr>
+      <tr><td class="danger">删除</td><td><code>outputs/omegat-mtr-full/console.log</code>、<code>translate.log</code>、<code>stats.json</code></td><td>早期命令行试验日志，日期停留在 9 月 26 日</td><td>约 52 KB</td></tr>
+      <tr><td class="danger">删除</td><td><code>outputs/omegat-mtr-full/omegat.project.*.bak</code> 与 <code>omegat/project_save.tmx.YYYYMMDDHHMM.bak</code></td><td>旧时间点备份；保留当前 <code>project_save.tmx.bak</code> 作为最近恢复点</td><td>约 4 MB</td></tr>
+      <tr><td>保留</td><td><code>outputs/omegat-mtr-full/*-level1.tmx</code>、<code>*-level2.tmx</code>、<code>*-omegat.tmx</code></td><td>OmegaT 正常“创建已译文档”生成物，不与工具对抗</td><td>—</td></tr>
+      <tr><td>保留</td><td><code>.idea/</code></td><td>本地 IDE 配置，不默认为实验残留；如用户明确不用该 IDE 再另行删除</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h2>5. 推荐的统一工作流</h2>
+  <div class="decision"><strong>推荐：</strong>保留 <code>审校助手.cmd</code> 这个唯一入口，把它扩展为三个选项；不新增第二个启动器、不新增配置文件、不引入依赖。</div>
+  <pre>MTR 中文翻译工作流
+
+1. 准备或继续 OmegaT 审校
+2. 完成审校并生成最终文档
+3. 查看审校进度
+q. 退出</pre>
+
+  <h3>选项 1：准备或继续 OmegaT 审校</h3>
+  <ol>
+    <li>从 <code>src/mtr/current-version.txt</code> 自动确定当前版本。</li>
+    <li>验证 manifest、schema 和术语库。</li>
+    <li>若 <code>outputs/omegat-mtr-full/omegat.project</code> 不存在，调用现有 <code>export_full()</code> 生成 17 个 PO、1453 个单元及 OmegaT 配置。</li>
+    <li>若项目已存在，只验证结构并显示项目路径；绝不覆盖 <code>project_save.tmx</code>、target 或批注。</li>
+    <li>提示用户在 OmegaT 中打开/继续该项目。为避免安装路径和窗口控制问题，本阶段不自动驱动 OmegaT。</li>
+  </ol>
+
+  <h3>人工阶段：OmegaT</h3>
+  <ol>
+    <li>翻译、维护术语表、撰写句段批注。</li>
+    <li>完成本批审校后，执行“项目 → 创建已译文档”。这是唯一保留的人工衔接动作。</li>
+  </ol>
+
+  <h3>选项 2：完成审校并生成最终文档</h3>
+  <div class="flow" aria-label="目标完成流程">
+    <span class="step">验证 source/target/TMX</span><span class="arrow">→</span>
+    <span class="step">自动建议改动文件</span><span class="arrow">→</span>
+    <span class="step">差异报告</span><span class="arrow">→</span>
+    <span class="step">临时候选验证</span><span class="arrow">→</span>
+    <span class="step">一次确认</span><span class="arrow">→</span>
+    <span class="step">最小写回 YAML</span><span class="arrow">→</span>
+    <span class="step">测试 + 非阻塞术语审计</span><span class="arrow">→</span>
+    <span class="step">生成 dist + 登记进度</span>
+  </div>
+  <p>主体沿用当前 <code>run_workflow()</code>。唯一结构性调整是把持久的 <code>outputs/omegat-candidates/&lt;timestamp&gt;</code> 改成 Python 标准库 <code>TemporaryDirectory</code>；候选仅在预览与确认期间存在，完成、取消或报错后自动清理。</p>
+
+  <h3>选项 3：查看审校进度</h3>
+  <ol>
+    <li>调用现有 <code>calculate_status()</code> 和 <code>write_status_reports()</code>。</li>
+    <li>在窗口中显示总数、已审未改、已审已改、失效、未审数量。</li>
+    <li>覆盖写入 <code>outputs/review-status.json</code> 与 <code>outputs/review-status.md</code>；不生成新目录。</li>
+  </ol>
+
+  <h2>6. 备选方案及取舍</h2>
+  <table>
+    <thead><tr><th>方案</th><th>优点</th><th>缺点</th><th>结论</th></tr></thead>
+    <tbody>
+      <tr><td>保留现状，只改文档</td><td>零代码改动</td><td>首次准备与状态查看仍需长命令；候选继续累积</td><td>不推荐</td></tr>
+      <tr><td><strong>扩展现有审校助手为三选项菜单</strong></td><td>一个入口，最大复用，改动少</td><td>翻译前后需分别运行同一个入口</td><td><strong>推荐</strong></td></tr>
+      <tr><td>自动控制 OmegaT、自动点击创建已译文档</td><td>表面上更像“一键”</td><td>依赖安装路径、窗口状态和版本；容易覆盖未保存内容</td><td>不采用</td></tr>
+      <tr><td>直接解析 project_save.tmx，跳过 target PO</td><td>少一次 OmegaT 操作</td><td>重复原文、替代译文和文件上下文映射更脆弱，失去稳定 msgctxt 校验</td><td>不采用</td></tr>
+      <tr><td>新建 GUI 应用</td><td>界面友好</td><td>个人项目不值得承担框架与维护成本</td><td>不采用</td></tr>
+    </tbody>
+  </table>
+
+  <h2>7. 实施阶段与文件影响</h2>
+  <table>
+    <thead><tr><th>阶段</th><th>顺序</th><th>工作</th><th>文件</th></tr></thead>
+    <tbody>
+      <tr><td>0. 一次性清理</td><td>用户批准后；必须最先且 OmegaT 已关闭</td><td>删除第 4 节精确路径，复核保留项</td><td>仅删除清单内本地产物</td></tr>
+      <tr><td>1. 消除候选累积</td><td>顺序</td><td>以临时目录替代 <code>candidate_root</code> 和 <code>unique_candidate_dir()</code></td><td><code>mtr_pipeline/review_workflow.py</code>、<code>tests/test_review_workflow.py</code></td></tr>
+      <tr><td>2. 统一入口</td><td>顺序</td><td>增加交互菜单与 prepare/status 路由，复用 <code>export_full()</code> 和状态函数</td><td><code>mtr_pipeline/review_workflow.py</code>、<code>审校助手.cmd</code>（只需文案时才改）</td></tr>
+      <tr><td>3. 文档与测试</td><td>可与菜单测试并行编写，最终统一验证</td><td>把长命令降为排错附录，补充首次/日常说明</td><td><code>README.zh-CN.md</code>、<code>tests/test_review_workflow.py</code></td></tr>
+    </tbody>
+  </table>
+  <p><strong>不会新增模块。</strong>现有 <code>mtr_pipeline/omegat.py</code>、<code>omegat_import.py</code>、<code>review_status.py</code>、<code>terminology.py</code> 继续作为底层实现。</p>
+
+  <h2>8. 数据、环境与兼容性影响</h2>
+  <ul>
+    <li><strong>数据模型：</strong>YAML schema、PO 格式、稳定 ID、review ledger schema、词汇表格式均不改变。</li>
+    <li><strong>环境：</strong>继续使用仓库内 <code>.venv</code> 和 Python 3.12；不增加包。</li>
+    <li><strong>部署：</strong>无服务、无密钥、无网络部署；GitHub Actions 不需要改变。</li>
+    <li><strong>兼容性：</strong>底层脚本和项目入口点继续保留，README 将其定位为排错接口。</li>
+    <li><strong>迁移：</strong>现有 <code>outputs/omegat-mtr-full</code> 原地沿用，绝不重新导出覆盖。</li>
+  </ul>
+
+  <h2>9. QA / 验证矩阵</h2>
+  <table>
+    <thead><tr><th>场景</th><th>期望结果</th><th>证据</th></tr></thead>
+    <tbody>
+      <tr><td>没有 OmegaT 项目</td><td>选项 1 生成 17 个 PO、1453 个稳定单元和正确词汇表路径</td><td>自动测试 + 文件计数</td></tr>
+      <tr><td>已有 OmegaT 项目及 TMX</td><td>选项 1 不覆盖 source、target、TMX 或批注</td><td>前后哈希一致</td></tr>
+      <tr><td>未创建已译文档</td><td>选项 2 明确提示 OmegaT 操作，正式文件不变</td><td>失败路径测试</td></tr>
+      <tr><td>有修改的完整文件</td><td>默认建议正确文件；确认后仅修改对应 zh 标量</td><td>现有工作流测试扩展</td></tr>
+      <tr><td>已审但未修改</td><td>不写 YAML，但正确记录 reviewed-unchanged</td><td>review ledger 断言</td></tr>
+      <tr><td>未选择文件也有修改</td><td>阻止混入本批</td><td>现有安全门测试</td></tr>
+      <tr><td>预览后 PO/TMX/YAML 改变</td><td>停止，不应用旧预览</td><td>现有 stale 测试</td></tr>
+      <tr><td>术语表无效或有告警</td><td>生成参考报告，但仍完成 YAML、dist 和台账</td><td>现有非阻塞测试</td></tr>
+      <tr><td>候选生命周期</td><td>完成、取消、异常后均不残留候选目录</td><td>临时目录清理测试</td></tr>
+      <tr><td>发布输出</td><td><code>dist/MTR.md</code>、<code>dist/rules.json</code> 由正式 YAML 生成且通过 output schema</td><td>全套 pytest + 输出验证</td></tr>
+      <tr><td>进度查看</td><td>总数与台账一致，不修改正式数据</td><td>状态报告测试</td></tr>
+    </tbody>
+  </table>
+
+  <h2>10. 验收标准</h2>
+  <ol>
+    <li>用户日常只需双击 <code>审校助手.cmd</code>，不需要输入路径或命令行参数。</li>
+    <li>同一入口能够安全准备项目、完成回写/构建、查看进度。</li>
+    <li>已有 OmegaT 工作绝不会被“准备项目”覆盖。</li>
+    <li>完成阶段仍只有一次应用确认；术语告警不阻塞。</li>
+    <li>成功后正式 YAML、<code>dist/MTR.md</code>、<code>dist/rules.json</code> 和审校台账相互一致。</li>
+    <li>候选验证目录不再累积；连续运行后 <code>outputs</code> 只保留当前项目和最新报告。</li>
+    <li>全部现有及新增测试通过。</li>
+  </ol>
+
+  <h2>11. 风险、失败模式与缓解</h2>
+  <table>
+    <thead><tr><th>风险</th><th>缓解</th></tr></thead>
+    <tbody>
+      <tr><td>准备阶段覆盖已有 TMX/批注</td><td>只在完整项目不存在时导出；目录存在但结构异常则停止并报告，不自动修复。</td></tr>
+      <tr><td>OmegaT 开着时清理或外部修改项目</td><td>清理必须在进程关闭后执行；正式工作流不直接改 project_save.tmx。</td></tr>
+      <tr><td>测试失败时 YAML 已写入但 dist/台账未更新</td><td>明确报告中间状态并允许修复后重跑；不做自动回滚，以免覆盖用户未提交的其他改动。Git diff 是恢复依据。</td></tr>
+      <tr><td>临时候选在崩溃后残留</td><td>使用标准库 TemporaryDirectory；极端进程终止留下的系统临时目录不位于仓库。</td></tr>
+      <tr><td>清理误删当前工作</td><td>只使用固定字面路径，执行前逐项验证绝对路径位于仓库且不包含 active project 核心文件。</td></tr>
+    </tbody>
+  </table>
+
+  <h2>12. 回滚与恢复</h2>
+  <ul>
+    <li>工作流代码和文档通过 Git 回滚。</li>
+    <li>正式翻译通过 Git diff/历史恢复；工具不执行 <code>git reset</code>。</li>
+    <li>当前 OmegaT 项目保留 <code>omegat/project_save.tmx.bak</code> 作为最近恢复点。</li>
+    <li>一次性删除的 pilot、probe 和 candidate 均可由现有导出器/验证器重建；不包含唯一翻译数据。</li>
+  </ul>
+
+  <h2>13. 待用户决定</h2>
+  <ol>
+    <li><strong>批准或修改第 4 节删除清单。</strong>推荐全部批准，但保留 <code>.idea</code>、<code>.venv</code> 和当前 <code>project_save.tmx.bak</code>。</li>
+    <li><strong>是否接受继续使用“审校助手.cmd”作为唯一入口。</strong>推荐保留名称，避免再增加一个脚本；菜单标题可显示“MTR 中文翻译工作流”。</li>
+    <li><strong>是否接受唯一保留的人工衔接动作：</strong>在 OmegaT 中点击“创建已译文档”。推荐保留，以稳定 msgctxt 映射为先，不自动控制 GUI。</li>
+  </ol>
+
+  <h2>14. 实施交接摘要</h2>
+  <p>获批后，按“关闭 OmegaT → 精确清理 → 临时候选改造 → 三选项入口 → 文档与测试 → 全量验证”的顺序实施。预计核心代码只改 <code>mtr_pipeline/review_workflow.py</code> 与对应测试，不创建新框架。计划已达到可直接实施状态，唯一等待的是第 13 节的三个决定。</p>
+</main>
+</body>
+</html>
