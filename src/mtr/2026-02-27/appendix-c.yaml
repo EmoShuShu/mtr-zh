@@ -2,7 +2,7 @@ chapter:
   id: mtr-appendix-c
   chapter: Appendix C
   en: Tiebreaker Explanation
-  zh: 平分处理释疑
+  zh: "同分处理释疑"
   groups:
   - id: mtr-appendix-c-g001
     type: markdown
@@ -70,7 +70,7 @@ chapter:
     - id: mtr-appendix-c-b010
       en: |-
         Game points are not used in team tournaments; only the overall result of the match is used for tiebreakers.
-      zh: '团队赛中不使用盘分。仅使用对局总成绩作为决胜方式。'
+      zh: "团队赛中不使用盘分。同分处理仅采用整场对局的结果。"
   - id: mtr-appendix-c-g011
     type: markdown
     blocks:
@@ -84,7 +84,7 @@ chapter:
       en: |-
         A player’s match-win percentage is that player’s accumulated match points divided by the total match points possible in those rounds (generally, 3 times the number of rounds played). If this number is lower than 0.33, use 0.33 instead. The minimum match-win percentage of 0.33 limits the effect low performances have when calculating and comparing opponents’ match-win percentage.
       zh: |-
-        牌手的局胜率计算公式如下：用牌手的总对局积分除以在该些对局中所能够获得的总局分（通常为3乘以所进行过的对局数），取所得结果与0.33之间较大者。规定0.33此最低局胜率值有助于降低表现欠佳的牌手对于其对手局胜率计算及比较方面的影响。
+        牌手的局胜率计算公式如下：用牌手的总局分除以在该些轮次中所能够获得的总局分（通常为3乘以所进行过的轮数），取所得结果与0.33之间较大者。规定0.33此最低局胜率值有助于降低表现欠佳的牌手对于其对手局胜率计算及比较方面的影响。
   - id: mtr-appendix-c-g013
     type: paragraph
     blocks:
@@ -97,7 +97,7 @@ chapter:
     - id: mtr-appendix-c-b014
       en: |-
         These three players competed in an 8-round tournament, although only the first player completed all rounds.
-      zh: 在一场共有八局的比赛当中，三位牌手的成绩如下表所示，只有第一位牌手参加了所有局次的比赛：
+      zh: "在一场共有八轮的比赛当中，三位牌手的成绩如下表所示，只有第一位牌手参加了所有轮次的比赛："
   - id: mtr-appendix-c-g015
     type: table
     blocks:
@@ -108,7 +108,12 @@ chapter:
         | 5-2-1 | 16 | 8 | 16/(8*3) = 0.667 |
         | 1-3-0, then<br>withdraws | 3 | 4 | 3/(4*3) = 0.25, so<br>0.33 is used. |
         | 3-2-0, including a<br>first-round bye, then<br>withdraws | 9 | 5 | 9/(5*3) = 0.60 |
-      zh: "|比赛成绩|局分|进行过的局数|局胜率|\n|-----|-----|-----|-----|\n|5-2-1|16|8|16/(8*3) = 0.667|\n|1-3-0，后退出比赛|3|4\t|3/(4*3) = 0.25，因此使用0.33|\n|3-2-0，其中包括首局的轮空，之后退出比赛|9|5|9/(5*3) = 0.60|"
+      zh: |-
+        |比赛成绩|局分|进行过的轮数|局胜率|
+        |-----|-----|-----|-----|
+        |5-2-1|16|8|16/(8*3) = 0.667|
+        |1-3-0，后退出比赛|3|4	|3/(4*3) = 0.25，因此使用0.33|
+        |3-2-0，其中包括第一轮轮空，之后退出比赛|9|5|9/(5*3) = 0.60|
   - id: mtr-appendix-c-g016
     type: markdown
     blocks:
@@ -128,7 +133,7 @@ chapter:
     blocks:
     - id: mtr-appendix-c-b018
       en: 'These two players competed in a four-round tournament:'
-      zh: 在一场共有四局的比赛中，两位牌手游戏成绩如下表所示：
+      zh: "在一场共有四轮的比赛中，两位牌手游戏成绩如下表所示："
   - id: mtr-appendix-c-g019
     type: table
     blocks:
@@ -139,10 +144,10 @@ chapter:
         | • Round 1: 2 wins (6 game points)<br>• Round 2: 2 wins and 1 loss (6 game points)<br>• Round 3: 1 win and 2 losses (3 game points)<br>• Round 4: 2 wins (6 game points) | 21 | 10 | 21/(3*10) = 0.70 |
         | • Round 1: 1 win and 2 losses (3 game points)<br>• Round 2: 1 win and 2 losses (3 game points)<br>• Round 3: 2 losses (0 game points)<br>• Round 4: 1 win and 2 losses (3 game points) | 9 | 11 | 9/(3*11) = 0.27, so<br>0.33 is used. |
       zh: |-
-        |每局游戏成绩|盘分|进行过的盘数|盘胜率|
+        |各场对局的盘成绩|盘分|进行过的盘数|盘胜率|
         |-----|-----|-----|-----|
-        |第一局：2胜（6个盘分）<br>第二局：2胜1负（6个盘分）<br>第三局：1胜2负（3个盘分）<br>第四局：2胜（6个盘分）|21|10|21/(3*10) = 0.70|
-        |第一局：1胜2负（3个盘分）<br> 第二局：1胜2负（3个盘分）<br> 第三局：2负（0个盘分）<br> 第四局：1胜2负（3个盘分）|9|11|9/(3*11) = 0.27，因此使用0.33|
+        |第一轮：2胜（6个盘分）<br>第二轮：2胜1负（6个盘分）<br>第三轮：1胜2负（3个盘分）<br>第四轮：2胜（6个盘分）|21|10|21/(3*10) = 0.70|
+        |第一轮：1胜2负（3个盘分）<br> 第二轮：1胜2负（3个盘分）<br> 第三轮：2负（0个盘分）<br> 第四轮：1胜2负（3个盘分）|9|11|9/(3*11) = 0.27，因此使用0.33|
   - id: mtr-appendix-c-g020
     type: markdown
     blocks:
@@ -198,7 +203,7 @@ chapter:
     - id: mtr-appendix-c-b027
       en: |-
         With the individual match-win percentages added together, this equation becomes:
-      zh: 将个人的局胜率相加，可得：
+      zh: "将各位对手的局胜率相加，可得："
   - id: mtr-appendix-c-g028
     type: image
     blocks:
@@ -235,7 +240,7 @@ chapter:
     - id: mtr-appendix-c-b032
       en: |-
         With the individual match-win percentages added together, this equation becomes:
-      zh: 将个人的局胜率相加，该公式变为：
+      zh: "将各位对手的局胜率相加，该公式变为："
   - id: mtr-appendix-c-g033
     type: image
     blocks:
@@ -275,11 +280,11 @@ chapter:
     - id: mtr-appendix-c-b038
       en: |-
         When a player is assigned a bye for a round, they are considered to have won the match 2–0.
-      zh: 当一位牌手获得某一局的轮空时，视作该牌手以2-0赢得了该轮游戏。
+      zh: "当一位牌手获得某一轮的轮空时，视作该牌手以2-0赢得了该轮对局。"
   - id: mtr-appendix-c-g039
     type: paragraph
     blocks:
     - id: mtr-appendix-c-b039
       en: |-
         Thus, that player earns 3 match points and 6 game points. A player’s byes are ignored when computing their opponents’ match-win and opponents’ game-win percentages.
-      zh: 因此，该牌手获得3个对局积分和6个游戏积分。牌手获得轮空的局次不参与该牌手之对手局胜率及对手盘胜率的计算。
+      zh: "因此，该牌手获得3个局分和6个盘分。牌手获得轮空的轮次不参与该牌手之对手局胜率及对手盘胜率的计算。"

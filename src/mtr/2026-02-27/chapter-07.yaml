@@ -103,7 +103,7 @@ chapter:
       - id: mtr-7.2-b010
         en: |-
           Because it was designed specifically for multiplayer play, the use of Conspiracy booster packs in sanctioned, rated Limited-format tournaments (Sealed Deck and Booster Draft) is not permitted.
-        zh: 由于诡局此系列系专为多人游戏设计，因此不得在认证的竞技类限制赛制比赛（现开赛和补充包轮抽）中使用该产品之补充包。
+        zh: "由于诡局此系列系专为多人游戏设计，因此不得在认证限制赛制积分赛（现开赛和补充包轮抽）中使用该产品之补充包。"
     - id: mtr-7.2-g011
       type: paragraph
       blocks:
@@ -137,13 +137,13 @@ chapter:
 
             Players often prefer to use their own basic lands for a variety of reasons. While this is typically not an issue, be aware of foil basic lands that are marked (warped), or Alpha lands that cause particular markings on sleeves through the course of the day. While the lands themselves may be fine, the markings can become an issue.
           zh: |-
-            在一些非认证的比赛，比如混沌轮抽中，牌手可以不必使用相同的产品。但是，一旦比赛被认证，那么牌手就需按照规则，使用相同的产品。
+            虽然并非认证比赛，混沌轮抽是存在的。混沌轮抽中的产品当然是随机分配给牌手的，各牌手不需要收到相同的产品。但是，一旦比赛被认证，那么牌手就需按照规则，使用相同的产品。
 
             牌手在售前赛中可以使用产品中的纪念闪，这是因为纪念闪也是来自当前系列中的牌。另外，如果牌手开到了双面牌，那他也可以用开到的列表牌来代替。
 
-            牌手可以要求用相同的其他版本的牌来替代牌池中的牌，有时候牌手会在想要使用闪卡时这么做。尽管这种情况下不得制作代牌，牌手如果自己有的话，可以使用相同的非闪牌来替代。
+            牌手可以要求用相同的其他版本的牌来替代牌池中的牌，有时候牌手会要求为闪卡制作代牌。除非该牌开出时已有损坏，否则不应为其制作代牌。牌手如果自己有的话，可以使用相同的非闪牌来替代。
 
-            牌手可能会想要使用自己的基本地。虽然这是允许的，但是仍请注意：闪牌是会弯曲的，ALPHA版本的牌也会在牌套上留下特殊的印记。这些牌本身可能没有问题，但有时某些牌会成为“有记号的牌”。
+            牌手可能会想要使用自己的基本地。虽然这是允许的，但是请留意因弯曲而成为有记号的牌之闪基本地，以及会在一天的比赛过程中令牌套留下特殊痕迹的 Alpha 地牌。地牌本身可能没有问题，但牌套上的痕迹可能造成问题。
   - id: mtr-7.3
     chapter: '7.3'
     en: Continuous Construction
@@ -156,11 +156,11 @@ chapter:
         en: |-
           Players participating in Limited tournaments that do not use decklists may freely change the composition of their decks between matches by exchanging cards from their deck for cards in their sideboard without being required to return their deck to its original composition before their next match. The Head Judge or Tournament Organizer must inform players if this option is not being used prior to the start of deck construction. This option is not available at Competitive or Professional Rules Enforcement Level tournaments.
         zh: |-
-          参加无需提交套牌登记表的限制比赛之牌手可以在局与局之间，通过以套牌中的牌交换备牌中的牌之方式，自由地变更其套牌的组成，而不需要在其下一局比赛开始之前将其套牌组成恢复原样。如果主审或比赛主办人不想在比赛中使用此可选规则，则须在构组套牌之前将此决定告知所有牌手。此可选规则在执法严格度为竞争或专业级别的比赛中不可用。
+          参加无需提交套牌登记表的限制比赛之牌手可以在局与局之间，通过以套牌中的牌交换备牌中的牌之方式，自由地变更其套牌的组成，而不需要在其下一局对局开始之前将其套牌组成恢复原样。如果主审或比赛主办人不想在比赛中使用此可选规则，则须在构组套牌之前将此决定告知所有牌手。此可选规则在执法严格度为竞争或专业级别的比赛中不可用。
         extras:
         - en: |-
             The default for events that do not have a decklist is continuous construction. Remember that Competitive and Professional Rules Enforcement Level events should have decklists, and thus the original composition needs to be restored prior to the start of each match.
-          zh: 对于不使用牌表的比赛而言，默认选项是连续构组。在竞争级别以及专业级别的比赛中必须使用牌表，因此牌手必须在每局比赛开始前还原主牌。
+          zh: "对于不使用套牌登记表的比赛而言，默认选项是连续构组。在竞争级别以及专业级别的比赛中必须使用套牌登记表，因此牌手必须在每局比赛开始前还原主牌。"
   - id: mtr-7.4
     chapter: '7.4'
     en: Abnormal Product
@@ -188,7 +188,7 @@ chapter:
 
             牌手有义务在打开每一包产品时都检查产品的情况。如果在开完6包牌之后才发现多了或少了一张非普通牌会非常麻烦。
 
-            如果牌手少开出一张牌，主审（在主办方许可下）可以打开一包补充包随机挑选一张相同稀有度的牌加入该牌手的牌池。如果牌手多开出了一张牌，你可以考虑维持现状，或者替换整包产品，或者让牌手随机从牌池中移除一张多出的稀有度的牌。移除牌张时要尽可能减少对牌池的影响。
+            如果牌手少开出一张牌，主审（在主办方许可下）可以打开一包补充包随机挑选一张相同稀有度的牌加入该牌手的牌池。如果牌手多开出了一张牌，你可以考虑维持现状，或者替换整包产品，或者让牌手随机从牌池中移除一张多出的稀有度的牌至他的牌本。移除牌张时要尽可能减少对牌池的影响。
 
             值得注意的是，威世智偶尔会（不小心？）将未来或者从前系列中的某张牌放进当前系列的补充包里。这种情况也会算作异常产品。
   - id: mtr-7.5
@@ -214,7 +214,7 @@ chapter:
         - en: |-
             A quick and easy way to mark the boosters can be to run a marker down one of the sides. This is easy and scales well to large events like Grand Prix, if Grand Prix were still a thing, or even if large sealed Comp Rel events were still a thing. For smaller events Judges and TOs can use more personal touches like stickers to better uniquely identify the packs as belonging to the event.
           zh: |-
-            简单的做记号的方法是用记号笔在产品周边画上一圈。这能够增加大型比赛（例如大奖赛）上的工作效率，如果大奖赛仍然存在的话，或者大型竞争级别现开赛事依然存在的话。对于小型比赛而言，裁判和主办方可以考虑用贴纸等方法来完成此项工作。
+            简单的做记号的方法是用记号笔沿补充包的一侧划一道记号。这能够增加大型比赛（例如大奖赛）上的工作效率，如果大奖赛仍然存在的话，或者大型竞争级别现开赛事依然存在的话。对于小型比赛而言，裁判和主办方可以考虑用贴纸等方法来完成此项工作。
     - id: mtr-7.5-g003
       type: list
       blocks:
@@ -263,11 +263,11 @@ chapter:
 
             We have realistically asked players to sort the pools for easy verification for some time now. Now we are making it more formal by requiring it via this document! It may be worth noting that some players may have trouble sorting the pools in a timely manner. If so please allot any resources available to help those players and keep the flow of the tournament moving.
           zh: |-
-            为了防止加牌，在需要登记牌表的竞争级别比赛中交换填写牌表是很普遍的。有了其他牌手的监督，可以更好地避免牌手往牌池里加牌。通过随机安排座位，可以尽量避免由于姓名相似而经常坐在一起的牌手勾结作弊。
+            为了防止加牌，在需要登记牌表的竞争级别比赛中交换填写套牌登记表是很普遍的。有了其他牌手的监督，可以更好地避免牌手往牌池里加牌。通过随机安排座位，可以尽量避免由于姓名相似而经常坐在一起的牌手勾结作弊。
 
             过去的方法更加费力，随机化了牌手获得的牌池，虽然有效，但会带来一些其他问题。可以在[这里](http://magic.wizards.com/en/articles/archive/news/sealed-pool-procedure-update-starting-gp-sydney-and-gp-madison-2015-10-08)了解详细信息。
 
-            在实际操作中，我们有时会要求牌手整理牌池，以便牌手能够容易地确认牌池内容。现在通过这份文件，我们将这一操作变成了正式的要求！值得注意的是，有些牌手可能会对于在合理的时间内完成牌池整理有一定困难。如果发生这种情况，请安排任何可用的资源来帮助这些牌手，确保比赛流程正常运转。
+            实际上，我们要求牌手整理牌池以便核验，已有一段时间了。现在通过这份文件，我们将这一操作变成了正式的要求！值得注意的是，有些牌手可能会对于在合理的时间内完成牌池整理有一定困难。如果发生这种情况，请安排任何可用的资源来帮助这些牌手，确保比赛流程正常运转。
   - id: mtr-7.6
     chapter: '7.6'
     en: Draft Pod Assembly
@@ -280,7 +280,7 @@ chapter:
         en: |-
           For Booster Draft and Team Rochester Draft tournaments, players assemble into random drafting circles (called pods) of roughly equal size at the direction of the Head Judge. Tournament officials then distribute identical sets of boosters to each player.
         zh: |-
-          在补充包轮抽及团队罗彻斯特轮抽赛中，牌手会随机分配到各个轮抽圈中（称为轮抽组），每个轮抽组的人数由主审斟酌确定，应大略相同。之后，比赛工作人员将同样组合的补充包发放给各轮抽组的每位牌手。
+          在补充包轮抽及团队罗彻斯特轮抽赛中，牌手在主审的指示下随机组成规模大致相等的轮抽圈（称为轮抽组）。之后，比赛工作人员将同样组合的补充包发放给各轮抽组的每位牌手。
         extras:
         - en: |-
             Pods should be as close to 8 as you can get. In general, try to get pods of 6 or 8 over odd numbers to avoid byes. Typically, the software will sort players automatically into pods of these size. The pods created should be used unless an error has occurred.
@@ -331,7 +331,7 @@ chapter:
           zh: |-
             牌手必须以适当的方式拿起牌，确保只有他们自己才能查看。可能需要提醒牌手把牌拿高一点。
 
-            如果某牌手经常斜眼去看旁边，这是不恰当的。如果你确信他在看旁边的人有什么牌，将他移出比赛。
+            如果某牌手经常斜眼去看旁边，这是不恰当的。如果你认为他在看旁边的人有什么牌，将他移出比赛。
     - id: mtr-7.7-g003
       type: paragraph
       blocks:
@@ -344,7 +344,7 @@ chapter:
         - en: |-
             Even though players can look at their picks in Regular Rules Enforcement Level, they must still draft at a reasonable pace. Please reinforce to players that they need to keep their picks and pack separate. Players are given a specific amount of time to examine their picks between each pack. For specific timing please see MTR Appendix B.
           zh: |-
-            即使在一般级别的比赛中，牌手可以看自己抓到的牌，但是他们也需以恰当的速度进行轮抽。向牌手申明，他们需将待抓的牌和已抓的牌分开。在抽每包牌之间，牌手会有更多的时间来检视已经抓到的牌。关于时间的说明，详见附录B。
+            即使在一般级别的比赛中，牌手可以看自己抓到的牌，但是他们也需以恰当的速度进行轮抽。向牌手申明，他们需将待抓的牌和已抓的牌分开。在抽每包牌之间，牌手会有一定的时间来检视已经抓到的牌。关于时间的说明，详见附录B。
     - id: mtr-7.7-g004
       type: paragraph
       blocks:
@@ -352,7 +352,7 @@ chapter:
         en: |-
           If the draft is not being timed, and two players do not wish to make a pick before the other player, the player closer to providing the other player with the pack picks first. If the players are equidistant, then the player in the lower seat number picks first.
         zh: |-
-          若轮抽并未计时，且有两位牌手均不愿在对方之前作出抽牌的决定，则由在传递方向上较为靠近对方的牌手先作出抽牌决定。若两位牌手之间距离相等，则由座号较小的牌手先作出抽牌决定。'
+          若轮抽并未计时，且有两位牌手均不愿在对方之前作出抽牌的决定，则由在传递方向上较为靠近对方的牌手先作出抽牌决定。若两位牌手之间距离相等，则由座号较小的牌手先作出抽牌决定。
         extras:
         - en: |-
             The last part about pick order is to deal with double-faced cards. Let’s say player 5 is waiting to pick based on player X’s pick. If X is from 2 to 4, 5 picks first. If X is from 6 to 8, X picks first. If X = 1, then X picks first.
@@ -373,7 +373,7 @@ chapter:
         en: |-
           If a player is unable or unwilling to continue drafting, but wishes to remain in the tournament, they are suspended from drafting and must construct a deck from whatever cards they have drafted thus far. For the remainder of the draft, their picks are skipped and the draft continues with one fewer player.
         zh: |-
-          如果有牌手无法或不愿继续进行轮抽，但仍希望能继续参加比赛的，则他会自本次轮抽过程中停权，且必须从自己已抽到的牌当中构组出一副套牌。在当前补充包轮抽剩下的过程，会略过该牌手的抽选，且轮抽以少一位牌手的状况继续。
+          如果有牌手无法或不愿继续进行轮抽，但仍希望能继续参加比赛的，则他会自本次轮抽过程中停权，且必须从自己已抽到的牌当中构组出一副套牌。在当前轮抽剩下的过程，会略过该牌手的抽选，且轮抽以少一位牌手的状况继续。
         extras:
         - en: |-
             It is very rare to see “unable or unwilling” being applied, but can theoretically happen. If they are disqualified during a draft, the draft continues and skips over that seat.

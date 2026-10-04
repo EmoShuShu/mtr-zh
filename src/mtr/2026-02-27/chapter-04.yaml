@@ -69,7 +69,7 @@ chapter:
       blocks:
       - id: mtr-4.1-b007
         en: '* Counters a player has attached to them.'
-        zh: '* 牌手具有之指示物数量。'
+        zh: "* 牌手具有之指示物。"
     - id: mtr-4.1-g007
       type: list
       blocks:
@@ -107,7 +107,7 @@ chapter:
             These types of information need to be immediately pointed out when the change occurs.
             A very common method of tracking life or counters on a player is with pencil/paper.
           zh: |-
-            比如：一位牌手询问他的对手他自己的当前生命，对手必须直接地如实地回答他。像“你可以自己算”或者实际生命是17的情况下回答“20”，这种回答都是不可行的。当这类信息发生变化时，必须立即指出。记录牌手生命值或具有的指示物数量的常见方法之一是使用纸笔。
+            比如：一位牌手询问对手当前的总生命时，对手必须直接地如实地回答他。像“你可以自己算”或者实际生命是17的情况下回答“20”，这种回答都是不可行的。当这类信息发生变化时，必须立即指出。记录牌手生命值或具有的指示物数量的常见方法之一是使用纸笔。
     - id: mtr-4.1-g012
       type: paragraph
       blocks:
@@ -120,7 +120,7 @@ chapter:
         - en: |-
             A player always has to give all free information to their opponent accurately upon request. If that is not possible they should call a judge to help clear up the communication. If a player unintentionally misrepresents free information at Competitive Rules Enforcement Level, it may result in a Communication Policy Violation.
           zh: |-
-            被问及时，牌手必须准确无误的将自由信息提供给对手。如果无法实现，那么他们应该叫裁判来帮助他们理清情况。如果一位牌手在竞争级比赛中非故意的给了对手错误的自由信息，这属于“违反交流原则”（参见IPG 3.7）。
+            被问及时，牌手必须准确无误的将自由信息提供给对手。如果无法实现，那么他们应该叫裁判来帮助他们理清情况。如果一位牌手在竞争级比赛中非故意的给了对手错误的自由信息，这可能属于“违反交流原则”（参见IPG 3.7）。
         joinAfter:
           en: ' '
           zh: ''
@@ -169,7 +169,7 @@ chapter:
         - en: |-
             A player always has to give all free information to their opponent accurately upon request. If that is not possible they should call a judge to help clear up the communication. If a player unintentionally misrepresents free information at Competitive Rules Enforcement Level, it may result in a Communication Policy Violation.
           zh: |-
-            被问及时，牌手必须准确无误的将自由信息提供给对手。如果无法实现，那么他们应该叫裁判来帮助他们理清情况。如果一位牌手在竞争级比赛中非故意的给了对手错误的自由信息，这属于“违反交流原则”（参见IPG 3.7）。
+            被问及时，牌手必须准确无误的将自由信息提供给对手。如果无法实现，那么他们应该叫裁判来帮助他们理清情况。如果一位牌手在竞争级比赛中非故意的给了对手错误的自由信息，这可能属于“违反交流原则”（参见IPG 3.7）。
     - id: mtr-4.1-g019
       type: paragraph
       blocks:
@@ -202,7 +202,7 @@ chapter:
         - en: |-
             While a player is not obliged to assist their opponent with the Game Rules, Tournament Policy, Oracle text, or any other official information pertaining to the current tournament, a player may ask a judge for any of that information during a match. For example, if a player asks their opponent what a card does, for example, a player does not have to give all of the information about the card. Their opponent may say that Vampire Nighthawk is a flying 2/3 creature and omit that it has Deathtouch and Lifelink.
           zh: |-
-            如果一位牌手的对手不愿意告诉他与这场比赛有关的游戏规则，比赛方针，牌张信息或者任何其他的官方文档信息，那位牌手可以呼叫裁判来获取相关的信息。比如一位牌手询问他的对手关于特定牌张的信息，他的对手不一定要告诉他关于那张牌全部的信息。例如对手可以回答他说夜盗吸血鬼是一个2/3的飞行生物，而不提及死触和系命。
+            虽然牌手没有义务协助对手确定游戏规则、比赛方针、Oracle 叙述或其他与当前比赛有关的官方信息，但牌手可以在对局过程中向裁判询问其中任何信息。比如一位牌手询问他的对手关于特定牌张的信息，他的对手不一定要告诉他关于那张牌全部的信息。例如对手可以回答他说夜盗吸血鬼是一个2/3的飞行生物，而不提及死触和系命。
     - id: mtr-4.1-g023
       type: paragraph
       blocks:
@@ -275,7 +275,7 @@ chapter:
       - id: mtr-4.1-b034
         en: |-
           Judges are encouraged to help players in determining free and status information but must avoid assisting players with derived information about the game state.
-        zh: 裁判可以帮助牌手确定状态信息和自由信息，但必须避免协助牌手获取关于游戏局面的推断信息。
+        zh: "鼓励裁判帮助牌手确定状态信息和自由信息，但必须避免协助牌手获取关于游戏局面的推断信息。"
         extras:
         - en: |-
             Players need to be honest with their opponents regarding free information and must be completely honest with judges, whether the judge asks about free or other information. But, as a judge, it is important to be mindful of asking players about derived or hidden information where their opponents can hear. When dealing with such questions, it is often appropriate to ask a player to step away from the table and speak privately.
@@ -475,7 +475,7 @@ chapter:
         - en: |-
             This is a noticeable difference to the combat shortcut, but it reflects that people handle these two steps differently. For end of turn triggered abilities with targets, the controlling player still needs to follow the guidelines to show awareness as listed in the IPG. This means for ones that target, it needs to be announced as the player goes into the phase. For the most part, we expect players to announce triggered abilities pretty quickly as they pass the turn. This line provides clarity that if there are actions taken at end of turn, the active player can still demonstrate awareness of triggered abilities like those that create a token.
           zh: |-
-            这与战斗行事简化有显著的不同，但这也反映了牌手处理这两个阶段上的不同。对于具有目标的回合结束触发，操控异能的牌手仍然需要遵循IPG中认识触发式异能存在的指导方针。这意味着对于指目标的异能而言，牌手应当在一进入结束阶段就立即宣告之。通常我们期望牌手能够在让过回合时迅速宣告触发式异能。这一条厘清了如果在回合结束时有动作发生，主动牌手仍然能够认识到某些触发式异能（例如，派出衍生物的触发式异能）的存在。
+            这与战斗行事简化有显著的不同，但这也反映了牌手处理这两个阶段上的不同。对于具有目标的回合结束触发，操控异能的牌手仍然需要遵循IPG中认识触发式异能存在的指导方针。这意味着对于指目标的异能而言，牌手应当在一进入终结阶段就立即宣告之。通常我们期望牌手能够在让过回合时迅速宣告触发式异能。这一条厘清了如果在回合结束时有动作发生，主动牌手仍然能够认识到某些触发式异能（例如，派出衍生物的触发式异能）的存在。
     - id: mtr-4.2-g008
       type: list
       blocks:
@@ -500,7 +500,7 @@ chapter:
         - en: |-
             This is relevant when dealing with cards that have an activated ability that pumps themselves (e.g. Shorecrasher Elemental); their controller can just say “I pump my Shorecrasher’s toughness six times” to speed up the game and, if their opponent wants to cast Mardu Charm on it choosing the four damage mode, they can still do so at any time. The opponent cannot argue that they played the Charm “as a response to the six abilities on the stack,” because under the first sentence, each ability is assumed to have already resolved before another one is added to the stack (because it can’t be done without priority). Therefore, if the opponent chose to play Mardu Charm after the sixth activation then the Elemental would have already been successfully pumped five times.
           zh: |-
-            这一条是关于处理一些拥有可以膨胀自己异能的牌，比如破岸元素。牌手说“我要给破岸元素膨6次防”。他的对手想释放玛尔都护符，选择打4的那项，他可以在任何时候施放它。但是不能说“我响应你6次膨都在堆叠里的时候”，因为这时候行事简化默认这6次膨都是在前一次已经结算的情况下才启动的。因此，如果对手想要响应第6次膨施放护符，则意味着前5次已经结算完毕。
+            这一条是关于处理一些拥有可以膨胀自己之起动式异能的牌，比如破岸元素。牌手说“我要给破岸元素膨6次防”。他的对手想释放玛尔都护符，选择打4的那项，他可以在任何时候施放它。但是不能说“我响应你6次膨都在堆叠里的时候”，因为这时候行事简化默认这6次膨都是在前一次已经结算的情况下才启动的。因此，如果对手想要响应第6次膨施放护符，则意味着前5次已经结算完毕。
     - id: mtr-4.2-g010
       type: list
       blocks:
@@ -508,7 +508,7 @@ chapter:
         en: |-
           * If a player casts a spell or activates an ability and announces choices for it that are not normally made until resolution, the player must adhere to those choices unless an opponent responds to that spell or ability. If an opponent inquires about choices made during resolution, that player is assumed to be passing priority and allowing that spell or ability to resolve.
         zh: |-
-          * 如果有牌手在施放咒语或起动异能时，宣告了通常是在结算时才需作出的选择，则除非对手对该咒语或异能有所响应，否则该牌手便不得改变此选择。若对手就结算时才需作出的选择进行询问，则认为该牌手让过优先权并允许咒语结算。
+          * 如果有牌手在施放咒语或起动异能时，宣告了通常是在结算时才需作出的选择，则除非对手对该咒语或异能有所响应，否则该牌手便不得改变此选择。若对手就结算时才需作出的选择进行询问，则认为该牌手让过优先权并允许咒语或异能结算。
         extras:
         - en: |-
             Players sometimes announce choices early when they assume their opponents don’t have any responses to their actions or when they are fishing for information. This shortcut prevents players from announcing choices early in order to trick opponents or improperly gain information and then making a different choice when the decision should properly be made. But if an opponent responds to the spell or ability, the controller may make any choice they choose, regardless of any announcements made.
@@ -618,7 +618,7 @@ chapter:
         - en: |-
             Players aren’t robots and don’t do everything perfectly, and judges shouldn’t expect them to. Magic isn’t a game of gotcha and players shouldn’t be punished for performing clear and otherwise legal actions in a way that feels more natural to them.
           zh: |-
-            牌手不是机器人，做事十全十美，裁判也不应期望牌手完美的执行每个游戏动作。万智牌不是一个抓对手行为不规范的游戏，一位做出了清楚且合法的游戏动作的牌手也不应该只因为他按照更加自然的顺序行事而被处罚。
+            牌手不是机器人，做事不是十全十美，裁判也不应期望牌手完美的执行每个游戏动作。万智牌不是一个抓对手行为不规范的游戏，一位做出了清楚且合法的游戏动作的牌手也不应该只因为他按照更加自然的顺序行事而被处罚。
     - id: mtr-4.3-g002
       type: paragraph
       blocks:
@@ -626,7 +626,7 @@ chapter:
         en: |-
           All actions taken must be legal if they were executed in the correct order, and any opponent can ask the player to do the actions in the correct sequence so that they can respond at the appropriate time (at which point players will not be held to any still-pending actions).
         zh: |-
-          所有因此采取的行动必须在以正确次序执行时都属合法行动，对手可请求牌手以正确的行事顺序来执行，从而使自己能在恰当的时间加以响应（此时，没有牌手还有仍待定的动作需要处理）。
+          所有因此采取的行动必须在以正确次序执行时都属合法行动，对手可请求牌手以正确的行事顺序来执行，从而使自己能在恰当的时间加以响应（此时，牌手不受任何尚未执行动作的约束）。
         extras:
         - en: |-
             Out-of-Order Sequencing cannot be used to perform illegal actions, but more importantly, it also cannot be used to deprive an opponent of their chance to respond at the appropriate time. If an opponent wishes to respond, all actions prior to the point of response must be performed in the correct order. The player suggesting out-of-order sequencing is free to change their choices that they would have made after the opponent’s response.
@@ -638,7 +638,7 @@ chapter:
       - id: mtr-4.3-b003
         en: |-
           An out-of-order sequence must not result in a player prematurely gaining information which could reasonably affect decisions made later in that sequence.
-        zh: 有的信息极有可能会对位于当前行事顺序稍后之决定产生影响，牌手不得藉由自己行事次序不当来提前获知此类信息。
+        zh: "某些信息有可能会对位于当前行事顺序稍后之决定产生影响，牌手不得藉由自己行事次序不当来提前获知此类信息。"
         extras:
         - en: |-
             An out-of-order sequence must not result in a player prematurely gaining information which could reasonably affect decisions made later in that sequence, because Out-of-Order Sequencing cannot be used to gain an advantage.
@@ -655,7 +655,7 @@ chapter:
         en: |-
           Players may not try to use opponent's reactions to some portion of an out-of-order sequence to see if they should modify actions or try to take additional ones. Nor may players use out-of-order sequencing to try to retroactively take an action they missed at the appropriate time. In general, any substantial pause at the end of a completed batch is an indication that all actions have been taken, the sequence is complete and the game has moved to the appropriate point at the end of the sequence.
         zh: |-
-          牌手不得试图利用对手对自己次序不当的行事顺序中任何部分之反应，来判断自己是否需要修正行动或执行额外的行动。牌手亦不得利用次序不当的行事顺序试图回过头来执行自己错过了的、本应在适当的时间执行的行动。总而言之，在执行完一系列动作之后的短暂停顿即为该系列行动已全部完成的表示，行事顺序已执行完毕，游戏已前进到该顺序末尾后的适当时点。
+          牌手不得试图利用对手对自己次序不当的行事顺序中任何部分之反应，来判断自己是否需要修正行动或执行额外的行动。牌手亦不得利用次序不当的行事顺序试图回过头来执行自己错过了的、本应在适当的时间执行的行动。总而言之，在执行完一系列动作之后的明显停顿即为该系列行动已全部完成的表示，行事顺序已执行完毕，游戏已前进到该顺序末尾后的适当时点。
         extras:
         - en: |-
             Generally, all actions in the sequence must be performed as one block, which means there can’t be any pauses between actions and or interaction with an opponent. Each substantial pause or attempt to see an opponent’s reaction should be treated as an end of the sequence.
@@ -805,7 +805,7 @@ chapter:
       - id: mtr-4.5-b002
         en: |-
           Triggered abilities are considered to be forgotten by their controller once they have taken an action past the point where the triggered ability would have an observable impact on the game.
-        zh: 只要触发式异能的操控者错过该触发在原本对游戏造成显著影响的时点并执行了其他动作，便视作该牌手已遗漏了这个触发式异能。
+        zh: "只要触发式异能的操控者错过该触发在原本会对游戏产生可观察影响的时点并执行了其他动作，便视作该牌手已遗漏了这个触发式异能。"
         extras:
         - en: |-
             Triggers happen all the time in a game of Magic and it can be difficult enough for a player to remember their own triggers, let alone opponents’ triggers. We don’t penalize players for not pointing out their opponent’s forgotten triggers, but it is cheating for a player to intentionally ignore their own triggers. Cheating is dealt with according to the IPG or JAR, as appropriate. If a player notices that their opponent forgot a trigger, they may point it out.
@@ -834,7 +834,7 @@ chapter:
       - id: mtr-4.6-b001
         en: |-
           Members of the same team may communicate between one another except during times where explicitly prohibited by the team format rules.
-        zh: 除了团队赛制规则中明订之禁止交流时段外，同属一支队伍的各成员可在队员之间以口头方式进行交流。
+        zh: "除了团队赛制规则中明订之禁止交流时段外，同属一支队伍的各成员可在队员之间进行交流。"
         extras:
         - en: |-
             Players on a team may talk to their teammates at any time about nearly anything, with the below exception.
@@ -846,7 +846,7 @@ chapter:
         en: |-
           However, team members that have an opportunity to acquire hidden information (e.g., by speaking to spectators following their own match while a teammate is still playing), are restricted from communicating with teammates for the duration of that match.
         zh: |-
-          然而，有机会获取了私人信息的队员（例如，通过在自己的游戏结束后通过与旁观者的交流而得，此时他仍有队友在进行游戏）在该盘对局进行的过程中受到不得与队友交流的限制。
+          然而，有机会获取非公开信息的队员（例如，在自己的对局结束后通过与旁观者的交流而得，此时他仍有队友在进行游戏）在该对局进行的过程中受到不得与队友交流的限制。
     - id: mtr-4.6-g002
       type: paragraph
       blocks:
@@ -858,7 +858,7 @@ chapter:
         - en: |-
             If a member of a team has access to hidden information from outside their teammate’s match, they must refrain from communicating with teammates who are still playing. Common occurrences of this are during team events, once a player has stood up and moved around after their match they have the potential to see hidden information from their teammate’s opponents. This doesn’t mean the players can’t use the restroom once they are done with their match, but they should call a judge to direct them. Most times judges will direct players to walk to the restroom so they can confirm they aren’t trying to gain information. See MTR 8.3.
           zh: |-
-            如果一位队员有机会从非队友的人那里了解到任何关于他们队伍比赛的非公开信息，他便不能在和自己正在继续游戏的队友进行交流。通常来说，在团队比赛中，一旦牌手起身并在附近走动后，他便有可能会看到他队友的对手的隐藏信息。这并不意味着牌手在完成自己的对局后不能去洗手间，如果他想如此做的话，他应当叫裁判进行指引。大多数情形下，裁判会指引牌手走到洗手间，并以此确认牌手没有试图获取隐藏信息。参见MTR 8.3节。
+            如果一位队员能从其队友的对局之外接触到非公开信息，他便不能在和自己正在继续游戏的队友进行交流。通常来说，在团队比赛中，一旦牌手起身并在附近走动后，他便有可能会看到他队友的对手的隐藏信息。这并不意味着牌手在完成自己的对局后不能去洗手间，如果他想如此做的话，他应当叫裁判进行指引。大多数情形下，裁判会指引牌手走到洗手间，并以此确认牌手没有试图获取隐藏信息。参见MTR 8.3节。
   - id: mtr-4.7
     chapter: '4.7'
     en: Game Layout
@@ -885,7 +885,7 @@ chapter:
         en: |-
           * Non-creature permanents whose use may reasonably be associated with either the land or nonland area (e.g., an artifact whose only ability is a mana ability) may be located in either area, provided the overall layout is, in the judgment of tournament officials, clear. However, permanents that are also creatures (e.g., artifacts with March of the Machines on the battlefield, Dryad Arbor, or a Treetop Village that is currently a creature) must be placed in the nonland area. Players may not use other cards to intentionally obscure the presence of a permanent in any area of the battlefield.
         zh: |-
-          * 对于非生物永久物而言，若其用途与地区域或非地区域有合理联系（例如仅有法术力异能的神器），则此永久物便可放在对应区域，但此摆放以比赛工作人员判断确属清晰为限。然而，若该永久物同时也为生物（例如战场上有器械进击/Match of the Machines时的神器，树灵乔木/Dryad Arbor，或当前是生物的树顶村落/Treetop Village），则其必须摆放在非地区域。牌手不得使用其他牌来故意遮挡战场上任何区域的永久物。
+          * 对于非生物永久物而言，若其用途与地区域或非地区域有合理联系（例如仅有法术力异能的神器），则此永久物便可放在对应区域，但此摆放以比赛工作人员判断确属清晰为限。然而，若该永久物同时也为生物（例如战场上有器械进击/March of the Machines时的神器，树灵乔木/Dryad Arbor，或当前是生物的树顶村落/Treetop Village），则其必须摆放在非地区域。牌手不得使用其他牌来故意遮挡战场上任何区域的永久物。
     - id: mtr-4.7-g004
       type: list
       blocks:
@@ -933,7 +933,7 @@ chapter:
       - id: mtr-4.7-b009
         en: |-
           Physical objects used to represent permanents must have a way of clearly representing any in-game status, such as whether a permanent is tapped. Sleeves or card backs that appear similar to any player’s sleeves or card backs may not be used. The Head Judge is the final authority on what may be used to represent permanents.
-        zh: 使用标记物来表示游戏中组件（例如永久物）的牌手必须使该标记物能清楚表示一切游戏中的状态，如该永久物是否已横置。
+        zh: "使用标记物来表示游戏中组件（例如永久物）的牌手必须使该标记物能清楚表示一切游戏中的状态，如该永久物是否已横置。不得使用外观与任何牌手的牌套或牌背相似的牌套或牌背。对于可使用何种物件表示永久物，主审拥有最终决定权。"
     - id: mtr-4.7-g010
       type: paragraph
       blocks:
@@ -941,12 +941,12 @@ chapter:
         en: |-
           Tournament officials may make exceptions or additions to these guidelines at their sole discretion in order to keep each player’s game layout clear. Players in exceptional situations (e.g., a player playing a deck with no lands or a deck that makes significant use of the graveyard) should consult with tournament officials to determine what allowances, if any, will be made.
         zh: |-
-          为确保每位牌手的游戏摆放区域清晰可辨，比赛工作人员可自行增减上述准则。会导致特殊情形的牌手（例如使用没有地牌之套牌的牌手，或是使用过多利用坟墓场之套牌的牌手）应询问比赛工作人员，以确定其比赛时是否能有例外。
+          为确保每位牌手的游戏摆放区域清晰可辨，比赛工作人员可自行增减上述准则。会导致特殊情形的牌手（例如使用没有地牌之套牌的牌手，或是使用大量利用坟墓场之套牌的牌手）应询问比赛工作人员，以确定其比赛时是否能有例外。
         extras:
         - en: |-
             Legacy, for example, has some decks that are unlike most Magic decks in most formats. Dredge players typically will have a spread-out graveyard on what would normally be the battlefield because of how much they do with their graveyard. Likewise, “Oops, All Spells” and Belcher are combo decks that run few or no lands.
           zh: |-
-            例如，薪传赛中的一些套牌跟万智牌中绝大部分的套牌都不一样。渡桥（发掘）牌手的坟墓场通常会把坟墓场摊开来放在原本是战场的位置上，因为他们的坟墓场互动太多了。“无地套”和喷火炮等组合技套牌放很少的（或甚至不放）地牌，也是同理。
+            例如，薪传赛中的一些套牌跟万智牌中绝大部分的套牌都不一样。发掘牌手的坟墓场通常会把坟墓场摊开来放在原本是战场的位置上，因为他们的坟墓场互动太多了。“无地套”和喷火炮等组合技套牌放很少的（或甚至不放）地牌，也是同理。
   - id: mtr-4.8
     chapter: '4.8'
     en: Reversing Decisions
@@ -958,7 +958,7 @@ chapter:
       - id: mtr-4.8-b001
         en: |-
           Players are expected to consider their options before taking an action and players are not usually allowed to take back an action that has been communicated to their opponent, either verbally or physically.
-        zh: 牌手应仔细考虑所有可能的情况之后再实际行事，且在牌手通过口头或动作让对手知晓其动作之后，通常便不允许其撤回。
+        zh: "牌手应在采取行动前考虑自己的选项，且在牌手通过口头或动作让对手知晓其动作之后，通常便不允许其撤回。"
         extras:
         - en: |-
             Chess has something called the “touch-move” rule, which means that if a player touches a piece on the board on their turn, they are bound to move that piece (or capture that piece if it’s an opponent’s) if they have a legal move. In Magic, announcing a legal action, either by moving a card or by verbal confirmation ( saying “No blocks”, for example) might look alike that chess rule, and it could be reasonable to bound a player to that action.
@@ -1010,19 +1010,19 @@ chapter:
         extras:
         - en: |-
             Like when we are deciding whether to backup or not, the safest bet is always to leave things the way they are. If you don’t feel comfortable enough with the amount of information that’s been exchanged before you were involved, it’s fine to not allow the decision to be reversed. Use your own judgement here!
-          zh: 就像在决定是否反悔时一样，最安全的做法通常是保持现状。如果你对在你介入之前已经交换的信息量感到不够放心，完全可以选择不允许反悔。此时，请依靠你自己的判断！
+          zh: "就像在决定是否倒回时一样，最安全的做法通常是保持现状。如果你对在你介入之前已经交换的信息量感到不够放心，完全可以选择不允许反悔。此时，请依靠你自己的判断！"
     - id: mtr-4.8-g003
       type: paragraph
       blocks:
       - id: mtr-4.8-b006
         en: |-
           Teammates intervening before information has been gained is acceptable when considering a backup.
-        zh: 如果牌手队友在牌手本人获得信息之前便加以干预，应允许其撤回先前动作。
+        zh: "在考虑是否倒回时，队友在获得信息之前介入是可以接受的。"
         extras:
         - en: |-
             Since we treat every player from a team as a single entity for the purpose of reporting the result of a match, and the fact that they can communicate with each other at all times during the match, it is also reasonable to take every member of the team into account when deciding whether to reverse a decision or not. If a player cast a creature, and one of their teammates says “No, cast this other one!”, it is ok to let them reverse that play, as long as no relevant information has been gained.
           zh: |-
-            由于在报告比赛结果时，我们将团队中的每位玩家视为单一个体，且他们在比赛中可以随时互相交流，因此在决定是否允许反悔时，也有理由考虑团队中的每一名成员。 例如，如果一名玩家施放了一个生物，而他们的队友说：“不，施放另一个！”，只要没有获得相关信息，允许他们反悔是可以的。
+            由于在报告比赛结果时，我们将团队中的各位玩家视为一个整体，且他们在比赛中可以随时互相交流，因此在决定是否允许反悔时，也有理由考虑团队中的每一名成员。 例如，如果一名玩家施放了一个生物，而他们的队友说：“不，施放另一个！”，只要没有获得相关信息，允许他们反悔是可以的。
     - id: mtr-4.8-g004
       type: paragraph
       blocks:
@@ -1035,7 +1035,7 @@ chapter:
       - id: mtr-4.8-b008
         en: |-
           1. A player plays an Island and, before anything else happens, says “Sorry, I meant to play a Swamp.”
-        zh: "1\\.\t牌手使用了海岛，但在任何人有动作前就说「抱歉，我想用的是沼泽。」"
+        zh: "1\\.\t牌手使用了海岛，但在任何其他事情发生前就说「抱歉，我想用的是沼泽。」"
     - id: mtr-4.8-g006
       type: markdown
       blocks:
@@ -1074,9 +1074,9 @@ chapter:
 
             As you can see there’s a lot going on with this mechanic and it continues to go on even if there are no cards with Daybound/Nightbound on them for the rest of the game.
           zh: |-
-            白昼/黑夜是由某些双面牌引入游戏的，例如护教蛮兵。当处于白昼时，如果玩家在自己回合内没有施放任何咒语，下一回合会变为黑夜。类似地，当处于黑夜时，玩家需要在自己回合内施放两张或更多咒语，下一回合才会变为白昼。
+            白昼/黑夜是由某些双面牌引入游戏的，例如护教蛮兵。当处于白昼时，如果玩家在自己回合内没有施放任何咒语，下一回合会变为黑夜。类似地，当处于黑夜时，玩家需要在自己回合内施放两个或更多咒语，下一回合才会变为白昼。
 
-            如你所见，这个机制涉及的内容非常多，即便在游戏剩余时间内没有任何带白昼/黑夜的牌，机制仍然持续生效。
+            如你所见，这个机制涉及的内容非常多，即便在游戏剩余时间内没有任何带昼形/夜形的牌，机制仍然持续生效。
     - id: mtr-4.9-g002
       type: paragraph
       blocks:
