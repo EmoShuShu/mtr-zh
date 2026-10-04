@@ -2,7 +2,7 @@ chapter:
   id: mtr-appendix-d
   chapter: Appendix D
   en: Recommended Play Booster Mix for Limited Tournaments
-  zh: 限制赛中推荐的补充包构成
+  zh: "限制赛中推荐的常规补充包构成"
   groups:
   - id: mtr-appendix-d-g001
     type: paragraph
@@ -10,7 +10,7 @@ chapter:
     - id: mtr-appendix-d-b001
       en: |-
         Note: The following play boosters mixes are required for Premier Play tournaments.
-      zh: 注：重要赛事比赛必须使用下列的补充包构成。
+      zh: "注：重要比赛必须使用下列的常规补充包构成。"
   - id: mtr-appendix-d-g002
     type: paragraph
     blocks:

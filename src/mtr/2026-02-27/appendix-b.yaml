@@ -15,7 +15,7 @@ chapter:
     blocks:
     - id: mtr-appendix-b-b002
       en: 'The following time limits are recommended for each round of a tournament:'
-      zh: 以下是比赛中每一局对局的建议时间限制：
+      zh: "以下是比赛中每一轮次的建议时间限制："
   - id: mtr-appendix-b-g003
     type: list
     blocks:
@@ -39,7 +39,7 @@ chapter:
     blocks:
     - id: mtr-appendix-b-b006
       en: 'The following additional time limits are recommended for Limited tournaments:'
-      zh: 以下是限制赛中的建议时间限制：
+      zh: "以下是限制赛中额外的建议时间限制："
   - id: mtr-appendix-b-g007
     type: list
     blocks:
@@ -47,7 +47,7 @@ chapter:
       en: |-
         * Sealed Deck—20 minutes for deck registration and 30 minutes for deck construction. For Prereleases and Sealed Deck events that take place on the weekend of a new set release, 15 additional minutes for deck construction is recommended.
       zh: |-
-        * 现开～套牌登记20分钟，套牌构组30分钟。对于在新系列发售当周周末举办的现开赛事，建议多增加15分钟套牌构组时间。对于在新系列发售当周周末举办的售前和现开赛事，建议多增加15分钟套牌构组时间。
+        * 现开～套牌登记20分钟，套牌构组30分钟。对于在新系列发售当周周末举办的售前赛和现开赛，建议多增加15分钟套牌构组时间。
   - id: mtr-appendix-b-g008
     type: list
     blocks:
@@ -60,7 +60,7 @@ chapter:
     - id: mtr-appendix-b-b009
       en: |-
         * Team Sealed Deck—20 minutes for deck registration and 60 minutes for deck construction. For Team-format Sealed Deck events that take place on the weekend of a new set release, 15 additional minutes for deck construction is recommended.
-      zh: '* 团队现开～套牌登记20分钟，套牌构组60分钟。对于在新系列发售当周周末举办的现开赛事，建议多增加15分钟套牌构组时间。'
+      zh: "* 团队现开～套牌登记20分钟，套牌构组60分钟。对于在新系列发售当周周末举办的团队现开赛事，建议多增加15分钟套牌构组时间。"
   - id: mtr-appendix-b-g010
     type: list
     blocks:
@@ -203,7 +203,7 @@ chapter:
         | 3 | - | 5 seconds |
         | 1 | 2 | N/A |
       zh: |-
-        |补充包剩余牌张数量|补充包剩余牌张数量|补充包剩余牌张数量|
+        |补充包剩余牌张数量|补充包剩余牌张数量||
         |-----|-----|-----|
         |15张牌的补充包|14张牌的补充包|可使用时间|
         |15|14|50秒|

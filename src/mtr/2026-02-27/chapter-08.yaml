@@ -15,11 +15,11 @@ chapter:
       - id: mtr-8.1-b001
         en: |-
           Wizards of the Coast reserves the right to disallow any team name it deems offensive and/or obscene. Tournament officials may disallow teams from registering team names that may be considered offensive and/or obscene.
-        zh: 威世智公司保留禁止使用任何视为有攻击性／猥亵的团队名称之权利。比赛工作人员可禁止团队使用可能被认为有攻击性／猥亵的团队名称来报名。
+        zh: "威世智公司保留禁止使用任何视为有冒犯性／猥亵的团队名称之权利。比赛工作人员可禁止团队使用可能被认为有冒犯性／猥亵的团队名称来报名。"
         extras:
         - en: |-
             It is important to remember that Wizards of the Coast is the ultimate arbiter in what may be deemed offensive. While certain names (come on, you know what they are) are directly offensive, others may also be deemed unacceptable. Do not be surprised if a name that subtly insults players or officials is not allowed. Similarly a name that touts another game or competitor may also be viewed as poor.
-          zh: 威世智对于行为是否具有攻击性具有最终裁定权。侮辱牌手以及工作人员的名称会被禁止，即使这种冒犯很隐晦也是不行的。鼓吹另一款游戏或竞争对手的名称也会被认为不适当。
+          zh: "请务必记住，对于何种名称可能被视为具有冒犯性，威世智拥有最终裁定权。有些名称（得了，你知道是哪些）直接具有冒犯性，但另一些名称也可能被认为不可接受。如果某个名称含蓄地侮辱牌手或比赛工作人员而未获准使用，请不要感到意外。同样，鼓吹其他游戏或竞争对手的名称也可能被认为不妥。"
   - id: mtr-8.2
     chapter: '8.2'
     en: Team Composition and Identification
@@ -32,7 +32,7 @@ chapter:
         en: |-
           A valid team consists of two or three members, as appropriate to the format. A team is identified by the individual registration information (Wizards Account) of its respective members and all teams must provide the Tournament Organizer with the full information when registering for the tournament. Individuals may be members of more than one team, though not during the same tournament. If a player drops from the tournament, the entire team is dropped from the tournament. If a player is disqualified from the tournament, the entire team is disqualified from the tournament.
         zh: |-
-          合法的团队包含两名或三名成员，视具体的团队赛制而定。团队系以其成员的个人注册信息（威士智账户）来作识别，所有参赛团队在报名参加比赛时,必须向比赛主办人提供各自团队的完整信息。同一人可以在不同的比赛中分属不同的团队。如果团队中某位牌手自比赛中退出，则整支队伍都会退出比赛。如果某位牌手被取消比赛资格，则整支队伍都会被取消资格。
+          合法的团队包含两名或三名成员，视具体的团队赛制而定。团队系以其成员的个人注册信息（威世智账户）来作识别，所有参赛团队在报名参加比赛时，必须向比赛主办人提供各自团队的完整信息。同一人可以在不同的比赛中分属不同的团队。如果团队中某位牌手自比赛中退出，则整支队伍都会退出比赛。如果某位牌手被取消比赛资格，则整支队伍都会被取消资格。
     - id: mtr-8.2-g002
       type: paragraph
       blocks:
@@ -54,9 +54,9 @@ chapter:
 
             Team seating is less important than making sure they play the correct opponent from the opposing team. If team member C would like to sit in the middle then that is fine, as long as both teams’ Cs are in the center. Teams should never intentionally scramble their orders mid tournament.
           zh: |-
-            团队以队员的DCI号来识别，意味着队伍即使改变了队名，只要队伍里的三位牌手不变，该团队仍会继承比赛中的记录。一个队伍不能只有两位牌手，也不允许他们“自动放弃”一位牌手的比赛。
+            团队以队员的威世智账号来识别，意味着队伍即使改变了队名，只要队伍里的三位牌手不变，该团队仍会继承比赛中的记录。一个队伍不能只有两位牌手，也不允许他们“自动放弃”一位牌手的比赛。
 
-            队伍的座位不是太重要，但要确保牌手能够与正确的对手进行对局。如果队员C想要坐在中间，那没问题。但是要确保两队的队员C都坐在中间。不允许在比赛中途随意打乱牌手的顺序。
+            队伍的座位不是太重要，但要确保牌手能够与正确的对手进行对局。如果队员C想要坐在中间，那没问题。但是要确保两队的队员C都坐在中间。不允许在比赛中途故意打乱牌手的顺序。
   - id: mtr-8.3
     chapter: '8.3'
     en: Team Communication Rules
@@ -207,9 +207,9 @@ chapter:
         en: |-
           All cards must be assigned to a player’s deck or sideboard during deck construction and cannot be transferred to another player during that tournament. (Players do not share main deck or sideboard cards.) Players may exchange cards in their pool in Regular Rules Enforcement Level tournaments that do not use decklists, but only between rounds.
         zh: |-
-          在构组套牌时，所有的牌都必须有相对应的指定牌手在其套牌或备牌中使用之，且在该次比赛进行期间，属于某位牌手的牌不得转交给其他牌手来使用。（牌手之间并不共享主牌或备牌里面的牌。）在不使用套牌登记表的「一般」级别比赛当中，牌手可交换自己团队牌池中的牌，但是只能在两局之间进行。
+          在构组套牌时，所有的牌都必须有相对应的指定牌手在其套牌或备牌中使用之，且在该次比赛进行期间，属于某位牌手的牌不得转交给其他牌手来使用。（牌手之间并不共享主牌或备牌里面的牌。）在不使用套牌登记表的「一般」级别比赛当中，牌手可交换自己团队牌池中的牌，但是只能在两轮之间进行。
         extras:
         - en: |-
             For competitive tournaments the recommended product mix in the appendix is highly preferred to allow players to have a reasonable expectation of the format, though technically any product may be used within the rules above. Outside of team Grand Prix events competitive team events are rare, though when they do occur each match is still expected to follow the same guidelines as individual tournaments.
           zh: |-
-            即使理论上在符合规则的条件下可以使用任何产品，对于竞争级别的比赛而言，强烈建议使用附录中推荐的产品构成，这能让牌手有更好的准备。除了团队限制大奖赛外，团队现开赛制的比赛很少。在这些比赛中，对局参考个人赛的处理方式进行处理即可。
+            即使理论上在符合规则的条件下可以使用任何产品，对于竞争级别的比赛而言，强烈建议使用附录中推荐的产品构成，这能让牌手有更好的准备。除了团队大奖赛外，团队赛制的比赛很少。不过一旦举行，每场对局仍应遵循与个人赛相同的指导原则。

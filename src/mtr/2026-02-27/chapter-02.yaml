@@ -27,11 +27,11 @@ chapter:
       - id: mtr-2.1-b002
         en: |-
           If the round ends before a player has won the required number of games, the winner of the match is the player who has won the most games at that point.
-        zh: 如果在本局对局时间终止之前,任一方牌手都未能赢下所需数量的游戏,则当时握有最多游戏获胜盘数的一方便为该局对局的胜利者。
+        zh: "如果在本轮次时间终止之前，任一方牌手都未能赢下所需数量的游戏，则当时握有最多游戏获胜盘数的一方便为该局对局的胜利者。"
         extras:
         - en: |-
             If the round has ended and only one player has won a game then that player is the winner of that match because they have won the majority of games.
-          zh: 如果当本局比赛时间结束时只有一个牌手赢过一盘比赛，那么该牌手就是本局的获胜者因为他赢得了更多的盘数。
+          zh: "如果当本轮次时间结束时只有一个牌手赢过一盘游戏，那么该牌手就是本局的获胜者，因为他赢得了更多的盘数。"
         joinAfter:
           en: ' '
           zh: ''
@@ -41,7 +41,7 @@ chapter:
         extras:
         - en: |-
             If the round has ended and the result is 1-1 or even 0-0  then the match is a draw.
-          zh: 如果当本局对局时间结束时比赛结果为1-1或者0-0则该局为平局.
+          zh: "如果当本轮次时间结束时对局结果为1-1或者0-0则该局为平局。"
     - id: mtr-2.1-g002
       type: paragraph
       blocks:
@@ -53,7 +53,7 @@ chapter:
         - en: |-
             For example, the Pro Tour finals are played until one player wins three games. While a local store can structure their tournment in this way, certain premier tournaments supported by Wizards, have a prescribed structure.  Certain tournaments supported by Wizards may have a specified structure required to run it. If so, that structure supersedes this rule.
           zh: |-
-            例如，专业赛的决赛需要牌手赢得3盘比赛。尽管本地店家可以自行设定其比赛结构，但某些由威世智支持的重要赛事有其指定的、必须遵守的结构。若存在此种指定结构，则其效力将优先于本条通用规则。
+            例如，专业赛的决赛需要牌手赢得3盘比赛。尽管本地店家可以按这种方式设定其比赛结构，但某些由威世智支持的重要赛事有其指定的、必须遵守的结构。若存在此种指定结构，则其效力将优先于本条通用规则。
         joinAfter:
           en: ' '
           zh: ''
@@ -77,19 +77,19 @@ chapter:
         en: |-
           For the first game of a match, a designated player - the winner of a random method (such as a die roll or coin toss) during Swiss rounds, or the player ranked higher at the end of Swiss rounds during playoff matches - chooses either to play first or to play second.
         zh: |-
-          每局对局的第一盘游戏由指定牌手决定哪方先手：若是在瑞士式对局期间，由随机方式（例如掷骰子或抛硬币）之胜利者决定；若是在决胜局期间，则是由瑞士式对局结束时排名较高的牌手决定。
+          每局对局的第一盘游戏由指定牌手决定哪方先手：若是在瑞士轮期间，由随机方式（例如掷骰子或抛硬币）之胜利者决定；若是在决胜局期间，则是由瑞士轮结束时排名较高的牌手决定。
         extras:
         - en: |-
             For non-Playoff matches, both players must agree on the random method. This can get a little tricky when the players don’t agree on the method (such as rolling a spindown dice) so and Judges may step in and help players select a random method like odds and evens or something similar. ‘Higher ranked choosing’ is the default rule for any single elimination portion of a tournament. This only applies to the first game of each match. After the first game, the loser of the previous game makes the choice. This rule was created to discourage intentional draws during swiss, by giving players an incentive to play it out.  In practice, it isn’t enough of an incentive to have any practical effect.
           zh: |-
-            对于非淘汰赛的对局而言，双方牌手必须协定某个随机方式。当牌手无法决定出某个随机方式时就有点棘手了（例如丢一个顺数字骰子），此时裁判可以介入并帮助牌手决定一个随机方式，例如猜单双或者其他类似的方法。排名较高的牌手决定先手是单淘汰赛制比赛的默认规则。这只适用于对局第一盘的选择。在第一盘比赛之后，上一盘的输家选择先后手。制定本条规则的初衷，是通过激励牌手打完来减少瑞士轮的约和。然而事实上，这种激励的力度并不足以产生任何实际效果。
+            对于非决胜局的对局而言，双方牌手必须协定某个随机方式。当牌手无法决定出某个随机方式时就有点棘手了（例如丢一个顺数字骰子），此时裁判可以介入并帮助牌手决定一个随机方式，例如猜单双或者其他类似的方法。排名较高的牌手决定先手是单淘汰赛制比赛的默认规则。这只适用于对局第一盘的选择。在第一盘比赛之后，上一盘的输家选择先后手。制定本条规则的初衷，是通过激励牌手打完来减少瑞士轮的约和。然而事实上，这种激励的力度并不足以产生任何实际效果。
         joinAfter:
           en: ' '
           zh: ''
       - id: mtr-2.2-b002
         en: |-
           They must state this choice before looking at their hand. If they state no choice, it is assumed that they are playing first.
-        zh: 该位牌手须在检视手牌之前确定相应的选择。若该牌手未置可否，则认为他选择先手。
+        zh: "该位牌手须在检视手牌之前声明相应的选择。若该牌手未置可否，则认为他选择先手。"
         extras:
         - en: |-
             Players are supposed to decide whether they want to play or draw before looking at their opening hands, since the contents could influence their decision greatly. If someone does not announce their choice before seeing their opening hand, they gain information would could impact their decision. This is a fairly common and innocent mistake, so there is a simple solution; the player who sees their opener before declaring plays first by default.
@@ -134,7 +134,7 @@ chapter:
         extras:
         - en: |-
             The term “timely” here is important. Players cannot take excessive time sideboarding or shuffling, or they may be subject to Slow Play or Stalling penalties.
-          zh: 合理的耗时是很重要的，牌手不能花过多的时间用于换备或者洗牌，否则他们可能会受到拖延或者作弊的判罚。
+          zh: "合理的耗时是很重要的，牌手不能花过多的时间用于换备或者洗牌，否则他们可能会受到游戏进行过慢或者拖延的判罚。"
     - id: mtr-2.3-g002
       type: markdown
       blocks:
@@ -146,7 +146,7 @@ chapter:
         - en: |-
             Sideboarding is allowed between games only when a previous game had actions taken during it. A tournament should test a player’s skill in deck building and technical play first, not in advance scouting opponents. This is just a fancy way of saying the game wasn’t lost because of a tardiness penalty or a Game Loss coming from a deck check. Additionally, a player may not offer to intentionally draw the opening game prior to taking game actions in order to introduce sideboard cards for the match. If the players have completed game actions, it’s reasonable for them to use that knowledge to sideboard effectively. Note that this applies to the first game of the match, or to any match that begins on a second or subsequent game due to penalties assessed to one or more players prior to the first game beginning. This includes games started by the third activated ability of Karn Liberated; treat these restarted games as the same game in the match.
           zh: |-
-            只有在上一盘游戏中进行过游戏动作的情形下才允许更换备牌。一场比赛首先测试的应该是牌手的套牌构筑技巧以及牌技，而不是从侦查对手中获得优势。说白了，因为迟到判罚或套牌检查判负不能换备。牌手不能在进行游戏动作前就提出约和第一盘比赛以使用备牌。如果牌手进行了游戏动作，使用因此而获得的信息进行有效换备便是合理的。注意这适用于每局的第一盘比赛或是由于在第一盘比赛开始前一个或多个牌手受到判罚而从第二盘或之后开始的比赛。这也包括了诸如因重获自由的卡恩的第三个异能而产生的情况；把这些重新开始的游戏当做原本的那盘游戏一样处理即可。
+            只有在上一盘游戏中进行过游戏动作的情形下才允许更换备牌。一场比赛首先测试的应该是牌手的套牌构筑技巧以及牌技，而不是从事先侦查对手中获得优势。说白了，因为迟到判罚或套牌检查判一盘负是不能换备的。牌手不能在进行游戏动作前就提出约和第一盘比赛以使用备牌。如果牌手进行了游戏动作，使用因此而获得的信息进行有效换备便是合理的。注意这适用于每局的第一盘比赛或是由于在第一盘比赛开始前一个或多个牌手受到判罚而从第二盘或之后开始的比赛。这也包括了诸如因重获自由的卡恩的第三个异能而产生的情况；把这些重新开始的游戏当做原本的那盘游戏一样处理即可。
     - id: mtr-2.3-g003
       type: markdown
       blocks:
@@ -193,7 +193,7 @@ chapter:
         - en: |-
             This is covered in MTR 2.2 as well, but to recap: players decide if they want to play or draw before looking at their hand, as that could influence them greatly. Most people want to play first anyway, so we just default to that if they don’t explicitly announce it.
           zh: |-
-            这一条在[MTR 2.2](#mtr-22-playdraw-rule-先手规则)中也有说明，这里重复一下：牌手在看到自己手牌前决定是否先手，因为手牌会极大地影响这个决定。大多数人都习惯选择先手，所以我们默认如果他们不明确宣告就如此做。
+            这一条在[MTR 2.2](#mtr-22-playdraw-rule-先手规则)中也有说明，这里重复一下：牌手在看到自己手牌前决定是否先手，因为手牌可能极大地影响这个决定。大多数人都习惯选择先手，所以我们默认如果他们不明确宣告就如此做。
     - id: mtr-2.3-g007
       type: markdown
       blocks:
@@ -218,7 +218,7 @@ chapter:
         - en: |-
             Once a player has announced a decision to keep a starting hand, they may not later decide to take a mulligan based on the opponent’s decision. When a player announces a mulligan decision, they is held to that choice, even if it is made out of order. Note that steps 1-2 are not repeated during mulliganing. Cards may not be added or removed from the deck at this time. For all of the technical details in how to proceed with mulliganing, check the Comprehensive Rules, rule 103.5.
           zh: |-
-            一旦牌手宣告保留其起手手牌，他或她就不能依据对手的决定在之后再次决定再调度。当牌手宣告要再调度，他或她便应执行这个选择，即使宣告时并没有严格按照顺序。注意，步骤1-2在再调度时并不会再次进行。此时不能在套牌中添加或减少牌。有关再调度的所有技术细节，请参阅[CR 103.5](https://blogs.magicjudges.org/rules/comprehensive-rules/#rule-103-5)。
+            一旦牌手宣告保留其起手手牌，他就不能依据对手的决定在之后再次决定再调度。当牌手宣告是否决定要再调度后，他便应执行这个选择，即使宣告时并没有严格按照顺序。注意，步骤1-2在再调度时并不会再次进行。此时不能在套牌中添加或减少牌。有关再调度的所有技术细节，请参阅[CR 103.5](https://blogs.magicjudges.org/rules/comprehensive-rules/#rule-103-5)。
     - id: mtr-2.3-g009
       type: paragraph
       blocks:
@@ -229,7 +229,7 @@ chapter:
         extras:
         - en: |-
             This rewards punctual players, who may be able to capture the full round time for game play, while still allowing a firm line of what can be done before the start of the round is announced.
-          zh: 这一条奖励了准时的牌手，他们可以将完整的一轮时间用于对局本身，并且仍有一条明确的界限确定哪些可以在比赛开始的宣告前进行。
+          zh: "这一条奖励了准时的牌手，他们可以将完整的一轮时间用于对局本身，并且仍有一条明确的界限确定哪些可以在轮次开始的宣告前进行。"
   - id: mtr-2.4
     chapter: '2.4'
     en: End-of-Match Procedure
@@ -241,7 +241,7 @@ chapter:
       - id: mtr-2.4-b001
         en: |-
           Once the game is complete, players may not leave the table until the result of the match is recorded unless they are doing so to record the result.
-        zh: 一旦对局结束，除非牌手是为了上报比赛结果，否则直到对局结果被上报前，牌手不得离开牌桌。
+        zh: "一旦游戏结束，除非牌手是为了上报比赛结果，否则直到对局结果被上报前，牌手不得离开牌桌。"
         extras:
         - en: |-
             This is a warning shot. As events move away from match slips, and towards digital submissions, tournament officials are running into problems.  Too many players leave their match and do not report there results. A some events, as many as 60 matches can be empty and have no results submitted. This means the stage has to page each match to get the results. This sentence is “step 1” in moving towards a future where players are penalized for not submitting match results. If this is sufficient (spoilers: it won’t be) then further steps will not be necessary.
@@ -265,7 +265,7 @@ chapter:
       - id: mtr-2.4-b003
         en: |-
           This usually means that one player takes three turns and the other two, but a player taking extra turns may affect this.
-        zh: 通常情况下,其中一方牌手得以进行三个回合，另一方得两个，但若有牌手能进行额外回合时则会改变这种情况。
+        zh: "通常情况下，其中一方牌手得以进行三个回合，另一方得两个，但若有牌手进行额外回合则会改变这种情况。"
         extras:
         - en: |-
             There will only be five turns in the additional turn portion of the round. (But see IPG 3.3 — Slow Play, where two additional turns are added as an additional remedy.) Game circumstances (e.g., the activation of Ral Zarek’s third ability) may result in one player being entitled to all five turns. For more details on extra turns, see CR 500.7.
@@ -314,19 +314,19 @@ chapter:
         - en: |-
             Players may discuss and come to an agreement on an alternate outcome for the game/match (e.g. a concession) so long as there is no incentive offered for the result (see IPG 4.4: Bribery and Wagering). Players may not utilize out-of-game assets, including but not limited to rolling a die, revealing cards off the top of the library, or the results of adjacent matches, to come to this decision (see IPG 4.3: Improperly Determining a Winner). Players must decide in a reasonable time frame, as it is unfair to make other players wait on this individual match debating who would have won seven turns from now. If players cannot come to an agreement, the match is still a draw and Judges are encouraged to “nudge” players to fill out their results slips, without influencing the decision.
           zh: |-
-            牌手可以讨论并就比赛结果达成协议（如一方认输），只要这一结果不是因为提供了奖励而换来的（参见[IPG 4.4: 赌博与贿赂](http://blogs.magicjudges.org/rules/ipg4-4/)）。牌手不允许利用游戏外的因素，包括但不限于投骰子，展示牌库的顶牌或是临桌的比赛结果以达成此协议（参见[IPG 4.3: 不当决定胜方](http://blogs.magicjudges.org/rules/ipg4-3/)）牌手必须在一个合理的时间内做出决定，因为让其他牌手等待他们辩论“再给七个回合谁能赢”是不公平的。如果牌手不能达成一致，比赛将保持平局。我们鼓励裁判在不影响他们做出决定的前提下，“敦促”牌手填写好他们的成绩条。
+            牌手可以讨论并就该盘或该局结果达成协议（如一方认输），只要这一结果不是因为提供了奖励而换来的（参见[IPG 4.4: 赌博与贿赂](http://blogs.magicjudges.org/rules/ipg4-4/)）。牌手不允许利用游戏外的因素，包括但不限于投骰子，展示牌库的顶牌或是临桌的比赛结果以达成此协议（参见[IPG 4.3: 不当决定胜方](http://blogs.magicjudges.org/rules/ipg4-3/)）。牌手必须在一个合理的时间内做出决定，因为让其他牌手等待他们辩论“再给七个回合谁能赢”是不公平的。如果牌手不能达成一致，对局将保持平局。我们鼓励裁判在不影响他们做出决定的前提下，“敦促”牌手填写好他们的成绩条。
     - id: mtr-2.4-g006
       type: paragraph
       blocks:
       - id: mtr-2.4-b008
         en: |-
           If a judge assigned a time extension (because of a long ruling, deck check, or other reason) the end-of-match procedure does not begin until the end of the time extension.
-        zh: 如果裁判给予了时间延长（由于长时间的判罚、套牌检查或其他原因），则对局结束程序在给予的时间延长结束后方才开始。
+        zh: "如果裁判给予了时间延长（由于耗时较长的裁定、套牌检查或其他原因），则对局结束程序在给予的时间延长结束后方才开始。"
         extras:
         - en: |-
             Players are entitled to use the full time of a round to play their match of Magic. Should some interruption occur, time extensions are awarded to allow players a chance to fully play out their games. Players with a time extension who are still in a game when time is called should call a judge to ensure time continues to be kept accurately.  Typically a judge will write the extension in the top right corner of the match slip.
           zh: |-
-            牌手有权使用完整的一轮时间来进行万智牌比赛。一旦发生了中断，牌手将获得补时，以使牌手能够能完整地进行游戏。如果牌手获得了补时，在时间终了后仍然在比赛中的话，应当呼叫一个裁判来确保继续计时的准确无误。通常，裁判会将补时记在成绩条的右上角。
+            牌手有权使用完整的一轮时间来进行万智牌对局。一旦发生了中断，牌手将获得补时，以使牌手能够完整地进行游戏。如果牌手获得了补时，在时间终了后仍然在游戏中的话，应当呼叫一个裁判来确保继续计时的准确无误。通常，裁判会将补时记在成绩条的右上角。
     - id: mtr-2.4-g007
       type: paragraph
       blocks:
@@ -362,7 +362,7 @@ chapter:
       - id: mtr-2.5-b001
         en: |-
           Until the result of a match has been recorded, players may concede or mutually agree to a draw in that game or match.
-        zh: 直到对局成绩上报之前，游戏双方都可以在对局或比赛中认输或者约合。
+        zh: "直到对局成绩上报之前，游戏双方都可以在该盘游戏或该局对局中认输或者约和。"
         extras:
         - en: |-
             Players may concede or mutually draw up until the point the match slip has been filed out, or the result submitted electronically. Once the result has been recorded, that is the result. Players are allowed to intentionally draw, as preventing mutually beneficial IDs would result in players trying to fabricate an ID through convoluted play. If players were not allowed to intentionally draw, but a draw would still benefit both players, we would be encouraging players to “intentionally unintentionally draw” by slow playing —or worse— by playing at a reasonable pace but deciding to never attack and eventually just stall the game out, which just wastes everyone’s time.
@@ -416,12 +416,12 @@ chapter:
       - id: mtr-2.6-b001
         en: |-
           If a judge pauses a match for more than one minute while the round clock is running, they should extend the match time appropriately.
-        zh: 若有裁判在本局尚在计时的情况下暂停对局超过了一分钟，该裁判须相应地延长比赛时间。
+        zh: "若有裁判在本轮尚在计时的情况下暂停对局超过了一分钟，该裁判须相应地延长对局时间。"
         extras:
         - en: |-
             Players are entitled to use the full time of a round to play their match of Magic. If an interruption of more than a minute occurs, a time extension is given to allow players a chance to fully play out their games. Players with a time extension who are still in a game when time is called should call a judge to ensure time continues to be kept accurately.
           zh: |-
-            牌手有权使用完整的一轮时间来进行万智牌比赛。一旦发生了超过一分钟的中断，牌手将获得补时，以使牌手能够能完整地进行游戏。如果牌手获得了补时，在时间终了后仍然在比赛中的话，应当呼叫一个裁判来确保继续计时的准确无误。
+            牌手有权使用完整的一轮时间来进行万智牌对局。一旦发生了超过一分钟的中断，牌手将获得补时，以使牌手能够完整地进行游戏。如果牌手获得了补时，在时间终了后仍然在游戏中的话，应当呼叫一个裁判来确保继续计时的准确无误。
         joinAfter:
           en: ' '
           zh: ''
@@ -433,7 +433,7 @@ chapter:
         - en: |-
             Because a deck check typically orders the deck in an intentionally non-random way, players should be afforded adequate time to randomize their decks before proceeding with the next game. While no longer codified, the benchmark for pre-game and between-game procedures is three minutes, so this much time is afforded to each player. This extension is given even if one player is receiving a game loss as the result of a penalty discovered during the check.
           zh: |-
-            这是因为套牌检查通常会使套牌呈非随机排列，牌手应当在继续进行游戏前得到足够的时间来随机化他们的套牌。虽然并无明文规定游戏前程序和游戏间程序的基准为三分钟，但这是通常赋予牌手补时的标准。即便有牌手因本次检查发现的违规而被判一盘负，也应给予相应的补时。
+            这是因为套牌检查通常会有意使套牌呈非随机排列，牌手应当在继续进行游戏前得到足够的时间来随机化他们的套牌。虽然已不再明文规定游戏前程序和游戏间程序的基准为三分钟，但这是通常赋予牌手补时的标准。即便有牌手因本次检查发现的违规而被判一盘负，也应给予相应的补时。
     - id: mtr-2.6-g002
       type: paragraph
       blocks:
@@ -445,14 +445,14 @@ chapter:
         - en: |-
             Feature matches are often announced after players have already sat at their table number and pulled out their deck and playmats.  When the feature matches are announced, they then have to pack everything up and go to the feature match area.  The extra time is to account for the time it takes to move and get settled into a new space. Players who are on coverage are doing so at the request of the organizer. We do not want to put players at a disadvantage because they simply have an interesting match to watch, and are doing the TO a favor. Of course, if the feature matches are timed separately we do not have to worry about the players being at a time disadvantage!
           zh: |-
-            焦点桌的对局通常在牌手们已于各自的桌位号就座，并拿出套牌和牌垫之后才会被宣布。当焦点桌被宣布时，这些牌手就必须收拾好所有物品，并前往焦点桌区域。额外的补时便是为了补偿他们在移动和到新位置后重新布置所花费的时间。这些牌手是因比赛主办人的要求而被在线转播的。我们不应让牌手仅仅因为其比赛被直播（从而为主办方服务）而遭受比赛时间上的损失。当然，如果焦点对局单独计时，我们就不用担心牌手因此遭受不利了。
+            焦点桌的对局通常在牌手们已于各自的桌位号就座，并拿出套牌和牌垫之后才会被宣布。当焦点桌被宣布时，这些牌手就必须收拾好所有物品，并前往焦点桌区域。额外的补时便是为了补偿他们在移动和到新位置后重新布置所花费的时间。这些牌手是因比赛主办人的要求而被在线转播的。我们不应让牌手仅仅因为其对局被直播（从而为主办方服务）而遭受比赛时间上的损失。当然，如果焦点对局单独计时，我们就不用担心牌手因此遭受不利了。
     - id: mtr-2.6-g003
       type: paragraph
       blocks:
       - id: mtr-2.6-b004
         en: |-
           Certain slow play penalties add turns rather than a time extension. These additional turns are added to the end-of-match additional turns.
-        zh: 某些游戏进行过慢之惩罚会采取增加回合数的方式来执行。此类递补的回合会增加在对局结束程序所延长的回合之后。
+        zh: "某些游戏进行过慢之惩罚会增加回合数，而不是给予补时。此类递补的回合会增加在对局结束程序所延长的回合之后。"
         extras:
         - en: |-
             For more information, see IPG 3.3: Slow Play. If a player receives a warning for slow play, each player is awarded an additional turn, totaling seven additional turns if one player is warned and nine additional turns if both players are warned. Note that no additional turns are awarded if slow play is penalized during the additional turns procedure. This is chosen as a way to give back some of the time that was lost, without having to try and quantify how much time was lost.
@@ -474,7 +474,7 @@ chapter:
         - en: |-
             Decklists are expected in Comp and Professional REL.  If a Tournament Organizer wants to have decklists at Regular Rules Enforcement Level, they should make sure they inform the players as early as possible, as most won’t expect the requirement and won’t have them prepared in advance. If a Tournament Organizer decides the event is serious enough to warrant decklists at Regular Rules Enforcement Level, they may want to consider changing the Rules Enforcement Level to Competitive. Regular Rules Enforcement Level events with decklists are very rare.  Typically requiring lists at Regular is in response to suspected rampant cheating.
           zh: |-
-            在竞争级别和专业级别中，应进行套牌检查。如果比赛主办人要求在一般级别比赛中提交牌表，应确保其尽早通知牌手，因为通常不会有此要求，牌手也不会事先准备。如果比赛主办人判断该比赛严肃到需要在一般级别填写牌表，那么他们可能会考虑将比赛级别改为竞争。需要牌表的一般级别比赛是非常罕见的。通常，在一般级赛事中要求提交套牌登记表，是为了应对疑似猖獗的作弊行为。
+            在竞争级别和专业级别的赛事中，应当提交套牌登记表。如果比赛主办人要求在一般级别比赛中提交套牌登记表，应确保其尽早通知牌手，因为大多数牌手不会预料到有此要求，也不会事先准备好套牌登记表。如果比赛主办人判断该比赛严肃到需要在一般级别填写套牌登记表，那么他们可能会考虑将比赛级别改为竞争。需要套牌登记表的一般级别比赛是非常罕见的。通常，在一般级赛事中要求提交套牌登记表，是为了应对疑似猖獗的作弊行为。
     - id: mtr-2.7-g002
       type: paragraph
       blocks:
@@ -482,19 +482,19 @@ chapter:
         en: |-
           Registered decklists record the original composition of each deck and sideboard (if applicable). Once your decklist has been accepted by a Tournament Official it may not be altered. If electronic decklists are used, decklists cannot be altered after the date and time that decklists are required to be submitted.
         zh: |-
-          登记在案的套牌登记表中记录了每份套牌及其备牌（如果有的话）原本的内容组成。一旦套牌登记表已被比赛工作人员接收，牌手便不得对其套牌登记表进行修改。如果牌手使用电子牌表，在登记截止时间之后不得更改牌表。
+          登记在案的套牌登记表中记录了每份套牌及其备牌（如果有的话）原本的内容组成。一旦套牌登记表已被比赛工作人员接收，牌手便不得对其套牌登记表进行修改。如果牌手使用电子套牌登记表，在登记截止时间之后不得更改套牌登记表。
         extras:
         - en: |-
             Altering a decklist after it has been accepted by a Tournament Official, or after the official cutoff time for electronic submission, is not allowed for various reasons: TOs/Judges may perform tournament operations on the list, players might gain additional strategic information by scouting opponents.  Much like presenting a deck to an opponent is signifying a legal deck, submitting a decklist to Tournament Official (online or physically) is a declaration that the decklist is legal and final. A judge is allowed to alter the decklist when applying the fix for a Decklist Problem.
           zh: |-
-            在比赛工作人员收取牌表之后，或在电子提交时间截至后，便不能再改变牌表，此举是出于多种原因的考量：其一，主办人/裁判可能已基于该牌表进行赛事操作；其二，牌手可能会通过侦查对手来获取额外的战略信息。正如向对手出示套牌即代表该套牌合法一样，向赛事工作人员线上或实体地提交套牌登记表的行为，本身就是一项声明，即该登记表是合法且为最终版本的。允许裁判在修复套牌登记表问题时修改牌表。
+            在比赛工作人员收取套牌登记表之后，或在电子提交时间截至后，便不能再改变套牌登记表，此举是出于多种原因的考量：其一，主办人/裁判可能已基于该套牌登记表进行赛事操作；其二，牌手可能会通过侦查对手来获取额外的战略信息。正如向对手出示套牌即代表该套牌合法一样，向赛事工作人员线上或实体地提交套牌登记表的行为，本身就是一项声明，即该登记表是合法且为最终版本的。允许裁判在修复套牌登记表问题时修改套牌登记表。
     - id: mtr-2.7-g003
       type: paragraph
       blocks:
       - id: mtr-2.7-b003
         en: |-
           In Constructed tournaments, decklists must be submitted to a tournament official prior to the start of the tournament.
-        zh: 在构组赛中，牌手须在比赛开始之前将牌表交至比赛工作人员处。
+        zh: "在构组赛中，牌手须在比赛开始之前将套牌登记表交至比赛工作人员处。"
         extras:
         - en: |-
             In tournaments using the IPG, not submitting your decklist prior to the announced first round of the tournament is considered Tardiness, and does upgrade.  This is irrespective of byes that might have been awarded.
@@ -505,12 +505,12 @@ chapter:
       - id: mtr-2.7-b004
         en: |-
           In Limited tournaments, decklists must be submitted prior to the start of the first round in which that player participates.
-        zh: 在限制赛中，牌手须在自己亲自参加的首局比赛开始之前将牌表交至比赛工作人员处。
+        zh: "在限制赛中，牌手须在自己参加的第一轮开始之前将套牌登记表交至比赛工作人员处。"
         extras:
         - en: |-
             Constructed decklists need to be turned in before round 1 begins. Limited needs to be turned in before the first round the player is actually playing in begins.   The rules for constructed and limited are effectively the same,  however, sometimes large sealed events may have byes, and in those rare cases players with byes may have different build times. The wording for this rule allows for that possibility without explicitly mentioning byes because WoTC doesn’t have any events that award byes anymore.
           zh: |-
-            构组赛的牌表应当在第一轮开始前提交。限制赛的牌表应当在牌手实际进行比赛的轮次之前提交。这两条规则的本质是相同的。然而，在某些大型现开赛中可能会有轮空，在这些罕见情况下，持有轮空资格的牌手可能会有不同的套牌构组时间。本条规则的措辞之所以如此设计，便是为了涵盖这种可能性，同时又避免了直接提及轮空——因为威世智官方已不再举办任何会给予奖励轮空的赛事了。(译注：奖励轮空是曾经的机制，牌手可通过比赛或者奖励轮空资格，从而在另一场比赛轮空，以1-0开局。)
+            构组赛的套牌登记表应当在第一轮开始前提交。限制赛的套牌登记表应当在牌手实际参加的第一轮开始之前提交。这两条规则的本质是相同的。然而，在某些大型现开赛中可能会有轮空，在这些罕见情况下，持有轮空资格的牌手可能会有不同的套牌构组时间。本条规则的措辞之所以如此设计，便是为了涵盖这种可能性，同时又避免了直接提及轮空——因为威世智官方已不再举办任何会给予奖励轮空的赛事了。(译注：奖励轮空是曾经的机制，牌手可通过比赛或者奖励轮空资格，从而在另一场比赛轮空，以1-0开局。)
     - id: mtr-2.7-g005
       type: paragraph
       blocks:
@@ -522,7 +522,7 @@ chapter:
         - en: |-
             What is logistically possible is up to the judges at an event. Some event have thousands of decklists collected around the same time and trying to find one before they are organized might not be possible. If a player has alerted a judge to an error before they could gain advantage or before the event has begun, please be mindful of this information if unable to provide their list. Additionally, players will now often take a picture of their decklist once they have requested it, for their future use.
           zh: |-
-            是否行事上可行由比赛中的裁判决定。有些比赛可能会在同一时间收集数千张牌表，因此在整理好前从中寻找特定的某张是不可能的。如果牌手在可能从中获得优势或比赛开始前就告知裁判有错误发生，如果此时尚不能为牌手提供牌表，请注意牌手提供的这个信息。此外，如果牌手请求查看了牌表，他们通常会对牌表拍照，以备其将来使用。
+            是否行事上可行由比赛中的裁判决定。有些比赛可能会在同一时间收集数千张套牌登记表，因此在整理完成前，可能无法从中找到某一张特定套牌登记表。如果牌手在可能从中获得优势或比赛开始前就告知裁判有错误发生，如果此时尚不能为牌手提供套牌登记表，请注意牌手提供的这个信息。此外，如果牌手请求查看了套牌登记表，他们通常会对套牌登记表拍照，以备其将来使用。
     - id: mtr-2.7-g006
       type: paragraph
       blocks:
@@ -537,16 +537,16 @@ chapter:
 
             Note that while they have the decklist, it is considered to be notes taken outside of the game so players may only view them while in between games.
           zh: |-
-            某些赛事之所以会公开所有牌表，是为了抵消因瑞士轮阶段的赛事报道而对部分牌手造成的劣势。在单淘汰决胜阶段的限制赛中，你对手获得关于你牌表信息的机会非常小。因此，我们只在构组赛中提供牌表。由于赛事报道，星城公开系列赛也允许8强牌手查看对手的牌表。
+            某些赛事之所以会公开套牌登记表，是为了抵消因瑞士轮阶段的赛事报道而对部分牌手造成的劣势。在单淘汰决胜阶段的限制赛中，你对手获得关于你牌表信息的机会非常小。因此，我们只在构组赛中提供套牌登记表。由于赛事报道，星城公开系列赛也允许8强牌手查看对手的套牌登记表。
 
-            注意，虽然这是他们的牌表，但在比赛中也被视为是游戏外做的笔记，因此牌手只能在两盘游戏间查看。
+            注意，虽然这是牌手的套牌登记表，但也被视为是游戏外做的笔记，因此他们只能在两盘游戏间查看。
     - id: mtr-2.7-g007
       type: paragraph
       blocks:
       - id: mtr-2.7-b007
         en: |-
           Additional information regarding digital decklists can be found in section 2.12 – Electronic Devices.
-        zh: 有关电子牌表的额外规定详见第2.12节 - 电子设备。
+        zh: "有关电子套牌登记表的额外信息详见第2.12节 - 电子设备。"
   - id: mtr-2.8
     chapter: '2.8'
     en: Deck Checks
@@ -570,12 +570,12 @@ chapter:
       - id: mtr-2.8-b002
         en: |-
           A full deck check should not be performed if a player has drawn an opening hand and potentially made mulligan decisions.
-        zh: 如果牌手已经抓好了起手的牌，且很可能已经做好了是否要进行再调度的决定，就不应对其进行完整的套牌检查。
+        zh: "如果牌手已经抓好了起手的牌，且可能已经做好了是否要进行再调度的决定，就不应对其进行完整的套牌检查。"
         extras:
         - en: |-
             Judges can still do a deck check after the opening hand/mulligans have been made, but the cost of a judge error is significantly higher in this case, and is typically not worth the risk unless there is a very specific reason for checking the deck at that exact moment.
           zh: |-
-            裁判在起手/再调度完成后仍可进行套牌检查，但在这种情况下，裁判失误所造成的代价将显著提高，因此通常不值得冒此风险——除非有非常明确的理由，必须在该特定时刻进行检查。
+            裁判在起手/再调度完成后仍可进行套牌检查，但在这种情况下，裁判失误所造成的代价将显著提高，因此通常不值得冒此风险——除非有非常明确的理由，要在恰好那个时刻检查套牌。
   - id: mtr-2.9
     chapter: '2.9'
     en: Appeals to the Head Judge
@@ -617,7 +617,7 @@ chapter:
         - en: |-
             Players are required to be respectful to judges, which includes letting them finish their ruling before disagreeing with them. Players appealing a judge based on perception of the Judge or how they think the judge is going to rule undermines that judge’s authority, and can be considered Unsporting Conduct — Minor.
           zh: |-
-            牌手应该尊重裁判，包括在他们进行完整判决前不反对他们。根据对裁判的观感或是他们认为裁判会如何判决而申述，将破坏这位裁判的权威，并有可能受到举止违背运动道德~轻微的判罚。
+            牌手应该尊重裁判，包括在他们进行完整判决前不反对他们。根据对裁判的观感或是他们认为裁判会如何判决而申述，将破坏这位裁判的权威，并有可能被认定为举止违背运动道德~轻微。
   - id: mtr-2.10
     chapter: '2.10'
     en: Dropping from a Tournament
@@ -629,7 +629,7 @@ chapter:
       - id: mtr-2.10-b001
         en: |-
           Players may drop from a tournament at any time. If a player drops from a tournament before the first round of play has started, they are considered to have not participated in the tournament and will not be listed in the finish order.
-        zh: 牌手随时可自比赛中退出。如果某牌手在比赛第一局开始之前便退出，则该牌手便会被视作未参加本次比赛，不会在比赛的最终排名中列出。
+        zh: "牌手随时可自比赛中退出。如果某牌手在比赛第一轮开始之前便退出，则该牌手便会被视作未参加本次比赛，不会在比赛的最终排名中列出。"
         extras:
         - en: |-
             They are also not considered to have contributed to the attendance total for the event.
@@ -640,7 +640,7 @@ chapter:
       - id: mtr-2.10-b002
         en: |-
           Players choosing to drop from a tournament must inform the Scorekeeper by the means provided for that tournament before the pairings for the next round are generated.
-        zh: 选择退出比赛的牌手必须在下一局的配对完成前，以当次比赛提供的方式通知记分员。
+        zh: "选择退出比赛的牌手必须在下一轮的配对生成前，以当次比赛提供的方式通知记分员。"
         extras:
         - en: |-
             The best way to do this is to designate you are dropping on the match slip.  However, you can go to the SK and drop directly.  If you are dropping from an event, please let the SK know.  After they start generating the next round, they arent going to undo that work to remove you from the event.   You will get paired, and someone is going to be sitting across from an empty seat.  They came to play Magic, and now have to be bored for an hour.
@@ -652,11 +652,11 @@ chapter:
       - id: mtr-2.10-b003
         en: |-
           Players wanting to drop after the Scorekeeper begins pairing for the next round will be paired for that round.
-        zh: 在记分员开始为下一局配对后才提出想要退出比赛的牌手会在该局中被配对。
+        zh: "在记分员开始为下一轮配对后才提出想要退出比赛的牌手会在该轮中被配对。"
         extras:
         - en: |-
             The other alternative would be to withdraw all pairings that were posted, do a repair, repost everything, and make several announcements to try to avoid confusion among those who saw the first set of pairings. Overall this could add noticeable delay to the event.
-          zh: 还有一种方法是取消刚刚公布的所有配对，修正人数，重新公布所有的东西，并进行一些公告，防止看到第一套配对的人产生混淆。总而言之这会显著延误比赛。
+          zh: "还有一种方法是取消刚刚公布的所有配对，修正人数，重新公布所有的东西，并进行一些公告，防止看到第一套配对的人产生混淆。总而言之这可能显著延误比赛。"
         joinAfter:
           en: ' '
           zh: ''
@@ -680,7 +680,7 @@ chapter:
       - id: mtr-2.10-b005
         en: |-
           Players who drop during limited tournaments own the cards that they correctly have in their possession at that time. This includes any unopened or partially drafted booster packs.
-        zh: 自限制赛制比赛中退出的牌手拥有他们当前持有的所有卡牌。这包括未开封或已在轮抽过程中使用的补充包。
+        zh: "自限制赛制比赛中退出的牌手拥有他们当前正确持有的所有卡牌。这包括未开封或已在轮抽过程中使用的补充包。"
         extras:
         - en: |-
             This was clarified for Grand Prix Vegas in 2013 (Modern Masters). Players can take what they have in their hands and go home. This used to primarily cover players who wanted to drop before passing packs for value, but with the new registration procedure, players open the packs they will use, then have another player register. Players can still drop during this portion if there are time constraints/etc, and they get the boosters they originally were handed.
@@ -692,7 +692,7 @@ chapter:
       - id: mtr-2.10-b006
         en: |-
           If a player drops from a tournament after a cut has been made, no other player is advanced as a replacement. If the remaining part of the tournament is single elimination, the highest ranked remaining player receives a bye for the next round instead.
-        zh: 如果牌手在分划赛程之后才退出比赛，则不会有牌手能递补进八强来替代其席位。若比赛接下来的赛程为单淘汰对局，则剩余牌手之中排名最高者将在下一局获得一个轮空。
+        zh: "如果牌手在分划赛程之后才退出比赛，则不会由其他牌手递补晋级。若比赛接下来的赛程为单淘汰对局，则剩余牌手之中排名最高者将在下一轮获得一个轮空。"
         extras:
         - en: |-
             It is rare for a player to voluntarily drop after a cut has been made, but emergencies do happen. However, sometimes a player is dropped involuntarily due to a disqualification. If that occurs, judges should not advance any other players into the Top X. The dropped player’s opponent just gets a bye for that round.
@@ -714,7 +714,7 @@ chapter:
           zh: |-
             在考虑是否允许牌手重新加入比赛时，主审需要审视这会对比赛整体造成何种影响。
 
-            如果牌手没有合法的套牌去比赛，则不能参加比赛中需要轮抽或现开套牌的部分。
+            牌手不得重新加入需要轮抽或现开套牌的赛事部分，因为其不会拥有可用于进行对局的合法套牌。
     - id: mtr-2.10-g005
       type: paragraph
       blocks:
@@ -734,12 +734,12 @@ chapter:
       - id: mtr-2.11-b001
         en: |-
           Players are allowed to take written notes during a match and may refer to those notes while that match is in progress. At the beginning of a match, each player’s note sheet must be empty and must remain visible throughout the match.
-        zh: 牌手可在对局当中进行笔头记录，并可在对局进行过程中参考该些记录。在一局对局开始的时候，每位牌手用于做笔记的纸都应是空白的，且应在整个比赛过程中保持可见。
+        zh: "牌手可在对局当中进行笔头记录，并可在对局进行过程中参考该些记录。在一局对局开始的时候，每位牌手用于做笔记的纸都应是空白的，且应在整个对局过程中保持可见。"
         extras:
         - en: |-
             This rule allows players to write down their opponent’s hand while resolving Thoughtseize. Players can take any kind of notes during their match, and they are allowed to check those notes anytime in the current round.  This does not include notes written before the match.  That is why the note sheet must be blank beforehand.  There are only certain times you can access notes written before the match.
           zh: |-
-            这条规则允许牌手在结算攫取思绪时记录其对手的手牌。牌手可以在一局对局过程中记录任意种类的笔记并且可以在本局对局中任意查看。本条规则的适用范围不包括赛前准备的笔记。正因如此，笔记纸在赛前必须是空白的。仅能在特定时刻，才允许查阅赛前准备的笔记。
+            这条规则允许牌手在结算攫取思绪时记录其对手的手牌。牌手可以在一局对局过程中记录任意种类的笔记并且可以在本轮次中任意查看。本条规则的适用范围不包括赛前准备的笔记。正因如此，笔记纸在赛前必须是空白的。仅能在特定时刻，才允许查阅赛前准备的笔记。
         joinAfter:
           en: ' '
           zh: ''
@@ -751,7 +751,7 @@ chapter:
         - en: |-
             Since a lot of Magic events are multinational ones, players are allowed to take notes in any language they want, even in High Valyrian. Since those notes are only for a player’s personal use, players are not obligated to explain or translate them to their opponent. A judge may ask a player to explain what is on their notes since it is vital for the judge’s job.
           zh: |-
-            由于很多万智牌比赛都有很多国家的牌手参赛，所以牌手可以使用任何语言来记录笔记，甚至是高等瓦雷利亚语。由于这些笔记只是牌手个人使用，牌手没有义务向对手解释或翻译它们。如果对裁判的工作很重要的话，裁判可以要求牌手解释其笔记的内容。
+            由于很多万智牌比赛都有很多国家的牌手参赛，所以牌手可以使用任何语言来记录笔记，甚至是高等瓦雷利亚语。由于这些笔记只是牌手个人使用，牌手没有义务向对手解释或翻译它们。裁判可以要求牌手解释笔记内容，因为这对裁判履行职责至关重要。
     - id: mtr-2.11-g002
       type: paragraph
       blocks:
@@ -774,7 +774,7 @@ chapter:
         - en: |-
             Players may consult notes made outside the match in between games. This is most often used for notes on how to sideboard, which are perfectly fine. If a players are provided their opponent’s deck list, such as during the Top 8 of particular Constructed events (MTR 2.7), this is also the time they may look at them.  Also note that once you have sat for your match, you are not “between games” of that match.
           zh: |-
-            在两盘游戏之间牌手可以查阅在比赛外记录的笔记。这通常是用来记录如何换备，是完全合法的。如果牌手被提供了其对手的套牌登记表，例如某些特定比赛的构筑比赛（[MTR 2.7](#mtr-27-deck-registration-套牌登记)）8强赛，这也是他们可以查看这些牌表的时机。另请注意：当你为一局比赛坐下后，就不再算是“两盘游戏之间”的时间了。
+            在两盘游戏之间牌手可以查阅在本场对局外记录的笔记。这通常是用来记录如何换备，是完全合法的。如果牌手被提供了其对手的套牌登记表，例如某些特定比赛的构组比赛（[MTR 2.7](#mtr-27-deck-registration-套牌登记)）8强赛，这也是他们可以查看这些套牌登记表的时机。另请注意：当你为一局比赛坐下后，就不再算是“两盘游戏之间”的时间了。
         joinAfter:
           en: ' '
           zh: ''
@@ -792,11 +792,11 @@ chapter:
       - id: mtr-2.11-b006
         en: |-
           In tournaments where opponents’ decklists are provided to players, players are not permitted to transcribe their opponent’s entire decklist as part of their notes for the match.
-        zh: 在提供对手牌表的比赛中，不允许将对手的整个牌表转录为比赛笔记的一部分。
+        zh: "在提供对手套牌登记表的比赛中，不允许将对手的整个套牌登记表转录为比赛笔记的一部分。"
         extras:
         - en: |-
             When the TO provides decklists, its considered an outside note the player can reference between games. That does not mean a player can write the list and turn it into a note they can reference during a game.
-          zh: 若主办方提供了牌表，该列表便被视为一种外部笔记，牌手可以在盘间查阅。但这并不意味着牌手可以将该牌表抄写下来，从而将其转化为一份可在游戏进行期间查阅的笔记。
+          zh: "若主办方提供了套牌登记表，该套牌登记表便被视为一种外部笔记，牌手可以在盘间查阅。但这并不意味着牌手可以将该套牌登记表抄写下来，从而将其转化为一份可在游戏进行期间查阅的笔记。"
     - id: mtr-2.11-g005
       type: paragraph
       blocks:
@@ -807,7 +807,7 @@ chapter:
         extras:
         - en: |-
             But not at Competitive Rules Enforcement Level. The bulk of information is in Section 2.12, this is just specifically relaxing what is allowed at Regular Rules Enforcement Level.
-          zh: 但是在竞争级别这是不行的。大部分这方面的信息在MTR 2.12节。关于一般级别比赛中电子设备的使用，这句话宽慰了牌手。
+          zh: "但是在竞争级别这是不行的。大部分这方面的信息在MTR 2.12节。这里只是特别放宽了一般级别赛事中允许使用电子设备的范围。"
     - id: mtr-2.11-g006
       type: paragraph
       blocks:
@@ -831,7 +831,7 @@ chapter:
         - en: |-
             Rules in this section apply also to other parts of the tournament outside of matches, especially drafting and deckbuilding. In Competitive Rules Enforcement Level tournaments we are challenging players’ ability to create the best limited deck they can through card evaluation and deck construction, not just following a flowchart of what cards are best for different archetypes.
           zh: |-
-            这部分规则也适用于比赛之外的比赛其他部分，特别是轮抽以及构组过程中。在竞争级别比赛中，我们考验的是牌手运用其对牌张的评估以及套牌构组技术来构组最好的限制赛套牌的能力，而不是根据一张流程图选择出每种套牌最强的牌张来使用。
+            这部分规则也适用于对局之外的比赛其他部分，特别是轮抽以及构组过程中。在竞争级别比赛中，我们考验的是牌手运用其对牌张的评估以及套牌构组技术来构组最好的限制赛套牌的能力，而不是根据一张流程图选择出每种套牌最强的牌张来使用。
     - id: mtr-2.11-g007
       type: paragraph
       blocks:
@@ -851,7 +851,7 @@ chapter:
         en: |-
           Consulting online sources, such as gatherer.wizards.com, is allowed at Regular Rules Enforcement Level even if they contain a small amount of strategic information. If a player wishes to view Oracle text in private, they must ask a judge.
         zh: |-
-          在执法严格度为一般级别的比赛中,牌手可查询线上资源（例如gatherer.wizards.com）。如果牌手想要私下查阅 Oracle 的叙述,则必须询问裁判。
+          在执法严格度为一般级别的比赛中，即使线上资源含有少量战略信息，牌手可查询线上资源（例如gatherer.wizards.com）。如果牌手想要私下查阅 Oracle 的叙述，则必须询问裁判。
         extras:
         - en: |-
             At Regular Rules Enforcement Level events players can access Oracle by themselves, yet you need to show what they are doing to the opponent as well. Of course players are always allowed to ask a judge for current Oracle text in private as long as they are able to identify the card they are looking for, either by name, or by description.
@@ -898,12 +898,12 @@ chapter:
       - id: mtr-2.12-b002
         en: |-
           For events that use digital decklists, players may only access the decklists of other players prior to the start of a game or in between games. Digital decklists may not be referenced during games.
-        zh: 对于使用电子牌表的赛事，牌手只能在对局开始前或两盘游戏之间浏览对手的牌表，在对局期间则不能查看。
+        zh: "对于使用电子套牌登记表的赛事，牌手只能在一盘游戏开始前或两盘游戏之间浏览对手的套牌登记表，在游戏期间则不能查看。"
         extras:
         - en: |-
             There are some events that use digital tools and allow you to access your opponents decklist.  If you are in an event that makes this available, your opponents decklist is considered an outside note, and must be put away at the beginning of the first game. Accessing the decklist during the game is treated the same as if you accessed outside notes during a game with respect to the recognition of an infraction being committed
           zh: |-
-            在某些采用数字化工具的赛事中，会允许牌手查阅对手的牌表。如果你参加的赛事提供此功能，那么对手的套牌列表便被视为一种外部笔记，且必须在第一盘游戏开始时收好。就违规行为的认定而言，在游戏进行期间查阅该列表，与在游戏中查阅其他外部笔记将被同等对待。
+            在某些采用数字化工具的赛事中，会允许牌手查阅对手的套牌登记表。如果你参加的赛事提供此功能，那么对手的套牌登记表便被视为一种外部笔记，且必须在第一盘游戏开始时收好。就违规行为的认定而言，在游戏进行期间查阅该列表，与在游戏中查阅其他外部笔记将被同等对待。
         joinAfter:
           en: ' '
           zh: ''
@@ -951,7 +951,7 @@ chapter:
         en: |-
           Some Competitive and Professional Rules Enforcement Level tournaments use video for live streaming or replay broadcast of matches. Players may decline to appear on camera; however, players in the playoff matches of Professional Rules Enforcement Level tournaments may not decline to appear on camera.
         zh: |-
-          一些「竞争」级别及「专业」级别的比赛会将实时视频用于网络现场直播或对局过程回放。牌手可拒绝被摄入镜头；但参加专业级别执法严格度比赛之决胜局阶段比赛的牌手不得拒绝出镜。
+          一些「竞争」级别及「专业」级别的比赛会将实时视频用于网络现场直播或对局过程回放。牌手可拒绝被摄入镜头；但参加专业级别执法严格度比赛之决胜局阶段对局的牌手不得拒绝出镜。
         extras:
         - en: |-
             Typically every player fills out a press release form at larger events with video coverage. Players can refuse for reasons from being shy to being in witness protection, but all Top 8 matches are on coverage.
@@ -975,7 +975,7 @@ chapter:
       - id: mtr-2.13-b003
         en: |-
           Spectators are also permitted to record matches provided that they do so unobtrusively.
-        zh: 在举止不过分夸张的情况下，旁观者也可以记录对局进行过程。
+        zh: "旁观者也可以记录对局，但不得因此妨碍牌手或赛事进行。"
         extras:
         - en: |-
             This typically takes the form of a buddy or helper recording the play so the player can review after the fact.  Its not common, but it can happen.  It’s typically considered safe because spectators can’t share those notes with a player during play.  However if the spectator is being obtrusive or disruptive, the opponent and/or the judge can ask the spectator to leave.

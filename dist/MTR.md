@@ -1,32 +1,42 @@
 # 版本说明
 
+***MTR正文***
+
 MTR正文翻译版本：2026年2月27日
 
-本文件新版中文译者：吴振宇、李思扬
+> 关于版本更新，MTR提到“本文档的更新，计划于售前赛之后的星期一发布”。但实际上威世智当前发布的最新日期仍是2026年2月27日。此问题已上报至规则经理及相关团队，等待解决
 
-过往翻译贡献者：许兆本
+本文件新版中文译者：鼠鼠
+
+特别鸣谢：精解负责人 Bryan Prillaman 为新版正文译文付出了宝贵的支持
+
+过往翻译贡献者：许兆本、吴振宇、李思扬
+
+***MTR精解***
 
 MTR精解（Annotated MTR）是对MTR逐字逐句的分析及解释。MTR是一份非常浓缩的文件，解释性的额外说明很少。因为文件中的每一句话都是有意义的，这份MTR精解的宗旨在于解析出隐藏于这些字句中的详细细节。它可以用作2级裁判的学习材料、为回归的裁判刷新知识、解决裁判间对问题的争论等，但它最主要的目的是教育。此文档的英文版位于裁判官方博客，如果你发现问题、或想要提供建议，请发邮件给Amtrfeedback@gmail.com。
 
 在本文件中，精解部分在对应的正文下方用方框包裹。形如：
 
->这是一段注解
+> 这是一段注解
 
-MTR精解翻译版本：2025年7月26日
+MTR精解翻译日期：2025年7月26日
+
+本文件新版中文译者：鼠鼠
+
+特别鸣谢：精解负责人 Bryan Prillaman 为新版精解译文付出了宝贵的支持
 
 MTR精解初版翻译团队：申成皓、陈锐鸣、常雨桐、吕家恺、杜昊
 
 决胜依夏兰版本更新：杜昊
 
-2025_7_26版本更新：鼠鼠
+***更多支持***
 
-特别鸣谢：精解负责人 Bryan Prillaman 为最新版本精解译文付出了宝贵的支持
+当前文件来源于 mtr-zh 项目。此项目支持定时检测官方文件更新、官方文件解析及差异对比、CAT校对工作流、结构化文件输出，并提供术语表、翻译批注及历史版本。
 
-克隆仓库：https://github.com/EmoShuShu/AMTR_2025
+项目地址：https://github.com/EmoShuShu/mtr-zh
 
-克隆仓库提供PDF文件、更新列表以及创作者工具
-
-如精解部分有错漏，请直接在 GitHub Issues 提交反馈。亦可发邮件 Zjjshushu@outlook.com 。
+请通过大学院废墟提交反馈：https://mtgch.com/feedback ，亦可发邮件至 Zjjshushu@outlook.com 。
 
 # 目录
 
@@ -36,7 +46,7 @@ MTR精解初版翻译团队：申成皓、陈锐鸣、常雨桐、吕家恺、�
 - [MTR 1. Tournament Fundamentals 比赛基本要素](#mtr-1-tournament-fundamentals-比赛基本要素)
   - [MTR 1.1 Tournament Types 比赛种类](#mtr-11-tournament-types-比赛种类)
   - [MTR 1.2 Publishing Tournament Information 比赛信息的发布](#mtr-12-publishing-tournament-information-比赛信息的发布)
-  - [MTR 1.3 Tournament Roles 比赛职责](#mtr-13-tournament-roles-比赛职责)
+  - [MTR 1.3 Tournament Roles 比赛角色](#mtr-13-tournament-roles-比赛角色)
   - [MTR 1.4 Participation Eligibility 参赛资格](#mtr-14-participation-eligibility-参赛资格)
   - [MTR 1.5 Registration 登记](#mtr-15-registration-登记)
   - [MTR 1.6 Tournament Organizer 比赛主办人](#mtr-16-tournament-organizer-比赛主办人)
@@ -132,9 +142,9 @@ MTR精解初版翻译团队：申成皓、陈锐鸣、常雨桐、吕家恺、�
   - [MTR 10.4 Pairing Algorithm 配对算法](#mtr-104-pairing-algorithm-配对算法)
 - [Appendix A—Changes From Previous Versions 与过往版本之间的更动](#appendix-achanges-from-previous-versions-与过往版本之间的更动)
 - [Appendix B—Time Limits 时间限制](#appendix-btime-limits-时间限制)
-- [Appendix C—Tiebreaker Explanation 平分处理释疑](#appendix-ctiebreaker-explanation-平分处理释疑)
-- [Appendix D—Recommended Play Booster Mix for Limited Tournaments 限制赛中推荐的补充包构成](#appendix-drecommended-play-booster-mix-for-limited-tournaments-限制赛中推荐的补充包构成)
-- [Appendix E—Recommended Number of Rounds in Swiss Tournaments 瑞士式比赛中推荐进行的局数](#appendix-erecommended-number-of-rounds-in-swiss-tournaments-瑞士式比赛中推荐进行的局数)
+- [Appendix C—Tiebreaker Explanation 同分处理释疑](#appendix-ctiebreaker-explanation-同分处理释疑)
+- [Appendix D—Recommended Play Booster Mix for Limited Tournaments 限制赛中推荐的常规补充包构成](#appendix-drecommended-play-booster-mix-for-limited-tournaments-限制赛中推荐的常规补充包构成)
+- [Appendix E—Recommended Number of Rounds in Swiss Tournaments 瑞士式比赛中推荐进行的轮数](#appendix-erecommended-number-of-rounds-in-swiss-tournaments-瑞士式比赛中推荐进行的轮数)
 - [Appendix F—Rules Enforcement Levels of Programs 各比赛计划的执法严格度](#appendix-frules-enforcement-levels-of-programs-各比赛计划的执法严格度)
 
 # Magic: The Gathering Tournament Rules 万智牌比赛规则
@@ -143,11 +153,11 @@ MTR精解初版翻译团队：申成皓、陈锐鸣、常雨桐、吕家恺、�
 
 The Magic: The Gathering (“Magic”) Tournament Rules provides the infrastructure used to run Magic tournaments by defining appropriate rules, responsibilities, and procedures to be followed in all sanctioned Magic tournaments.
 
-本份文档的目的在于：通过厘清相应的规则、责任及在一切受DCI认证的万智牌比赛中均须遵守之行事程序，从而为举办万智牌的比赛奠定基础。
+本份文档的目的在于：通过厘清相应的规则、责任及在一切万智牌认证比赛中均须遵守之行事程序，从而为举办万智牌的比赛奠定基础。
 
 DCI-sanctioned tournaments are to be run consistently regardless of their location. This ensures equal treatment of players in different regions and enables their smooth transition to international tournaments. All players are treated equally and share responsibilities according to the Rules Enforcement Level (REL) of the tournament. Both players and officials should cooperate to achieve their common goal of running a proper DCI-sanctioned tournament. Players and officials must treat each other in a fair and respectful manner, following both the rules and the spirit in which those rules were created. They are responsible for following the most current version of the Magic Tournament Rules and Magic: The Gathering Comprehensive Rules. Spectators have their own set of responsibilities. Individuals violating DCI rules are subject to penalties defined by the appropriate document for the tournament’s Rules Enforcement Level.
 
-无论举办地点为何，DCI认证的比赛都应依照此标准进行。此举能保证身处不同地域的牌手都能得到相同的待遇，同时也使得他们能够顺利地融入国际比赛之中。所有的牌手都应平等相待，并依据赛事所采取的执法严格度（REL）共担责任。牌手和工作人员应该携手合作，以达成他们共同的目标～举办一场正规的DCI认证比赛。牌手和工作人员须坦诚相待，相互尊敬，共同遵守这些规则及其制订精神。他们都应遵从最新版本的《万智牌比赛规则》（MTR）以及《万智牌完整规则》（CR）。旁观者自身也有需担负的责任。违反了DCI规则的人，将根据比赛的执法严格度对应文档中载明之内容，受到相应的处分。
+无论举办地点为何，DCI认证的比赛都应依照此标准进行。此举能保证身处不同地域的牌手都能得到相同的待遇，同时也使得他们能够顺利地融入国际比赛之中。所有的牌手都应平等相待，并依据赛事所采取的执法严格度（REL）共担责任。牌手和工作人员应该携手合作，以达成他们共同的目标～举办一场正规的DCI认证比赛。牌手和工作人员须坦诚相待，相互尊敬，共同遵守这些规则及其制订精神。他们都应遵从最新版本的《万智牌比赛规则》（MTR）以及《万智牌完整规则》（CR）。旁观者也有自身需担负的责任。违反了DCI规则的人，将根据比赛的执法严格度对应文档中载明之内容，受到相应的处分。
 
 Information in this document may contradict (or have information not contained in) the Comprehensive Rules. In such cases, this document takes precedence.
 
@@ -163,11 +173,11 @@ Wizards of the Coast reserves the right to alter these rules, as well as the rig
 
 Updates to this document are scheduled to be announced the Monday after each Prerelease. There may be additional dates in which updates to the legality of individual cards in formats contained in this document will be announced. Those dates will be communicated with at least 4 weeks’ notice. Other updates not involving updates to card legality may occur without prior announcement.
 
-本文档的更新，计划于售前赛之后的星期一发布。可能会发生需要更改各赛制可用牌张规定，而在下列表定时间之外更新本文档的情况。此类例外修订之公告时间均会提前4周告知。其余不影响牌张可用性之更改，则可能会在未事前告知的情况下径行修订，敬请注意。
+本文档的更新，计划于售前赛之后的星期一发布。此外，也可能另行安排日期，公布本文档所列赛制中牌张可用性的更新。此类例外修订均会提前4周告知。其余不影响牌张可用性之更改，则可能会在未事前告知的情况下径行修订，敬请注意。
 
 The latest versions are available at https://wpn.wizards.com/en/rules-documents.
 
-最新的版本可于 http://wpn.wizards.com/en/document/magic-gathering-tournament-rules 找到。
+最新的版本可于 https://wpn.wizards.com/en/rules-documents 找到。
 
 # MTR 1. Tournament Fundamentals 比赛基本要素
 
@@ -191,7 +201,7 @@ There are two major tournament formats: Limited and Constructed. Each has rules 
 
 >Limited formats include any format in which a player constructs a deck during the event — e.g., draft, sealed deck, and mini masters. Constructed formats include any format in which a player constructs their deck before the event. The most popular constructed formats are Standard, Pioneer, Modern, and Legacy.  Some ways people play are not sanctionable formats such as Old School or do not well fit into the MTR because of being multiplayer like Commander.
 >
->限制赛包括任何需要牌手在比赛过程中构筑套牌的赛制——例如轮抽赛，现开赛以及单包赛。构组赛包括任何需要牌手在比赛前构组套牌的赛制。最流行的构组赛制有标准赛，先驱赛，近代赛以及薪传赛。社群中的某些玩法并非认证赛制（例如复古赛），或是因其多人游戏属性（例如指挥官）而不能完全适用《万智牌比赛规则》。
+>限制赛制包括任何需要牌手在比赛过程中构组套牌的赛制——例如轮抽赛，现开赛以及单包赛。构组赛制包括任何需要牌手在比赛前构组套牌的赛制。最流行的构组赛制有标准赛，先驱赛，近代赛以及薪传赛。某些玩法并非认证赛制（例如复古赛），或是因其多人游戏属性（例如指挥官）而不能完全适用《万智牌比赛规则》。
 
 ## MTR 1.2 Publishing Tournament Information 比赛信息的发布
 
@@ -203,9 +213,9 @@ Wizards of the Coast reserves the right to publish DCI-sanctioned tournament inf
 >
 >At Premier events like Grand Prix and Pro Tours, Wizards of the Coast often has online coverage of the event. This section is explicitly state they are allowed to publish lists. Tournament Organizers also have the right to publish this information after the event ends, but some TOs receive permission to handle the coverage similar to Wizards. For example, Star City Games Opens regularly publish decklists on the Star City Games website during the event or Top 8.
 >
->除了在一些会将牌手的套牌登记表在赛前向对手共享的重要比赛外，在比赛结束之前，套牌登记表都不应该对外公开。这是为了尽量减少因为报道团队透露套牌登记表而对一些牌手带来的获利。威世智有权发布该信息并不意味着裁判或比赛主办人必须记录这些信息。
+>除了在一些会将牌手的套牌登记表在每轮开始前向对手共享的重要比赛外，在比赛结束之前，套牌登记表都不应该对外公开。这是为了尽量减少因为报道团队透露某些套牌登记表所造成的优势。威世智有权发布该信息并不意味着裁判或比赛主办人必须记录这些信息。
 >
->在例如大奖赛和专业赛这样的重要比赛中，威世智通常会对比赛进行线上报道。本章节的内容明确规定了他们有权利公布相关内容。比赛主办人同样有权利在比赛结束时公布此类信息，一些比赛主办人同样有权利与威世智采用同样的方式公布信息。例如，[星城公开赛](http://www.starcitygames.com/)会在比赛中或八强决赛中在他们的网站上发布套牌登记表的内容。
+>在例如大奖赛和专业赛这样的重要比赛中，威世智通常会对比赛进行线上报道。本章节的内容明确规定了他们有权公布套牌登记表。比赛主办人同样有权在比赛结束后公布此类信息，但一些比赛主办人会获得许可，以类似威世智的方式进行赛事报道。例如，[星城公开赛](http://www.starcitygames.com/)会在比赛中或八强阶段中在他们的网站上发布套牌登记表的内容。
 
 Wizards of the Coast reserves the right to publish penalty and suspension information.
 
@@ -217,17 +227,17 @@ Wizards of the Coast reserves the right to publish penalty and suspension inform
 >
 >While this statement says that Wizards can publish a list of players who are suspended from the game, they do not. This decision was made in 2019. Since then, outside of specific public articles, there is no way to tell if a player is suspended. If a Judge or tournament official attempts to register a suspended player, the Wizards event software will notify them, assuming they didn’t just use a new email address or DCI number.
 >
->裁判必须作出充分的调查并严肃认真地做出判罚，因为处罚信息可能会记载在威世智的网页信息中。
+>裁判必须严肃认真地对待所有调查及处罚信息，因为这些信息可能最终出现在威世智的网页信息中。
 >
 >威世智通常会在专业赛期间就取消资格或者其他影响较大的处罚做出报告。
 >
->尽管此条款声明威世智可以公布被停权牌手的名单，但他们并不会这样做。该决定于2019年做出。自此以后，除了特定的公开文章外，外界将无法得知一名牌手是否处于停权状态。如果裁判或赛事工作人员尝试为一名被停权的牌手进行注册，威世智官方赛事软件会向其发出提醒，前提是该牌手没有使用新的邮箱地址或DCI号码。
+>尽管此条款声明威世智可以公布被停权牌手的名单，但他们并不会这样做。该决定于2019年做出。自此以后，除了特定的公开文章外，外界将无法得知一名牌手是否处于停权状态。如果裁判或赛事工作人员尝试为一名被停权的牌手进行注册，威世智赛事软件会向其发出提醒，前提是该牌手没有使用新的邮箱地址或DCI号码。
 
-## MTR 1.3 Tournament Roles 比赛职责
+## MTR 1.3 Tournament Roles 比赛角色
 
 The following roles are defined for tournament purposes:
 
-依比赛的角度，定义比赛相关职责如下：
+为比赛之目的，定义比赛相关角色如下：
 
 * Tournament Organizer
 
@@ -255,21 +265,21 @@ The following roles are defined for tournament purposes:
 
 The first four roles above are considered tournament officials. The Head Judge and floor judges are collectively considered judges. A single individual may act in any combination of tournament official roles. Individuals who are not judges at a tournament are spectators in any match in which they are not playing. Members of the press are also considered spectators.
 
-上述职责中，前四者视为比赛工作人员。主审和巡场裁判统称「裁判」。数种不同的职责可以由同一位人士来兼任。在比赛中，不担任裁判的个人于其不参与的对局中视作旁观者。媒体记者亦视作旁观者。
+上述角色中，前四者视为比赛工作人员。主审和巡场裁判统称「裁判」。一人可以兼任任意多个比赛工作人员角色。在比赛中，不担任裁判的个人于其不参与的对局中视作旁观者。媒体人员亦视作旁观者。
 
 >It is possible for one person have multiple roles during at a small tournament. However, at larger events tournament officials typically only have a single role. Any player is a spectator of the matches taking place in nearby seats. All individuals that are not tournament officials of an event, including those with or without a DCI number, are considered spectators.
 >
 >Players and Spectators are expected to follow all instruction given by Tournament Officials, therefore it’s important to know who that title applies to. It’s also important to define each of these roles in detail, which luckily the MTR does for us in Sections 1.6-1.11, in the order listed above.
 >
->在小规模的比赛中，一个人可能会身兼数职。在规模较大的比赛中，比赛工作人员通常只担任单一角色。处于比赛桌附近的位置的牌手便属于旁观者。
+>在小规模的比赛中，一个人可能会身兼数职。在规模较大的比赛中，比赛工作人员通常只担任单一角色。牌手对于附近座位上正在进行的对局均视作旁观者。所有非比赛工作人员的个人，无论他们是否有DCI号，都被当作旁观者。
 >
->所有非比赛工作人员的个人，无论他们是否有DCI号，都被当作旁观者。牌手及旁观者都应遵从比赛工作人员给出的指示，因此需要明确认识每个角色的职责。上述的角色也应当被明确定义，这在[MTR的1.6～1.11](#目录)中有详细的说明。
+>牌手及旁观者都应遵从比赛工作人员给出的指示，因此需要明确认识每个角色的职责。上述的角色也应当被明确定义，这在[MTR的1.6～1.11](#目录)中有详细的说明。
 
 ## MTR 1.4 Participation Eligibility 参赛资格
 
 Anyone is eligible to participate as a player in a DCI-sanctioned tournament except for:
 
-任何人都有资格以牌手身份参加DCI认证的积分赛，但以下除外：
+任何人都有资格以牌手身份参加DCI认证比赛，但以下除外：
 
 * Individuals currently suspended by the DCI. Individuals currently suspended from the DCI may not act as tournament officials;
 
@@ -277,7 +287,7 @@ Anyone is eligible to participate as a player in a DCI-sanctioned tournament exc
 
 >This is kind of the definition of suspended or banned.
 >
->这些牌手指的是被停权或禁赛的牌手。
+>这基本上就是停权或禁赛的定义。
 
 * Other individuals specifically prohibited from participation by DCI or Wizards of the Coast policy (such determination is at Wizards of the Coast’s sole discretion);
 
@@ -301,11 +311,11 @@ Anyone is eligible to participate as a player in a DCI-sanctioned tournament exc
 
 >Federal, state, and local laws supersede any rules set forth by Wizards of the Coast. For example, if a player isn’t allowed within 500 ft of a particular store, employee, or other players because of a restraining order or some other legal limitations, he or she can’t play. Being able to play is a privilege, not a right, and extenuating legal circumstance may prevent people from playing.The store owner has the right to bar anyone from their store or venue for any reason they see fit. Typically store owners only use this as a last resort for recurring problems players, or in the case of theft. Wizards cannot force a store or venue to allow a specific individual.
 >
->联邦、州或当地法律优先于一切威世智制定的规则。例如，如果由于禁制令或其他法令限制，某牌手不允许与店家、员工或其他牌手距离低于500英尺，那么该牌手不能参与游戏。能够参加比赛是一项特权而非基本权利，对于合法条件的漠视会将参赛者拒而远之。店家有权利以任何理由拒绝他们认为不合适的牌手进店。一般来说，店家将其作为驱离有问题的牌手或者防止偷盗的最后手段。威世智无法强制店家或比赛场地接纳特定个人。
+>联邦、州或当地法律优先于一切威世智制定的规则。例如，如果由于禁制令或其他法令限制，某牌手不允许与店家、员工或其他牌手距离低于500英尺，那么该牌手不能参与游戏。能够参加比赛是一项特权而非基本权利，而特殊的法律情形可能使一些人无法参赛。店家有权以其认为适当的任何理由禁止任何人进入其店铺或场地。一般来说，店家将其作为驱离有问题的牌手或者发生偷盗行为时的最后手段。威世智无法强制店家或比赛场地接纳特定个人。
 
 * Tournament Organizers may choose to age restrict any Regular REL events that they organize. They must clearly indicate this in their marketing for the event on the Store and Event Locator description as well as any other place they display the event information. (i.e., Tournament Organizers may advertise an age 16 and under Friday Night Magic).
 
-* 比赛主办人可针对其主办的一般级别执法严格度赛事设置年龄限制。它们必须在店内为此活动进行的营销宣传、「Event Locator」上的说明以及其他显示赛事信息的场合清楚标明此限制。（即，比赛主办人可以宣传仅限16岁以下人士参加的周五认证赛。）
+* 比赛主办人可针对其主办的一般级别执法严格度赛事设置年龄限制。他们必须在店内为此活动进行的营销宣传、「Store and Event Locator」上的说明以及其他显示赛事信息的场合清楚标明此限制。（即，比赛主办人可以宣传仅限16岁及以下人士参加的周五认证赛。）
 
 Anyone is eligible to participate as a tournament official (Tournament Organizer, Head Judge, floor judge or Scorekeeper) for a tournament except for:
 
@@ -325,11 +335,11 @@ Anyone is eligible to participate as a tournament official (Tournament Organizer
 
 >This rule is to prevent conflicts of interest.  You cannot rule impartially in a tournament you are hoping to gain from. However, there are specific low-stakes tournaments where the conflict of interest is sufficiently mitigated.  These exceptions are outlined in the next section.
 >
->本条规则旨在防止利益冲突。你无法在一场你希望从中获益的比赛中公正地执法。然而，在某些特定的低级别赛事中，这种利益冲突得到了充分的缓和。这些例外情况将在下一节中进行概述。
+>本条规则旨在防止利益冲突。你无法在一场你希望从中获益的比赛中公正地执法。然而，在某些利害关系较小的赛事中，这种利益冲突得到了充分的缓和。这些例外情况将在下一节中进行概述。
 
 Tournament officials may play in a DCI-sanctioned, rated tournament for which they are a tournament official if (and only if) the tournament is of the following types:
 
-在DCI认证比赛中担任职务的工作人员不得参加该场比赛，但当（且仅当）该场比赛属于下列类别的比赛时，不在此限：
+在DCI认证的积分赛中担任职务的工作人员不得参加该场比赛，但当（且仅当）该场比赛属于下列类别的比赛时，不在此限：
 
 * Friday Night Magic
 
@@ -361,7 +371,7 @@ Tournament officials may play in a DCI-sanctioned, rated tournament for which th
 
 If one or more tournament officials play in the tournament, it must be run at Regular Rules Enforcement Level. If tournament officials play in the tournament and the tournament is not one of the allowed types listed above, the tournament will be invalidated. Tournament officials are required to officiate tournaments fairly and without regard to their own self-interest.
 
-若某场比赛有比赛工作人员参加，则该比赛必须以一般级别的执法严格度来举行。若比赛工作人员参加不在上述许可列表当中的比赛，则该场比赛无效。比赛工作人员及职员行使职责时，必须保证公平公正、不含私心。
+若某场比赛有比赛工作人员参加，则该比赛必须以一般级别的执法严格度来举行。若比赛工作人员参加不在上述许可列表当中的比赛，则该场比赛无效。比赛工作人员行使职责时，必须保证公平公正、不含私心。
 
 The owners of organizations that run Premier Events are not permitted to play in those tournaments, even if the owner is not listed as a tournament official (organizer, judge, and/or scorekeeper) for that tournament.
 
@@ -369,7 +379,7 @@ The owners of organizations that run Premier Events are not permitted to play in
 
 Premier Events include the following tournaments: Magic: The Gathering World Championship, Pro Tour, Magic: The Gathering Limited Championship, Pro Tour Qualifier, Spotlight Series, Regional Championship, Regional Championship Qualifier.
 
-下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、万智牌限制冠军赛、专业赛预选赛、聚光灯系列赛、区域冠军赛、区域冠军赛预选赛。
+下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、万智牌限制冠军赛、专业赛资格赛、聚光灯系列赛、区域冠军赛、区域冠军赛资格赛。
 
 Some tournaments have additional criteria regarding player and tournament official eligibility (e.g., invitation-only tournaments, such as World Championship, Pro Tour, Limited Championship, and Regional Championships).
 
@@ -377,7 +387,7 @@ Some tournaments have additional criteria regarding player and tournament offici
 
 The Premier Tournament Invitation Policy defines specific eligibility rules with regards to certain types of invitation-only Premier Tournaments.
 
-针对某些只对受邀牌手开放的比赛，《重要比赛邀请方针》中规定了如何获取资格的规则。
+针对某些只对受邀牌手开放的比赛，《重要比赛邀请方针》中规定了具体的参赛资格规则。
 
 Individuals with questions regarding their tournament eligibility should contact PremierPlay@wizards.com.
 
@@ -387,9 +397,9 @@ Individuals with questions regarding their tournament eligibility should contact
 >
 >The “tournaments in which the official Wizards of the Coast tournament fact sheet specifically permits officials of that tournament to play” does not have anything under that category, but is an option for the future. The general policy is that all Regular Rules Enforcement Level events someone can both play and act as a Tournament Official, for Competitive and Professional they cannot.
 >
->所有的竞争级别以及专业级别的比赛要求区分牌手和裁判，这是为了避免造成一些潜在问题。如果某牌手正在和执法该比赛的裁判对局，且比赛的奖池又很大，那么这位牌手很可能会质疑裁判的公正性，尤其是在他想询问关于手中的牌的相关信息时。
+>所有执法严格度为竞争级别以及专业级别的比赛要求区分牌手和裁判，这是为了避免造成一些潜在问题。如果某牌手正在和执法该比赛的裁判对局，且比赛的奖池又很大，那么这位牌手很可能会质疑裁判的公正性，尤其是在他想询问关于手中的牌的相关信息时。
 >
->暂时没有“在正式的威世智比赛说明文档上特别注明该场比赛之工作人员亦可参赛的比赛”这样的分类，这里的标注仅为了给将来带来方便。目前的一般方针是，一般级别的比赛工作人员也可以参加，但是竞争级别和专业级别则不行。
+>目前没有任何比赛属于“在正式的威世智比赛说明文档上特别注明该场比赛之工作人员亦可参赛的比赛”这一类别，这里的标注仅为了给将来带来方便。目前的一般方针是，一般级别的比赛工作人员也可以参加，但是竞争级别和专业级别则不行。
 
 ## MTR 1.5 Registration 登记
 
@@ -403,7 +413,7 @@ In order to participate in Magic: The Gathering tournaments, players must be abl
 
 For tournaments run using the EventLink tournament management software, players must provide a Wizards Account and/or a first and last name. Players without a Wizards Account should obtain one from https://myaccounts.wizards.com.
 
-对于使用EventLink软件运行的赛事，牌手必须提供威士智账号和/或姓名。没有威士智账号的牌手可以通过 https://myaccounts.wizards.com 注册。
+对于使用EventLink软件运行的赛事，牌手必须提供威世智账号和/或姓名。没有威世智账号的牌手可以通过 https://myaccounts.wizards.com 注册。
 
 >Eventlink is the current software for store level events.  It prefers Wizards Account information.  First/Last name can cause problems.
 >
@@ -449,17 +459,17 @@ The Tournament Organizer of a tournament is responsible for all tournament logis
 
 * Providing all materials necessary to operate the tournament (e.g., product for Limited format tournaments).
 
-* 提供所有用来举办该比赛的道具（如：用于限制赛的产品）。
+* 提供所有用来举办该比赛的道具（如：用于限制赛制的产品）。
 
 >Tournament Organizers need to ensure that sealed product and other required materials are available for limited format tournaments and that deck list sheets available for constructed tournaments. Those are pretty straightforward. The Tournament Organizer is also responsible for providing a lot of other things that players may take for granted — e.g., a computer and printer to take results and print pairings, tape, places to post pairings, round clock, and scissors/paper cutter to cut results slips. Some of these aren’t required but make the event go smoother, and typical Tournament Organizers will provide these. Some may find alternate ways to do some of the tasks these are used for, such as using a large TV to display pairings.
 >
->比赛主办人需确保限制赛的产品数量和其他相关物料并确保为构筑赛制提供套牌登记表。比赛主办人也需要提供一些其他的必需品——例如记录成绩和打印配对的电脑和打印机，计时器，用于切开成绩条的剪刀或裁纸机。上述的某些物品可能不是必备的，但是无疑会使比赛的运行更流畅，一般来说比赛主办人都会提供这样物资。当然可以用一些其他的方式来替代上述物料，例如用大电视来显示配对。
+>比赛主办人需确保限制赛的产品数量和其他相关物料并确保为构组赛提供套牌登记表。比赛主办人也需要提供一些其他的必需品——例如记录成绩和打印配对的电脑和打印机，计时器，用于切开成绩条的剪刀或裁纸机。上述的某些物品可能不是必备的，但是无疑会使比赛的运行更流畅，一般来说比赛主办人都会提供这样物资。当然可以用一些其他的方式来替代上述物料，例如用大电视来显示配对。
 
 ## MTR 1.7 Head Judge 主审
 
 Sanctioned tournaments require the physical presence of a Head Judge during play to adjudicate disputes, interpret rules, and make other official decisions. The Head Judge is the final judicial authority at any DCI-sanctioned tournament and all tournament participants are expected to follow their interpretations. Although it is beneficial, the Head Judge does not have to be certified.
 
-认证的比赛在进行时需要一位主审在场裁决争议、解释规则，及做出其他正式的决定。在所有的DCI认证赛中，主审都拥有最终裁判权，所有的参赛者都应当遵从主审的指示。虽然由认证裁判担任主审为佳，但担任主审者不需具备认证资格。
+认证的比赛在进行时需要一位主审在场裁决争议、解释规则，及做出其他正式的决定。在所有的DCI认证赛中，主审都拥有最终裁判权，所有的参赛者都应当以主审的解释为准。虽然由认证裁判担任主审为佳，但担任主审者不需具备认证资格。
 
 >The Head Judge of a tournament is not necessarily a certified Judge. Often the Head Judge of an event will simply be a store employee or the Tournament Organizer themselves. Most Competitive Rules Enforcement Level events will have a certified Head Judge but this is not necessarily required. Note it is recommended that you have at least a Level 2 judge for any Competitive REL events.
 >
@@ -477,7 +487,7 @@ The Head Judge’s responsibilities include:
 >
 >The Head Judge should be a ready resource for Floor Judges to assist in making sure players get the best possible call. In addition to appeals discussed in the next bullet, investigations that may lead to a disqualification are among the most important tasks a Head Judge performs.
 >
->在大型比赛中，主审的主要职责并不是第一时间去处理裁判呼叫。有时主审会因为处理比赛的其他事物而无法处理呼叫、或者试图让一个有空的巡场裁判来处理呼叫。
+>在大型比赛中，主审未必是主要负责处理裁判呼叫的人。有时主审会因为处理比赛的其他事物而无法处理呼叫、或者试图让一个有空的巡场裁判来处理呼叫。
 >
 >主审应当是巡场裁判的可靠后援，以协助他们确保牌手能得到最优的判决。除了下一条目中将讨论的上诉外，那些可能导致取消资格的调查，亦是主审所执行的最重要的任务之一。
 
@@ -487,7 +497,7 @@ The Head Judge’s responsibilities include:
 
 >Players are allowed to appeal the decision of any Floor Judge to the Head Judge. The Head Judge is the final arbiter of all rulings and sometimes that will mean reversing the decision of a Floor Judge. If a decision is reversed, it is vital that the Head Judge explain the reasoning behind the reversal to both the players and the judge.
 >
->牌手可以不满巡场裁判的判罚并上诉至主审。主审是判罚的最终裁决者，有时甚至可以推翻巡场裁判的判罚。如果后者的判罚被推翻，主审需同时向该巡场裁判和牌手解释其中的原因。
+>牌手可以就任何巡场裁判的判罚向主审提出上诉。主审是判罚的最终裁决者，有时甚至可以推翻巡场裁判的判罚。如果后者的判罚被推翻，主审需同时向该巡场裁判和牌手解释其中的原因。
 
 * Coordinating and delegating tasks to floor judges as needed.
 
@@ -495,11 +505,11 @@ The Head Judge’s responsibilities include:
 
 >In tournaments with multiple judges, the Head Judge is responsible for assigning and organizing Team Leads and teams. The Head Judge creates the teams (at big events sometimes with the assistance of the Tournament Organizer or Judge Manager), and makes sure everyone’s tasks are understood. The Head Judge is also responsible for overseeing other judges at the event. Not all tasks assigned are always strictly tournament operations and may be other things needed by the organizer.
 >
->在一场有多名裁判的比赛中，主审需要分派团队并指派队长。主审会创建团队（在大型比赛中可能会在比赛主办人或者裁判经理的帮助下），并确保每位裁判了解自己的职责。主审也需要在比赛中监督其他裁判，确保所有的任务能够按照比赛计划严格进行，并帮助主办人完成一些其他任务。
+>在一场有多名裁判的比赛中，主审需要分派团队并指派队长。主审会创建团队（在大型比赛中可能会在比赛主办人或者裁判经理的帮助下），并确保每位裁判了解自己的职责。主审也需要在比赛中监督其他裁判，所分派的任务并不一定都是严格意义上的赛事运营工作，也可能包括主办人所需要的其他事项。
 
 If necessary, the Head Judge may temporarily transfer their duties to any judge if they are unable to fulfill them for a period of time. Also, in exceptional circumstances, if the tournament’s integrity would be damaged otherwise, the Tournament Organizer may replace the Head Judge.
 
-若有需要，当主审无法履行自身职责时，可将此职务临时转交给其他裁判来履行。此外，在比赛的严肃性可能受到损害的特殊场合，比赛主办者可更换主审。
+若有需要，当主审无法履行自身职责时，可将此职责临时转交给其他裁判来履行。此外，在比赛的公正性可能受到损害的特殊场合，比赛主办人可更换主审。
 
 >At store level events this is most common during lunch breaks but this can also happen if the Head Judge becomes ill or ends their shift and a new Head Judge takes over. This is incredibly rare for Premier events but for side events the person acting as Head Judge may be more fluid. The Tournament Organizer has final say about whether the Head Judge needs to be replaced due to exceptional circumstances.
 >
@@ -507,11 +517,11 @@ If necessary, the Head Judge may temporarily transfer their duties to any judge 
 
 Certain Premier tournaments have multiple Head Judges and/or different Head Judges for different portions of the tournament. All Head Judges share the same responsibilities and exercise the same authority while they are serving as a Head Judge.
 
-某些重要比赛会出现拥有多个主审和／或在竞赛的不同阶段由不同的人来担任主审的情况。所有的主审共同承担同一份责任，且在分别行使主审职务时具有同样至高无上的权威。
+某些重要比赛会出现拥有多个主审和／或在竞赛的不同阶段由不同的人来担任主审的情况。所有的主审共同承担相同的责任，且在分别行使主审职务时具有同等的权威。
 
 >Large events will often have several judges acting as Head Judges (usually noted by wearing burgundy judge shirts at Premier events or red at Star City Games events). It is also possible that a tournament may be organized into multiple flights, each with its own Head Judge. No Head Judge is more ‘ahead’ of another and each of their rulings is final. Each of the Head Judges can take appeals, run investigations, and satisfy all of the other duties that the Head Judge of record is afforded.
 >
->大型比赛中通常会有若干名裁判来充当主审的职责（他们通常在重要比赛中穿着酒红色裁判制服、或在星城公开赛中穿着红色制服）。也有可能一场比赛会分成若干个部分，每个部分都有各自的主审。这些主审没有相对的级别“高低”，他们作出的判罚均是最终判罚。每位这样的主审都能处理上诉，展开调查，以及开展主审所需要执行的工作。
+>大型比赛中通常会有若干名裁判担任主审（他们通常在重要比赛中穿着酒红色裁判制服、或在星城公开赛中穿着红色制服）。也有可能一场比赛会分成若干个部分，每个部分都有各自的主审。这些主审没有相对的级别“高低”，他们作出的判罚均是最终判罚。每位这样的主审都能处理上诉，展开调查，并履行登记的主审所拥有的其他一切职责。
 
 ## MTR 1.8 Floor Judges 巡场裁判
 
@@ -521,7 +531,7 @@ Floor judges are available to players and spectators to answer questions, deal w
 
 >When it comes down to it, the biggest responsibility of Floor Judges is to be there to answer questions, fix play errors, and providing other assistance to help the event to run. They are the lifeblood of the event. Floor Judges at events, both at Competitive and Regular Rules Enforcement Level, do not need to be certified in order to judge at an event, however it is recommended that the judges at higher level events be certified or be working toward certification.
 >
->关于巡场裁判，他们最大的职责是回答问题，修正游戏错误，以及提供其他资源来帮助比赛进行。他们是比赛的血脉。巡场裁判，无论是在竞争级别还是一般级别的比赛中，都不一定要是认证裁判。然而，在高级别的比赛中，强烈建议裁判是认证的或正在往认证方向努力。
+>关于巡场裁判，他们最大的职责是回答问题，修正游戏错误，以及提供其他协助来帮助比赛进行。他们是比赛的血脉。巡场裁判，无论是在竞争级别还是一般级别的比赛中，都不一定要是认证裁判。然而，在高级别的比赛中，建议裁判是认证的或正在往认证方向努力。
 
 Judges will not generally assist players in determining the current game state but can answer questions about the rules, interactions between cards, or provide the Oracle™ wordings of relevant cards.
 
@@ -529,15 +539,15 @@ Judges will not generally assist players in determining the current game state b
 
 >Judges are able to answer questions about the rules and interactions between cards as long as they do not provide strategic advice regarding plays to make in a situation. Oracle text is the authoritative rules text for a card. Oracle text can be found on gatherer.wizards.com, but many other sources such as phone apps will have up to date Oracle text as well. More reading on what type of information judges can assist with is available in section 4.1.
 >
->裁判们可以回答关于规则以及牌张互动的问题，只要他们不对牌手做出策略建议。Oracle叙述是牌张的权威规则解释。Oracle叙述能在[gatherer.wizards.com](gatherer.wizards.com)上找到，但是许多其他资源（例如手机app）中也可以查询到最新的Oracle叙述。关于裁判可以协助取得何种类型的信息可以参考[章节4.1](#mtr-41-player-communication-牌手之间的沟通)。
+>裁判们可以回答关于规则以及牌张互动的问题，只要他们不对牌手做出策略建议。Oracle叙述是牌张的权威规则叙述。Oracle叙述能在[gatherer.wizards.com](gatherer.wizards.com)上找到，但是许多其他资源（例如手机app）中也可以查询到最新的Oracle叙述。关于裁判可以协助取得何种类型的信息可以参考[章节4.1](#mtr-41-player-communication-牌手之间的沟通)。
 
 At Regular Rules Enforcement Level, the judge may assist the player in understanding the game state in the interest of education.
 
-在执法严格度为一般级别的情况下，为了进行教学推广，裁判也可协助牌手对当前的游戏局面做出判断。
+在执法严格度为一般级别的情况下，出于教学目的，裁判也可协助牌手对当前的游戏局面做出判断。
 
 >Regular Rules Enforcement Level events provides an entry into the game for players. As a result, players may ask judges what the game state is and why something is the way it is. The emphasis is on education and helping new players, and there are likely smaller prizes on the line. This doesn’t mean the judge can tell the player what they should do, but the judge may assist a player in understanding a more complex interaction or game state in a less formal way than at Competitive Rules Enforcement Level.
 >
->一般级别的比赛是让牌手入门万智牌的好机会。在巡场时，牌手可能会询问裁判有关当前游戏状态和为什么会导致这种情况的问题。这里的重点侧重于教导并帮助新牌手，这些比赛的奖池也相对较小。这不意味着裁判可以告诉牌手后者应当怎么做，但是裁判可以帮助牌手理解复杂的牌张互动和游戏状态，且不需要使用像在竞争级别中那么严肃的方式。
+>一般级别的比赛是让牌手入门万智牌的好机会。因此，牌手可能会询问裁判有关当前游戏状态和为什么会导致这种情况的问题。这里的重点侧重于教导并帮助新牌手，这些比赛的奖池也相对较小。这不意味着裁判可以告诉牌手后者应当怎么做，但是裁判可以帮助牌手理解复杂的牌张互动或游戏状态，且不需要使用像在竞争级别中那么正式的方式。
 
 If a player wishes to ask their question away from the table, the request will usually be honored.
 
@@ -553,11 +563,11 @@ Players may not request specific judges to answer their calls but may request a 
 
 >Players may not request that a specific judge answer their call, as it would compromise tournament integrity and give the impression of partiality. But there are tournaments throughout the world, and players may not speak the local language. If there are tournament officials that speak the player’s language,they may help to translate in order to ensure clear and efficient communication. At international events like an European Grand Prix, there is often a list of judges who speak different languages as a resource provided to Scorekeepers and Judge Managers.
 >
->牌手不得要求某一名特定的裁判来回应他们的呼叫，这可能会对比赛的公正性造成影响并给人一种偏袒的印象。然而全世界都有万智牌比赛，牌手可能不会使用该地的语言。如果有工作人员能使用该牌手的语言，那么他们可以帮助进行翻译确保沟通的效率和准确性。在例如欧洲大奖赛的国际比赛中，往往会有一些使用多国语言的裁判来协助记分员和裁判经理。
+>牌手不得要求某一名特定的裁判来回应他们的呼叫，这可能会对比赛的公正性造成影响并给人一种偏袒的印象。然而全世界都有万智牌比赛，牌手可能不会使用该地的语言。如果有工作人员能使用该牌手的语言，那么他们可以帮助进行翻译确保沟通的效率和准确性。在例如欧洲大奖赛的国际比赛中，通常会准备一份能够使用不同语言的裁判名单，供记分员和裁判经理作为资源使用。
 
 Judges do not intervene in a game to prevent illegal actions but do intervene as soon as a rule has been broken or to prevent a situation from escalating.
 
-裁判不得在非法行动尚未发生时就中止比赛以防止其发生；但在已经发生违规行为，或是为了防止局势发生恶化的情形下，裁判应尽快介入比赛。
+裁判不得在非法行动尚未发生时就介入游戏以防止其发生；但在已经发生违规行为，或是为了防止局势发生恶化的情形下，裁判应尽快介入比赛。
 
 >Like in other sports, judges aren’t there to prevent mistakes. However, as soon as a game infraction happens, judges step in and apply the necessary corrections and penalties. Judges may step in if they believe a tense situation would otherwise escalate to unsportsmanlike conduct.
 >
@@ -571,7 +581,7 @@ The Scorekeeper ensures the correct generation of pairings and all other tournam
 
 >This includes both match slips and every sanction issued by a judge during the tournament. Scorekeepers usually keep slips separated and organized in round pairs, so if a problem arises they have both electronic and paper copies of relevant documents.
 >
->这包括成绩条以及裁判在比赛中记录的判罚。记分员通常按轮次保管配对和成绩条，如果有问题，便可以从电子设备中和纸质记录的相关文件中找到依据。
+>这包括成绩条以及裁判在比赛中作出的所有处罚。记分员通常会按轮次将成绩条分类整理，如果有问题，便同时具有相关记录的电子版本和纸质版本。
 
 The Scorekeeper’s responsibilities include:
 
@@ -579,11 +589,11 @@ The Scorekeeper’s responsibilities include:
 
 * Generating correct pairings each round and accurately entering the results of those rounds.
 
-* 为每局对局生成正确的对局配对并准确地输入该局对局的比赛结果。
+* 为每个轮次生成正确的对局配对并准确地输入该轮次的比赛结果。
 
 * Generating standings for posting before and after the final Swiss round. Other rounds may also be posted at the Head Judge’s discretion.
 
-* 在最后一局瑞士式对局开始之前及结束之后生成供张贴使用的排名。经主审斟酌，也可以在其他局次中张贴排名。
+* 在最后一轮瑞士轮开始之前及结束之后生成供张贴使用的排名。经主审斟酌，也可以在其他轮次中张贴排名。
 
 * Solving all scorekeeping problems that arise in consultation with the Head Judge.
 
@@ -617,11 +627,11 @@ Players are responsible for:
 
 * Behaving in a respectful manner toward tournament officials, other tournament participants, and spectators and refraining from unsporting conduct at all times.
 
-* 尊重比赛官员、其他参赛者以及旁观者，保持克制，任何时候都不得出现违反体育道德的行为。
+* 尊重比赛工作人员、其他参赛者以及旁观者，任何时候都不得出现违反体育道德的行为。
 
 >Examples of behavior which are considered unsporting are found here. Players are otherwise expected to treat others with some level of respect.
 >
->在[这里](#mtr-4-沟通交流)可以找到关于违反运动精神行为的案例。牌手必须在一定程度上对他人表示尊重。
+>在[这里](#mtr-4-沟通交流)可以找到关于违反运动精神行为的案例。除此之外，牌手必须在一定程度上对他人表示尊重。
 
 * Maintaining a clear and legal game state.
 
@@ -629,7 +639,7 @@ Players are responsible for:
 
 >Playing Magic can sometimes be complex, sometimes stressful, and sometimes frustrating, but still that’s not an excuse for a judge not penalizing a player for playing unclearly. Comprehension, legality and clarity are the most important things in a Magic game, for they can be the difference between no penalization and a Disqualification. There is a specific section about Maintaining the Game State in the IPG.
 >
->万智牌的对局有时可能非常复杂，有时让人感到充满压力，有时甚至会让人沮丧。不过这都不是能让裁判宽恕未能清晰地进行游戏的牌手的原因。总的来说，理解、合法、清晰是进行万智牌对局最重要的三件事，这些事情可能会成为从无判罚到取消资格的巨大差异。在IPG中专门有一节是关于[维护游戏状态](http://blogs.magicjudges.org/rules/ipg2-6/)的。
+>万智牌的对局有时可能非常复杂，有时让人感到充满压力，有时甚至会让人沮丧。不过这都不是能让裁判不处罚未能清晰地进行游戏之牌手的原因。总的来说，理解、合法、清晰是进行万智牌对局最重要的三件事，因为它们可能造成从无需判罚到取消资格这样截然不同的结果。在IPG中专门有一节是关于[维护游戏状态](http://blogs.magicjudges.org/rules/ipg2-6/)的。
 
 * Complying with announced start times and time limits.
 
@@ -637,7 +647,7 @@ Players are responsible for:
 
 >Tournaments are always organized to run in a timely fashion, and Tournament Officials (judges and organizers) look to keep them running smoothly and quickly. If no extenuating situations appear, players are expected to follow every time limit to keep the tournament flowing. There is a specific section about Tardiness in the IPG.
 >
->一般来说，比赛需要尽可能快地运行，比赛工作人员（裁判和主办人）会尽可能确保比赛快速并流畅地进行。如果没有特殊情况发生，我们希望牌手能够注意时间节点，确保比赛能够正常进行。在IPG中专门有一节是关于[迟到](http://blogs.magicjudges.org/rules/ipg3-1/)的。
+>比赛总是需要按时推进，比赛工作人员（裁判和主办人）会尽可能确保比赛快速并流畅地进行。如果没有特殊情况发生，我们希望牌手能够注意时间节点，确保比赛能够正常进行。在IPG中专门有一节是关于[迟到](http://blogs.magicjudges.org/rules/ipg3-1/)的。
 
 * Calling attention to any rules or policy infraction they notice in their matches.
 
@@ -653,7 +663,7 @@ Players are responsible for:
 
 >This is a very important responsibility. Players are required to inform a judge immediately if they are offered a bribe, or asked to record an improper game result. Failing to do so may result in a severe penalty for both the player offering and the player who did not call attention to the illegal action. Additionally, any errors that have been made in results entry should be brought to a Tournament Official’s attention as soon as they are noticed.
 >
->这是一项十分重要的职责。当牌手遭遇行贿，或被要求记录非法游戏结果时，他应当及时通知裁判。如果不这样做，可能会为双方都带来十分严厉的判罚。此外，任何关于上报成绩的错误应当立即引起比赛工作人员的注意。
+>这是一项十分重要的职责。当牌手遭遇行贿，或被要求记录非法游戏结果时，他应当立即通知裁判。如果不这样做，可能会为双方都带来十分严厉的判罚。此外，任何关于上报成绩的错误应当立即引起比赛工作人员的注意。
 
 * Accurately reporting the results of their matches in a timely manner.
 
@@ -669,7 +679,7 @@ Players are responsible for:
 
 >Some tournaments award invitations to other events or have participation restrictions based on level, players’ invitation history, or other factors. Players are required to be aware of their eligibility and should not intentionally enter events they are ineligible for.
 >
->一些比赛会提供参加另一些比赛的邀请，或者具有基于牌手级别、邀请历史或其他因素的参赛限制。牌手需要明晰自己是否符合参赛标准，不应去参加他们不能参加的比赛。
+>一些比赛会提供参加另一些比赛的邀请，或者具有基于牌手级别、邀请历史或其他因素的参赛限制。牌手需要明晰自己是否符合参赛标准，不应故意报名参加自己不能参加的比赛。
 
 * Being familiar with the rules contained within this document.
 
@@ -685,7 +695,7 @@ Players are responsible for:
 
 >This document hasn’t yet been updated for online tournaments, but thats not what this rule is for.  You have to actually be at a tournament you are playing in.  For example, if an event gives a promo to everyone that registers, you actually have to appear at the event to be allowed in the event.  You cannot just pre-register, no-show, then expect your promo.  You were dropped from the event.
 >
->本文件尚未针对线上赛进行更新，但本条规则的用意并非在于此。你必须亲身到场参加你所报名的比赛。例如，如果一场比赛为所有报名者提供一张纪念闪卡，你也必须实际到场才能被算作正式参赛。你不能只进行预先报名，然后缺席，还指望能拿到那张闪卡。在这种情况下，你已经被移出赛事了。
+>本文件尚未针对线上赛进行更新，但本条规则的用意并非在于此。你必须亲身到场参加你所报名的比赛。例如，如果一场比赛为所有报名者提供一张纪念牌，你也必须实际到场才能被算作正式参赛。你不能只进行预先报名，然后缺席，还指望能拿到那张纪念牌。在这种情况下，你已经被移出赛事了。
 
 A player must bring the following items to a tournament in order to participate:
 
@@ -705,7 +715,7 @@ A player must bring the following items to a tournament in order to participate:
 
 >Some tournaments require players to have certain items in order to play, e.g., a decklists and constructed decks. Decklists help maintain an event’s integrity and provide information about the decks played at the tournament and their legality.
 >
->一些比赛需要牌手携带特定的物品参赛，例如套牌登记表和构组赛用的套牌。套牌登记表帮助维护比赛公正并提供了参赛套牌的信息并确保该套牌合法。
+>一些比赛需要牌手携带特定的物品参赛，例如套牌登记表和构组赛用的套牌。套牌登记表帮助维护比赛公正并提供有关参赛套牌及其合法性的信息。
 
 Players retain their responsibilities even if a judge provides them with extra assistance.
 
@@ -721,15 +731,15 @@ The individual members of a team are considered players, and are equally respons
 
 >Individual players on a team must comply with the same tournament procedures as players not playing on a team but should not be held responsible for their teammates’ errors, However that doesn’t mean they can ignore errors if they see them. If they see a problem with one of their teammate’s games they cannot deliberately ignore it.
 >
->团队中的每一位队员都需要像个人赛中的牌手一样履行相应的职责，然而他们不需要为队友的错误负责。但这并不意味着他们可以无视其看到的错误。如果他们发现了队友游戏中的问题，他们不能故意忽略之。
+>团队中的每一位牌手都必须遵守与非团队赛牌手相同的比赛程序，然而他们不需要为队友的错误负责。但这并不意味着他们可以无视其看到的错误。如果他们发现了队友游戏中的问题，他们不能故意忽略之。
 
 Players who do not fulfill their responsibilities may be subject to penalties and review by the DCI. Wizards of the Coast and the DCI reserve the right to suspend or revoke a player's membership without prior notice for any reason they deem necessary.
 
-未能确实达成以上责任的牌手可能会受到相应的处罚，并由DCI进行复核。只要威世智与DCI认定有此必要，则不论是否预先通知，均保留将玩家停权乃至取消会员资格的权利。
+未能确实达成以上责任的牌手可能会受到相应的处罚，并由DCI进行复核。威世智和DCI保留出于其认为必要的任何理由，无需事先通知即可停权或撤销牌手会员资格的权利。
 
 >This is the big ultimatum. Not complying with a required responsibility consciously may end in a penalty and also a review or an investigation conducted by the judges at the event and/or the DCI itself. No player may interfere with the integrity of a tournament under any circumstances.
 >
->这是最后通牒。明知却不履行职责的牌手会得到处罚并受到裁判和DCI的后续调查和跟进。任何情况下，牌手都不能干扰比赛的公正。
+>这是最后通牒。明知却不履行职责的牌手会得到处罚并受到裁判和/或DCI的后续调查和跟进。任何情况下，牌手都不能干扰比赛的公正。
 
 ## MTR 1.11 Spectators 旁观者
 
@@ -749,17 +759,17 @@ If spectators believe they have observed a rules or policy violation, they are e
 >
 >Members of the coverage team are allowed to bring attention to the judge staff about possible problems with the game.
 >
->裁判并非无处不在，有时旁观者可能会发现违规行为或不合法的场面状态。在这种情况下，旁观者应当在远离对局的地方提醒裁判注意此问题。在竞争级别赛事中，旁观者可以要求牌手暂停，但除此以外，不应告知牌手他们所顾虑的问题是什么。这是因为旁观者对规则的理解可能有误，而他们的言语会向牌手提供本不应获得的信息，进而可能影响游戏进程。
+>裁判并非无处不在，有时旁观者可能会发现违规行为或不合法的场面状态。在这种情况下，旁观者可以在远离对局的地方提醒裁判注意此问题。在竞争级别赛事中，旁观者可以要求牌手暂停，但除此以外，不应告知牌手他们所顾虑的问题是什么。这是因为旁观者对规则的理解可能有误，而他们的言语会向牌手提供信息，进而可能改变游戏走向。
 >
 >允许报道团队的成员就游戏内可能的问题提请裁判。
 
 Players may request that a spectator not observe their matches. Such requests must be made through a judge. Tournament officials may also instruct a spectator not observe a match or matches.
 
-牌手可以要求旁观者停止观看自己的对局。所有类似的要求必须通过裁判提出。比赛工作人员同样也可要求旁观者停止观看对局或比赛。
+牌手可以要求旁观者停止观看自己的对局。所有类似的要求必须通过裁判提出。比赛工作人员同样也可要求旁观者停止观看某场或某些对局。
 
 >Some spectators might be scouting other players or talking too much, or just hovering in a disconcerting way. Players can request the judge to have the spectator removed. This request can be refused, but would only happen in situations with extreme mitigating factors.
 >
->一些旁观者可能会侦查其他牌手的情况，或者在一旁说太多的话，或仅是以令人不安的方式在旁徘徊。牌手可以请求裁判将这样的牌手驱离他的比赛。裁判一般会同意这样的请求，但是同样也会保留拒绝不合理请求的权利。
+>一些旁观者可能会侦查其他牌手的情况，或者在一旁说太多的话，或仅是以令人不安的方式在旁徘徊。牌手可以请求裁判将这样的旁观者驱离他的比赛。裁判一般会同意这样的请求，但是同样也会保留拒绝不合理请求的权利。
 
 ## MTR 1.12 Rules Enforcement Levels 执法严格度
 
@@ -773,11 +783,11 @@ Rules Enforcement Levels (REL) are a means to communicate to the players and jud
 
 The Rules Enforcement Level of a tournament generally reflects the prizes awarded and the distance a player may be expected to travel.
 
-比赛的执法严格度通常应该配合所提供的奖品，以及牌手为参赛所可能花费的路程来增加。
+比赛的执法严格度通常反映赛事提供的奖品规模以及牌手参加该比赛时可能需要旅行的距离。
 
 >Typically the higher the stakes for the tournament, the more rigidly the rules are enforced.  For example, FNM is run at Regular Rules Enforcement Level, draws from the store’s local player community, and often offers one or two booster packs per player as the prize pool.  This type of event is more laid back and casual, so a less strict Rules Enforcement Policy is appropriate.  However,  an SCG Tour event, is run at Competitive Rules Enforcement Level, can draw players from several hours away, and often have significant prizes.  For those events, where players are more incentivized to play competive, a stricter Rules Enforcement policy is appropriate.
 >
->通常而言，一场赛事的利害关系越重大，其规则的执行也越严格。例如，FNM的执法严格度是一般级别，大多数参赛牌手都来自牌店的本地牌手社群，一般会提供平均每位牌手1到2包补充包作为奖品池。这类赛事更为轻松休闲，因此采用较为宽松的规则执行策略是恰当的。然而，星城巡回赛 (SCG Tour) 则以竞争级别运作，一些牌手可能会花费几小时的时间赶来参加，并通常设有更丰厚的奖品。对于这类牌手竞争意愿更强的赛事，采用更为严格的执法严格度便是恰当的。
+>通常而言，一场赛事的利害关系越重大，其规则的执行也越严格。例如，FNM的执法严格度是一般级别，大多数参赛牌手都来自牌店的本地牌手社群，一般会提供每位牌手1到2包补充包作为奖品池。这类赛事更为轻松休闲，因此采用较为宽松的规则执行策略是恰当的。然而，星城巡回赛 (SCG Tour) 则以竞争级别运作，一些牌手可能会花费几小时的时间赶来参加，并通常设有更丰厚的奖品。对于这类牌手竞争意愿更强的赛事，采用更为严格的执法严格度便是恰当的。
 
 The appropriate Rules Enforcement Level for specific programs is listed in Appendix F.
 
@@ -789,7 +799,7 @@ Regular
 
 Regular tournaments are focused on fun and social aspects, not enforcement. Most tournaments are run at this level unless they offer sizeable prizes or invitations. Players are expected to know most of the game rules, may have heard of policy and what is “really bad,” but generally play in a fashion similar to the way they do casually. Players are still responsible for following the rules, but the focus is on education and sportsmanship over technically precise play. Infractions in these tournaments are covered by the Judging at Regular Rules Enforcement Level document, located at https://wpn.wizards.com/en/rules-documents.
 
-一般的比赛主要是为了娱乐和社交，而非铁面无私。大部分的比赛都是采用这个等级，除非比赛提供了一定程度的奖品或是邀请资格。对牌手的期待是应该知道大部分的游戏规则，可能听过一些比赛政策或知道哪些事情「很不好」，但通常是以类似休闲娱乐的方式来比赛。牌手还是有责任去遵循规则，但所强调的主要在于教育性和运动道德，而不是技术上的精确无误。在此类比赛中处理牌手违规行为的细则，由《一般执法严格度下执法指南》此份文档详述，该文档可于此处获取：https://wpn.wizards.com/en/rules-documents.
+一般的比赛主要是为了娱乐和社交，而非严格执法。大部分的比赛都是采用这个等级，除非比赛提供了相当可观的奖品或是邀请资格。对牌手的期待是应该知道大部分的游戏规则，可能听过一些比赛政策或知道哪些事情「很不好」，但通常是以类似休闲娱乐的方式来比赛。牌手还是有责任去遵循规则，但所强调的主要在于教育性和运动道德，而不是技术上的精确无误。在此类比赛中处理牌手违规行为的细则，由《一般执法严格度下执法指南》此份文档详述，该文档可于此处获取：https://wpn.wizards.com/en/rules-documents.
 
 >Regular Rel events are often players introduction to Magic tournaments.  As they are often coming from playing at home, it is expected that they bring that style of play with them.  Playing at home is fun and low stakes, and Regular tournaments should strive to capture that same vibe.  Note that the IPG does not apply at Regular Rules Enforcement Level. Instead, we use the Judging at Regular Rules Enforcement Level (JAR) document, which lays the groundwork for a fun, casual atmosphere where only repeat offenders and serious problems —like cheating, aggressive behavior, bribery, and theft— are punished. Instead of punishing players for innocent tournament and play errors, it’s our job as judges at Regular Rules Enforcement Level to help them learn the right way to play so that they can succeed at higher Rules Enforcement Level tournaments.
 >
@@ -801,7 +811,7 @@ Competitive
 
 Competitive tournaments are usually those with significant cash prizes or invitations awarded to Professional tournaments. Players are expected to know the game’s rules and be familiar with the policies and procedures, but unintentional errors are not punished severely. These are tournaments that protect the interests of all players by providing tournament integrity while also recognizing that not all players are intimately familiar with Professional-level tournament structure, proper procedures, and rules. Infractions in these tournaments are covered by the Magic Infraction Procedure Guide, located athttps://wpn.wizards.com/en/rules-documents.
 
-竞争等级的比赛通常指有着高额奖金，或有专业比赛邀请资格的比赛。对牌手的要求是了解游戏规则并熟悉竞赛政策和流程，但是无意的失误不会导致严厉的处罚。为了保护所有牌手的乐趣，这类比赛要尽力维持一致性，也要了解并非所有牌手都十分清楚专业级比赛的架构、适当的流程，以及规则。在此类比赛中处理牌手违规行为的细则，由《万智牌违规处理方针》此份文档详述，该文档可于此处获取：https://wpn.wizards.com/en/rules-documents.
+竞争等级的比赛通常指有着高额奖金，或有专业比赛邀请资格的比赛。对牌手的要求是了解游戏规则并熟悉竞赛政策和流程，但是无意的失误不会导致严厉的处罚。为了保护所有牌手的乐趣，这类比赛要尽力维持公正性，也要了解并非所有牌手都十分清楚专业级比赛的架构、适当的流程，以及规则。在此类比赛中处理牌手违规行为的细则，由《万智牌违规处理方针》此份文档详述，该文档可于此处获取：https://wpn.wizards.com/en/rules-documents.
 
 >One thing to clarify here is that there is a difference between “Competitive tournaments” and “competitive tournaments”.  Any game of Magic you play, where you are trying to win, is a competitive game. However Competitive Tournaments is a class of tournaments where players begin competing for significant prizes. This is the Rules Enforcement Level at which many large magic tournaments are run. Grand Prix Trials, Preliminary Pro Tour Qualifiers, Regional Pro Tour Qualifiers, and the first day of Grand Prix are all run at Competitive Rules Enforcement Level. Tighter technical play and clearer communication are both important at this level, and tournament and game play infractions are penalized according to the IPG.
 >
@@ -837,11 +847,11 @@ A match consists of a series of games that are played until one side has won a s
 
 If the round ends before a player has won the required number of games, the winner of the match is the player who has won the most games at that point.
 
-如果在本局对局时间终止之前,任一方牌手都未能赢下所需数量的游戏,则当时握有最多游戏获胜盘数的一方便为该局对局的胜利者。
+如果在本轮次时间终止之前，任一方牌手都未能赢下所需数量的游戏，则当时握有最多游戏获胜盘数的一方便为该局对局的胜利者。
 
 >If the round has ended and only one player has won a game then that player is the winner of that match because they have won the majority of games.
 >
->如果当本局比赛时间结束时只有一个牌手赢过一盘比赛，那么该牌手就是本局的获胜者因为他赢得了更多的盘数。
+>如果当本轮次时间结束时只有一个牌手赢过一盘游戏，那么该牌手就是本局的获胜者，因为他赢得了更多的盘数。
 
 If both players have equal game wins, the match is a draw.
 
@@ -849,7 +859,7 @@ If both players have equal game wins, the match is a draw.
 
 >If the round has ended and the result is 1-1 or even 0-0  then the match is a draw.
 >
->如果当本局对局时间结束时比赛结果为1-1或者0-0则该局为平局.
+>如果当本轮次时间结束时对局结果为1-1或者0-0则该局为平局。
 
 The Tournament Organizer may change the required number of games to be won for any portion of the tournament as long as this choice is announced before the tournament begins.
 
@@ -857,7 +867,7 @@ The Tournament Organizer may change the required number of games to be won for a
 
 >For example, the Pro Tour finals are played until one player wins three games. While a local store can structure their tournment in this way, certain premier tournaments supported by Wizards, have a prescribed structure.  Certain tournaments supported by Wizards may have a specified structure required to run it. If so, that structure supersedes this rule.
 >
->例如，专业赛的决赛需要牌手赢得3盘比赛。尽管本地店家可以自行设定其比赛结构，但某些由威世智支持的重要赛事有其指定的、必须遵守的结构。若存在此种指定结构，则其效力将优先于本条通用规则。
+>例如，专业赛的决赛需要牌手赢得3盘比赛。尽管本地店家可以按这种方式设定其比赛结构，但某些由威世智支持的重要赛事有其指定的、必须遵守的结构。若存在此种指定结构，则其效力将优先于本条通用规则。
 
 Match results, not individual game results, are reported at the end of the tournament.
 
@@ -871,15 +881,15 @@ Match results, not individual game results, are reported at the end of the tourn
 
 For the first game of a match, a designated player - the winner of a random method (such as a die roll or coin toss) during Swiss rounds, or the player ranked higher at the end of Swiss rounds during playoff matches - chooses either to play first or to play second.
 
-每局对局的第一盘游戏由指定牌手决定哪方先手：若是在瑞士式对局期间，由随机方式（例如掷骰子或抛硬币）之胜利者决定；若是在决胜局期间，则是由瑞士式对局结束时排名较高的牌手决定。
+每局对局的第一盘游戏由指定牌手决定哪方先手：若是在瑞士轮期间，由随机方式（例如掷骰子或抛硬币）之胜利者决定；若是在决胜局期间，则是由瑞士轮结束时排名较高的牌手决定。
 
 >For non-Playoff matches, both players must agree on the random method. This can get a little tricky when the players don’t agree on the method (such as rolling a spindown dice) so and Judges may step in and help players select a random method like odds and evens or something similar. ‘Higher ranked choosing’ is the default rule for any single elimination portion of a tournament. This only applies to the first game of each match. After the first game, the loser of the previous game makes the choice. This rule was created to discourage intentional draws during swiss, by giving players an incentive to play it out.  In practice, it isn’t enough of an incentive to have any practical effect.
 >
->对于非淘汰赛的对局而言，双方牌手必须协定某个随机方式。当牌手无法决定出某个随机方式时就有点棘手了（例如丢一个顺数字骰子），此时裁判可以介入并帮助牌手决定一个随机方式，例如猜单双或者其他类似的方法。排名较高的牌手决定先手是单淘汰赛制比赛的默认规则。这只适用于对局第一盘的选择。在第一盘比赛之后，上一盘的输家选择先后手。制定本条规则的初衷，是通过激励牌手打完来减少瑞士轮的约和。然而事实上，这种激励的力度并不足以产生任何实际效果。
+>对于非决胜局的对局而言，双方牌手必须协定某个随机方式。当牌手无法决定出某个随机方式时就有点棘手了（例如丢一个顺数字骰子），此时裁判可以介入并帮助牌手决定一个随机方式，例如猜单双或者其他类似的方法。排名较高的牌手决定先手是单淘汰赛制比赛的默认规则。这只适用于对局第一盘的选择。在第一盘比赛之后，上一盘的输家选择先后手。制定本条规则的初衷，是通过激励牌手打完来减少瑞士轮的约和。然而事实上，这种激励的力度并不足以产生任何实际效果。
 
 They must state this choice before looking at their hand. If they state no choice, it is assumed that they are playing first.
 
-该位牌手须在检视手牌之前确定相应的选择。若该牌手未置可否，则认为他选择先手。
+该位牌手须在检视手牌之前声明相应的选择。若该牌手未置可否，则认为他选择先手。
 
 >Players are supposed to decide whether they want to play or draw before looking at their opening hands, since the contents could influence their decision greatly. If someone does not announce their choice before seeing their opening hand, they gain information would could impact their decision. This is a fairly common and innocent mistake, so there is a simple solution; the player who sees their opener before declaring plays first by default.
 >
@@ -909,7 +919,7 @@ The following steps must be performed in a timely manner before each game begins
 
 >The term “timely” here is important. Players cannot take excessive time sideboarding or shuffling, or they may be subject to Slow Play or Stalling penalties.
 >
->合理的耗时是很重要的，牌手不能花过多的时间用于换备或者洗牌，否则他们可能会受到拖延或者作弊的判罚。
+>合理的耗时是很重要的，牌手不能花过多的时间用于换备或者洗牌，否则他们可能会受到游戏进行过慢或者拖延的判罚。
 
 1. If sideboarding is allowed, players may remove cards from their decks and add cards from their sideboards.
 
@@ -917,7 +927,7 @@ The following steps must be performed in a timely manner before each game begins
 
 >Sideboarding is allowed between games only when a previous game had actions taken during it. A tournament should test a player’s skill in deck building and technical play first, not in advance scouting opponents. This is just a fancy way of saying the game wasn’t lost because of a tardiness penalty or a Game Loss coming from a deck check. Additionally, a player may not offer to intentionally draw the opening game prior to taking game actions in order to introduce sideboard cards for the match. If the players have completed game actions, it’s reasonable for them to use that knowledge to sideboard effectively. Note that this applies to the first game of the match, or to any match that begins on a second or subsequent game due to penalties assessed to one or more players prior to the first game beginning. This includes games started by the third activated ability of Karn Liberated; treat these restarted games as the same game in the match.
 >
->只有在上一盘游戏中进行过游戏动作的情形下才允许更换备牌。一场比赛首先测试的应该是牌手的套牌构筑技巧以及牌技，而不是从侦查对手中获得优势。说白了，因为迟到判罚或套牌检查判负不能换备。牌手不能在进行游戏动作前就提出约和第一盘比赛以使用备牌。如果牌手进行了游戏动作，使用因此而获得的信息进行有效换备便是合理的。注意这适用于每局的第一盘比赛或是由于在第一盘比赛开始前一个或多个牌手受到判罚而从第二盘或之后开始的比赛。这也包括了诸如因重获自由的卡恩的第三个异能而产生的情况；把这些重新开始的游戏当做原本的那盘游戏一样处理即可。
+>只有在上一盘游戏中进行过游戏动作的情形下才允许更换备牌。一场比赛首先测试的应该是牌手的套牌构筑技巧以及牌技，而不是从事先侦查对手中获得优势。说白了，因为迟到判罚或套牌检查判一盘负是不能换备的。牌手不能在进行游戏动作前就提出约和第一盘比赛以使用备牌。如果牌手进行了游戏动作，使用因此而获得的信息进行有效换备便是合理的。注意这适用于每局的第一盘比赛或是由于在第一盘比赛开始前一个或多个牌手受到判罚而从第二盘或之后开始的比赛。这也包括了诸如因重获自由的卡恩的第三个异能而产生的情况；把这些重新开始的游戏当做原本的那盘游戏一样处理即可。
 
 2. Players shuffle their decks. Steps 1 and 2 may be repeated.
 
@@ -949,7 +959,7 @@ The following steps must be performed in a timely manner before each game begins
 
 >This is covered in MTR 2.2 as well, but to recap: players decide if they want to play or draw before looking at their hand, as that could influence them greatly. Most people want to play first anyway, so we just default to that if they don’t explicitly announce it.
 >
->这一条在[MTR 2.2](#mtr-22-playdraw-rule-先手规则)中也有说明，这里重复一下：牌手在看到自己手牌前决定是否先手，因为手牌会极大地影响这个决定。大多数人都习惯选择先手，所以我们默认如果他们不明确宣告就如此做。
+>这一条在[MTR 2.2](#mtr-22-playdraw-rule-先手规则)中也有说明，这里重复一下：牌手在看到自己手牌前决定是否先手，因为手牌可能极大地影响这个决定。大多数人都习惯选择先手，所以我们默认如果他们不明确宣告就如此做。
 
 6. Each player draws seven cards. Optionally, these cards may be dealt face down on the table.
 
@@ -965,7 +975,7 @@ The following steps must be performed in a timely manner before each game begins
 
 >Once a player has announced a decision to keep a starting hand, they may not later decide to take a mulligan based on the opponent’s decision. When a player announces a mulligan decision, they is held to that choice, even if it is made out of order. Note that steps 1-2 are not repeated during mulliganing. Cards may not be added or removed from the deck at this time. For all of the technical details in how to proceed with mulliganing, check the Comprehensive Rules, rule 103.5.
 >
->一旦牌手宣告保留其起手手牌，他或她就不能依据对手的决定在之后再次决定再调度。当牌手宣告要再调度，他或她便应执行这个选择，即使宣告时并没有严格按照顺序。注意，步骤1-2在再调度时并不会再次进行。此时不能在套牌中添加或减少牌。有关再调度的所有技术细节，请参阅[CR 103.5](https://blogs.magicjudges.org/rules/comprehensive-rules/#rule-103-5)。
+>一旦牌手宣告保留其起手手牌，他就不能依据对手的决定在之后再次决定再调度。当牌手宣告是否决定要再调度后，他便应执行这个选择，即使宣告时并没有严格按照顺序。注意，步骤1-2在再调度时并不会再次进行。此时不能在套牌中添加或减少牌。有关再调度的所有技术细节，请参阅[CR 103.5](https://blogs.magicjudges.org/rules/comprehensive-rules/#rule-103-5)。
 
 The game is considered to have begun once all players have completed taking mulligans. Pregame procedures may be performed before time for the match has officially begun.
 
@@ -973,13 +983,13 @@ The game is considered to have begun once all players have completed taking mull
 
 >This rewards punctual players, who may be able to capture the full round time for game play, while still allowing a firm line of what can be done before the start of the round is announced.
 >
->这一条奖励了准时的牌手，他们可以将完整的一轮时间用于对局本身，并且仍有一条明确的界限确定哪些可以在比赛开始的宣告前进行。
+>这一条奖励了准时的牌手，他们可以将完整的一轮时间用于对局本身，并且仍有一条明确的界限确定哪些可以在轮次开始的宣告前进行。
 
 ## MTR 2.4 End-of-Match Procedure 对局结束程序
 
 Once the game is complete, players may not leave the table until the result of the match is recorded unless they are doing so to record the result.
 
-一旦对局结束，除非牌手是为了上报比赛结果，否则直到对局结果被上报前，牌手不得离开牌桌。
+一旦游戏结束，除非牌手是为了上报比赛结果，否则直到对局结果被上报前，牌手不得离开牌桌。
 
 >This is a warning shot. As events move away from match slips, and towards digital submissions, tournament officials are running into problems.  Too many players leave their match and do not report there results. A some events, as many as 60 matches can be empty and have no results submitted. This means the stage has to page each match to get the results. This sentence is “step 1” in moving towards a future where players are penalized for not submitting match results. If this is sufficient (spoilers: it won’t be) then further steps will not be necessary.
 >
@@ -995,7 +1005,7 @@ If the match time limit is reached before a winner is determined, the player who
 
 This usually means that one player takes three turns and the other two, but a player taking extra turns may affect this.
 
-通常情况下,其中一方牌手得以进行三个回合，另一方得两个，但若有牌手能进行额外回合时则会改变这种情况。
+通常情况下，其中一方牌手得以进行三个回合，另一方得两个，但若有牌手进行额外回合则会改变这种情况。
 
 >There will only be five turns in the additional turn portion of the round. (But see IPG 3.3 — Slow Play, where two additional turns are added as an additional remedy.) Game circumstances (e.g., the activation of Ral Zarek’s third ability) may result in one player being entitled to all five turns. For more details on extra turns, see CR 500.7.
 >
@@ -1031,15 +1041,15 @@ If the game is incomplete at the end of additional turns, the game is considered
 
 >Players may discuss and come to an agreement on an alternate outcome for the game/match (e.g. a concession) so long as there is no incentive offered for the result (see IPG 4.4: Bribery and Wagering). Players may not utilize out-of-game assets, including but not limited to rolling a die, revealing cards off the top of the library, or the results of adjacent matches, to come to this decision (see IPG 4.3: Improperly Determining a Winner). Players must decide in a reasonable time frame, as it is unfair to make other players wait on this individual match debating who would have won seven turns from now. If players cannot come to an agreement, the match is still a draw and Judges are encouraged to “nudge” players to fill out their results slips, without influencing the decision.
 >
->牌手可以讨论并就比赛结果达成协议（如一方认输），只要这一结果不是因为提供了奖励而换来的（参见[IPG 4.4: 赌博与贿赂](http://blogs.magicjudges.org/rules/ipg4-4/)）。牌手不允许利用游戏外的因素，包括但不限于投骰子，展示牌库的顶牌或是临桌的比赛结果以达成此协议（参见[IPG 4.3: 不当决定胜方](http://blogs.magicjudges.org/rules/ipg4-3/)）牌手必须在一个合理的时间内做出决定，因为让其他牌手等待他们辩论“再给七个回合谁能赢”是不公平的。如果牌手不能达成一致，比赛将保持平局。我们鼓励裁判在不影响他们做出决定的前提下，“敦促”牌手填写好他们的成绩条。
+>牌手可以讨论并就该盘或该局结果达成协议（如一方认输），只要这一结果不是因为提供了奖励而换来的（参见[IPG 4.4: 赌博与贿赂](http://blogs.magicjudges.org/rules/ipg4-4/)）。牌手不允许利用游戏外的因素，包括但不限于投骰子，展示牌库的顶牌或是临桌的比赛结果以达成此协议（参见[IPG 4.3: 不当决定胜方](http://blogs.magicjudges.org/rules/ipg4-3/)）。牌手必须在一个合理的时间内做出决定，因为让其他牌手等待他们辩论“再给七个回合谁能赢”是不公平的。如果牌手不能达成一致，对局将保持平局。我们鼓励裁判在不影响他们做出决定的前提下，“敦促”牌手填写好他们的成绩条。
 
 If a judge assigned a time extension (because of a long ruling, deck check, or other reason) the end-of-match procedure does not begin until the end of the time extension.
 
-如果裁判给予了时间延长（由于长时间的判罚、套牌检查或其他原因），则对局结束程序在给予的时间延长结束后方才开始。
+如果裁判给予了时间延长（由于耗时较长的裁定、套牌检查或其他原因），则对局结束程序在给予的时间延长结束后方才开始。
 
 >Players are entitled to use the full time of a round to play their match of Magic. Should some interruption occur, time extensions are awarded to allow players a chance to fully play out their games. Players with a time extension who are still in a game when time is called should call a judge to ensure time continues to be kept accurately.  Typically a judge will write the extension in the top right corner of the match slip.
 >
->牌手有权使用完整的一轮时间来进行万智牌比赛。一旦发生了中断，牌手将获得补时，以使牌手能够能完整地进行游戏。如果牌手获得了补时，在时间终了后仍然在比赛中的话，应当呼叫一个裁判来确保继续计时的准确无误。通常，裁判会将补时记在成绩条的右上角。
+>牌手有权使用完整的一轮时间来进行万智牌对局。一旦发生了中断，牌手将获得补时，以使牌手能够完整地进行游戏。如果牌手获得了补时，在时间终了后仍然在游戏中的话，应当呼叫一个裁判来确保继续计时的准确无误。通常，裁判会将补时记在成绩条的右上角。
 
 In single-elimination rounds, matches may not end in a draw.
 
@@ -1061,7 +1071,7 @@ If all players have equal game wins at the end of additional turns, the player w
 
 Until the result of a match has been recorded, players may concede or mutually agree to a draw in that game or match.
 
-直到对局成绩上报之前，游戏双方都可以在对局或比赛中认输或者约合。
+直到对局成绩上报之前，游戏双方都可以在该盘游戏或该局对局中认输或者约和。
 
 >Players may concede or mutually draw up until the point the match slip has been filed out, or the result submitted electronically. Once the result has been recorded, that is the result. Players are allowed to intentionally draw, as preventing mutually beneficial IDs would result in players trying to fabricate an ID through convoluted play. If players were not allowed to intentionally draw, but a draw would still benefit both players, we would be encouraging players to “intentionally unintentionally draw” by slow playing —or worse— by playing at a reasonable pace but deciding to never attack and eventually just stall the game out, which just wastes everyone’s time.
 >
@@ -1099,11 +1109,11 @@ If a player refuses to play, it is assumed that they have conceded the match.
 
 If a judge pauses a match for more than one minute while the round clock is running, they should extend the match time appropriately.
 
-若有裁判在本局尚在计时的情况下暂停对局超过了一分钟，该裁判须相应地延长比赛时间。
+若有裁判在本轮尚在计时的情况下暂停对局超过了一分钟，该裁判须相应地延长对局时间。
 
 >Players are entitled to use the full time of a round to play their match of Magic. If an interruption of more than a minute occurs, a time extension is given to allow players a chance to fully play out their games. Players with a time extension who are still in a game when time is called should call a judge to ensure time continues to be kept accurately.
 >
->牌手有权使用完整的一轮时间来进行万智牌比赛。一旦发生了超过一分钟的中断，牌手将获得补时，以使牌手能够能完整地进行游戏。如果牌手获得了补时，在时间终了后仍然在比赛中的话，应当呼叫一个裁判来确保继续计时的准确无误。
+>牌手有权使用完整的一轮时间来进行万智牌对局。一旦发生了超过一分钟的中断，牌手将获得补时，以使牌手能够完整地进行游戏。如果牌手获得了补时，在时间终了后仍然在游戏中的话，应当呼叫一个裁判来确保继续计时的准确无误。
 
 If the match was interrupted to perform a deck check, players are awarded time equal to the time the deck check took plus three minutes.
 
@@ -1111,7 +1121,7 @@ If the match was interrupted to perform a deck check, players are awarded time e
 
 >Because a deck check typically orders the deck in an intentionally non-random way, players should be afforded adequate time to randomize their decks before proceeding with the next game. While no longer codified, the benchmark for pre-game and between-game procedures is three minutes, so this much time is afforded to each player. This extension is given even if one player is receiving a game loss as the result of a penalty discovered during the check.
 >
->这是因为套牌检查通常会使套牌呈非随机排列，牌手应当在继续进行游戏前得到足够的时间来随机化他们的套牌。虽然并无明文规定游戏前程序和游戏间程序的基准为三分钟，但这是通常赋予牌手补时的标准。即便有牌手因本次检查发现的违规而被判一盘负，也应给予相应的补时。
+>这是因为套牌检查通常会有意使套牌呈非随机排列，牌手应当在继续进行游戏前得到足够的时间来随机化他们的套牌。虽然已不再明文规定游戏前程序和游戏间程序的基准为三分钟，但这是通常赋予牌手补时的标准。即便有牌手因本次检查发现的违规而被判一盘负，也应给予相应的补时。
 
 Feature matches at a tournament with online coverage receive a time extension equal to three minutes plus time elapsed in the round when players reach their table. This is not necessary if feature matches are being timed separately.
 
@@ -1119,11 +1129,11 @@ Feature matches at a tournament with online coverage receive a time extension eq
 
 >Feature matches are often announced after players have already sat at their table number and pulled out their deck and playmats.  When the feature matches are announced, they then have to pack everything up and go to the feature match area.  The extra time is to account for the time it takes to move and get settled into a new space. Players who are on coverage are doing so at the request of the organizer. We do not want to put players at a disadvantage because they simply have an interesting match to watch, and are doing the TO a favor. Of course, if the feature matches are timed separately we do not have to worry about the players being at a time disadvantage!
 >
->焦点桌的对局通常在牌手们已于各自的桌位号就座，并拿出套牌和牌垫之后才会被宣布。当焦点桌被宣布时，这些牌手就必须收拾好所有物品，并前往焦点桌区域。额外的补时便是为了补偿他们在移动和到新位置后重新布置所花费的时间。这些牌手是因比赛主办人的要求而被在线转播的。我们不应让牌手仅仅因为其比赛被直播（从而为主办方服务）而遭受比赛时间上的损失。当然，如果焦点对局单独计时，我们就不用担心牌手因此遭受不利了。
+>焦点桌的对局通常在牌手们已于各自的桌位号就座，并拿出套牌和牌垫之后才会被宣布。当焦点桌被宣布时，这些牌手就必须收拾好所有物品，并前往焦点桌区域。额外的补时便是为了补偿他们在移动和到新位置后重新布置所花费的时间。这些牌手是因比赛主办人的要求而被在线转播的。我们不应让牌手仅仅因为其对局被直播（从而为主办方服务）而遭受比赛时间上的损失。当然，如果焦点对局单独计时，我们就不用担心牌手因此遭受不利了。
 
 Certain slow play penalties add turns rather than a time extension. These additional turns are added to the end-of-match additional turns.
 
-某些游戏进行过慢之惩罚会采取增加回合数的方式来执行。此类递补的回合会增加在对局结束程序所延长的回合之后。
+某些游戏进行过慢之惩罚会增加回合数，而不是给予补时。此类递补的回合会增加在对局结束程序所延长的回合之后。
 
 >For more information, see IPG 3.3: Slow Play. If a player receives a warning for slow play, each player is awarded an additional turn, totaling seven additional turns if one player is warned and nine additional turns if both players are warned. Note that no additional turns are awarded if slow play is penalized during the additional turns procedure. This is chosen as a way to give back some of the time that was lost, without having to try and quantify how much time was lost.
 >
@@ -1137,19 +1147,19 @@ Players are required to register their decks and sideboards (if applicable) in C
 
 >Decklists are expected in Comp and Professional REL.  If a Tournament Organizer wants to have decklists at Regular Rules Enforcement Level, they should make sure they inform the players as early as possible, as most won’t expect the requirement and won’t have them prepared in advance. If a Tournament Organizer decides the event is serious enough to warrant decklists at Regular Rules Enforcement Level, they may want to consider changing the Rules Enforcement Level to Competitive. Regular Rules Enforcement Level events with decklists are very rare.  Typically requiring lists at Regular is in response to suspected rampant cheating.
 >
->在竞争级别和专业级别中，应进行套牌检查。如果比赛主办人要求在一般级别比赛中提交牌表，应确保其尽早通知牌手，因为通常不会有此要求，牌手也不会事先准备。如果比赛主办人判断该比赛严肃到需要在一般级别填写牌表，那么他们可能会考虑将比赛级别改为竞争。需要牌表的一般级别比赛是非常罕见的。通常，在一般级赛事中要求提交套牌登记表，是为了应对疑似猖獗的作弊行为。
+>在竞争级别和专业级别的赛事中，应当提交套牌登记表。如果比赛主办人要求在一般级别比赛中提交套牌登记表，应确保其尽早通知牌手，因为大多数牌手不会预料到有此要求，也不会事先准备好套牌登记表。如果比赛主办人判断该比赛严肃到需要在一般级别填写套牌登记表，那么他们可能会考虑将比赛级别改为竞争。需要套牌登记表的一般级别比赛是非常罕见的。通常，在一般级赛事中要求提交套牌登记表，是为了应对疑似猖獗的作弊行为。
 
 Registered decklists record the original composition of each deck and sideboard (if applicable). Once your decklist has been accepted by a Tournament Official it may not be altered. If electronic decklists are used, decklists cannot be altered after the date and time that decklists are required to be submitted.
 
-登记在案的套牌登记表中记录了每份套牌及其备牌（如果有的话）原本的内容组成。一旦套牌登记表已被比赛工作人员接收，牌手便不得对其套牌登记表进行修改。如果牌手使用电子牌表，在登记截止时间之后不得更改牌表。
+登记在案的套牌登记表中记录了每份套牌及其备牌（如果有的话）原本的内容组成。一旦套牌登记表已被比赛工作人员接收，牌手便不得对其套牌登记表进行修改。如果牌手使用电子套牌登记表，在登记截止时间之后不得更改套牌登记表。
 
 >Altering a decklist after it has been accepted by a Tournament Official, or after the official cutoff time for electronic submission, is not allowed for various reasons: TOs/Judges may perform tournament operations on the list, players might gain additional strategic information by scouting opponents.  Much like presenting a deck to an opponent is signifying a legal deck, submitting a decklist to Tournament Official (online or physically) is a declaration that the decklist is legal and final. A judge is allowed to alter the decklist when applying the fix for a Decklist Problem.
 >
->在比赛工作人员收取牌表之后，或在电子提交时间截至后，便不能再改变牌表，此举是出于多种原因的考量：其一，主办人/裁判可能已基于该牌表进行赛事操作；其二，牌手可能会通过侦查对手来获取额外的战略信息。正如向对手出示套牌即代表该套牌合法一样，向赛事工作人员线上或实体地提交套牌登记表的行为，本身就是一项声明，即该登记表是合法且为最终版本的。允许裁判在修复套牌登记表问题时修改牌表。
+>在比赛工作人员收取套牌登记表之后，或在电子提交时间截至后，便不能再改变套牌登记表，此举是出于多种原因的考量：其一，主办人/裁判可能已基于该套牌登记表进行赛事操作；其二，牌手可能会通过侦查对手来获取额外的战略信息。正如向对手出示套牌即代表该套牌合法一样，向赛事工作人员线上或实体地提交套牌登记表的行为，本身就是一项声明，即该登记表是合法且为最终版本的。允许裁判在修复套牌登记表问题时修改套牌登记表。
 
 In Constructed tournaments, decklists must be submitted to a tournament official prior to the start of the tournament.
 
-在构组赛中，牌手须在比赛开始之前将牌表交至比赛工作人员处。
+在构组赛中，牌手须在比赛开始之前将套牌登记表交至比赛工作人员处。
 
 >In tournaments using the IPG, not submitting your decklist prior to the announced first round of the tournament is considered Tardiness, and does upgrade.  This is irrespective of byes that might have been awarded.
 >
@@ -1157,11 +1167,11 @@ In Constructed tournaments, decklists must be submitted to a tournament official
 
 In Limited tournaments, decklists must be submitted prior to the start of the first round in which that player participates.
 
-在限制赛中，牌手须在自己亲自参加的首局比赛开始之前将牌表交至比赛工作人员处。
+在限制赛中，牌手须在自己参加的第一轮开始之前将套牌登记表交至比赛工作人员处。
 
 >Constructed decklists need to be turned in before round 1 begins. Limited needs to be turned in before the first round the player is actually playing in begins.   The rules for constructed and limited are effectively the same,  however, sometimes large sealed events may have byes, and in those rare cases players with byes may have different build times. The wording for this rule allows for that possibility without explicitly mentioning byes because WoTC doesn’t have any events that award byes anymore.
 >
->构组赛的牌表应当在第一轮开始前提交。限制赛的牌表应当在牌手实际进行比赛的轮次之前提交。这两条规则的本质是相同的。然而，在某些大型现开赛中可能会有轮空，在这些罕见情况下，持有轮空资格的牌手可能会有不同的套牌构组时间。本条规则的措辞之所以如此设计，便是为了涵盖这种可能性，同时又避免了直接提及轮空——因为威世智官方已不再举办任何会给予奖励轮空的赛事了。(译注：奖励轮空是曾经的机制，牌手可通过比赛或者奖励轮空资格，从而在另一场比赛轮空，以1-0开局。)
+>构组赛的套牌登记表应当在第一轮开始前提交。限制赛的套牌登记表应当在牌手实际参加的第一轮开始之前提交。这两条规则的本质是相同的。然而，在某些大型现开赛中可能会有轮空，在这些罕见情况下，持有轮空资格的牌手可能会有不同的套牌构组时间。本条规则的措辞之所以如此设计，便是为了涵盖这种可能性，同时又避免了直接提及轮空——因为威世智官方已不再举办任何会给予奖励轮空的赛事了。(译注：奖励轮空是曾经的机制，牌手可通过比赛或者奖励轮空资格，从而在另一场比赛轮空，以1-0开局。)
 
 Players have the right to request to see their decklist between matches. Such a request will be honored if logistically possible.
 
@@ -1169,7 +1179,7 @@ Players have the right to request to see their decklist between matches. Such a 
 
 >What is logistically possible is up to the judges at an event. Some event have thousands of decklists collected around the same time and trying to find one before they are organized might not be possible. If a player has alerted a judge to an error before they could gain advantage or before the event has begun, please be mindful of this information if unable to provide their list. Additionally, players will now often take a picture of their decklist once they have requested it, for their future use.
 >
->是否行事上可行由比赛中的裁判决定。有些比赛可能会在同一时间收集数千张牌表，因此在整理好前从中寻找特定的某张是不可能的。如果牌手在可能从中获得优势或比赛开始前就告知裁判有错误发生，如果此时尚不能为牌手提供牌表，请注意牌手提供的这个信息。此外，如果牌手请求查看了牌表，他们通常会对牌表拍照，以备其将来使用。
+>是否行事上可行由比赛中的裁判决定。有些比赛可能会在同一时间收集数千张套牌登记表，因此在整理完成前，可能无法从中找到某一张特定套牌登记表。如果牌手在可能从中获得优势或比赛开始前就告知裁判有错误发生，如果此时尚不能为牌手提供套牌登记表，请注意牌手提供的这个信息。此外，如果牌手请求查看了套牌登记表，他们通常会对套牌登记表拍照，以备其将来使用。
 
 Generally, decklists are not public information and are not shared with other players during a tournament. At Professional Rules Enforcement Level tournaments (World Championship, Pro Tour, Limited Championship, Spotlight Series, Regional Championships), opponents’ decklists will be provided to players.
 
@@ -1179,13 +1189,13 @@ Generally, decklists are not public information and are not shared with other pl
 >
 >Note that while they have the decklist, it is considered to be notes taken outside of the game so players may only view them while in between games.
 >
->某些赛事之所以会公开所有牌表，是为了抵消因瑞士轮阶段的赛事报道而对部分牌手造成的劣势。在单淘汰决胜阶段的限制赛中，你对手获得关于你牌表信息的机会非常小。因此，我们只在构组赛中提供牌表。由于赛事报道，星城公开系列赛也允许8强牌手查看对手的牌表。
+>某些赛事之所以会公开套牌登记表，是为了抵消因瑞士轮阶段的赛事报道而对部分牌手造成的劣势。在单淘汰决胜阶段的限制赛中，你对手获得关于你牌表信息的机会非常小。因此，我们只在构组赛中提供套牌登记表。由于赛事报道，星城公开系列赛也允许8强牌手查看对手的套牌登记表。
 >
->注意，虽然这是他们的牌表，但在比赛中也被视为是游戏外做的笔记，因此牌手只能在两盘游戏间查看。
+>注意，虽然这是牌手的套牌登记表，但也被视为是游戏外做的笔记，因此他们只能在两盘游戏间查看。
 
 Additional information regarding digital decklists can be found in section 2.12 – Electronic Devices.
 
-有关电子牌表的额外规定详见第2.12节 - 电子设备。
+有关电子套牌登记表的额外信息详见第2.12节 - 电子设备。
 
 ## MTR 2.8 Deck Checks 套牌检查
 
@@ -1199,11 +1209,11 @@ Deck checks must be performed at all Competitive and Professional Rules Enforcem
 
 A full deck check should not be performed if a player has drawn an opening hand and potentially made mulligan decisions.
 
-如果牌手已经抓好了起手的牌，且很可能已经做好了是否要进行再调度的决定，就不应对其进行完整的套牌检查。
+如果牌手已经抓好了起手的牌，且可能已经做好了是否要进行再调度的决定，就不应对其进行完整的套牌检查。
 
 >Judges can still do a deck check after the opening hand/mulligans have been made, but the cost of a judge error is significantly higher in this case, and is typically not worth the risk unless there is a very specific reason for checking the deck at that exact moment.
 >
->裁判在起手/再调度完成后仍可进行套牌检查，但在这种情况下，裁判失误所造成的代价将显著提高，因此通常不值得冒此风险——除非有非常明确的理由，必须在该特定时刻进行检查。
+>裁判在起手/再调度完成后仍可进行套牌检查，但在这种情况下，裁判失误所造成的代价将显著提高，因此通常不值得冒此风险——除非有非常明确的理由，要在恰好那个时刻检查套牌。
 
 ## MTR 2.9 Appeals to the Head Judge 向主审申诉
 
@@ -1229,13 +1239,13 @@ Players may not appeal before the full ruling is made by the responding floor ju
 
 >Players are required to be respectful to judges, which includes letting them finish their ruling before disagreeing with them. Players appealing a judge based on perception of the Judge or how they think the judge is going to rule undermines that judge’s authority, and can be considered Unsporting Conduct — Minor.
 >
->牌手应该尊重裁判，包括在他们进行完整判决前不反对他们。根据对裁判的观感或是他们认为裁判会如何判决而申述，将破坏这位裁判的权威，并有可能受到举止违背运动道德~轻微的判罚。
+>牌手应该尊重裁判，包括在他们进行完整判决前不反对他们。根据对裁判的观感或是他们认为裁判会如何判决而申述，将破坏这位裁判的权威，并有可能被认定为举止违背运动道德~轻微。
 
 ## MTR 2.10 Dropping from a Tournament 退出比赛
 
 Players may drop from a tournament at any time. If a player drops from a tournament before the first round of play has started, they are considered to have not participated in the tournament and will not be listed in the finish order.
 
-牌手随时可自比赛中退出。如果某牌手在比赛第一局开始之前便退出，则该牌手便会被视作未参加本次比赛，不会在比赛的最终排名中列出。
+牌手随时可自比赛中退出。如果某牌手在比赛第一轮开始之前便退出，则该牌手便会被视作未参加本次比赛，不会在比赛的最终排名中列出。
 
 >They are also not considered to have contributed to the attendance total for the event.
 >
@@ -1243,7 +1253,7 @@ Players may drop from a tournament at any time. If a player drops from a tournam
 
 Players choosing to drop from a tournament must inform the Scorekeeper by the means provided for that tournament before the pairings for the next round are generated.
 
-选择退出比赛的牌手必须在下一局的配对完成前，以当次比赛提供的方式通知记分员。
+选择退出比赛的牌手必须在下一轮的配对生成前，以当次比赛提供的方式通知记分员。
 
 >The best way to do this is to designate you are dropping on the match slip.  However, you can go to the SK and drop directly.  If you are dropping from an event, please let the SK know.  After they start generating the next round, they arent going to undo that work to remove you from the event.   You will get paired, and someone is going to be sitting across from an empty seat.  They came to play Magic, and now have to be bored for an hour.
 >
@@ -1251,11 +1261,11 @@ Players choosing to drop from a tournament must inform the Scorekeeper by the me
 
 Players wanting to drop after the Scorekeeper begins pairing for the next round will be paired for that round.
 
-在记分员开始为下一局配对后才提出想要退出比赛的牌手会在该局中被配对。
+在记分员开始为下一轮配对后才提出想要退出比赛的牌手会在该轮中被配对。
 
 >The other alternative would be to withdraw all pairings that were posted, do a repair, repost everything, and make several announcements to try to avoid confusion among those who saw the first set of pairings. Overall this could add noticeable delay to the event.
 >
->还有一种方法是取消刚刚公布的所有配对，修正人数，重新公布所有的东西，并进行一些公告，防止看到第一套配对的人产生混淆。总而言之这会显著延误比赛。
+>还有一种方法是取消刚刚公布的所有配对，修正人数，重新公布所有的东西，并进行一些公告，防止看到第一套配对的人产生混淆。总而言之这可能显著延误比赛。
 
 If a player does not show up for their match, they will be automatically dropped from the tournament unless they report to the Scorekeeper. Players that repeatedly and/or intentionally drop from tournaments without informing the scorekeepers of those tournaments may be the subject of penalties up to and including suspension.
 
@@ -1271,7 +1281,7 @@ If a player does not show up for their match, they will be automatically dropped
 
 Players who drop during limited tournaments own the cards that they correctly have in their possession at that time. This includes any unopened or partially drafted booster packs.
 
-自限制赛制比赛中退出的牌手拥有他们当前持有的所有卡牌。这包括未开封或已在轮抽过程中使用的补充包。
+自限制赛制比赛中退出的牌手拥有他们当前正确持有的所有卡牌。这包括未开封或已在轮抽过程中使用的补充包。
 
 >This was clarified for Grand Prix Vegas in 2013 (Modern Masters). Players can take what they have in their hands and go home. This used to primarily cover players who wanted to drop before passing packs for value, but with the new registration procedure, players open the packs they will use, then have another player register. Players can still drop during this portion if there are time constraints/etc, and they get the boosters they originally were handed.
 >
@@ -1279,7 +1289,7 @@ Players who drop during limited tournaments own the cards that they correctly ha
 
 If a player drops from a tournament after a cut has been made, no other player is advanced as a replacement. If the remaining part of the tournament is single elimination, the highest ranked remaining player receives a bye for the next round instead.
 
-如果牌手在分划赛程之后才退出比赛，则不会有牌手能递补进八强来替代其席位。若比赛接下来的赛程为单淘汰对局，则剩余牌手之中排名最高者将在下一局获得一个轮空。
+如果牌手在分划赛程之后才退出比赛，则不会由其他牌手递补晋级。若比赛接下来的赛程为单淘汰对局，则剩余牌手之中排名最高者将在下一轮获得一个轮空。
 
 >It is rare for a player to voluntarily drop after a cut has been made, but emergencies do happen. However, sometimes a player is dropped involuntarily due to a disqualification. If that occurs, judges should not advance any other players into the Top X. The dropped player’s opponent just gets a bye for that round.
 >
@@ -1295,7 +1305,7 @@ Players who have dropped may reenter a tournament at the discretion of the Head 
 >
 >在考虑是否允许牌手重新加入比赛时，主审需要审视这会对比赛整体造成何种影响。
 >
->如果牌手没有合法的套牌去比赛，则不能参加比赛中需要轮抽或现开套牌的部分。
+>牌手不得重新加入需要轮抽或现开套牌的赛事部分，因为其不会拥有可用于进行对局的合法套牌。
 
 Players may not drop from a tournament in exchange for or influenced by the offer of any reward or incentive. Doing so is considered Bribery (see section 5.2).
 
@@ -1305,11 +1315,11 @@ Players may not drop from a tournament in exchange for or influenced by the offe
 
 Players are allowed to take written notes during a match and may refer to those notes while that match is in progress. At the beginning of a match, each player’s note sheet must be empty and must remain visible throughout the match.
 
-牌手可在对局当中进行笔头记录，并可在对局进行过程中参考该些记录。在一局对局开始的时候，每位牌手用于做笔记的纸都应是空白的，且应在整个比赛过程中保持可见。
+牌手可在对局当中进行笔头记录，并可在对局进行过程中参考该些记录。在一局对局开始的时候，每位牌手用于做笔记的纸都应是空白的，且应在整个对局过程中保持可见。
 
 >This rule allows players to write down their opponent’s hand while resolving Thoughtseize. Players can take any kind of notes during their match, and they are allowed to check those notes anytime in the current round.  This does not include notes written before the match.  That is why the note sheet must be blank beforehand.  There are only certain times you can access notes written before the match.
 >
->这条规则允许牌手在结算攫取思绪时记录其对手的手牌。牌手可以在一局对局过程中记录任意种类的笔记并且可以在本局对局中任意查看。本条规则的适用范围不包括赛前准备的笔记。正因如此，笔记纸在赛前必须是空白的。仅能在特定时刻，才允许查阅赛前准备的笔记。
+>这条规则允许牌手在结算攫取思绪时记录其对手的手牌。牌手可以在一局对局过程中记录任意种类的笔记并且可以在本轮次中任意查看。本条规则的适用范围不包括赛前准备的笔记。正因如此，笔记纸在赛前必须是空白的。仅能在特定时刻，才允许查阅赛前准备的笔记。
 
 Players do not have to explain or reveal notes to other players. Judges may ask to see a player’s notes and/or request that the player explain their notes.
 
@@ -1317,7 +1327,7 @@ Players do not have to explain or reveal notes to other players. Judges may ask 
 
 >Since a lot of Magic events are multinational ones, players are allowed to take notes in any language they want, even in High Valyrian. Since those notes are only for a player’s personal use, players are not obligated to explain or translate them to their opponent. A judge may ask a player to explain what is on their notes since it is vital for the judge’s job.
 >
->由于很多万智牌比赛都有很多国家的牌手参赛，所以牌手可以使用任何语言来记录笔记，甚至是高等瓦雷利亚语。由于这些笔记只是牌手个人使用，牌手没有义务向对手解释或翻译它们。如果对裁判的工作很重要的话，裁判可以要求牌手解释其笔记的内容。
+>由于很多万智牌比赛都有很多国家的牌手参赛，所以牌手可以使用任何语言来记录笔记，甚至是高等瓦雷利亚语。由于这些笔记只是牌手个人使用，牌手没有义务向对手解释或翻译它们。裁判可以要求牌手解释笔记内容，因为这对裁判履行职责至关重要。
 
 Players may not refer to other notes, including notes from previous matches, during games.
 
@@ -1333,7 +1343,7 @@ Between games, players may refer to a brief set of notes made before the match. 
 
 >Players may consult notes made outside the match in between games. This is most often used for notes on how to sideboard, which are perfectly fine. If a players are provided their opponent’s deck list, such as during the Top 8 of particular Constructed events (MTR 2.7), this is also the time they may look at them.  Also note that once you have sat for your match, you are not “between games” of that match.
 >
->在两盘游戏之间牌手可以查阅在比赛外记录的笔记。这通常是用来记录如何换备，是完全合法的。如果牌手被提供了其对手的套牌登记表，例如某些特定比赛的构筑比赛（[MTR 2.7](#mtr-27-deck-registration-套牌登记)）8强赛，这也是他们可以查看这些牌表的时机。另请注意：当你为一局比赛坐下后，就不再算是“两盘游戏之间”的时间了。
+>在两盘游戏之间牌手可以查阅在本场对局外记录的笔记。这通常是用来记录如何换备，是完全合法的。如果牌手被提供了其对手的套牌登记表，例如某些特定比赛的构组比赛（[MTR 2.7](#mtr-27-deck-registration-套牌登记)）8强赛，这也是他们可以查看这些套牌登记表的时机。另请注意：当你为一局比赛坐下后，就不再算是“两盘游戏之间”的时间了。
 
 Excessive quantities of notes (more than a sheet or two) are not allowed and may be penalized as slow play.
 
@@ -1345,11 +1355,11 @@ Excessive quantities of notes (more than a sheet or two) are not allowed and may
 
 In tournaments where opponents’ decklists are provided to players, players are not permitted to transcribe their opponent’s entire decklist as part of their notes for the match.
 
-在提供对手牌表的比赛中，不允许将对手的整个牌表转录为比赛笔记的一部分。
+在提供对手套牌登记表的比赛中，不允许将对手的整个套牌登记表转录为比赛笔记的一部分。
 
 >When the TO provides decklists, its considered an outside note the player can reference between games. That does not mean a player can write the list and turn it into a note they can reference during a game.
 >
->若主办方提供了牌表，该列表便被视为一种外部笔记，牌手可以在盘间查阅。但这并不意味着牌手可以将该牌表抄写下来，从而将其转化为一份可在游戏进行期间查阅的笔记。
+>若主办方提供了套牌登记表，该套牌登记表便被视为一种外部笔记，牌手可以在盘间查阅。但这并不意味着牌手可以将该套牌登记表抄写下来，从而将其转化为一份可在游戏进行期间查阅的笔记。
 
 The use of electronic devices to take and refer to notes is permitted at Regular Rules Enforcement Level (see section 2.12).
 
@@ -1357,7 +1367,7 @@ The use of electronic devices to take and refer to notes is permitted at Regular
 
 >But not at Competitive Rules Enforcement Level. The bulk of information is in Section 2.12, this is just specifically relaxing what is allowed at Regular Rules Enforcement Level.
 >
->但是在竞争级别这是不行的。大部分这方面的信息在MTR 2.12节。关于一般级别比赛中电子设备的使用，这句话宽慰了牌手。
+>但是在竞争级别这是不行的。大部分这方面的信息在MTR 2.12节。这里只是特别放宽了一般级别赛事中允许使用电子设备的范围。
 
 Players and spectators (exception: authorized press) may not make notes while drafting.
 
@@ -1373,7 +1383,7 @@ Players may not reference any outside notes during drafting, card pool registrat
 
 >Rules in this section apply also to other parts of the tournament outside of matches, especially drafting and deckbuilding. In Competitive Rules Enforcement Level tournaments we are challenging players’ ability to create the best limited deck they can through card evaluation and deck construction, not just following a flowchart of what cards are best for different archetypes.
 >
->这部分规则也适用于比赛之外的比赛其他部分，特别是轮抽以及构组过程中。在竞争级别比赛中，我们考验的是牌手运用其对牌张的评估以及套牌构组技术来构组最好的限制赛套牌的能力，而不是根据一张流程图选择出每种套牌最强的牌张来使用。
+>这部分规则也适用于对局之外的比赛其他部分，特别是轮抽以及构组过程中。在竞争级别比赛中，我们考验的是牌手运用其对牌张的评估以及套牌构组技术来构组最好的限制赛套牌的能力，而不是根据一张流程图选择出每种套牌最强的牌张来使用。
 
 Players may refer to Oracle text at any time. They must do so publicly and in a format which contains no other strategic information.
 
@@ -1385,7 +1395,7 @@ Players may refer to Oracle text at any time. They must do so publicly and in a 
 
 Consulting online sources, such as gatherer.wizards.com, is allowed at Regular Rules Enforcement Level even if they contain a small amount of strategic information. If a player wishes to view Oracle text in private, they must ask a judge.
 
-在执法严格度为一般级别的比赛中,牌手可查询线上资源（例如gatherer.wizards.com）。如果牌手想要私下查阅 Oracle 的叙述,则必须询问裁判。
+在执法严格度为一般级别的比赛中，即使线上资源含有少量战略信息，牌手可查询线上资源（例如gatherer.wizards.com）。如果牌手想要私下查阅 Oracle 的叙述，则必须询问裁判。
 
 >At Regular Rules Enforcement Level events players can access Oracle by themselves, yet you need to show what they are doing to the opponent as well. Of course players are always allowed to ask a judge for current Oracle text in private as long as they are able to identify the card they are looking for, either by name, or by description.
 >
@@ -1415,11 +1425,11 @@ Electronic devices are permitted, but players may not use them to access informa
 
 For events that use digital decklists, players may only access the decklists of other players prior to the start of a game or in between games. Digital decklists may not be referenced during games.
 
-对于使用电子牌表的赛事，牌手只能在对局开始前或两盘游戏之间浏览对手的牌表，在对局期间则不能查看。
+对于使用电子套牌登记表的赛事，牌手只能在一盘游戏开始前或两盘游戏之间浏览对手的套牌登记表，在游戏期间则不能查看。
 
 >There are some events that use digital tools and allow you to access your opponents decklist.  If you are in an event that makes this available, your opponents decklist is considered an outside note, and must be put away at the beginning of the first game. Accessing the decklist during the game is treated the same as if you accessed outside notes during a game with respect to the recognition of an infraction being committed
 >
->在某些采用数字化工具的赛事中，会允许牌手查阅对手的牌表。如果你参加的赛事提供此功能，那么对手的套牌列表便被视为一种外部笔记，且必须在第一盘游戏开始时收好。就违规行为的认定而言，在游戏进行期间查阅该列表，与在游戏中查阅其他外部笔记将被同等对待。
+>在某些采用数字化工具的赛事中，会允许牌手查阅对手的套牌登记表。如果你参加的赛事提供此功能，那么对手的套牌登记表便被视为一种外部笔记，且必须在第一盘游戏开始时收好。就违规行为的认定而言，在游戏进行期间查阅该列表，与在游戏中查阅其他外部笔记将被同等对待。
 
 Device use during a match other than brief personal calls must be visible to all players. Players wishing to view information privately on electronic devices during matches must request permission from a judge.
 
@@ -1449,7 +1459,7 @@ The Head Judge or Tournament Organizer of a tournament may further restrict or f
 
 Some Competitive and Professional Rules Enforcement Level tournaments use video for live streaming or replay broadcast of matches. Players may decline to appear on camera; however, players in the playoff matches of Professional Rules Enforcement Level tournaments may not decline to appear on camera.
 
-一些「竞争」级别及「专业」级别的比赛会将实时视频用于网络现场直播或对局过程回放。牌手可拒绝被摄入镜头；但参加专业级别执法严格度比赛之决胜局阶段比赛的牌手不得拒绝出镜。
+一些「竞争」级别及「专业」级别的比赛会将实时视频用于网络现场直播或对局过程回放。牌手可拒绝被摄入镜头；但参加专业级别执法严格度比赛之决胜局阶段对局的牌手不得拒绝出镜。
 
 >Typically every player fills out a press release form at larger events with video coverage. Players can refuse for reasons from being shy to being in witness protection, but all Top 8 matches are on coverage.
 >
@@ -1465,7 +1475,7 @@ Video commentators are considered spectators for the purpose of the tournament b
 
 Spectators are also permitted to record matches provided that they do so unobtrusively.
 
-在举止不过分夸张的情况下，旁观者也可以记录对局进行过程。
+旁观者也可以记录对局，但不得因此妨碍牌手或赛事进行。
 
 >This typically takes the form of a buddy or helper recording the play so the player can review after the fact.  Its not common, but it can happen.  It’s typically considered safe because spectators can’t share those notes with a player during play.  However if the spectator is being obtrusive or disruptive, the opponent and/or the judge can ask the spectator to leave.
 >
@@ -1489,7 +1499,7 @@ The following tiebreakers are used to determine how a player ranks in a tourname
 
 1. Match points
 
-1. 对局积分
+1. 局分
 
 2. Opponents’ match-win percentage
 
@@ -1581,7 +1591,7 @@ Limited Formats
 
 Players may use any Authorized Magic Game Cards from Magic: The Gathering expansions, core sets, special sets, supplements, and promotional printings. Authorized Game Cards must be regulation-sized, genuine Magic cards publicly released by Wizards of the Coast. Cards that are not Authorized Game Cards are prohibited in all sanctioned events.
 
-牌手可使用出自万智牌扩充系列、核心系列、特殊系列、补充版及推广印次中的「认可万智牌游戏牌张」。认可牌张必须是规定大小的，由威士智公开发行的正版万智牌张。不是认可游戏牌张的牌在所有认证赛事中均不可使用。
+牌手可使用出自万智牌扩充系列、核心系列、特殊系列、补充版及推广印次中的「认可万智牌游戏牌张」。认可牌张必须是规定大小的，由威世智公开发行的正版万智牌张。不是认可游戏牌张的牌在所有认证赛事中均不可使用。
 
 >This section of the MTR defines authorized cards.  It used to spell out what cards were allowed, however Wizards has printed so many ‘whacky’ things in the last several years, that it has become easier to define what is not an Authorized Card, than what is.  Essentially we start with the universe of ‘everything printed by Wizards’, and then define groups of “no, not these”.
 >
@@ -1589,7 +1599,7 @@ Players may use any Authorized Magic Game Cards from Magic: The Gathering expans
 
 Cards that, unaltered, feature gold borders on their front or back, and cards from the “Heroes of the Realm” and Theros block “Challenge Deck” series (usually denoted by a different card back), are not Authorized Game Cards.
 
-正面或背面边框为金色、员工卡或是塞洛斯系列的挑战套组（通常使用不同的卡背）中的牌张不是认可游戏牌张。
+未经加工时正面或背面边框为金色的牌张、员工卡或是塞洛斯系列的挑战套组（通常使用不同的卡背）中的牌张不是认可游戏牌张。
 
 >Some collector edition cards feature gold borders on the front or back.  Most ‘Heroes of the Realm’ cards do not have a standard Magic back, although one does.
 >
@@ -1605,7 +1615,7 @@ Silver-bordered cards and cards with an acorn-shaped security stamp or acorn-sha
 
 Cards labeled “Not for constructed play,” “Playtest”, or featuring a playtest sticker or picture of a playtest sticker on another Magic card may not be used in Constructed events.
 
-标注有 “不可用于构组游戏”、 “游戏测试”的牌张，附有游戏测试贴纸绘有游戏测试贴纸的牌张，不得用于构组赛事。
+标注有 “不可用于构组游戏”、 “游戏测试”的牌张，附有游戏测试贴纸或绘有游戏测试贴纸的牌张，不得用于构组赛事。
 
 >These are for some cards from Mystery Boosters, or the special event Gavin Verhey hosts at MagicCons, or random secret lair style inserts.
 >
@@ -1613,7 +1623,7 @@ Cards labeled “Not for constructed play,” “Playtest”, or featuring a pla
 
 Wizards includes additional game material in packs, intended as game aids and not as traditional cards. Examples include tokens, title cards, dungeons, and art cards. These are not required for play and players are welcome to use any representation that is clear to both players when they are needed in the game.
 
-在卡包中，威士智添加了一些额外的物件作为辅助工具，包括衍生物、封面牌、地城、插画等。这些并不是游戏中的必须品，我们鼓励牌手在游戏中根据需要使用任何能向双方作出清晰表述的方式。
+在卡包中，威世智添加了一些额外的物件作为辅助工具，包括衍生物、封面牌、地城、插画等。这些并不是游戏中的必须品，我们鼓励牌手在游戏中根据需要使用任何能向双方作出清晰表述的方式。
 
 >While its fairly obvious that advertisements in packs are not cards, we do want to call out that tokens, dungeons, stickers, and The Ring Tempts You cards are not real cards.  But the more relevant part of this rule is that a player does not actually need a physical Dungeon insert to Venture into the Dungeon.  If both players are clear as to what is going on, any representation is fine.  If you want to make your favorite dungeon into your playmat, go for it.
 >
@@ -1621,23 +1631,23 @@ Wizards includes additional game material in packs, intended as game aids and no
 
 Players may use otherwise-legal non-English and/or misprinted cards provided they are not using them to create an advantage by using misleading text or pictures. Official promotional textless spells are allowed in sanctioned Magic tournaments in which they would otherwise be legal.
 
-非英语版本和／或具有印刷错误的卡牌，只要该牌符合其他使用要求，且牌手并非刻意利用牌面上具有误导性的文字或插画来获取优势，便可以使用。一些正式发行的无内文的咒语赠牌，在符合其他使用要求的情况下，可以在万智牌认证比赛中使用。
+非英语版本和／或具有印刷错误的卡牌，只要该牌符合其他使用要求，且牌手并非刻意利用牌面上具有误导性的文字或插画来获取优势，便可以使用。官方无内文咒语赠牌在其他方面符合使用要求时，可以在万智牌认证比赛中使用。
 
 >It is not required that players play with cards that are printed in the native language of the area in which the tournament is being run. If a player needs to know what a card does, either because it is in a language they cannot read, or it is a textless printing, they may call for a judge and ask for the Oracle text.
 >
 >There are some famous misprints whose art is from a different card. For example, the German-language printing of Revised had a Forest (Wald) with Plains art. These cards, while an interesting curiosity, create an ambiguous and confusing game state and should not be used in tournament play.
 >
->并不苛求牌手使用比赛所在地文字的牌张参加比赛。如果牌手因语言障碍或者印刷原因无法得知牌张内容，那么他可以请求裁判帮助查询oracle叙述。
+>并不苛求牌手使用比赛所在地文字的牌张参加比赛。如果牌手因为牌张所用语言无法阅读，或因为该牌张属于无内文印次，那么他可以请求裁判帮助查询oracle叙述。
 >
 >有一些经典的印刷错误的例子，牌张的图片印刷错误了。例如，德文R版的树林被印上了平原的图。这些带有明显歧义的牌会混淆游戏状态，不应在比赛中使用。
 
 Artistic modifications are acceptable in sanctioned tournaments, provided that the modifications do not make the card art unrecognizable, contain substantial strategic advice, disparaging remarks, or contain offensive images. Artistic modifications also may not cover or change the mana cost or name of the card.
 
-在牌面上进行过艺术加工的牌可以在认证比赛中使用，但需保证此类加工：不会使得该牌上面的插画变得无法识别；未含有隐性的战术指导信息；未含有歧视性内容；未含有侮辱性的图像。艺术加工不得覆盖或更改牌张的法术力费用或名称。
+在牌面上进行过艺术加工的牌可以在认证比赛中使用，但需保证此类加工：不会使得该牌上面的插画变得无法识别；未含有实质性的战术指导信息；未含有贬损性言论；未含有冒犯性的图像。艺术加工不得覆盖或更改牌张的法术力费用或名称。
 
 >While the Head Judge of an event may decide to allow or disallow any given altered card, it is important to keep the above guidelines in mind. If the art is still recognizable, the name and mana cost are not obstructed, and the card is not distinguishable from any other card in the deck while in a hidden zone (like the paint made it noticeably thicker), then it should be allowed.  The potential offensiveness of an alter is a more subjective area and should likely have a more conservative approach. Another thing to note, is that the alter cannot contain substantial strategic advice.  This means it can have non-substantial strategic advice.  An example of an acceptable non-substantial strategic alter is writing “play me pre-combat” on a creature with haste.  That alter does technically contain strategic advise, but you can’t make an argument that that advice is substantial, because…what else do you want to do with a hasty boi?  In fact, the opposite, outlining the reasons/conditions you would NOT want to play a haste creature in pre-combat main would probably qualify as substantial strategic advice.
 >
->尽管主审有权利允许或禁止一些带有加工的牌，但是仍需遵守上述的指导原则。如果对于牌张的艺术加工并未遮挡名称以及法术力费用，且该牌张不能在隐藏区域中被区分（例如加工使其显著变厚），那么这样的加工是应当认可的。而关于加工图案是否有可能冒犯他人则是较为主观的，裁判应当在这个问题上更加保守。另外需要注意的是，加工不能包含实质性的策略建议。 这意味着它可以包含非实质性的策略建议。 例如，一个可以接受的非实质性加工是：在一只具有敏捷的生物上写上“战斗前行动阶段使用我”。 从技术上讲，这确实算是一种策略建议，但你无法主张这种建议是“实质性的”，因为——说真的，你还能指望对一只有敏捷的家伙干别的事吗？ 事实上，反过来说，如果你在加工时详细说明为什么或在什么情况下不应在战斗前行动阶段施放一只具敏捷的生物，那就可能构成实质性的策略建议了。
+>尽管主审有权利允许或禁止一些带有加工的牌，但是仍需遵守上述的指导原则。如果插画仍然可以辨识，牌张名称和法术力费用未被遮挡，且该牌张不能在隐藏区域中被区分（例如加工使其显著变厚），那么这样的加工是应当认可的。而关于加工图案是否有可能冒犯他人则是较为主观的，裁判应当在这个问题上更加保守。另外需要注意的是，加工不能包含实质性的策略建议。 这意味着它可以包含非实质性的策略建议。 例如，一个可以接受的非实质性加工是：在一只具有敏捷的生物上写上“战斗前行动阶段使用我”。 从技术上讲，这确实算是一种策略建议，但你无法主张这种建议是“实质性的”，因为——说真的，你还能指望对一只有敏捷的家伙干别的事吗？ 事实上，反过来说，如果你在加工时详细说明为什么或在什么情况下不应在战斗前行动阶段施放一只具敏捷的生物，那就可能构成实质性的策略建议了。
 
 The Head Judge is the final authority on acceptable cards for a tournament.
 
@@ -1649,7 +1659,7 @@ The Head Judge is the final authority on acceptable cards for a tournament.
 
 If a player is required to replace a card in their deck and is unable to find a replacement, the player may replace the card with a card named Plains, Island, Swamp, Mountain, or Forest of their choice. This also applies to cards that are lost and must be replaced to have a legal deck.
 
-如果在裁判要求某位牌手更换其套牌中的某张牌时，该牌手无法找到替代品，该牌手可以自行选择一张基本地牌（仅限名称为平原、海岛、沼泽、山脉或树林者）来替换该牌。此规则同样适用于牌手弄丢牌张而须更换以确保套牌合法的情形。
+如果牌手被要求更换其套牌中的某张牌时无法找到替代品，该牌手可以自行选择一张基本地牌（仅限名称为平原、海岛、沼泽、山脉或树林者）来替换该牌。此规则同样适用于牌手弄丢牌张而须更换以确保套牌合法的情形。
 
 >Never issue proxies for marked cards, unless it is a Limited format event and the cards were opened marked. Foils in humid environments are sometimes marked fresh out of the package. Note that lost sideboard cards are not required to be replaced with lands. The player may revert back to the original configuration of acceptable replacements are found later in the event. Please note that wastes and snow covered lands are not acceptable replacement lands!
 >
@@ -1667,7 +1677,7 @@ The Head Judge of a tournament may issue a proxy (see section 3.4) for a card th
 
 A proxy card is used during competition to represent an otherwise legal Magic card or substitute card that can no longer be included in a deck without the deck being marked. For a proxy to be issued, the card it is replacing must meet at least one of the following criteria:
 
-代牌指在比赛过程中用以代表符合规定之万智牌牌张或辅助牌的用具。当在套牌中使用原本牌张会导致套牌出现明显标记的情况下，便可用代牌来代替之。可使用代牌来代替之牌张，须至少满足以下条件之一：
+代牌指在比赛过程中用以代表符合规定之万智牌牌张或辅助牌的用具。当在套牌中使用原本牌张会导致套牌出现标记的情况下，便可用代牌来代替之。可使用代牌来代替之牌张，须至少满足以下条件之一：
 
 * The card has been accidentally damaged or excessively worn in the current tournament, including damaged or misprinted Limited product. Proxies are not allowed as substitutes for cards that their owner has damaged intentionally or through negligence.
 
@@ -1679,11 +1689,11 @@ A proxy card is used during competition to represent an otherwise legal Magic ca
 
 >We want to issue proxies only in cases where the card or cards have been damaged through no fault of the player or they do not exist as a non-foil variant (“Kess, Dissident Mage” for example). Cards being expensive or rare are not reasons to issue a proxy.  “I don’t want to damage my Retro Frame Foil Etched Showcase+ storm crow” is not a reason to issue a proxy. Also, while purchasing well-worn or damaged cards will save money, if the cards are distinguishable from others in the deck, they cannot be played and no proxy will be issued.
 >
->我们只希望在牌张遭受非人为的意外损毁的情况下或不存在非闪版本的情况下（例如异见法师凯丝初次印刷的时候）为牌手制作代牌。牌张的价值或稀有程度不能成为制作代牌的合理理由。诸如“我不想损伤我的老框蚀刻闪风暴乌鸦”不构成制作代牌的理由。此外，一些牌手会因为旧牌或者破损牌的价值较低而特意购买并使用它们，如果这些牌能够在套牌中被明显区分，那么这些牌便不能使用，同时也不满足制作代牌的条件。
+>我们只希望在牌张遭受非人为的意外损毁的情况下或不存在非闪版本的情况下（例如异见法师凯丝初次印刷的时候）为牌手制作代牌。牌张的价值或稀有程度不能成为制作代牌的合理理由。诸如“我不想损伤我的老框蚀刻闪风暴乌鸦”不构成制作代牌的理由。此外，一些牌手会因为旧牌或者破损牌的价值较低而特意购买并使用它们，如果这些牌能够在套牌中被区分，那么这些牌便不能使用，同时也不满足制作代牌的条件。
 
 Players may not create their own proxies; they may only be created by the Head Judge who has sole discretion as to whether the creation of a proxy is appropriate. When a judge creates a proxy, it is included in the player’s deck and must be denoted as a proxy in a clear and conspicuous manner. The original card is kept nearby during the match and replaces the proxy while in a public zone as long as it is recognizable. A proxy is valid only for the duration of the tournament in which it was originally issued.
 
-牌手不得自己制作代牌；是否应当制作代牌，由主审自身判断为准，且只能由主审来制作。当裁判为牌手制作代牌时，将此牌放进该牌手的套牌中，且必须以清晰明了的方式表明此为代牌。原本那张牌便在对局进行过程中放在一旁备用。当代牌在公开区域当中时，只要它一直处于可被辨识的状态内，便使用原本的牌来替代。代牌只可在原本制作此张代牌的比赛中使用。
+牌手不得自己制作代牌；是否应当制作代牌，由主审自身判断为准，且只能由主审来制作。当裁判为牌手制作代牌时，将此牌放进该牌手的套牌中，且必须以清晰明了的方式表明此为代牌。原牌在对局期间放置于附近；只要原牌仍可辨识，当该牌位于公开区域时，便以原牌替代代牌。代牌只可在原本制作此张代牌的比赛中使用。
 
 >Using a sharpie on a basic land is a simple and effective way to issue a proxy. It is recommended to initial the proxy as well so that the judge staff and other players in the event can recognize that the proxy was properly issued. Include the name of the card, and its mana cost on the proxy. Any other information may be added at the Head Judge’s discretion.  Additionally, a proxy created by another head judge at last weeks event does not satisfy the criteria for “only created by the Head Judge”
 >
@@ -1693,15 +1703,15 @@ Players may not create their own proxies; they may only be created by the Head J
 
 Official substitute cards are used to represent double-faced cards in the sets that contain them. Only official substitute cards may be used to represent double-faced cards in a deck.
 
-正式的辅助牌用于代表含有双面牌之系列中的该类牌张。只有正式的辅助牌才能用于代表套牌中的双面牌。
+官方的辅助牌用于代表含有双面牌之系列中的该类牌张。只有官方的辅助牌才能用于代表套牌中的双面牌。
 
 >It is a player’s responsibility to have substitute cards or appropriate sleeves. A judge should not create proxies to represent substitute cards unless the original card has become damaged during the current tournament.
 >
->牌手必须选择使用辅助牌或者使用合适的牌套。除非原辅助牌在当前比赛中被意外损毁，裁判不得为辅助牌制作代牌。
+>牌手有责任自行准备辅助牌或合适的牌套。除非原辅助牌在当前比赛中被意外损毁，裁判不得为辅助牌制作代牌。
 
 The name of the card that the substitute card is representing must be legible. Other modifications must follow the rules for modifying normal Magic cards.
 
-辅助牌所代表的牌的名称必须清晰可辨。其他的图样加工必须遵循通常牌张的图样加工原则。
+辅助牌所代表的牌的名称必须清晰可辨。其他加工必须遵循通常牌张的加工规则。
 
 >Substitute cards represent cards, and cards have to have their name displayed clearly on them. There is space on these cards for other alterations, and do you know what happens to a substitute card that doesn’t follow the rules for modifying the card?  The same thing that happens to everything else.
 >
@@ -1713,7 +1723,7 @@ The use of substitute cards is required if a player has double-faced cards in th
 
 >The easiest way to check for a sleeves opaqueness is to look for the white mana symbol on the back of a non-double-faced card.
 >
->检查牌套是否透明最简单的方法，是从牌套背面观察是否能透过白色法术力符号。
+>检查牌套是否透明最简单的方法，是查看能否透过牌套看到非双面牌牌背上的白色法术力符号。
 
 If a player uses a substitute card to represent a double-faced card in their deck, then all copies of that double-faced card in the deck must be represented by substitute cards, and any copies of that double-faced card in a hidden zone are considered to not exist for purposes of determining deck legality.
 
@@ -1725,7 +1735,7 @@ If a player uses a substitute card to represent a double-faced card in their dec
 
 A substitute card is only used while the card it represents is in a hidden zone. The card represented by a substitute card is not a playable Magic card until the substitute card has been placed in a public zone. Multiple substitute cards cannot be used to represent a single copy of the actual card. For each substitute card used, the player must have a copy of the actual card available, though they are not considered sideboard cards and are not presented to their opponent.
 
-仅当需代表的牌处于非公开区域中的时候,才会使用辅助牌来代表之。辅助牌所代表的卡牌，只有在代表它的列表牌置于公共区域之后，才属于可在游戏中使用的万智牌卡牌。不得使用多张辅助牌来代表同一张实际卡牌。牌手需为其使用的每一张辅助牌准备一张相对应的实际卡牌，但所准备的这些实际卡牌不算作其备牌，亦不需呈视于对手。
+仅当需代表的牌处于非公开区域中的时候，才会使用辅助牌来代表之。辅助牌所代表的卡牌，只有在代表它的辅助牌置于公共区域之后，才属于可在游戏中使用的万智牌卡牌。不得使用多张辅助牌来代表同一张实际卡牌。牌手需为其使用的每一张辅助牌准备一张相对应的实际卡牌，但所准备的这些实际卡牌不算作其备牌，亦不需呈视于对手。
 
 >When the card is on the battlefield, the real card should be placed over the substitute card. Checking to make sure a player has the proper number of double-faced cards for the number of substitutes in their deck is very important during deck checks. Also, you can’t have one physical copy of a DFC and use four substitute cards for it in your deck.
 >
@@ -1751,11 +1761,11 @@ A card is considered named in game when a player has provided a description (whi
 
 Players have the right to request access to the official wording of a card they can describe. That request will be honored if logistically possible.
 
-牌手拥有要求查阅牌张标准叙述之权利，只是该牌手须能描述出该牌。如实际可行，便可准予牌手查阅。
+牌手拥有要求查阅牌张标准叙述之权利，只是该牌手须能描述出该牌。如实际可行，该请求应予满足。
 
 >The fact that most card-searching apps include Oracle text is made very relevant by this bit. Players will often request oracle text for cards they or their opponents are using in tournaments, and judges should be prepared to provide it. Several phone apps include complete, downloaded, searchable databases of every single card’s Oracle text, and these are by far the easiest way to quickly find and display it. As a general rule, if you can punch the info they give you into the search function and find a precise card, they’ve described it well enough. Saying “the green three drop that people play a lot in standard” or “The one-drop red burn spell” isn’t uniquely identifying a card, but saying “The white planeswalker from Magic: Origins” or “The take an extra turn card with Delve” is. If a card is revealed to a player, they do not need to know anything about the card to request Oracle text for it.
 >
->现在很多手机app能够帮助做到这一点。牌手通常会请求了解对手的某张牌的Oracle叙述，裁判应随时准备好进行回答。一些手机app提供了完整的离线数据库便于查询Oracle叙述。牌手提供的信息足以帮助你查询到想要的内容。通常来说，如果你能根据他们的描述使用app的搜索功能准确找到一张牌，就能算是唯一辨识。“3点绿费的标准赛用牌”，“1点红费的直伤咒语”类似的叙述不能帮助唯一辨识一张牌。但是”万智牌起源的白色鹏洛客“或者”带有掘穴的产生额外回合的咒语“可以唯一辨识。如果牌手能够看到某张牌，那么他无需知道任何事情便可以向裁判请求查询Oracle叙述。
+>现在很多手机app能够帮助做到这一点。牌手通常会请求了解自己或对手的某张牌的Oracle叙述，裁判应随时准备好进行回答。一些手机app提供了完整的离线数据库便于查询Oracle叙述。牌手提供的信息足以帮助你查询到想要的内容。通常来说，如果你能根据他们的描述使用app的搜索功能准确找到一张牌，就能算是唯一辨识。“3点绿费的标准赛用牌”，“1点红费的直伤咒语”类似的叙述不能帮助唯一辨识一张牌。但是“万智牌起源的白色鹏洛客”或者“带有掘穴的产生额外回合的咒语”可以唯一辨识。如果某张牌已向牌手展示，那么他无需知道任何事情便可以向裁判请求查询Oracle叙述。
 
 The official text of any card is the Oracle text corresponding to the name of the card.
 
@@ -1789,7 +1799,7 @@ Some nontraditional cards (i.e., attractions) may share a name across multiple v
 
 Newly released card sets become tournament-legal for sanctioned, rated tournaments on the following dates:
 
-自下述日期起，新发售的系列便可以在认证比赛中使用：
+自下述日期起，新发售的系列便可以在认证积分赛中使用：
 
 * Magic: The Gathering | Teenage Mutant Ninja Turtles™ February 27, 2026
 
@@ -1801,11 +1811,11 @@ Newly released card sets become tournament-legal for sanctioned, rated tournamen
 
 For official Prerelease tournaments only, new sets are legal for use before the official format legal date. In these cases, any announced rules updates shall be in effect at these tournaments, including informal explanations of new rules and mechanics. Judges may apply additional rules that they believe will be updated.
 
-新系列仅于正式举办的售前比赛当中可于上述的日期之前使用。如属于此种情况，则所有已公告之规则订正（包括针对新规则和机制的非正式说明）均适用于该场比赛。若裁判认为在此之外还会有其他规则订正，也可在该场比赛中适用这类订正。
+新系列仅于官方售前比赛当中可于上述的日期之前使用。如属于此种情况，则所有已公告之规则订正（包括针对新规则和机制的非正式说明）均适用于该场比赛。若裁判认为在此之外还会有其他规则订正，也可在该场比赛中适用这类订正。
 
 >Cards are essentially legal for their respective formats when you have them legally. Typically this means Prerelease Weekend.  However it is possible that prerelease tournaments are available before the release. This is uncommon now, but was common in the past. Any changes to the rule, whether big or small, are in effect at the Prerelease tournament even though they aren’t officially brought into effect until the release of the set. Judges applying rules they believe will be updated should be incredibly obvious rules additions, such as allowing masterpieces to be played without a legal magic border.
 >
->当你合法获得牌张时，这些牌在其对应的比赛环境中基本上是合法的。通常，这指的是在售前周获得的牌。然而，也有可能在正式发售前就能参加预发布赛事。这在现在已经不常见，但在过去很常见。任何大大小小的规则改动在售前赛都会提前生效，即使这些改动不会在发售日前的其他比赛中起作用。裁判所适用的即将更新之规则订正应当是极为明显的规则更新，例如允许没有合法万智牌边框的逸品重现在比赛中使用。
+>当你合法获得牌张时，这些牌在相应的赛制中基本上是合法的。通常，这指的是在售前赛周末获得的牌。然而，也有可能在正式发售前就能参加预发布赛事。这在现在已经不常见，但在过去很常见。任何大大小小的规则改动在售前赛都会提前生效，即使这些改动不会在发售日前的其他比赛中起作用。裁判所适用的即将更新之规则订正应当是极为明显的规则更新，例如允许没有合法万智牌边框的逸品重现在比赛中使用。
 
 These dates may be subject to change. Any changes will be announced at http://www.magicthegathering.com.
 
@@ -1819,7 +1829,7 @@ These dates may be subject to change. Any changes will be announced at http://ww
 
 Small items (e.g., glass beads) may be used as markers and placed on top of a player’s own library or graveyard as a reminder for in-game effects. These markers may not disguise the number of cards remaining in that zone nor completely obscure any card.
 
-牌手可将一些小型物件（如玻璃珠）用作标记物放在自己的牌库或坟墓场顶上，以提醒自己注意游戏区中的效应。这些标记物不能用来隐瞒在该区域中的牌数，亦不得将该区域的任意牌张完全遮盖。
+牌手可将一些小型物件（如玻璃珠）用作标记物放在自己的牌库或坟墓场顶上，以提醒自己注意游戏中的效应。这些标记物不能用来隐瞒在该区域中的牌数，亦不得将该区域的任意牌张完全遮盖。
 
 >Players will often put something on top of their deck in order to remind them of an upkeep trigger, such as rebound, and occasionally players will put something on top of their graveyard in order to remind them of some continuous effect. “Small” is very subjective, and there are stories of a player using a plastic fishbowl to completely cover their own deck to prevent them from drawing a card before remembering the upkeep trigger. The key rules are that the item can’t obscure the cards, can’t make it difficult to see any revealed cards, and can’t be a card itself.
 >
@@ -1833,7 +1843,7 @@ Some game actions use a die roll to determine their outcome. Any method may be u
 
 >With Adventures in the Forgotten Realms, several cards were added that require the roll of a D20, (the associated Commander Products might use a D4 or a D12, etc).  If you don’t have the required die, you may use another method that yields the same results with the same probability.  Spindown life trackers are not allowed in tournament play as there is excessive anecdotal evidence that the results can be manipulated easier than with a fair D20. However, in casual games, the MTR doesn’t apply and a spindown is fine.  If you think you a player at your kitchen table is cheating, why are they at your kitchen table?
 >
->在被遗忘国度战记系列中，有几张牌需要掷 D20（相关的指挥官产品可能会使用 D4、D12 等其他骰子）。如果你没有所需的骰子，可以使用其他方法，只要该方法能产生相同概率的结果即可。 在比赛中，不允许使用旋转式生命计数器，因为大量的经验表明，其结果比普通的D20更容易被操纵。然而，MTR不适用，因此使用旋转式计数器是可以的。 如果你认为在自己餐桌上玩的玩家在作弊，那……他们为什么还在你餐桌上呢？
+>在被遗忘国度战记系列中，有几张牌需要掷 D20（相关的指挥官产品可能会使用 D4、D12 等其他骰子）。如果你没有所需的骰子，可以使用其他方法，只要该方法能产生相同概率的结果即可。 在比赛中，不允许使用旋转式生命计数器，因为大量的经验表明，其结果比普通的D20更容易被操纵。但在休闲游戏中，MTR不适用，因此使用旋转式计数器是可以的。 如果你认为在自己餐桌上玩的玩家在作弊，那……他们为什么还在你餐桌上呢？
 
 Dice must have clear and easy to read values, and not be so large as to be disruptive when rolled. They must be rolled from a discernable height. Dice that leave the playing surface after landing, become mixed with similar dice, or do not land flat are ignored and rerolled.
 
@@ -1863,7 +1873,7 @@ Decks must be randomized at the start of every game and whenever an instruction 
 
 >The phrase “order or position” is key. A deck that is “mana-weaved” is not random; even though the player may have no information about the location of a specific card, they have information about the cards’ order (that is, land-spell-spell, land-spell-spell). Also key is that a player shouldn’t know any information on where a card is, not even which half of the deck it is in.
 >
->“排列次序与具体位置“是关键。经过“法术力编织”的套牌并不是随机化的：即使牌手不知道特定牌的位置，但是他却知道牌张的大致顺序（类似地-咒语-地）。牌手也不应知道某张牌的任何信息，包括知道该牌在牌库中的哪一部分也不行。
+>“排列次序与具体位置”是关键。经过“法术力编织”的套牌并不是随机化的：即使牌手不知道特定牌的位置，但是他却知道牌张的大致顺序（类似地－咒语－咒语、地－咒语－咒语）。牌手也不应掌握任何有关某张牌所在位置的信息，包括知道该牌在牌库中的哪一部分也不行。
 
 Pile shuffling may not be performed other than once each at the beginning of a game to count the cards in the deck.
 
@@ -1883,7 +1893,7 @@ Once the deck is randomized, it must be presented to an opponent. By this action
 
 If the opponent does not believe the player made a reasonable effort to randomize their deck, the opponent must notify a judge.
 
-如果该位对手认为牌手并未尽力使套牌充分随机化，他须就此告知裁判。
+如果该位对手认为牌手并未作出合理努力使套牌充分随机化，他须就此告知裁判。
 
 >This rule is here so that a player doesn’t have to feel bad about calling a judge for insufficient shuffling.  It’s in the rules, you have to. You aren’t the bad guy accusing the player of cheating.  You are just bringing up an issue and the judge can investigate the issue.
 >
@@ -1895,7 +1905,7 @@ Players may request to have a judge shuffle their cards rather than the opponent
 
 >Judges should use their discretion on this.  Shuffling takes a significant amount of time, during which the judge can’t take other calls. As shuffling for players is not a service that can be offered for all players it should be reserved for exceptional circumstances. Requests for judges to shuffle are exceedingly rare and typically arise when a player perceives there opponent as ill, or a ‘rough shuffler’, or there are mobility issues.  The first two can be handled with quick instructions to the players (e.g. ‘please be more gentle while shuffling’, or ‘you may have an extension to wash your hands if needed’). Note: If a player is visibly showing signs of illness to the point that it is causing player distress, notify the Tournament Organizer. With respect to mobility issues, players with those issues typically inform the judges in advance, and accommodations have already been made. If a mobility issue arises during the tournament, that is typically considered exceptional.
 >
->此处，裁判可以自行衡量。洗牌会花费一定的时间，这使得裁判会有一段时间无法回应其他裁判呼叫。洗牌不是为所有牌手提供的服务，而应尽量将机会留给特殊情况。请求裁判代为洗牌的情况极为罕见，通常发生在以下情形：玩家认为对手有卫生问题、洗牌手法粗暴，或存在行动不便的问题。对前两种情况，可以通过简短指导处理，例如：“如有需要，可以延长时间让你去洗手”，“洗牌时请轻一些”。注意：如果玩家明显出现疾病症状且影响其他玩家，应通知比赛主办方。关于行动不便的问题，通常玩家会提前告知裁判，并已安排好相关便利措施。如果在赛事中临时出现行动不便的情况，这通常被视为特殊情况。
+>此处，裁判可以自行衡量。洗牌会花费一定的时间，这使得裁判会有一段时间无法回应其他裁判呼叫。洗牌不是为所有牌手提供的服务，而应尽量将机会留给特殊情况。请求裁判代为洗牌的情况极为罕见，通常发生在以下情形：玩家认为对手有卫生问题、洗牌手法粗暴，或存在行动不便的问题。对前两种情况，可以通过简短指导处理，例如：“如有需要，可以延长时间让你去洗手”，“洗牌时请轻一些”。注意：如果玩家明显出现疾病症状且影响其他玩家，应通知比赛主办人。关于行动不便的问题，通常玩家会提前告知裁判，并已安排好相关便利措施。如果在赛事中临时出现行动不便的情况，这通常被视为特殊情况。
 
 If a player has had the opportunity to see any of the card faces of the deck being shuffled, the deck is no longer considered randomized and must be randomized again.
 
@@ -1933,7 +1943,7 @@ If a player chooses to use card sleeves, all sleeves must be identical and all c
 
 >Having decks of mixed brands/types/colors/condition/size etc. of sleeves allows players to tell their cards apart. Additionally the conditions of the sleeves should be noted. If most of the set is scuffed and worn on the visible side when in the deck, but a few sleeves are in notably better condition, the sleeves are not identical. Another common practice is to “double sleeve” a deck, in this case all cards must be double sleeved so there exist no variation in rigidity and thickness of cards in the deck. Notable deviations from the identical nature of the sleeves ought be considered Marked Cards.
 >
->使用不同品牌、类型、颜色、新旧、尺寸等的牌套会让牌手能够区分特定牌张的位置。此外仍需注意牌套的状态。如果大多数牌套都已磨损，而少数几张牌套还比较新，那么这些牌套不能算完全一致。而另一种“双层牌套”的情况下，所有的牌都必须使用双层牌套来确保每张牌硬度和厚度一致。牌套有明显区别会被当作有记号的牌而做出相应处理。
+>使用不同品牌、类型、颜色、新旧、尺寸等的牌套会让牌手能够区分特定牌张的位置。此外仍需注意牌套的状态。如果大多数牌套都已磨损，而少数几张牌套还比较新，那么这些牌套不能算完全一致。而另一种“双层牌套”的情况下，所有的牌都必须使用双层牌套来确保每张牌硬度和厚度一致。牌套若存在显著差异，应按“有记号的牌”问题加以评估。
 
 If the sleeves feature holograms or other similar markings, cards must be inserted into the sleeves so these markings appear only on the faces of the cards.
 
@@ -1953,7 +1963,7 @@ During a match, a player may request that a judge inspect an opponent’s card s
 
 The judge may disallow the card sleeves if they believe they are marked, worn, or otherwise in a condition or of a design that interferes with shuffling or game play.
 
-如果裁判认为牌手的牌套被作了记号、已磨损，或是出于其他会影响到洗牌或游戏进行的状态，他可以不允许牌手使用该牌套。
+如果裁判认为牌手的牌套被作了记号、已磨损，或是出于其他会影响到洗牌或游戏进行的状态或设计，他可以不允许牌手使用该牌套。
 
 >In the event that the card sleeves are determined to be interfering with game play or compromising the integrity of the game. The judge may require replacement sleeves to be used for the remainder of the tournament.
 >
@@ -2031,11 +2041,11 @@ If a player’s cards are sleeved, the cards must be examined while in the sleev
 
 The Head Judge has the authority to determine if a card in a player’s deck is marked. Judges may request that a player remove their current sleeves or replace any of the deck’s current sleeves immediately, or before the next round.
 
-主审有权判定牌手的套牌中是否含有具记号的牌张。裁判可以要求牌手取下当前所用牌套，或是更换套牌当前所使用的牌套的一部分，并决定该牌手须立即更换还是在下局开始之前更换完毕。
+主审有权判定牌手的套牌中是否含有具记号的牌张。裁判可以要求牌手取下当前所用牌套，或是更换套牌当前所使用的牌套的一部分，并决定该牌手须立即更换还是在下一轮开始之前更换完毕。
 
 >If the sleeves are marked enough that you are giving a Warning at Competitive Rules Enforcement Level, instruct the player to replace them between rounds. If their round runs late, give them a reasonable time extension in the following round to facilitate re-sleeving. If the penalty is being upgraded to a Game Loss, the player needs to replace the sleeves immediately. Judges are often tasked with assisting the player to expedite the process. Make sure to follow-up with players after instructing them to replace sleeves to ensure that they have done so.
 >
->如果你因牌套上的标记在竞争级别的比赛中给出了警告的判罚，那么就让牌手在局间更换牌套。如果该牌手这一局结束得晚，那么给他在下一局一些补时来确保牌套更换完毕。如果判罚被升级为一盘负，那么牌手需立即更换牌套。裁判可以帮助牌手更高效地完成牌套更换。跟进此事确保牌手完成牌套更换。
+>如果你因牌套上的标记在竞争级别的比赛中给出了警告的判罚，那么就让牌手在轮间更换牌套。如果该牌手这一轮结束得晚，那么给他在下一轮一些补时来确保牌套更换完毕。如果判罚被升级为一盘负，那么牌手需立即更换牌套。裁判可以帮助牌手更高效地完成牌套更换。跟进此事确保牌手完成牌套更换。
 
 ## MTR 3.13 Hidden Information 非公开信息
 
@@ -2049,7 +2059,7 @@ Hidden information refers to the faces of cards and other objects at which the r
 
 Throughout the match, a draft, and pregame procedures, players are responsible for keeping their cards above the level of the playing surface and for making reasonable efforts to prevent hidden information from being revealed. However, players may choose to share the contents of their hands, or any other hidden information available to them, to any other players unless specifically prohibited by the rules. Players must not actively attempt to gain information hidden from them but are not required to inform opponents who are accidentally revealing hidden information.
 
-在整个对局、轮抽、及游戏前程序的过程中，牌手有责任将自己所有的牌保持在游戏平面之上，并尽力防止自己的非公开信息被公开。然而，除有规则明令禁止之外，牌手可选择向任何人公开自己的手牌内容或其他自己知悉的非公开信息。牌手不得主动尝试去获取自己不应知道的非公开信息，但在对手无意间透露了非公开信息的情况下，亦无需就此提醒对手。
+在整个对局、轮抽、及游戏前程序的过程中，牌手有责任将自己所有的牌保持在游戏平面之上，并作出合理努力防止自己的非公开信息被公开。然而，除有规则明令禁止之外，牌手可选择向任何其他牌手公开自己的手牌内容或其他自己知悉的非公开信息。牌手不得主动尝试去获取自己不应知道的非公开信息，但在对手无意间透露了非公开信息的情况下，亦无需就此提醒对手。
 
 >Players can show their opponent any information that that player is allowed to see. This means they cannot show the opponent the contents of their deck unless they are currently allowed to see it (i.e. searching). Players cannot try to look at the opponent’s hand, but if the opponent has it revealed they don’t need to inform them. It is also possible to accidentally reveal information.  Maybe they are playing with their hand tilted too far forward, or maybe they are wearing reflective sunglasses. This rule covers situations such as “show me the lightning bolt and I’ll concede” and accidentally dropping their hand on the table.
 >
@@ -2103,7 +2113,7 @@ A sideboard is a group of additional cards the player may use to modify their de
 
 >It is advisable for a player to have their sideboard sleeved in the same manner as their main deck in order to quickly swap cards.
 >
->强烈建议牌手将备牌套上与主牌同样的牌套（或都不使用牌套）来节约换备牌的时间。
+>建议牌手将备牌套上与主牌同样的牌套（或都不使用牌套）来节约换备牌的时间。
 
 Before each game begins, players must present their sideboard (if any) face down. Opponents may count the number of cards in their opponent’s sideboard at any time. Players are not required to reveal how many cards they have swapped from their main deck to their sideboard and do not have to swap one for one.
 
@@ -2119,7 +2129,7 @@ Other items (token cards, double-faced card represented in the deck by a substit
 
 >The Deck/Decklist portion of the IPG instructs that these “other items” must be sleeved differently than the main deck/sideboard. We want to keep them separate so there is no confusion and less opportunity for abuse.
 >
->IPG中有关套牌/套牌登记表的内容要求“其他物品”需与主牌/备牌有所区分。我们希望将它们分开，以避免混淆，并减少滥用的机会。
+>IPG中有关套牌/套牌登记表的内容要求“其他物品”必须使用与主牌及备牌不同的牌套。我们希望将它们分开，以避免混淆，并减少滥用的机会。
 
 During a game, players may look at their own sideboard, keeping it clearly distinguishable from other cards at all times. If a player gains control of another player, they may not look at that player’s sideboard, nor may they have that player access their sideboard.
 
@@ -2127,7 +2137,7 @@ During a game, players may look at their own sideboard, keeping it clearly disti
 
 >It is very important that players keep the cards separate from their main deck. If at some point the sideboard becomes intermingled with the main deck there is no way to verify the legality of the deck and penalties may apply. Players are not allowed to look at another player’s sideboard while they control them.  This is because players may wish to scope if it means protecting their super secret sideboard tech. It also saves time, because you know the controlling player would want to see the sideboard and write down its contents, or see what they took out of their main.
 >
->区分主牌与备牌是非常重要的。如果主牌和备牌混在了一起，无法区分套牌当前的合法性，那么自然会得到判罚。牌手不能在操控另一位牌手时查看其备牌。这是因为牌手可能希望保护自己超级机密的备牌策略。此外，这也节省了时间，不然操控者可能会想查看备牌并记录内容，或者查看从主牌换出了哪些牌。
+>区分主牌与备牌是非常重要的。如果主牌和备牌混在了一起，无法区分套牌当前的合法性，那么可能会得到判罚。牌手不能在操控另一位牌手时查看其备牌。这是因为牌手可能希望保护自己超级机密的备牌策略。此外，这也节省了时间，不然操控者可能会想查看备牌并记录内容，或者查看从主牌换出了哪些牌。
 
 The deck and sideboard must each be returned to their original compositions before the first game of each match.
 
@@ -2135,7 +2145,7 @@ The deck and sideboard must each be returned to their original compositions befo
 
 >This rule applies to all Constructed format events, including ones run at Regular Rules Enforcement Level, not only those that use decklists. This is only required for Limited format events if deck registration sheets are being used, otherwise the events are considered to be continuous construction.
 >
->此规则适用于所有构筑比赛，包括一般级别的比赛，而不仅仅是使用牌表的比赛。而在限制赛中，只有在使用牌表的情况下才需要还原主牌。
+>此规则适用于所有构组比赛，包括一般级别的比赛，而不仅仅是使用套牌登记表的比赛。而在限制赛中，只有在使用套牌登记表的情况下才需要还原主牌；否则该比赛视为采用持续构组。
 
 Restrictions on the composition and use of a sideboard can be found in the deck construction rules for a particular format type.
 
@@ -2151,7 +2161,7 @@ If a penalty causes a player to lose the first game in a match before that game 
 
 >In this case there has not been a “first game” for this match so there is no sideboarding as the next game will be the “first game”. Note that this exception applies when a game loss penalty is given before the first game has started, not the second or any subsequent games. A Deck/Decklist Problem or Marked Cards upgraded Game Loss penalty discovered during a deck check are the common ways this can happen.
 >
->在这种情况下比赛为进行过“第一盘游戏”，所以接下来的一盘将会成为“第一盘游戏”。值得注意的是，这种例外只在第一盘游戏开始之前就给出判罚的情形下才适用，而不适用于第二盘或之后的游戏。这种情形通常是由于套牌/套牌等记表问题或者有记号的牌判罚升级所造成的。
+>在这种情况下比赛未进行过“第一盘游戏”，所以接下来的一盘将会成为“第一盘游戏”。值得注意的是，这种例外只在第一盘游戏开始之前就给出一盘负判罚的情形下才适用，而不适用于第二盘或之后的游戏。这种情形通常是由于套牌/套牌登记表问题或者有记号的牌判罚升级所造成的。
 
 If players restart a game due to an in-game effect, the composition of their decks must remain the same for the restarted game.
 
@@ -2167,7 +2177,7 @@ Certain cards refer to “a (card or cards) from outside the game.” In tournam
 
 >In order to prevent any debates or weird rulings over what defines “a card you own”, tournament play now strictly goes by this rule. This usually comes up in the form of “Wish” cards, which let you put such a card into your hand from your sideboard.
 >
->为了避免“你拥有的牌“这个用语所产生的争议，如今以这条规则来明确了此定义。这通常是由“祈愿”类的牌所造成，它们会让你将备牌加入手牌。
+>为了避免“你拥有的牌”这个用语所产生的争议，如今以这条规则来明确了此定义。这通常是由“祈愿”类的牌所造成，它们会让你从备牌中将这类牌置入手牌。
 
 # MTR 4. Communication 沟通交流
 
@@ -2211,7 +2221,7 @@ Status information is information that must be announced upon change and physica
 
 * Counters a player has attached to them.
 
-* 牌手具有之指示物数量。
+* 牌手具有之指示物。
 
 * Continuous effects with no defined expiration within the game that apply to that player, such as Monarch or City’s Blessing.
 
@@ -2237,7 +2247,7 @@ Status information is information that must be announced upon change and physica
 >These types of information need to be immediately pointed out when the change occurs.
 >A very common method of tracking life or counters on a player is with pencil/paper.
 >
->比如：一位牌手询问他的对手他自己的当前生命，对手必须直接地如实地回答他。像“你可以自己算”或者实际生命是17的情况下回答“20”，这种回答都是不可行的。当这类信息发生变化时，必须立即指出。记录牌手生命值或具有的指示物数量的常见方法之一是使用纸笔。
+>比如：一位牌手询问对手当前的总生命时，对手必须直接地如实地回答他。像“你可以自己算”或者实际生命是17的情况下回答“20”，这种回答都是不可行的。当这类信息发生变化时，必须立即指出。记录牌手生命值或具有的指示物数量的常见方法之一是使用纸笔。
 
 Free information is information to which all players are entitled access without contamination or omissions made by their opponents. If a player is ever unable or unwilling to provide free information to an opponent that has requested it, they should call a judge and explain the situation.
 
@@ -2245,7 +2255,7 @@ Free information is information to which all players are entitled access without
 
 >A player always has to give all free information to their opponent accurately upon request. If that is not possible they should call a judge to help clear up the communication. If a player unintentionally misrepresents free information at Competitive Rules Enforcement Level, it may result in a Communication Policy Violation.
 >
->被问及时，牌手必须准确无误的将自由信息提供给对手。如果无法实现，那么他们应该叫裁判来帮助他们理清情况。如果一位牌手在竞争级比赛中非故意的给了对手错误的自由信息，这属于“违反交流原则”（参见IPG 3.7）。
+>被问及时，牌手必须准确无误的将自由信息提供给对手。如果无法实现，那么他们应该叫裁判来帮助他们理清情况。如果一位牌手在竞争级比赛中非故意的给了对手错误的自由信息，这可能属于“违反交流原则”（参见IPG 3.7）。
 
 Free information consists of:
 
@@ -2277,7 +2287,7 @@ Free information consists of:
 
 >A player always has to give all free information to their opponent accurately upon request. If that is not possible they should call a judge to help clear up the communication. If a player unintentionally misrepresents free information at Competitive Rules Enforcement Level, it may result in a Communication Policy Violation.
 >
->被问及时，牌手必须准确无误的将自由信息提供给对手。如果无法实现，那么他们应该叫裁判来帮助他们理清情况。如果一位牌手在竞争级比赛中非故意的给了对手错误的自由信息，这属于“违反交流原则”（参见IPG 3.7）。
+>被问及时，牌手必须准确无误的将自由信息提供给对手。如果无法实现，那么他们应该叫裁判来帮助他们理清情况。如果一位牌手在竞争级比赛中非故意的给了对手错误的自由信息，这可能属于“违反交流原则”（参见IPG 3.7）。
 
 Derived information is information to which all players are entitled access, but opponents are not obliged to assist in determining and may require some skill or calculation to determine. Derived information consists of:
 
@@ -2297,7 +2307,7 @@ Derived information is information to which all players are entitled access, but
 
 >While a player is not obliged to assist their opponent with the Game Rules, Tournament Policy, Oracle text, or any other official information pertaining to the current tournament, a player may ask a judge for any of that information during a match. For example, if a player asks their opponent what a card does, for example, a player does not have to give all of the information about the card. Their opponent may say that Vampire Nighthawk is a flying 2/3 creature and omit that it has Deathtouch and Lifelink.
 >
->如果一位牌手的对手不愿意告诉他与这场比赛有关的游戏规则，比赛方针，牌张信息或者任何其他的官方文档信息，那位牌手可以呼叫裁判来获取相关的信息。比如一位牌手询问他的对手关于特定牌张的信息，他的对手不一定要告诉他关于那张牌全部的信息。例如对手可以回答他说夜盗吸血鬼是一个2/3的飞行生物，而不提及死触和系命。
+>虽然牌手没有义务协助对手确定游戏规则、比赛方针、Oracle 叙述或其他与当前比赛有关的官方信息，但牌手可以在对局过程中向裁判询问其中任何信息。比如一位牌手询问他的对手关于特定牌张的信息，他的对手不一定要告诉他关于那张牌全部的信息。例如对手可以回答他说夜盗吸血鬼是一个2/3的飞行生物，而不提及死触和系命。
 
 Private information is information to which players have access only if they are able to determine it from the current visual game state or their own record of previous game actions.
 
@@ -2341,7 +2351,7 @@ The following rules govern player communication:
 
 Judges are encouraged to help players in determining free and status information but must avoid assisting players with derived information about the game state.
 
-裁判可以帮助牌手确定状态信息和自由信息，但必须避免协助牌手获取关于游戏局面的推断信息。
+鼓励裁判帮助牌手确定状态信息和自由信息，但必须避免协助牌手获取关于游戏局面的推断信息。
 
 >Players need to be honest with their opponents regarding free information and must be completely honest with judges, whether the judge asks about free or other information. But, as a judge, it is important to be mindful of asking players about derived or hidden information where their opponents can hear. When dealing with such questions, it is often appropriate to ask a player to step away from the table and speak privately.
 >
@@ -2475,7 +2485,7 @@ End of turn triggered abilities that do not target resolve after the non-active 
 
 >This is a noticeable difference to the combat shortcut, but it reflects that people handle these two steps differently. For end of turn triggered abilities with targets, the controlling player still needs to follow the guidelines to show awareness as listed in the IPG. This means for ones that target, it needs to be announced as the player goes into the phase. For the most part, we expect players to announce triggered abilities pretty quickly as they pass the turn. This line provides clarity that if there are actions taken at end of turn, the active player can still demonstrate awareness of triggered abilities like those that create a token.
 >
->这与战斗行事简化有显著的不同，但这也反映了牌手处理这两个阶段上的不同。对于具有目标的回合结束触发，操控异能的牌手仍然需要遵循IPG中认识触发式异能存在的指导方针。这意味着对于指目标的异能而言，牌手应当在一进入结束阶段就立即宣告之。通常我们期望牌手能够在让过回合时迅速宣告触发式异能。这一条厘清了如果在回合结束时有动作发生，主动牌手仍然能够认识到某些触发式异能（例如，派出衍生物的触发式异能）的存在。
+>这与战斗行事简化有显著的不同，但这也反映了牌手处理这两个阶段上的不同。对于具有目标的回合结束触发，操控异能的牌手仍然需要遵循IPG中认识触发式异能存在的指导方针。这意味着对于指目标的异能而言，牌手应当在一进入终结阶段就立即宣告之。通常我们期望牌手能够在让过回合时迅速宣告触发式异能。这一条厘清了如果在回合结束时有动作发生，主动牌手仍然能够认识到某些触发式异能（例如，派出衍生物的触发式异能）的存在。
 
 * Whenever a player adds an object to the stack, they are assumed to be passing priority unless they explicitly announce that they intend to retain it.
 
@@ -2491,11 +2501,11 @@ End of turn triggered abilities that do not target resolve after the non-active 
 
 >This is relevant when dealing with cards that have an activated ability that pumps themselves (e.g. Shorecrasher Elemental); their controller can just say “I pump my Shorecrasher’s toughness six times” to speed up the game and, if their opponent wants to cast Mardu Charm on it choosing the four damage mode, they can still do so at any time. The opponent cannot argue that they played the Charm “as a response to the six abilities on the stack,” because under the first sentence, each ability is assumed to have already resolved before another one is added to the stack (because it can’t be done without priority). Therefore, if the opponent chose to play Mardu Charm after the sixth activation then the Elemental would have already been successfully pumped five times.
 >
->这一条是关于处理一些拥有可以膨胀自己异能的牌，比如破岸元素。牌手说“我要给破岸元素膨6次防”。他的对手想释放玛尔都护符，选择打4的那项，他可以在任何时候施放它。但是不能说“我响应你6次膨都在堆叠里的时候”，因为这时候行事简化默认这6次膨都是在前一次已经结算的情况下才启动的。因此，如果对手想要响应第6次膨施放护符，则意味着前5次已经结算完毕。
+>这一条是关于处理一些拥有可以膨胀自己之起动式异能的牌，比如破岸元素。牌手说“我要给破岸元素膨6次防”。他的对手想释放玛尔都护符，选择打4的那项，他可以在任何时候施放它。但是不能说“我响应你6次膨都在堆叠里的时候”，因为这时候行事简化默认这6次膨都是在前一次已经结算的情况下才启动的。因此，如果对手想要响应第6次膨施放护符，则意味着前5次已经结算完毕。
 
 * If a player casts a spell or activates an ability and announces choices for it that are not normally made until resolution, the player must adhere to those choices unless an opponent responds to that spell or ability. If an opponent inquires about choices made during resolution, that player is assumed to be passing priority and allowing that spell or ability to resolve.
 
-* 如果有牌手在施放咒语或起动异能时，宣告了通常是在结算时才需作出的选择，则除非对手对该咒语或异能有所响应，否则该牌手便不得改变此选择。若对手就结算时才需作出的选择进行询问，则认为该牌手让过优先权并允许咒语结算。
+* 如果有牌手在施放咒语或起动异能时，宣告了通常是在结算时才需作出的选择，则除非对手对该咒语或异能有所响应，否则该牌手便不得改变此选择。若对手就结算时才需作出的选择进行询问，则认为该牌手让过优先权并允许咒语或异能结算。
 
 >Players sometimes announce choices early when they assume their opponents don’t have any responses to their actions or when they are fishing for information. This shortcut prevents players from announcing choices early in order to trick opponents or improperly gain information and then making a different choice when the decision should properly be made. But if an opponent responds to the spell or ability, the controller may make any choice they choose, regardless of any announcements made.
 >
@@ -2573,11 +2583,11 @@ Due to the complexity of accurately representing a game of Magic, it is acceptab
 
 >Players aren’t robots and don’t do everything perfectly, and judges shouldn’t expect them to. Magic isn’t a game of gotcha and players shouldn’t be punished for performing clear and otherwise legal actions in a way that feels more natural to them.
 >
->牌手不是机器人，做事十全十美，裁判也不应期望牌手完美的执行每个游戏动作。万智牌不是一个抓对手行为不规范的游戏，一位做出了清楚且合法的游戏动作的牌手也不应该只因为他按照更加自然的顺序行事而被处罚。
+>牌手不是机器人，做事不是十全十美，裁判也不应期望牌手完美的执行每个游戏动作。万智牌不是一个抓对手行为不规范的游戏，一位做出了清楚且合法的游戏动作的牌手也不应该只因为他按照更加自然的顺序行事而被处罚。
 
 All actions taken must be legal if they were executed in the correct order, and any opponent can ask the player to do the actions in the correct sequence so that they can respond at the appropriate time (at which point players will not be held to any still-pending actions).
 
-所有因此采取的行动必须在以正确次序执行时都属合法行动，对手可请求牌手以正确的行事顺序来执行，从而使自己能在恰当的时间加以响应（此时，没有牌手还有仍待定的动作需要处理）。
+所有因此采取的行动必须在以正确次序执行时都属合法行动，对手可请求牌手以正确的行事顺序来执行，从而使自己能在恰当的时间加以响应（此时，牌手不受任何尚未执行动作的约束）。
 
 >Out-of-Order Sequencing cannot be used to perform illegal actions, but more importantly, it also cannot be used to deprive an opponent of their chance to respond at the appropriate time. If an opponent wishes to respond, all actions prior to the point of response must be performed in the correct order. The player suggesting out-of-order sequencing is free to change their choices that they would have made after the opponent’s response.
 >
@@ -2585,7 +2595,7 @@ All actions taken must be legal if they were executed in the correct order, and 
 
 An out-of-order sequence must not result in a player prematurely gaining information which could reasonably affect decisions made later in that sequence.
 
-有的信息极有可能会对位于当前行事顺序稍后之决定产生影响，牌手不得藉由自己行事次序不当来提前获知此类信息。
+某些信息有可能会对位于当前行事顺序稍后之决定产生影响，牌手不得藉由自己行事次序不当来提前获知此类信息。
 
 >An out-of-order sequence must not result in a player prematurely gaining information which could reasonably affect decisions made later in that sequence, because Out-of-Order Sequencing cannot be used to gain an advantage.
 >
@@ -2597,7 +2607,7 @@ An out-of-order sequence must not result in a player prematurely gaining informa
 
 Players may not try to use opponent's reactions to some portion of an out-of-order sequence to see if they should modify actions or try to take additional ones. Nor may players use out-of-order sequencing to try to retroactively take an action they missed at the appropriate time. In general, any substantial pause at the end of a completed batch is an indication that all actions have been taken, the sequence is complete and the game has moved to the appropriate point at the end of the sequence.
 
-牌手不得试图利用对手对自己次序不当的行事顺序中任何部分之反应，来判断自己是否需要修正行动或执行额外的行动。牌手亦不得利用次序不当的行事顺序试图回过头来执行自己错过了的、本应在适当的时间执行的行动。总而言之，在执行完一系列动作之后的短暂停顿即为该系列行动已全部完成的表示，行事顺序已执行完毕，游戏已前进到该顺序末尾后的适当时点。
+牌手不得试图利用对手对自己次序不当的行事顺序中任何部分之反应，来判断自己是否需要修正行动或执行额外的行动。牌手亦不得利用次序不当的行事顺序试图回过头来执行自己错过了的、本应在适当的时间执行的行动。总而言之，在执行完一系列动作之后的明显停顿即为该系列行动已全部完成的表示，行事顺序已执行完毕，游戏已前进到该顺序末尾后的适当时点。
 
 >Generally, all actions in the sequence must be performed as one block, which means there can’t be any pauses between actions and or interaction with an opponent. Each substantial pause or attempt to see an opponent’s reaction should be treated as an end of the sequence.
 >
@@ -2681,7 +2691,7 @@ Players are expected to remember their own triggered abilities; intentionally ig
 
 Triggered abilities are considered to be forgotten by their controller once they have taken an action past the point where the triggered ability would have an observable impact on the game.
 
-只要触发式异能的操控者错过该触发在原本对游戏造成显著影响的时点并执行了其他动作，便视作该牌手已遗漏了这个触发式异能。
+只要触发式异能的操控者错过该触发在原本会对游戏产生可观察影响的时点并执行了其他动作，便视作该牌手已遗漏了这个触发式异能。
 
 >Triggers happen all the time in a game of Magic and it can be difficult enough for a player to remember their own triggers, let alone opponents’ triggers. We don’t penalize players for not pointing out their opponent’s forgotten triggers, but it is cheating for a player to intentionally ignore their own triggers. Cheating is dealt with according to the IPG or JAR, as appropriate. If a player notices that their opponent forgot a trigger, they may point it out.
 >
@@ -2699,7 +2709,7 @@ Triggered abilities that are forgotten are not considered to have gone onto the 
 
 Members of the same team may communicate between one another except during times where explicitly prohibited by the team format rules.
 
-除了团队赛制规则中明订之禁止交流时段外，同属一支队伍的各成员可在队员之间以口头方式进行交流。
+除了团队赛制规则中明订之禁止交流时段外，同属一支队伍的各成员可在队员之间进行交流。
 
 >Players on a team may talk to their teammates at any time about nearly anything, with the below exception.
 >
@@ -2707,7 +2717,7 @@ Members of the same team may communicate between one another except during times
 
 However, team members that have an opportunity to acquire hidden information (e.g., by speaking to spectators following their own match while a teammate is still playing), are restricted from communicating with teammates for the duration of that match.
 
-然而，有机会获取了私人信息的队员（例如，通过在自己的游戏结束后通过与旁观者的交流而得，此时他仍有队友在进行游戏）在该盘对局进行的过程中受到不得与队友交流的限制。
+然而，有机会获取非公开信息的队员（例如，在自己的对局结束后通过与旁观者的交流而得，此时他仍有队友在进行游戏）在该对局进行的过程中受到不得与队友交流的限制。
 
 Prohibitions against written notes of any kind during drafts apply to team drafts as well.
 
@@ -2715,7 +2725,7 @@ Prohibitions against written notes of any kind during drafts apply to team draft
 
 >If a member of a team has access to hidden information from outside their teammate’s match, they must refrain from communicating with teammates who are still playing. Common occurrences of this are during team events, once a player has stood up and moved around after their match they have the potential to see hidden information from their teammate’s opponents. This doesn’t mean the players can’t use the restroom once they are done with their match, but they should call a judge to direct them. Most times judges will direct players to walk to the restroom so they can confirm they aren’t trying to gain information. See MTR 8.3.
 >
->如果一位队员有机会从非队友的人那里了解到任何关于他们队伍比赛的非公开信息，他便不能在和自己正在继续游戏的队友进行交流。通常来说，在团队比赛中，一旦牌手起身并在附近走动后，他便有可能会看到他队友的对手的隐藏信息。这并不意味着牌手在完成自己的对局后不能去洗手间，如果他想如此做的话，他应当叫裁判进行指引。大多数情形下，裁判会指引牌手走到洗手间，并以此确认牌手没有试图获取隐藏信息。参见MTR 8.3节。
+>如果一位队员能从其队友的对局之外接触到非公开信息，他便不能在和自己正在继续游戏的队友进行交流。通常来说，在团队比赛中，一旦牌手起身并在附近走动后，他便有可能会看到他队友的对手的隐藏信息。这并不意味着牌手在完成自己的对局后不能去洗手间，如果他想如此做的话，他应当叫裁判进行指引。大多数情形下，裁判会指引牌手走到洗手间，并以此确认牌手没有试图获取隐藏信息。参见MTR 8.3节。
 
 ## MTR 4.7 Game Layout 游戏用具摆放
 
@@ -2729,7 +2739,7 @@ Players in Competitive and Professional Rules Enforcement Level matches must arr
 
 * Non-creature permanents whose use may reasonably be associated with either the land or nonland area (e.g., an artifact whose only ability is a mana ability) may be located in either area, provided the overall layout is, in the judgment of tournament officials, clear. However, permanents that are also creatures (e.g., artifacts with March of the Machines on the battlefield, Dryad Arbor, or a Treetop Village that is currently a creature) must be placed in the nonland area. Players may not use other cards to intentionally obscure the presence of a permanent in any area of the battlefield.
 
-* 对于非生物永久物而言，若其用途与地区域或非地区域有合理联系（例如仅有法术力异能的神器），则此永久物便可放在对应区域，但此摆放以比赛工作人员判断确属清晰为限。然而，若该永久物同时也为生物（例如战场上有器械进击/Match of the Machines时的神器，树灵乔木/Dryad Arbor，或当前是生物的树顶村落/Treetop Village），则其必须摆放在非地区域。牌手不得使用其他牌来故意遮挡战场上任何区域的永久物。
+* 对于非生物永久物而言，若其用途与地区域或非地区域有合理联系（例如仅有法术力异能的神器），则此永久物便可放在对应区域，但此摆放以比赛工作人员判断确属清晰为限。然而，若该永久物同时也为生物（例如战场上有器械进击/March of the Machines时的神器，树灵乔木/Dryad Arbor，或当前是生物的树顶村落/Treetop Village），则其必须摆放在非地区域。牌手不得使用其他牌来故意遮挡战场上任何区域的永久物。
 
 * Each card should remain clearly associated with any permanents attached to it. For example, an Aura enchanting a land should be in the land area in contact with that land.
 
@@ -2758,21 +2768,21 @@ Players in Competitive and Professional Rules Enforcement Level matches must arr
 
 Physical objects used to represent permanents must have a way of clearly representing any in-game status, such as whether a permanent is tapped. Sleeves or card backs that appear similar to any player’s sleeves or card backs may not be used. The Head Judge is the final authority on what may be used to represent permanents.
 
-使用标记物来表示游戏中组件（例如永久物）的牌手必须使该标记物能清楚表示一切游戏中的状态，如该永久物是否已横置。
+使用标记物来表示游戏中组件（例如永久物）的牌手必须使该标记物能清楚表示一切游戏中的状态，如该永久物是否已横置。不得使用外观与任何牌手的牌套或牌背相似的牌套或牌背。对于可使用何种物件表示永久物，主审拥有最终决定权。
 
 Tournament officials may make exceptions or additions to these guidelines at their sole discretion in order to keep each player’s game layout clear. Players in exceptional situations (e.g., a player playing a deck with no lands or a deck that makes significant use of the graveyard) should consult with tournament officials to determine what allowances, if any, will be made.
 
-为确保每位牌手的游戏摆放区域清晰可辨，比赛工作人员可自行增减上述准则。会导致特殊情形的牌手（例如使用没有地牌之套牌的牌手，或是使用过多利用坟墓场之套牌的牌手）应询问比赛工作人员，以确定其比赛时是否能有例外。
+为确保每位牌手的游戏摆放区域清晰可辨，比赛工作人员可自行增减上述准则。会导致特殊情形的牌手（例如使用没有地牌之套牌的牌手，或是使用大量利用坟墓场之套牌的牌手）应询问比赛工作人员，以确定其比赛时是否能有例外。
 
 >Legacy, for example, has some decks that are unlike most Magic decks in most formats. Dredge players typically will have a spread-out graveyard on what would normally be the battlefield because of how much they do with their graveyard. Likewise, “Oops, All Spells” and Belcher are combo decks that run few or no lands.
 >
->例如，薪传赛中的一些套牌跟万智牌中绝大部分的套牌都不一样。渡桥（发掘）牌手的坟墓场通常会把坟墓场摊开来放在原本是战场的位置上，因为他们的坟墓场互动太多了。“无地套”和喷火炮等组合技套牌放很少的（或甚至不放）地牌，也是同理。
+>例如，薪传赛中的一些套牌跟万智牌中绝大部分的套牌都不一样。发掘牌手的坟墓场通常会把坟墓场摊开来放在原本是战场的位置上，因为他们的坟墓场互动太多了。“无地套”和喷火炮等组合技套牌放很少的（或甚至不放）地牌，也是同理。
 
 ## MTR 4.8 Reversing Decisions 反悔
 
 Players are expected to consider their options before taking an action and players are not usually allowed to take back an action that has been communicated to their opponent, either verbally or physically.
 
-牌手应仔细考虑所有可能的情况之后再实际行事，且在牌手通过口头或动作让对手知晓其动作之后，通常便不允许其撤回。
+牌手应在采取行动前考虑自己的选项，且在牌手通过口头或动作让对手知晓其动作之后，通常便不允许其撤回。
 
 >Chess has something called the “touch-move” rule, which means that if a player touches a piece on the board on their turn, they are bound to move that piece (or capture that piece if it’s an opponent’s) if they have a legal move. In Magic, announcing a legal action, either by moving a card or by verbal confirmation ( saying “No blocks”, for example) might look alike that chess rule, and it could be reasonable to bound a player to that action.
 >
@@ -2808,15 +2818,15 @@ If the judge cannot be sure no information was gained, they should not allow the
 
 >Like when we are deciding whether to backup or not, the safest bet is always to leave things the way they are. If you don’t feel comfortable enough with the amount of information that’s been exchanged before you were involved, it’s fine to not allow the decision to be reversed. Use your own judgement here!
 >
->就像在决定是否反悔时一样，最安全的做法通常是保持现状。如果你对在你介入之前已经交换的信息量感到不够放心，完全可以选择不允许反悔。此时，请依靠你自己的判断！
+>就像在决定是否倒回时一样，最安全的做法通常是保持现状。如果你对在你介入之前已经交换的信息量感到不够放心，完全可以选择不允许反悔。此时，请依靠你自己的判断！
 
 Teammates intervening before information has been gained is acceptable when considering a backup.
 
-如果牌手队友在牌手本人获得信息之前便加以干预，应允许其撤回先前动作。
+在考虑是否倒回时，队友在获得信息之前介入是可以接受的。
 
 >Since we treat every player from a team as a single entity for the purpose of reporting the result of a match, and the fact that they can communicate with each other at all times during the match, it is also reasonable to take every member of the team into account when deciding whether to reverse a decision or not. If a player cast a creature, and one of their teammates says “No, cast this other one!”, it is ok to let them reverse that play, as long as no relevant information has been gained.
 >
->由于在报告比赛结果时，我们将团队中的每位玩家视为单一个体，且他们在比赛中可以随时互相交流，因此在决定是否允许反悔时，也有理由考虑团队中的每一名成员。 例如，如果一名玩家施放了一个生物，而他们的队友说：“不，施放另一个！”，只要没有获得相关信息，允许他们反悔是可以的。
+>由于在报告比赛结果时，我们将团队中的各位玩家视为一个整体，且他们在比赛中可以随时互相交流，因此在决定是否允许反悔时，也有理由考虑团队中的每一名成员。 例如，如果一名玩家施放了一个生物，而他们的队友说：“不，施放另一个！”，只要没有获得相关信息，允许他们反悔是可以的。
 
 Examples
 
@@ -2824,7 +2834,7 @@ Examples
 
 1. A player plays an Island and, before anything else happens, says “Sorry, I meant to play a Swamp.”
 
-1\.	牌手使用了海岛，但在任何人有动作前就说「抱歉，我想用的是沼泽。」
+1\.	牌手使用了海岛，但在任何其他事情发生前就说「抱歉，我想用的是沼泽。」
 
 2. A player says “No blocks” immediately followed by “Wait, no, I block with this creature.”
 
@@ -2848,9 +2858,9 @@ Day/Night is a state that can change over the course of the game, but is not con
 >
 >As you can see there’s a lot going on with this mechanic and it continues to go on even if there are no cards with Daybound/Nightbound on them for the rest of the game.
 >
->白昼/黑夜是由某些双面牌引入游戏的，例如护教蛮兵。当处于白昼时，如果玩家在自己回合内没有施放任何咒语，下一回合会变为黑夜。类似地，当处于黑夜时，玩家需要在自己回合内施放两张或更多咒语，下一回合才会变为白昼。
+>白昼/黑夜是由某些双面牌引入游戏的，例如护教蛮兵。当处于白昼时，如果玩家在自己回合内没有施放任何咒语，下一回合会变为黑夜。类似地，当处于黑夜时，玩家需要在自己回合内施放两个或更多咒语，下一回合才会变为白昼。
 >
->如你所见，这个机制涉及的内容非常多，即便在游戏剩余时间内没有任何带白昼/黑夜的牌，机制仍然持续生效。
+>如你所见，这个机制涉及的内容非常多，即便在游戏剩余时间内没有任何带昼形/夜形的牌，机制仍然持续生效。
 
 Because responsibility for the state is shared, an erroneously-represented state should be handled as a Communication Policy Violation, but neither player receives the Warning.
 
@@ -2874,11 +2884,11 @@ If the players and judges are unable to determine the current status, the judge 
 
 Cheating will not be tolerated. The Head Judge reviews all cheating allegations, and if they believe that a player has cheated, they will issue the appropriate penalty based on the Infraction Procedure Guide or Judging at Regular Rules Enforcement Level document. All disqualifications are subject to DCI review and further penalties may be assessed.
 
-作弊将绝不宽贷。主审审核所有作弊的陈述,如果他认为某位牌手作弊,主审将根据《违规处理方针》或《一般级别执法严格度执法指南》做出适当处置。所有取消比赛资格的处罚都将会经由 DCI 审核，并可能在审核后给予该牌手进一步的处罚。
+作弊将绝不宽贷。主审审核所有作弊的指控，如果他认为某位牌手作弊，主审将根据《违规处理方针》或《一般级别执法严格度执法指南》做出适当处置。所有取消比赛资格的处罚都将会经由 DCI 审核，并可能在审核后给予该牌手进一步的处罚。
 
 >In short, cheating occurs when a person breaks a rule, is aware that they are doing so, and is attempting to gain advantage from their action. For a more detailed discussion about cheating and how to handle this infraction, see IPG 4.8. While the HJ disqualifies the player from the event, the Tournament Organizer submits the DQ report.  HJs used to submit the DQ report, but that responsibility was moved to TO for unannounced reasons.  The DQ process is found only in the article announcing its movement from the Judge Program to WOTC, and the form itself requires a WPN login.
 >
->简单来说，作弊表示有牌手明知如此仍然违反规则，并意图获取优势。关于作弊的详细讨论以及如何处理该违规，请看IPG4.8节。虽然主审负责将玩家从赛事中取消资格，但由比赛主办人提交取消资格报告。过去主审会提交比赛主办人报告，但出于未公布的原因，这项责任被移交给比赛主办人。仅有一篇关于该职责从裁判项目移交给WOTC的文章中说明取消资格流程，而取消资格表格本身需要WPN登录。
+>简单来说，作弊表示某人明知如此仍然违反规则，并意图获取优势。关于作弊的详细讨论以及如何处理该违规，请看IPG4.8节。虽然主审负责将玩家从赛事中取消资格，但由比赛主办人提交取消资格报告。过去主审会提交取消资格报告，但出于未公布的原因，这项责任被移交给比赛主办人。仅有一篇关于该职责从裁判项目移交给WOTC的文章中说明取消资格流程，而取消资格表格本身需要WPN登录。
 
 ## MTR 5.2 Bribery 贿赂
 
@@ -2890,7 +2900,7 @@ The decision to drop, concede, or agree to an intentional draw cannot be made in
 >
 >Basically if the exchange can be summarized by an “if X, then Y” discussion, we are in bribery territory. The “if/then” exchange does not have to be explicit.  Implied exchanges are still offers.
 >
->牌手们可以退赛、或者向对手认输或约和。但是他们不能以任何形式要求报酬或提供奖励，用以获得想要的比赛结果。同样，一位牌手不能以此法影响另一位牌手做出任何游戏行动。例如“如果你认输，我将把我的奖品都给你”或“我可以认输，换你一半的奖品”这种话都是不可接受的，并且贿赂在竞争级别下将被判一局负。在一般级别下，这种行为会引发裁判与玩家之间的严肃谈话，但如果玩家不知道这属于违规行为，则不进行取消资格处罚。另一方面，如果玩家明知贿赂是不允许的，则在所有执法严格度下都会被认定为作弊。
+>牌手们可以退赛、或者向对手认输或约和。但是他们不能以任何形式要求报酬或提供奖励，用以获得想要的比赛结果。同样，一位牌手不能以此法影响另一位牌手做出任何游戏行动。例如“如果你认输，我将把我的奖品都给你”或“我可以认输，换你一半的奖品”这种话都是不可接受的，并且贿赂在竞争级别下将被判一局负。在一般级别下，这种行为会引发裁判与玩家之间的严肃谈话，但如果玩家不知道这属于违规行为，则不进行取消资格处罚。另一方面，如果玩家明知贿赂是不允许的，则在所有执法严格度下都会因作弊而被取消资格。
 >
 >基本原则是：如果交换可以概括为“如果 X，那么 Y”的讨论，那就属于贿赂范畴。这个“如果/那么”的交换不必明说，即便是暗示性的交换也仍然属于提议。
 
@@ -2904,7 +2914,7 @@ Players may not make any offers to tournament officials in an attempt to influen
 
 It is not bribery when players share prizes they have not yet received in the current tournament and they may agree to such before or during their match, as long as any such sharing does not occur in exchange for any game or match result or the dropping of a player from the tournament.
 
-只要不是用以交换游戏或对局的结果，或是用以劝说牌手退出比赛，牌手可用任意方式来与对手分享他在当前比赛中尚未获得的奖品。此等行为不属贿赂。上述分享的决定可以在他开始对局之前或进行对局期间做出，但不得以某一方认输或双方约和为前提条件来达成此类协议。
+只要不是用以交换游戏或对局的结果，或是用以劝说牌手退出比赛，牌手可与对手分享他在当前比赛中尚未获得的奖品。此等行为不属贿赂。上述分享的决定可以在他开始对局之前或进行对局期间做出，但不得以某一方认输或双方约和为前提条件来达成此类协议。
 
 >This statement is for things like: players travelling in a car together agree that any prize money goes towards the hotel room.  Or players in a pre-release decide to split the prizes in the last round.
 >
@@ -2912,7 +2922,7 @@ It is not bribery when players share prizes they have not yet received in the cu
 
 It is not bribery when players in the announced last round of the single-elimination portion of a tournament agree to a winner and how to divide the subsequent tournament prizes. In that case, one of the players at each table must agree to drop from the tournament. Players receive the prizes according to their final ranking.
 
-在比赛的单淘汰赛部分中，要参加公告中最后一局比赛的牌手可就最终赛事优胜者归属与所得之赛事奖品分配方式达成合意。此等行为不属贿赂。在这种情况下，其中一位牌手必须同意自比赛中退出。牌手会根据最终的名次得到相应的奖励。
+在比赛的单淘汰赛部分中，要参加公告中最后一轮比赛的牌手可就最终赛事优胜者归属与所得之赛事奖品分配方式达成合意。此等行为不属贿赂。在这种情况下，每桌必须有一位牌手同意退赛。牌手会根据最终的名次得到相应的奖励。
 
 >So this particular rule is a bit funny.  Its carving out an exception to the Bribery rules.  This is bribery,  It’s just not Bribery.  In this case though, it is the last round of the single elimination portion of the tournament.  No other players can possibly be impacted by the decision.  This exception was carved out for old school PTQs where the winner would get an invite to the event and there were pack prizes for 1st and 2nd place. This allowed the players to work out an agreement where the player who wanted the invite gets the invite, and the player that wanted the packs get the packs.
 >
@@ -2924,15 +2934,15 @@ It is not bribery when players in the announced last round of the single-elimina
 
 The result of a match or game may not be randomly or arbitrarily determined through any means other than the normal progress of the game in play. Examples include (but are not limited to) rolling a die, flipping a coin, arm wrestling, or playing any other game.
 
-不得通过除了正常游戏进行的程序之外的其他方式来随机或任意决定某一局的结果。其他方式的例子包括(但不限于)掷骰子、抛硬币、扳手腕，或进行其他游戏。
+不得通过除了正常游戏进行的程序之外的其他方式来随机或任意决定某一盘游戏或一场对局的结果。其他方式的例子包括(但不限于)掷骰子、抛硬币、扳手腕，或进行其他游戏。
 
 >The result of a Magic game or match should be determined only by playing Magic. No other method is allowed. This often happens near the end of a round when drawing would knock both players out of playoff contention but a concession by one would allow the other to advance. Many inexperienced players do not even realize that randomly determining a winner is illegal; being proactive with Head Judge announcements and late-round vigilance can help judges avoid giving Match Losses to players who otherwise might not know about this rule. See IPG 4.3.
 >
 >For example, if a judge sees two players who are about to draw without any obvious win conditions on the board, they might simply remind the players that they cannot flip a coin or make any offers to their opponents to induce a concession. The judge might also remind them that they must report the game as a draw unless one of them wins or concedes. This proactive approach provides a better player experience than waiting for a player to say something unfortunate and avoids an unpleasant outcome for everyone.
 >
->万智牌对局的结果只能由游戏本身来决定，其他方式都是不允许的。贿赂常常发生的情形：接近一轮结束时，若平局将导致双方牌手都失去进入淘汰赛的机会，但一方认输则对手可以晋级淘汰赛。许多缺乏经验的牌手甚至没有意识到随机地决定胜者是违规的。主审主动地声明并且在最后一轮警惕上述情况，可以帮助裁判避免对那些不知道这项规则的牌手做出一局负的判罚。请看IPG4.3。
+>万智牌一盘游戏或一场对局的结果只能由游戏本身来决定，其他方式都是不允许的。经常发生的情形：接近一轮结束时，若平局将导致双方牌手都失去进入淘汰赛的机会，但一方认输则对手可以晋级淘汰赛。许多缺乏经验的牌手甚至没有意识到随机地决定胜者是违规的。主审主动地声明并且在最后一轮警惕上述情况，可以帮助裁判避免对那些不知道这项规则的牌手做出一局负的判罚。请看IPG4.3。
 >
->例如，如果一位裁判看到两位牌手将要在场面没有明显胜利条件的情况下战平，他或她可以简单地提醒牌手：他们不能通过投硬币或者贿赂对手来诱导对手认输。裁判也可以提醒牌手：他们必须填报平局成绩除非一方获胜或认输。这种积极地方法可提供更好的牌手体验，而不是等牌手说出令人遗憾（导致被取消资格）的话；并且避免了给大家造成不愉快的结果。
+>例如，如果一位裁判看到两位牌手将要在场面没有明显胜利条件的情况下战平，他或她可以简单地提醒牌手：他们不能通过投硬币或者贿赂对手来诱导对手认输。裁判也可以提醒牌手：他们必须填报平局成绩除非一方获胜或认输。这种积极的方法可提供更好的牌手体验，而不是等牌手说出令人遗憾（译注：例如导致被取消资格）的话；并且避免了给大家造成不愉快的结果。
 
 Players may not reach an agreement in conjunction with other matches. Players can make use of information regarding match or game scores of other tables. However, players are not allowed to leave their seats during their match or go to great lengths to obtain this information.
 
@@ -2944,9 +2954,9 @@ Players may not reach an agreement in conjunction with other matches. Players ca
 >
 >Some Head Judges and Tournament Organizers like to seat the final round’s matches randomly so that the top matches are not clumped together at the first few tables. Random seating makes it harder for players to observe the results of matches near them in standing.
 >
->即使对手可能同意约和或认输，一部分牌手可能不会深思熟虑他们是否应当约和以进入八强。牌手可以利用其它比赛的信息来决策，但是在比赛期间他们不能离开座位或者不遗余力地获取额外信息。
+>即使对手可能同意约和或认输，一群牌手不得共同商议是否要全部约和以进入八强。牌手可以利用其它比赛的信息来决策，但是在比赛期间他们不能离开座位或者不遗余力地获取额外信息。
 >
->例如，牌手可以进行对局，并根据相邻对局的结果而决定约和，以进入八强。但是他们不能采用额外的手段来获得他们想要的信息，例如暂停对局来重新检视排名或配对，或者查看距离较远的对局结果。牌手不能以缓慢进行游戏的方式来等待相关对局先结束。
+>例如，牌手可以进行对局，并根据相邻对局的结果而决定约和，以进入八强。但是他们不能采用非常规的手段来获得他们想要的信息，例如暂停对局来重新检视排名或配对，或者查看距离较远的对局结果。牌手不能以缓慢进行游戏的方式来等待相关对局先结束。
 >
 >一些主审或比赛主办者倾向于将最后一轮对局的座位安排随机化。这样高分段的对局将不会聚集在一起。随机安排座位将让牌手更难观察其他排名接近自己的牌手的对局结果。
 
@@ -2960,7 +2970,7 @@ Example: Before the semifinals of a tournament (in which first place gets 12 pac
 
 Example: In the finals of a 1-slot Players Tour Qualifier that offers a travel award and an invitation to the winner, the two finalists may agree to split the tournament prizes, but this agreement cannot alter the results of the match. One player must drop from the tournament, leaving the travel award and the invitation to the player who did not drop from the tournament. That player is then free to split the remainder of the prizes as agreed upon. The travel award and invitation are a single item and may not be split.
 
-示例：在提供一个资格的专业赛预选赛（为比赛的胜利者提供旅费奖金与赛邀请资格）的决赛中，两位牌手可以协议分配奖品，但这不能牵涉到改变对局的结果。其中一位牌手必须自比赛中退出，将旅费奖金与邀请资格让给对手（即未从比赛中退出的那位牌手）。该牌手之后就可以自由地按照先前的协议来分配奖品。旅费奖金与专业赛邀请资格视作一项单独的奖品，不得将两者分配给不同的牌手。
+示例：在提供一个资格的专业赛资格赛（为比赛的胜利者提供旅费奖金与比赛邀请资格）的决赛中，两位牌手可以协议分配奖品，但这不能牵涉到改变对局的结果。其中一位牌手必须自比赛中退出，将旅费奖金与邀请资格让给对手（即未从比赛中退出的那位牌手）。该牌手之后就可以自由地按照先前的协议来分配奖品。旅费奖金与专业赛邀请资格视作一项单独的奖品，不得将两者分配给不同的牌手。
 
 >Note that, for the event to end at this point, players ned to agree which of them is dropping, and the results must be reported as a “Win By Drop,” since no match took place. A prize split before the finals is only allowed when are no prizes other than cash and/or unopened product. If an invite or some other non-cash, non-product prize is on the line, then the prize cannot be split before the finals.
 >
@@ -2984,7 +2994,7 @@ Unsporting conduct will not be tolerated at any time. Tournament participants mu
 
 >Broadly, this section exists to spell out one very important responsibility that all players share: to not ruin the enjoyable atmosphere of the tournament. While the behaviors cited below all have the potential to do so, they are not an exhaustive list, nor could such a list be written. If a player’s behavior is disruptive to the event or is making you or another person uncomfortable, this is a problem that needs to be addressed. Keep in mind that “will not be tolerated” doesnt mean anyone that behaves unsportingly will be removed.  It means that the issue will be addressed.  Depending on the rules enforcement level and the action taken, addressing the issue may take the form of a stern talk, all the way up to a DQ.  The appropriate guides (JAR and IPG) will provide guidance on the appropriate action level.
 >
->大体上，本节内容意在阐明一个非常重要的牌手义务：不能破坏比赛的良好氛围。虽然下面所述的行为都有可能破坏比赛气氛，但是这并不是一个详尽的列表，这样的列表也是无法写出的。如果一位牌手的行为破坏了比赛或让任何人感到不适，那就是一个需要处理的问题。请记住，“决不宽贷”并不意味着任何举止违背运动道德的玩家都会被赶走。它的意思是该问题会被处理。根据执法严格度以及采取的具体措施，处理问题的方式可以从严肃的谈话到直接取消资格不等。相关指南（JAR和IPG）会提供关于适当处理方式的指导。
+>大体上，本节内容意在阐明一个非常重要的牌手义务：不能破坏比赛的良好氛围。虽然下面所述的行为都有可能破坏比赛气氛，但是这并不是一个详尽的列表，这样的列表也是无法写出的。如果一位牌手的行为干扰了比赛或让任何人感到不适，那就是一个需要处理的问题。请记住，“决不宽贷”并不意味着任何举止违背运动道德的玩家都会被赶走。它的意思是该问题会被处理。根据执法严格度以及采取的具体措施，处理问题的方式可以从严肃的谈话到直接取消资格不等。相关指南（JAR和IPG）会提供关于适当处理方式的指导。
 
 * Using profanity.
 
@@ -2992,7 +3002,7 @@ Unsporting conduct will not be tolerated at any time. Tournament participants mu
 
 >The above prohibition should not be taken to mean that any use of profanity at a Magic event is automatically considered Unsporting Conduct. Indeed, many Magic players routinely use profanity as part of their everyday speech without a second thought, and it would be senseless to try to eradicate it completely. Profanity becomes problematic when it is disruptive to other people’s enjoyment of the event. This can happen, for example, when it is used excessively, or directed maliciously toward another person. Such cases are more serious and merit the intervention of a judge. See IPG 4.1 for details.  Stores, however, are more than able to impose a more restrictive policy on profanity, gosh darn it.  However that restriction is based on store policy and not the MTR.
 >
->上述禁止行为并不意味着在比赛中任何说脏话的行为都自动地被视作举止违背运动道德。确实，许多万智牌牌手常常使用脏话作为日常用语而没有经过仔细思考，并且试图根除脏话恐怕是毫无意义的。当脏话破坏牌手的比赛体验时，才会成为问题。例如，过度地使用脏话或者直接恶意地对他人使用脏话。这些情况是更为严重的，并且需要裁判的干预。详情请见IPG 4.1。然而，牌店完全有能力对粗话制定更严格的方针，例如禁止“该死的”。 不过，这类限制是基于商店方针而非MTR。
+>上述禁止行为并不意味着在比赛中任何说脏话的行为都自动地被视作举止违背运动道德。确实，许多万智牌牌手常常使用脏话作为日常用语而没有经过仔细思考，并且试图根除脏话恐怕是毫无意义的。当脏话干扰他人的比赛体验时，才会成为问题。例如，过度地使用脏话或者直接恶意地对他人使用脏话。这些情况是更为严重的，并且需要裁判的干预。详情请见IPG 4.1。然而，牌店完全有能力对粗话制定更严格的方针，例如禁止“该死的”。 不过，这类限制是基于商店方针而非MTR。
 
 * Engaging in behavior that could reasonably be expected to create a feeling of being harassed, bullied, or stalked.
 
@@ -3008,7 +3018,7 @@ Unsporting conduct will not be tolerated at any time. Tournament participants mu
 
 * Violating the personal privacy or safety of any participant, including spectators and staff.
 
-* 侵犯其他参赛者（包括旁观者和工作人员）的个人隐私或安全。
+* 侵犯其他参与者（包括旁观者和工作人员）的个人隐私或安全。
 
 * Using social media to bully, shame, or intimidate other participants.
 
@@ -3048,7 +3058,7 @@ Players must take their turns in a timely fashion regardless of the complexity o
 >
 >Intentionally playing slowly to take advantage of time limit is considered Stalling. For more information about how to handle these infractions at Competitive Rules Enforcement Level, see IPG 4.7.
 >
->回合的时间限制并非在各牌手之间平均分配。这意味着牌手思考时间过长将“偷走”对手的时间。这可能给她/他带来不公平的优势或者降低对手的打牌体验。即使不使用时间限制，牌手消耗过长时间也会浪费所有其他人的时间。IPG 3.3列出了游戏进行过慢的例子。
+>轮次的时间限制并非在各牌手之间平均分配。这意味着牌手思考时间过长将“偷走”对手的时间。这可能给她/他带来不公平的优势或者降低对手的打牌体验。即使不使用时间限制，牌手消耗过长时间也会浪费所有其他人的时间。IPG 3.3列出了游戏进行过慢的例子。
 >
 >故意缓慢地进行游戏以利用时间限制被视为拖延。 关于如何在竞争级别处理此类违规，请参阅 IPG 4.7。
 
@@ -3068,11 +3078,11 @@ During deck construction, players and spectators may not provide any advice or c
 
 >While not during a match, advice or commentary during deck construction at a limited event can alter the deck the player is building.  Deck Building is a tournament skill being tested, and any help taints that.
 >
->虽然不是在对局期间，但在限制赛中构筑套牌时的建议或评论可能会改变玩家正在构建的套牌。 套牌构筑是一项被考核的比赛技能，任何帮助都会影响这一考核。
+>虽然不是在对局期间，但在限制赛中构组套牌时的建议或评论可能会改变玩家正在构建的套牌。 套牌构筑是一项被考核的比赛技能，任何帮助都会影响这一考核。
 
 Players and spectators will refrain from providing any information about draft selections or strategies between pod announcement and the end of the draft. At Competitive and Professional Rules Enforcement Level, players and spectators are expected to remain silent during the draft.
 
-从轮抽组构成公布开始到轮抽结束这段期间内，牌手和旁观者应尽量避免提供任何有关轮抽选择或战略的信息。在执法严格度为竞争和专业级别的赛事中，牌手和旁观者应在轮抽过程中保持安静。
+从轮抽组构成公布开始到轮抽结束这段期间内，牌手和旁观者应避免提供任何有关轮抽选择或战略的信息。在执法严格度为竞争和专业级别的赛事中，牌手和旁观者应在轮抽过程中保持安静。
 
 >The remaining silent bit is actually there to protect the players from accidentally revealing too much information while chatting with their buddies. Talking can only get you in trouble during this part of the tournament.
 >
@@ -3096,7 +3106,7 @@ Constructed decks must contain a minimum of sixty cards. There is no maximum dec
 
 >This is one of the announcements that many Head Judges include before beginning a tournament. It holds true at any constructed tournament, and is fairly self-explanatory.
 >
->一些主审会将这句话加入赛前公告中。无需更多解释，这对所有的构组赛都适用。
+>许多主审会将这句话加入赛前公告中。无需更多解释，这对所有的构组赛都适用。
 
 Except for cards with the basic supertype or cards with text that specifies otherwise, a player’s combined deck and sideboard may not contain more than four of any individual card, based on its English card title.
 
@@ -3104,17 +3114,17 @@ Except for cards with the basic supertype or cards with text that specifies othe
 
 >For most cards, a player may only play a maximum of four copies of a given card across their entire seventy-five. There are currently fourteen exceptions to this rule: Plains, Island, Swamp, Mountain, Forest, the five Snow-Covered variants, Relentless Rats, Shadowborn Apostle, Rat Colony and Persistent Petitioners. Note that you cannot get around this rule by using foreign or misprinted cards; the count is based on the English name of the card.
 >
->对于整个75张的套牌来说，同一张牌不得超过四张。但有14个例外：平原，海岛，沼泽，山脉，树林，五种覆雪基本地，无情鼠群，影裔宗徒，老鼠群落，以及执着诉愿人。当然，你不能借助外文牌或者错版牌来滥用此规则；牌张的计数以英文版为标准。（译注：实际上这里仍没列举完整。总之有很多例外。）
+>对于整个75张的套牌来说，同一张牌不得超过四张。但有14个例外：平原，海岛，沼泽，山脉，树林，五种覆雪基本地，无情鼠群，影裔宗徒，老鼠群落，以及执着诉愿人。当然，你不能借助外文牌或者错版牌来规避此规则；牌张的计数以英文名称为标准。（译注：实际上这里仍没列举完整。总之有很多例外。）
 
 ## MTR 6.2 Card Legality 牌张可用情况
 
 A card may only be used in a particular format if the card is from a set that is legal in that format or has the same name as a card from a set that is legal in that format. Zendikar Expeditions and Masterpiece Series cards may only be played in formats where the card is already legal.
 
-某张牌在特定赛制中是否可用，由以下情况确定：（1）出自可于该赛制中使用之系列的牌张，可以在该赛制中使用；或（2）名称与可在此赛制中使用之系列中某张牌相同之牌张，可以在该赛制中使用。逸品重现牌张只能在该牌张原本可用的赛制中使用。
+某张牌在特定赛制中是否可用，由以下情况确定：（1）出自可于该赛制中使用之系列的牌张，可以在该赛制中使用；或（2）名称与可在此赛制中使用之系列中某张牌相同之牌张，可以在该赛制中使用。赞迪卡远探和逸品重现牌张只能在该牌张原本可用的赛制中使用。
 
 >The complete format list is below in this section. Note that it is perfectly legal to use old cards, as long as a version of that card is legal in the format in question. For example, a player may use a Beta Lightning Bolt in Modern, even though Beta isn’t a part of Modern, because Lightning Bolt was printed in a Modern-legal set. Masterpiece cards are a special addition to a set, and not actually part of the set itself. Since they are opened in packs they are legal for limited, however they are only legal in constructed formats where the normal edition of the card is also legal.
 >
->本章节的后半部分有关于各赛制的详细列举。此外，用老版本的牌当然是可以的，前提是这张牌在赛制中合法的系列中有过重印。例如，牌手可以在近代赛中使用BETA版本的闪电击，即使BETA版本并不在近代赛的范围内，这是因为闪电击在摩登可使用的系列中有过重印。逸品重现是某些系列中的特殊附加，并不是系列本身的一部分。即使这些牌在开出它们的系列之限制赛中可以合法使用，在构组赛中它们只能在其普通版本在赛制中合法的情况下才能合法使用。
+>本章节的后半部分有关于各赛制的详细列举。此外，用老版本的牌当然是可以的，前提是这张牌在赛制中合法的系列中有过重印。例如，牌手可以在近代赛中使用BETA版本的闪电击，即使BETA版本并不在近代赛的范围内，这是因为闪电击在摩登可使用的系列中有过重印。逸品重现是某些系列中的特殊附加，并不是系列本身的一部分。由于这些牌能够从补充包中开出，因此可用于相应的限制赛；不过在构组赛中它们只能在其普通版本在赛制中合法的情况下才能合法使用。
 
 Cards banned in a specific format may not be used in decks for that format. Cards restricted in a specific format may only have one copy in a deck, including sideboard.
 
@@ -3168,7 +3178,7 @@ The following card sets are permitted in Standard tournaments:
 
 * Tarkir: Dragonstorm™
 
-* 鞑契：龙岚录
+* 鞑契龙岚录
 
 * Magic: The Gathering®—FINAL FANTASY™
 
@@ -3200,7 +3210,7 @@ The following card sets are permitted in Standard tournaments:
 
 Any cards with expansion symbols from the above sets are legal to play in Standard, even if they are not available in that set’s play booster (or draft booster for sets released before February 2, 2024). Cards from older sets that share the same name as a card legal in Standard may also be played.
 
-所有牌张上面有上述系列符号的牌，即使它们无法在普通补充包（或是在2024年2月2日前发行之系列的轮抽补充包）中被开出，也都可以在标准赛制上合法被使用。
+所有牌张上面有上述系列符号的牌，即使它们无法在常规补充包（或是在2024年2月2日前发行之系列的轮抽补充包）中被开出，也都可以在标准赛制上合法被使用。名称与标准赛制中合法牌张相同的旧系列牌张也可以使用。
 
 When Snow-Covered Lands are not legal in Standard, they are treated as the equivalent basic lands. Players must replace them when discovered, but no infraction is committed.
 
@@ -3638,7 +3648,7 @@ The following card sets are permitted in Modern tournaments:
 
 * Tarkir: Dragonstorm
 
-* 鞑契：龙岚录
+* 鞑契龙岚录
 
 * Magic: The Gathering®—FINAL FANTASY™
 
@@ -3912,11 +3922,11 @@ The following cards are banned in Vintage tournaments:
 
 * All cards that bring a sticker or an Attraction into the game (56 Cards). Click [here](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement) for the list.
 
-* 将贴纸和景点带入游戏的所有牌张（共56张），点击[此处](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement)可以查询列表。
+* 将贴纸或景点带入游戏的所有牌张（共56张），点击[此处](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement)可以查询列表。
 
 * Cards whose art, text, name, or combination thereof that are racially or culturally offensive are banned in all formats. This list is a work in progress. Click [here](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10) for the list.
 
-* 禁止图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张。该列表还在施工中，可以点击[此处](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10)查询。
+* 图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张，在所有赛制中均禁用。该列表还在施工中，可以点击[此处](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10)查询。
 
 * Chaos Orb
 
@@ -4140,7 +4150,7 @@ The following cards are restricted in Vintage tournaments:
 
 >This is the only restricted list in Magic. These cards are generally the most powerful allowed in Vintage, and only one of each card can be played in a player’s library or sideboard (but not in both).
 >
->这是万智牌中唯一一份限牌表。这些牌在特选赛中过于强大，牌手只能在主牌或备牌中至多使用一张（不能在主牌和备牌中都使用）。
+>这是万智牌中唯一一份限牌表。这些牌通常是特选赛所允许牌张中最强的一批，牌手只能在主牌或备牌中至多使用一张（不能在主牌和备牌中都使用）。
 
 ## MTR 6.6 Legacy Format Deck Construction 薪传赛制套牌构组
 
@@ -4170,11 +4180,11 @@ The following cards are banned in Legacy tournaments:
 
 * All cards that bring a sticker or an Attraction into the game (56 Cards). Click [here](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement) for the list.
 
-* 将贴纸和景点带入游戏的所有牌张（共56张），点击[此处](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement)可以查询列表。
+* 将贴纸或景点带入游戏的所有牌张（共56张），点击[此处](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement)可以查询列表。
 
 * Cards whose art, text, name, or combination thereof that are racially or culturally offensive are banned in all formats. This list is a work in progress. Click [here](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10) for the list.
 
-* 禁止图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张。该列表还在施工中，可以点击查询。
+* 图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张，在所有赛制中均禁用。该列表还在施工中，可以点击[此处](https://magic.wizards.com/en/articles/archive/news/depictions-racism-magic-2020-06-10)查询。
 
 * Ancestral Recall
 
@@ -4676,7 +4686,7 @@ The following card sets are permitted in Pioneer tournaments:
 
 * Tarkir: Dragonstorm
 
-* 鞑契：龙岚录
+* 鞑契龙岚录
 
 * Magic: The Gathering®—FINAL FANTASY™
 
@@ -4772,7 +4782,7 @@ The following cards are banned in Pioneer tournaments:
 
 * Nexus of Fate
 
-* 龙命连结点Nexus of Fate
+* 龙命连结点
 
 * Oko, Thief of Crowns
 
@@ -4886,7 +4896,7 @@ Players may ask a judge for permission to replace a card with another version of
 
 Because it was designed specifically for multiplayer play, the use of Conspiracy booster packs in sanctioned, rated Limited-format tournaments (Sealed Deck and Booster Draft) is not permitted.
 
-由于诡局此系列系专为多人游戏设计，因此不得在认证的竞技类限制赛制比赛（现开赛和补充包轮抽）中使用该产品之补充包。
+由于诡局此系列系专为多人游戏设计，因此不得在认证限制赛制积分赛（现开赛和补充包轮抽）中使用该产品之补充包。
 
 Six play boosters per player are recommended for individual format Sealed Deck tournaments and 3 play boosters per player for individual Booster or Team Rochester Draft tournaments. For the recommended product mix for the current block, refer to Appendix D.
 
@@ -4908,23 +4918,23 @@ If the Tournament Organizer is not providing extra land cards for use in a Limit
 >
 >Players often prefer to use their own basic lands for a variety of reasons. While this is typically not an issue, be aware of foil basic lands that are marked (warped), or Alpha lands that cause particular markings on sleeves through the course of the day. While the lands themselves may be fine, the markings can become an issue.
 >
->在一些非认证的比赛，比如混沌轮抽中，牌手可以不必使用相同的产品。但是，一旦比赛被认证，那么牌手就需按照规则，使用相同的产品。
+>虽然并非认证比赛，混沌轮抽是存在的。混沌轮抽中的产品当然是随机分配给牌手的，各牌手不需要收到相同的产品。但是，一旦比赛被认证，那么牌手就需按照规则，使用相同的产品。
 >
 >牌手在售前赛中可以使用产品中的纪念闪，这是因为纪念闪也是来自当前系列中的牌。另外，如果牌手开到了双面牌，那他也可以用开到的列表牌来代替。
 >
->牌手可以要求用相同的其他版本的牌来替代牌池中的牌，有时候牌手会在想要使用闪卡时这么做。尽管这种情况下不得制作代牌，牌手如果自己有的话，可以使用相同的非闪牌来替代。
+>牌手可以要求用相同的其他版本的牌来替代牌池中的牌，有时候牌手会要求为闪卡制作代牌。除非该牌开出时已有损坏，否则不应为其制作代牌。牌手如果自己有的话，可以使用相同的非闪牌来替代。
 >
->牌手可能会想要使用自己的基本地。虽然这是允许的，但是仍请注意：闪牌是会弯曲的，ALPHA版本的牌也会在牌套上留下特殊的印记。这些牌本身可能没有问题，但有时某些牌会成为“有记号的牌”。
+>牌手可能会想要使用自己的基本地。虽然这是允许的，但是请留意因弯曲而成为有记号的牌之闪基本地，以及会在一天的比赛过程中令牌套留下特殊痕迹的 Alpha 地牌。地牌本身可能没有问题，但牌套上的痕迹可能造成问题。
 
 ## MTR 7.3 Continuous Construction 连续构组
 
 Players participating in Limited tournaments that do not use decklists may freely change the composition of their decks between matches by exchanging cards from their deck for cards in their sideboard without being required to return their deck to its original composition before their next match. The Head Judge or Tournament Organizer must inform players if this option is not being used prior to the start of deck construction. This option is not available at Competitive or Professional Rules Enforcement Level tournaments.
 
-参加无需提交套牌登记表的限制比赛之牌手可以在局与局之间，通过以套牌中的牌交换备牌中的牌之方式，自由地变更其套牌的组成，而不需要在其下一局比赛开始之前将其套牌组成恢复原样。如果主审或比赛主办人不想在比赛中使用此可选规则，则须在构组套牌之前将此决定告知所有牌手。此可选规则在执法严格度为竞争或专业级别的比赛中不可用。
+参加无需提交套牌登记表的限制比赛之牌手可以在局与局之间，通过以套牌中的牌交换备牌中的牌之方式，自由地变更其套牌的组成，而不需要在其下一局对局开始之前将其套牌组成恢复原样。如果主审或比赛主办人不想在比赛中使用此可选规则，则须在构组套牌之前将此决定告知所有牌手。此可选规则在执法严格度为竞争或专业级别的比赛中不可用。
 
 >The default for events that do not have a decklist is continuous construction. Remember that Competitive and Professional Rules Enforcement Level events should have decklists, and thus the original composition needs to be restored prior to the start of each match.
 >
->对于不使用牌表的比赛而言，默认选项是连续构组。在竞争级别以及专业级别的比赛中必须使用牌表，因此牌手必须在每局比赛开始前还原主牌。
+>对于不使用套牌登记表的比赛而言，默认选项是连续构组。在竞争级别以及专业级别的比赛中必须使用套牌登记表，因此牌手必须在每局比赛开始前还原主牌。
 
 ## MTR 7.4 Abnormal Product 异常产品
 
@@ -4944,7 +4954,7 @@ Neither Wizards of the Coast nor the Tournament Organizer guarantee any specific
 >
 >牌手有义务在打开每一包产品时都检查产品的情况。如果在开完6包牌之后才发现多了或少了一张非普通牌会非常麻烦。
 >
->如果牌手少开出一张牌，主审（在主办方许可下）可以打开一包补充包随机挑选一张相同稀有度的牌加入该牌手的牌池。如果牌手多开出了一张牌，你可以考虑维持现状，或者替换整包产品，或者让牌手随机从牌池中移除一张多出的稀有度的牌。移除牌张时要尽可能减少对牌池的影响。
+>如果牌手少开出一张牌，主审（在主办方许可下）可以打开一包补充包随机挑选一张相同稀有度的牌加入该牌手的牌池。如果牌手多开出了一张牌，你可以考虑维持现状，或者替换整包产品，或者让牌手随机从牌池中移除一张多出的稀有度的牌至他的牌本。移除牌张时要尽可能减少对牌池的影响。
 >
 >值得注意的是，威世智偶尔会（不小心？）将未来或者从前系列中的某张牌放进当前系列的补充包里。这种情况也会算作异常产品。
 
@@ -4960,7 +4970,7 @@ In Sealed Deck tournaments, the Head Judge may require players to perform a Seal
 
 >A quick and easy way to mark the boosters can be to run a marker down one of the sides. This is easy and scales well to large events like Grand Prix, if Grand Prix were still a thing, or even if large sealed Comp Rel events were still a thing. For smaller events Judges and TOs can use more personal touches like stickers to better uniquely identify the packs as belonging to the event.
 >
->简单的做记号的方法是用记号笔在产品周边画上一圈。这能够增加大型比赛（例如大奖赛）上的工作效率，如果大奖赛仍然存在的话，或者大型竞争级别现开赛事依然存在的话。对于小型比赛而言，裁判和主办方可以考虑用贴纸等方法来完成此项工作。
+>简单的做记号的方法是用记号笔沿补充包的一侧划一道记号。这能够增加大型比赛（例如大奖赛）上的工作效率，如果大奖赛仍然存在的话，或者大型竞争级别现开赛事依然存在的话。对于小型比赛而言，裁判和主办方可以考虑用贴纸等方法来完成此项工作。
 
 * Players on one side of each table open their booster packs (Player A). The player directly across (Player B) observes this. Both players will observe and verify the contents of those booster packs. After this process, the opened cards are stacked face down in a single pile and placed near Player B.
 
@@ -4992,17 +5002,17 @@ In Sealed Deck tournaments, the Head Judge may require players to perform a Seal
 >
 >We have realistically asked players to sort the pools for easy verification for some time now. Now we are making it more formal by requiring it via this document! It may be worth noting that some players may have trouble sorting the pools in a timely manner. If so please allot any resources available to help those players and keep the flow of the tournament moving.
 >
->为了防止加牌，在需要登记牌表的竞争级别比赛中交换填写牌表是很普遍的。有了其他牌手的监督，可以更好地避免牌手往牌池里加牌。通过随机安排座位，可以尽量避免由于姓名相似而经常坐在一起的牌手勾结作弊。
+>为了防止加牌，在需要登记牌表的竞争级别比赛中交换填写套牌登记表是很普遍的。有了其他牌手的监督，可以更好地避免牌手往牌池里加牌。通过随机安排座位，可以尽量避免由于姓名相似而经常坐在一起的牌手勾结作弊。
 >
 >过去的方法更加费力，随机化了牌手获得的牌池，虽然有效，但会带来一些其他问题。可以在[这里](http://magic.wizards.com/en/articles/archive/news/sealed-pool-procedure-update-starting-gp-sydney-and-gp-madison-2015-10-08)了解详细信息。
 >
->在实际操作中，我们有时会要求牌手整理牌池，以便牌手能够容易地确认牌池内容。现在通过这份文件，我们将这一操作变成了正式的要求！值得注意的是，有些牌手可能会对于在合理的时间内完成牌池整理有一定困难。如果发生这种情况，请安排任何可用的资源来帮助这些牌手，确保比赛流程正常运转。
+>实际上，我们要求牌手整理牌池以便核验，已有一段时间了。现在通过这份文件，我们将这一操作变成了正式的要求！值得注意的是，有些牌手可能会对于在合理的时间内完成牌池整理有一定困难。如果发生这种情况，请安排任何可用的资源来帮助这些牌手，确保比赛流程正常运转。
 
 ## MTR 7.6 Draft Pod Assembly 轮抽组的分配
 
 For Booster Draft and Team Rochester Draft tournaments, players assemble into random drafting circles (called pods) of roughly equal size at the direction of the Head Judge. Tournament officials then distribute identical sets of boosters to each player.
 
-在补充包轮抽及团队罗彻斯特轮抽赛中，牌手会随机分配到各个轮抽圈中（称为轮抽组），每个轮抽组的人数由主审斟酌确定，应大略相同。之后，比赛工作人员将同样组合的补充包发放给各轮抽组的每位牌手。
+在补充包轮抽及团队罗彻斯特轮抽赛中，牌手在主审的指示下随机组成规模大致相等的轮抽圈（称为轮抽组）。之后，比赛工作人员将同样组合的补充包发放给各轮抽组的每位牌手。
 
 >Pods should be as close to 8 as you can get. In general, try to get pods of 6 or 8 over odd numbers to avoid byes. Typically, the software will sort players automatically into pods of these size. The pods created should be used unless an error has occurred.
 >
@@ -5036,7 +5046,7 @@ Players may not reveal the front face of their card selections or the contents o
 >
 >牌手必须以适当的方式拿起牌，确保只有他们自己才能查看。可能需要提醒牌手把牌拿高一点。
 >
->如果某牌手经常斜眼去看旁边，这是不恰当的。如果你确信他在看旁边的人有什么牌，将他移出比赛。
+>如果某牌手经常斜眼去看旁边，这是不恰当的。如果你认为他在看旁边的人有什么牌，将他移出比赛。
 
 Players and teams may not look at their drafted cards between or during picks at Competitive and Professional Rules Enforcement Levels. At Regular Rules Enforcement Level, players are allowed to review their drafted cards between or during picks as long as they are holding no other cards at the same time. The Head Judge may choose to disallow this provided they announce it before the first draft. Between booster packs there is a review period in which players may review their picks.
 
@@ -5044,11 +5054,11 @@ Players and teams may not look at their drafted cards between or during picks at
 
 >Even though players can look at their picks in Regular Rules Enforcement Level, they must still draft at a reasonable pace. Please reinforce to players that they need to keep their picks and pack separate. Players are given a specific amount of time to examine their picks between each pack. For specific timing please see MTR Appendix B.
 >
->即使在一般级别的比赛中，牌手可以看自己抓到的牌，但是他们也需以恰当的速度进行轮抽。向牌手申明，他们需将待抓的牌和已抓的牌分开。在抽每包牌之间，牌手会有更多的时间来检视已经抓到的牌。关于时间的说明，详见附录B。
+>即使在一般级别的比赛中，牌手可以看自己抓到的牌，但是他们也需以恰当的速度进行轮抽。向牌手申明，他们需将待抓的牌和已抓的牌分开。在抽每包牌之间，牌手会有一定的时间来检视已经抓到的牌。关于时间的说明，详见附录B。
 
 If the draft is not being timed, and two players do not wish to make a pick before the other player, the player closer to providing the other player with the pack picks first. If the players are equidistant, then the player in the lower seat number picks first.
 
-若轮抽并未计时，且有两位牌手均不愿在对方之前作出抽牌的决定，则由在传递方向上较为靠近对方的牌手先作出抽牌决定。若两位牌手之间距离相等，则由座号较小的牌手先作出抽牌决定。'
+若轮抽并未计时，且有两位牌手均不愿在对方之前作出抽牌的决定，则由在传递方向上较为靠近对方的牌手先作出抽牌决定。若两位牌手之间距离相等，则由座号较小的牌手先作出抽牌决定。
 
 >The last part about pick order is to deal with double-faced cards. Let’s say player 5 is waiting to pick based on player X’s pick. If X is from 2 to 4, 5 picks first. If X is from 6 to 8, X picks first. If X = 1, then X picks first.
 >
@@ -5060,7 +5070,7 @@ After the first pack is drafted and the review period completed, players open th
 
 If a player is unable or unwilling to continue drafting, but wishes to remain in the tournament, they are suspended from drafting and must construct a deck from whatever cards they have drafted thus far. For the remainder of the draft, their picks are skipped and the draft continues with one fewer player.
 
-如果有牌手无法或不愿继续进行轮抽，但仍希望能继续参加比赛的，则他会自本次轮抽过程中停权，且必须从自己已抽到的牌当中构组出一副套牌。在当前补充包轮抽剩下的过程，会略过该牌手的抽选，且轮抽以少一位牌手的状况继续。
+如果有牌手无法或不愿继续进行轮抽，但仍希望能继续参加比赛的，则他会自本次轮抽过程中停权，且必须从自己已抽到的牌当中构组出一副套牌。在当前轮抽剩下的过程，会略过该牌手的抽选，且轮抽以少一位牌手的状况继续。
 
 >It is very rare to see “unable or unwilling” being applied, but can theoretically happen. If they are disqualified during a draft, the draft continues and skips over that seat.
 >
@@ -5072,17 +5082,17 @@ If a player is unable or unwilling to continue drafting, but wishes to remain in
 
 Wizards of the Coast reserves the right to disallow any team name it deems offensive and/or obscene. Tournament officials may disallow teams from registering team names that may be considered offensive and/or obscene.
 
-威世智公司保留禁止使用任何视为有攻击性／猥亵的团队名称之权利。比赛工作人员可禁止团队使用可能被认为有攻击性／猥亵的团队名称来报名。
+威世智公司保留禁止使用任何视为有冒犯性／猥亵的团队名称之权利。比赛工作人员可禁止团队使用可能被认为有冒犯性／猥亵的团队名称来报名。
 
 >It is important to remember that Wizards of the Coast is the ultimate arbiter in what may be deemed offensive. While certain names (come on, you know what they are) are directly offensive, others may also be deemed unacceptable. Do not be surprised if a name that subtly insults players or officials is not allowed. Similarly a name that touts another game or competitor may also be viewed as poor.
 >
->威世智对于行为是否具有攻击性具有最终裁定权。侮辱牌手以及工作人员的名称会被禁止，即使这种冒犯很隐晦也是不行的。鼓吹另一款游戏或竞争对手的名称也会被认为不适当。
+>请务必记住，对于何种名称可能被视为具有冒犯性，威世智拥有最终裁定权。有些名称（得了，你知道是哪些）直接具有冒犯性，但另一些名称也可能被认为不可接受。如果某个名称含蓄地侮辱牌手或比赛工作人员而未获准使用，请不要感到意外。同样，鼓吹其他游戏或竞争对手的名称也可能被认为不妥。
 
 ## MTR 8.2 Team Composition and Identification 团队组成与识别
 
 A valid team consists of two or three members, as appropriate to the format. A team is identified by the individual registration information (Wizards Account) of its respective members and all teams must provide the Tournament Organizer with the full information when registering for the tournament. Individuals may be members of more than one team, though not during the same tournament. If a player drops from the tournament, the entire team is dropped from the tournament. If a player is disqualified from the tournament, the entire team is disqualified from the tournament.
 
-合法的团队包含两名或三名成员，视具体的团队赛制而定。团队系以其成员的个人注册信息（威士智账户）来作识别，所有参赛团队在报名参加比赛时,必须向比赛主办人提供各自团队的完整信息。同一人可以在不同的比赛中分属不同的团队。如果团队中某位牌手自比赛中退出，则整支队伍都会退出比赛。如果某位牌手被取消比赛资格，则整支队伍都会被取消资格。
+合法的团队包含两名或三名成员，视具体的团队赛制而定。团队系以其成员的个人注册信息（威世智账户）来作识别，所有参赛团队在报名参加比赛时，必须向比赛主办人提供各自团队的完整信息。同一人可以在不同的比赛中分属不同的团队。如果团队中某位牌手自比赛中退出，则整支队伍都会退出比赛。如果某位牌手被取消比赛资格，则整支队伍都会被取消资格。
 
 Teams must designate player positions during tournament registration. For example, in a three-player team tournament, each team must designate who is player A, player B, and player C. Players retain these designations throughout the entire tournament.
 
@@ -5096,9 +5106,9 @@ When two teams are paired against each other during the course of a tournament, 
 >
 >Team seating is less important than making sure they play the correct opponent from the opposing team. If team member C would like to sit in the middle then that is fine, as long as both teams’ Cs are in the center. Teams should never intentionally scramble their orders mid tournament.
 >
->团队以队员的DCI号来识别，意味着队伍即使改变了队名，只要队伍里的三位牌手不变，该团队仍会继承比赛中的记录。一个队伍不能只有两位牌手，也不允许他们“自动放弃”一位牌手的比赛。
+>团队以队员的威世智账号来识别，意味着队伍即使改变了队名，只要队伍里的三位牌手不变，该团队仍会继承比赛中的记录。一个队伍不能只有两位牌手，也不允许他们“自动放弃”一位牌手的比赛。
 >
->队伍的座位不是太重要，但要确保牌手能够与正确的对手进行对局。如果队员C想要坐在中间，那没问题。但是要确保两队的队员C都坐在中间。不允许在比赛中途随意打乱牌手的顺序。
+>队伍的座位不是太重要，但要确保牌手能够与正确的对手进行对局。如果队员C想要坐在中间，那没问题。但是要确保两队的队员C都坐在中间。不允许在比赛中途故意打乱牌手的顺序。
 
 ## MTR 8.3 Team Communication Rules 团队交流规则
 
@@ -5182,11 +5192,11 @@ Eight boosters per team are recommended for two-person team tournaments, and twe
 
 All cards must be assigned to a player’s deck or sideboard during deck construction and cannot be transferred to another player during that tournament. (Players do not share main deck or sideboard cards.) Players may exchange cards in their pool in Regular Rules Enforcement Level tournaments that do not use decklists, but only between rounds.
 
-在构组套牌时，所有的牌都必须有相对应的指定牌手在其套牌或备牌中使用之，且在该次比赛进行期间，属于某位牌手的牌不得转交给其他牌手来使用。（牌手之间并不共享主牌或备牌里面的牌。）在不使用套牌登记表的「一般」级别比赛当中，牌手可交换自己团队牌池中的牌，但是只能在两局之间进行。
+在构组套牌时，所有的牌都必须有相对应的指定牌手在其套牌或备牌中使用之，且在该次比赛进行期间，属于某位牌手的牌不得转交给其他牌手来使用。（牌手之间并不共享主牌或备牌里面的牌。）在不使用套牌登记表的「一般」级别比赛当中，牌手可交换自己团队牌池中的牌，但是只能在两轮之间进行。
 
 >For competitive tournaments the recommended product mix in the appendix is highly preferred to allow players to have a reasonable expectation of the format, though technically any product may be used within the rules above. Outside of team Grand Prix events competitive team events are rare, though when they do occur each match is still expected to follow the same guidelines as individual tournaments.
 >
->即使理论上在符合规则的条件下可以使用任何产品，对于竞争级别的比赛而言，强烈建议使用附录中推荐的产品构成，这能让牌手有更好的准备。除了团队限制大奖赛外，团队现开赛制的比赛很少。在这些比赛中，对局参考个人赛的处理方式进行处理即可。
+>即使理论上在符合规则的条件下可以使用任何产品，对于竞争级别的比赛而言，强烈建议使用附录中推荐的产品构成，这能让牌手有更好的准备。除了团队大奖赛外，团队赛制的比赛很少。不过一旦举行，每场对局仍应遵循与个人赛相同的指导原则。
 
 # MTR 9. Two-Headed Giant Tournament Rules 双头巨人赛规则
 
@@ -5206,7 +5216,7 @@ Drawn games (games without a winner) do not count toward the one game. As long a
 >
 >Just like in regular matches where “best of three” really means “first to two wins”, “best of one” really means “first to one win”.
 >
->双头巨人赛的进程要比正常比赛要慢，所以在规定时间内，一般只能够进行1盘对局。后面的规则大多用于减缓只打一盘比赛产生的随机性。
+>双头巨人游戏比一般游戏慢，因此，为了让比赛能在合理时间内结束，每场对局只够进行一盘游戏。后面的规则大多试图减轻单盘游戏对局所带来的额外随机性。
 >
 >这只是引用了双头巨人赛的比赛特性。MTR不会讨论双头巨人的游戏规则，详细可参考CR 810。
 >
@@ -5229,7 +5239,7 @@ Teammates may communicate with each other at any time.
 >- The car ride home.
 >
 >“随时”确实就是指随时。牌手不能滥用这一点来浪费时间，其他方面则没有限制，牌手可以随时交流。交流的时机例如但不限于如下内容：
->- 考虑轮抽时抽什么牌
+>- 考虑轮抽时抽选什么牌
 >- 考虑是否再调度时
 >- 在施放咒语的每个步骤中
 >- 两个回合之间
@@ -5240,7 +5250,7 @@ Teammates may communicate with each other at any time.
 
 A team determined at random chooses either to play first or to play second. The choice must be made before either player on that team looks at their hand. If either player on that team looks at their hand before their choice is made, that team plays first. The team who plays first skips the draw step of their first turn.
 
-通过随机的方式，决出一支队伍来选择是否要为先手。须在该队伍所有牌手看到自己手牌之前选择是否先手。如果在做出选择之前，队伍中有牌手看到了自己的手牌，则认为该队伍是先手。先手的队伍略过其首回合的抓牌步骤。
+通过随机的方式，决出一支队伍来选择是否要为先手。须在该队伍任一牌手看到自己手牌之前选择是否先手。如果在做出选择之前，队伍中有牌手看到了自己的手牌，则认为该队伍是先手。先手的队伍略过其首回合的抓牌步骤。
 
 >This should just be a rewording of the regular matches’ Play-Draw Rule with the word “player” replaced with “team”. All that is missing is the two paragraphs dealing with game two and three. If a game two is happening because game one ended in a draw do feel free to refer to the regular rules in section 2.2 for how that works.
 >
@@ -5254,7 +5264,7 @@ A team determined at random chooses either to play first or to play second. The 
 
 >Technically this rule is very important. In practice it never matters. The major practical effect is that, if the players can’t agree on something, the primary player gets to decide (see CR 805.2). Additionally, opponents’ attacking creatures are presumed to be attacking the team’s primary player unless otherwise specified. See MTR 4.2 for more details.
 >
->理论上这个规则很重要，虽然实际游戏中几乎没有用到。它主要的作用在于：如果牌手不能达成一致，那么主要牌手将会做出决定（CR 805.2）。此外，对手的进攻生物在未加说明时会默认攻击主动牌手。详见 MTR4.2。
+>理论上这个规则很重要，虽然实际游戏中几乎没有用到。它主要的作用在于：如果牌手不能达成一致，那么主要牌手将会做出决定（CR 805.2）。此外，对手的进攻生物在未加说明时会默认攻击主要牌手。详见 MTR4.2。
 
 2. Players shuffle their decks.
 
@@ -5270,7 +5280,7 @@ A team determined at random chooses either to play first or to play second. The 
 
 >Just like in individual games, opponents are encouraged to shuffle their opponents’ cards to discourage cheating and promote randomness in shuffling.
 >
->与个人游戏一样，我们鼓励对手来洗牌，这样可以防止作弊同时鼓励洗牌更加随机化。
+>与个人游戏一样，我们鼓励对手来洗牌，这样可以遏制作弊同时鼓励洗牌更加随机化。
 
 4. The appropriate team must decide whether to play first or second at this point, if they have not done so already (see section 9.3)
 
@@ -5282,7 +5292,7 @@ A team determined at random chooses either to play first or to play second. The 
 
 >Another rule repeated so the reader doesn’t have to look anywhere else for the rule. We hope this rule isn’t a surprise to anyone. The instruction to draw the cards face down on the table helps a player avoid drawing an extra card.
 >
->又是重复的一条规则（读者可以参考MTR2.3）。应该不必感到惊讶，将牌以面朝下的方式发到桌面上，可以帮助牌手避免抓多牌。
+>这条规则在此重复，是为了让读者不必再到别处查找。应该不必感到惊讶，将牌以面朝下的方式发到桌面上，可以帮助牌手避免抓多牌。
 
 6. Each player, in turn order, decides whether to mulligan. (Rules on Two-Headed Giant mulligans can be found in the Magic Comprehensive Rules, rule 103.4c)
 
@@ -5296,7 +5306,7 @@ A team determined at random chooses either to play first or to play second. The 
 >
 >万智牌完整规则涵盖了这一点，但是阅读起来则有些枯燥。规则103.5d中的内容说明了双头巨人的再调度流程。在这里添加一个例子进行说明：
 >- Alice和Alister赢得了比点并选择了先手。他们看了各自的7张起手牌，Alice不太满意，但是Alister觉得不错，后者决定保留起手。Alice开始洗牌。
->- Nancy和Nigel在看过起手牌后都决定再调度。然后Alice，Nancy和Nigel重新抓了7张牌。
+>- Nancy和Nigel在看过起手牌后都决定再调度。他们洗牌了，然后Alice，Nancy和Nigel重新抓了7张牌。
 >- Alice这次很满意自己抓的7张牌，表示自己接了此起手牌。但是Nancy和Nigel决定再次再调度。此时Alister发现他想要再调度，但是此时已经为时过晚，他必须保留手上的七张牌。
 >- Nancy和Nigel再调度之后觉得6张牌的起手不错。再调度过程结束。注意上面的“7”张并没有写错，因为多人赛制有一次免费的再调度机会！
 
@@ -5324,7 +5334,7 @@ Sideboards are not allowed in constructed Two-Headed Giant tournaments.
 
 >Sideboards are disallowed because Two-Headed Giant matches are still best of 1 game. While this does impact the ability of players to functionally use cards like Living Wish that is an acceptable trade off. Aside from this, please remember that Two-Headed Giant constructed will be a particular format (Modern, Standard, Vintage!, etc) and as such is subject to those deck building restrictions. Additionally, Erayo is banned, no matter the format.
 >
->不使用备牌是因为双头巨人赛一局定胜负。即使这仍会影响“祈愿”一类的牌。此外，双头巨人构组赛会属于一种赛制（近代，标准，特选等），构组套牌须遵循相应赛制的限制条件。此外，入圣空民伟代被禁，无论使用何种赛制。
+>不使用备牌是因为双头巨人赛一局定胜负。尽管这确会影响牌手实际使用“生机祈愿”等牌的能力，但这是可以接受的取舍。此外，双头巨人构组赛会属于一种赛制（近代，标准，特选等），构组套牌须遵循相应赛制的限制条件。此外，入圣空民伟代被禁，无论使用何种赛制。
 
 ## MTR 9.6 Two-Headed Giant Limited Rules 双头巨人限制赛规则
 
@@ -5348,7 +5358,7 @@ Cards not used in a team’s starting decks are considered a shared sideboard by
 
 Teams (not players) assemble into random drafting circles (called pods) of roughly equal size at the direction of the Head Judge. Teammates sit next to each other. Tournament officials then distribute identical boosters to each team in the pod.
 
-队伍（而非牌手）会随机分配到各个轮抽圈（称作轮抽组）中。每个轮抽组的队伍数由主审所斟酌，应大略相同。同一队的队员并肩而坐。之后比赛工作人员便将同样组成的补充包分发给该轮抽组中的每支队伍。
+队伍（而非牌手）在主审的指示下随机组成规模大致相等的轮抽组（称作轮抽圈）。同一队的队员并肩而坐。之后比赛工作人员便将同样组成的补充包分发给该轮抽组中的每支队伍。
 
 After opening and counting the cards in their first pack, the team chooses two cards from the booster pack then passes the remaining cards face down to the team on its left. Selected cards may be placed into one or two piles. The cards chosen are not assigned to a particular player; they become part of a pool out of which both players will construct their decks. The open packs are passed around the drafting pod—with each team taking two cards from each before passing—until all cards are drafted.
 
@@ -5364,7 +5374,7 @@ For the second pack, the direction of drafting is reversed as usual. Thus, the o
 >
 >与一般的轮抽一样，我们也希望能有6到8人参加一场轮抽。这表示最好能有3到4支队伍。别在每个轮抽组分配6到8队牌手啊！
 >
->另外，一般来说轮抽的过程中不允许交流，但是双头巨人比赛是个例外。牌手可以互相交流并互相帮助（他们可以一起决定抓什么牌）。
+>一般轮抽过程中通常不会交谈，但双头巨人赛显然是例外。牌手可以与自己的队友交流并互相协助，因为他们是以团队形式共同选牌。
 
 # MTR 10. Sanctioning Rules 认证规则
 
@@ -5384,17 +5394,17 @@ Participation minimums for a tournament to be sanctioned as a rated tournament a
 
 Certain Premier tournaments (e.g, Regional Championship Qualifiers) require a higher minimum number of players.
 
-某些重要比赛（例如，区域冠军赛预选赛）需要达到更高的参赛人数下限。
+某些重要比赛（例如，区域冠军赛资格赛）需要达到更高的参赛人数下限。
 
 If the participation minimum is not met, the tournament is no longer DCI-sanctioned. If participation minimums are not met for any DCI-sanctioned tournament, the Tournament Organizer should report the tournament as “Did Not Occur.”
 
-若参赛人数未达下限，该比赛便不再属于DCI认证的比赛。若某个DCI认证的比赛未达参赛人数下限，其主办人必须向DCI回报该比赛「未举办（Did Not Occur）」。
+若参赛人数未达下限，该比赛便不再属于DCI认证的比赛。若某个DCI认证的比赛未达参赛人数下限，其比赛主办人必须向DCI回报该比赛「未举办（Did Not Occur）」。
 
 ## MTR 10.2 Number of Rounds 对局轮数
 
 The minimum number of rounds required for a tournament to be sanctioned as a rated tournament is as follows:
 
-若要将比赛认证为积分赛，则所要求的局数下限如下所述：
+若要将比赛认证为积分赛，则所要求的轮数下限如下所述：
 
 * For individual tournaments, a minimum of three (3) rounds
 
@@ -5406,11 +5416,11 @@ The minimum number of rounds required for a tournament to be sanctioned as a rat
 
 If the minimum number of rounds is not met, the tournament is no longer DCI-sanctioned. If the minimum number of rounds is not met for any DCI-sanctioned, rated tournament, the Tournament Organizer should report the tournament as “Did Not Occur.”
 
-若对局轮数未达下限，该比赛便不再属于DCI认证的比赛。若某个DCI认证的积分赛未达对局轮数下限，其主办人必须将该比赛回报为「未举办（Did Not Occur）」。
+若对局轮数未达下限，该比赛便不再属于DCI认证的比赛。若某个DCI认证的积分赛未达对局轮数下限，其比赛主办人必须将该比赛回报为「未举办（Did Not Occur）」。
 
 The number of rounds should be announced at or before the beginning of the first round; once announced, it cannot be changed. A variable number of rounds can be announced instead, with specific criteria for ending the tournament. For example, a tournament with 20 players can be announced as five rounds unless only one player has four match wins after four rounds.
 
-本次比赛所需要进行的对局轮数应在第一局开始之时或之前宣布；一旦宣布了相关事宜，便不得再更改。主办人可改为宣布一个非特定数目的局数，并附上结束比赛的特定条件。举例来说，在一场有20位牌手参加的比赛中，可宣布除非四轮对局后仅有一位牌手获得四胜，否则就需进行五局对局。
+本次比赛所需要进行的对局轮数应在第一轮开始之时或之前宣布；一旦宣布了相关事宜，便不得再更改。主办人可改为宣布一个非特定数目的轮数，并附上结束比赛的特定条件。举例来说，在一场有20位牌手参加的比赛中，可宣布除非四轮对局后仅有一位牌手获得四胜，否则就需进行五轮对局。
 
 The recommended number of rounds for Swiss tournaments can be found in Appendix E.
 
@@ -5420,7 +5430,7 @@ The recommended number of rounds for Swiss tournaments can be found in Appendix 
 
 Invitation-only tournaments have additional qualification criteria for player participation. The invitation list for Premier tournaments is defined in the Magic: The Gathering Premier Tournament Invitation Policy. Tournament Organizers may hold and sanction invitation-only non-Premier tournaments, as long as they are sanctioned as a Magic Premier Series.
 
-只对受邀牌手开放的比赛对于牌手的参赛有额外的资格要求。重要比赛的邀请名单之确定于[《万智牌重要比赛邀请方针》](https://magic.gg/pro-tour)中详述。比赛主办人可以举办并认证非重要的邀请赛，但需认证为万智牌重要赛事。
+只对受邀牌手开放的比赛对于牌手的参赛有额外的资格要求。重要比赛的邀请名单之确定于[《万智牌重要比赛邀请方针》](https://magic.gg/pro-tour)中详述。比赛主办人可以举办并认证非重要的邀请赛，但需认证为万智牌顶级系列赛。
 
 >The link takes you to a pro-tour page that has a link to the PDF at the bottom. There is no perma-link to the document.
 >
@@ -5430,11 +5440,11 @@ Invitation-only tournaments have additional qualification criteria for player pa
 
 Unless otherwise announced, tournaments are assumed to follow the Swiss pairing algorithm. Some tournaments may proceed to single-elimination playoff rounds between the top 2, 4, or 8 (or other number) players after the Swiss rounds are over. The Swiss pairing algorithm is modified in booster draft tournaments as explained in section 7.6.
 
-除非宣布了其他配对方案，否则都认为所举办的比赛遵从瑞士式交叉赛程的配对算法。某些比赛可在瑞士式轮结束之后接着进行在头2、4、8（或其他数字）位牌手之间进行单淘汰决胜轮的对局。在补充包轮抽赛制中，瑞士式交叉赛程配对算法依第7.6节中所述进行了修正。
+除非宣布了其他配对方案，否则都认为所举办的比赛遵从瑞士式交叉赛程的配对算法。某些比赛可在瑞士轮结束之后接着进行在头2、4、8（或其他数字）位牌手之间进行单淘汰决胜轮的对局。在补充包轮抽赛制中，瑞士式交叉赛程配对算法依第7.6节中所述进行了修正。
 
 At Pro Tour, Limited Championship, and World Championship tournaments, competitors are advanced to the playoff rounds before the end of the Swiss rounds (and receive byes for the remaining Swiss rounds) if they have achieved the announced number of match points required to advance to the playoff rounds. In this case, competitors in the Top 8 playoff are seeded in order from 1st through 8th. Seeding is determined by:
 
-在专业赛、限制冠军赛及世界冠军赛上，会事先宣布进入决胜轮所需的对局积分，选手在瑞士式轮阶段结束前获得相应的对局积分即可晋级决胜轮（并在后续的瑞士式轮次中获得轮空）。在这种情况下，进入前8名决胜轮的选手会按照第1名至第8名进行排名。排名顺序根据以下原则确定：
+在专业赛、限制冠军赛及世界冠军赛上，会事先宣布进入决胜轮所需的对局积分，选手在瑞士轮阶段结束前获得相应的对局积分即可晋级决胜轮（并在后续的瑞士轮中获得轮空）。在这种情况下，进入前8名决胜轮的选手会按照第1名至第8名进行排名。排名顺序根据以下原则确定：
 
 * The round in which a competitor received the required number of match points to advance to the playoff rounds.
 
@@ -5450,11 +5460,11 @@ At Pro Tour, Limited Championship, and World Championship tournaments, competito
 
 For constructed tournaments that have a single-elimination playoff (or Sealed Deck tournaments that do not use a Booster Draft for the playoff), the recommended pairing method is to pair the playoff players by the final Swiss standings.
 
-对于需进行单淘汰决胜轮的构筑赛制比赛（或未在决胜轮中进行补充包轮抽的现开赛制比赛）而言，在此建议根据瑞士轮末的最终排名来为参加决胜轮的牌手进行配对。
+对于需进行单淘汰决胜轮的构组赛制比赛（或未在决胜轮中进行补充包轮抽的现开赛制比赛）而言，在此建议根据瑞士轮末的最终排名来为参加决胜轮的牌手进行配对。
 
 For an 8-player playoff, the 1st place player plays the 8th place player, the 2nd place player plays the 7th place player, the 3rd place player plays the 6th place player, and the 4th place player plays the 5th place player. The winners of the 1st/8th place and 4th/5th place matches play each other in the next round of the playoff. The winners of the 2nd/7th place and 3rd/6th place matches play each other in the next round of the playoff. The remaining players play in the last round of the playoff.
 
-如决胜轮有8位牌手参加，则第1名牌手对上第8名，第2名对上第7名，第3名对上第6名，第4名对上第5名。第1名与第8名比赛的胜者将在次局与第4名和第5名比赛的胜者交手。第2名与第7名比赛的胜者将在次局与第3名和第6名比赛的胜者交手。这两场对局的胜者将在决胜轮的最后一局对阵。
+如决胜轮有8位牌手参加，则第1名牌手对上第8名，第2名对上第7名，第3名对上第6名，第4名对上第5名。第1名与第8名比赛的胜者将在次轮与第4名和第5名比赛的胜者交手。第2名与第7名比赛的胜者将在次轮与第3名和第6名比赛的胜者交手。这两场对局的胜者将在决胜轮的最后一轮对阵。
 
 ![Eight-player playoff bracket seeded by final Swiss standings](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAAC0CAIAAAAGpWdqAAAQAElEQVR4AezdCbzX07o/8HN+97r33HPvPfcYo0Eyh0qFIlRESjQZMp6KNGhQ0SANIo2IEM1K0SwNCBkylEqk0ZBoIuO5szvwf/96/H9n3/ruXcm227vffj2W57vWs6ZnfdaznvWsdqV+3P7zySef+P///M//fP/995gvv/zylVde6dy5c/fu3fv06XPrrbd26tTpzjvvvO2227pu/7n99ttvueWWXr16yWzbtu3dd9/drVu39u3b9+zZs2PHjh06dFDlrrvuatOmDYaw6mTatWtHWL7MO+64Q0tqaYSAuhoMRiOYhQsXfvPNNwYT9F//9V//+7//G/wO6Z///OcffvhB5g8/pNOcDD5LRUADqX/913/9zW9+c9RRR/3Lv/zLX/3VX/3N3/zNM888c9FFF9WoUWPdunUrVqyYP3/+p59++u677z733HOrVq1atmzZ+++//9JLL3388cevvfYa4c8///zpp59etGjR1q1b33777ZUrV7733nvLly9/9tlnFan4xhtv2AY+P9z+8+qrrxKI1pQuXrxYaxs3blyzZs1bb71FhMC0adPOOeecG264wW4xPIo+4IADUqnUDz/88G//9m///d//LRP953/+p/H/4Q9/+O1vf6sIRWYw+CwVDQ2k/uEf/sFKm8zvf/97KSPXokWLMmXKPPbYY8A3c+bMF154YfLkyZD05ptvzpkzB9qmTp0KlJD08ssvL1269PHHH1+yZAmBJ598UhWwnjVr1osvvgidcp5//nlQIyyVD50ho4pPrU2fPl1rU6ZMUaQvuAdTeO3Xr9/s2bNr1qw5atSof//3f4dIw4NU4wRZPPrd737313/91xiG1jlgm+HttGDwWSoaGkj98z//M6QCgaWdMWPGI488csEFFwANSyYHIMCCMTNbxy6jBRZyYEJOkE8MABGDG54D8wZY3377LcT4VKpIRZ/y//7v/17Of/zHfxDAxKcBKNIjMbbwoIMO4jww3kDcrl070FdEGByNAWMAeIwepejv/u7vpPJRFPnMUtHQQAqkzARovvrqK15jnTp1xo0bBygBL/kYnx988AF/EQJ8OnaBEuZUhF1HsJQMJHESGjduzByO2P5DYPTo0eyiWsgnSSkYQdXBBx9sk/j885//bKto8Mcff/Sp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IJtIihD8kVfXO5PHT8/shOXAOkQS0I7UZ5hYPALl8FPZbLyI5wsvvMBh8HAlyA+4PF1iKAtTSsjSXzQAmhl4QQ+s5ATWX+T+PwegHFkABUfUqlUrb91SngC8koLXOMTxWpZCpFoY+brAbN261QuW933Pqg899FDlypWZcMY15AlkYUoJWfqLBoASsHyzf3xTx3HwEJNIAEoA4KQwzZscMWJE48aNzzrrrEsuuWT27Nmeo7i1npeEqziyrlwQLEc+niM7adKkSy+9lE/RpEmT+++//+qrrzYGrWkK7jEoZTThARiTb/3FyDCKNm7c6I108+bNHmT5DSDv8sUg85TJb9myhYDYAQbxSwjH56ZNm/DeGAjYoEoxOpJPwO7xqSkNIvuGsGZdKhXJ/+ijjwwGUY3U0WAwGPTD//+JIjlBhm3MCEMkMgs8LYwDCO3BH5Nm/D4d1hCTSARQOAYYtUqXLj1+/PjHHnvs8ssvv+22284555zTTz89PFfYPffcc88888wzzjjj7LPPFuGqWbNm165d+am9evWaMWNG27ZtYVSP0VRm0dPhfR6AaKogGcToz55wZevYsaNQbYMGDU488cT69etfcskl1apV003FihXFYLWubwGziy66yAhq1aqF4UHLJEDefsKz/yoatwERPumkk1SsUKGCz/PPP58AkmPE5cuXZ+rr1q178cUXE2D8b7rppgULFlANZ8XRYP6Gjux1JB8fZFbmY9gGjzA5S0Mmm/7KGmjatKnjm70UyXr66acFX72CTps2DXzHjBkzbty4qVOnCg54F+WPzps374477gBfg+QPsErMDd72kKL070L5X3x7h2XJmjdv7sFq1KhR3mcxU6ZMadasGbDfc889cgYOHNivX78777yTs9ynTx/bZcCAAfI7d+5sW+Bvv/12romKSocNG+aVFiNTCyqy6nK6d++uiga1hvGJV0rmlltuwYDsyJEjQfnWW29ljI0QmQA4YhBowqIUb0qAi8nQDoY2k59lfjUNMHzWBaIsJbN11VVXXXnlld4CWrRo4SHAyY5naE877TQPpCwoBDoGmST2SEyKubG4VjwGnP43S31bV2j46quv1Gd777333vfff9+FC2RZ0JYtW7KOSA5Lft1117F5PAm2lrGU4xlXkdHgVbnhhhsMJQS4Ha1bt77sssswAg3sKMmGDRsat0xDJyaf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)
 
@@ -5494,7 +5504,7 @@ For most Premier Events, the playoff options above are required, not optional.
 
 Premier Events include the following tournaments: Magic: The Gathering World Championship, Pro Tour, Limited Championship, Pro Tour Qualifier, Spotlight Series, Regional Championship, and Regional Championship Qualifier
 
-下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、限制冠军赛、专业赛预选赛、聚光灯系列赛、区域冠军赛、区域冠军赛预选赛。
+下列比赛属于重要比赛：万智牌世界冠军赛、专业赛、限制冠军赛、专业赛资格赛、聚光灯系列赛、区域冠军赛、区域冠军赛资格赛。
 
 # Appendix A—Changes From Previous Versions 与过往版本之间的更动
 
@@ -5524,7 +5534,7 @@ February 27, 2026
 
 * Appendix D: Upcoming sets added.
 
-* 附录D：添加即将发行的新系列 
+* 附录D：添加即将发行的新系列。
 
 November 10, 2025
 
@@ -5562,7 +5572,7 @@ The required minimum time limit for any match is 40 minutes.
 
 The following time limits are recommended for each round of a tournament:
 
-以下是比赛中每一局对局的建议时间限制：
+以下是比赛中每一轮次的建议时间限制：
 
 * Constructed and Limited tournaments—50 minutes
 
@@ -5578,11 +5588,11 @@ The following time limits are recommended for each round of a tournament:
 
 The following additional time limits are recommended for Limited tournaments:
 
-以下是限制赛中的建议时间限制：
+以下是限制赛中额外的建议时间限制：
 
 * Sealed Deck—20 minutes for deck registration and 30 minutes for deck construction. For Prereleases and Sealed Deck events that take place on the weekend of a new set release, 15 additional minutes for deck construction is recommended.
 
-* 现开～套牌登记20分钟，套牌构组30分钟。对于在新系列发售当周周末举办的现开赛事，建议多增加15分钟套牌构组时间。对于在新系列发售当周周末举办的售前和现开赛事，建议多增加15分钟套牌构组时间。
+* 现开～套牌登记20分钟，套牌构组30分钟。对于在新系列发售当周周末举办的售前赛和现开赛，建议多增加15分钟套牌构组时间。
 
 * Draft—25 minutes for deck registration and construction.
 
@@ -5590,7 +5600,7 @@ The following additional time limits are recommended for Limited tournaments:
 
 * Team Sealed Deck—20 minutes for deck registration and 60 minutes for deck construction. For Team-format Sealed Deck events that take place on the weekend of a new set release, 15 additional minutes for deck construction is recommended.
 
-* 团队现开～套牌登记20分钟，套牌构组60分钟。对于在新系列发售当周周末举办的现开赛事，建议多增加15分钟套牌构组时间。
+* 团队现开～套牌登记20分钟，套牌构组60分钟。对于在新系列发售当周周末举办的团队现开赛事，建议多增加15分钟套牌构组时间。
 
 * Team Draft—40 minutes for deck construction and registration.
 
@@ -5692,7 +5702,7 @@ Two-Headed Giant Booster Drafts have the following default time limits for each 
 | 3 | - | 5 seconds |
 | 1 | 2 | N/A |
 
-|补充包剩余牌张数量|补充包剩余牌张数量|补充包剩余牌张数量|
+|补充包剩余牌张数量|补充包剩余牌张数量||
 |-----|-----|-----|
 |15张牌的补充包|14张牌的补充包|可使用时间|
 |15|14|50秒|
@@ -5708,7 +5718,7 @@ In addition, players receive 60 seconds to review their drafted cards in between
 
 此外，在两包补充包之间，牌手们有60秒的时间来检视自己已选择的牌。
 
-# Appendix C—Tiebreaker Explanation 平分处理释疑
+# Appendix C—Tiebreaker Explanation 同分处理释疑
 
 **Match Points**
 
@@ -5748,7 +5758,7 @@ Game points are similar to match points in that players earn 3 game points for e
 
 Game points are not used in team tournaments; only the overall result of the match is used for tiebreakers.
 
-团队赛中不使用盘分。仅使用对局总成绩作为决胜方式。
+团队赛中不使用盘分。同分处理仅采用整场对局的结果。
 
 **Match-win percentage**
 
@@ -5756,7 +5766,7 @@ Game points are not used in team tournaments; only the overall result of the mat
 
 A player’s match-win percentage is that player’s accumulated match points divided by the total match points possible in those rounds (generally, 3 times the number of rounds played). If this number is lower than 0.33, use 0.33 instead. The minimum match-win percentage of 0.33 limits the effect low performances have when calculating and comparing opponents’ match-win percentage.
 
-牌手的局胜率计算公式如下：用牌手的总对局积分除以在该些对局中所能够获得的总局分（通常为3乘以所进行过的对局数），取所得结果与0.33之间较大者。规定0.33此最低局胜率值有助于降低表现欠佳的牌手对于其对手局胜率计算及比较方面的影响。
+牌手的局胜率计算公式如下：用牌手的总局分除以在该些轮次中所能够获得的总局分（通常为3乘以所进行过的轮数），取所得结果与0.33之间较大者。规定0.33此最低局胜率值有助于降低表现欠佳的牌手对于其对手局胜率计算及比较方面的影响。
 
 Examples:
 
@@ -5764,7 +5774,7 @@ Examples:
 
 These three players competed in an 8-round tournament, although only the first player completed all rounds.
 
-在一场共有八局的比赛当中，三位牌手的成绩如下表所示，只有第一位牌手参加了所有局次的比赛：
+在一场共有八轮的比赛当中，三位牌手的成绩如下表所示，只有第一位牌手参加了所有轮次的比赛：
 
 | Tournament<br>Record | Match Points | Rounds Played | Match-win<br>Percentage |
 | --- | --- | --- | --- |
@@ -5772,11 +5782,11 @@ These three players competed in an 8-round tournament, although only the first p
 | 1-3-0, then<br>withdraws | 3 | 4 | 3/(4*3) = 0.25, so<br>0.33 is used. |
 | 3-2-0, including a<br>first-round bye, then<br>withdraws | 9 | 5 | 9/(5*3) = 0.60 |
 
-|比赛成绩|局分|进行过的局数|局胜率|
+|比赛成绩|局分|进行过的轮数|局胜率|
 |-----|-----|-----|-----|
 |5-2-1|16|8|16/(8*3) = 0.667|
 |1-3-0，后退出比赛|3|4	|3/(4*3) = 0.25，因此使用0.33|
-|3-2-0，其中包括首局的轮空，之后退出比赛|9|5|9/(5*3) = 0.60|
+|3-2-0，其中包括第一轮轮空，之后退出比赛|9|5|9/(5*3) = 0.60|
 
 **Game-win percentage**
 
@@ -5788,17 +5798,17 @@ Similar to the match-win percentage, a player’s game-win percentage is the tot
 
 These two players competed in a four-round tournament:
 
-在一场共有四局的比赛中，两位牌手游戏成绩如下表所示：
+在一场共有四轮的比赛中，两位牌手游戏成绩如下表所示：
 
 | Game Record by Match | Game Points | Games<br>Played | Game-win<br>Percentage |
 | --- | --- | --- | --- |
 | • Round 1: 2 wins (6 game points)<br>• Round 2: 2 wins and 1 loss (6 game points)<br>• Round 3: 1 win and 2 losses (3 game points)<br>• Round 4: 2 wins (6 game points) | 21 | 10 | 21/(3*10) = 0.70 |
 | • Round 1: 1 win and 2 losses (3 game points)<br>• Round 2: 1 win and 2 losses (3 game points)<br>• Round 3: 2 losses (0 game points)<br>• Round 4: 1 win and 2 losses (3 game points) | 9 | 11 | 9/(3*11) = 0.27, so<br>0.33 is used. |
 
-|每局游戏成绩|盘分|进行过的盘数|盘胜率|
+|各场对局的盘成绩|盘分|进行过的盘数|盘胜率|
 |-----|-----|-----|-----|
-|第一局：2胜（6个盘分）<br>第二局：2胜1负（6个盘分）<br>第三局：1胜2负（3个盘分）<br>第四局：2胜（6个盘分）|21|10|21/(3*10) = 0.70|
-|第一局：1胜2负（3个盘分）<br> 第二局：1胜2负（3个盘分）<br> 第三局：2负（0个盘分）<br> 第四局：1胜2负（3个盘分）|9|11|9/(3*11) = 0.27，因此使用0.33|
+|第一轮：2胜（6个盘分）<br>第二轮：2胜1负（6个盘分）<br>第三轮：1胜2负（3个盘分）<br>第四轮：2胜（6个盘分）|21|10|21/(3*10) = 0.70|
+|第一轮：1胜2负（3个盘分）<br> 第二轮：1胜2负（3个盘分）<br> 第三轮：2负（0个盘分）<br> 第四轮：1胜2负（3个盘分）|9|11|9/(3*11) = 0.27，因此使用0.33|
 
 **Opponents’ match-win percentage**
 
@@ -5830,7 +5840,7 @@ Translated to the decimal system, this equation is:
 
 With the individual match-win percentages added together, this equation becomes:
 
-将个人的局胜率相加，可得：
+将各位对手的局胜率相加，可得：
 
 ![4.94 divided by 8](data:image/png;base64,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)
 
@@ -5850,7 +5860,7 @@ This player’s opponents’ match-win percentage is 0.62.
 
 With the individual match-win percentages added together, this equation becomes:
 
-将个人的局胜率相加，该公式变为：
+将各位对手的局胜率相加，该公式变为：
 
 ![4.44 divided by 7](data:image/png;base64,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)
 
@@ -5874,17 +5884,17 @@ Similar to opponents’ match-win percentage, a player’s opponents’ game-win
 
 When a player is assigned a bye for a round, they are considered to have won the match 2–0.
 
-当一位牌手获得某一局的轮空时，视作该牌手以2-0赢得了该轮游戏。
+当一位牌手获得某一轮的轮空时，视作该牌手以2-0赢得了该轮对局。
 
 Thus, that player earns 3 match points and 6 game points. A player’s byes are ignored when computing their opponents’ match-win and opponents’ game-win percentages.
 
-因此，该牌手获得3个对局积分和6个游戏积分。牌手获得轮空的局次不参与该牌手之对手局胜率及对手盘胜率的计算。
+因此，该牌手获得3个局分和6个盘分。牌手获得轮空的轮次不参与该牌手之对手局胜率及对手盘胜率的计算。
 
-# Appendix D—Recommended Play Booster Mix for Limited Tournaments 限制赛中推荐的补充包构成
+# Appendix D—Recommended Play Booster Mix for Limited Tournaments 限制赛中推荐的常规补充包构成
 
 Note: The following play boosters mixes are required for Premier Play tournaments.
 
-注：重要赛事比赛必须使用下列的补充包构成。
+注：重要比赛必须使用下列的常规补充包构成。
 
 For *Secrets of Strixhaven*, the recommended play booster mix for Limited tournaments is (effective April 17, 2026)
 
@@ -5958,11 +5968,11 @@ For *Lorwyn Eclipsed*, the recommended play booster mix for Limited tournaments 
 
 * 双头巨人补充包轮抽赛～6包*洛温：暗影笼罩*（每支队伍）
 
-# Appendix E—Recommended Number of Rounds in Swiss Tournaments 瑞士式比赛中推荐进行的局数
+# Appendix E—Recommended Number of Rounds in Swiss Tournaments 瑞士式比赛中推荐进行的轮数
 
 The following number of Swiss rounds is required for Premier tournaments (such as Regional Championship Qualifiers). It may be used at the Tournament Organizer’s discretion for non-Premier tournaments.
 
-下表所示的瑞士式局数通常是重要比赛（例如区域冠军赛预选赛）中规定需要进行的局数。经比赛主办人的斟酌后也可以在非重要比赛中使用。
+下表所示的瑞士轮数是重要比赛（例如区域冠军赛资格赛）中规定需要进行的轮数。经比赛主办人的斟酌后也可以在非重要比赛中使用。
 
 | Players (Teams) | Swiss Rounds | Playoff |
 | --- | --- | --- |
@@ -5976,10 +5986,10 @@ The following number of Swiss rounds is required for Premier tournaments (such a
 | 227-409 | 9 | Top 8 |
 | 410+ | 10 | Top 8 |
 
-|牌手数（队伍数）|瑞士式对局|决胜局|
+|牌手数（队伍数）|瑞士轮|决胜局|
 |---|---|---|
-|4（仅限团队/2HG）|2局单淘汰对局（无瑞士轮）|无（进行单淘汰）|
-|5-8|3局单淘汰对局（无瑞士式对局）|无（进行单淘汰）|
+|4（仅限团队/2HG）|2轮单淘汰对局（无瑞士轮）|无（进行单淘汰）|
+|5-8|3轮单淘汰对局（无瑞士轮）|无（进行单淘汰）|
 |9-16|4（若为限制赛制，且决胜局采补充包轮抽）<br>5（其他赛制）|8强（若为限制赛制，且决胜局采补充包轮抽）<br>4强（其他赛制）|
 |17-32|5|8强|
 |33-64|6|8强|
@@ -5990,11 +6000,11 @@ The following number of Swiss rounds is required for Premier tournaments (such a
 
 Team tournaments consider each team as a single player for this purpose.
 
-在团队比赛中，为了计算应进行的局数，可将每支队伍视作一位牌手。
+在团队比赛中，为了计算应进行的轮数，可将每支队伍视作一位牌手。
 
 In tournaments where awarded byes are used, each player with a 1-round bye should count as 2 players, each player with a 2-round bye should count as 4 players, and each player with a 3-round bye should count as 8 players when using the above chart.
 
-对有牌手会获得轮空的比赛而言，在使用上述图表时，应将每位有一局轮空的牌手视作2位牌手，每位有两局轮空的牌手视作4位牌手，每位具有三局轮空的牌手视作8位牌手。
+对有牌手会获得轮空的比赛而言，在使用上述图表时，应将每位有一轮轮空的牌手视作2位牌手，每位有两轮轮空的牌手视作4位牌手，每位具有三轮轮空的牌手视作8位牌手。
 
 # Appendix F—Rules Enforcement Levels of Programs 各比赛计划的执法严格度
 
@@ -6028,9 +6038,9 @@ The following chart indicates the appropriate (minimum) Rules Enforcement level 
 | 限制冠军赛 | 专业 |
 | 售前赛 | 一般 |
 | 专业赛 | 专业 |
-| 专业赛预选赛 | 竞争 |
+| 专业赛资格赛 | 竞争 |
 | 区域冠军赛 | 竞争 |
-| 区域冠军赛预选赛 | 竞争 |
+| 区域冠军赛资格赛 | 竞争 |
 | 聚光灯系列赛 - 第1天 | 竞争 |
 | 聚光灯系列赛 - 第2天 | 专业 |
 | 店家冠军赛 | 一般（建议竞争） |

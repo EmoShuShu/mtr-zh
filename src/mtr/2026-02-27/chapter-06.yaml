@@ -19,7 +19,7 @@ chapter:
         extras:
         - en: |-
             This is one of the announcements that many Head Judges include before beginning a tournament. It holds true at any constructed tournament, and is fairly self-explanatory.
-          zh: 一些主审会将这句话加入赛前公告中。无需更多解释，这对所有的构组赛都适用。
+          zh: "许多主审会将这句话加入赛前公告中。无需更多解释，这对所有的构组赛都适用。"
     - id: mtr-6.1-g002
       type: paragraph
       blocks:
@@ -31,7 +31,7 @@ chapter:
         - en: |-
             For most cards, a player may only play a maximum of four copies of a given card across their entire seventy-five. There are currently fourteen exceptions to this rule: Plains, Island, Swamp, Mountain, Forest, the five Snow-Covered variants, Relentless Rats, Shadowborn Apostle, Rat Colony and Persistent Petitioners. Note that you cannot get around this rule by using foreign or misprinted cards; the count is based on the English name of the card.
           zh: |-
-            对于整个75张的套牌来说，同一张牌不得超过四张。但有14个例外：平原，海岛，沼泽，山脉，树林，五种覆雪基本地，无情鼠群，影裔宗徒，老鼠群落，以及执着诉愿人。当然，你不能借助外文牌或者错版牌来滥用此规则；牌张的计数以英文版为标准。（译注：实际上这里仍没列举完整。总之有很多例外。）
+            对于整个75张的套牌来说，同一张牌不得超过四张。但有14个例外：平原，海岛，沼泽，山脉，树林，五种覆雪基本地，无情鼠群，影裔宗徒，老鼠群落，以及执着诉愿人。当然，你不能借助外文牌或者错版牌来规避此规则；牌张的计数以英文名称为标准。（译注：实际上这里仍没列举完整。总之有很多例外。）
   - id: mtr-6.2
     chapter: '6.2'
     en: Card Legality
@@ -44,12 +44,12 @@ chapter:
         en: |-
           A card may only be used in a particular format if the card is from a set that is legal in that format or has the same name as a card from a set that is legal in that format. Zendikar Expeditions and Masterpiece Series cards may only be played in formats where the card is already legal.
         zh: |-
-          某张牌在特定赛制中是否可用，由以下情况确定：（1）出自可于该赛制中使用之系列的牌张，可以在该赛制中使用；或（2）名称与可在此赛制中使用之系列中某张牌相同之牌张，可以在该赛制中使用。逸品重现牌张只能在该牌张原本可用的赛制中使用。
+          某张牌在特定赛制中是否可用，由以下情况确定：（1）出自可于该赛制中使用之系列的牌张，可以在该赛制中使用；或（2）名称与可在此赛制中使用之系列中某张牌相同之牌张，可以在该赛制中使用。赞迪卡远探和逸品重现牌张只能在该牌张原本可用的赛制中使用。
         extras:
         - en: |-
             The complete format list is below in this section. Note that it is perfectly legal to use old cards, as long as a version of that card is legal in the format in question. For example, a player may use a Beta Lightning Bolt in Modern, even though Beta isn’t a part of Modern, because Lightning Bolt was printed in a Modern-legal set. Masterpiece cards are a special addition to a set, and not actually part of the set itself. Since they are opened in packs they are legal for limited, however they are only legal in constructed formats where the normal edition of the card is also legal.
           zh: |-
-            本章节的后半部分有关于各赛制的详细列举。此外，用老版本的牌当然是可以的，前提是这张牌在赛制中合法的系列中有过重印。例如，牌手可以在近代赛中使用BETA版本的闪电击，即使BETA版本并不在近代赛的范围内，这是因为闪电击在摩登可使用的系列中有过重印。逸品重现是某些系列中的特殊附加，并不是系列本身的一部分。即使这些牌在开出它们的系列之限制赛中可以合法使用，在构组赛中它们只能在其普通版本在赛制中合法的情况下才能合法使用。
+            本章节的后半部分有关于各赛制的详细列举。此外，用老版本的牌当然是可以的，前提是这张牌在赛制中合法的系列中有过重印。例如，牌手可以在近代赛中使用BETA版本的闪电击，即使BETA版本并不在近代赛的范围内，这是因为闪电击在摩登可使用的系列中有过重印。逸品重现是某些系列中的特殊附加，并不是系列本身的一部分。由于这些牌能够从补充包中开出，因此可用于相应的限制赛；不过在构组赛中它们只能在其普通版本在赛制中合法的情况下才能合法使用。
     - id: mtr-6.2-g002
       type: paragraph
       blocks:
@@ -130,7 +130,7 @@ chapter:
       blocks:
       - id: mtr-6.3-b010
         en: '* Tarkir: Dragonstorm™'
-        zh: '* 鞑契：龙岚录'
+        zh: "* 鞑契龙岚录"
     - id: mtr-6.3-g011
       type: list
       blocks:
@@ -180,7 +180,7 @@ chapter:
       - id: mtr-6.3-b018
         en: |-
           Any cards with expansion symbols from the above sets are legal to play in Standard, even if they are not available in that set’s play booster (or draft booster for sets released before February 2, 2024). Cards from older sets that share the same name as a card legal in Standard may also be played.
-        zh: 所有牌张上面有上述系列符号的牌，即使它们无法在普通补充包（或是在2024年2月2日前发行之系列的轮抽补充包）中被开出，也都可以在标准赛制上合法被使用。
+        zh: "所有牌张上面有上述系列符号的牌，即使它们无法在常规补充包（或是在2024年2月2日前发行之系列的轮抽补充包）中被开出，也都可以在标准赛制上合法被使用。名称与标准赛制中合法牌张相同的旧系列牌张也可以使用。"
     - id: mtr-6.3-g019
       type: paragraph
       blocks:
@@ -839,7 +839,7 @@ chapter:
       blocks:
       - id: mtr-6.4-b096
         en: '* Tarkir: Dragonstorm'
-        zh: '* 鞑契：龙岚录'
+        zh: "* 鞑契龙岚录"
     - id: mtr-6.4-g097
       type: list
       blocks:
@@ -1255,14 +1255,14 @@ chapter:
       - id: mtr-6.5-b006
         en: |-
           * All cards that bring a sticker or an Attraction into the game (56 Cards). Click [here](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement) for the list.
-        zh: '* 将贴纸和景点带入游戏的所有牌张（共56张），点击[此处](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement)可以查询列表。'
+        zh: "* 将贴纸或景点带入游戏的所有牌张（共56张），点击[此处](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement)可以查询列表。"
     - id: mtr-6.5-g007
       type: list
       blocks:
       - id: mtr-6.5-b007
         en: |-
           * Cards whose art, text, name, or combination thereof that are racially or culturally offensive are banned in all formats. This list is a work in progress. Click [here](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10) for the list.
-        zh: '* 禁止图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张。该列表还在施工中，可以点击[此处](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10)查询。'
+        zh: "* 图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张，在所有赛制中均禁用。该列表还在施工中，可以点击[此处](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10)查询。"
     - id: mtr-6.5-g008
       type: list
       blocks:
@@ -1596,7 +1596,7 @@ chapter:
         extras:
         - en: |-
             This is the only restricted list in Magic. These cards are generally the most powerful allowed in Vintage, and only one of each card can be played in a player’s library or sideboard (but not in both).
-          zh: 这是万智牌中唯一一份限牌表。这些牌在特选赛中过于强大，牌手只能在主牌或备牌中至多使用一张（不能在主牌和备牌中都使用）。
+          zh: "这是万智牌中唯一一份限牌表。这些牌通常是特选赛所允许牌张中最强的一批，牌手只能在主牌或备牌中至多使用一张（不能在主牌和备牌中都使用）。"
   - id: mtr-6.6
     chapter: '6.6'
     en: Legacy Format Deck Construction
@@ -1647,14 +1647,14 @@ chapter:
       - id: mtr-6.6-b006
         en: |-
           * All cards that bring a sticker or an Attraction into the game (56 Cards). Click [here](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement) for the list.
-        zh: '* 将贴纸和景点带入游戏的所有牌张（共56张），点击[此处](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement)可以查询列表。'
+        zh: "* 将贴纸或景点带入游戏的所有牌张（共56张），点击[此处](https://magic.wizards.com/en/news/announcements/may-13-2024-banned-and-restricted-announcement)可以查询列表。"
     - id: mtr-6.6-g007
       type: list
       blocks:
       - id: mtr-6.6-b007
         en: |-
           * Cards whose art, text, name, or combination thereof that are racially or culturally offensive are banned in all formats. This list is a work in progress. Click [here](https://magic.wizards.com/en/news/announcements/depictions-racism-magic-2020-06-10) for the list.
-        zh: '* 禁止图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张。该列表还在施工中，可以点击查询。'
+        zh: "* 图像、文字、名称或组合含义具有种族歧视或文化攻击性的牌张，在所有赛制中均禁用。该列表还在施工中，可以点击[此处](https://magic.wizards.com/en/articles/archive/news/depictions-racism-magic-2020-06-10)查询。"
     - id: mtr-6.6-g008
       type: list
       blocks:
@@ -2409,7 +2409,7 @@ chapter:
       blocks:
       - id: mtr-6.7-b055
         en: '* Tarkir: Dragonstorm'
-        zh: '* 鞑契：龙岚录'
+        zh: "* 鞑契龙岚录"
     - id: mtr-6.7-g056
       type: list
       blocks:
@@ -2554,7 +2554,7 @@ chapter:
       blocks:
       - id: mtr-6.7-b079
         en: '* Nexus of Fate'
-        zh: '* 龙命连结点Nexus of Fate'
+        zh: "* 龙命连结点"
     - id: mtr-6.7-g080
       type: list
       blocks:

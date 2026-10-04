@@ -46,7 +46,7 @@ chapter:
     blocks:
     - id: mtr-appendix-a-b007
       en: '* Appendix D: Upcoming sets added.'
-      zh: '* 附录D：添加即将发行的新系列 '
+      zh: "* 附录D：添加即将发行的新系列。"
   - id: mtr-appendix-a-g008
     type: paragraph
     blocks:

@@ -24,6 +24,11 @@ mtr-snapshot = "mtr_pipeline.snapshot:main"
 mtr-check-official-update = "mtr_pipeline.official_update:main"
 mtr-validate = "mtr_pipeline.validate:main"
 mtr-validate-output = "mtr_pipeline.output_validate:main"
+mtr-export-omegat = "mtr_pipeline.omegat:main"
+mtr-import-omegat = "mtr_pipeline.omegat_import:main"
+mtr-audit-terminology = "mtr_pipeline.terminology:main"
+mtr-review-status = "mtr_pipeline.review_status:main"
+mtr-review-workflow = "mtr_pipeline.review_workflow:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

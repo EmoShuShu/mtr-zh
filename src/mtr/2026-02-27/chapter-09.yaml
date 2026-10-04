@@ -31,7 +31,7 @@ chapter:
 
             Just like in regular matches where “best of three” really means “first to two wins”, “best of one” really means “first to one win”.
           zh: |-
-            双头巨人赛的进程要比正常比赛要慢，所以在规定时间内，一般只能够进行1盘对局。后面的规则大多用于减缓只打一盘比赛产生的随机性。
+            双头巨人游戏比一般游戏慢，因此，为了让比赛能在合理时间内结束，每场对局只够进行一盘游戏。后面的规则大多试图减轻单盘游戏对局所带来的额外随机性。
 
             这只是引用了双头巨人赛的比赛特性。MTR不会讨论双头巨人的游戏规则，详细可参考CR 810。
 
@@ -60,7 +60,7 @@ chapter:
             - The car ride home.
           zh: |-
             “随时”确实就是指随时。牌手不能滥用这一点来浪费时间，其他方面则没有限制，牌手可以随时交流。交流的时机例如但不限于如下内容：
-            - 考虑轮抽时抽什么牌
+            - 考虑轮抽时抽选什么牌
             - 考虑是否再调度时
             - 在施放咒语的每个步骤中
             - 两个回合之间
@@ -78,7 +78,7 @@ chapter:
         en: |-
           A team determined at random chooses either to play first or to play second. The choice must be made before either player on that team looks at their hand. If either player on that team looks at their hand before their choice is made, that team plays first. The team who plays first skips the draw step of their first turn.
         zh: |-
-          通过随机的方式，决出一支队伍来选择是否要为先手。须在该队伍所有牌手看到自己手牌之前选择是否先手。如果在做出选择之前，队伍中有牌手看到了自己的手牌，则认为该队伍是先手。先手的队伍略过其首回合的抓牌步骤。
+          通过随机的方式，决出一支队伍来选择是否要为先手。须在该队伍任一牌手看到自己手牌之前选择是否先手。如果在做出选择之前，队伍中有牌手看到了自己的手牌，则认为该队伍是先手。先手的队伍略过其首回合的抓牌步骤。
         extras:
         - en: |-
             This should just be a rewording of the regular matches’ Play-Draw Rule with the word “player” replaced with “team”. All that is missing is the two paragraphs dealing with game two and three. If a game two is happening because game one ended in a draw do feel free to refer to the regular rules in section 2.2 for how that works.
@@ -101,7 +101,7 @@ chapter:
         - en: |-
             Technically this rule is very important. In practice it never matters. The major practical effect is that, if the players can’t agree on something, the primary player gets to decide (see CR 805.2). Additionally, opponents’ attacking creatures are presumed to be attacking the team’s primary player unless otherwise specified. See MTR 4.2 for more details.
           zh: |-
-            理论上这个规则很重要，虽然实际游戏中几乎没有用到。它主要的作用在于：如果牌手不能达成一致，那么主要牌手将会做出决定（CR 805.2）。此外，对手的进攻生物在未加说明时会默认攻击主动牌手。详见 MTR4.2。
+            理论上这个规则很重要，虽然实际游戏中几乎没有用到。它主要的作用在于：如果牌手不能达成一致，那么主要牌手将会做出决定（CR 805.2）。此外，对手的进攻生物在未加说明时会默认攻击主要牌手。详见 MTR4.2。
     - id: mtr-9.4-g002
       type: markdown
       blocks:
@@ -121,7 +121,7 @@ chapter:
         extras:
         - en: |-
             Just like in individual games, opponents are encouraged to shuffle their opponents’ cards to discourage cheating and promote randomness in shuffling.
-          zh: 与个人游戏一样，我们鼓励对手来洗牌，这样可以防止作弊同时鼓励洗牌更加随机化。
+          zh: "与个人游戏一样，我们鼓励对手来洗牌，这样可以遏制作弊同时鼓励洗牌更加随机化。"
     - id: mtr-9.4-g004
       type: markdown
       blocks:
@@ -139,7 +139,7 @@ chapter:
         extras:
         - en: |-
             Another rule repeated so the reader doesn’t have to look anywhere else for the rule. We hope this rule isn’t a surprise to anyone. The instruction to draw the cards face down on the table helps a player avoid drawing an extra card.
-          zh: 又是重复的一条规则（读者可以参考MTR2.3）。应该不必感到惊讶，将牌以面朝下的方式发到桌面上，可以帮助牌手避免抓多牌。
+          zh: "这条规则在此重复，是为了让读者不必再到别处查找。应该不必感到惊讶，将牌以面朝下的方式发到桌面上，可以帮助牌手避免抓多牌。"
     - id: mtr-9.4-g006
       type: markdown
       blocks:
@@ -157,7 +157,7 @@ chapter:
           zh: |-
             万智牌完整规则涵盖了这一点，但是阅读起来则有些枯燥。规则103.5d中的内容说明了双头巨人的再调度流程。在这里添加一个例子进行说明：
             - Alice和Alister赢得了比点并选择了先手。他们看了各自的7张起手牌，Alice不太满意，但是Alister觉得不错，后者决定保留起手。Alice开始洗牌。
-            - Nancy和Nigel在看过起手牌后都决定再调度。然后Alice，Nancy和Nigel重新抓了7张牌。
+            - Nancy和Nigel在看过起手牌后都决定再调度。他们洗牌了，然后Alice，Nancy和Nigel重新抓了7张牌。
             - Alice这次很满意自己抓的7张牌，表示自己接了此起手牌。但是Nancy和Nigel决定再次再调度。此时Alister发现他想要再调度，但是此时已经为时过晚，他必须保留手上的七张牌。
             - Nancy和Nigel再调度之后觉得6张牌的起手不错。再调度过程结束。注意上面的“7”张并没有写错，因为多人赛制有一次免费的再调度机会！
     - id: mtr-9.4-g007
@@ -201,7 +201,7 @@ chapter:
         - en: |-
             Sideboards are disallowed because Two-Headed Giant matches are still best of 1 game. While this does impact the ability of players to functionally use cards like Living Wish that is an acceptable trade off. Aside from this, please remember that Two-Headed Giant constructed will be a particular format (Modern, Standard, Vintage!, etc) and as such is subject to those deck building restrictions. Additionally, Erayo is banned, no matter the format.
           zh: |-
-            不使用备牌是因为双头巨人赛一局定胜负。即使这仍会影响“祈愿”一类的牌。此外，双头巨人构组赛会属于一种赛制（近代，标准，特选等），构组套牌须遵循相应赛制的限制条件。此外，入圣空民伟代被禁，无论使用何种赛制。
+            不使用备牌是因为双头巨人赛一局定胜负。尽管这确会影响牌手实际使用“生机祈愿”等牌的能力，但这是可以接受的取舍。此外，双头巨人构组赛会属于一种赛制（近代，标准，特选等），构组套牌须遵循相应赛制的限制条件。此外，入圣空民伟代被禁，无论使用何种赛制。
   - id: mtr-9.6
     chapter: '9.6'
     en: Two-Headed Giant Limited Rules
@@ -244,7 +244,7 @@ chapter:
         en: |-
           Teams (not players) assemble into random drafting circles (called pods) of roughly equal size at the direction of the Head Judge. Teammates sit next to each other. Tournament officials then distribute identical boosters to each team in the pod.
         zh: |-
-          队伍（而非牌手）会随机分配到各个轮抽圈（称作轮抽组）中。每个轮抽组的队伍数由主审所斟酌，应大略相同。同一队的队员并肩而坐。之后比赛工作人员便将同样组成的补充包分发给该轮抽组中的每支队伍。
+          队伍（而非牌手）在主审的指示下随机组成规模大致相等的轮抽组（称作轮抽圈）。同一队的队员并肩而坐。之后比赛工作人员便将同样组成的补充包分发给该轮抽组中的每支队伍。
     - id: mtr-9.7-g002
       type: paragraph
       blocks:
@@ -268,4 +268,4 @@ chapter:
           zh: |-
             与一般的轮抽一样，我们也希望能有6到8人参加一场轮抽。这表示最好能有3到4支队伍。别在每个轮抽组分配6到8队牌手啊！
 
-            另外，一般来说轮抽的过程中不允许交流，但是双头巨人比赛是个例外。牌手可以互相交流并互相帮助（他们可以一起决定抓什么牌）。
+            一般轮抽过程中通常不会交谈，但双头巨人赛显然是例外。牌手可以与自己的队友交流并互相协助，因为他们是以团队形式共同选牌。

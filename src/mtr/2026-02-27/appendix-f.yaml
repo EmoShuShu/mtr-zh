@@ -44,13 +44,13 @@ chapter:
       zh: '| 专业赛 | 专业 |'
     - id: mtr-appendix-f-b010
       en: '| Pro Tour Qualifier | Competitive |'
-      zh: '| 专业赛预选赛 | 竞争 |'
+      zh: "| 专业赛资格赛 | 竞争 |"
     - id: mtr-appendix-f-b011
       en: '| Regional Championships | Competitive |'
       zh: '| 区域冠军赛 | 竞争 |'
     - id: mtr-appendix-f-b012
       en: '| Regional Championship Qualifiers | Competitive |'
-      zh: '| 区域冠军赛预选赛 | 竞争 |'
+      zh: "| 区域冠军赛资格赛 | 竞争 |"
     - id: mtr-appendix-f-b013
       en: '| Spotlight Series – Day 1 | Competitive |'
       zh: '| 聚光灯系列赛 - 第1天 | 竞争 |'

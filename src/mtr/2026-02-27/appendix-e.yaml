@@ -2,7 +2,7 @@ chapter:
   id: mtr-appendix-e
   chapter: Appendix E
   en: Recommended Number of Rounds in Swiss Tournaments
-  zh: 瑞士式比赛中推荐进行的局数
+  zh: "瑞士式比赛中推荐进行的轮数"
   groups:
   - id: mtr-appendix-e-g001
     type: paragraph
@@ -10,7 +10,7 @@ chapter:
     - id: mtr-appendix-e-b001
       en: |-
         The following number of Swiss rounds is required for Premier tournaments (such as Regional Championship Qualifiers). It may be used at the Tournament Organizer’s discretion for non-Premier tournaments.
-      zh: 下表所示的瑞士式局数通常是重要比赛（例如区域冠军赛预选赛）中规定需要进行的局数。经比赛主办人的斟酌后也可以在非重要比赛中使用。
+      zh: "下表所示的瑞士轮数是重要比赛（例如区域冠军赛资格赛）中规定需要进行的轮数。经比赛主办人的斟酌后也可以在非重要比赛中使用。"
   - id: mtr-appendix-e-g002
     type: table
     blocks:
@@ -28,10 +28,10 @@ chapter:
         | 227-409 | 9 | Top 8 |
         | 410+ | 10 | Top 8 |
       zh: |-
-        |牌手数（队伍数）|瑞士式对局|决胜局|
+        |牌手数（队伍数）|瑞士轮|决胜局|
         |---|---|---|
-        |4（仅限团队/2HG）|2局单淘汰对局（无瑞士轮）|无（进行单淘汰）|
-        |5-8|3局单淘汰对局（无瑞士式对局）|无（进行单淘汰）|
+        |4（仅限团队/2HG）|2轮单淘汰对局（无瑞士轮）|无（进行单淘汰）|
+        |5-8|3轮单淘汰对局（无瑞士轮）|无（进行单淘汰）|
         |9-16|4（若为限制赛制，且决胜局采补充包轮抽）<br>5（其他赛制）|8强（若为限制赛制，且决胜局采补充包轮抽）<br>4强（其他赛制）|
         |17-32|5|8强|
         |33-64|6|8强|
@@ -44,11 +44,11 @@ chapter:
     blocks:
     - id: mtr-appendix-e-b003
       en: Team tournaments consider each team as a single player for this purpose.
-      zh: 在团队比赛中，为了计算应进行的局数，可将每支队伍视作一位牌手。
+      zh: "在团队比赛中，为了计算应进行的轮数，可将每支队伍视作一位牌手。"
   - id: mtr-appendix-e-g004
     type: paragraph
     blocks:
     - id: mtr-appendix-e-b004
       en: |-
         In tournaments where awarded byes are used, each player with a 1-round bye should count as 2 players, each player with a 2-round bye should count as 4 players, and each player with a 3-round bye should count as 8 players when using the above chart.
-      zh: 对有牌手会获得轮空的比赛而言，在使用上述图表时，应将每位有一局轮空的牌手视作2位牌手，每位有两局轮空的牌手视作4位牌手，每位具有三局轮空的牌手视作8位牌手。
+      zh: "对有牌手会获得轮空的比赛而言，在使用上述图表时，应将每位有一轮轮空的牌手视作2位牌手，每位有两轮轮空的牌手视作4位牌手，每位具有三轮轮空的牌手视作8位牌手。"
