@@ -43,6 +43,7 @@ jobs:
           python scripts/check_official_update.py
           --project-root .
           --result tmp/official-update-result.json
+          --diagnostics-dir tmp/official-update-diagnostics
 
       - name: Read update result
         id: update
@@ -145,3 +146,14 @@ jobs:
             --assignee "$REPOSITORY_OWNER" \
             --title "MTR $EFFECTIVE_DATE 官方更新（待人工校对）" \
             --body-file tmp/official-update-pr.md
+
+      - name: Upload official update diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: mtr-official-update-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            tmp/official-update-diagnostics/
+            tmp/official-update-result.json
+          if-no-files-found: warn
+          retention-days: 30

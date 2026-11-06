@@ -9,6 +9,7 @@ import os
 import re
 import shutil
 import tempfile
+import time
 import urllib.parse
 import urllib.request
 import uuid
@@ -229,15 +230,57 @@ def _download(url: str, destination: Path | None, *, max_bytes: int) -> bytes:
     return payload
 
 
-def discover_official_release(page_url: str = DEFAULT_RULES_PAGE) -> OfficialRelease:
+def _retry_official_request(operation, *, stage: str, diagnostics_dir: Path | None = None):
+    """Retry acquisition only; never rerun snapshot creation or source promotion."""
+    for attempt in range(1, 4):
+        evidence = {"stage": stage, "attempt": attempt,
+                    "checkedAt": datetime.now(timezone.utc).isoformat()}
+        try:
+            result = operation(attempt, evidence)
+        except (OfficialUpdateError, OSError, ValueError) as exc:
+            evidence.update(status="failure", error=str(exc))
+            if attempt == 3:
+                raise
+            print(f"{stage} attempt {attempt}/3 failed: {exc}; retrying", flush=True)
+        else:
+            evidence["status"] = "success"
+            return result
+        finally:
+            if diagnostics_dir is not None:
+                diagnostics_dir.mkdir(parents=True, exist_ok=True)
+                (diagnostics_dir / f"{stage}-attempt-{attempt}.json").write_text(
+                    json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+                )
+        time.sleep(5 if attempt == 1 else 15)
+
+
+def discover_official_release(
+    page_url: str = DEFAULT_RULES_PAGE, *, diagnostics_dir: Path | None = None
+) -> OfficialRelease:
     _validate_https_url(page_url, ALLOWED_PAGE_HOST, "rules-page")
-    html = _download(page_url, None, max_bytes=MAX_PAGE_BYTES).decode("utf-8")
-    return parse_rules_page(html, page_url)
+    def acquire(attempt, evidence):
+        evidence["url"] = page_url
+        payload = _download(page_url, None, max_bytes=MAX_PAGE_BYTES)
+        evidence.update(bytes=len(payload), sha256=hashlib.sha256(payload).hexdigest())
+        if diagnostics_dir is not None:
+            diagnostics_dir.mkdir(parents=True, exist_ok=True)
+            (diagnostics_dir / f"rules-page-attempt-{attempt}.html").write_bytes(payload)
+        return parse_rules_page(payload.decode("utf-8"), page_url)
+
+    return _retry_official_request(acquire, stage="rules-page", diagnostics_dir=diagnostics_dir)
 
 
-def download_official_pdf(release: OfficialRelease, destination: Path) -> OfficialRelease:
-    _download(release.pdf_url, destination, max_bytes=MAX_PDF_BYTES)
-    return OfficialRelease(**{**asdict(release), "pdf_sha256": sha256_file(destination)})
+def download_official_pdf(
+    release: OfficialRelease, destination: Path, *, diagnostics_dir: Path | None = None
+) -> OfficialRelease:
+    def acquire(attempt, evidence):
+        evidence["url"] = release.pdf_url
+        _download(release.pdf_url, destination, max_bytes=MAX_PDF_BYTES)
+        digest = sha256_file(destination)
+        evidence.update(bytes=destination.stat().st_size, sha256=digest)
+        return OfficialRelease(**{**asdict(release), "pdf_sha256": digest})
+
+    return _retry_official_request(acquire, stage="official-pdf", diagnostics_dir=diagnostics_dir)
 
 
 def _load_yaml(path: Path) -> dict[str, Any]:
@@ -986,6 +1029,7 @@ def check_for_update(
     project_root: Path,
     snapshot_root: Path,
     result_path: Path,
+    diagnostics_dir: Path | None = None,
 ) -> dict[str, Any]:
     project_root = project_root.resolve()
     source_state_path = _within_project(source_state_path, project_root, "Source state")
@@ -993,15 +1037,17 @@ def check_for_update(
     schema = _within_project(schema, project_root, "Schema")
     snapshot_root = _within_project(snapshot_root, project_root, "Snapshot root")
     result_path = _within_project(result_path, project_root, "Result file")
+    if diagnostics_dir is not None:
+        diagnostics_dir = _within_project(diagnostics_dir, project_root, "Diagnostics directory")
     previous = load_source_state(source_state_path)
-    discovered = discover_official_release(page_url)
+    discovered = discover_official_release(page_url, diagnostics_dir=diagnostics_dir)
     if discovered.effective_date < previous.effective_date:
         raise OfficialUpdateError(
             f"Official page would downgrade MTR from {previous.effective_date} to {discovered.effective_date}"
         )
     with tempfile.TemporaryDirectory(prefix="mtr-official-update-") as directory:
         pdf_path = Path(directory) / "MTR_EN.pdf"
-        release = download_official_pdf(discovered, pdf_path)
+        release = download_official_pdf(discovered, pdf_path, diagnostics_dir=diagnostics_dir)
         if release.pdf_sha256 == previous.pdf_sha256:
             result = {"changed": False, "effectiveDate": release.effective_date, "pdfSha256": release.pdf_sha256}
         else:
@@ -1049,6 +1095,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--project-root", type=Path, default=Path.cwd())
     parser.add_argument("--snapshot-root", type=Path, default=Path("snapshots"))
     parser.add_argument("--result", type=Path, default=Path("tmp/official-update-result.json"))
+    parser.add_argument("--diagnostics-dir", type=Path, default=Path("tmp/official-update-diagnostics"))
     return parser.parse_args(argv)
 
 
@@ -1063,6 +1110,7 @@ def main(argv: list[str] | None = None) -> int:
             project_root=args.project_root,
             snapshot_root=args.snapshot_root,
             result_path=args.result,
+            diagnostics_dir=args.diagnostics_dir,
         )
     except (OfficialUpdateError, SnapshotError, PipelineError, OSError, ValueError) as exc:
         raise SystemExit(str(exc)) from exc
