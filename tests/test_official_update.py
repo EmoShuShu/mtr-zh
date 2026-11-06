@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import json
 
 import pytest
 import yaml
@@ -21,6 +22,73 @@ from mtr_pipeline.official_update import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def test_discovery_retries_missing_entry_and_keeps_failed_page(monkeypatch, tmp_path):
+    from mtr_pipeline import official_update as update
+
+    pages = [b"<html>Temporarily empty</html>", _page(
+        (EXPECTED_TITLE, "Feb 27, 2026", "https://media.wizards.com/mtr.pdf")
+    ).encode()]
+    responses = iter(pages)
+    sleeps = []
+    monkeypatch.setattr(update, "_download", lambda *args, **kwargs: next(responses))
+    monkeypatch.setattr(update.time, "sleep", sleeps.append)
+    release = update.discover_official_release(diagnostics_dir=tmp_path)
+    assert release.effective_date == "2026-02-27"
+    assert sleeps == [5]
+    assert (tmp_path / "rules-page-attempt-1.html").read_bytes() == pages[0]
+    assert (tmp_path / "rules-page-attempt-2.html").read_bytes() == pages[1]
+    failed = json.loads((tmp_path / "rules-page-attempt-1.json").read_text())
+    assert failed["status"] == "failure" and "found 0" in failed["error"]
+    assert json.loads((tmp_path / "rules-page-attempt-2.json").read_text())["status"] == "success"
+
+
+def test_discovery_exhaustion_is_failure_and_records_network_errors(monkeypatch, tmp_path):
+    from mtr_pipeline import official_update as update
+
+    attempts, sleeps = [], []
+    def unavailable(*args, **kwargs):
+        attempts.append(1)
+        raise OfficialUpdateError("Unable to download: timed out")
+    monkeypatch.setattr(update, "_download", unavailable)
+    monkeypatch.setattr(update.time, "sleep", sleeps.append)
+    with pytest.raises(OfficialUpdateError, match="timed out"):
+        update.discover_official_release(diagnostics_dir=tmp_path)
+    assert len(attempts) == 3 and sleeps == [5, 15]
+    records = list(tmp_path.glob("*.json"))
+    assert len(records) == 3
+    assert all(json.loads(p.read_text())["status"] == "failure" for p in records)
+    assert not list(tmp_path.glob("*.html"))
+
+
+def test_pdf_retry_recovers_and_hashes_successful_download(monkeypatch, tmp_path):
+    from mtr_pipeline import official_update as update
+
+    attempts = []
+    def download(url, destination, **kwargs):
+        attempts.append(url)
+        if len(attempts) == 1:
+            raise OfficialUpdateError("Connection reset")
+        destination.write_bytes(b"%PDF-1.7\nSynthetic test PDF")
+    monkeypatch.setattr(update, "_download", download)
+    monkeypatch.setattr(update.time, "sleep", lambda seconds: None)
+    release = OfficialRelease(update.DEFAULT_RULES_PAGE, EXPECTED_TITLE, "2026-02-27",
+                              "https://media.wizards.com/mtr.pdf")
+    pdf = tmp_path / "official.pdf"
+    result = update.download_official_pdf(release, pdf, diagnostics_dir=tmp_path / "diagnostics")
+    assert result.pdf_sha256 == sha256_file(pdf)
+    assert len(attempts) == 2
+
+
+def test_workflow_retains_diagnostics_even_when_check_fails():
+    workflow = yaml.load((ROOT / ".github/workflows/official-update.yml").read_text(),
+                         Loader=yaml.BaseLoader)
+    steps = workflow["jobs"]["check"]["steps"]
+    upload = next(step for step in steps if step["name"] == "Upload official update diagnostics")
+    assert upload["if"] == "always()"
+    assert "tmp/official-update-diagnostics/" in upload["with"]["path"]
+    assert upload["with"]["retention-days"] == "30"
 
 
 def _page(*documents: tuple[str, str, str]) -> str:
