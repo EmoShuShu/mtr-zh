@@ -40,7 +40,7 @@ def test_discovery_retries_missing_entry_and_keeps_failed_page(monkeypatch, tmp_
     assert (tmp_path / "rules-page-attempt-1.html").read_bytes() == pages[0]
     assert (tmp_path / "rules-page-attempt-2.html").read_bytes() == pages[1]
     failed = json.loads((tmp_path / "rules-page-attempt-1.json").read_text())
-    assert failed["status"] == "failure" and "found 0" in failed["error"]
+    assert failed["status"] == "failure" and "实际 0" in failed["error"]
     assert json.loads((tmp_path / "rules-page-attempt-2.json").read_text())["status"] == "success"
 
 
@@ -72,6 +72,7 @@ def test_pdf_retry_recovers_and_hashes_successful_download(monkeypatch, tmp_path
             raise OfficialUpdateError("Connection reset")
         destination.write_bytes(b"%PDF-1.7\nSynthetic test PDF")
     monkeypatch.setattr(update, "_download", download)
+    monkeypatch.setattr(update.official_discovery, "pdf_effective_date", lambda data: "2026-02-27")
     monkeypatch.setattr(update.time, "sleep", lambda seconds: None)
     release = OfficialRelease(update.DEFAULT_RULES_PAGE, EXPECTED_TITLE, "2026-02-27",
                               "https://media.wizards.com/mtr.pdf")
@@ -125,17 +126,17 @@ def test_rules_page_parser_rejects_ambiguous_entries():
         "Feb 27, 2026",
         "https://media.wizards.com/ContentResources/WPN/MTG_MTR_2026_Feb27_EN.pdf",
     )
-    with pytest.raises(OfficialUpdateError, match="exactly one"):
+    with pytest.raises(OfficialUpdateError, match="精确找到一个"):
         parse_rules_page(_page(document, document))
 
 
 def test_rules_page_parser_rejects_non_wizards_pdf_host():
-    with pytest.raises(OfficialUpdateError, match="Unexpected official PDF URL"):
+    with pytest.raises(OfficialUpdateError, match="非法官方 pdf URL"):
         parse_rules_page(_page((EXPECTED_TITLE, "Feb 27, 2026", "https://example.test/mtr.pdf")))
 
 
 def test_rules_page_parser_rejects_nonstandard_official_port():
-    with pytest.raises(OfficialUpdateError, match="Unexpected official PDF URL"):
+    with pytest.raises(OfficialUpdateError, match="非法官方 pdf URL"):
         parse_rules_page(
             _page((EXPECTED_TITLE, "Feb 27, 2026", "https://media.wizards.com:444/mtr.pdf"))
         )
@@ -331,7 +332,7 @@ def test_workflows_keep_detection_review_and_release_separate():
     assert "gh release create" not in update_workflow
     assert 'branches:\n      - master' in release_workflow
     assert "release-artifacts/rules.json" in release_workflow
-    assert "gh release create" in release_workflow
+    assert "scripts/release.py" in release_workflow and "--publish" in release_workflow
 
 
 def test_all_github_workflows_are_valid_yaml():

@@ -5,6 +5,11 @@ on:
     - cron: "0 6 * * *"
       timezone: "Asia/Shanghai"
   workflow_dispatch:
+    inputs:
+      retry_closed:
+        description: "重新打开已关闭的同一更新 PR（默认暂缓）"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -72,30 +77,13 @@ jobs:
         if: steps.update.outputs.changed != 'true'
         run: echo "Official MTR PDF is unchanged."
 
-      - name: Check for an existing automation branch
+      - name: Check for an existing review pull request
         id: existing
         if: steps.update.outputs.changed == 'true'
-        shell: bash
         env:
           UPDATE_BRANCH: ${{ steps.update.outputs.branch }}
-        run: |
-          if git ls-remote --exit-code --heads origin "$UPDATE_BRANCH" >/dev/null 2>&1; then
-            pr_url="$(gh pr list --head "$UPDATE_BRANCH" --state open --json url --jq '.[0].url // ""')"
-            if [[ -z "$pr_url" ]]; then
-              echo "Automation branch exists without an open PR: $UPDATE_BRANCH" >&2
-              echo "Delete the stale branch or create its review PR before retrying." >&2
-              exit 1
-            fi
-            echo "exists=true" >> "$GITHUB_OUTPUT"
-            echo "pr_url=$pr_url" >> "$GITHUB_OUTPUT"
-          else
-            echo "exists=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Report existing review pull request
-        if: steps.existing.outputs.exists == 'true'
-        run: |
-          echo "Official update already has an open review PR: ${{ steps.existing.outputs.pr_url }}"
+          RETRY_CLOSED: ${{ inputs.retry_closed || false }}
+        run: python -m mtr_pipeline.update_pr --branch "$UPDATE_BRANCH"
 
       - name: Commit generated snapshot and candidate
         if: steps.update.outputs.changed == 'true' && steps.existing.outputs.exists != 'true'

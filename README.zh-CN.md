@@ -19,6 +19,8 @@ https://github.com/EmoShuShu/mtr-zh/releases/latest/download/rules.json
 ## 更新方式
 
 两个项目均于北京时间每天 06:00 自动检查官方文件。实际启动时间可能受 GitHub 排队影响。
+关闭更新 PR 表示暂缓处理，不会让每日检查报错或重复建 PR。要继续处理，手动运行时勾选
+`retry_closed`；若远端分支已被删除，请先在原 PR 恢复分支。已合并的 PR 不会被重开。
 在 [检查记录](https://github.com/EmoShuShu/mtr-zh/actions/workflows/official-update.yml) 查看当天运行状态，
 或选择 Run workflow 手动检查。配套项目的共同约定见 [维护约定](docs/maintenance-conventions.md)。
 
@@ -227,3 +229,15 @@ YAML 在预览后又发生变化，操作都会中止。应用后运行全部测
 ## 其他语言
 
 如果希望参考 PDF 解析器或维护其他语言的 MTR，请阅读英文的 [`reference-pipeline/README.md`](reference-pipeline/README.md)。该参考流程与中文正式流程相互独立。
+
+## 失败恢复与发布核验
+
+确认后的整批回写现在包含源 YAML、审校记录、进度/术语报告和最终文件的恢复保护。
+测试、构建或登记失败以及 Ctrl+C 会恢复本批操作；OmegaT 译文、TMX 和共享词汇表不回退。
+这不替代断电、强制终止进程时的备份；继续用 Git 保存已完成的审校工作。
+
+CI 和公开发布要求所有当前单元的审校记录有效。单独核验可在原验证命令后加
+`--require-reviewed`。本地原生构建命令保留兼容；不会把生成候选等同于允许公开发布。
+Release 先以草稿上传，下载逐字节核对后公开；查询失败不视为“不存在”，既有公开附件不覆盖。
+测试报告及发布核验证据保存在 Actions 附件中，保留 14 天。
+网页“更新时间”和 PDF“生效日期”分别记录，版本身份以 PDF 内文为准。

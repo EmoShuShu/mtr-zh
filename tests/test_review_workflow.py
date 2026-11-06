@@ -27,6 +27,34 @@ SCHEMA = ROOT / "schema" / "mtr-source.schema.json"
 GLOSSARY = ROOT / "terminology" / "mtr-glossary.txt"
 
 
+@pytest.mark.parametrize("stage", ["tests", "interrupt", "build", "ledger", "status"])
+def test_failed_batch_restores_sources_ledger_and_outputs(tmp_path, monkeypatch, stage):
+    from mtr_pipeline import review_workflow as workflow
+    config, _, _ = _workflow_config(tmp_path)
+    owned = [*config.manifest.parent.glob("*.yaml"), config.ledger,
+             config.output_json, config.output_markdown, config.status_json, config.status_markdown,
+             config.terminology_json, config.terminology_markdown]
+    for path in (config.output_json, config.output_markdown):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(b"previous published output")
+    before = {p: p.read_bytes() if p.exists() else None for p in owned}
+    user_files = {p: p.read_bytes() for p in config.source_po.parent.rglob("*") if p.is_file()}
+    def fail(*args, **kwargs):
+        if stage == "interrupt":
+            raise KeyboardInterrupt()
+        config.output_json.write_bytes(b"incomplete output")
+        raise PipelineError("synthetic batch failure")
+    runner = fail if stage in {"tests", "interrupt"} else lambda root: None
+    function = {"build": "write_outputs", "ledger": "save_ledger", "status": "write_status_reports"}.get(stage)
+    if function:
+        monkeypatch.setattr(workflow, function, fail)
+    answers = iter(["a", "y"])
+    with pytest.raises((PipelineError, KeyboardInterrupt)):
+        run_workflow(config, input_fn=lambda prompt: next(answers), output=lambda text: None, test_runner=runner)
+    assert {p: p.read_bytes() if p.exists() else None for p in owned} == before
+    assert all(p.read_bytes() == content for p, content in user_files.items())
+
+
 def test_parse_file_selection_accepts_multiple_numbers_and_cancel():
     filenames = ["one.po", "two.po", "three.po"]
 

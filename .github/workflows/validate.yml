@@ -54,10 +54,10 @@ jobs:
           python scripts/validate.py
           --manifest "$MTR_MANIFEST"
           --schema schema/mtr-source.schema.json
-          --project-root .
+          --project-root . --require-reviewed
 
       - name: Run tests
-        run: python -m pytest
+        run: python -m pytest --junitxml=outputs/ci-tests.xml
 
       - name: Build release candidate
         run: >-
@@ -66,13 +66,13 @@ jobs:
           --schema schema/mtr-source.schema.json
           --output-schema schema/mtr-output.schema.json
           --project-root .
-          --json-out ci-artifacts/rules.json
-          --markdown-out ci-artifacts/MTR.md
+          --json-out outputs/ci-artifacts/rules.json
+          --markdown-out outputs/ci-artifacts/MTR.md
 
       - name: Independently validate published JSON
         run: >-
           python scripts/validate_output.py
-          --input ci-artifacts/rules.json
+          --input outputs/ci-artifacts/rules.json
           --schema schema/mtr-output.schema.json
 
       - name: Rebuild for determinism check
@@ -82,39 +82,48 @@ jobs:
           --schema schema/mtr-source.schema.json
           --output-schema schema/mtr-output.schema.json
           --project-root .
-          --json-out ci-repeat/rules.json
-          --markdown-out ci-repeat/MTR.md
+          --json-out outputs/ci-repeat/rules.json
+          --markdown-out outputs/ci-repeat/MTR.md
 
       - name: Verify deterministic output
         shell: bash
         run: |
-          cmp ci-artifacts/rules.json ci-repeat/rules.json
-          cmp ci-artifacts/MTR.md ci-repeat/MTR.md
+          cmp outputs/ci-artifacts/rules.json outputs/ci-repeat/rules.json
+          cmp outputs/ci-artifacts/MTR.md outputs/ci-repeat/MTR.md
 
       - name: Verify checked-in artifacts are current
         shell: bash
         run: |
-          cmp ci-artifacts/rules.json dist/rules.json || {
+          cmp outputs/ci-artifacts/rules.json dist/rules.json || {
             echo "dist/rules.json is stale; rebuild and commit it." >&2
             exit 1
           }
-          cmp ci-artifacts/MTR.md dist/MTR.md || {
+          cmp outputs/ci-artifacts/MTR.md dist/MTR.md || {
             echo "dist/MTR.md is stale; rebuild and commit it." >&2
             exit 1
           }
 
       - name: Write artifact checksums
-        if: always() && hashFiles('ci-artifacts/**') != ''
+        if: always() && hashFiles('outputs/ci-artifacts/**') != ''
         shell: bash
         run: |
-          cd ci-artifacts
+          cd outputs/ci-artifacts
           sha256sum rules.json MTR.md > SHA256SUMS
 
       - name: Upload preview artifacts
-        if: always() && hashFiles('ci-artifacts/**') != ''
+        if: always() && hashFiles('outputs/ci-artifacts/**') != ''
         uses: actions/upload-artifact@v7
         with:
           name: mtr-${{ env.MTR_VERSION }}-${{ github.sha }}
-          path: ci-artifacts/
+          path: outputs/ci-artifacts/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload test results
+        if: always() && hashFiles('outputs/ci-tests.xml') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: mtr-tests-${{ github.sha }}
+          path: outputs/ci-tests.xml
           if-no-files-found: error
           retention-days: 14

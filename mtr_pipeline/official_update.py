@@ -21,6 +21,8 @@ from typing import Any
 
 import yaml
 
+from . import official_discovery
+
 from mtr_pipeline.core import PipelineError, Project, assemble_group, load_project
 from mtr_pipeline.legacy_import import (
     LegacyPair,
@@ -80,6 +82,7 @@ class OfficialRelease:
     effective_date: str
     pdf_url: str
     pdf_sha256: str = ""
+    page_updated_date: str = ""
 
 
 @dataclass
@@ -176,55 +179,22 @@ def _parse_display_date(value: str) -> str:
 
 
 def parse_rules_page(html: str, page_url: str = DEFAULT_RULES_PAGE) -> OfficialRelease:
-    _validate_https_url(page_url, ALLOWED_PAGE_HOST, "rules-page")
-    parser = _RulesPageParser()
-    parser.feed(html)
-    matches = [row for row in parser.documents if row["title"] == EXPECTED_TITLE]
-    if len(matches) != 1:
-        raise OfficialUpdateError(
-            f"Expected exactly one {EXPECTED_TITLE!r} entry, found {len(matches)}"
-        )
-    row = matches[0]
-    pdf_url = urllib.parse.urljoin(page_url, row["href"])
-    _validate_https_url(pdf_url, ALLOWED_PDF_HOST, "official PDF")
-    if not urllib.parse.urlparse(pdf_url).path.lower().endswith(".pdf"):
-        raise OfficialUpdateError(f"Official MTR download is not a PDF URL: {pdf_url}")
-    return OfficialRelease(
-        page_url=page_url,
-        title=row["title"],
-        effective_date=_parse_display_date(row["date"]),
-        pdf_url=pdf_url,
-    )
+    try:
+        row = official_discovery.parse_rules_page(html, page_url)
+    except ValueError as exc:
+        raise OfficialUpdateError(str(exc)) from exc
+    return OfficialRelease(page_url, row["title"], row["pageUpdatedDate"], row["url"],
+                           page_updated_date=row["pageUpdatedDate"])
 
 
 def _download(url: str, destination: Path | None, *, max_bytes: int) -> bytes:
-    request = urllib.request.Request(
-        url,
-        headers={"User-Agent": "mtr-zh-update-checker/1 (+https://github.com/EmoShuShu/mtr-zh)"},
-    )
     try:
-        with urllib.request.urlopen(request, timeout=45) as response:
-            final_url = response.geturl()
-            expected_host = ALLOWED_PAGE_HOST if destination is None else ALLOWED_PDF_HOST
-            _validate_https_url(final_url, expected_host, "redirected download")
-            chunks: list[bytes] = []
-            size = 0
-            while True:
-                chunk = response.read(min(1024 * 1024, max_bytes + 1 - size))
-                if not chunk:
-                    break
-                chunks.append(chunk)
-                size += len(chunk)
-                if size > max_bytes:
-                    raise OfficialUpdateError(f"Download exceeds {max_bytes} bytes: {url}")
+        payload, _, _ = official_discovery.download(url, "page" if destination is None else "pdf")
+        if len(payload) > max_bytes:
+            raise ValueError("官方下载超限")
     except (OSError, ValueError) as exc:
-        if isinstance(exc, OfficialUpdateError):
-            raise
         raise OfficialUpdateError(f"Unable to download {url}: {exc}") from exc
-    payload = b"".join(chunks)
     if destination is not None:
-        if not payload.startswith(b"%PDF-"):
-            raise OfficialUpdateError("Official MTR download does not have a PDF file signature")
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_bytes(payload)
     return payload
@@ -277,8 +247,11 @@ def download_official_pdf(
         evidence["url"] = release.pdf_url
         _download(release.pdf_url, destination, max_bytes=MAX_PDF_BYTES)
         digest = sha256_file(destination)
-        evidence.update(bytes=destination.stat().st_size, sha256=digest)
-        return OfficialRelease(**{**asdict(release), "pdf_sha256": digest})
+        effective = official_discovery.pdf_effective_date(destination.read_bytes())
+        evidence.update(bytes=destination.stat().st_size, sha256=digest,
+                        effectiveDate=effective, pageUpdatedDate=release.page_updated_date or release.effective_date)
+        return OfficialRelease(**{**asdict(release), "pdf_sha256": digest, "effective_date": effective,
+                                  "page_updated_date": release.page_updated_date or release.effective_date})
 
     return _retry_official_request(acquire, stage="official-pdf", diagnostics_dir=diagnostics_dir)
 

@@ -10,6 +10,7 @@ import tempfile
 from typing import Callable
 
 from .core import PipelineError, load_project, write_outputs
+from .transaction import restore_on_failure
 from .omegat import export_full, iter_translation_units
 from .omegat_import import (
     PoEntry,
@@ -266,75 +267,82 @@ def run_workflow(
     translated = fresh_translated
     notes = fresh_notes
 
-    if changes:
-        apply_changes_to_source(fresh_project, changes, config.schema)
-        output(f"\n已安全回写 {changed_count} 处译文。")
-    else:
-        output("\n无需回写译文。")
+    # Begin after confirmation and freshness checks. User-owned OmegaT and glossary
+    # files are intentionally outside this transaction.
+    paths = [source.path for source in fresh_project.sources] + [
+        config.ledger, config.terminology_json, config.terminology_markdown,
+        config.status_json, config.status_markdown, config.output_json, config.output_markdown,
+    ]
+    with restore_on_failure(paths):
+        if changes:
+            apply_changes_to_source(fresh_project, changes, config.schema)
+            output(f"\n已安全回写 {changed_count} 处译文。")
+        else:
+            output("\n无需回写译文。")
 
-    output("正在运行完整测试……")
-    test_runner(config.root)
+        output("正在运行完整测试……")
+        test_runner(config.root)
 
-    applied_project = load_project(config.manifest, config.schema, config.root)
-    try:
-        glossary_entries = parse_glossary(config.glossary)
-        findings = audit_terminology(
-            list(iter_translation_units(applied_project)), glossary_entries
-        )
-        write_audit_reports(
-            glossary_entries,
-            findings,
-            config.terminology_json,
-            config.terminology_markdown,
-        )
-        errors = sum(item.severity == "error" for item in findings)
-        warnings = sum(item.severity == "warning" for item in findings)
-        output(
-            f"术语审计完成（仅供参考）：{errors} 个错误，"
-            f"{warnings} 个需人工判断的警告。"
-        )
-    except (OSError, PipelineError) as exc:
-        message = f"术语审计未完成（不阻塞）：{exc}"
-        config.terminology_json.parent.mkdir(parents=True, exist_ok=True)
-        config.terminology_json.write_text(
-            json.dumps({"status": "failed", "message": str(exc)}, ensure_ascii=False, indent=2)
-            + "\n",
-            encoding="utf-8",
-            newline="\n",
-        )
-        config.terminology_markdown.write_text(
-            "# MTR 术语审计\n\n" + message + "\n",
-            encoding="utf-8",
-            newline="\n",
-        )
-        output(message)
+        applied_project = load_project(config.manifest, config.schema, config.root)
+        try:
+            glossary_entries = parse_glossary(config.glossary)
+            findings = audit_terminology(
+                list(iter_translation_units(applied_project)), glossary_entries
+            )
+            write_audit_reports(
+                glossary_entries,
+                findings,
+                config.terminology_json,
+                config.terminology_markdown,
+            )
+            errors = sum(item.severity == "error" for item in findings)
+            warnings = sum(item.severity == "warning" for item in findings)
+            output(
+                f"术语审计完成（仅供参考）：{errors} 个错误，"
+                f"{warnings} 个需人工判断的警告。"
+            )
+        except (OSError, PipelineError) as exc:
+            message = f"术语审计未完成（不阻塞）：{exc}"
+            config.terminology_json.parent.mkdir(parents=True, exist_ok=True)
+            config.terminology_json.write_text(
+                json.dumps({"status": "failed", "message": str(exc)}, ensure_ascii=False, indent=2)
+                + "\n",
+                encoding="utf-8",
+                newline="\n",
+            )
+            config.terminology_markdown.write_text(
+                "# MTR 术语审计\n\n" + message + "\n",
+                encoding="utf-8",
+                newline="\n",
+            )
+            output(message)
 
-    output("正在生成最终阅读文档……")
-    write_outputs(
-        applied_project,
-        config.output_json,
-        config.output_markdown,
-        output_schema_path=config.output_schema,
-    )
-    output(f"已生成：{config.output_markdown}、{config.output_json}")
+        output("正在生成最终阅读文档……")
+        write_outputs(
+            applied_project,
+            config.output_json,
+            config.output_markdown,
+            output_schema_path=config.output_schema,
+        )
+        output(f"已生成：{config.output_markdown}、{config.output_json}")
 
-    document_version = str(applied_project.manifest["document"]["version"])
-    ledger = load_ledger(config.ledger, document_version)
-    reviewed_ids = mark_reviewed(
-        applied_project,
-        ledger,
-        reference,
-        translated,
-        files=selected_files,
-        id_prefixes=[],
-        unit_ids=[],
-        notes=notes,
-    )
-    save_ledger(config.ledger, ledger)
-    statuses = calculate_status(list(iter_translation_units(applied_project)), ledger)
-    write_status_reports(statuses, config.status_json, config.status_markdown)
-    reviewed_total = sum(item.status.startswith("reviewed-") for item in statuses)
-    stale_total = sum(item.status == "stale" for item in statuses)
+        document_version = str(applied_project.manifest["document"]["version"])
+        ledger = load_ledger(config.ledger, document_version)
+        reviewed_ids = mark_reviewed(
+            applied_project,
+            ledger,
+            reference,
+            translated,
+            files=selected_files,
+            id_prefixes=[],
+            unit_ids=[],
+            notes=notes,
+        )
+        save_ledger(config.ledger, ledger)
+        statuses = calculate_status(list(iter_translation_units(applied_project)), ledger)
+        write_status_reports(statuses, config.status_json, config.status_markdown)
+        reviewed_total = sum(item.status.startswith("reviewed-") for item in statuses)
+        stale_total = sum(item.status == "stale" for item in statuses)
 
     output("\n完成。")
     output(f"  本批标记已审：{len(reviewed_ids)} 个单元")
