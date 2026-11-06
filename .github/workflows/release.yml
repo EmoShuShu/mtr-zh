@@ -6,6 +6,8 @@ on:
       - master
     paths:
       - ".github/workflows/release.yml"
+      - "mtr_pipeline/github_release.py"
+      - "scripts/release.py"
       - "dist/rules.json"
       - "dist/MTR.md"
       - "src/mtr/current-version.txt"
@@ -22,6 +24,7 @@ concurrency:
 jobs:
   release:
     name: Validate and publish release assets
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -31,6 +34,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -62,10 +68,10 @@ jobs:
           python scripts/validate.py
           --manifest "$MTR_MANIFEST"
           --schema schema/mtr-source.schema.json
-          --project-root .
+          --project-root . --require-reviewed
 
       - name: Run tests
-        run: python -m pytest
+        run: python -m pytest --junitxml=outputs/release-tests.xml
 
       - name: Build release assets
         run: >-
@@ -74,74 +80,32 @@ jobs:
           --schema schema/mtr-source.schema.json
           --output-schema schema/mtr-output.schema.json
           --project-root .
-          --json-out release-artifacts/rules.json
-          --markdown-out release-artifacts/MTR.md
+          --json-out outputs/release-artifacts/rules.json
+          --markdown-out outputs/release-artifacts/MTR.md
 
       - name: Validate and compare release assets
         shell: bash
         run: |
           python scripts/validate_output.py \
-            --input release-artifacts/rules.json \
+            --input outputs/release-artifacts/rules.json \
             --schema schema/mtr-output.schema.json
-          cmp release-artifacts/rules.json dist/rules.json
-          cmp release-artifacts/MTR.md dist/MTR.md
-          cd release-artifacts
+          cmp outputs/release-artifacts/rules.json dist/rules.json
+          cmp outputs/release-artifacts/MTR.md dist/MTR.md
+          cd outputs/release-artifacts
           sha256sum rules.json MTR.md > SHA256SUMS
 
-      - name: Resolve deterministic release tag
-        id: metadata
-        shell: bash
-        run: |
-          rules_sha="$(sha256sum release-artifacts/rules.json | cut -d' ' -f1)"
-          tag="mtr-${MTR_VERSION}-${rules_sha:0:12}"
-          echo "rules_sha=$rules_sha" >> "$GITHUB_OUTPUT"
-          echo "tag=$tag" >> "$GITHUB_OUTPUT"
-
-      - name: Write release notes
-        shell: bash
-        env:
-          RULES_SHA: ${{ steps.metadata.outputs.rules_sha }}
-        run: |
-          python - <<'PY'
-          import os
-          from pathlib import Path
-
-          text = f"""# MTR 中文版 {os.environ['MTR_VERSION']}
-
-          本 Release 在受保护的 `master` 分支合并后自动生成。
-
-          - `rules.json`：网站使用的单文件 JSON 产物
-          - `MTR.md`：便于阅读和审阅的 Markdown 产物
-          - `SHA256SUMS`：附件完整性校验值
-          - `rules.json` SHA-256：`{os.environ['RULES_SHA']}`
-          - 来源提交：`{os.environ['GITHUB_SHA']}`
-          """
-          Path("release-artifacts/RELEASE_NOTES.md").write_text(text, encoding="utf-8")
-          PY
-
       - name: Create or verify GitHub Release
-        shell: bash
-        env:
-          RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
-        run: |
-          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
-            mkdir existing-release
-            gh release download "$RELEASE_TAG" \
-              --dir existing-release \
-              --pattern rules.json \
-              --pattern MTR.md \
-              --pattern SHA256SUMS
-            cmp release-artifacts/rules.json existing-release/rules.json
-            cmp release-artifacts/MTR.md existing-release/MTR.md
-            cmp release-artifacts/SHA256SUMS existing-release/SHA256SUMS
-            echo "Release already exists with identical assets: $RELEASE_TAG"
-          else
-            gh release create "$RELEASE_TAG" \
-              release-artifacts/rules.json \
-              release-artifacts/MTR.md \
-              release-artifacts/SHA256SUMS \
-              --latest \
-              --target "$GITHUB_SHA" \
-              --title "MTR 中文版 $MTR_VERSION" \
-              --notes-file release-artifacts/RELEASE_NOTES.md
-          fi
+        run: >-
+          python scripts/release.py --artifacts outputs/release-artifacts
+          --source-commit "$GITHUB_SHA" --repo "$GITHUB_REPOSITORY" --publish
+
+      - name: Upload release evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: mtr-release-${{ github.sha }}
+          path: |
+            outputs/release-artifacts/
+            outputs/release-tests.xml
+          if-no-files-found: warn
+          retention-days: 14
