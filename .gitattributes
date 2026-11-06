@@ -1,6 +1,7 @@
 * text=auto
 
 .gitattributes text eol=lf
+*.cmd text eol=crlf
 *.json text eol=lf
 *.md text eol=lf
 *.py text eol=lf

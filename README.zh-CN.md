@@ -18,14 +18,16 @@ https://github.com/EmoShuShu/mtr-zh/releases/latest/download/rules.json
 
 ## 更新方式
 
-项目每天自动检查官方 MTR 是否更新。
+两个项目均于北京时间每天 06:00 自动检查官方文件。实际启动时间可能受 GitHub 排队影响。
+在 [检查记录](https://github.com/EmoShuShu/mtr-zh/actions/workflows/official-update.yml) 查看当天运行状态，
+或选择 Run workflow 手动检查。配套项目的共同约定见 [维护约定](docs/maintenance-conventions.md)。
 
 网页读取或识别失败、PDF 下载失败时最多尝试 3 次，间隔为 5 秒和 15 秒。
 重试仅限取得官方资料，不重复执行候选生成或版本切换；全部失败仍会使任务报错。
 每次取得的网页原文、时间、文件哈希及错误记录都会作为运行页面的
 `mtr-official-update-…` 附件保留 30 天，重试后恢复成功也保留前次失败证据。
 
-如果没有变化，不会创建任何内容。如果发现变化，系统会创建一个 Draft PR，并保留：
+如果没有变化，不会创建更新分支或 PR。如果发现变化，系统会创建一个 Draft PR，并保留：
 
 - 新的官方 PDF 和解析结果；
 - 与上一正式版本的英文差异；
