@@ -15,7 +15,7 @@ from .core import PipelineError, build_outputs, load_project, write_outputs
 from .paths import ROOT, current_manifest
 from .release_gate import require_reviewed
 from .transaction import restore_on_failure
-from .omegat import export_full, iter_translation_units, EngineeringMismatch
+from .omegat import export_full, iter_translation_units, EngineeringMismatch, engineering_status, check_engineering_identity
 from .omegat_import import (
     PoEntry,
     TranslationChange,
@@ -173,6 +173,18 @@ def run_workflow(
     candidate_only: bool = False,
 ) -> bool:
     project = load_project(config.manifest, config.schema, config.root, require_complete=False)
+    check_engineering_identity(project, config.source_po.parent)
+    def input_state():
+        paths = [config.manifest, config.schema, config.output_schema,
+                 config.root / "src/mtr/current-version.txt", config.root / "src/mtr/version-notes.md",
+                 config.ledger, config.source_po.parent / "omegat/maintenance-baseline.json",
+                 *[source.path for source in project.sources]]
+        # Discover additions/removals too; never restore these user-owned files.
+        for folder in (config.source_po, config.target_po):
+            paths.extend(folder.rglob("*.po"))
+        paths.append(config.target_po.parent / "omegat/project_save.tmx")
+        return {p: p.read_bytes() if p.exists() else None for p in paths}
+    preview_inputs = input_state()
     reference = parse_po_collection(config.source_po)
     if not config.target_po.is_dir() or not any(config.target_po.rglob("*.po")):
         raise PipelineError(
@@ -248,6 +260,8 @@ def run_workflow(
         output("已取消；正式文件和审校记录没有改变。")
         return False
 
+    if input_state() != preview_inputs:
+        raise PipelineError("预览后 OmegaT 译文、批注、版本说明、源文件或审校基线发生变化；请重新预览。")
     fresh_project = load_project(config.manifest, config.schema, config.root, require_complete=False)
     fresh_translated = parse_po_collection(config.target_po)
     validate_po_collections(reference, fresh_translated)
@@ -339,7 +353,8 @@ def run_workflow(
         )
         save_ledger(config.ledger, ledger)
         statuses = calculate_status(list(iter_translation_units(applied_project)), ledger)
-        write_status_reports(statuses, config.status_json, config.status_markdown)
+        write_status_reports(statuses, config.status_json, config.status_markdown, version=document_version,
+                             missing=sum(not u.zh.strip() for u in iter_translation_units(applied_project)))
         reviewed_total = sum(item.status.startswith("reviewed-") for item in statuses)
         stale_total = sum(item.status == "stale" for item in statuses)
         complete = reviewed_total == len(statuses) and all(unit.zh.strip() for unit in iter_translation_units(applied_project))
@@ -349,7 +364,14 @@ def run_workflow(
             output(f"已生成最终文件：{config.output_markdown}、{config.output_json}")
         else:
             destination = config.candidate_dir or config.preview_json.parent / "current-candidate"
-            write_outputs(applied_project, destination / "rules.json", destination / "MTR.md", output_schema_path=config.output_schema, candidate=True)
+            from .candidate_publication import publish_candidate
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            with tempfile.TemporaryDirectory(prefix=".mtr-reading-", dir=destination.parent) as temporary:
+                staged = Path(temporary) / "files"
+                write_outputs(applied_project, staged / "rules.json", staged / "MTR.md", output_schema_path=config.output_schema, candidate=True)
+                publication = publish_candidate(staged, destination, destination.parent / "build-history")
+            if publication.get("archived"):
+                output(f"旧候选已保留：{publication['archived']}")
             output(f"本批进度已保存；候选阅读文档：{destination}。全文未就绪或选择了仅候选，旧 dist 保持不变。")
 
     output("\n完成。")
@@ -408,23 +430,11 @@ def show_review_status(
     document_version = str(project.manifest["document"]["version"])
     ledger = load_ledger(config.ledger, document_version)
     statuses = calculate_status(list(iter_translation_units(project)), ledger)
-    write_status_reports(statuses, config.status_json, config.status_markdown)
-    counts = {
-        name: sum(item.status == name for item in statuses)
-        for name in (
-            "reviewed-unchanged",
-            "reviewed-modified",
-            "stale",
-            "unreviewed",
-        )
-    }
-    output("MTR 审校进度")
-    output(f"  总单元：{len(statuses)}")
-    output(f"  已审未改：{counts['reviewed-unchanged']}")
-    output(f"  已审有改：{counts['reviewed-modified']}")
-    output(f"  失效：{counts['stale']}")
-    output(f"  未审：{counts['unreviewed']}")
-    output(f"  详细报告：{config.status_markdown}")
+    from .maintenance_report import print_progress
+    report = write_status_reports(statuses, config.status_json, config.status_markdown, version=document_version,
+        missing=sum(not u.zh.strip() for u in iter_translation_units(project)),
+        engineering=engineering_status(project, config.source_po.parent))
+    print_progress(report["maintenance"], config.status_markdown, output)
     return statuses
 
 

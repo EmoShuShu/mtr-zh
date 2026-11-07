@@ -183,6 +183,7 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--glossary", type=Path, default=Path("terminology/mtr-glossary.txt"))
     parser.add_argument("--json-report", type=Path, default=Path("outputs/terminology-audit.json"))
     parser.add_argument("--markdown-report", type=Path, default=Path("outputs/terminology-audit.md"))
+    parser.add_argument("--json", action="store_true", help="输出机器可读结果")
     parser.add_argument("--fail-on-errors", action="store_true")
     return parser
 
@@ -196,14 +197,21 @@ def main(argv=None) -> int:
         findings = audit_terminology(list(iter_translation_units(project)), entries)
         write_audit_reports(entries, findings, args.json_report, args.markdown_report)
     except (OSError, PipelineError) as exc:
-        print(f"error: {exc}")
-        return 1
+        report = {"nonBlocking": True, "error": str(exc), "findingCount": 0, "errorCount": 1}
+        args.json_report.parent.mkdir(parents=True, exist_ok=True)
+        args.markdown_report.parent.mkdir(parents=True, exist_ok=True)
+        args.json_report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        args.markdown_report.write_text("# 术语审计（仅供参考）\n\n术语检查未完成：" + str(exc) + "\n", encoding="utf-8")
+        if args.json: print(json.dumps(report, ensure_ascii=False, indent=2))
+        else: print(f"术语检查未完成（不阻塞）：{exc}\n详细报告：{args.markdown_report}")
+        return 1 if args.fail_on_errors else 0
     errors = sum(item.severity == "error" for item in findings)
     warnings = sum(item.severity == "warning" for item in findings)
-    print(
-        f"Audited {len(entries)} terms across project: "
-        f"{errors} error(s), {warnings} warning(s)"
-    )
+    if args.json:
+        print(args.json_report.read_text(encoding="utf-8"), end="")
+    else:
+        print(f"术语检查完成（仅供参考）：{errors} 个错误，{warnings} 条提示。")
+        print(f"详细报告：{args.markdown_report}")
     return 1 if args.fail_on_errors and errors else 0
 
 

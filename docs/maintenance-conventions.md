@@ -91,7 +91,7 @@ IPG 缺失/模糊身份、丢失注解锚点等问题必须先通过 override �
 ## 默认参数与独立命令
 
 - `review_status.py`（可选 `status`）按当前源与账本计算进度，无需先创建 OmegaT 工程；
-  IPG 另报告工程是否尚未准备或需要接入新版本，不因此隐去当前进度。
+  两边另报告工程是否尚未准备或需要接入新版本，不因此隐去当前进度。
 - `validate.py`、`build.py` 默认 `--profile release`；`--profile candidate` 允许待审/缺译源，
   MTR 仅在候选阅读文件中显示“【待翻译】”，不改写源或账本；候选不得写入 dist。普通候选默认 `outputs/candidate/`，助手逐批候选为 `outputs/current-candidate/`。
 - `build.py --profile release --rehearsal` 按正式门槛生成到 `outputs/release-rehearsal/`；
@@ -100,8 +100,37 @@ IPG 缺失/模糊身份、丢失注解锚点等问题必须先通过 override �
 - `validate_output.py` 默认检查当前仓库 `dist/rules.json`；`export_omegat.py` 默认全文工程；
   术语与进度默认写入上表路径。显式相对路径基于 `--project-root`，不受启动位置影响。
 - 独立导出命令同样不覆盖已有工程；MTR 先准备并校验两份生成文件，使用输出目录锁与异常恢复，
-  IPG 保留原生目录发布和锁。内容相同的 MTR 输出不重复写入。Ctrl+C 与可捕获的写入错误须恢复旧文件；
+  IPG 保留原生目录发布和锁。内容相同的正式输出不重复写入。Ctrl+C 与可捕获的写入错误须恢复旧文件；
   这不承诺断电/强杀时的持久事务，也不取代 Git 和备份。
 
 快照创建仍是原生高级接口：MTR 初始迁移快照需要官方 PDF、旧译和覆盖规则；
 IPG 快照记录完整版本及溯源。不为统一参数而绕过这些输入和校验。
+
+## 重复执行、版本识别与报告
+
+- 独立 `export_omegat.py`、`review_status.py`、`audit_terminology.py`、`build.py`
+  默认显示简短结果，`--json` 输出机器可读详情。`--new-version` 需要人工确认，不能与 `--json` 合用。
+- 新 MTR 工程保存 `omegat/maintenance-baseline.json` 作为导出时的版本记录；它不决定当前源，
+  也不是第二个可写版本指针。旧工程继续从 PO 的原生源路径识别日期；缺少版本证据的历史工程
+  保留原有英文/ID 核对方式，不补写用户工程。IPG 继续使用原生 mapping 的完整 releaseId。
+- 准备/继续失败或 Ctrl+C 时恢复本批账本、批注、操作记录和报告；若新建工程失败，移除本次新建目录。
+  不覆盖已有用户工程。确认期间译文、批注、版本说明或源/审校基线变化时，停止并要求重新预览。
+- 候选/演练可重复运行：字节相同保留文件及时间戳；内容变化时将完整旧目录归档到
+  `outputs/build-history/`（MTR 自定义嵌套输出使用其同级 `build-history/`），再发布新结果。
+  不清空含未知文件的目录；已有冻结证据可用 `build.py --keep-existing` 要求停止。
+  助手的逐批候选遵循相同归档规则，IPG 仍保留原生收据和验证证据。
+- `validate_output.py` 默认同时核验结构和当前版本身份；核验历史文件时明确加 `--schema-only`，
+  这只检查结构，不表示该文件满足当前正式发布门槛。
+- 进度 JSON 保留原生字段，新增共同的 `maintenance` 对象：`schemaVersion`、`document`、
+  `version`、`total`、`reviewed`、`pending`、`counts`、`missingTranslations`、`byFile`、`engineering`。
+  `byFile` 使用 PO 文件名；工程状态为 ready、not-prepared、needs-attention 或 not-checked。
+  官方结果也新增 `maintenance`，含文档、日期、PDF 哈希、changed、requiresReview 与 snapshot；
+  GitHub 检查摘要采用相同说明，原生更新报告不被替换。
+- 术语审计默认仍不阻塞；维护人员显式指定 `--fail-on-errors` 时，词汇表错误或检查执行失败返回失败。
+  普通提示不升级为阻塞项；两边保留各自术语识别算法和报告详情。
+- 同一官方 PDF 对应的审校基线已经变化时，MTR 新候选保存到
+  `snapshots/regenerated/<上下文哈希>/<日期>/<PDF哈希前缀>/`，重复运行复用校验通过的同一候选。
+  不移动或改写原冻结快照。IPG 继续使用原生上下文指纹路径。
+
+本轮只统一操作边界：MTR 接入新官方版本后对继承记录统一要求复审，IPG 按原生哈希和注解
+上下文选择性标记失效；两种审校继承策略及各自正式构建门槛继续保留。

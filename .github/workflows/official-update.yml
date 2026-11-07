@@ -66,11 +66,8 @@ jobs:
                   value = str(value).lower()
               print(f"{key}={value}")
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
-              state = "发现官方更新，待人工复核" if result["changed"] else "官方 PDF 无变化"
-              summary.write(f"## MTR 官方检查：{state}\n\n")
-              summary.write(f"- 有效日期：{result['effectiveDate']}\n")
-              summary.write(f"- SHA-256：`{result['pdfSha256']}`\n")
-              summary.write("- 网页及诊断记录见本次运行的附件，保留 30 天。\n")
+              from mtr_pipeline.maintenance_report import official_summary
+              summary.write(official_summary(result["maintenance"]))
           PY
 
       - name: Report unchanged official PDF

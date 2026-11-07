@@ -43,6 +43,7 @@ jobs:
         with:
           python-version: "3.13"
           cache: pip
+          cache-dependency-path: pyproject.toml
 
       - name: Install project
         run: python -m pip install -e ".[dev]"
@@ -100,12 +101,19 @@ jobs:
           --source-commit "$GITHUB_SHA" --repo "$GITHUB_REPOSITORY" --publish
 
       - name: Upload release evidence
-        if: always()
+        if: always() && hashFiles('outputs/release-artifacts/**') != ''
         uses: actions/upload-artifact@v7
         with:
-          name: mtr-release-${{ github.sha }}
-          path: |
-            outputs/release-artifacts/
-            outputs/release-tests.xml
-          if-no-files-found: warn
+          name: mtr-release-${{ env.MTR_VERSION }}-${{ github.sha }}
+          path: outputs/release-artifacts/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload test results
+        if: always() && hashFiles('outputs/release-tests.xml') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: mtr-release-tests-${{ github.sha }}
+          path: outputs/release-tests.xml
+          if-no-files-found: error
           retention-days: 14

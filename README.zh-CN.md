@@ -276,3 +276,25 @@ python scripts/validate_output.py
 
 普通候选在 `outputs/candidate/`，正式演练在 `outputs/release-rehearsal/`，均保留旧 dist。
 旧 manifest/schema 和分文件输出参数继续可用；相对路径均以所选仓库为基准。
+
+
+## 重复运行与结果确认
+
+导出工程、查看进度、术语检查及构建命令默认显示简短结果；需要完整机器可读结果时加 `--json`。
+进度报告保留原生数据，并增加共同的 `maintenance` 字段，含当前版本、已审/待审/缺译数量和工程状态。
+官方检查的 Actions 摘要也采用相同格式；运行的网页诊断附件保留 30 天。
+
+候选和正式演练可以重复运行：内容相同保留原文件和时间戳；变化时完整归档旧结果到
+`outputs/build-history/` 后生成新结果。若要严格保留指定目录，可加 `--keep-existing`；
+目录含用户额外文件时会停止，不会清空。相同内容的正式构建也不会重写 dist。
+
+`validate_output.py` 默认检查结构和当前版本；检查历史文件须明确使用
+`python scripts/validate_output.py --input <历史文件> --schema-only`，这不等于通过正式发布检查。
+术语检查默认只供参考；需要严格返回失败状态时，可显式加 `--fail-on-errors`。
+准备或回写失败、Ctrl+C 会恢复本批状态；确认期间输入发生变化则要求重新预览。
+完整约定和保留差异见 [配套维护约定](docs/maintenance-conventions.md)。
+
+新建 OmegaT 工程会记录导出时的版本；旧工程继续兼容，不补写用户文件。
+日期变更而英文恰好相同时，仍会提示归档旧工程后接入新版本。
+MTR 自定义嵌套候选目录的历史保存在同级 `build-history/`。
+同一官方 PDF 在审校基线变化后会另存新快照到 `snapshots/regenerated/`，原冻结证据不变。
