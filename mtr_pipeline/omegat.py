@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
+import re
 import os
 from dataclasses import dataclass
 from pathlib import Path
@@ -250,6 +252,48 @@ def _prepare_project_directories(output_dir: Path) -> None:
         (output_dir / dirname).mkdir(parents=True, exist_ok=True)
 
 
+def engineering_identity(project):
+    return {"documentVersion": str(project.manifest["document"]["version"]),
+            "effectiveDate": str(project.manifest["document"]["effectiveDate"])}
+
+
+def check_engineering_identity(project, output_dir):
+    baseline = output_dir / "omegat/maintenance-baseline.json"
+    expected = engineering_identity(project)
+    if baseline.exists():
+        try:
+            recorded = json.loads(baseline.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as error:
+            raise PipelineError("工程版本记录无法读取；不会自动归档未知工程") from error
+        if not isinstance(recorded, dict) or set(recorded) != set(expected):
+            raise PipelineError("工程版本记录格式无效；请人工检查")
+        if recorded != expected:
+            raise EngineeringMismatch("OmegaT 工程属于其他版本；请接入新版本")
+    else:
+        # Older projects contain their original native source path in PO comments.
+        dates = set()
+        for source in (output_dir / "source").glob("*.po"):
+            for line in source.read_text(encoding="utf-8").splitlines():
+                if line.startswith("#. source-file:"):
+                    dates.update(re.findall(r"(?:^|[ /])src/mtr/(\d{4}-\d{2}-\d{2})/", line.replace("\\", "/")))
+        if len(dates) > 1:
+            raise PipelineError("旧工程含多个版本来源；不会自动归档")
+        if dates and dates != {expected["effectiveDate"]}:
+            raise EngineeringMismatch("旧 OmegaT 工程的源路径属于其他版本；请接入新版本")
+
+
+def engineering_status(project, output_dir):
+    if not output_dir.exists():
+        return {"status": "not-prepared"}
+    if not (output_dir / "omegat.project").is_file():
+        return {"status": "needs-attention", "message": "工程文件缺失；请检查现有目录"}
+    try:
+        export_project(project, output_dir, project.root / "terminology/mtr-glossary.txt")
+        return {"status": "ready"}
+    except (OSError, ValueError, PipelineError) as error:
+        return {"status": "needs-attention", "message": str(error)}
+
+
 def export_project(project, output_dir, glossary_path, *, scope="full"):
     from .omegat_import import parse_po_collection, flatten_po_collection
     import tempfile
@@ -262,6 +306,7 @@ def export_project(project, output_dir, glossary_path, *, scope="full"):
     if output_dir.exists() and any(output_dir.iterdir()):
         if not (output_dir / "omegat.project").is_file():
             raise PipelineError("OmegaT 目录已有文件但缺少工程文件；不会覆盖")
+        check_engineering_identity(project, output_dir)
         reference = parse_po_collection(output_dir / "source")
         if set(reference) != set(grouped):
             raise EngineeringMismatch("OmegaT 源 PO 文件集合与当前版本不一致；请接入新版本")
@@ -284,6 +329,7 @@ def export_project(project, output_dir, glossary_path, *, scope="full"):
         # Relative glossary paths are calculated for the final location.
         write_omegat_project(staged / "omegat.project", glossary_path, project_dir=output_dir)
         write_omegat_filters(staged / "omegat/filters.xml")
+        (staged / "omegat/maintenance-baseline.json").write_text(json.dumps(engineering_identity(project), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         write_project_readme(staged / "README.md", unit_count=len(units), file_count=len(grouped), scope=scope, glossary_path=glossary_path)
         if output_dir.exists():
             output_dir.rmdir()  # Only an empty directory may be replaced.
@@ -306,6 +352,7 @@ def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Export an OmegaT PO revision project")
     project_arguments(parser)
     parser.add_argument("--output-dir", type=Path, default=Path("outputs/omegat-mtr-full"))
+    parser.add_argument("--json", action="store_true", help="输出机器可读结果；新版本接入仍使用交互确认")
     parser.add_argument("--new-version", action="store_true", help="确认后完整归档旧工程，再准备新版本")
     parser.add_argument("--scope", choices=("full", "pilot"), default="full")
     parser.add_argument(
@@ -319,6 +366,8 @@ def _parser() -> argparse.ArgumentParser:
 
 def main(argv=None) -> int:
     args = _parser().parse_args(argv)
+    if args.json and args.new_version:
+        _parser().error("--json 仅用于无需交互的准备/继续；接入新版本请使用 --new-version")
     try:
         resolve_arguments(args)
         if args.new_version:
@@ -332,7 +381,10 @@ def main(argv=None) -> int:
             return 2 if result is None else 0
         project = load_project(args.manifest, args.schema, args.project_root, require_complete=False)
         units = export_project(project, args.output_dir, args.glossary, scope=args.scope)
-        print(f"OmegaT 工程已准备或继续：{args.output_dir}（{len(units)} 个单元）")
+        if args.json:
+            print(json.dumps({"document": "MTR", "version": str(project.manifest["document"]["version"]), "project": str(args.output_dir), "unitCount": len(units)}, ensure_ascii=False, indent=2))
+        else:
+            print(f"OmegaT 工程已准备或继续：{args.output_dir}（{len(units)} 个单元）")
         return 0
     except KeyboardInterrupt:
         return 130

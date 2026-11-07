@@ -219,8 +219,9 @@ def calculate_status(
 
 
 def write_status_reports(
-    statuses: list[UnitReviewStatus], json_path: Path, markdown_path: Path
-) -> None:
+    statuses: list[UnitReviewStatus], json_path: Path, markdown_path: Path, *,
+    version=None, missing=0, engineering=None
+) -> dict[str, Any]:
     counts: dict[str, int] = {}
     files: dict[str, dict[str, int]] = {}
     for item in statuses:
@@ -233,6 +234,10 @@ def write_status_reports(
         "files": files,
         "units": [asdict(item) for item in statuses],
     }
+    from .maintenance_report import progress
+    payload["maintenance"] = progress("MTR", version, counts,
+                                      {str(Path(name).with_suffix('.po')): values for name, values in files.items()},
+                                      missing, engineering)
     json_path.parent.mkdir(parents=True, exist_ok=True)
     json_path.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
@@ -250,7 +255,11 @@ def write_status_reports(
             f"{file_counts.get('reviewed-modified', 0)} | {file_counts.get('stale', 0)} |"
         )
     markdown_path.parent.mkdir(parents=True, exist_ok=True)
+    lines[4:4] = [f"- 当前版本：{version or '未指定'}", f"- 缺译：{missing}"]
+    if engineering and engineering.get("status") == "needs-attention":
+        lines.insert(6, "- 工程需处理：" + engineering.get("message", ""))
     markdown_path.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+    return payload
 
 
 from .paths import project_arguments, resolve_arguments
@@ -266,6 +275,7 @@ def _parser() -> argparse.ArgumentParser:
     commands = parser.add_subparsers(dest="command", required=True)
     status = commands.add_parser("status", help="Generate review progress reports")
     _add_project_arguments(status)
+    status.add_argument("--json", action="store_true", help="输出机器可读结果")
     status.add_argument("--json-report", type=Path, default=Path("outputs/review-status.json"))
     status.add_argument("--markdown-report", type=Path, default=Path("outputs/review-status.md"))
 
@@ -290,7 +300,7 @@ def main(argv=None) -> int:
         if skip_value:
             skip_value = False
             continue
-        if value.startswith("--") and "=" not in value and value != "--help":
+        if value.startswith("--") and "=" not in value and value not in {"--help", "--json"}:
             skip_value = True
         elif value in {"status", "mark"}:
             actions.append(index)
@@ -327,10 +337,15 @@ def main(argv=None) -> int:
             print(f"Marked {len(reviewed_ids)} unit(s) reviewed")
         else:
             statuses = calculate_status(list(iter_translation_units(project)), ledger)
-            write_status_reports(statuses, args.json_report, args.markdown_report)
-            reviewed = sum(item.status.startswith("reviewed-") for item in statuses)
-            stale = sum(item.status == "stale" for item in statuses)
-            print(f"Review status: {reviewed}/{len(statuses)} reviewed; {stale} stale")
+            from .omegat import engineering_status
+            from .maintenance_report import print_json, print_progress
+            report = write_status_reports(statuses, args.json_report, args.markdown_report,
+                version=document_version, missing=sum(not u.zh.strip() for u in iter_translation_units(project)),
+                engineering=engineering_status(project, args.project_root / "outputs/omegat-mtr-full"))
+            if args.json:
+                print_json(report)
+            else:
+                print_progress(report["maintenance"], args.markdown_report)
     except (OSError, PipelineError) as exc:
         print(f"error: {exc}")
         return 1

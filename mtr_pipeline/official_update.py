@@ -885,9 +885,21 @@ def create_update_snapshot(
     if final_path.exists():
         manifest = verify_snapshot(final_path, release.pdf_sha256)
         expected_base = manifest.get("inputs", {}).get("base", {}).get("treeSha256")
-        if expected_base != _tree_digest(project.manifest_path.parent):
-            raise SnapshotError("Existing update snapshot was created from a different base version")
-        return final_path, False, manifest
+        current_base = _tree_digest(project.manifest_path.parent)
+        if expected_base == current_base:
+            return final_path, False, manifest
+        # A new baseline needs new evidence, never edits inside the frozen snapshot.
+        context = {"base": current_base, "schema": sha256_file(schema),
+                   "implementation": {name: sha256_file(Path(__file__).parent / name)
+                                      for name in ("official_update.py", "legacy_import.py")}}
+        context_hash = hashlib.sha256(json.dumps(context, sort_keys=True).encode()).hexdigest()
+        final_path = _snapshot_path(snapshot_root.resolve() / "regenerated" / context_hash,
+                                    release.effective_date, release.pdf_sha256)
+        if final_path.exists():
+            manifest = verify_snapshot(final_path, release.pdf_sha256)
+            if manifest.get("inputs", {}).get("base", {}).get("treeSha256") != current_base:
+                raise SnapshotError("Regenerated snapshot baseline mismatch")
+            return final_path, False, manifest
 
     final_path.parent.mkdir(parents=True, exist_ok=True)
     stage = final_path.parent / f".{final_path.name}.staging-{uuid.uuid4().hex}"
@@ -918,7 +930,7 @@ def create_update_snapshot(
         load_project(stage / "candidate/manifest.yaml", schema, stage, require_complete=False)
         manifest = {
             "snapshotVersion": 1,
-            "snapshotId": f"{release.effective_date}/{release.pdf_sha256[:HASH_PREFIX_LENGTH]}",
+            "snapshotId": final_path.relative_to(snapshot_root.resolve()).as_posix(),
             "createdAt": datetime.now(timezone.utc).isoformat(),
             "document": {"id": "mtr", "effectiveDate": release.effective_date},
             "official": {
@@ -954,7 +966,7 @@ def create_update_snapshot(
         _write_yaml(stage / "snapshot.yaml", manifest)
         os.replace(stage, final_path)
         return final_path, True, manifest
-    except Exception:
+    except BaseException:
         shutil.rmtree(stage, ignore_errors=True)
         raise
 
@@ -1048,6 +1060,8 @@ def check_for_update(
                 "findings": manifest["status"]["findings"],
                 "branch": f"automation/mtr-{release.effective_date}-{release.pdf_sha256[:12]}",
             }
+    from .maintenance_report import official_record
+    result["maintenance"] = official_record("MTR", result["effectiveDate"], result["pdfSha256"], result["changed"], result.get("snapshot"))
     result_path.parent.mkdir(parents=True, exist_ok=True)
     result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False))

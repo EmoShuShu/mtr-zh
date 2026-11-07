@@ -46,6 +46,10 @@ def test_shared_commands_explain_root_and_modes_from_another_directory(tmp_path)
         assert "--project-root" in result.stdout
         if script in {"validate", "build"}: assert "--profile" in result.stdout
         if script == "export_omegat": assert "--new-version" in result.stdout
+        if script in {"export_omegat", "review_status", "audit_terminology", "build"}: assert "--json" in result.stdout
+        if script == "audit_terminology": assert "--fail-on-errors" in result.stdout
+        if script == "build": assert "--keep-existing" in result.stdout
+        if script == "validate_output": assert "--schema-only" in result.stdout
         if script == "review_workflow":
             assert all(flag in result.stdout for flag in ("--candidate-only", "--check-release", "--build-release"))
 
@@ -83,3 +87,23 @@ def test_validation_and_publication_explicitly_build_release_outputs():
         builds = [step["run"] for job in workflow["jobs"].values() for step in job["steps"]
                   if "scripts/build.py" in step.get("run", "")]
         assert builds and all("--profile release" in command for command in builds)
+
+
+def test_common_report_fields_preserve_review_counts_and_official_status():
+    import importlib
+    package = "mtr_pipeline" if (ROOT / "mtr_pipeline").is_dir() else "ipg_pipeline"
+    reports = importlib.import_module(package + ".maintenance_report")
+    counts = {"reviewed-unchanged": 4, "reviewed-modified": 2, "stale": 1, "unreviewed": 3}
+    result = reports.progress("DOC", "native-version", counts, {"chapter.po": counts}, 2,
+                              {"status": "needs-attention", "message": "old engineering"})
+    assert result["total"] == 10 and result["reviewed"] == 6 and result["pending"] == 4
+    assert result["missingTranslations"] == 2 and result["byFile"]["chapter.po"]["total"] == 10
+    lines = []
+    reports.print_progress(result, "report.md", lines.append)
+    assert any("old engineering" in line for line in lines)
+    for changed in (True, False):
+        record = reports.official_record("DOC", "2026-11-07", "a"*64, changed, "snapshot" if changed else None)
+        assert record["requiresReview"] is changed
+        summary = reports.official_summary(record)
+        assert ("待人工复核" if changed else "无变化") in summary
+        assert "30 天" in summary and "未自动改写" in summary
