@@ -72,3 +72,14 @@ def test_batch_recovery_preserves_old_files_and_user_owned_work(tmp_path):
             raise KeyboardInterrupt()
     assert old.read_bytes() == b"old output" and not new.exists()
     assert user.read_bytes() == b"new user edit"
+
+
+
+def test_validation_and_publication_explicitly_build_release_outputs():
+    # Bare legacy MTR output options can request a review candidate. CI/release
+    # must explicitly select the formal profile before comparing or publishing.
+    for name in ("validate", "release"):
+        workflow = yaml.load((ROOT / f".github/workflows/{name}.yml").read_text(), Loader=yaml.BaseLoader)
+        builds = [step["run"] for job in workflow["jobs"].values() for step in job["steps"]
+                  if "scripts/build.py" in step.get("run", "")]
+        assert builds and all("--profile release" in command for command in builds)

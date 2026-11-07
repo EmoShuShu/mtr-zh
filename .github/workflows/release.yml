@@ -75,7 +75,7 @@ jobs:
 
       - name: Build release assets
         run: >-
-          python scripts/build.py
+          python scripts/build.py --profile release
           --manifest "$MTR_MANIFEST"
           --schema schema/mtr-source.schema.json
           --output-schema schema/mtr-output.schema.json
