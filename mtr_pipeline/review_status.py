@@ -201,7 +201,8 @@ def calculate_status(
         if record is None:
             status = "unreviewed"
         elif (
-            record.get("sourceSha256") != _hash(unit.en)
+            record.get("needsReview", False)
+            or record.get("sourceSha256") != _hash(unit.en)
             or record.get("targetSha256") != _hash(unit.zh)
         ):
             status = "stale"
@@ -252,11 +253,12 @@ def write_status_reports(
     markdown_path.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
+from .paths import project_arguments, resolve_arguments
+
+
 def _add_project_arguments(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument("--manifest", type=Path, required=True)
-    parser.add_argument("--schema", type=Path, required=True)
-    parser.add_argument("--project-root", type=Path, default=Path.cwd())
-    parser.add_argument("--ledger", type=Path, required=True)
+    project_arguments(parser)
+    parser.add_argument("--ledger", type=Path)
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -264,8 +266,8 @@ def _parser() -> argparse.ArgumentParser:
     commands = parser.add_subparsers(dest="command", required=True)
     status = commands.add_parser("status", help="Generate review progress reports")
     _add_project_arguments(status)
-    status.add_argument("--json-report", type=Path, required=True)
-    status.add_argument("--markdown-report", type=Path, required=True)
+    status.add_argument("--json-report", type=Path, default=Path("outputs/review-status.json"))
+    status.add_argument("--markdown-report", type=Path, default=Path("outputs/review-status.md"))
 
     mark = commands.add_parser("mark", help="Mark an explicitly selected reviewed batch")
     _add_project_arguments(mark)
@@ -278,10 +280,29 @@ def _parser() -> argparse.ArgumentParser:
     return parser
 
 
-def main() -> int:
-    args = _parser().parse_args()
+def main(argv=None) -> int:
+    import sys
+    argv = list(sys.argv[1:] if argv is None else argv)
+    # Accept the action before or after --project-root, while retaining legacy mark.
+    actions = []
+    skip_value = False
+    for index, value in enumerate(argv):
+        if skip_value:
+            skip_value = False
+            continue
+        if value.startswith("--") and "=" not in value and value != "--help":
+            skip_value = True
+        elif value in {"status", "mark"}:
+            actions.append(index)
+    if actions:
+        argv.insert(0, argv.pop(actions[0]))
+    else:
+        argv.insert(0, "status")
+    args = _parser().parse_args(argv)
     try:
-        project = load_project(args.manifest, args.schema, args.project_root)
+        resolve_arguments(args)
+        project = load_project(args.manifest, args.schema, args.project_root, require_complete=False)
+        args.ledger = args.ledger or args.project_root / "review" / f"mtr-{project.manifest['document']['effectiveDate']}.json"
         document_version = str(project.manifest["document"]["version"])
         ledger = load_ledger(args.ledger, document_version)
         if args.command == "mark":

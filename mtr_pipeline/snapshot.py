@@ -348,7 +348,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--legacy-source", type=Path, required=True)
     parser.add_argument("--overrides", type=Path, required=True)
     parser.add_argument("--schema", type=Path, required=True)
-    parser.add_argument("--project-root", type=Path, default=Path.cwd())
+    parser.add_argument("--project-root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--snapshot-root", type=Path, default=Path("snapshots"))
     parser.add_argument("--editable-output", type=Path)
     return parser.parse_args(argv)
