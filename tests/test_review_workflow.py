@@ -157,22 +157,25 @@ def test_workflow_applies_checks_marks_and_reports(tmp_path):
     assert config.preview_markdown.is_file()
     assert config.terminology_markdown.is_file()
     assert config.status_markdown.is_file()
-    assert config.output_json.is_file()
-    assert config.output_markdown.is_file()
+    assert not config.output_json.exists()
+    assert not config.output_markdown.exists()
+    assert (tmp_path / "current-candidate/rules.json").is_file()
+    assert (tmp_path / "current-candidate/MTR.md").is_file()
     version_notes = (ROOT / "src" / "mtr" / "version-notes.md").read_text(
         encoding="utf-8"
     ).replace("\r\n", "\n").replace("\r", "\n").strip()
-    built_json = json.loads(config.output_json.read_text(encoding="utf-8"))
+    version_notes = version_notes.replace("# 版本说明", "# 版本说明\n\n> 候选阅读文件：仅供审校，非正式发布版本。", 1)
+    built_json = json.loads((tmp_path / "current-candidate/rules.json").read_text(encoding="utf-8"))
     assert built_json["intro"]["contents"][0] == {
         "id": "mtr-version-notes",
         "en": "",
         "zh": version_notes,
     }
-    assert config.output_markdown.read_text(encoding="utf-8").startswith(
+    assert (tmp_path / "current-candidate/MTR.md").read_text(encoding="utf-8").startswith(
         version_notes + "\n\n# 目录\n"
     )
     assert "Magic: The Gathering Tournament Rules 万智牌比赛规则](#" not in (
-        config.output_markdown.read_text(encoding="utf-8")
+        (tmp_path / "current-candidate/MTR.md").read_text(encoding="utf-8")
     )
     assert any("检测到尚未回写的修改" in line for line in output)
     assert any("总进度：28/1453" in line for line in output)

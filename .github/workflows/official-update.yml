@@ -95,7 +95,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "$UPDATE_BRANCH"
-          git add snapshots src/mtr
+          git add snapshots
           git commit -m "检测到官方 MTR $EFFECTIVE_DATE 更新"
           git push --set-upstream origin "$UPDATE_BRANCH"
 
@@ -120,11 +120,13 @@ jobs:
           - PDF SHA-256：`{os.environ['PDF_SHA256']}`
           - 审计报告：[`{report}`](../blob/{os.environ['UPDATE_BRANCH']}/{report})
 
-          此 PR 由定时任务创建，并保持 Draft 状态。候选 YAML 中的英文来自新官方 PDF；中文和注解从当前已校对版本继承。
+          此 PR 只保存快照和候选证据，保持 Draft 状态，不切换当前版本。候选英文来自新官方 PDF；中文和注解继承后仍需审校。
 
           合并前请完成：
 
           - [ ] 阅读英文差异和全部 error/warning findings
+          - [ ] 运行 `scripts/promote_official_update.py --snapshot <快照目录>` 预览，加 `--apply` 确认切换
+          - [ ] 用审校助手第 1 项接入新版本；旧工程会在确认后完整归档
           - [ ] 校对所有继承的中文，补齐空白翻译
           - [ ] 必要时修正解析或对齐逻辑并重新生成候选
           - [ ] 更新版本说明

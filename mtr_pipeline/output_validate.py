@@ -3,19 +3,22 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from .paths import ROOT, resolve_arguments
 from .core import PipelineError, validate_output_file
 
 
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Validate a published MTR JSON file")
-    parser.add_argument("--input", type=Path, required=True)
-    parser.add_argument("--schema", type=Path, required=True)
+    parser.add_argument("--project-root", type=Path, default=ROOT)
+    parser.add_argument("--input", type=Path, default=Path("dist/rules.json"))
+    parser.add_argument("--schema", type=Path, default=Path("schema/mtr-output.schema.json"))
     return parser
 
 
-def main() -> int:
-    args = _parser().parse_args()
+def main(argv=None) -> int:
+    args = _parser().parse_args(argv)
     try:
+        resolve_arguments(args)
         document = validate_output_file(args.input, args.schema)
     except PipelineError as exc:
         raise SystemExit(str(exc)) from exc

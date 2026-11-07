@@ -57,9 +57,9 @@
 | 当前指针 | `src/mtr/current-version.txt` | `src/ipg/current-release.txt` | 日期与完整版本标识含义不同，不增设第二个可写指针 |
 | 源目录 | `src/mtr/<日期>/` | `src/ipg/releases/<完整版本标识>/` | IPG 有官方、注解、中文三个版本部分，目录被溯源与哈希引用 |
 | 审校与批注 | `review/mtr-<日期>.json` | `review/status/`、`review/translation-notes/`、`review/actions/` | 保留既有状态和独立批注生命周期 |
-| 官方更新候选 | PR 内保存快照与待审源 | PR 内 `snapshots/updates/` 保存完整原生候选和证据 | IPG 使用 `promote_official_update.py` 显式预览/确认；不会借目录对齐自动切换版本 |
-| 正式生成条件 | 原生本地构建；CI 和 Release 另要求全文审校有效 | 保留 IPG 全文审校与原生 release 校验 | 公开发布均不接受缺审/失效；本地候选行为保留原生兼容 |
-| 部分审校 | 按 MTR 原有构建行为 | 未满足全文条件时保存本批进度和候选、保留旧 dist | 避免无法逐批保存审校成果或发布未审文件 |
+| 官方更新候选 | PR 内 `snapshots/<日期>/<哈希前缀>/` 保存候选和证据 | PR 内 `snapshots/updates/` 保存完整原生候选和证据 | 两边均以 `promote_official_update.py` 显式预览/确认；保留原生快照身份 |
+| 正式生成条件 | 全文审校有效、译文完整、原生输出校验通过 | 全文审校有效、原生 release 校验通过 | 默认正式构建与公开发布均不接受缺审/失效，IPG 额外保留注解与溯源门槛 |
+| 部分审校 | 保存本批进度和候选、保留旧 dist | 同左 | 全文条件满足后才更新正式文件 |
 | 既有历史 | 固定快照与迁移证据 | 固定快照、首版冻结与阶段复现入口 | 不改写已审证据，不删除可追溯内容 |
 
 相同命名用于日常入口和可再生成报告；承载身份和历史证据的目录不做机械重命名。
@@ -73,15 +73,35 @@
 未选文件修改、旧输出保留、失败恢复，以及最终文件满足原有质量门槛。
 旧命令以兼容入口保留，开发阶段命名不再出现在默认维护路径中。
 
-## IPG 官方候选接入
+## 官方候选接入
 
 `python scripts/promote_official_update.py --snapshot <候选目录>` 只检查并展示预览；
-加 `--apply` 后再次用 `[y/N]` 确认，才写入新的原生 release、继承账本和证据，最后切换指针。
-缺失/模糊身份、丢失注解锚点等问题必须先通过 override 和重新检查解决。
+加 `--apply` 后再次用 `[y/N]` 确认，才写入新的原生版本、继承账本和证据，最后切换指针。
+MTR 核对 PDF 生效日期防止回退，保留旧审校记录的真实哈希与批注并标为需复审；
+同日修订先将旧账本完整备份到 `review/history/`，旧源保留于快照的 `inputs/base/`。
+IPG 缺失/模糊身份、丢失注解锚点等问题必须先通过 override 和重新检查解决。
 因上下文变化而失效的注解保留为待审；新增英文不自动成为已审译文。
 预览与确认之间的输入变化、写入失败和 Ctrl+C 都不能留下半个新版本。
 
-切换后运行 `python scripts/export_omegat.py --new-version`，确认后把整个旧工程移到
+切换后选择审校助手第 1 项，或运行 `python scripts/export_omegat.py --new-version`，确认后把整个旧工程移到
 `outputs/omegat-archive/`，按新 manifest 的实际文件/单元生成新工程。旧 PO、TMX、
 批注和词汇表不覆盖；创建失败恢复旧工程。版本切换和工程准备不会更新 dist 或发布。
 历史迁移覆盖通过显式证据链继承，不把历史覆盖记录当作新英文已经译审的证明。
+
+## 默认参数与独立命令
+
+- `review_status.py`（可选 `status`）按当前源与账本计算进度，无需先创建 OmegaT 工程；
+  IPG 另报告工程是否尚未准备或需要接入新版本，不因此隐去当前进度。
+- `validate.py`、`build.py` 默认 `--profile release`；`--profile candidate` 允许待审/缺译源，
+  MTR 仅在候选阅读文件中显示“【待翻译】”，不改写源或账本；候选不得写入 dist。普通候选默认 `outputs/candidate/`，助手逐批候选为 `outputs/current-candidate/`。
+- `build.py --profile release --rehearsal` 按正式门槛生成到 `outputs/release-rehearsal/`；
+  `--output` 与 `--output-dir` 均可指定候选/演练目录。MTR 旧 `--json-out` / `--markdown-out`
+  保留兼容，显式旧输出路径默认为候选，但任何 dist 输出仍要求全文审校。
+- `validate_output.py` 默认检查当前仓库 `dist/rules.json`；`export_omegat.py` 默认全文工程；
+  术语与进度默认写入上表路径。显式相对路径基于 `--project-root`，不受启动位置影响。
+- 独立导出命令同样不覆盖已有工程；MTR 先准备并校验两份生成文件，使用输出目录锁与异常恢复，
+  IPG 保留原生目录发布和锁。内容相同的 MTR 输出不重复写入。Ctrl+C 与可捕获的写入错误须恢复旧文件；
+  这不承诺断电/强杀时的持久事务，也不取代 Git 和备份。
+
+快照创建仍是原生高级接口：MTR 初始迁移快照需要官方 PDF、旧译和覆盖规则；
+IPG 快照记录完整版本及溯源。不为统一参数而绕过这些输入和校验。

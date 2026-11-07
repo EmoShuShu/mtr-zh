@@ -1014,13 +1014,11 @@ def check_for_update(
         diagnostics_dir = _within_project(diagnostics_dir, project_root, "Diagnostics directory")
     previous = load_source_state(source_state_path)
     discovered = discover_official_release(page_url, diagnostics_dir=diagnostics_dir)
-    if discovered.effective_date < previous.effective_date:
-        raise OfficialUpdateError(
-            f"Official page would downgrade MTR from {previous.effective_date} to {discovered.effective_date}"
-        )
     with tempfile.TemporaryDirectory(prefix="mtr-official-update-") as directory:
         pdf_path = Path(directory) / "MTR_EN.pdf"
         release = download_official_pdf(discovered, pdf_path, diagnostics_dir=diagnostics_dir)
+        if release.effective_date < previous.effective_date:
+            raise OfficialUpdateError(f"Official PDF would downgrade MTR from {previous.effective_date} to {release.effective_date}")
         if release.pdf_sha256 == previous.pdf_sha256:
             result = {"changed": False, "effectiveDate": release.effective_date, "pdfSha256": release.pdf_sha256}
         else:
@@ -1036,10 +1034,6 @@ def check_for_update(
                 project_root=project_root,
                 snapshot_root=snapshot_root,
             )
-            editable_output = project_root / "src/mtr" / release.effective_date
-            promotion = promote_candidate(snapshot_path, editable_output, base_source)
-            current_version_path.write_text(release.effective_date + "\n", encoding="utf-8", newline="\n")
-            write_source_state(source_state_path, release)
             report_relative = (snapshot_path / "comparison/update.md").relative_to(project_root)
             result = {
                 "changed": True,
@@ -1049,7 +1043,8 @@ def check_for_update(
                 "snapshot": snapshot_path.relative_to(project_root).as_posix(),
                 "report": report_relative.as_posix(),
                 "snapshotCreated": created,
-                "promotion": promotion,
+                "promotion": "pending-confirmation",
+                "currentReleaseUnchanged": True,
                 "findings": manifest["status"]["findings"],
                 "branch": f"automation/mtr-{release.effective_date}-{release.pdf_sha256[:12]}",
             }
@@ -1065,7 +1060,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--source-state", type=Path, default=Path("src/mtr/official-source.yaml"))
     parser.add_argument("--current-version", type=Path, default=Path("src/mtr/current-version.txt"))
     parser.add_argument("--schema", type=Path, default=Path("schema/mtr-source.schema.json"))
-    parser.add_argument("--project-root", type=Path, default=Path.cwd())
+    parser.add_argument("--project-root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--snapshot-root", type=Path, default=Path("snapshots"))
     parser.add_argument("--result", type=Path, default=Path("tmp/official-update-result.json"))
     parser.add_argument("--diagnostics-dir", type=Path, default=Path("tmp/official-update-diagnostics"))

@@ -36,7 +36,8 @@ https://github.com/EmoShuShu/mtr-zh/releases/latest/download/rules.json
 - 继承旧译文和注解后的候选 YAML；
 - 需要人工检查的项目。
 
-维护者在 PR 中完成翻译校对、更新版本说明并确认自动检查通过，然后将 PR 标记为可审阅并人工合并。合并后，正式 JSON 和 Markdown 会自动发布到 GitHub Release。
+每日检查只保存候选证据，不修改当前源、版本指针、审校账本或 dist。先按文末“官方候选接入”显式确认，
+再完成翻译校对、更新版本说明、生成正式文件并确认自动检查通过，最后人工合并并发布。
 
 ## 校对时编辑哪里
 
@@ -79,7 +80,7 @@ python -m venv .venv
 菜单包含三项：
 
 1. “准备或继续 OmegaT 审校”会在首次使用时生成完整项目；已有项目只做结构检查，绝不
-   覆盖译文、批注或术语表。
+   覆盖译文、批注或术语表。接入新版本时，会先询问是否完整归档旧工程，确认后才创建新工程。
 2. “完成审校并生成最终文档”用于 OmegaT 中选择“项目 → 创建已译文档”之后的一键回写。
 3. “查看审校进度”会刷新报告并直接显示各类单元数量。
 
@@ -96,8 +97,9 @@ python -m venv .venv
 4. 显示已审单元、实际修改和保留旧译的数量；
 5. 在一次人工确认后，最小差异回写正式 YAML；
 6. 运行完整测试，并生成仅供参考的术语审计报告；
-7. 从正式 YAML 自动生成 `dist/MTR.md` 和 `dist/rules.json`；
-8. 仅在必要检查通过后标记所选文件已审，把批注按稳定 ID 写入审校记录，并刷新进度报告。
+7. 把所选文件标记已审，按稳定 ID 保存批注，并刷新进度报告；
+8. 全文译文与审校均就绪时生成 `dist/MTR.md` 和 `dist/rules.json`；否则保存
+   `outputs/current-candidate/` 候选阅读文件，保留旧 dist。
 
 如果整份文件经核对后无需修改，助手会跳过 YAML 回写，但仍会正确记录为“已审未改”。
 取消确认不会修改正式 YAML 或审校记录。日常使用无需填写路径、候选目录或变更数。
@@ -236,8 +238,41 @@ YAML 在预览后又发生变化，操作都会中止。应用后运行全部测
 测试、构建或登记失败以及 Ctrl+C 会恢复本批操作；OmegaT 译文、TMX 和共享词汇表不回退。
 这不替代断电、强制终止进程时的备份；继续用 Git 保存已完成的审校工作。
 
-CI 和公开发布要求所有当前单元的审校记录有效。单独核验可在原验证命令后加
-`--require-reviewed`。本地原生构建命令保留兼容；不会把生成候选等同于允许公开发布。
+默认本地构建、CI 和公开发布均要求所有当前单元的审校记录有效。`--require-reviewed` 旧选项继续可用。
+独立导出只检查并继续已有工程；生成文件发生错误或 Ctrl+C 时恢复旧 JSON/Markdown。
 Release 先以草稿上传，下载逐字节核对后公开；查询失败不视为“不存在”，既有公开附件不覆盖。
 测试报告及发布核验证据保存在 Actions 附件中，保留 14 天。
 网页“更新时间”和 PDF“生效日期”分别记录，版本身份以 PDF 内文为准。
+
+## 官方候选接入与常用命令
+
+在更新分支中阅读差异和 findings，确认候选后执行：
+
+```powershell
+python scripts/promote_official_update.py --snapshot <候选目录>
+python scripts/promote_official_update.py --snapshot <候选目录> --apply
+python scripts/export_omegat.py --new-version
+```
+
+第一条只预览；第二条再次确认后才接入新的审校基线，第三条也可由助手第 1 项完成。
+旧工程整体归档到 `outputs/omegat-archive/`，保留 PO、TMX 和批注，创建失败恢复旧工程。
+候选接入保留旧译和真实审校历史，要求人工复审；同日修订将原账本备份到 `review/history/`。
+源结构、稳定 ID 和快照目录不迁移。此过程不生成 dist，也不发布。
+
+以下命令均自动读取当前版本，可在任意启动目录加 `--project-root <仓库路径>`：
+
+```powershell
+python scripts/review_status.py
+python scripts/audit_terminology.py
+python scripts/validate.py --profile candidate
+python scripts/build.py --profile candidate
+python scripts/review_workflow.py --candidate-only
+python scripts/review_workflow.py --check-release
+python scripts/build.py --profile release --rehearsal
+python scripts/validate.py
+python scripts/build.py
+python scripts/validate_output.py
+```
+
+普通候选在 `outputs/candidate/`，正式演练在 `outputs/release-rehearsal/`，均保留旧 dist。
+旧 manifest/schema 和分文件输出参数继续可用；相对路径均以所选仓库为基准。

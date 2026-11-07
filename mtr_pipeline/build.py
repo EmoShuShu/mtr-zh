@@ -1,43 +1,58 @@
 from __future__ import annotations
-
 import argparse
 from pathlib import Path
-
 from .core import PipelineError, load_project, write_outputs
+from .paths import project_arguments, resolve_arguments
+from .release_gate import require_reviewed
 
 
-def _parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Build deterministic MTR JSON and Markdown")
-    parser.add_argument("--manifest", type=Path, required=True)
-    parser.add_argument("--schema", type=Path, required=True)
-    parser.add_argument(
-        "--output-schema",
-        type=Path,
-        default=Path("schema/mtr-output.schema.json"),
-    )
-    parser.add_argument("--project-root", type=Path, default=Path.cwd())
-    parser.add_argument("--json-out", type=Path, required=True)
-    parser.add_argument("--markdown-out", type=Path, required=True)
+def _parser():
+    parser = argparse.ArgumentParser(description="生成 MTR 候选或全文审校后的正式文件")
+    project_arguments(parser)
+    parser.add_argument("--output-schema", type=Path, default=Path("schema/mtr-output.schema.json"))
+    parser.add_argument("--profile", choices=("candidate", "release"))
+    parser.add_argument("--output-dir", "--output", dest="output_dir", type=Path)
+    parser.add_argument("--rehearsal", action="store_true", help="按正式门槛生成到 outputs，保留旧 dist")
+    parser.add_argument("--json-out", type=Path)
+    parser.add_argument("--markdown-out", type=Path)
     return parser
 
 
-def main() -> int:
-    args = _parser().parse_args()
+def main(argv=None):
+    args = _parser().parse_args(argv)
     try:
-        project = load_project(args.manifest, args.schema, args.project_root)
-        write_outputs(
-            project,
-            args.json_out,
-            args.markdown_out,
-            output_schema_path=args.output_schema,
-        )
-    except PipelineError as exc:
-        raise SystemExit(str(exc)) from exc
-    print(f"Wrote {args.json_out}")
-    print(f"Wrote {args.markdown_out}")
-    return 0
+        resolve_arguments(args)
+        legacy_outputs = args.json_out is not None or args.markdown_out is not None
+        profile = args.profile or ("release" if args.rehearsal or not legacy_outputs else "candidate")
+        if args.rehearsal and profile != "release":
+            raise PipelineError("生成演练仅适用于 release")
+        directory = args.output_dir or args.project_root / ("outputs/release-rehearsal" if args.rehearsal else "outputs/candidate" if profile == "candidate" else "dist")
+        if not legacy_outputs:
+            if profile == "release" and not args.rehearsal and args.output_dir is not None:
+                raise PipelineError("正式构建固定写入 dist；自定义输出仅限候选或演练")
+            if profile == "candidate" or args.rehearsal:
+                base = (args.project_root / "outputs").resolve()
+                destination = directory.resolve()
+                if not base.is_relative_to(args.project_root) or not destination.is_relative_to(base) or destination == base:
+                    raise PipelineError("候选或演练只能写入本项目 outputs 下的独立目录")
+        json_out = args.json_out or directory / "rules.json"
+        markdown_out = args.markdown_out or directory / "MTR.md"
+        formal = any(p.resolve().is_relative_to((args.project_root / "dist").resolve()) for p in (json_out, markdown_out))
+        if (args.profile == "candidate" or args.rehearsal) and formal:
+            raise PipelineError("候选文件不能写入 dist")
+        release = formal or profile == "release"
+        project = load_project(args.manifest, args.schema, args.project_root, require_complete=release)
+        if release:
+            require_reviewed(project)
+        write_outputs(project, json_out, markdown_out, output_schema_path=args.output_schema, candidate=not release)
+        print(f"已生成：{json_out}、{markdown_out}")
+        return 0
+    except KeyboardInterrupt:
+        return 130
+    except (OSError, ValueError, PipelineError) as error:
+        print(f"生成已停止：{error}")
+        return 1
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

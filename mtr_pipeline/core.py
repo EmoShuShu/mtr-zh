@@ -493,8 +493,28 @@ def build_outputs(
     *,
     output_schema_path: Path | str | None = None,
     validate_output: bool = True,
+    candidate: bool = False,
 ) -> tuple[str, str]:
+    if candidate:
+        # Presentation-only placeholders: never write these into editable source or ledger.
+        import copy
+        project = copy.deepcopy(project)
+        def mark_missing(value):
+            if isinstance(value, dict):
+                for key, item in value.items():
+                    if key == "zh" and isinstance(item, str) and not item.strip():
+                        value[key] = "【待翻译】"
+                    else:
+                        mark_missing(item)
+            elif isinstance(value, list):
+                for item in value:
+                    mark_missing(item)
+        mark_missing(project.manifest)
+        for source in project.sources:
+            mark_missing(source.data)
     version_notes = _read_version_notes(project)
+    if candidate:
+        version_notes = version_notes.replace("# 版本说明", "# 版本说明\n\n> 候选阅读文件：仅供审校，非正式发布版本。", 1)
     main: list[dict[str, Any]] = []
     appendices: list[dict[str, Any]] = []
     intro_contents: list[dict[str, Any]] = []
@@ -536,12 +556,13 @@ def write_outputs(
     markdown_path: Path | str,
     *,
     output_schema_path: Path | str | None = None,
+    candidate: bool = False,
 ) -> None:
-    json_text, markdown_text = build_outputs(project, output_schema_path=output_schema_path)
-    json_path = Path(json_path)
-    markdown_path = Path(markdown_path)
-    json_path.parent.mkdir(parents=True, exist_ok=True)
-    markdown_path.parent.mkdir(parents=True, exist_ok=True)
-    json_path.write_text(json_text, encoding="utf-8", newline="\n")
-    markdown_path.write_text(markdown_text, encoding="utf-8", newline="\n")
-
+    from .publication import publish_files
+    json_text, markdown_text = build_outputs(project, output_schema_path=output_schema_path, candidate=candidate)
+    if (json_text, markdown_text) != build_outputs(project, output_schema_path=output_schema_path, candidate=candidate):
+        raise PipelineError("两次构建内容不一致，未写入输出")
+    json_path, markdown_path = Path(json_path).absolute(), Path(markdown_path).absolute()
+    if json_path.resolve() == markdown_path.resolve():
+        raise PipelineError("JSON 和 Markdown 不能写入同一文件")
+    publish_files({json_path: json_text.encode("utf-8"), markdown_path: markdown_text.encode("utf-8")})

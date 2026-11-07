@@ -392,7 +392,7 @@ def write_candidate(
         )
 
     candidate_manifest = destination / project.manifest_path.name
-    load_project(candidate_manifest, schema_path, project.root)
+    load_project(candidate_manifest, schema_path, project.root, require_complete=False)
     return candidate_manifest
 
 
@@ -419,7 +419,7 @@ def apply_changes_to_source(
                     encoding="utf-8",
                     newline="\n",
                 )
-            load_project(project.manifest_path, schema_path, project.root)
+            load_project(project.manifest_path, schema_path, project.root, require_complete=False)
         except Exception:
             for source_path, original in originals.items():
                 source_path.write_text(original, encoding="utf-8", newline="\n")

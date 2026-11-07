@@ -3,15 +3,19 @@ from __future__ import annotations
 import argparse
 from dataclasses import dataclass
 import json
+import shutil
+import uuid
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 from typing import Callable
 
-from .core import PipelineError, load_project, write_outputs
+from .core import PipelineError, build_outputs, load_project, write_outputs
+from .paths import ROOT, current_manifest
+from .release_gate import require_reviewed
 from .transaction import restore_on_failure
-from .omegat import export_full, iter_translation_units
+from .omegat import export_full, iter_translation_units, EngineeringMismatch
 from .omegat_import import (
     PoEntry,
     TranslationChange,
@@ -57,6 +61,7 @@ class WorkflowConfig:
     output_schema: Path
     output_json: Path
     output_markdown: Path
+    candidate_dir: Path | None = None
 
 
 def default_config(root: Path) -> WorkflowConfig:
@@ -66,8 +71,7 @@ def default_config(root: Path) -> WorkflowConfig:
         version = version_file.read_text(encoding="utf-8").strip()
     except OSError as exc:
         raise PipelineError(f"无法读取当前版本文件 {version_file}: {exc}") from exc
-    if not version:
-        raise PipelineError(f"当前版本文件为空：{version_file}")
+    current_manifest(root)
     omegat_root = root / "outputs" / "omegat-mtr-full"
     return WorkflowConfig(
         root=root,
@@ -86,6 +90,7 @@ def default_config(root: Path) -> WorkflowConfig:
         output_schema=root / "schema" / "mtr-output.schema.json",
         output_json=root / "dist" / "rules.json",
         output_markdown=root / "dist" / "MTR.md",
+        candidate_dir=root / "outputs/current-candidate",
     )
 
 
@@ -165,8 +170,9 @@ def run_workflow(
     input_fn: InputFunction = input,
     output: OutputFunction = print,
     test_runner: TestRunner = run_pytest,
+    candidate_only: bool = False,
 ) -> bool:
-    project = load_project(config.manifest, config.schema, config.root)
+    project = load_project(config.manifest, config.schema, config.root, require_complete=False)
     reference = parse_po_collection(config.source_po)
     if not config.target_po.is_dir() or not any(config.target_po.rglob("*.po")):
         raise PipelineError(
@@ -242,7 +248,7 @@ def run_workflow(
         output("已取消；正式文件和审校记录没有改变。")
         return False
 
-    fresh_project = load_project(config.manifest, config.schema, config.root)
+    fresh_project = load_project(config.manifest, config.schema, config.root, require_complete=False)
     fresh_translated = parse_po_collection(config.target_po)
     validate_po_collections(reference, fresh_translated)
     fresh_changes = plan_import(
@@ -273,6 +279,8 @@ def run_workflow(
         config.ledger, config.terminology_json, config.terminology_markdown,
         config.status_json, config.status_markdown, config.output_json, config.output_markdown,
     ]
+    candidate_dir = config.candidate_dir or config.preview_json.parent / "current-candidate"
+    paths += [candidate_dir / "rules.json", candidate_dir / "MTR.md"]
     with restore_on_failure(paths):
         if changes:
             apply_changes_to_source(fresh_project, changes, config.schema)
@@ -283,7 +291,7 @@ def run_workflow(
         output("正在运行完整测试……")
         test_runner(config.root)
 
-        applied_project = load_project(config.manifest, config.schema, config.root)
+        applied_project = load_project(config.manifest, config.schema, config.root, require_complete=False)
         try:
             glossary_entries = parse_glossary(config.glossary)
             findings = audit_terminology(
@@ -317,15 +325,6 @@ def run_workflow(
             )
             output(message)
 
-        output("正在生成最终阅读文档……")
-        write_outputs(
-            applied_project,
-            config.output_json,
-            config.output_markdown,
-            output_schema_path=config.output_schema,
-        )
-        output(f"已生成：{config.output_markdown}、{config.output_json}")
-
         document_version = str(applied_project.manifest["document"]["version"])
         ledger = load_ledger(config.ledger, document_version)
         reviewed_ids = mark_reviewed(
@@ -343,6 +342,15 @@ def run_workflow(
         write_status_reports(statuses, config.status_json, config.status_markdown)
         reviewed_total = sum(item.status.startswith("reviewed-") for item in statuses)
         stale_total = sum(item.status == "stale" for item in statuses)
+        complete = reviewed_total == len(statuses) and all(unit.zh.strip() for unit in iter_translation_units(applied_project))
+        if complete and not candidate_only:
+            load_project(config.manifest, config.schema, config.root)
+            write_outputs(applied_project, config.output_json, config.output_markdown, output_schema_path=config.output_schema)
+            output(f"已生成最终文件：{config.output_markdown}、{config.output_json}")
+        else:
+            destination = config.candidate_dir or config.preview_json.parent / "current-candidate"
+            write_outputs(applied_project, destination / "rules.json", destination / "MTR.md", output_schema_path=config.output_schema, candidate=True)
+            output(f"本批进度已保存；候选阅读文档：{destination}。全文未就绪或选择了仅候选，旧 dist 保持不变。")
 
     output("\n完成。")
     output(f"  本批标记已审：{len(reviewed_ids)} 个单元")
@@ -352,62 +360,51 @@ def run_workflow(
     return True
 
 
-def prepare_omegat_project(
-    config: WorkflowConfig, *, output: OutputFunction = print
-) -> bool:
-    project = load_project(config.manifest, config.schema, config.root)
+def prepare_omegat_project(config: WorkflowConfig, *, output: OutputFunction = print) -> bool:
+    project = load_project(config.manifest, config.schema, config.root, require_complete=False)
     parse_glossary(config.glossary)
-    omegat_root = config.source_po.parent
-    project_file = omegat_root / "omegat.project"
+    existed = (config.source_po.parent / "omegat.project").is_file()
+    units = export_full(project, config.source_po.parent, config.glossary)
+    output("现有 OmegaT 工程已验证；没有覆盖任何译文、批注或术语。" if existed else "OmegaT 审校工程已创建。")
+    output(f"  项目：{config.source_po.parent / 'omegat.project'}；单元：{len(units)}")
+    return not existed
 
-    if not project_file.exists():
-        if omegat_root.exists() and any(omegat_root.iterdir()):
-            raise PipelineError(
-                f"OmegaT 目录已存在但项目文件缺失：{omegat_root}。"
-                "为避免覆盖可恢复的工作，请先人工检查该目录。"
-            )
-        units = export_full(project, omegat_root, config.glossary)
-        output("OmegaT 审校项目已创建。")
-        output(f"  项目：{project_file}")
-        output(f"  文件：{len(project.sources)} 个 PO")
-        output(f"  单元：{len(units)}")
-        return True
 
-    if not project_file.is_file():
-        raise PipelineError(f"OmegaT 项目路径不是文件：{project_file}")
-    reference = parse_po_collection(config.source_po)
-    expected_files = {f"{source.path.stem}.po" for source in project.sources}
-    if set(reference) != expected_files:
-        missing = sorted(expected_files - set(reference))
-        extra = sorted(set(reference) - expected_files)
-        details = []
-        if missing:
-            details.append("缺少 " + "、".join(missing))
-        if extra:
-            details.append("多出 " + "、".join(extra))
-        raise PipelineError("OmegaT 源 PO 结构不完整：" + "；".join(details))
-
-    current_units = {unit.unit_id: unit for unit in iter_translation_units(project)}
-    reference_entries = flatten_po_collection(reference)
-    reference_ids = {entry.unit_id for entry in reference_entries}
-    if reference_ids != set(current_units):
-        raise PipelineError("OmegaT 源 PO 的单元 ID 与当前 MTR 版本不一致")
-    for entry in reference_entries:
-        if entry.source != current_units[entry.unit_id].en:
-            raise PipelineError(f"OmegaT 英文原文与当前版本不一致：{entry.unit_id}")
-
-    output("现有 OmegaT 审校项目结构正常；没有覆盖任何译文、批注或术语。")
-    output(f"  项目：{project_file}")
-    output(f"  文件：{len(reference)} 个 PO")
-    output(f"  单元：{len(reference_entries)}")
-    output("请在 OmegaT 中继续审校；完成后选择“项目 → 创建已译文档”。")
-    return False
+def prepare_new_version(config, *, input_fn=input, output=print):
+    try:
+        return prepare_omegat_project(config, output=output)
+    except EngineeringMismatch:
+        pass
+    project = config.source_po.parent
+    archive = project.parent / "omegat-archive" / ("mtr-" + uuid.uuid4().hex)
+    paths = [config.manifest, *[source.path for source in load_project(config.manifest, config.schema, config.root, require_complete=False).sources]]
+    pointer = config.root / "src/mtr/current-version.txt"
+    if pointer.exists():
+        paths.append(pointer)
+    baseline = {p: p.read_bytes() for p in paths}
+    if input_fn(f"将旧 OmegaT 工程完整归档到 {archive}，并准备新版本工程？[y/N]：").strip().casefold() not in {"y", "yes"}:
+        output("已取消；旧工程没有改变。")
+        return None
+    if any(not p.exists() or p.read_bytes() != data for p, data in baseline.items()):
+        raise PipelineError("确认期间版本发生变化，未移动旧工程")
+    archive.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        project.rename(archive)
+        created = prepare_omegat_project(config, output=output)
+    except BaseException:
+        if archive.exists():
+            if project.exists():
+                shutil.rmtree(project)
+            archive.rename(project)
+        raise
+    output(f"旧工程完整保存在：{archive}")
+    return created
 
 
 def show_review_status(
     config: WorkflowConfig, *, output: OutputFunction = print
 ) -> list:
-    project = load_project(config.manifest, config.schema, config.root)
+    project = load_project(config.manifest, config.schema, config.root, require_complete=False)
     document_version = str(project.manifest["document"]["version"])
     ledger = load_ledger(config.ledger, document_version)
     statuses = calculate_status(list(iter_translation_units(project)), ledger)
@@ -437,6 +434,7 @@ def run_menu(
     input_fn: InputFunction = input,
     output: OutputFunction = print,
     test_runner: TestRunner = run_pytest,
+    candidate_only: bool = False,
 ) -> int:
     output("MTR 中文翻译工作流")
     output("  1. 准备或继续 OmegaT 审校")
@@ -446,14 +444,14 @@ def run_menu(
     while True:
         choice = input_fn("\n请选择：").strip().casefold()
         if choice == "1":
-            prepare_omegat_project(config, output=output)
-            return 0
+            return 2 if prepare_new_version(config, input_fn=input_fn, output=output) is None else 0
         if choice == "2":
             return 0 if run_workflow(
                 config,
                 input_fn=input_fn,
                 output=output,
                 test_runner=test_runner,
+                candidate_only=candidate_only,
             ) else 2
         if choice == "3":
             show_review_status(config, output=output)
@@ -469,20 +467,35 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--project-root",
         type=Path,
-        default=Path.cwd(),
+        default=ROOT,
         help="仓库根目录；通过审校助手.cmd 启动时无需指定",
     )
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--candidate-only", action="store_true")
+    mode.add_argument("--check-release", action="store_true")
+    mode.add_argument("--build-release", action="store_true")
     return parser
 
 
-def main() -> int:
-    args = _parser().parse_args()
+def main(argv=None) -> int:
+    args = _parser().parse_args(argv)
     try:
-        return run_menu(default_config(args.project_root))
+        config = default_config(args.project_root)
+        if args.check_release or args.build_release:
+            project = load_project(config.manifest, config.schema, config.root)
+            require_reviewed(project)
+            if args.build_release:
+                write_outputs(project, config.output_json, config.output_markdown, output_schema_path=config.output_schema)
+                print(f"已生成：{config.output_markdown}、{config.output_json}")
+            else:
+                build_outputs(project, output_schema_path=config.output_schema)
+                print("全文审校及正式文件生成条件通过。")
+            return 0
+        return run_menu(config, candidate_only=args.candidate_only)
     except KeyboardInterrupt:
         print("\n已取消。")
         return 130
-    except (OSError, PipelineError) as exc:
+    except (OSError, ValueError, PipelineError) as exc:
         print(f"\n审校助手停止：{exc}")
         return 1
 

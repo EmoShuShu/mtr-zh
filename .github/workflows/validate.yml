@@ -1,6 +1,8 @@
 name: Validate MTR
 
 on:
+  push:
+    branches: [master]
   pull_request:
   merge_group:
   workflow_dispatch:
@@ -16,19 +18,22 @@ jobs:
   validate:
     name: Validate and build current release
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     env:
       PYTHONUTF8: "1"
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
           python-version: "3.13"
           cache: pip
+          cache-dependency-path: pyproject.toml
 
       - name: Install project
         run: python -m pip install -e ".[dev]"
@@ -61,7 +66,7 @@ jobs:
 
       - name: Build release candidate
         run: >-
-          python scripts/build.py
+          python scripts/build.py --profile release
           --manifest "$MTR_MANIFEST"
           --schema schema/mtr-source.schema.json
           --output-schema schema/mtr-output.schema.json
@@ -77,7 +82,7 @@ jobs:
 
       - name: Rebuild for determinism check
         run: >-
-          python scripts/build.py
+          python scripts/build.py --profile release
           --manifest "$MTR_MANIFEST"
           --schema schema/mtr-source.schema.json
           --output-schema schema/mtr-output.schema.json

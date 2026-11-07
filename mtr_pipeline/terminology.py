@@ -174,22 +174,24 @@ def write_audit_reports(
     markdown_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8", newline="\n")
 
 
+from .paths import project_arguments, resolve_arguments
+
+
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Audit MTR terminology across all translation units")
-    parser.add_argument("--manifest", type=Path, required=True)
-    parser.add_argument("--schema", type=Path, required=True)
-    parser.add_argument("--project-root", type=Path, default=Path.cwd())
-    parser.add_argument("--glossary", type=Path, required=True)
-    parser.add_argument("--json-report", type=Path, required=True)
-    parser.add_argument("--markdown-report", type=Path, required=True)
+    project_arguments(parser)
+    parser.add_argument("--glossary", type=Path, default=Path("terminology/mtr-glossary.txt"))
+    parser.add_argument("--json-report", type=Path, default=Path("outputs/terminology-audit.json"))
+    parser.add_argument("--markdown-report", type=Path, default=Path("outputs/terminology-audit.md"))
     parser.add_argument("--fail-on-errors", action="store_true")
     return parser
 
 
-def main() -> int:
-    args = _parser().parse_args()
+def main(argv=None) -> int:
+    args = _parser().parse_args(argv)
     try:
-        project = load_project(args.manifest, args.schema, args.project_root)
+        resolve_arguments(args)
+        project = load_project(args.manifest, args.schema, args.project_root, require_complete=False)
         entries = parse_glossary(args.glossary)
         findings = audit_terminology(list(iter_translation_units(project)), entries)
         write_audit_reports(entries, findings, args.json_report, args.markdown_report)
