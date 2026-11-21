@@ -201,27 +201,9 @@ def _download(url: str, destination: Path | None, *, max_bytes: int) -> bytes:
 
 
 def _retry_official_request(operation, *, stage: str, diagnostics_dir: Path | None = None):
-    """Retry acquisition only; never rerun snapshot creation or source promotion."""
-    for attempt in range(1, 4):
-        evidence = {"stage": stage, "attempt": attempt,
-                    "checkedAt": datetime.now(timezone.utc).isoformat()}
-        try:
-            result = operation(attempt, evidence)
-        except (OfficialUpdateError, OSError, ValueError) as exc:
-            evidence.update(status="failure", error=str(exc))
-            if attempt == 3:
-                raise
-            print(f"{stage} attempt {attempt}/3 failed: {exc}; retrying", flush=True)
-        else:
-            evidence["status"] = "success"
-            return result
-        finally:
-            if diagnostics_dir is not None:
-                diagnostics_dir.mkdir(parents=True, exist_ok=True)
-                (diagnostics_dir / f"{stage}-attempt-{attempt}.json").write_text(
-                    json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-                )
-        time.sleep(5 if attempt == 1 else 15)
+    from .official_check import retry_request
+    return retry_request(operation, stage=stage, diagnostics_dir=diagnostics_dir,
+                         document="MTR", retry_errors=(OfficialUpdateError, OSError, ValueError), sleep=time.sleep)
 
 
 def discover_official_release(

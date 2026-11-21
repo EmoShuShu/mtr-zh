@@ -24,6 +24,13 @@ from mtr_pipeline.official_update import (
 ROOT = Path(__file__).resolve().parents[1]
 
 
+@pytest.fixture(autouse=True)
+def isolated_acquisition_tests(monkeypatch):
+    from mtr_pipeline import official_update
+    monkeypatch.setattr(official_update.time, "sleep", lambda _: None)
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+
+
 def test_discovery_retries_missing_entry_and_keeps_failed_page(monkeypatch, tmp_path):
     from mtr_pipeline import official_update as update
 
@@ -36,7 +43,7 @@ def test_discovery_retries_missing_entry_and_keeps_failed_page(monkeypatch, tmp_
     monkeypatch.setattr(update.time, "sleep", sleeps.append)
     release = update.discover_official_release(diagnostics_dir=tmp_path)
     assert release.effective_date == "2026-02-27"
-    assert sleeps == [5]
+    assert sleeps == [60]
     assert (tmp_path / "rules-page-attempt-1.html").read_bytes() == pages[0]
     assert (tmp_path / "rules-page-attempt-2.html").read_bytes() == pages[1]
     failed = json.loads((tmp_path / "rules-page-attempt-1.json").read_text())
@@ -55,7 +62,7 @@ def test_discovery_exhaustion_is_failure_and_records_network_errors(monkeypatch,
     monkeypatch.setattr(update.time, "sleep", sleeps.append)
     with pytest.raises(OfficialUpdateError, match="timed out"):
         update.discover_official_release(diagnostics_dir=tmp_path)
-    assert len(attempts) == 3 and sleeps == [5, 15]
+    assert len(attempts) == 3 and sleeps == [60, 180]
     records = list(tmp_path.glob("*.json"))
     assert len(records) == 3
     assert all(json.loads(p.read_text())["status"] == "failure" for p in records)
@@ -338,3 +345,31 @@ def test_workflows_keep_detection_review_and_release_separate():
 def test_all_github_workflows_are_valid_yaml():
     for path in (ROOT / ".github/workflows").glob("*.yml"):
         assert yaml.load(path.read_text(encoding="utf-8"), Loader=yaml.BaseLoader)
+
+
+def test_page_exhaustion_preserves_existing_data_and_never_prepares_candidate(tmp_path, monkeypatch):
+    from mtr_pipeline import official_update as update
+    import shutil
+    state = tmp_path / 'src/mtr/official-source.yaml'
+    state.parent.mkdir(parents=True)
+    shutil.copyfile(ROOT / 'src/mtr/official-source.yaml', state)
+    for name in ('src/mtr/current-version.txt', 'review/ledger.json', 'dist/rules.json',
+                 'snapshots/frozen/evidence.json', 'outputs/omegat-mtr-full/omegat/project_save.tmx',
+                 'tmp/official-update-result.json'):
+        path = tmp_path / name; path.parent.mkdir(parents=True, exist_ok=True); path.write_bytes(b'OLD USER DATA')
+    before = {p: p.read_bytes() for p in tmp_path.rglob('*') if p.is_file()}
+    calls = []
+    def download(url, destination, **kwargs):
+        assert destination is None, 'PDF download must not start after page failure'
+        calls.append(url)
+        return b'<html>TEST ONLY missing document collection</html>'
+    monkeypatch.setattr(update, '_download', download)
+    monkeypatch.setattr(update, 'create_update_snapshot', lambda **_: pytest.fail('must not prepare a candidate'))
+    with pytest.raises(OfficialUpdateError, match='缺少'):
+        update.check_for_update(page_url=update.DEFAULT_RULES_PAGE, source_state_path=state,
+            current_version_path=tmp_path/'src/mtr/current-version.txt', schema=tmp_path/'schema/test.json',
+            project_root=tmp_path, snapshot_root=tmp_path/'snapshots',
+            result_path=tmp_path/'tmp/official-update-result.json', diagnostics_dir=tmp_path/'diagnostics')
+    assert len(calls) == 3
+    after = {p: p.read_bytes() for p in tmp_path.rglob('*') if p.is_file() and not p.is_relative_to(tmp_path/'diagnostics')}
+    assert after == before
