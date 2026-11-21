@@ -24,7 +24,10 @@ https://github.com/EmoShuShu/mtr-zh/releases/latest/download/rules.json
 在 [检查记录](https://github.com/EmoShuShu/mtr-zh/actions/workflows/official-update.yml) 查看当天运行状态，
 或选择 Run workflow 手动检查。配套项目的共同约定见 [维护约定](docs/maintenance-conventions.md)。
 
-网页读取或识别失败、PDF 下载失败时最多尝试 3 次，间隔为 5 秒和 15 秒。
+网页读取或识别失败、PDF 下载失败时最多尝试 3 次，间隔为 1 分钟和 3 分钟。
+每个获取阶段的重试覆盖约 4 分钟，成功后立即继续。
+最终失败时，Actions 摘要和诊断记录会区分官网服务异常、资料缺失、页面结构/校验异常、下载失败、PDF 校验异常和程序异常。
+无法核实更新时仍明确失败，不会报告“无变化”。
 重试仅限取得官方资料，不重复执行候选生成或版本切换；全部失败仍会使任务报错。
 每次取得的网页原文、时间、文件哈希及错误记录都会作为运行页面的
 `mtr-official-update-…` 附件保留 30 天，重试后恢复成功也保留前次失败证据。

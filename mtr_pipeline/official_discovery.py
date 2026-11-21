@@ -8,6 +8,8 @@ from datetime import date
 from html.parser import HTMLParser
 import pdfplumber
 
+from .official_check import OfficialCheckError
+
 def english_date(value: str) -> str:
     months = "January February March April May June July August September October November December".split()
     match = re.fullmatch(r"([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})", value.strip())
@@ -124,7 +126,27 @@ def _nuxt_documents(payload: str) -> list[dict]:
         root = ref(0)
         if ref(root["path"]) != "/en/rules-documents":
             raise ValueError("官方页面数据不是规则文档集合")
-        collection = ref(ref(root["data"])["downloadableDocuments"])
+        if "_errors" in root:
+            errors = ref(root["_errors"])
+            if not isinstance(errors, dict):
+                raise ValueError("官方页面错误信息结构无法识别")
+            if "downloadableDocuments" in errors:
+                upstream = ref(errors["downloadableDocuments"])
+                if upstream is not None:
+                    if not (isinstance(upstream, list) and len(upstream) == 2 and upstream[0] == "NuxtError"):
+                        raise ValueError("官方文档错误信息结构无法识别")
+                    detail = ref(upstream[1])
+                    message, status = ref(detail["message"]), ref(detail["statusCode"])
+                    if not isinstance(message, str) or type(status) is not int or not 100 <= status <= 599:
+                        raise ValueError("官方文档错误信息字段不合法")
+                    raise OfficialCheckError("official-service-error",
+                        f"官网文档服务返回错误（{status}）：{message}", status_code=status)
+        data = ref(root["data"])
+        if not isinstance(data, dict):
+            raise ValueError("官方页面数据结构无法识别")
+        if "downloadableDocuments" not in data:
+            raise OfficialCheckError("official-data-missing", "官网页面未提供文档列表，无法核实官方更新")
+        collection = ref(data["downloadableDocuments"])
         entries = ref(collection["entries"])
         if not isinstance(entries, list) or len(entries) != len(set(entries)):
             raise ValueError("官方文档集合异常或重复引用")
@@ -151,6 +173,15 @@ def _nuxt_documents(payload: str) -> list[dict]:
 
 
 def parse_rules_page(html: str, page_url: str = RULES_PAGE) -> dict:
+    try:
+        return _parse_rules_page(html, page_url)
+    except OfficialCheckError:
+        raise
+    except ValueError as error:
+        raise OfficialCheckError("page-validation-error", str(error)) from error
+
+
+def _parse_rules_page(html: str, page_url: str) -> dict:
     validate_url(page_url, "page")
     parser = RulesPageParser()
     parser.feed(html)
@@ -159,6 +190,9 @@ def parse_rules_page(html: str, page_url: str = RULES_PAGE) -> dict:
         raise ValueError("官方文档条目未闭合")
     matches = [r for r in parser.rows if " ".join(r["title"].split()) == EXPECTED_TITLE]
     rows = _nuxt_documents(parser.payloads[0]) if parser.payloads else []
+    if (parser.payloads and not rows) or (not parser.payloads and not matches):
+        raise OfficialCheckError("official-data-missing",
+            "官网页面缺少 MTR 文档条目（实际 0），无法核实官方更新")
     if len(matches) > 1 or parser.payloads and len(rows) != 1 or not parser.payloads and len(matches) != 1:
         raise ValueError(f"必须精确找到一个 MTR 条目，实际 {len(rows) if parser.payloads else len(matches)}")
     visible = None
